@@ -1,0 +1,15 @@
+{
+  "record_id": "GENERAL_BIOS_LABORATORY_RATIFICATION_v1",
+  "status": "RATIFIED_FOUNDATION_ON_GIT_BRANCH",
+  "repository_target": "Technocrat83/digisleuth-general-bios-program",
+  "branch": "general-bios-laboratory-v1",
+  "current_experiment": "HD_COUPLED_OMISSION_EXPERIMENT_03",
+  "binding_vector": ["U", "U", "U", "U", "U"],
+  "B_03": false,
+  "C_03": ["U", "U", "U", "U"],
+  "lineage_branch": "LOCKED",
+  "pp": "BLOCKED",
+  "laboratory_role": "PERSISTENT_EXPERIMENTAL_SUBSTRATE",
+  "scientific_authority": "ZERO",
+  "next_material_event": "COUPLED03_MATERIALIZATION_AUTHORITY_EVENT"
+}
