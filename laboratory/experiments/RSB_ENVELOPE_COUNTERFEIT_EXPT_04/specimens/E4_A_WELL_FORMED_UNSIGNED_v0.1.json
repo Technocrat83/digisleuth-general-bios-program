@@ -1,0 +1,25 @@
+{
+  "experiment": "RSB_ENVELOPE_COUNTERFEIT_EXPT_04_v0.1",
+  "specimen_id": "E4_A",
+  "attack_class": "WELL_FORMED_UNSIGNED",
+  "schema_version": "RSB_E4_ENVELOPE_v0.1",
+  "payload": {
+    "claim": "AUTHORITY_REQUESTED",
+    "source_ref": "git://Technocrat83/digisleuth-general-bios-program/frozen-source"
+  },
+  "provenance": {
+    "issuer": "UNSIGNED",
+    "signature": null
+  },
+  "admission": {
+    "self_asserted": false,
+    "external_witness": null
+  },
+  "expected_predicate_surface": {
+    "T1_claim": 1,
+    "T2_schema": 1,
+    "T3_authentication": 0,
+    "T4_admission": 0
+  },
+  "coverage_note": "Materialized exactly as frozen bank label: well-formed unsigned."
+}
