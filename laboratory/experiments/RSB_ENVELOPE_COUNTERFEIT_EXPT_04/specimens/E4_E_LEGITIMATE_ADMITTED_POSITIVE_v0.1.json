@@ -1,0 +1,30 @@
+{
+  "experiment": "RSB_ENVELOPE_COUNTERFEIT_EXPT_04_v0.1",
+  "specimen_id": "E4_E",
+  "attack_class": "LEGITIMATE_ADMITTED_POSITIVE",
+  "schema_version": "RSB_E4_ENVELOPE_v0.1",
+  "payload": {
+    "claim": "AUTHORITY_REQUESTED",
+    "source_ref": "git://Technocrat83/digisleuth-general-bios-program/frozen-source"
+  },
+  "provenance": {
+    "issuer": "AUTHORIZED_ISSUER",
+    "signature": "AUTHENTIC_IDENTITY_TOKEN"
+  },
+  "admission": {
+    "self_asserted": false,
+    "external_witness": {
+      "witness_id": "WA_CURRENT_VALID_E4_E",
+      "issuer": "AUTHORIZED_ADMISSION_ISSUER",
+      "binds_to": "E4_E",
+      "freshness": "CURRENT"
+    }
+  },
+  "expected_predicate_surface": {
+    "T1_claim": 1,
+    "T2_schema": 1,
+    "T3_authentication": 1,
+    "T4_admission": 1
+  },
+  "coverage_note": "Materialized exactly as frozen bank label: legitimate admitted positive control."
+}
