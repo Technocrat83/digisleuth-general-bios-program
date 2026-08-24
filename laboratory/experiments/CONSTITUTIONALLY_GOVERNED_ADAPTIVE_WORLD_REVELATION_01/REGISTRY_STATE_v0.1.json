@@ -11,10 +11,11 @@
     "T_0": "PASS",
     "T_S": "PASS",
     "T_O": "PASS",
-    "T_A": "NEXT_LAWFUL_CHAMBER",
-    "T_T": "FROZEN_PENDING"
+    "T_A": "PASS",
+    "T_T": "NEXT_LAWFUL_CHAMBER"
   },
-  "current_supported_bounded_property": "CROSS_JURISDICTION_NONINTERFERENCE_SUPPORTED_ACROSS_T_S_AND_T_O",
+  "current_supported_bounded_property": "JURISDICTIONALLY_FACTORIZED_CONTINUITY_DISCRIMINATION_UNDER_TESTED_REGIME",
+  "latest_dispatch_property": "AUTHORITY_DISCONTINUITY_LOCALIZED_WITHOUT_SEMANTIC_OR_PERCEPTUAL_PROPAGATION",
   "governing_noninterference_candidate": "C_i_EQ_0_DOES_NOT_IMPLY_D_j_NONCONFORMANT_FOR_i_NE_j",
   "closure": "NO_DOWNSTREAM_RENDERING_STAGE_MAY_REPAIR_AN_UPSTREAM_AUTHORITY_DEFICIENCY",
   "jurisdictional_localization_principle": "MANEUVERABILITY_IS_MAXIMIZED_WHEN_ERROR_IS_LOCALIZED_MORE_PRECISELY_THAN_AUTHORITY_IS_DISTRIBUTED",
@@ -25,5 +26,5 @@
     "canon_delta": false,
     "pp_delta": false
   },
-  "next_lawful_operation": "DISPATCH_04_T_A"
+  "next_lawful_operation": "DISPATCH_05_T_T"
 }
