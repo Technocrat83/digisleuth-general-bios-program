@@ -1,0 +1,11 @@
+fixture_set: URPH_P1_RF_CLASS2_INSTRUMENT_FALSIFICATION_FIXTURES_v0.1
+blinded_fixture_oracle_separation: required
+chambers:
+  T_0: {required: VERIFIED}
+  T_OC: {required: NONCAUSAL}
+  T_NC: {required: raw PRESERVE; binding NONCAUSAL}
+  T_U: {required: UNRESOLVED}
+  T_G: {required: W_I_r INCOMPLETE; other planes independent}
+  T_C: {required: W_I_r CONTRADICTED; INSTRUMENTATION_INTEGRITY_HALT_r}
+  T_X: {required: PRESSURE_SEMANTIC_ABSTENTION}
+non_compensatory: true

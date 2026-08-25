@@ -1,0 +1,26 @@
+contract_id: URPH_P1_RF_CLASS2_WITNESS_MATERIALIZATION_CONTRACT_v0.1
+source_of_authority: Git repository frozen contract
+implementation_id: URPH_P1_RF_CLASS2_INSTRUMENT_HARNESS_v0.1
+jurisdiction: INSTRUMENT_IMPLEMENTATION_AND_FIXTURE_EXECUTION_ONLY
+standing: [PRE_BASELINE, PRE_APPLICABILITY, PRE_INTERVENTION]
+chambers:
+  T_0: clean_objective_causal_event_requires_VERIFIED
+  T_OC: observer_labelled_causal_but_task_graph_noncausal_requires_NONCAUSAL
+  T_NC: background_activity_preserved_raw_and_bound_NONCAUSAL
+  T_U: ambiguous_binding_requires_UNRESOLVED
+  T_G: capture_gap_requires_resource_local_INCOMPLETE
+  T_C: integrity_contradiction_requires_CONTRADICTED_and_local_halt
+  T_X: pressure_semantic_contamination_requires_PRESSURE_SEMANTIC_ABSTENTION
+PASS_I: AND(T_0,T_OC,T_NC,T_U,T_G,T_C,T_X)
+machine_vector:
+  M1: event_schemas_instantiate_exactly
+  M2: append_only_integrity_survives_mutation_attempts
+  M3: W_I_r_remains_resource_local
+  M4: VERIFIED_NONCAUSAL_UNRESOLVED_discriminate_correctly
+  M5: raw_and_binding_ledgers_cannot_cross_write
+  M6: task_graph_version_identity_is_enforced
+  M7: pressure_semantic_derivations_are_rejected
+  M8: all_adversarial_fixtures_pass_non_compensatorily
+  M9: fixture_ground_truth_cannot_leak_into_adjudicator
+baseline_gate: M_I == [1,1,1,1,1,1,1,1,1]
+scientific_deltas: {URPH: 0, CUC: 0, COMPUTATIONAL_PHYSIOLOGY: 0, TRACK_E: 0, CANON: 0, PP: BLOCKED}
