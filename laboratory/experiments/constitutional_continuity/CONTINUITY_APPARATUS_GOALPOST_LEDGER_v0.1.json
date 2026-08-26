@@ -1,0 +1,25 @@
+{
+  "registry_action": "GOAL_POST_GIT_APPARATUS_REPRODUCIBILITY",
+  "continuity_apparatus": {
+    "artifact": "CC_BLIND_EVALUATION_APPARATUS_v0.1.zip",
+    "archive_sha256": "3524cf475d32678f8ccb71daa4ea5ca84fcb20b9dfc61e7b53397a1b2962e2d4",
+    "standing": "EXECUTABLE_APPARATUS_CONFORMANCE_SUPPORTED_L2",
+    "cc_f01_f12": "12/12 PASS"
+  },
+  "reproducibility_stage_1": {
+    "artifact": "CC_CONTINUITY_REPRO_STAGE1_CLEANROOM_v0.1.zip",
+    "archive_sha256": "eef1ec2c1a2aba9285873d3419a667069690875de9ce576b49194a056789508a",
+    "standing": "IMPLEMENTATION_INDEPENDENCE_SUPPORTED_AT_FROZEN_12_CHAMBER_SCOPE",
+    "cleanroom_integrity": "5/5 PASS",
+    "parity": "12/12 PASS"
+  },
+  "constitutional_identity_invariant": "UNESTABLISHED_QUARANTINED",
+  "git_permanence": {
+    "apparatus_and_reproducibility_lineage": "AUTHORIZED",
+    "identity_invariant": "PROHIBITED"
+  },
+  "canon_delta": 0,
+  "track_e_delta": 0,
+  "pp": "BLOCKED",
+  "next_lawful_operation": "STAGE_2_FIXTURE_INDEPENDENCE"
+}
