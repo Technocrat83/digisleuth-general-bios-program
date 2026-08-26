@@ -1,0 +1,15 @@
+{
+  "artifact_id": "QS_EXPT_01_SEALED_FIXTURE_AND_BLIND_HARNESS_SPEC_v0.1",
+  "files": [
+    {"bytes": 859, "path": "README.md", "sha256": "4d10350bcff6114c2f4a1b8ac467b2bb294e4689eb48dbe71bd4d23cf10afc75"},
+    {"bytes": 2607, "path": "adjudicator.py", "sha256": "1fc1d6892f1360befe095f63bc69142206558d6449eb3ae930f57e44d4aada8c"},
+    {"bytes": 930, "path": "diagnostic_interfaces.py", "sha256": "baf37beea23fd449ddb0fe3700bf49f4c03445b18763b01c28944d9bff14802d"},
+    {"bytes": 1259, "path": "example_candidate_components.py", "sha256": "db0c47a56755c3babbf71a308190605539c28a94b39a714e82b77f09e256ba93"},
+    {"bytes": 1874, "path": "fixture_factory.py", "sha256": "f61e34065d6233ad2a6b4f298fac9e57b33b7a91d7afe5e2011899abb95bf2e4"},
+    {"bytes": 1409, "path": "harness.py", "sha256": "1ab861c672c3ddff6b24178be31bcb9406ca00340b82891b5cdaacd91541ba51"},
+    {"bytes": 966, "path": "master_ledger.yaml", "sha256": "affa514eaed57734c89074effae7e5e54edca2b4051b729909528831b4bace90"},
+    {"bytes": 2090, "path": "schemas.py", "sha256": "145e67e8a400dfc0a716b2440ab3a280575ad5d069ac3654ff46a780be3c0db8"},
+    {"bytes": 2465, "path": "test_harness.py", "sha256": "644f1a70faf79e8bba8199e8877defb1ea94299317bb93e742438fa84926c563"}
+  ],
+  "standing": "MATERIALIZED_UNEXECUTED"
+}

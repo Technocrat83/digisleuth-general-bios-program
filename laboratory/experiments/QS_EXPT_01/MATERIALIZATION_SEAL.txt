@@ -1,0 +1,6 @@
+QS_EXPT_01_SEALED_FIXTURE_AND_BLIND_HARNESS_SPEC_v0.1
+standing=MATERIALIZED_UNEXECUTED
+static_tests=3/3_PASS
+prospective_execution=0
+scientific_authority=NONE
+science_materialization_hash=dba69955a7c55f06a31589e11a6fa6c54354efd8c02f52124d7441f6587e5fc2

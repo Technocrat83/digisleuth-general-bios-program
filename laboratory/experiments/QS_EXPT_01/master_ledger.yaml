@@ -1,0 +1,28 @@
+master_ledger_posture:
+  artifact_id: QS_EXPT_01_SEALED_FIXTURE_AND_BLIND_HARNESS_SPEC_v0.1
+  status: MATERIALIZED_UNEXECUTED
+  jurisdiction: Level_2_Reference_Science_Harness
+  epistemic_partition:
+    theory_expansion: HALTED_QUIET
+    protocol_standing: LOCKED_CANDIDATE
+    adjudication_model: THREE_AXIS_INDEPENDENT
+    vocabulary_state: FOUR_WAY_EVALUATION_FROZEN
+  deltas:
+    delta_level_0_kernel: 0
+    delta_sentinel_theory: 0
+    delta_jlk_architecture: 0
+    delta_coordinate_reinterpretation: 0
+    delta_pp_tokens: 0
+  scientific_authority:
+    sentinel_coordinates: NONE
+    jlk_empirical: NONE
+    routing_empirical: NONE
+  execution:
+    prospective_trials: NOT_EXECUTED
+    remediation_handles: NONE
+    downstream_execution_handles: NONE
+  next_lawful_action:
+    - VALIDATE_STATIC_HARNESS_CONFORMANCE
+    - MATERIALIZE_CONTROLLED_SEALED_FIXTURE_SET
+    - FREEZE_OBSERVATION_SCHEMA
+    - RUN_BLIND_PROSPECTIVE_TRIALS_ONLY_AFTER_SEPARATE_ADMISSION
