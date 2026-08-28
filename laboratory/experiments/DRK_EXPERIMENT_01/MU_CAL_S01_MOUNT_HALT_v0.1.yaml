@@ -1,0 +1,29 @@
+artifact_id: DRK_MU_CAL_SYNTHETIC_CALIBRATED_BROAD_SUPPORT_v0.1
+provenance_class: S
+expected_state: MOUNT_CANDIDATE
+observed_mount_state: ARTIFACT_NOT_PRESENT
+canonical_serialization: UNAVAILABLE
+sha256_identity: UNESTABLISHED
+mu_01_to_mu_10: NOT_EXECUTED
+mount_result: MU_CAL_MOUNT_UNRESOLVED
+q_u_derivation: BLOCKED
+delta_min_s01: UNESTABLISHED
+operational_delta_min: UNESTABLISHED
+mc_sample_size_execution: BLOCKED
+authentic_runtime_enrollment: 0
+closure_law: "Missing Calibration Measure != Permission To Synthesize Its Contents"
+unable_to_mount_not_equal_mounted_and_failed: true
+next_lawful_operation: PRESENT_EXACT_FROZEN_MU_CAL_S01_PAYLOAD
+next_sequence:
+  - CANONICALIZE
+  - SHA256
+  - EXECUTE_MU_01_TO_MU_10
+  - MOUNT_ADJUDICATION
+  - DERIVE_Q_U
+  - INFIMUM_DELTA_BS
+quarantine:
+  delta_canon: 0
+  delta_bios: 0
+  delta_physiology: 0
+  delta_level_0: 0
+  pp: BLOCKED
