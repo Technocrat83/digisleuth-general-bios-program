@@ -1,0 +1,93 @@
+artifact_id: DRK_Q_HELDOUT_TRANSFER_EXPERIMENT_03_IMMUTABLE_TERRAIN_LEDGER_v0.1
+experiment_id: DRK_Q_HELDOUT_GEOMETRY_TRANSFER_EXPERIMENT_03
+status: RATIFIED_PERMANENT_TERRAIN
+standing: IMMUTABLE_HISTORICAL_RESIDUE
+jurisdiction: ANTECEDENT_CONSTRAINT_ONLY
+mutation_rights: ABSOLUTE_ZERO
+reopening_rights: ABSOLUTE_ZERO
+reinterpretation_rights: ABSOLUTE_ZERO
+
+parent_git_anchor:
+  commit: 264a4d5d5c9495d2ef83ff63b6b9f2f9a0a870a4
+  meaning: PERSISTED_HELDOUT_ECOLOGY_PRE_EXECUTION
+
+cryptographic_anchors:
+  heldout_world_package_sha256: 379670419c19cf12cc40055935cdeda4aef75edddd65c8d81bb2510acf0e744b
+  conformant_world_set_sha256: f64f523d646615e0e5081ce1192cf845c2fb6126df7710f05edddfe96e29b0dc
+  experiment03_execution_package_sha256: 1f951ecac0fa1735edf68e37e334cb155b74ae4d4595d1b47dbc3f37f5a467b9
+
+execution:
+  q_population: 6
+  heldout_worlds: 28
+  pairings_authorized: 168
+  pairings_executed: 168
+  pairing_skips: 0
+  pair_state_vector:
+    U_PLUS: 0
+    L_MINUS: 168
+    B_MINUS: 0
+    INVALID: 0
+
+terminal_scientific_result:
+  state: HELDOUT_TRANSFER_NOT_OBSERVED
+  candidate_transfer: 0_OF_6
+  heldout_world_transfer: 0_OF_28
+  bounded_claim: GENESIS01_CROSS_GEOMETRY_UTILITY_DOES_NOT_IMPLY_HELDOUT_GEOMETRY_TRANSFER_UNDER_TESTED_REGIME
+  transfer_failure_localization: OPERATIONAL_UTILITY_MARGIN
+  genesis01_utility_mechanism: UNESTABLISHED
+  universal_non_transferability: UNESTABLISHED
+
+standing_preservation:
+  S2: PRESERVED_HISTORICAL_EVIDENCE
+  S3: UNESTABLISHED_NOT_ADJUDICATED
+  S4: BLOCKED
+  S5: BLOCKED
+
+ratified_invariants:
+  competence_reach_portability: "Competence != Reach != Ecological Portability"
+  ecology_indexing_law: "Capability is ecology-indexed until portability is independently demonstrated."
+  portable_authority_law: "Local Capability does not imply Portable Authority."
+  mechanism_separation: "Population-Bounded Performance != Knowledge Of Why Performance Was Population-Bounded."
+  constraint_separation: "Constraint Authority != Mutation Authority"
+  terrain_law: "Experiment 03 constrains the map. It no longer moves upon it."
+
+lineage_topology:
+  forward_relation: "A_03 --[constraint]--> H_n --[independent lineage]--> E_n"
+  backward_propagation: PROHIBITED
+  delta_A03: 0
+  new_hypothesis_requires: NEW_INDEPENDENT_LINEAGE
+  new_experiment_requires: NEW_EXPERIMENT_IDENTITY
+
+lawful_downstream_functions:
+  - CONSTRAIN_FUTURE_HYPOTHESIS_GENERATION
+  - SERVE_AS_PORTABILITY_BOUNDARY_REFERENCE
+  - ANCHOR_ECOLOGY_INDEXED_CAPABILITY_CLAIMS
+
+prohibited_operations:
+  - POST_HOC_REPAIR_OR_RETUNING
+  - PROMOTION_TO_S3
+  - RETROSPECTIVE_CAUSAL_INTERPRETATION
+  - REOPENING_UNDER_SAME_EXPERIMENT_ID
+  - POST_HOC_Q_REPAIR
+  - POST_HOC_WORLD_REPAIR
+  - POST_HOC_THRESHOLD_REPAIR
+  - BACK_PROPAGATION_OF_DOWNSTREAM_EVIDENCE
+
+maneuverability_consequence: "Boundary Knowledge -> Reduced False Reach Assumptions -> Greater Lawful Maneuverability"
+
+scientific_summary: "Experiment 03 discovered where demonstrated competence stopped."
+
+governance_deltas:
+  a03_delta: 0
+  authority_delta: 0
+  canon_delta: 0
+  bios_delta: 0
+  physiology_delta: 0
+  level_0_delta: 0
+  pp: BLOCKED
+
+persistence_semantics:
+  git_persistence: PERMANENT
+  scientific_success_claim: BOUNDED_NEGATIVE_RESULT_ONLY
+  promotion: NONE
+  authority_inflation: NONE
