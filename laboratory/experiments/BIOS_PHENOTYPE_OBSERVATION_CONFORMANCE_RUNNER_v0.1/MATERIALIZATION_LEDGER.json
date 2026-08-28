@@ -1,0 +1,23 @@
+{
+  "artifact_id": "BIOS_PHENOTYPE_OBSERVATION_CONFORMANCE_RUNNER_v0.1",
+  "parent_battery": "BIOS_PHENOTYPE_OBSERVATION_CONFORMANCE_BATTERY_v0.1",
+  "target_interface": "BIOS_PHENOTYPE_BLIND_OBSERVATION_INTERFACE_v0.1",
+  "status": "MATERIALIZED_EXECUTION_BLOCKED_BY_MISSING_BOUND_BYTES",
+  "jurisdiction": "FIXTURE_EXECUTION_AND_RESULT_CAPTURE_ONLY",
+  "fixture_count_required": 24,
+  "negative_required": 12,
+  "positive_required": 12,
+  "matrix_binding": "AWAITING_EXACT_FROZEN_MANIFEST_BYTES",
+  "gamma_binding": "AWAITING_EXACT_DIGEST",
+  "target_interface_binding": "AWAITING_EXECUTABLE_INTERFACE_MODULE",
+  "adaptive_behavior": "PROHIBITED",
+  "repair_authority": "ZERO",
+  "phenotype_access": "ZERO",
+  "interpretation_authority": "ZERO",
+  "scientific_claim_authority": "ZERO",
+  "real_bios_specimens": "STRICTLY_PROHIBITED",
+  "H_SIGMA1_delta": 0,
+  "phenotype_evidence": 0,
+  "PP": "BLOCKED",
+  "next_lawful_operation": "BIND_EXACT_FROZEN_MATRIX_H_GAMMA_AND_EXECUTABLE_INTERFACE_THEN_EXECUTE_24_CHAMBER_BATTERY"
+}
