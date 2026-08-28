@@ -1,0 +1,114 @@
+artifact_id: DRK_Q_PROSPECTIVE_GENESIS_01_v0.1
+grammar_id: DRK_Q_PROSPECTIVE_GENESIS_GRAMMAR_v0.1
+lineage: L_Q2
+parent_executable: null
+historical_q_continuity: false
+raw_candidate_count: 28
+conformant_count: 28
+nonconformant_count: 0
+deterministic_conformance_result: PASS_28_OF_28
+observational_equivalence_classes_gt1: 0
+boundary_clip_count: 0
+utility_evaluation_performed: false
+experiment_01_mutation: 0
+earned_standing: DRK_Q_PROSPECTIVE_GENESIS_01_DETERMINISTIC_CONFORMANCE_SUPPORTED
+package_sha256: 6b2d3964704f65b1a96cb1391a721d2a9ffbff72ffc0ae6af95e780e2ac02228
+component_sha256:
+  README.md: e879f8a4a8c7e062d14859b1a410baaca717dbda03b14406ebd2a8d804c950d6
+  SHA256_MANIFEST.json: d75ee39a754aa18f6614732b0df8ec787efc947f9852cd56868a4d29ce452034
+  candidate_conformance_results.json: 5bd7a9be1d0dc62de22298f781d2b0c0f232032e606acd494fd980971fb94e4e
+  candidate_registry.json: b6118828457fd27fe661faac74e6a94de2dd9bbec3233d499a7d62a5ad658318
+  master_ledger.yaml: d84b08464cdb8ea2c7776aab1ba0781c4a473bcd9ece4b9cf065dc7513f4fd90
+candidate_identities:
+  - id: T1_ADDITIVE_LOCAL__-0.080000
+    sha256: 7c8d71f73057420ebaeb475f4147b83d25659ee414ef18bd99c29b387e81f9f0
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__-0.060000
+    sha256: 6d57acd1e262be1611d0178bb224a9d795c3d998303c1e97da7f0e56395fff42
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__-0.040000
+    sha256: 44882c876dc18c7c838b5d36558fc5489012550e0adcb6eefe98ab36025ea5cc
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__-0.020000
+    sha256: 1bc428c3675da81a42f49f668f4eb1a2db29e99da805e047de02379208755687
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__-0.010000
+    sha256: 320f058c92c38dee0308e737a54b805b53627b4cd92113f0528c224096ddb6eb
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__+0.010000
+    sha256: 57f4317746ac5b5907b4474961daa6dd880d3ec9a5499ac45f58f20ed1b29357
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__+0.020000
+    sha256: b3fc8d85a96f675696e3f7688e6c1619223111d061c97ab84131a4977593b60e
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__+0.040000
+    sha256: 9d5dee29605b72a03c9c38c79384a6899d5cec1b77eb3a083eef6e6e135a5eca
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__+0.060000
+    sha256: 9db1729f6e170c1d4f8c13b286bc01e236ab463406bf1ef9f3e47e13d45689fe
+    standing: CANDIDATE_ONLY
+  - id: T1_ADDITIVE_LOCAL__+0.080000
+    sha256: c297ff6fc9209eba9c128864ee23305c8c694b4cde349dd413460a06ec6e865d
+    standing: CANDIDATE_ONLY
+  - id: T2_RADIAL_ABOUT_THRESHOLD__+0.500000
+    sha256: bfbe96b1e4745192ea70832b31a2240d7382085c6511b4bb8cb85c3d6df08383
+    standing: CANDIDATE_ONLY
+  - id: T2_RADIAL_ABOUT_THRESHOLD__+0.750000
+    sha256: feb4d85da51cd757be8bf054b0cb72b7228f9937f35f6c8c81b0ce6e2fb7dc76
+    standing: CANDIDATE_ONLY
+  - id: T2_RADIAL_ABOUT_THRESHOLD__+0.900000
+    sha256: 65a63781af38f114d51e91029987adfe4fcdbe05297832bc8b5ee4b77ca191ca
+    standing: CANDIDATE_ONLY
+  - id: T2_RADIAL_ABOUT_THRESHOLD__+1.100000
+    sha256: 489161c308c3964746d9fd00e7e34c930f96e523202881732fe240c559af1b20
+    standing: CANDIDATE_ONLY
+  - id: T2_RADIAL_ABOUT_THRESHOLD__+1.250000
+    sha256: cbd433767f5d0e8f3bf9365f3323af67118704af30bc42241652ada3f8d3021b
+    standing: CANDIDATE_ONLY
+  - id: T2_RADIAL_ABOUT_THRESHOLD__+1.500000
+    sha256: e7b576e2af1b0c986a4e9ed727be3ed1b9bbec2341634c4e6f50f4077452e2a6
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__-1.000000
+    sha256: 2a00febf549d0de5bb275067ac94ae45616bf7bf93a3bc83ff1727da21b61ae7
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__-0.750000
+    sha256: ca70205da5e11bddf8aeb2b586e424fd4f00d89873c3353c511f05ca9fdd5a2a
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__-0.500000
+    sha256: b1bb334bfcfc2d772c7949cc89bbe4593ca2ff3b42574217ac2d3b3fa93529c6
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__-0.250000
+    sha256: 0a5be308b2fa28d6bc323f8cbaffd042f83ae7caf736f0a57dcc2a3e01b9ba3a
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__+0.250000
+    sha256: dbb0b5ec75af63b7e1403c4e93e8be1971eb7da74e5ef51975cff43522739ad0
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__+0.500000
+    sha256: 9caf0c269a96b18cdf3d7365f6d285e94c50ec1ddf03a881da66a50789b40774
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__+0.750000
+    sha256: a95d2c192befb9e8bf3b8607d3b3a7597bac5d32ccf9e3775ddab6f7f63ab80b
+    standing: CANDIDATE_ONLY
+  - id: T3_LOG_ODDS_LOCAL__+1.000000
+    sha256: fe147a9f4fc9d173188c4c9b8fc4de4a023c133f8afb96ff430cd6c15cc6c836
+    standing: CANDIDATE_ONLY
+  - id: T4_SYMMETRIC_THRESHOLD_DISTANCE__-0.050000
+    sha256: 2d331265408dc496eda9abb5255ae5e36fc76db2cb83e3c0c8593578d9ee93fc
+    standing: CANDIDATE_ONLY
+  - id: T4_SYMMETRIC_THRESHOLD_DISTANCE__-0.025000
+    sha256: dfe23927e1074af72879746bf9cc979182b819c42df2271ecdf4f2e45c9d0ca8
+    standing: CANDIDATE_ONLY
+  - id: T4_SYMMETRIC_THRESHOLD_DISTANCE__+0.025000
+    sha256: d731b353caed2c51852181dc8a87a2951e53c9f3bf3a5927c449098cf7d80ca0
+    standing: CANDIDATE_ONLY
+  - id: T4_SYMMETRIC_THRESHOLD_DISTANCE__+0.050000
+    sha256: 6c15c9fd10dc91495464b11020721d3115de7a9004ae8d475f60275a04281fbc
+    standing: CANDIDATE_ONLY
+quarantine:
+  delta_canon: 0
+  delta_bios: 0
+  delta_physiology: 0
+  delta_level_0: 0
+  pp: BLOCKED
+next_gate: ADVERSARIAL_CONFORMANCE
+utility_gate: NOT_YET_REACHED
