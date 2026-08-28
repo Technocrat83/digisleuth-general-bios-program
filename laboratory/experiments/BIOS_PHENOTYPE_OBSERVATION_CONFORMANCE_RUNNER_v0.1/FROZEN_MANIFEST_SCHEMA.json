@@ -1,0 +1,24 @@
+{
+  "runner_id": "BIOS_PHENOTYPE_OBSERVATION_CONFORMANCE_RUNNER_v0.1",
+  "gamma_sha256": "<H_GAMMA>",
+  "blinding_membrane_verified": true,
+  "fixtures": [
+    {
+      "fixture_id": "OC-01 ... OC-12 then PC-01 ... PC-12",
+      "fixture_class": "NEGATIVE | POSITIVE",
+      "frozen_fixture_hash": "sha256(canonical fixture payload)",
+      "input_observation": {},
+      "instrument_state": {},
+      "acquisition_context": {},
+      "expected": {
+        "terminal_state": "<exact>",
+        "reason_code": "<exact>",
+        "firing_membrane": "<exact frozen matrix assignment>",
+        "C_GAMMA": true,
+        "C_I": true,
+        "C_A": true
+      },
+      "serialization_expectation": "sha256(canonical interface output)"
+    }
+  ]
+}
