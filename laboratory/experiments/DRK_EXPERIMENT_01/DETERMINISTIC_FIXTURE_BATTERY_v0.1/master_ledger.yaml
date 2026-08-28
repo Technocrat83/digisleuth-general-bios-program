@@ -1,0 +1,14 @@
+artifact_id: DRK_EXPERIMENT_01_DETERMINISTIC_FIXTURE_BATTERY_v0.1
+status: BATTERY_PASS
+earned_standing: DRK_COORDINATE_METRIC_APPARATUS_CONFORMANCE_SUPPORTED
+predictive_standing: UNESTABLISHED
+metric_entitlement: UNESTABLISHED
+fixture_count: 10
+pass_count: 10
+fail_count: 0
+unresolved_count: 0
+delta_canon: 0
+delta_bios: 0
+delta_physiology: 0
+delta_level_0: 0
+pp: BLOCKED
