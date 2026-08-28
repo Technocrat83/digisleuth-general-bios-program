@@ -1,0 +1,65 @@
+artifact_id: DRK_MU_HELDOUT_GEOMETRY_GENESIS_01_v0.1
+jurisdiction: DRK_EXPERIMENT_03 / Prospective_Heldout_World_Genesis
+lineage: L_MU_HELDOUT_01
+status: HELDOUT_WORLD_GENESIS_CONFORMANCE_SUPPORTED
+parent_adjudication_contract: DRK_Q_HELDOUT_GEOMETRY_TRANSFER_EXPERIMENT_03_ADJUDICATION_CONTRACT_v0.1
+ordering_law: "Adjudication Contract < Held-Out World Genesis < Execution"
+
+frozen_contract:
+  canonical_pre_sha256: 000fa092f07578abbf51290078f435bd1b3c1c69ff233eda23cbb2e1e7b3e569
+  persisted_file_sha256: 8f70b2998569575e23cc1edbce4306449974e45001ef421bd483b201dd1ed0bb
+
+execution:
+  generation_mode: FINITE_DETERMINISTIC_ENUMERATION
+  raw_world_count: 28
+  conformant_world_count: 28
+  invalid_world_count: 0
+  hwg01_to_hwg10_result: PASS
+  behavioral_equivalence_classes_gt1: 0
+  transfer_pairings_executed: 0
+  future_experiment_03_pairings: 168
+
+family_counts:
+  H1_QUADRATIC_CURVATURE: 8
+  H2_ANTISYMMETRIC_CUBIC: 6
+  H3_LOCALIZED_OSCILLATORY: 6
+  H4_ASYMMETRIC_PIECEWISE_CURVATURE: 8
+
+information_firewall:
+  q_access: NONE
+  q_ranking_access: NONE
+  e_u_access: NONE
+  delta_bs_access: NONE
+  delta_l_access: NONE
+  desired_transfer_rate: UNDEFINED
+  desired_difficulty: UNDEFINED
+  post_execution_world_mutation: PROHIBITED
+
+component_sha256:
+  FROZEN_HELDOUT_WORLD_GENESIS_CONTRACT.json: 8f70b2998569575e23cc1edbce4306449974e45001ef421bd483b201dd1ed0bb
+  SHA256_MANIFEST.json: 79bb8a8899886c62548599b02cc13a24496a354790a7802e8a21d4cadf228fa0
+  behavioral_equivalence_classes.json: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+  conformant_heldout_world_set.json: f64f523d646615e0e5081ce1192cf845c2fb6126df7710f05edddfe96e29b0dc
+  execution_summary.json: fd2af5fb50e8affa65ba0243b57501057842b543f904fecf52cda8fd519e8750
+  heldout_world_manifest.json: d4b0c45bde86c515568657583c4e72c616be6012e667a347e721c4904e7f09e7
+  hwg_predicate_matrix.json: 575e2cab2c44ff53c1b557d8e50db63b3672db81a78b1b276c9c0d1d1ce1bb5b
+  invalid_heldout_world_ledger.json: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+  master_execution_ledger.json: fd2af5fb50e8affa65ba0243b57501057842b543f904fecf52cda8fd519e8750
+
+package_sha256: 379670419c19cf12cc40055935cdeda4aef75edddd65c8d81bb2510acf0e744b
+
+standing_boundaries:
+  transfer_evidence_delta: 0
+  transfer_detection_authority: NOT_YET_EXERCISED
+  s3_robustness_admission_authority: NONE
+  historical_experiment_01_mutation: 0
+  canon_delta: 0
+  bios_delta: 0
+  physiology_delta: 0
+  level_0_delta: 0
+  pp: BLOCKED
+
+next_gate: DRK_Q_HELDOUT_GEOMETRY_TRANSFER_EXPERIMENT_03_EXECUTION
+next_operation: "Execute 6 S2 Q operators x 28 conformant held-out worlds = 168 frozen pairings under the preregistered Experiment-03 adjudication membrane."
+
+governing_law: "Novel test geometry may increase epistemic pressure; it may not be engineered from knowledge of which candidate needs to survive."
