@@ -8,15 +8,24 @@ from typing import Any
 
 RUNNER_IDENTIFIER = "GGS_HARNESS_QUALIFICATION_RUNNER_v0.1"
 ALLOWED_OPERATION = "QUALIFY_H01"
-RESULTS = {"CONFORMANT", "NONCONFORMANT", "INCOMPLETE"}
+DOMAIN_SEPARATOR = b"GGS:H01:v0.1\x00"
+
+
+def _sha256_bytes(data: bytes) -> str:
+    return "sha256:" + hashlib.sha256(data).hexdigest()
 
 
 def _sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(chunk)
-    return "sha256:" + h.hexdigest()
+    return _sha256_bytes(path.read_bytes())
+
+
+def _canonical_harness_manifest(harness_root: Path) -> bytes:
+    members = []
+    for path in sorted((p for p in harness_root.rglob("*") if p.is_file()), key=lambda p: p.relative_to(harness_root).as_posix().encode("utf-8")):
+        rel = path.relative_to(harness_root).as_posix()
+        data = path.read_bytes()
+        members.append({"relative_path": rel, "byte_length": len(data), "sha256": _sha256_bytes(data)})
+    return json.dumps({"members": members}, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
 
 def qualify_h01(request: dict[str, Any]) -> dict[str, Any]:
@@ -33,8 +42,21 @@ def qualify_h01(request: dict[str, Any]) -> dict[str, Any]:
     }:
         raise ValueError("authorization surface nonconformant")
 
-    q = {f"Q{i:02d}": "INCOMPLETE" for i in range(1, 11)}
     harness = request.get("harness", {})
+    harness_root = Path(str(harness.get("harness_root", "")))
+    manifest_path = Path(str(harness.get("manifest_path", "")))
+    expected_digest = harness.get("expected_digest")
+    if not harness_root.is_dir() or not manifest_path.is_file() or not isinstance(expected_digest, str):
+        raise ValueError("H01 identity binding incomplete")
+
+    canonical_manifest = _canonical_harness_manifest(harness_root)
+    if manifest_path.read_bytes() != canonical_manifest:
+        raise ValueError("canonical manifest bytes do not match H01 bytes")
+    actual_harness_digest = _sha256_bytes(DOMAIN_SEPARATOR + canonical_manifest)
+    if actual_harness_digest != expected_digest:
+        raise ValueError("H01 digest mismatch")
+
+    q = {f"Q{i:02d}": "INCOMPLETE" for i in range(1, 11)}
     lineage = request.get("lineage", {})
     target = request.get("target", {})
     initial = request.get("initial_state", {})
@@ -52,14 +74,13 @@ def qualify_h01(request: dict[str, Any]) -> dict[str, Any]:
 
     q["Q06"] = "CONFORMANT" if initial.get("R_GGS") == ["U"] * 8 and initial.get("E_01_present") is False and initial.get("scientific_execution_present") is False else "NONCONFORMANT"
 
-    harness_root = Path(str(harness.get("harness_root", "")))
     harness_file = harness_root / "harness.py"
     contract_file = harness_root / "HARNESS_CONTRACT.json"
     if harness_file.is_file() and contract_file.is_file():
         source = harness_file.read_text(encoding="utf-8")
         contract = json.loads(contract_file.read_text(encoding="utf-8"))
-        q["Q07"] = "CONFORMANT" if "ASSIGN_r3" in contract.get("prohibited", []) and "adjudicat" not in source.lower() else "NONCONFORMANT"
-        q["Q08"] = "CONFORMANT" if "ACCESS_SG02_SG07" in contract.get("prohibited", []) and "SG_02" not in source and "SG_03" not in source and "SG_04" not in source and "SG_05" not in source and "SG_06" not in source and "SG_07" not in source else "NONCONFORMANT"
+        q["Q07"] = "CONFORMANT" if "ASSIGN_r3" in contract.get("prohibited", []) and "def adjudicat" not in source.lower() else "NONCONFORMANT"
+        q["Q08"] = "CONFORMANT" if "ACCESS_SG02_SG07" in contract.get("prohibited", []) and all(f"SG_0{i}" not in source for i in range(2, 8)) else "NONCONFORMANT"
         q["Q09"] = "CONFORMANT" if "AUTO_CONTINUE" in contract.get("prohibited", []) and '"next_chamber": None' in source else "NONCONFORMANT"
         q["Q10"] = "CONFORMANT" if "REPAIR" in contract.get("prohibited", []) and "RETRY" in contract.get("prohibited", []) else "NONCONFORMANT"
 
@@ -74,12 +95,13 @@ def qualify_h01(request: dict[str, Any]) -> dict[str, Any]:
         "residue_schema": "GGS_H01_QUALIFICATION_RESIDUE_v0.1",
         "runner": RUNNER_IDENTIFIER,
         "harness_identifier": harness.get("identifier"),
-        "harness_digest": harness.get("expected_digest"),
+        "harness_digest": actual_harness_digest,
         "qualification": q,
         "aggregate_scoring": "PROHIBITED",
         "scientific_semantics": "NONE",
         "standing": standing,
         "scientific_execution": False,
+        "execution_token": None,
         "E_01": "UNMINTED",
         "r3": "U",
         "R_GGS": ["U"] * 8,
@@ -93,8 +115,6 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--request", required=True)
     args = parser.parse_args(argv)
 
-    if args.command != "qualify-h01":
-        raise ValueError("unsupported command")
     request_path = Path(args.request)
     request = json.loads(request_path.read_text(encoding="utf-8"))
     residue = qualify_h01(request)

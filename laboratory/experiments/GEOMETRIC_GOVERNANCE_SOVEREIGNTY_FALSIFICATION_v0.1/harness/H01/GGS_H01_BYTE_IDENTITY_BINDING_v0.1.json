@@ -1,0 +1,18 @@
+{
+  "binding_id": "GGS_H01_BYTE_IDENTITY_BINDING_v0.1",
+  "harness_identifier": "GGS_ISOLATED_CHAMBER_EXECUTION_HARNESS_v0.1",
+  "materialization_commit": "9b8ce90c52562769a43e85945ed518f8ed281640",
+  "harness_root": "laboratory/experiments/GEOMETRIC_GOVERNANCE_SOVEREIGNTY_FALSIFICATION_v0.1/harness/H01/runtime",
+  "manifest_path": "laboratory/experiments/GEOMETRIC_GOVERNANCE_SOVEREIGNTY_FALSIFICATION_v0.1/harness/H01/GGS_H01_CANONICAL_BYTE_MANIFEST_v0.1.json",
+  "canonical_manifest_encoding": "UTF-8 JSON; keys lexicographically sorted; separators comma/colon; no trailing newline",
+  "domain_separator_bytes": "UTF-8('GGS:H01:v0.1') || 0x00",
+  "H_H01": "sha256:c94cc3b34752d54408710df00bcf1d47764971a403339d1b8b13e115388722e3",
+  "standing": "MATERIALIZED_UNQUALIFIED_BYTE_IDENTITY_MINTED",
+  "qualification": "NOT_EXECUTED",
+  "scientific_execution": "NOT_EXECUTED",
+  "E_01": "UNMINTED",
+  "r3": "U",
+  "R_GGS": ["U","U","U","U","U","U","U","U"],
+  "science_delta": 0,
+  "pp": "BLOCKED"
+}
