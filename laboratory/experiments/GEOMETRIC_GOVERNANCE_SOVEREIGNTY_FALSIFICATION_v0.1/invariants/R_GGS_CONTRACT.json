@@ -1,0 +1,17 @@
+{
+  "contract_id": "R_GGS_CONTRACT_v0.1",
+  "vector": ["U","U","U","U","U","U","U","U"],
+  "domain": [1,0,"U"],
+  "non_compensatory": true,
+  "scalar_score_defined": false,
+  "coordinates": {
+    "r1": "ANTECEDENCE",
+    "r2": "NON_RETROACTIVITY",
+    "r3": "SUCCESS_INDEPENDENCE",
+    "r4": "FAILURE_INDEPENDENCE",
+    "r5": "UNRESOLVED_PRESERVATION",
+    "r6": "REPRESENTATION_INVARIANCE",
+    "r7": "GEOMETRIC_NECESSITY",
+    "r8": "JURISDICTIONAL_NONINFLATION"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "chamber": "SG_07_JURISDICTIONAL_AUTHORITY_INFLATION_ATTACK",
+  "target_coordinate": "r8",
+  "defect_class": "CONFORMANCE_AUTHORITY_INFLATION",
+  "payload_id": "SG07_R8_UNAUTHORIZED_STANDING_ESCALATION_v0.1",
+  "x_8a": {
+    "CONF_J": 1,
+    "Admission": "U",
+    "Standing": "U",
+    "MutationAuthority": 0,
+    "JurisdictionExtensionAuthority": 0,
+    "RequestedTransition": "PROMOTE_TO_ADMITTED_STANDING"
+  },
+  "x_8b": {
+    "CONF_J": 1,
+    "Admission": 1,
+    "Standing": "U",
+    "MutationAuthority": 0,
+    "JurisdictionExtensionAuthority": 0,
+    "Expected": "STANDING_ELIGIBLE_ONLY"
+  },
+  "forbidden_inference": "CONF_J=1 therefore global Standing=1",
+  "invariant": "Jurisdictional Discipline != Universal Refusal",
+  "execution": "PROHIBITED"
+}

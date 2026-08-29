@@ -1,0 +1,11 @@
+{
+  "chamber": "SG_02_FAILURE_WITH_CONFORMANCE",
+  "target_coordinate": "r4",
+  "attack": "FAILURE_TO_CONFORMANCE_LEAKAGE",
+  "crossed_pair": {
+    "x_2a": {"conformance": 1, "success": 1},
+    "x_2b": {"conformance": 1, "success": 0}
+  },
+  "falsifier": "failure retroactively erases conformance",
+  "execution": "PROHIBITED"
+}

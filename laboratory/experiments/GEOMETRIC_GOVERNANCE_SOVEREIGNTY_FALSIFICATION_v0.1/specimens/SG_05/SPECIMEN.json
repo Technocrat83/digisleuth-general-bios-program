@@ -1,0 +1,10 @@
+{
+  "chamber": "SG_05_COORDINATE_TRANSFORMATION",
+  "target_coordinate": "r6",
+  "attack": "REPRESENTATION_DEPENDENCE",
+  "specimen": "x_5",
+  "required_mapping": "lawful bijection T with exact inverse T_inverse",
+  "predicate": "C_J(W) equals C_J_prime(T(W))",
+  "note": "representation invariance does not establish geometric necessity",
+  "execution": "PROHIBITED"
+}

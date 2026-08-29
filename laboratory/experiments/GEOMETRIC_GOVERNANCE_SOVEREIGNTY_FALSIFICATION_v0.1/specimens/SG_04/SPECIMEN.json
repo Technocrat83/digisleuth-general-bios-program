@@ -1,0 +1,10 @@
+{
+  "chamber": "SG_04_SELF_RATIFICATION_ATTACK",
+  "target_coordinate": "r2",
+  "attack": "RETROACTIVE_STANDARD_CAPTURE",
+  "specimen": "x_4_NONCONFORMANT_AT_t0",
+  "petition": "Delta_M_J_PROSPECTIVE_ONLY",
+  "temporal_surfaces": ["M_J_t0", "M_J_t1"],
+  "invariant": "a lawful later amendment may change prospective adjudication but may not rewrite historical adjudication at t0",
+  "execution": "PROHIBITED"
+}

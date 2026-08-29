@@ -1,0 +1,14 @@
+{
+  "ledger_id": "GGS_PREEXECUTION_APPARATUS_MANIFEST_v0.1",
+  "declared_aggregate_digests": {
+    "H_GGS": "4e54099c9acf017e62e4c8015c907a39ae68a5635877f34cbe488f761a090576",
+    "H_map": "6acc5fe97466b857285c9978ad35bd5d339239525ed7428a9bfd2d5643a6851c"
+  },
+  "digest_semantics": "frozen apparatus and chamber-jurisdiction aggregate bindings supplied at the pre-execution binding gate",
+  "initial_R_GGS": ["U","U","U","U","U","U","U","U"],
+  "execution_artifacts_present": false,
+  "observation_artifacts_present": false,
+  "result_artifacts_present": false,
+  "adjudicated_R_GGS_present": false,
+  "Commit_t0": "UNMINTED_AT_TREE_CONSTRUCTION"
+}

@@ -1,0 +1,19 @@
+{
+  "seal_id": "GGS_SPECIMEN_APPARATUS_COMPLETE__PRE_EXECUTION_SEAL",
+  "apparatus_identifier": "GGS_SPECIMEN_APPARATUS_v0.1",
+  "operational_posture": "COMPLETE_PRE_EXECUTION__LOCKED_HOLD",
+  "apparatus_complete": true,
+  "specimen_surface_complete": true,
+  "target_branch": "refs/heads/main",
+  "antecedent_branch_head": "5b322c91265b2f0add0fa9fe59399c3e50e4be0a",
+  "H_GGS": "4e54099c9acf017e62e4c8015c907a39ae68a5635877f34cbe488f761a090576",
+  "H_map": "6acc5fe97466b857285c9978ad35bd5d339239525ed7428a9bfd2d5643a6851c",
+  "R_GGS": ["U","U","U","U","U","U","U","U"],
+  "Commit_t0": "UNMINTED_AT_TREE_CONSTRUCTION",
+  "execution": "PROHIBITED",
+  "scientific_evidence_delta": 0,
+  "canon_delta": 0,
+  "track_e_delta": 0,
+  "physiology_delta": 0,
+  "pp": "BLOCKED"
+}

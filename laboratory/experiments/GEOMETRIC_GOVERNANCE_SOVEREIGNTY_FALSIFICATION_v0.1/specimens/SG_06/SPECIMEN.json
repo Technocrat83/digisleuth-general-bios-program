@@ -1,0 +1,13 @@
+{
+  "chamber": "SG_06_NON_GEOMETRIC_COUNTERMODEL",
+  "target_coordinate": "r7",
+  "attack": "GEOMETRIC_NECESSITY",
+  "geometric_model": "G_6",
+  "non_geometric_comparator": "N_6",
+  "interrogation_family": "FROZEN_X",
+  "comparison": "Delta_I = Info_J(G_6) minus Recoverable(Info_J(N_6))",
+  "zero_rule": "if Delta_I is empty under frozen interrogation family then r7=0",
+  "survival_burden": ["governance_relevant", "geometry_dependent", "nonrecoverable_from_N_6"],
+  "note": "matching verdicts alone are insufficient to establish geometric necessity",
+  "execution": "PROHIBITED"
+}

@@ -1,0 +1,11 @@
+{
+  "chamber": "SG_01_SUCCESS_WITHOUT_CONFORMANCE",
+  "target_coordinate": "r3",
+  "attack": "SUCCESS_TO_CONFORMANCE_LEAKAGE",
+  "crossed_pair": {
+    "x_1a": {"conformance": 1, "success": 1},
+    "x_1b": {"conformance": 0, "success": 1}
+  },
+  "falsifier": "success manufactures conformance",
+  "execution": "PROHIBITED"
+}

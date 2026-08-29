@@ -1,0 +1,11 @@
+{
+  "invariant_id": "R1_ANTECEDENCE",
+  "coordinate": "r1",
+  "law": "A_adjudication precedes X_specimen precedes E_execution",
+  "witness_class": "FROZEN_LINEAGE_DIGESTS_AND_COMMIT_ANCESTRY",
+  "specimen_chamber": null,
+  "reason": "antecedence is an experiment-wide temporal construction property",
+  "execution_artifacts_present": false,
+  "result_artifacts_present": false,
+  "state": "ANTECEDENTLY_SEALED_PENDING_COMMIT_T0_BINDING"
+}

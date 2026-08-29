@@ -1,0 +1,8 @@
+{
+  "chamber": "SG_03_BOUNDARY_UNRESOLVED",
+  "target_coordinate": "r5",
+  "attack": "FORCED_BINARY_ADJUDICATION",
+  "specimens": ["x_3a_INTERIOR", "x_3b_EXTERIOR", "x_3u_EPISTEMICALLY_UNRESOLVED"],
+  "requirement": "genuine unresolvedness must remain U rather than collapse to 0 or 1",
+  "execution": "PROHIBITED"
+}
