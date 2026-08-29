@@ -1,0 +1,12 @@
+{
+  "harness_identifier": "GGS_ISOLATED_CHAMBER_EXECUTION_HARNESS_v0.1",
+  "standing": "MATERIALIZED_UNQUALIFIED",
+  "target": "SG_01",
+  "coordinate": "r3",
+  "authority": ["EXECUTE_ONE_AUTHORIZED_CHAMBER", "PRESERVE_RAW_RESULT", "HALT"],
+  "prohibited": ["ADJUDICATE", "ASSIGN_r3", "REPAIR", "RETRY", "AUTO_CONTINUE", "ACCESS_SG02_SG07", "PROMOTE"],
+  "execution_authorization_required": true,
+  "execution_token_required": true,
+  "import_side_effects": "NONE",
+  "scientific_execution_on_materialization": "PROHIBITED"
+}
