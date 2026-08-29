@@ -1,0 +1,20 @@
+{
+  "seal_id": "GGS_H01_QUALIFICATION_SEAL_v0.1",
+  "qualified_harness": "GGS_ISOLATED_CHAMBER_EXECUTION_HARNESS_v0.1",
+  "H_H01": "sha256:c94cc3b34752d54408710df00bcf1d47764971a403339d1b8b13e115388722e3",
+  "qualification_residue": "E_Q_H01.json",
+  "H_EQ_H01": "sha256:f7d95f7562d0a68f435a96e2dc2b4a2f825261efc541e28cb396f28a72543036",
+  "Q01_Q10": ["CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT","CONFORMANT"],
+  "standing": "SG01_EXECUTION_ELIGIBLE",
+  "scientific_execution_authorization": "ABSENT",
+  "SG01": "UNEXECUTED",
+  "E_01": "UNMINTED",
+  "r3": "U",
+  "R_GGS": ["U","U","U","U","U","U","U","U"],
+  "science_delta": 0,
+  "canon_delta": 0,
+  "track_e_delta": 0,
+  "physiology_delta": 0,
+  "pp": "BLOCKED",
+  "terminal_state": "QUALIFIED__SCIENTIFIC_EXECUTION_UNAUTHORIZED__HALT"
+}
