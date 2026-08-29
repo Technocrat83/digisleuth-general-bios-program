@@ -1,0 +1,43 @@
+{
+  "G_R": 0,
+  "artifact_id": "GENERAL_BIOS_T3_PASS1_DUAL_DERIVATION_DISPATCH_RESULT_v0.1",
+  "canon_delta": 0,
+  "dispatch_attempted": true,
+  "dispatch_authorized": true,
+  "experiment": "GENERAL_BIOS_T3_TOPOLOGY_EXPT_01",
+  "phenotype_delta": 0,
+  "pp": "BLOCKED",
+  "premise_anchor": "6658e76d7b224f55e0280e9575987c5bfb99edca552d6358b4d0cb05601bcc61",
+  "protocol": "P_24",
+  "reconciliation": "PROHIBITED_NOT_PERFORMED",
+  "results": {
+    "A": {
+      "derivation_started": false,
+      "missing_frozen_bindings": [
+        "context_digest_sha256",
+        "derivation_apparatus_id",
+        "derivation_apparatus_digest_sha256",
+        "version_configuration_id",
+        "version_configuration_digest_sha256"
+      ],
+      "package_sha256": "97672ad681aeee7c4ee96fac5ce788a35e2522f1feb010c8b3409dade76ba43c",
+      "sealed": false,
+      "terminal_derivation_state": "INCOMPLETE"
+    },
+    "B": {
+      "derivation_started": false,
+      "missing_frozen_bindings": [
+        "context_digest_sha256",
+        "derivation_apparatus_id",
+        "derivation_apparatus_digest_sha256",
+        "version_configuration_id",
+        "version_configuration_digest_sha256"
+      ],
+      "package_sha256": "19091cd1bb9576ea21cd35f1539e136b842e1a06b47df9a605bfde98b6ca5302",
+      "sealed": false,
+      "terminal_derivation_state": "INCOMPLETE"
+    }
+  },
+  "science_delta": 0,
+  "track_e_delta": 0
+}

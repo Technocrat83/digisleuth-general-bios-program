@@ -1,0 +1,20 @@
+{
+  "artifact_class": "EXECUTION_RESIDUE / PRECONDITION_FAILURE_WITNESS",
+  "experiment": "GENERAL_BIOS_T3_TOPOLOGY_EXPT_01",
+  "event": "PASS_1_DUAL_DERIVATION_DISPATCH_001",
+  "premise_anchor": "6658e76d7b224f55e0280e9575987c5bfb99edca552d6358b4d0cb05601bcc61",
+  "dispatch_authorized": true,
+  "dispatch_attempted": true,
+  "D_A": "INCOMPLETE",
+  "D_B": "INCOMPLETE",
+  "derivation_started": false,
+  "sealed_outputs": 0,
+  "G_R": 0,
+  "reconciliation": "PROHIBITED_NOT_PERFORMED",
+  "science_delta": 0,
+  "canon_delta": 0,
+  "track_e_delta": 0,
+  "phenotype_delta": 0,
+  "pp": "BLOCKED",
+  "governing_law": "Git Persistence != Successful Derivation != Scientific Standing"
+}
