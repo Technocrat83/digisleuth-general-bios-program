@@ -1,0 +1,12 @@
+{
+  "C01": "Exact apparatus identity binding contract present",
+  "C02": "Antecedent run identity present and runtime generation absent",
+  "C03": "Antecedent digest membrane specified",
+  "C04": "Grant exclusion ternary and EXCLUDED-only",
+  "C05": "Observers input/output separated",
+  "C06": "Privileged operation has no grant alternatives",
+  "C07": "Adjudicator/classifier/theorem evaluator absent",
+  "C08": "Qualification cannot execute or admit",
+  "C09": "Repair/retry/continuation prohibited",
+  "C10": "Invocation externally admitted and single-use"
+}

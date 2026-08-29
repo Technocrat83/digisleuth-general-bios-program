@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "apparatus_digest": {"type": "string"},
+    "authority_graph_digest": {"type": "string"},
+    "run_id": {"type": "string"},
+    "single_use": {"const": true},
+    "specimen_digest": {"type": "string"},
+    "token_id": {"type": "string"}
+  },
+  "required": ["token_id","run_id","apparatus_digest","specimen_digest","authority_graph_digest","single_use"],
+  "type": "object"
+}

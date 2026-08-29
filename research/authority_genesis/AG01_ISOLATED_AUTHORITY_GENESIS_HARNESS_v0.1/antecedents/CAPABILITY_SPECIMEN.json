@@ -1,0 +1,11 @@
+{
+  "accuracy": true,
+  "capability": true,
+  "computational_provenance": true,
+  "demonstrated_utility": true,
+  "determinism": true,
+  "outcome_awareness": true,
+  "performance": true,
+  "privileged_technical_ability": true,
+  "repeated_success": true
+}

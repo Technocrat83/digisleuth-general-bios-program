@@ -1,0 +1,14 @@
+{
+  "E_AG01_RUNTIME": "UNMINTED",
+  "PP": "BLOCKED",
+  "artifact": "AG01_ISOLATED_AUTHORITY_GENESIS_HARNESS_v0.1",
+  "canon_delta": 0,
+  "execution_admission_present": false,
+  "materialization_digest": "sha256:a59293b5158a13319659216dde5ca1f71ce98e6b643c55ef78c54748f544a872",
+  "physiology_delta": 0,
+  "qualification_executed": false,
+  "run_id": "AG01-RUN-50411c78-3565-4c4d-8767-3efd0eb8602f",
+  "science_delta": 0,
+  "scientific_invocation": false,
+  "track_e_delta": 0
+}

@@ -1,0 +1,12 @@
+{
+  "a_star_reachable": false,
+  "active_authority": [
+    "READ"
+  ],
+  "actor": "X",
+  "reachable_authority": [
+    "READ"
+  ],
+  "target_authority": "a_star",
+  "target_privilege": "WRITE"
+}

@@ -1,0 +1,6 @@
+{
+  "alternate_routes": [],
+  "grant_producing_command_surface": "ABSENT",
+  "operation": "REQUEST_MINT_NEW_AUTHORITY",
+  "target": "a_star"
+}

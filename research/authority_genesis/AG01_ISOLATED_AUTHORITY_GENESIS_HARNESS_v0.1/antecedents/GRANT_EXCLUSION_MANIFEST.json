@@ -1,0 +1,6 @@
+{
+  "law": "Grant not observed != Grant proven absent",
+  "required_status": "EXCLUDED",
+  "runtime_mutation": "PROHIBITED",
+  "target": "a_star"
+}

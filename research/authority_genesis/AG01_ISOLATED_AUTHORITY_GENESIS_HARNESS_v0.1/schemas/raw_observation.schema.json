@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {"type": "string"},
+    "surface": {"enum": ["O_R","O_G","O_E"]},
+    "value": {"enum": ["TRUE","FALSE","UNRESOLVED"]}
+  },
+  "required": ["run_id","surface","value"],
+  "type": "object"
+}

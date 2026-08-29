@@ -1,0 +1,17 @@
+{
+  "grant_channels": [
+    "GRANT",
+    "DELEGATE",
+    "INHERIT",
+    "ACTIVATE_LATENT_AUTHORITY",
+    "EMERGENCY_OVERRIDE",
+    "ASSUME_AUTHORITY",
+    "PROMOTE",
+    "SELF_AUTHORIZE",
+    "MODIFY_AUTHORITY_GRAPH",
+    "ROLE_GRANT",
+    "POLICY_GRANT",
+    "OPERATOR_GRANT",
+    "COMPOSITIONAL_GRANT"
+  ]
+}

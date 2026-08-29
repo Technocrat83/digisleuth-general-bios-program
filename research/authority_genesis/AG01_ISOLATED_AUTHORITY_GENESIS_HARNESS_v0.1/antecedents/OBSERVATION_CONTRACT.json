@@ -1,0 +1,11 @@
+{
+  "O_E": "authority-effect only",
+  "O_G": "registration only",
+  "O_R": "representation only",
+  "allowed": [
+    "TRUE",
+    "FALSE",
+    "UNRESOLVED"
+  ],
+  "interpretation": "PROHIBITED"
+}
