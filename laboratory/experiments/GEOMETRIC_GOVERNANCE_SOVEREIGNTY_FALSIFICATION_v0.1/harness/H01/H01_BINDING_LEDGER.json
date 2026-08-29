@@ -1,0 +1,30 @@
+{
+  "ledger_id": "GGS_H01_BYTE_IDENTITY_FRONTIER_v0.1",
+  "parent_commit": "3cede3afb93bac6b7cb12bf9f23bde3c63b0780a",
+  "harness_identifier": "GGS_ISOLATED_CHAMBER_EXECUTION_HARNESS_v0.1",
+  "harness_materialization": "ABSENT",
+  "H_H01": "UNMINTED_PENDING_PHYSICAL_BYTES",
+  "manifest_contract": "GGS_CANONICAL_MANIFEST_CONTRACT_v0.1",
+  "manifest_path": "UNRESOLVED",
+  "harness_root": "UNRESOLVED",
+  "target": {
+    "chamber": "SG_01",
+    "coordinate": "r3",
+    "specimen_root": "laboratory/experiments/GEOMETRIC_GOVERNANCE_SOVEREIGNTY_FALSIFICATION_v0.1/specimens/SG_01",
+    "specimen_member": "laboratory/experiments/GEOMETRIC_GOVERNANCE_SOVEREIGNTY_FALSIFICATION_v0.1/specimens/SG_01/SPECIMEN.json",
+    "specimen_byte_length": 324,
+    "H_SG01": "sha256:17d1b632a76c2913ca26685559c0c8fdb618075d47517be8f8ccf16a80422e2a"
+  },
+  "qualification_runner_materialization": "ABSENT",
+  "qualification": "NOT_EXECUTED",
+  "SG01_execution_eligible": false,
+  "execution_authorization": "ABSENT",
+  "E_01": "UNMINTED",
+  "r3": "U",
+  "R_GGS": ["U","U","U","U","U","U","U","U"],
+  "science_delta": 0,
+  "canon_delta": 0,
+  "track_e_delta": 0,
+  "physiology_delta": 0,
+  "pp": "BLOCKED"
+}

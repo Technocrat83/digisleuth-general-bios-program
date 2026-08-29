@@ -1,0 +1,20 @@
+{
+  "contract_id": "GGS_CANONICAL_MANIFEST_CONTRACT_v0.1",
+  "digest_algorithm": "SHA-256",
+  "digest_encoding": "lowercase-hex",
+  "digest_format": "sha256:<64-lowercase-hex-digits>",
+  "domain_separator": "GGS:H01:v0.1\\0",
+  "canonicalization": {
+    "path_separator": "/",
+    "path_encoding": "UTF-8",
+    "path_sort": "lexicographic_byte_order",
+    "line_ending_normalization": "NONE",
+    "whitespace_normalization": "NONE",
+    "symlink_resolution": "PROHIBITED",
+    "omitted_hidden_files": "PROHIBITED_IF_RUNTIME_RELEVANT"
+  },
+  "member_fields": ["relative_path","byte_length","sha256"],
+  "root_material": "canonical_UTF8_JSON_of_members",
+  "root_rule": "SHA256(domain_separator || canonical_manifest_bytes)",
+  "governing_law": "Hash the bytes that exist, not a normalized interpretation of them."
+}

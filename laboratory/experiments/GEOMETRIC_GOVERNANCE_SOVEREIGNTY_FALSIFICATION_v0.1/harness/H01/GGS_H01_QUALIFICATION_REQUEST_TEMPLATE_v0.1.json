@@ -1,0 +1,52 @@
+{
+  "request_schema": "GGS_H01_QUALIFICATION_REQUEST_v0.1",
+  "operation": "QUALIFY_H01",
+  "harness": {
+    "identifier": "GGS_ISOLATED_CHAMBER_EXECUTION_HARNESS_v0.1",
+    "manifest_contract": "GGS_CANONICAL_MANIFEST_CONTRACT_v0.1",
+    "domain_separator": "GGS:H01:v0.1\\0",
+    "expected_digest": "UNMINTED_PENDING_PHYSICAL_BYTES",
+    "manifest_path": "UNRESOLVED",
+    "harness_root": "UNRESOLVED"
+  },
+  "lineage": {
+    "parent_commit": "3cede3afb93bac6b7cb12bf9f23bde3c63b0780a",
+    "H_GGS": "4e54099c9acf017e62e4c8015c907a39ae68a5635877f34cbe488f761a090576",
+    "H_map": "6acc5fe97466b857285c9978ad35bd5d339239525ed7428a9bfd2d5643a6851c"
+  },
+  "target": {
+    "chamber": "SG_01",
+    "coordinate": "r3",
+    "specimen_root": "laboratory/experiments/GEOMETRIC_GOVERNANCE_SOVEREIGNTY_FALSIFICATION_v0.1/specimens/SG_01",
+    "expected_specimen_digest": "sha256:17d1b632a76c2913ca26685559c0c8fdb618075d47517be8f8ccf16a80422e2a"
+  },
+  "initial_state": {
+    "R_GGS": ["U","U","U","U","U","U","U","U"],
+    "E_01_present": false,
+    "scientific_execution_present": false
+  },
+  "qualification_battery": [
+    "Q01_PARENT_BINDING",
+    "Q02_ROOT_BINDING",
+    "Q03_MAPPING_BINDING",
+    "Q04_TARGET_ISOLATION",
+    "Q05_SPECIMEN_IMMUTABILITY",
+    "Q06_INITIAL_VECTOR",
+    "Q07_INTERPRETATION_ABSENCE",
+    "Q08_CROSS_CHAMBER_ABSENCE",
+    "Q09_AUTOCONTINUATION_ABSENCE",
+    "Q10_RESULT_REPAIR_ABSENCE"
+  ],
+  "authorization": {
+    "qualification": true,
+    "scientific_execution": false,
+    "execution_token": null,
+    "adjudication": false,
+    "repair": false,
+    "continuation": false
+  },
+  "output": {
+    "residue_schema": "GGS_H01_QUALIFICATION_RESIDUE_v0.1",
+    "residue_path": "UNRESOLVED_PENDING_RUNNER_MATERIALIZATION"
+  }
+}

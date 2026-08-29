@@ -1,0 +1,36 @@
+{
+  "interface_id": "GGS_HARNESS_QUALIFICATION_RUNNER_v0.1::qualify_h01",
+  "standing": "FROZEN_INTERFACE_UNMATERIALIZED_RUNNER",
+  "input": "GGS_H01_QUALIFICATION_REQUEST_v0.1",
+  "output": "GGS_H01_QUALIFICATION_RESIDUE_v0.1",
+  "side_effects": ["qualification_residue_only"],
+  "authority": [
+    "READ_H01_BYTES",
+    "COMPUTE_H_H01",
+    "VERIFY_PARENT_BINDING",
+    "VERIFY_ROOT_BINDING",
+    "VERIFY_MAPPING_BINDING",
+    "INSPECT_STATIC_CAPABILITY_SURFACE",
+    "EXECUTE_NON_SCIENTIFIC_QUALIFICATION_PROBES",
+    "RECORD_Q01_Q10",
+    "SEAL_QUALIFICATION_RESIDUE",
+    "HALT"
+  ],
+  "prohibited": [
+    "EXECUTE_SG01",
+    "MINT_E01",
+    "ASSIGN_r3",
+    "MUTATE_R_GGS",
+    "REPAIR_H01",
+    "RETRY_WITH_MODIFIED_H01",
+    "ACCESS_SG02_SG07",
+    "ALTER_SPECIMENS",
+    "ALTER_METRICS",
+    "PROMOTE"
+  ],
+  "scientific_execution": "IMPOSSIBLE",
+  "auto_repair": "IMPOSSIBLE",
+  "auto_retry": "IMPOSSIBLE",
+  "adjudication": "IMPOSSIBLE",
+  "forbidden_cli_capabilities": ["--execute","--repair","--retry","--next-chamber","--adjudicate"]
+}
