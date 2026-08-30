@@ -4,8 +4,8 @@ import ast, hashlib, json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-COMMIT = "71b0461161242ffcf876e4d5ba95b0905c9e3733"
-H_MAT = "sha256:a59293b5158a13319659216dde5ca1f71ce98e6b643c55ef78c54748f544a872"
+COMMIT = "12418b9db7185c39c1d96c09af74c3e01a3f9239"
+H_MAT = "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b"
 VALID = {"PASS", "FAIL", "INCOMPLETE"}
 
 def sha256_file(path: Path) -> str:
