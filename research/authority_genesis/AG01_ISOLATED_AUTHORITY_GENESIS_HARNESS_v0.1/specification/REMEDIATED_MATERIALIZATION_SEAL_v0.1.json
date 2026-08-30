@@ -1,0 +1,18 @@
+{
+  "artifact": "AG01_REMEDIATED_MATERIALIZATION_SEAL_v0.1",
+  "base_apparatus_commit": "a92008e375e4b57bbcde1f4070c2de55e82c0390",
+  "base_materialization_hash": "sha256:a59293b5158a13319659216dde5ca1f71ce98e6b643c55ef78c54748f544a872",
+  "apparatus_surface_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+  "digest_algorithm": "SHA256(RFC8785_CANONICAL_JSON_OF_BASE_HASH_COMMIT_AND_ORDERED_REMEDIATION_SURFACES)",
+  "remediation_surfaces": [
+    {"path": "harness/invocation.py", "sha256": "sha256:efbc80ea576287a6026a19a26e3d5b35923adb19e77f48f96b0a024b3ee90c75"},
+    {"path": "harness/state_machine.py", "sha256": "sha256:d7e09d4a0e1a22a3c942d9761e11ed8870dceee08af9fd480b72dff85d871dcf"},
+    {"path": "schemas/runtime_residue.schema.json", "sha256": "sha256:2a815bb31112903a359bfc5cde1b8cb18cd257cdc8469ed95426b28bfab2a750"},
+    {"path": "specification/IDENTITY_VECTOR_v0.1.json", "sha256": "sha256:1d050b6146948fda68109a8f04b7d80510b0615bd5f68fce6f8ab5ff7d4eeeaf"}
+  ],
+  "remediated_materialization_hash": "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b",
+  "qualification_vector_assignment": "PROHIBITED",
+  "scientific_invocation": false,
+  "execution_admission": "ABSENT",
+  "E_AG01": "UNMINTED"
+}
