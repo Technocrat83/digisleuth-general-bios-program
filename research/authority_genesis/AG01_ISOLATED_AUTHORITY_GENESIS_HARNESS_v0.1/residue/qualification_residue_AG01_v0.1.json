@@ -1,0 +1,174 @@
+{
+  "artifact": "qualification_residue_AG01_v0.1",
+  "program": "AUTHORITY_GENESIS_FALSIFICATION_PROGRAM_v0.1",
+  "apparatus": "AG01_ISOLATED_AUTHORITY_GENESIS_HARNESS_v0.1",
+  "apparatus_commit": "71b0461161242ffcf876e4d5ba95b0905c9e3733",
+  "realizer_commit": "65bb4a41352c44d5f2dd3b57c5da57a1674e1995",
+  "materialization_hash": "sha256:a59293b5158a13319659216dde5ca1f71ce98e6b643c55ef78c54748f544a872",
+  "mode": "NON_SCIENTIFIC_MEASUREMENT",
+  "qualification_vector": [
+    "INCOMPLETE",
+    "PASS",
+    "PASS",
+    "INCOMPLETE",
+    "PASS",
+    "PASS",
+    "INCOMPLETE",
+    "PASS",
+    "PASS",
+    "INCOMPLETE"
+  ],
+  "counts": {
+    "PASS": 6,
+    "FAIL": 0,
+    "INCOMPLETE": 4,
+    "WITNESSES_EMITTED": 9,
+    "REALIZER_ERRORS": 1
+  },
+  "qualification_eligibility": "NOT_ESTABLISHED",
+  "scientific_execution": "PROHIBITED",
+  "E_AG01_runtime": "UNMINTED",
+  "execution_admission": "ABSENT",
+  "deltas": {
+    "scientific_evidence": 0,
+    "canon": 0,
+    "track_e": 0,
+    "physiology": 0
+  },
+  "PP": "BLOCKED",
+  "records": [
+    {
+      "check_id": "C_01",
+      "realizer_id": "R_01",
+      "execution_status": "REALIZER_ERROR",
+      "result": "INCOMPLETE",
+      "failure_or_incompleteness_reason": "MANIFEST_PATH_BINDING_ERROR",
+      "raw_observations": [
+        "R_01 requested ROOT/MATERIALIZATION_MANIFEST.json",
+        "Committed manifest exists at specification/MATERIALIZATION_MANIFEST.json",
+        "FileNotFoundError raised before QualificationWitness_v0.1 construction"
+      ],
+      "witness_digest": null
+    },
+    {
+      "check_id": "C_02",
+      "realizer_id": "R_02",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "raw_observations": [
+        {
+          "mutation_probe_rejected": true,
+          "pre_post_equal": true
+        }
+      ],
+      "witness_digest": "sha256:5265b2d6f75488dc9ca417acaa56a43d5d1ec56cc2732c1372a327de85788ddf"
+    },
+    {
+      "check_id": "C_03",
+      "realizer_id": "R_03",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "raw_observations": [
+        "NO_REACHABILITY_DERIVER_SYMBOLS"
+      ],
+      "witness_digest": "sha256:92d1476070f9bd83e2bdda894f8484336b8d338a6214929761449688003b6d64"
+    },
+    {
+      "check_id": "C_04",
+      "realizer_id": "R_04",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "INCOMPLETE",
+      "failure_or_incompleteness_reason": "INVOCATION_LOCK_REALIZER_TARGET_ABSENT",
+      "raw_observations": [
+        "NO_CARDINALITY_LOCK_SYMBOLS"
+      ],
+      "witness_digest": "sha256:bc3b47b9cb7dd57bbfa7f312281d57b6c5a64ba0e9c2f18bb79db0e6a8e97bf6"
+    },
+    {
+      "check_id": "C_05",
+      "realizer_id": "R_05",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "raw_observations": [
+        "THREE_MODULES_PRESENT_NO_CROSS_IMPORTS"
+      ],
+      "witness_digest": "sha256:c801b2b791e0f9e598996eed3480e2ea2d7488eb18c993b98a3bbee7508c7de0"
+    },
+    {
+      "check_id": "C_06",
+      "realizer_id": "R_06",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "raw_observations": [
+        "NO_FORBIDDEN_VOCABULARY"
+      ],
+      "witness_digest": "sha256:a46cb8d7aa6a98de38117dcc6719ae68377c3851872699efac74c796bd53dd30"
+    },
+    {
+      "check_id": "C_07",
+      "realizer_id": "R_07",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "INCOMPLETE",
+      "failure_or_incompleteness_reason": "RESIDUE_SCHEMA_TARGET_ABSENT",
+      "raw_observations": [
+        "RUNTIME_RESIDUE_SCHEMA_ABSENT"
+      ],
+      "witness_digest": "sha256:be7917edb46fd60c2b28097c56a17334411ee0bf8d2a5bc28e2a84348f4bcd97"
+    },
+    {
+      "check_id": "C_08",
+      "realizer_id": "R_08",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "raw_observations": [
+        {
+          "objects": 9,
+          "pre_post_equal": true
+        }
+      ],
+      "witness_digest": "sha256:739362faf0a105d85fdc5fd9328bdd1717a7a7d5757b93fa3f54cec26244fed7"
+    },
+    {
+      "check_id": "C_09",
+      "realizer_id": "R_09",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "raw_observations": [
+        {
+          "run_id": "QUALIFICATION_FIXTURE",
+          "surface": "O_R",
+          "value": "UNRESOLVED"
+        },
+        {
+          "run_id": "QUALIFICATION_FIXTURE",
+          "surface": "O_G",
+          "value": "UNRESOLVED"
+        },
+        {
+          "run_id": "QUALIFICATION_FIXTURE",
+          "surface": "O_E",
+          "value": "UNRESOLVED"
+        }
+      ],
+      "witness_digest": "sha256:7e2fefd6052189ff3ad8b1c46786c1721c8b4ed6fce44e6d70934c44d026690d"
+    },
+    {
+      "check_id": "C_10",
+      "realizer_id": "R_10",
+      "execution_status": "WITNESS_EMITTED",
+      "result": "INCOMPLETE",
+      "failure_or_incompleteness_reason": "TERMINAL_STATE_REALIZER_TARGET_ABSENT",
+      "raw_observations": [
+        "TERMINAL_STATE_MACHINE_SURFACE_ABSENT"
+      ],
+      "witness_digest": "sha256:526196d7006169d32db812247c3bd761d0165d58c2c1698f95551d2866cdd8fe"
+    }
+  ],
+  "qualification_residue_digest": "sha256:a983c3f451c07085ee95e5929936bfd4e678e38e61ec0498c86360e9e403d201"
+}
