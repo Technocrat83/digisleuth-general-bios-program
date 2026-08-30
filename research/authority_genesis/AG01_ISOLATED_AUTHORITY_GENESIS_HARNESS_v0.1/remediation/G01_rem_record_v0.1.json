@@ -1,0 +1,16 @@
+{
+  "cone": "G01_rem",
+  "target": "C01_EXACT_SIX_DOMAIN_IDENTITY_BINDING",
+  "surface_commit": "f0053989b9e4cca0dbab3eaafff1eb041c042f80",
+  "realizer_repair_commit": "b82578ad594a00cfcebea68995ee70f0a7063d06",
+  "surface": "specification/IDENTITY_VECTOR_v0.1.json",
+  "realizer": "tests/qualification/test_r01_identity.py",
+  "standing": "REMEASUREMENT_ELIGIBLE",
+  "qualification_assignment": "PROHIBITED",
+  "notable_unresolved_coordinate": "I_A",
+  "unresolved_reason": "REACHABLE_AUTHORITY_SET_REFERENT_NOT_COMMITTED",
+  "cross_cone_mutation": false,
+  "scientific_execution": false,
+  "execution_admission": "ABSENT",
+  "E_AG01": "UNMINTED"
+}
