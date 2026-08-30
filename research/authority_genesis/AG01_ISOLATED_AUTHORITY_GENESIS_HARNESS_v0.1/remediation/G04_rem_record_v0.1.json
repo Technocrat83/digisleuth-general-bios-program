@@ -1,0 +1,15 @@
+{
+  "cone": "G04_rem",
+  "target": "C04_SINGLE_USE_INVOCATION_LOCK",
+  "surface_commit": "cf26cceae84dc97aff05a297f9b16782f1aa0531",
+  "surface": "harness/invocation.py",
+  "standing": "REMEASUREMENT_ELIGIBLE",
+  "qualification_assignment": "PROHIBITED",
+  "state_transition": "UNCONSUMED->CONSUMED",
+  "reverse_transition": "PROHIBITED",
+  "invocation_authority_granted": false,
+  "cross_cone_mutation": false,
+  "scientific_execution": false,
+  "execution_admission": "ABSENT",
+  "E_AG01": "UNMINTED"
+}
