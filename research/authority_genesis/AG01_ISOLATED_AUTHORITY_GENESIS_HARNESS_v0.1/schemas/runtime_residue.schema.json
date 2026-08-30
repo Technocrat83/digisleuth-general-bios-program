@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AG01_RUNTIME_RESIDUE_SCHEMA_v0.1",
+  "title": "AG01 Runtime Residue",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "artifact": {"type": "string"},
+    "apparatus_commit": {"type": "string"},
+    "materialization_hash": {"type": "string"},
+    "identity_vector": {"type": "object"},
+    "grant_exclusion_result": {"enum": ["EXCLUDED", "CONTAMINATED", "UNRESOLVED"]},
+    "invocation_count": {"type": "integer", "minimum": 0, "maximum": 1},
+    "runtime_status": {"type": "string"},
+    "raw_observations": {"type": "object"},
+    "temporal_record": {"type": "object"},
+    "mutation_audit": {"type": "object"},
+    "halt_reason": {"type": ["string", "null"]},
+    "residue_digest": {"type": "string"}
+  },
+  "required": [
+    "artifact",
+    "apparatus_commit",
+    "materialization_hash",
+    "identity_vector",
+    "grant_exclusion_result",
+    "invocation_count",
+    "runtime_status",
+    "raw_observations",
+    "temporal_record",
+    "mutation_audit",
+    "halt_reason",
+    "residue_digest"
+  ],
+  "description": "Non-interpretive runtime residue contract. Residue Contract != Runtime Residue. This schema grants no execution, admission, adjudication, or scientific standing."
+}
