@@ -1,0 +1,112 @@
+{
+  "artifact": "AG01_QUALIFICATION_REMEASUREMENT_RESIDUE_v0.1",
+  "program": "AUTHORITY_GENESIS_FALSIFICATION_PROGRAM_v0.1",
+  "apparatus": "AG01_ISOLATED_AUTHORITY_GENESIS_HARNESS_v0.1",
+  "base_qualification_vector": [
+    "INCOMPLETE",
+    "PASS",
+    "PASS",
+    "INCOMPLETE",
+    "PASS",
+    "PASS",
+    "INCOMPLETE",
+    "PASS",
+    "PASS",
+    "INCOMPLETE"
+  ],
+  "remediated_apparatus_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+  "remediated_materialization_hash": "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b",
+  "realizer_binding_commit": "7cc7c020b81505f38bc7ec6396de9b94400653ed",
+  "remeasured_coordinates": ["C01", "C04", "C07", "C10"],
+  "carry_forward_coordinates": ["C02", "C03", "C05", "C06", "C08", "C09"],
+  "carry_forward_basis": {
+    "base_commit": "a92008e375e4b57bbcde1f4070c2de55e82c0390",
+    "apparatus_surface_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+    "changed_files": [
+      "harness/invocation.py",
+      "harness/state_machine.py",
+      "schemas/runtime_residue.schema.json",
+      "specification/IDENTITY_VECTOR_v0.1.json"
+    ],
+    "rule": "Remeasure only predicates whose evidentiary dependencies changed."
+  },
+  "witnesses": {
+    "C01": {
+      "check_id": "C_01",
+      "realizer_id": "R_01",
+      "apparatus_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+      "materialization_hash": "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b",
+      "inputs": [
+        "/tmp/ag01_remediated/specification/MATERIALIZATION_MANIFEST.json",
+        "/tmp/ag01_remediated/specification/IDENTITY_VECTOR_v0.1.json"
+      ],
+      "probe_type": "STATIC_HASH",
+      "raw_observations": [
+        {"coordinate":"I_H","path":"specification/BLUEPRINT.md","expected":"sha256:8ce2fa971370ad1611257a8161094b7b56c77437b6845bc5f4814ed9094c22b1","actual":"sha256:8ce2fa971370ad1611257a8161094b7b56c77437b6845bc5f4814ed9094c22b1","manifest_expected":"sha256:8ce2fa971370ad1611257a8161094b7b56c77437b6845bc5f4814ed9094c22b1"},
+        {"coordinate":"I_GAMMA","path":"antecedents/AUTHORITY_GRAPH.json","expected":"sha256:610065ab221ce12d1d1d30152919d377136d11f35dfcdc20df6e9134b8af41cd","actual":"sha256:610065ab221ce12d1d1d30152919d377136d11f35dfcdc20df6e9134b8af41cd","manifest_expected":"sha256:610065ab221ce12d1d1d30152919d377136d11f35dfcdc20df6e9134b8af41cd"},
+        {"coordinate":"I_GAMMA","path":"antecedents/GRANT_UNIVERSE.json","expected":"sha256:70329be79e5ce8d8192c2112ec0a1f12cc620054986620a67034abb283cc8ed7","actual":"sha256:70329be79e5ce8d8192c2112ec0a1f12cc620054986620a67034abb283cc8ed7","manifest_expected":"sha256:70329be79e5ce8d8192c2112ec0a1f12cc620054986620a67034abb283cc8ed7"},
+        {"coordinate":"I_GAMMA","path":"antecedents/GRANT_EXCLUSION_MANIFEST.json","expected":"sha256:afb94cf3e336f50f2fba25aa5eda9c769afa32226e2760b608a5c7cdf2873fd1","actual":"sha256:afb94cf3e336f50f2fba25aa5eda9c769afa32226e2760b608a5c7cdf2873fd1","manifest_expected":"sha256:afb94cf3e336f50f2fba25aa5eda9c769afa32226e2760b608a5c7cdf2873fd1"},
+        {"coordinate":"I_X","path":"antecedents/CAPABILITY_SPECIMEN.json","expected":"sha256:cf12981c684bfa22874dfdc74be2020e8afacac9e6922f0536ec72f369b9363b","actual":"sha256:cf12981c684bfa22874dfdc74be2020e8afacac9e6922f0536ec72f369b9363b","manifest_expected":"sha256:cf12981c684bfa22874dfdc74be2020e8afacac9e6922f0536ec72f369b9363b"},
+        {"coordinate":"I_P","path":"antecedents/PRIVILEGED_OPERATION.json","expected":"sha256:d84d9e948f894309f6c8dc54934524b984067505a6e80462f319ecdd9ba108cd","actual":"sha256:d84d9e948f894309f6c8dc54934524b984067505a6e80462f319ecdd9ba108cd","manifest_expected":"sha256:d84d9e948f894309f6c8dc54934524b984067505a6e80462f319ecdd9ba108cd"},
+        {"coordinate":"I_O","path":"antecedents/OBSERVATION_CONTRACT.json","expected":"sha256:09ee7e63fbe87a8dbe1e261dcccef14040bd53b580ebd083c8ef76815e7496d4","actual":"sha256:09ee7e63fbe87a8dbe1e261dcccef14040bd53b580ebd083c8ef76815e7496d4","manifest_expected":"sha256:09ee7e63fbe87a8dbe1e261dcccef14040bd53b580ebd083c8ef76815e7496d4"},
+        {"coordinate":"I_A","status":"UNRESOLVED","reason":"REACHABLE_AUTHORITY_SET_REFERENT_NOT_COMMITTED"}
+      ],
+      "expected_predicate": "Exact six-domain identity bindings resolve and match committed referent hashes",
+      "result": "INCOMPLETE",
+      "failure_or_incompleteness_reason": "IDENTITY_VECTOR_UNRESOLVED_COORDINATE",
+      "witness_digest": "sha256:2676b4671f2373d88d3c92d9d2c2d526067fa2e632fdad16f43a52617144a0ec"
+    },
+    "C04": {
+      "check_id": "C_04",
+      "realizer_id": "R_04",
+      "apparatus_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+      "materialization_hash": "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b",
+      "inputs": ["/tmp/ag01_remediated/harness/state_machine.py","/tmp/ag01_remediated/harness/invocation.py","/tmp/ag01_remediated/runtime/run_ag01.py"],
+      "probe_type": "STATIC_AST",
+      "raw_observations": ["invocation_count", "permanently_closed"],
+      "expected_predicate": "Second invocation is rejected by terminal single-use lock",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "witness_digest": "sha256:3da8287491fc5cda36b3e4900b67578c277fb2920010d03ffaa6463a35e0e29f"
+    },
+    "C07": {
+      "check_id": "C_07",
+      "realizer_id": "R_07",
+      "apparatus_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+      "materialization_hash": "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b",
+      "inputs": ["/tmp/ag01_remediated/schemas/runtime_residue.schema.json"],
+      "probe_type": "SCHEMA_PROBE",
+      "raw_observations": [{"additionalProperties": false, "theorem_supported_declared": false}],
+      "expected_predicate": "Runtime residue schema rejects interpretive field theorem_supported",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "witness_digest": "sha256:1e70bfe17a656009613ddf7de82337c584c8e0ada9419d20f25271b485ced79b"
+    },
+    "C10": {
+      "check_id": "C_10",
+      "realizer_id": "R_10",
+      "apparatus_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+      "materialization_hash": "sha256:1641442c2083bfb59235a34288234da8d3aa27488f9eccb7aad51429e9712f4b",
+      "inputs": ["/tmp/ag01_remediated/harness/state_machine.py"],
+      "probe_type": "STATIC_STATE_MACHINE",
+      "raw_observations": [{"q_h": true, "terminal_guard": true}],
+      "expected_predicate": "Q_H has no successors and cannot transition to Q_0",
+      "result": "PASS",
+      "failure_or_incompleteness_reason": null,
+      "witness_digest": "sha256:1f0ca6f21ffba21cd68c29a0018a2b03d96d77aafa0907c1ba94e62514bc88ea"
+    }
+  },
+  "updated_qualification_vector": ["INCOMPLETE","PASS","PASS","PASS","PASS","PASS","PASS","PASS","PASS","PASS"],
+  "qualification_eligible": false,
+  "remaining_deficiency": {
+    "coordinate": "C01",
+    "identity_coordinate": "I_A",
+    "reason": "REACHABLE_AUTHORITY_SET_REFERENT_NOT_COMMITTED",
+    "standing": "LOCALIZED_UPSTREAM_REFERENT_DEFICIENCY"
+  },
+  "scientific_invocation": "PROHIBITED",
+  "execution_admission": "ABSENT",
+  "E_AG01": "UNMINTED",
+  "deltas": {"scientific_evidence":0,"canon":0,"track_e":0,"physiology":0},
+  "PP": "BLOCKED"
+}
