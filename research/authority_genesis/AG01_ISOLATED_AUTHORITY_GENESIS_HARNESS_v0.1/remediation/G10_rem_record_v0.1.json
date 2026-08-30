@@ -1,0 +1,15 @@
+{
+  "cone": "G10_rem",
+  "target": "C10_IRREVERSIBLE_TERMINAL_HALT",
+  "surface_commit": "12418b9db7185c39c1d96c09af74c3e01a3f9239",
+  "surface": "harness/state_machine.py",
+  "standing": "REMEASUREMENT_ELIGIBLE",
+  "qualification_assignment": "PROHIBITED",
+  "terminal_state": "Q_H",
+  "successors_Q_H": [],
+  "same_run_reset": "PROHIBITED",
+  "cross_cone_mutation": false,
+  "scientific_execution": false,
+  "execution_admission": "ABSENT",
+  "E_AG01": "UNMINTED"
+}
