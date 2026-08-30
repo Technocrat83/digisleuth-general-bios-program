@@ -1,0 +1,14 @@
+{
+  "cone": "G07_rem",
+  "target": "C07_RUNTIME_RESIDUE_PURITY",
+  "surface_commit": "cf1c1a682c3783bc2267a42f7cfca313ea83989f",
+  "surface": "schemas/runtime_residue.schema.json",
+  "standing": "REMEASUREMENT_ELIGIBLE",
+  "qualification_assignment": "PROHIBITED",
+  "residue_contract_only": true,
+  "runtime_residue_created": false,
+  "cross_cone_mutation": false,
+  "scientific_execution": false,
+  "execution_admission": "ABSENT",
+  "E_AG01": "UNMINTED"
+}
