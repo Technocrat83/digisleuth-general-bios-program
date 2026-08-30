@@ -1,0 +1,64 @@
+{
+  "artifact": "AG01_EXACT_SIX_DOMAIN_IDENTITY_BINDING_v0.1",
+  "apparatus": "AG01_ISOLATED_AUTHORITY_GENESIS_HARNESS_v0.1",
+  "source_apparatus_commit": "71b0461161242ffcf876e4d5ba95b0905c9e3733",
+  "binding_posture": "REMEDIATION_SURFACE_ONLY",
+  "historical_identity_claim": false,
+  "canonicalization": "RFC_8785_JSON_FOR_COMPOSITE_BINDINGS",
+  "identity_vector_order": ["I_H", "I_GAMMA", "I_A", "I_X", "I_P", "I_O"],
+  "coordinates": {
+    "I_H": {
+      "meaning": "harness specification digest",
+      "status": "BOUND",
+      "bindings": [
+        {"path": "specification/BLUEPRINT.md", "sha256": "sha256:8ce2fa971370ad1611257a8161094b7b56c77437b6845bc5f4814ed9094c22b1"}
+      ]
+    },
+    "I_GAMMA": {
+      "meaning": "frozen authority/grant topology digest",
+      "status": "BOUND",
+      "bindings": [
+        {"path": "antecedents/AUTHORITY_GRAPH.json", "sha256": "sha256:610065ab221ce12d1d1d30152919d377136d11f35dfcdc20df6e9134b8af41cd"},
+        {"path": "antecedents/GRANT_UNIVERSE.json", "sha256": "sha256:70329be79e5ce8d8192c2112ec0a1f12cc620054986620a67034abb283cc8ed7"},
+        {"path": "antecedents/GRANT_EXCLUSION_MANIFEST.json", "sha256": "sha256:afb94cf3e336f50f2fba25aa5eda9c769afa32226e2760b608a5c7cdf2873fd1"}
+      ],
+      "composite_binding_digest": "sha256:ffd3b97ddb3e190c9a378e66023b1e42b0b4a017a66c07d4534d28f43be783ee"
+    },
+    "I_A": {
+      "meaning": "external reachable authority set derivation digest",
+      "status": "UNRESOLVED",
+      "bindings": [],
+      "reason": "REACHABLE_AUTHORITY_SET_REFERENT_NOT_COMMITTED",
+      "substitution_prohibited": true
+    },
+    "I_X": {
+      "meaning": "capability specimen digest",
+      "status": "BOUND",
+      "bindings": [
+        {"path": "antecedents/CAPABILITY_SPECIMEN.json", "sha256": "sha256:cf12981c684bfa22874dfdc74be2020e8afacac9e6922f0536ec72f369b9363b"}
+      ]
+    },
+    "I_P": {
+      "meaning": "privileged operation digest",
+      "status": "BOUND",
+      "bindings": [
+        {"path": "antecedents/PRIVILEGED_OPERATION.json", "sha256": "sha256:d84d9e948f894309f6c8dc54934524b984067505a6e80462f319ecdd9ba108cd"}
+      ]
+    },
+    "I_O": {
+      "meaning": "observation contract digest",
+      "status": "BOUND",
+      "bindings": [
+        {"path": "antecedents/OBSERVATION_CONTRACT.json", "sha256": "sha256:09ee7e63fbe87a8dbe1e261dcccef14040bd53b580ebd083c8ef76815e7496d4"}
+      ]
+    }
+  },
+  "authority_exclusions": [
+    "RECONSTRUCT_MISSING_LINEAGE",
+    "INFER_HISTORICAL_IDENTITY",
+    "SUBSTITUTE_REFERENT",
+    "ASSIGN_QUALIFICATION_STANDING",
+    "EXECUTE_P_X",
+    "MINT_E_AG01"
+  ]
+}
