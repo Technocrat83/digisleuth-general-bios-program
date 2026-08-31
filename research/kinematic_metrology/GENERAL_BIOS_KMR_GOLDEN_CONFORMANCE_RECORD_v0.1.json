@@ -1,0 +1,43 @@
+{
+  "apparatus_id": "GENERAL_BIOS_KINEMATIC_METROLOGICAL_RUNTIME_APPARATUS_v0.1",
+  "artifact_id": "GENERAL_BIOS_KMR_GOLDEN_CONFORMANCE_RECORD_v0.1",
+  "claim_ceiling": "Synthetic deterministic reference regime only",
+  "cycles": [
+    {
+      "candidate_digest": "723970900eb49a39d29b683e9ad40fa3df736fcbab2bd1061d9c25fce310b310",
+      "conformance": {"authorized_edit_only": true, "epistemic_standing_preserved": true, "golden": true, "jurisdiction_preserved": true, "provenance_extended": true, "target_morphology_reached": true},
+      "cycle_id": "C1_LOCALIZATION",
+      "decision": "ACCEPT",
+      "hcet": {"accepted": true, "edits": [{"dst": "LABS", "op": "add_edge", "rel": "localizes_to", "src": "MAGUS"}]},
+      "input_digest": "b53874be357f470f09079fc82f35a5e6adf387b8c451b9e6405a0063ad3336f0",
+      "metrology": {"added_edges": [["MAGUS", "localizes_to", "LABS"]], "added_nodes": [], "authority_drift": false, "delta_edges": 1, "delta_nodes": 0, "reachability_after": ["LABS", "MAGUS", "SCIENCE"], "reachability_before": ["MAGUS", "SCIENCE"], "removed_edges": [], "removed_nodes": [], "standing_drift": {"LABS": false, "MAGUS": false, "SCIENCE": false}},
+      "passed": true
+    },
+    {
+      "candidate_digest": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d",
+      "conformance": {"authorized_edit_only": true, "epistemic_standing_preserved": true, "golden": true, "jurisdiction_preserved": true, "provenance_extended": true, "target_morphology_reached": true},
+      "cycle_id": "C2_PHENOTYPE_PROJECTION",
+      "decision": "ACCEPT",
+      "hcet": {"accepted": true, "edits": [{"attrs": {"kind": "uiux_projection", "standing": "DERIVED_DISPLAY"}, "id": "PHENOTYPE_A", "op": "add_node"}, {"dst": "PHENOTYPE_A", "op": "add_edge", "rel": "projects", "src": "LABS"}]},
+      "input_digest": "723970900eb49a39d29b683e9ad40fa3df736fcbab2bd1061d9c25fce310b310",
+      "metrology": {"added_edges": [["LABS", "projects", "PHENOTYPE_A"]], "added_nodes": ["PHENOTYPE_A"], "authority_drift": false, "delta_edges": 1, "delta_nodes": 1, "reachability_after": ["LABS", "MAGUS", "PHENOTYPE_A", "SCIENCE"], "reachability_before": ["LABS", "MAGUS", "SCIENCE"], "removed_edges": [], "removed_nodes": [], "standing_drift": {"LABS": false, "MAGUS": false, "SCIENCE": false}},
+      "passed": true
+    },
+    {
+      "candidate_digest": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d",
+      "conformance": {"authorized_edit_only": false, "epistemic_standing_preserved": true, "golden": false, "jurisdiction_preserved": true, "provenance_extended": true, "target_morphology_reached": false},
+      "cycle_id": "C3_UNAUTHORIZED_AUTHORITY",
+      "decision": "EXPECTED_REJECTION",
+      "hcet": {"accepted": false, "edits": [], "reason": "JURISDICTION_VIOLATION", "violations": [{"op": {"actor": "MAGUS", "op": "set_authority", "value": ["PETITION", "ORIENT", "EXECUTE"]}, "violation": "AUTHORITY_MUTATION_PROHIBITED"}]},
+      "input_digest": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d",
+      "metrology": {"added_edges": [], "added_nodes": [], "authority_drift": false, "delta_edges": 0, "delta_nodes": 0, "reachability_after": ["LABS", "MAGUS", "PHENOTYPE_A", "SCIENCE"], "reachability_before": ["LABS", "MAGUS", "PHENOTYPE_A", "SCIENCE"], "removed_edges": [], "removed_nodes": [], "standing_drift": {"LABS": false, "MAGUS": false, "PHENOTYPE_A": false, "SCIENCE": false}},
+      "passed": true
+    }
+  ],
+  "deltas": {"canon": 0, "level_0": 0, "physiology": 0, "pp": 0},
+  "genesis_digest": "b53874be357f470f09079fc82f35a5e6adf387b8c451b9e6405a0063ad3336f0",
+  "golden_conformance_loop": "PASS",
+  "replay": {"deterministic_replay": true, "terminal_digest_run_1": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d", "terminal_digest_run_2": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d"},
+  "standing": "BOUNDED_REFERENCE_CONFORMANCE_EVIDENCE",
+  "terminal_digest": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d"
+}

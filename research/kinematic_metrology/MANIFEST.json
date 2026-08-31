@@ -1,0 +1,23 @@
+{
+  "artifact_id": "GENERAL_BIOS_KMR_HCET_MATERIALIZATION_MANIFEST_v0.1",
+  "apparatus": "GENERAL_BIOS_KINEMATIC_METROLOGICAL_RUNTIME_APPARATUS_v0.1",
+  "epistemic_standing": "BOUNDED_REFERENCE_CONFORMANCE_EVIDENCE",
+  "golden_conformance_loop": "PASS",
+  "parent_commit": "4e3c5c6b6387babeab179f2d12989f1bfc754bfb",
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "target_path": "research/kinematic_metrology",
+  "files": {
+    "README.md": {"git_blob_sha": "33055066d1698dbf57178a6d2f5d6925149e8117"},
+    "kmr_hcet_apparatus.py": {"git_blob_sha": "80313912a88b7f94a683d68c08337ce8a8952d99"},
+    "GENERAL_BIOS_KMR_GOLDEN_CONFORMANCE_RECORD_v0.1.json": {"git_blob_sha": "d430f8d5b17aa08483a304cbe32d1fdbfebdf475"}
+  },
+  "tested_behavior": {
+    "authorized_localization": "PASS",
+    "authorized_phenotype_projection": "PASS",
+    "unauthorized_authority_escalation_rejected": "PASS",
+    "rejected_cycle_state_immutability": "PASS",
+    "deterministic_replay": "PASS"
+  },
+  "claim_ceiling": "Synthetic deterministic reference regime only",
+  "deltas": {"canon": 0, "physiology": 0, "level_0": 0, "pp": 0}
+}
