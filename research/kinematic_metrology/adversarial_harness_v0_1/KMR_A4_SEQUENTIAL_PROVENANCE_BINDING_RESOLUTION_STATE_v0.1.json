@@ -1,0 +1,31 @@
+{
+  "artifact_id": "KMR_A4_SEQUENTIAL_PROVENANCE_BINDING_RESOLUTION_STATE_v0.1",
+  "registry_action": "RESOLVE_A4_SEQUENTIAL_PROVENANCE_BINDING",
+  "localized_deficiency": "STALE_INTERMEDIATE_PARENT_DIGEST",
+  "shared_runtime_semantics_delta": 0,
+  "execution_performed": false,
+  "scientific_evidence_generated": false,
+  "chamber_state": {
+    "KMR_A1_MIXED_CONTRACT_ATOMICITY": "READINESS_PRESERVED",
+    "KMR_A2_EFFECTIVE_AUTHORITY_LAUNDERING": "READINESS_PRESERVED",
+    "KMR_A3_PROVENANCE_DISCONTINUITY": "READINESS_PRESERVED",
+    "KMR_A4_TRANSFORM_ORDER_SENSITIVITY": "UPSTREAM_REPAIR_SPECIFIED_UNEXECUTED",
+    "KMR_A5_IDEMPOTENCE_AND_REPLAY_PRESSURE": "READINESS_PRESERVED",
+    "KMR_A6_EPISTEMIC_STANDING_LAUNDERING": "READINESS_PRESERVED"
+  },
+  "a4_resolution_gate": {
+    "alpha_step_1_parent": "H(K0)",
+    "alpha_step_2_parent": "H(K1)",
+    "beta_step_1_parent": "H(K0)",
+    "beta_step_2_parent": "H(K1_prime)",
+    "intermediate_validation_required": true,
+    "terminal_digest_comparison_only_after_sequence_validity": true
+  },
+  "a4_expected_verdict_domain": [
+    "DETERMINISTIC_COMMUTATIVE_PASS",
+    "ORDER_DEPENDENCY_DETECTED"
+  ],
+  "execution_authority": "ZERO",
+  "scientific_adjudication_authority": "ZERO",
+  "deltas": {"canon": 0, "physiology": 0, "level_0": 0, "pp": 0}
+}
