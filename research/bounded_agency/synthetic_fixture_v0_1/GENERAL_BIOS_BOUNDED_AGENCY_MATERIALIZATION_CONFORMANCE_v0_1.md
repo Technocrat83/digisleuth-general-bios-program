@@ -1,0 +1,82 @@
+# GENERAL_BIOS_BOUNDED_AGENCY_MATERIALIZATION_CONFORMANCE_v0.1
+
+```text
+ARTIFACT_ID:
+  GENERAL_BIOS_BOUNDED_AGENCY_MATERIALIZATION_CONFORMANCE_v0.1
+
+SOURCE:
+  GENERAL_BIOS_BOUNDED_AGENCY_SYNTHETIC_FIXTURE_CONSTITUTION_v0.1
+
+JURISDICTION:
+  MATERIALIZATION_CONFORMANCE_ONLY
+
+TERMINAL_PARENT_COMMIT:
+  ae3124d50d7afaedc10e673382711dd4f7314b6c
+
+CONSTITUTION_BLOB:
+  0b3dbbe3c25608074ee84709cfce8a0980fe6642
+
+FIXTURE_BLOB:
+  68a290754eb4b1a785f0b6850741ff42f07bcf4d
+
+OPERATOR_BLOB:
+  10127e04b921709325a20fd1ec86fc051f32bb54
+
+MATERIALIZATION:
+  COMPLETE
+
+MANEUVER_METROLOGY:
+  G_M_R_M_DISTINCTION_PRESENT
+
+DELTA_TYPING:
+  DIRECT
+  INDUCED
+  UNRESOLVED
+
+STRUCTURAL_OPERATOR_CONFORMANCE:
+  B_P_DIRECT_SURFACE: P_ONLY
+  B_M_DIRECT_SURFACE: G_M_ONLY
+  B_J_DIRECT_SURFACE: J_ONLY
+
+R_M:
+  UNMEASURED
+
+INTERVENTION_EXECUTION:
+  NOT_OCCURRED
+
+EXECUTION_TOKEN:
+  WITHHELD
+
+SCIENTIFIC_ADJUDICATION:
+  WITHHELD
+
+SCIENTIFIC_EVIDENCE_DELTA:
+  ZERO
+
+CANON_DELTA:
+  ZERO
+
+PHYSIOLOGY_DELTA:
+  ZERO
+
+LEVEL_0_DELTA:
+  ZERO
+
+PP:
+  BLOCKED
+
+NEXT_LAWFUL_FRONTIER:
+  MECHANICAL_PREFLIGHT
+```
+
+## Boundary
+
+Materialization and authenticated source readback establish only that the synthetic apparatus exists with the frozen maneuver metrology and declared direct intervention surfaces.
+
+They do not establish induced coupling behavior, realizability changes, scientific evidence, or coordinate orthogonality.
+
+\[
+\boxed{\text{Materialization Conformance}\neq\text{Intervention Execution}\neq\text{Scientific Adjudication}}
+\]
+
+The apparatus remains unexecuted.
