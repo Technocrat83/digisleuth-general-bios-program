@@ -1,0 +1,24 @@
+{
+  "artifact_id": "O_RM_SCHEMA_v0.1",
+  "jurisdiction": "RAW_METROLOGY_OBSERVATION_ONLY",
+  "required_fields": [
+    "apparatus_id",
+    "input_digest_before",
+    "input_digest_after",
+    "side_effect_free",
+    "traversal_count",
+    "jurisdiction_mutation_count",
+    "witnesses",
+    "realizable_transitions",
+    "nonrealizable_transitions",
+    "unresolved_transitions",
+    "provenance"
+  ],
+  "status_domain": ["REALIZABLE", "NONREALIZABLE", "UNRESOLVED"],
+  "invariants": [
+    "UNRESOLVED != NONREALIZABLE",
+    "Reachable != Traversed != Admitted",
+    "MeasureRealizability(e) != Execute(e)",
+    "raw observation != scientific evidence"
+  ]
+}
