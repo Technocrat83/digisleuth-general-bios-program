@@ -1,0 +1,43 @@
+{
+  "artifact_id": "GENERAL_BIOS_BOUNDED_AGENCY_SYNTHETIC_FIXTURE_STATE_v0.1",
+  "standing": "MATERIALIZED_UNEXECUTED",
+  "habitat": {
+    "id": "H_SYNTH_01",
+    "state_space": ["S0", "S1", "S2", "S3"]
+  },
+  "objects": [
+    {
+      "id": "O_SYNTH_01",
+      "location": "S0"
+    }
+  ],
+  "P": {
+    "organs": ["CORE_TRANSFORMER"]
+  },
+  "G_M": {
+    "declared_transitions": [
+      ["S0", "S1"],
+      ["S1", "S2"]
+    ]
+  },
+  "R_M": {
+    "status": "UNMEASURED",
+    "realizable_transitions": []
+  },
+  "J": {
+    "admitted_transitions": []
+  },
+  "delta_typing": ["DIRECT", "INDUCED", "UNRESOLVED"],
+  "intervention_authority": {
+    "B_P": "DEFINED_NOT_EXECUTED",
+    "B_M": "DEFINED_NOT_EXECUTED",
+    "B_J": "DEFINED_NOT_EXECUTED"
+  },
+  "execution_token": "WITHHELD",
+  "adjudication_authority": "WITHHELD",
+  "scientific_evidence_delta": 0,
+  "canon_delta": 0,
+  "physiology_delta": 0,
+  "level_0_delta": 0,
+  "pp": "BLOCKED"
+}
