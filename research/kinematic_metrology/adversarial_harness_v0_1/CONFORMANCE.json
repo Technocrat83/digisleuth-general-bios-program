@@ -1,0 +1,16 @@
+{
+  "artifact_id": "GENERAL_BIOS_KMR_ADVERSARIAL_HARNESS_MATERIALIZATION_CONFORMANCE_v0.1",
+  "checks": {
+    "a4_nonforcing_verdict_domain": "PRESERVED",
+    "auto_execution_on_import": "ABSENT",
+    "execution_authority": "ZERO_PENDING_CONFORMANCE",
+    "python_compile_all_surfaces": "PASS",
+    "semantic_mutation_authority": "ZERO",
+    "shared_transactional_runtime": "PRESENT",
+    "six_thin_injectors": "PRESENT"
+  },
+  "deltas": {"canon": 0, "level_0": 0, "physiology": 0, "pp": 0},
+  "execution_performed": false,
+  "scientific_evidence_generated": false,
+  "status": "IMPLEMENTATION_CONFORMANCE_ONLY"
+}

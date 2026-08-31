@@ -1,0 +1,23 @@
+{
+  "artifact_id": "GENERAL_BIOS_KMR_ADVERSARIAL_EXECUTABLE_HARNESS_v0.1",
+  "baseline_terminal_digest": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d",
+  "chambers": [
+    "KMR_A1_MIXED_CONTRACT_ATOMICITY",
+    "KMR_A2_EFFECTIVE_AUTHORITY_LAUNDERING",
+    "KMR_A3_PROVENANCE_DISCONTINUITY",
+    "KMR_A4_TRANSFORM_ORDER_SENSITIVITY",
+    "KMR_A5_IDEMPOTENCE_AND_REPLAY_PRESSURE",
+    "KMR_A6_EPISTEMIC_STANDING_LAUNDERING"
+  ],
+  "deltas": {"canon": 0, "level_0": 0, "physiology": 0, "pp": 0},
+  "execution_authority": "ZERO_PENDING_CONFORMANCE",
+  "harness_conformance_gate": ["DETERMINISTIC", "TRANSACTIONAL", "OBSERVABLE", "NONINTERPRETIVE", "FROZEN_SEMANTICS"],
+  "implementation_authority": "POSITIVE",
+  "lineage_anchor": "40e18d9a3e90f0263e1535919830e34175068daa",
+  "parent": "KMR_ADVERSARIAL_GOLDEN_CONFORMANCE_BATTERY_FORMALIZATION_v0.1",
+  "registry_action": "KMR_ADVERSARIAL_HARNESS_MATERIALIZATION_AUTHORIZATION",
+  "scientific_adjudication_authority": "ZERO",
+  "semantic_mutation_authority": "ZERO",
+  "status": "MATERIALIZED_UNEXECUTED",
+  "target_path": "research/kinematic_metrology/adversarial_harness_v0_1/"
+}

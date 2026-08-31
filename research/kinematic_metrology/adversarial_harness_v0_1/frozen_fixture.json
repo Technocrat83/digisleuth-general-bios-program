@@ -1,0 +1,30 @@
+{
+  "artifact_id": "KMR_ADVERSARIAL_FROZEN_BASELINE_FIXTURE_v0.1",
+  "baseline_terminal_digest": "b1c00cfd31af0a77bd8d1e07ae2519e7fd8d8222e844b9182c674ecdf24fe00d",
+  "lineage_anchor": "40e18d9a3e90f0263e1535919830e34175068daa",
+  "state": {
+    "authority": {
+      "HCET": ["TRANSFORM_ADMITTED_MORPHOLOGY"],
+      "MAGUS": ["ORIENT", "PETITION"]
+    },
+    "effective_authority": {
+      "HCET": ["TRANSFORM_ADMITTED_MORPHOLOGY"],
+      "MAGUS": ["ORIENT", "PETITION"]
+    },
+    "edges": [
+      ["MAGUS", "localizes_to", "LABS"],
+      ["LABS", "projects", "PHENOTYPE_A"]
+    ],
+    "nodes": {
+      "LABS": {"kind": "site_coordinate", "standing": "DERIVED"},
+      "MAGUS": {"kind": "petition_orientation", "standing": "DERIVED"},
+      "PHENOTYPE_A": {"kind": "uiux_projection", "standing": "DERIVED_DISPLAY"},
+      "PRODUCTION_RUNTIME": {"kind": "substrate", "standing": "DERIVED"},
+      "SCIENCE": {"kind": "knowledge_surface", "standing": "SOURCE"}
+    },
+    "provenance": [
+      {"cycle_id": "C1_LOCALIZATION", "edit_digest": "REFERENCE_EDIT_C1", "parent_digest": "REFERENCE_PARENT_C1"},
+      {"cycle_id": "C2_PHENOTYPE_PROJECTION", "edit_digest": "REFERENCE_EDIT_C2", "parent_digest": "REFERENCE_PARENT_C2"}
+    ]
+  }
+}
