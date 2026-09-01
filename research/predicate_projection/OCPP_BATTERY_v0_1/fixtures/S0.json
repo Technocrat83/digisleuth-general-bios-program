@@ -9,10 +9,23 @@
     "id": "urn:digisleuth:ocpp:synthetic:knowledge-object:001"
   },
   "J": {
-    "permitted_predicates": ["id", "class", "supports", "scope", "provenance_root", "authority_ceiling"]
+    "permitted_predicates": [
+      "id",
+      "class",
+      "supports",
+      "scope",
+      "provenance_root",
+      "authority_ceiling"
+    ]
   },
   "M": {
-    "claims": [{"object": "bounded_observer_projection", "predicate": "supports", "scope": "tested_contract_only"}]
+    "claims": [
+      {
+        "object": "bounded_observer_projection",
+        "predicate": "supports",
+        "scope": "tested_contract_only"
+      }
+    ]
   },
   "P": {
     "authenticated": true,

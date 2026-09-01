@@ -1,7 +1,13 @@
 {
   "attack": {
-    "projection_A": {"scope": "universal", "supports": "universal_observer_projection"},
-    "projection_B": {"scope": "universal", "supports": "universal_observer_projection"},
+    "projection_A": {
+      "scope": "universal",
+      "supports": "universal_observer_projection"
+    },
+    "projection_B": {
+      "scope": "universal",
+      "supports": "universal_observer_projection"
+    },
     "relation": "A_AND_B_AGREE_WHILE_CONTRADICTING_SOURCE_SCOPE"
   },
   "chamber_id": "C1_COHERENT_FALSEHOOD",

@@ -1,5 +1,13 @@
 {
-  "deltas": {"canon": 0, "hce": 0, "living_funnel": 0, "magus": 0, "physiology": 0, "science": 0, "track_e": 0},
+  "deltas": {
+    "canon": 0,
+    "hce": 0,
+    "living_funnel": 0,
+    "magus": 0,
+    "physiology": 0,
+    "science": 0,
+    "track_e": 0
+  },
   "execution_count": 0,
   "identifier": "OCPP_BATTERY_v0_1",
   "next_gate": "SEPARATE_DISPATCH_AUTHORIZATION",
@@ -10,5 +18,11 @@
   "registry_action": "OCPP_SPECIMEN_AND_HARNESS_MATERIALIZATION",
   "stage": "MATERIALIZED_UNEXECUTED",
   "track": "GENERAL_BIOS_FOUNDATIONAL_RESEARCH_FRONTIER",
-  "vector": ["U", "U", "U", "U", "U"]
+  "vector": [
+    "U",
+    "U",
+    "U",
+    "U",
+    "U"
+  ]
 }
