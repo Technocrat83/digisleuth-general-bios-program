@@ -1,0 +1,7 @@
+{
+  "id":"MP2_MEANING_INFLATION",
+  "target_failure":"Projection states a stronger claim than S0 admits.",
+  "construction":{"human_surface":"Adds universal validity language absent from S0.","machine_surface":"Preserves bounded source claim."},
+  "expected_adjudicative_target":"Bounded semantic entailment failure on inflated surface.",
+  "must_not_infer":["repair_by_weakening_source","upgrade_source_to_match_projection"]
+}
