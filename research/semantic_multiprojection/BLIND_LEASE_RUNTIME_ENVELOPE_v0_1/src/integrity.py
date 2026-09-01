@@ -19,6 +19,7 @@ def sha256_file(path: Path) -> str:
 
 
 def tree_digest(root: Path, *, exclude: Iterable[str] = ()) -> str:
+    """Deterministic digest over relative path + file digest. Read-only by construction."""
     root = root.resolve(strict=True)
     excluded = set(exclude)
     h = hashlib.sha256()
@@ -26,29 +27,41 @@ def tree_digest(root: Path, *, exclude: Iterable[str] = ()) -> str:
         rel = path.relative_to(root).as_posix()
         if rel in excluded:
             continue
-        h.update(rel.encode("utf-8")); h.update(b"\0"); h.update(sha256_file(path).encode("ascii")); h.update(b"\n")
+        h.update(rel.encode("utf-8"))
+        h.update(b"\0")
+        h.update(sha256_file(path).encode("ascii"))
+        h.update(b"\n")
     return h.hexdigest()
 
 
 def parse_sha256_manifest(path: Path) -> dict[str, str]:
     entries: dict[str, str] = {}
     for line in path.read_text(encoding="utf-8").splitlines():
-        if not line.strip(): continue
-        digest, rel = line.split(maxsplit=1); rel = rel.strip()
+        if not line.strip():
+            continue
+        digest, rel = line.split(maxsplit=1)
+        rel = rel.strip()
         if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
             raise IntegrityError(f"invalid SHA-256 digest for {rel!r}")
-        if rel in entries: raise IntegrityError(f"duplicate manifest path: {rel}")
+        if rel in entries:
+            raise IntegrityError(f"duplicate manifest path: {rel}")
         entries[rel] = digest
     return entries
 
 
 def verify_manifest(root: Path, manifest_name: str = "SHA256SUMS.txt") -> dict[str, str]:
-    root = root.resolve(strict=True); expected = parse_sha256_manifest(root / manifest_name); actual = {}
+    root = root.resolve(strict=True)
+    manifest = root / manifest_name
+    expected = parse_sha256_manifest(manifest)
+    actual: dict[str, str] = {}
     for rel, digest in expected.items():
         path = (root / rel).resolve(strict=True)
-        if root not in path.parents: raise IntegrityError(f"manifest path escapes battery root: {rel}")
-        got = sha256_file(path); actual[rel] = got
-        if got != digest: raise IntegrityError(f"hash mismatch: {rel}")
+        if root not in path.parents:
+            raise IntegrityError(f"manifest path escapes battery root: {rel}")
+        got = sha256_file(path)
+        actual[rel] = got
+        if got != digest:
+            raise IntegrityError(f"hash mismatch: {rel}")
     return actual
 
 
@@ -57,11 +70,16 @@ class BatteryIntegrityWitness:
     pre_tree_digest: str
     post_tree_digest: str
     manifest_verified: bool
+
     @property
-    def unchanged(self) -> bool: return self.pre_tree_digest == self.post_tree_digest
+    def unchanged(self) -> bool:
+        return self.pre_tree_digest == self.post_tree_digest
 
 
 def read_only_integrity_inspection(root: Path) -> BatteryIntegrityWitness:
-    pre = tree_digest(root); verify_manifest(root); post = tree_digest(root)
-    if pre != post: raise IntegrityError("battery tree changed during integrity inspection")
+    pre = tree_digest(root)
+    verify_manifest(root)
+    post = tree_digest(root)
+    if pre != post:
+        raise IntegrityError("battery tree changed during integrity inspection")
     return BatteryIntegrityWitness(pre, post, True)
