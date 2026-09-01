@@ -2,6 +2,9 @@ from __future__ import annotations
 
 import secrets
 from dataclasses import dataclass, replace
+from pathlib import Path
+
+from .integrity import resolve_protected_root_identity
 
 
 class DispatchLatchError(RuntimeError):
@@ -16,15 +19,38 @@ class DispatchLatch:
     issued_at: float
     expires_at: float
     scope_digest: str
+    protected_root: str
+    protected_root_device: int
+    protected_root_inode: int
     state: str = "ISSUED"
 
     @classmethod
-    def materialize(cls, lease_id: str, opaque_trial_id: str, scope_digest: str, *, now: float, ttl_seconds: float) -> "DispatchLatch":
+    def materialize(
+        cls,
+        lease_id: str,
+        opaque_trial_id: str,
+        scope_digest: str,
+        *,
+        protected_root: Path,
+        now: float,
+        ttl_seconds: float,
+    ) -> "DispatchLatch":
         if ttl_seconds <= 0:
             raise DispatchLatchError("expiry must be after issuance")
         if len(scope_digest) != 64:
             raise DispatchLatchError("scope digest must be SHA-256 hex")
-        return cls(lease_id, opaque_trial_id, secrets.token_hex(16), now, now + ttl_seconds, scope_digest)
+        root = resolve_protected_root_identity(protected_root)
+        return cls(
+            lease_id,
+            opaque_trial_id,
+            secrets.token_hex(16),
+            now,
+            now + ttl_seconds,
+            scope_digest,
+            root.canonical_path,
+            root.device,
+            root.inode,
+        )
 
     def classify(self, *, now: float) -> str:
         if self.state in {"CONSUMED", "REVOKED"}:

@@ -2,7 +2,18 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:digisleuth:ble:dispatch:v0.1",
   "type": "object",
-  "required": ["lease_id", "opaque_trial_id", "nonce", "issued_at", "expires_at", "state", "scope_digest"],
+  "required": [
+    "lease_id",
+    "opaque_trial_id",
+    "nonce",
+    "issued_at",
+    "expires_at",
+    "state",
+    "scope_digest",
+    "protected_root",
+    "protected_root_device",
+    "protected_root_inode"
+  ],
   "additionalProperties": false,
   "properties": {
     "lease_id": {"type": "string"},
@@ -11,6 +22,9 @@
     "issued_at": {"type": "number"},
     "expires_at": {"type": "number"},
     "state": {"enum": ["ISSUED", "CONSUMED", "REVOKED", "EXPIRED"]},
-    "scope_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+    "scope_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "protected_root": {"type": "string", "minLength": 1},
+    "protected_root_device": {"type": "integer", "minimum": 0},
+    "protected_root_inode": {"type": "integer", "minimum": 1}
   }
 }

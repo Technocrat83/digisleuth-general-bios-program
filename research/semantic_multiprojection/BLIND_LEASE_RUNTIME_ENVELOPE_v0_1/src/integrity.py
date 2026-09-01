@@ -13,6 +13,21 @@ class IntegrityError(RuntimeError):
 INTERNAL_INTEGRITY_PROVENANCE = "BLE_INTERNAL_INTEGRITY_ENGINE_v0.1"
 
 
+@dataclass(frozen=True)
+class ProtectedRootIdentity:
+    canonical_path: str
+    device: int
+    inode: int
+
+
+def resolve_protected_root_identity(root: Path) -> ProtectedRootIdentity:
+    canonical = root.resolve(strict=True)
+    stat = canonical.stat()
+    if not canonical.is_dir():
+        raise IntegrityError("protected root must be a directory")
+    return ProtectedRootIdentity(str(canonical), stat.st_dev, stat.st_ino)
+
+
 def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -87,6 +102,8 @@ class FreshIntegrityMeasurement:
     provenance: str
     acquired_at: float
     protected_root: str
+    protected_root_device: int
+    protected_root_inode: int
     manifest_verified: bool
     unchanged_during_acquisition: bool
 
@@ -97,6 +114,8 @@ class FreshIntegrityMeasurement:
             and self.manifest_verified
             and self.unchanged_during_acquisition
             and bool(self.protected_root)
+            and self.protected_root_device >= 0
+            and self.protected_root_inode > 0
         )
 
 
@@ -111,13 +130,19 @@ def read_only_integrity_inspection(root: Path) -> BatteryIntegrityWitness:
 
 def acquire_fresh_integrity(root: Path, *, now: float) -> FreshIntegrityMeasurement:
     """Acquire identity directly from the protected root; no digest override exists."""
-    protected_root = root.resolve(strict=True)
+    identity_pre = resolve_protected_root_identity(root)
+    protected_root = Path(identity_pre.canonical_path)
     witness = read_only_integrity_inspection(protected_root)
+    identity_post = resolve_protected_root_identity(root)
+    if identity_pre != identity_post:
+        raise IntegrityError("protected root identity changed during acquisition")
     return FreshIntegrityMeasurement(
         digest=witness.post_tree_digest,
         provenance=INTERNAL_INTEGRITY_PROVENANCE,
         acquired_at=now,
-        protected_root=str(protected_root),
+        protected_root=identity_post.canonical_path,
+        protected_root_device=identity_post.device,
+        protected_root_inode=identity_post.inode,
         manifest_verified=witness.manifest_verified,
         unchanged_during_acquisition=witness.unchanged,
     )
