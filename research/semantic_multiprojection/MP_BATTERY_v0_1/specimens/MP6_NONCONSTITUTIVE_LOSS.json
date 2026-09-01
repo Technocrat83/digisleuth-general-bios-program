@@ -1,0 +1,7 @@
+{
+  "id":"MP6_NONCONSTITUTIVE_LOSS",
+  "target_failure":"Lawful omission is falsely treated as semantic decoherence.",
+  "construction":{"human_surface":"Omits machine-only implementation metadata not required by Omega_H.","machine_surface":"Omits persuasive narrative not required by Omega_M."},
+  "expected_adjudicative_target":"ABSENT with omega=0 remains potentially CONFORMANT.",
+  "must_not_infer":["absence_is_loss","loss_is_nonconformance"]
+}
