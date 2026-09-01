@@ -10,6 +10,9 @@ class IntegrityError(RuntimeError):
     pass
 
 
+INTERNAL_INTEGRITY_PROVENANCE = "BLE_INTERNAL_INTEGRITY_ENGINE_v0.1"
+
+
 def sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as f:
@@ -76,6 +79,27 @@ class BatteryIntegrityWitness:
         return self.pre_tree_digest == self.post_tree_digest
 
 
+@dataclass(frozen=True)
+class FreshIntegrityMeasurement:
+    """Internally acquired dispatch-time identity with causal provenance."""
+
+    digest: str
+    provenance: str
+    acquired_at: float
+    protected_root: str
+    manifest_verified: bool
+    unchanged_during_acquisition: bool
+
+    @property
+    def provenance_valid(self) -> bool:
+        return (
+            self.provenance == INTERNAL_INTEGRITY_PROVENANCE
+            and self.manifest_verified
+            and self.unchanged_during_acquisition
+            and bool(self.protected_root)
+        )
+
+
 def read_only_integrity_inspection(root: Path) -> BatteryIntegrityWitness:
     pre = tree_digest(root)
     verify_manifest(root)
@@ -83,3 +107,17 @@ def read_only_integrity_inspection(root: Path) -> BatteryIntegrityWitness:
     if pre != post:
         raise IntegrityError("battery tree changed during integrity inspection")
     return BatteryIntegrityWitness(pre, post, True)
+
+
+def acquire_fresh_integrity(root: Path, *, now: float) -> FreshIntegrityMeasurement:
+    """Acquire identity directly from the protected root; no digest override exists."""
+    protected_root = root.resolve(strict=True)
+    witness = read_only_integrity_inspection(protected_root)
+    return FreshIntegrityMeasurement(
+        digest=witness.post_tree_digest,
+        provenance=INTERNAL_INTEGRITY_PROVENANCE,
+        acquired_at=now,
+        protected_root=str(protected_root),
+        manifest_verified=witness.manifest_verified,
+        unchanged_during_acquisition=witness.unchanged,
+    )

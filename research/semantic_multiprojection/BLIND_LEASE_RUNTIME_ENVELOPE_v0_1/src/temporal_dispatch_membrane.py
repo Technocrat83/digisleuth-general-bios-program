@@ -2,12 +2,15 @@ from __future__ import annotations
 
 import secrets
 from dataclasses import dataclass, field
+from pathlib import Path
+from threading import RLock
 
-from .nonce_latch import DispatchLatch, DispatchLatchError
+from .integrity import IntegrityError, acquire_fresh_integrity
+from .nonce_latch import DispatchLatch
 
 
 class IntegrityHalt(RuntimeError):
-    """Dispatch-time integrity identity differs from the lease-bound identity."""
+    """Fresh dispatch-time identity is absent, untrusted, or mismatched."""
 
 
 class ReplayHalt(RuntimeError):
@@ -16,36 +19,43 @@ class ReplayHalt(RuntimeError):
 
 @dataclass
 class TemporalDispatchMembrane:
-    """Couples immediate integrity revalidation to one-shot latch consumption.
+    """Causally bind fresh protected-root measurement to one-shot consumption.
 
     Ordering is fixed:
-        REVALIDATE -> CONSUME -> RETURN CONSUMED AUTHORIZATION
+        ACQUIRE_FRESH -> VERIFY_PROVENANCE -> COMPARE -> CONSUME
 
-    The membrane never invokes an evaluator and never mutates specimen bytes.
+    Callers provide the protected root, never a measured dispatch digest. The
+    membrane never invokes an evaluator and never mutates specimen bytes.
     """
-    _consumed_nonces: set[str] = field(default_factory=set, init=False, repr=False)
 
-    def revalidate_and_consume(
+    _consumed_nonces: set[str] = field(default_factory=set, init=False, repr=False)
+    _coupling_lock: RLock = field(default_factory=RLock, init=False, repr=False)
+
+    def acquire_verify_compare_and_consume(
         self,
         latch: DispatchLatch,
         *,
-        lease_scope_digest: str,
-        dispatch_scope_digest: str,
+        protected_root: Path,
         now: float,
         nonce: str,
     ) -> DispatchLatch:
-        if latch.nonce in self._consumed_nonces:
-            raise ReplayHalt("dispatch authorization already consumed")
+        with self._coupling_lock:
+            if latch.nonce in self._consumed_nonces:
+                raise ReplayHalt("dispatch authorization already consumed")
 
-        # Revalidation MUST precede any consumption attempt.
-        if not secrets.compare_digest(lease_scope_digest, dispatch_scope_digest):
-            raise IntegrityHalt("dispatch-time integrity revalidation failed")
-        if not secrets.compare_digest(latch.scope_digest, lease_scope_digest):
-            raise IntegrityHalt("lease identity does not match latch-bound scope")
+            try:
+                measurement = acquire_fresh_integrity(protected_root, now=now)
+            except (IntegrityError, OSError, ValueError) as exc:
+                raise IntegrityHalt("fresh integrity measurement unresolved") from exc
 
-        consumed = latch.consume(now=now, nonce=nonce)
-        self._consumed_nonces.add(latch.nonce)
-        return consumed
+            if not measurement.provenance_valid:
+                raise IntegrityHalt("fresh integrity provenance invalid")
+            if not secrets.compare_digest(measurement.digest, latch.scope_digest):
+                raise IntegrityHalt("fresh dispatch-time integrity mismatch")
+
+            consumed = latch.consume(now=now, nonce=nonce)
+            self._consumed_nonces.add(latch.nonce)
+            return consumed
 
     def was_consumed(self, latch: DispatchLatch) -> bool:
         return latch.nonce in self._consumed_nonces
