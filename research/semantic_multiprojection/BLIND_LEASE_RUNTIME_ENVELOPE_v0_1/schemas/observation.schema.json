@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:ble:observation:v0.1",
+  "type": "object",
+  "required": ["opaque_trial_id", "S_hat", "q", "w", "E", "V", "terminal_state"],
+  "additionalProperties": false,
+  "properties": {
+    "opaque_trial_id": {"type": "string", "pattern": "^X_[0-9]{3,}$"},
+    "S_hat": {"type": "object"},
+    "q": {"type": "object"},
+    "w": {"type": "object"},
+    "E": {"type": "object"},
+    "V": {"enum": ["CONFORMANT", "NONCONFORMANT", "UNRESOLVED"]},
+    "terminal_state": {"enum": ["COMPLETED", "ABSTAINED", "INTEGRITY_HALT", "BLINDNESS_BREACH", "EXECUTION_FAULT"]}
+  }
+}

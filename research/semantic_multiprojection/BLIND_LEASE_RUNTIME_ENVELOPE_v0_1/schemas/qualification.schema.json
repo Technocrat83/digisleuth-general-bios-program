@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:ble:qualification:v0.1",
+  "type": "object",
+  "required": ["target", "vector", "classification"],
+  "additionalProperties": false,
+  "properties": {
+    "target": {"type": "string", "pattern": "^L_[0-9]+$"},
+    "vector": {
+      "type": "object",
+      "required": ["q_I", "q_M", "q_S", "q_B", "q_E", "q_T", "q_C"],
+      "additionalProperties": false,
+      "properties": {
+        "q_I": {"enum": [0, 1, "U"]}, "q_M": {"enum": [0, 1, "U"]},
+        "q_S": {"enum": [0, 1, "U"]}, "q_B": {"enum": [0, 1, "U"]},
+        "q_E": {"enum": [0, 1, "U"]}, "q_T": {"enum": [0, 1, "U"]},
+        "q_C": {"enum": [0, 1, "U"]}
+      }
+    },
+    "classification": {"enum": ["LEASE_QUALIFIED", "LEASE_UNQUALIFIED", "LEASE_QUALIFICATION_INCOMPLETE"]}
+  }
+}

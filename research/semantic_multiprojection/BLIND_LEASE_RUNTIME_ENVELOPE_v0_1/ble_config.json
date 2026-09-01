@@ -1,0 +1,19 @@
+{
+  "artifact_id": "BLIND_LEASE_RUNTIME_ENVELOPE_v0.1",
+  "standing": "MATERIALIZED_UNQUALIFIED",
+  "target_battery": "../MP_BATTERY_v0_1",
+  "historical_commit_anchor": "f47d8817ea2ce14270c387758b7f2196bac5926a",
+  "lease_candidate": null,
+  "dispatch_authorized": false,
+  "execution_count": 0,
+  "observation_count": 0,
+  "evidence_delta": 0,
+  "blindness": {
+    "theoretical_ideal": "I(S_hypothesis, Eval_Pi | Payload)=0",
+    "mechanical_predicates_only": true,
+    "opaque_trial_ids_required": true,
+    "external_permutation_custody_required": true,
+    "fail_closed_on_prohibited_metadata": true
+  },
+  "terminal_states": ["COMPLETED", "ABSTAINED", "INTEGRITY_HALT", "BLINDNESS_BREACH", "EXECUTION_FAULT"]
+}
