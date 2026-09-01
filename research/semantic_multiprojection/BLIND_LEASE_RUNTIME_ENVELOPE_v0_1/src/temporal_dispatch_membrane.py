@@ -43,19 +43,28 @@ class TemporalDispatchMembrane:
             if latch.nonce in self._consumed_nonces:
                 raise ReplayHalt("dispatch authorization already consumed")
 
-            try:
-                measurement = acquire_fresh_integrity(protected_root, now=now)
-            except (IntegrityError, OSError, ValueError) as exc:
-                raise IntegrityHalt("fresh integrity measurement unresolved") from exc
-
-            if not measurement.provenance_valid:
-                raise IntegrityHalt("fresh integrity provenance invalid")
+            measurement = self._acquire_verified(protected_root, now=now)
             if not secrets.compare_digest(measurement.digest, latch.scope_digest):
                 raise IntegrityHalt("fresh dispatch-time integrity mismatch")
 
             consumed = latch.consume(now=now, nonce=nonce)
+
+            # Close the external mutation window before committing consumption.
+            terminal = self._acquire_verified(protected_root, now=now)
+            if not secrets.compare_digest(terminal.digest, measurement.digest):
+                raise IntegrityHalt("protected root changed during consumption coupling")
             self._consumed_nonces.add(latch.nonce)
             return consumed
+
+    @staticmethod
+    def _acquire_verified(protected_root: Path, *, now: float):
+        try:
+            measurement = acquire_fresh_integrity(protected_root, now=now)
+        except (IntegrityError, OSError, ValueError) as exc:
+            raise IntegrityHalt("fresh integrity measurement unresolved") from exc
+        if not measurement.provenance_valid:
+            raise IntegrityHalt("fresh integrity provenance invalid")
+        return measurement
 
     def was_consumed(self, latch: DispatchLatch) -> bool:
         return latch.nonce in self._consumed_nonces

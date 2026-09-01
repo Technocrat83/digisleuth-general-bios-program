@@ -69,6 +69,28 @@ def test_caller_has_no_digest_override_surface(tmp_path):
         )
 
 
+def test_mutation_during_consumption_fails_closed(tmp_path):
+    root = _root(tmp_path)
+    latch = _latch(root)
+
+    class MutatingLatch:
+        nonce = latch.nonce
+        scope_digest = latch.scope_digest
+
+        def consume(self, *, now, nonce):
+            assert nonce == latch.nonce
+            (root / "extra.bin").write_bytes(b"mutation-window")
+            return latch.consume(now=now, nonce=nonce)
+
+    membrane = TemporalDispatchMembrane()
+    with pytest.raises(IntegrityHalt):
+        membrane.acquire_verify_compare_and_consume(
+            MutatingLatch(), protected_root=root, now=11.0, nonce=latch.nonce
+        )
+    assert latch.classify(now=11.0) == "ISSUED"
+    assert not membrane.was_consumed(latch)
+
+
 def test_expiry_rejected_without_consumption(tmp_path):
     root = _root(tmp_path)
     latch = _latch(root, ttl=1.0)
