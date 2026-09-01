@@ -1,0 +1,7 @@
+{
+  "id":"MP5_JURISDICTION_SUBSTITUTION",
+  "target_failure":"Projection or downstream apparatus converts representational relation into capability.",
+  "construction":{"human_surface":"MAGUS-oriented route includes prohibited source-repair capability.","machine_surface":"Preserves representational-only jurisdiction."},
+  "expected_adjudicative_target":"Capability subset violation on human surface.",
+  "must_not_infer":["visitor_intent_confers_capability","representation_confers_execution"]
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_id": "MP_BATTERY_v0_2",
+  "standing": "MATERIALIZED_UNQUALIFIED",
+  "identity_authority": "PROSPECTIVE_ONLY",
+  "source_commit": "e430d9235e10f2023957cb19315c7531def4c1ee",
+  "algorithm": "SHA-256",
+  "payload_count": 12,
+  "entries": {
+    "README.md": "a4c6f53d07bf97880f496ef8b941e79f521a408fa51cb239071a2147f95716d0",
+    "contracts/BLIND_EXTRACTION_ADJUDICATION_CONTRACT.md": "6be7269a8561761aaa83a66a72b0859300e467001210a7976e9823ee0cf20b0f",
+    "contracts/PRESERVATION_CONTRACTS.json": "dc5a2c2343277fca54c36a4e5a55728f63d595c7dcdbbaed82c07a13b37e61f2",
+    "registry/FROZEN_REGISTRY.json": "16bfdec34003cb0a4a0567880162f6c4ffc672988255f4fb17edd163fb35f74e",
+    "specimens/MP0_COHERENT_FALSE_SIBLINGS.json": "8d0fc13e347c261986a466442e56ac5603abc04ef72a705eb38bb0ed94040df5",
+    "specimens/MP1_IDENTITY_DRIFT.json": "7389375edef3ad62e6b410f2eda24153b04a4ac000066d91608c172e83c434a6",
+    "specimens/MP2_MEANING_INFLATION.json": "4c56b21b1d410915f12cbc2929fbfcac796f4069fe1c73c2d7f31edec1438fc6",
+    "specimens/MP3_AUTHORITY_INFLATION.json": "db3f9bf5059152bbee77d9ba3d82dd1b2f3080f69437002e3bcf0fe59f76bb95",
+    "specimens/MP4_PROVENANCE_SEVERANCE.json": "91aa98b4b0cb29d3637290121aff5eea88fd35b61a95d261d8fc2e3266f08cfd",
+    "specimens/MP5_JURISDICTION_SUBSTITUTION.json": "bc2c31f4b4436dd903a5fbae14da327b95cf71071cb34911e8c0faccd468c2d8",
+    "specimens/MP6_NONCONSTITUTIVE_LOSS.json": "b25d2fe9e9029a344fc8abfd895a9df798455eafc3c3ce60ac8b697ad1414c3a",
+    "specimens/S0.json": "ac9ef2cba98d79d450f64e9fa3526508dbbc8431792690c85d154444408ce903"
+  }
+}

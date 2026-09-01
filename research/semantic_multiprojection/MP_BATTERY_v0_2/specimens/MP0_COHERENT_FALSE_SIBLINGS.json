@@ -1,0 +1,7 @@
+{
+  "id":"MP0_COHERENT_FALSE_SIBLINGS",
+  "target_failure":"Sibling projections agree with one another while jointly departing from S0.",
+  "construction":{"human_surface":"Same false strengthened meaning as machine_surface.","machine_surface":"Same false strengthened meaning as human_surface.","source_relation":"Both conflict with bounded meaning in S0."},
+  "expected_adjudicative_target":"Sibling compatibility may be 1 while source conformance is 0.",
+  "must_not_infer":["sibling_consensus_creates_truth"]
+}

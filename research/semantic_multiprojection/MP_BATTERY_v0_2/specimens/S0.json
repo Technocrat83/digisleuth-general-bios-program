@@ -1,0 +1,15 @@
+{
+  "specimen_source_id": "S0_MP_BATTERY_v0.1",
+  "identity": {"canonical_id":"urn:digisleuth:publication:semantic-multiprojection:specimen-001","type":"PublicationIntelligenceObject"},
+  "meaning": {
+    "claim": "A governed semantic source may project heterogeneous observer-specific representations without changing its admitted semantic standing.",
+    "scope": "bounded synthetic specimen only",
+    "prohibited_strengthening": ["universal validity","causal SEO/GEO performance claims","authority creation by projection"]
+  },
+  "provenance": {"lineage_root":"urn:digisleuth:lineage:mp-specimen-001","authentication_required":true},
+  "jurisdiction": {
+    "allowed_capabilities": ["represent","extract","compare","adjudicate_conformance"],
+    "prohibited_capabilities": ["repair_source","mutate_authority","infer_missing_lineage"]
+  },
+  "authority": {"standing":"SYNTHETIC_TEST_SPECIMEN","ceiling":"NO_EXTERNAL_SCIENTIFIC_AUTHORITY"}
+}

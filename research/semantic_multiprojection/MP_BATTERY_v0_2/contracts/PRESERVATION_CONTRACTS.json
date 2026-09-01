@@ -1,0 +1,18 @@
+{
+  "Omega_H": {
+    "identity": 1,
+    "meaning": 1,
+    "provenance": 1,
+    "jurisdiction": 1,
+    "authority": 1,
+    "representation_specific_nonconstitutive_fields": {"jsonld_internal_layout":0,"machine_serialization_details":0}
+  },
+  "Omega_M": {
+    "identity": 1,
+    "meaning": 1,
+    "provenance": 1,
+    "jurisdiction": 1,
+    "authority": 1,
+    "representation_specific_nonconstitutive_fields": {"persuasive_narrative":0,"visual_orientation_copy":0}
+  }
+}

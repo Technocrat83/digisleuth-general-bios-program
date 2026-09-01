@@ -1,0 +1,35 @@
+{
+  "artifact_id": "MP_BATTERY_v0_2_HISTORICAL_LINEAGE",
+  "successor_identity": "MP_BATTERY_v0_2",
+  "standing": "PROSPECTIVE_SUCCESSOR_LINEAGE_LEDGER",
+  "source_commit": "e430d9235e10f2023957cb19315c7531def4c1ee",
+  "historical_object": {
+    "identifier": "MP_BATTERY_v0_1",
+    "manifest_commit": "f47d8817ea2ce14270c387758b7f2196bac5926a",
+    "q_I": 0,
+    "standing": "IMMUTABLE_CONTRADICTED_TERRAIN",
+    "contradiction": "10_OF_12_DECLARED_DIGESTS_UNBOUND_TO_REACHABLE_GIT_BLOBS"
+  },
+  "successor_object": {
+    "identifier": "MP_BATTERY_v0_2",
+    "q_I": "UNADJUDICATED",
+    "standing": "MATERIALIZED_UNQUALIFIED",
+    "historical_identity_inherited": false,
+    "historical_manifest_inherited": false
+  },
+  "inheritance": {
+    "authenticated_blob_bitstrings": true,
+    "directory_path_topology": true,
+    "preservation_adjudication_contracts": true,
+    "experimental_intent": true,
+    "positive_coordinate_standing": false
+  },
+  "prohibitions": [
+    "RETROACTIVE_RECLASSIFICATION",
+    "HISTORICAL_MANIFEST_REPAIR",
+    "HISTORICAL_IDENTITY_INHERITANCE",
+    "LEASE_ISSUANCE",
+    "DISPATCH",
+    "PP"
+  ]
+}

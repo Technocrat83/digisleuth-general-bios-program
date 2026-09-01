@@ -1,0 +1,7 @@
+{
+  "id":"MP1_IDENTITY_DRIFT",
+  "target_failure":"Projection resolves to a semantically similar but non-equivalent identity.",
+  "construction":{"human_surface":"Correct source identity.","machine_surface":"Distinct canonical @id with superficially matching descriptive fields."},
+  "expected_adjudicative_target":"Identity typed-equivalence failure localized to drifting projection.",
+  "must_not_infer":["source_invalid","sibling_invalid_by_propagation"]
+}
