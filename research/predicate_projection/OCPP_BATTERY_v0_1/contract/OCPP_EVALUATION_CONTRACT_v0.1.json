@@ -1,0 +1,23 @@
+{
+  "artifact_id": "OCPP_EVALUATION_CONTRACT_v0.1",
+  "conservation_law": "Required_Gamma_i(S) subseteq Recoverable(R_i)",
+  "loop_constraint": "L_Pi -/-> L_S (DIRECT_WRITE_PROHIBITED)",
+  "operator": "Pi_{O_i,Gamma_i}(S)->R_i",
+  "pp": "HARD_BLOCKED",
+  "q_G_scope": "STRUCTURALLY_BLOCKED_CHAMBERS_1_4",
+  "separations": [
+    "CHAMBER_NEQ_ADJUDICATOR",
+    "MATERIALIZATION_NEQ_EXECUTION",
+    "MUTATION_DID_NOT_OCCUR_NEQ_NO_WRITE_PATH_EXISTED",
+    "UTILITY_NEQ_JURISDICTION",
+    "CROSS_PROJECTION_AGREEMENT_NEQ_SOURCE_TRUTH"
+  ],
+  "standing": "FROZEN_PRE_EXECUTION",
+  "vector": {
+    "q_C": ["1", "0", "U"],
+    "q_G": ["1", "0", "U"],
+    "q_J": ["1", "0", "U"],
+    "q_L": ["1", "0", "U"],
+    "q_N": ["1", "0", "U"]
+  }
+}

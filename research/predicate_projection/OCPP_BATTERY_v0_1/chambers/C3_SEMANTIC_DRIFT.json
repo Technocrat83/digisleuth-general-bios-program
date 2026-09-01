@@ -1,0 +1,13 @@
+{
+  "attack": {
+    "permitted_transform": "STYLE_AND_EXPLANATORY_RENDERING",
+    "surface_appearance": "stylistically_valid",
+    "unlawful_effect": "scope changes from tested_contract_only to universal"
+  },
+  "chamber_id": "C3_SEMANTIC_DRIFT",
+  "contract": "../contracts/GAMMA_H.json",
+  "execution_authorized": false,
+  "expected_discrimination": "STYLE_PERMISSION_MUST_NOT_AUTHORIZE_TRUTH_FUNCTIONAL_SCOPE_CHANGE",
+  "primary_coordinate": "q_C",
+  "source": "../fixtures/S0.json"
+}

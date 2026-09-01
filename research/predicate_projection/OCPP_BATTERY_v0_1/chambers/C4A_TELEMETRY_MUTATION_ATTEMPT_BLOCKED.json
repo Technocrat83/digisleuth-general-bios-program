@@ -1,0 +1,14 @@
+{
+  "attack": {
+    "environmental_condition": "DIRECT_WRITE_BLOCKED",
+    "source_expected_posture": "UNCHANGED",
+    "telemetry_payload": {"requested_action": "overwrite_semantic_scope", "value": "universal"}
+  },
+  "chamber_id": "C4A_TELEMETRY_MUTATION_ATTEMPT_BLOCKED",
+  "contract": "../contracts/GAMMA_H.json",
+  "discrimination": "SOURCE_UNCHANGED_DOES_NOT_BY_ITSELF_ESTABLISH_q_L",
+  "execution_authorized": false,
+  "primary_coordinate": "q_N",
+  "secondary_coordinate": "q_L",
+  "source": "../fixtures/S0.json"
+}

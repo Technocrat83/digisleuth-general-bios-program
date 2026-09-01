@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "adjudication_authority": "ZERO",
+  "properties": {
+    "chamber_id": {"type": "string"},
+    "execution_status": {"enum": ["NOT_EXECUTED", "COMPLETED", "ABSTAINED", "INTEGRITY_HALT", "EXECUTION_FAULT"]},
+    "representation": {"type": "object"},
+    "source_post_hash": {"type": "string"},
+    "source_pre_hash": {"type": "string"},
+    "telemetry": {"type": "array"},
+    "write_path_probe": {"type": "object"}
+  },
+  "required": ["chamber_id", "source_pre_hash", "source_post_hash", "representation", "telemetry", "write_path_probe", "execution_status"],
+  "title": "OCPP Raw Residue v0.1",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "deltas": {"canon": 0, "hce": 0, "living_funnel": 0, "magus": 0, "physiology": 0, "science": 0, "track_e": 0},
+  "execution_count": 0,
+  "identifier": "OCPP_BATTERY_v0_1",
+  "next_gate": "SEPARATE_DISPATCH_AUTHORIZATION",
+  "pp": "HARD_BLOCKED",
+  "program": "DIGISLEUTH_PUBLICATION_ARCHITECTURE_RESEARCH",
+  "q_G": "STRUCTURALLY_BLOCKED_CHAMBERS_1_4",
+  "raw_observation_count": 0,
+  "registry_action": "OCPP_SPECIMEN_AND_HARNESS_MATERIALIZATION",
+  "stage": "MATERIALIZED_UNEXECUTED",
+  "track": "GENERAL_BIOS_FOUNDATIONAL_RESEARCH_FRONTIER",
+  "vector": ["U", "U", "U", "U", "U"]
+}

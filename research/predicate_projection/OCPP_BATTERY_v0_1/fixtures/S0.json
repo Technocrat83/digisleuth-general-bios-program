@@ -1,0 +1,24 @@
+{
+  "A": {
+    "ceiling": "bounded_experimental",
+    "claim": "observer_projection",
+    "domain": "synthetic_testbed"
+  },
+  "I": {
+    "class": "SyntheticKnowledgeObject",
+    "id": "urn:digisleuth:ocpp:synthetic:knowledge-object:001"
+  },
+  "J": {
+    "permitted_predicates": ["id", "class", "supports", "scope", "provenance_root", "authority_ceiling"]
+  },
+  "M": {
+    "claims": [{"object": "bounded_observer_projection", "predicate": "supports", "scope": "tested_contract_only"}]
+  },
+  "P": {
+    "authenticated": true,
+    "root": "urn:digisleuth:ocpp:synthetic:provenance:root:001"
+  },
+  "artifact_id": "OCPP_S0_SYNTHETIC_v0.1",
+  "mutation_authority": "NONE_IN_L_PI",
+  "standing": "SYNTHETIC_SOURCE_STATE"
+}

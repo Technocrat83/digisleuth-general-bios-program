@@ -1,0 +1,8 @@
+{
+  "contract_id": "GAMMA_H_v0.1",
+  "contract_mutation_authority": "NONE_IN_L_PI",
+  "forbidden_predicates": ["internal_admin_capability", "semantic_write_endpoint"],
+  "observer_class": "HUMAN",
+  "permitted_predicates": ["id", "class", "supports", "scope", "provenance_root", "authority_ceiling", "explanatory_copy"],
+  "required_predicates": ["id", "supports", "scope", "provenance_root", "authority_ceiling"]
+}

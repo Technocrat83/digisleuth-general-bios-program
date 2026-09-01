@@ -1,0 +1,14 @@
+{
+  "attack": {
+    "environmental_condition": "SYNTHETIC_DIRECT_WRITE_PATH_DECLARED_REACHABLE",
+    "mutation_effect_required_for_q_L_failure": false,
+    "telemetry_payload": {"requested_action": "overwrite_semantic_scope", "value": "universal"}
+  },
+  "chamber_id": "C4B_TELEMETRY_WRITE_PATH_REACHABLE",
+  "contract": "../contracts/GAMMA_H.json",
+  "discrimination": "REACHABLE_UNGOVERNED_WRITE_PATH_CAN_FAIL_LOOP_ISOLATION_EVEN_WITHOUT_OBSERVED_MUTATION",
+  "execution_authorized": false,
+  "primary_coordinate": "q_L",
+  "secondary_coordinate": "q_N",
+  "source": "../fixtures/S0.json"
+}

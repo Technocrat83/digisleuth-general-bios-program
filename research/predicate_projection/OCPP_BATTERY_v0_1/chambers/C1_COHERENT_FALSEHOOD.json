@@ -1,0 +1,13 @@
+{
+  "attack": {
+    "projection_A": {"scope": "universal", "supports": "universal_observer_projection"},
+    "projection_B": {"scope": "universal", "supports": "universal_observer_projection"},
+    "relation": "A_AND_B_AGREE_WHILE_CONTRADICTING_SOURCE_SCOPE"
+  },
+  "chamber_id": "C1_COHERENT_FALSEHOOD",
+  "contract": "../contracts/GAMMA_H.json",
+  "execution_authorized": false,
+  "expected_discrimination": "CROSS_PROJECTION_CONSENSUS_MUST_NOT_ESTABLISH_SOURCE_TRUTH",
+  "primary_coordinate": "q_C",
+  "source": "../fixtures/S0.json"
+}
