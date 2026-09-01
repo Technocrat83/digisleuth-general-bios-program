@@ -1,0 +1,7 @@
+{
+  "id":"MP3_AUTHORITY_INFLATION",
+  "target_failure":"Projection represents topical relation as authority standing.",
+  "construction":{"machine_surface":"Marks source as authoritative on broader domain than admitted.","human_surface":"Preserves synthetic test standing."},
+  "expected_adjudicative_target":"Authority preorder violation.",
+  "must_not_infer":["mention_implies_authority","discoverability_implies_standing"]
+}
