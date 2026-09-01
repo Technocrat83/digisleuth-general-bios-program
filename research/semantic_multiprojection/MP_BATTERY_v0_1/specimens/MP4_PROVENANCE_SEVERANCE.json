@@ -1,0 +1,7 @@
+{
+  "id":"MP4_PROVENANCE_SEVERANCE",
+  "target_failure":"Projection preserves claim appearance but loses authenticated lineage reachability.",
+  "construction":{"machine_surface":"Citation-shaped text only; no authenticated lineage path.","human_surface":"Finite authenticated provenance path retained."},
+  "expected_adjudicative_target":"Required provenance coordinate becomes nonconformant only through Omega_k obligation.",
+  "must_not_infer":["citation_shape_equals_provenance","reconstruct_missing_lineage"]
+}
