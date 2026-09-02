@@ -8,6 +8,12 @@
     }
   },
   "chamber_id": "C4A_TELEMETRY_MUTATION_ATTEMPT_BLOCKED",
+  "contract_trace": {
+    "contract_id": "GAMMA_H_v0.1",
+    "contract_path": "../contracts/GAMMA_H.json",
+    "binding_authority": "TRACE_BINDING_ONLY",
+    "semantic_mutation_authority": "ZERO"
+  },
   "discrimination": "SOURCE_UNCHANGED_DOES_NOT_BY_ITSELF_ESTABLISH_q_L",
   "execution_authorized": false,
   "primary_coordinate": "q_N",
