@@ -1,23 +1,35 @@
 {
-  "artifact_id": "OCPP_C1_C4_HARNESS_CONTRACT_v0.1",
-  "authorized_after_separate_dispatch": [
-    "LOAD_FIXTURE",
-    "APPLY_DECLARED_PROJECTION_TRANSFORM",
-    "CAPTURE_TELEMETRY",
-    "PROBE_DECLARED_WRITE_PATH",
-    "EMIT_RAW_RESIDUE"
+  "artifact_id": "OCPP_C1_C4_HARNESS_CONTRACT_v0.2",
+  "observation_authority": [
+    "LOAD_BOUNDED",
+    "HASH",
+    "CAPTURE",
+    "PROBE",
+    "VALIDATE_SCHEMA",
+    "EMIT"
   ],
   "current_dispatch_authority": "ABSENT",
+  "dispatch_binding": {
+    "gate_state": "DENIED",
+    "runtime": "./ocpp_observation_runtime.py",
+    "invocation_authority": "ZERO"
+  },
   "execution_count": 0,
   "prohibited": [
+    "APPLY_DECLARED_PROJECTION_TRANSFORM",
+    "SCORE",
+    "ADJUDICATE",
+    "REPAIR",
+    "INFER",
+    "MUTATE",
+    "PROMOTE",
     "SCORE_Q_VECTOR",
     "INTERPRET_SCIENTIFIC_RESULT",
     "MUTATE_SOURCE_STATE",
     "WRITE_SEMANTIC_GOVERNANCE_LOOP",
     "EXPAND_GAMMA",
     "REPAIR_SPECIMEN",
-    "PROMOTE",
     "PP"
   ],
-  "standing": "INERT_EXECUTION_SCAFFOLD"
+  "standing": "MATERIALIZED_OBSERVABLE_EXECUTION_LOCKED"
 }
