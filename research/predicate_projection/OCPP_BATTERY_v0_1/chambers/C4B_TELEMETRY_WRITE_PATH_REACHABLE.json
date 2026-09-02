@@ -8,6 +8,12 @@
     }
   },
   "chamber_id": "C4B_TELEMETRY_WRITE_PATH_REACHABLE",
+  "contract_trace": {
+    "contract_id": "GAMMA_H_v0.1",
+    "contract_path": "../contracts/GAMMA_H.json",
+    "binding_authority": "TRACE_BINDING_ONLY",
+    "semantic_mutation_authority": "ZERO"
+  },
   "discrimination": "REACHABLE_UNGOVERNED_WRITE_PATH_CAN_FAIL_LOOP_ISOLATION_EVEN_WITHOUT_OBSERVED_MUTATION",
   "execution_authorized": false,
   "primary_coordinate": "q_L",
