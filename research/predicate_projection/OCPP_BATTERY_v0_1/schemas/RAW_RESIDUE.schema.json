@@ -1,36 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "additionalProperties": true,
-  "adjudication_authority": "ZERO",
-  "properties": {
-    "chamber_id": {
-      "type": "string"
-    },
-    "execution_status": {
-      "enum": [
-        "NOT_EXECUTED",
-        "COMPLETED",
-        "ABSTAINED",
-        "INTEGRITY_HALT",
-        "EXECUTION_FAULT"
-      ]
-    },
-    "representation": {
-      "type": "object"
-    },
-    "source_post_hash": {
-      "type": "string"
-    },
-    "source_pre_hash": {
-      "type": "string"
-    },
-    "telemetry": {
-      "type": "array"
-    },
-    "write_path_probe": {
-      "type": "object"
-    }
-  },
+  "$id": "OCPP_RAW_RESIDUE_v0.2",
+  "title": "OCPP Observation-Typed Raw Residue v0.2",
+  "type": "object",
+  "additionalProperties": false,
   "required": [
     "chamber_id",
     "source_pre_hash",
@@ -40,6 +13,119 @@
     "write_path_probe",
     "execution_status"
   ],
-  "title": "OCPP Raw Residue v0.1",
-  "type": "object"
+  "properties": {
+    "chamber_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_pre_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_post_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "representation": {
+      "$ref": "#/$defs/representation"
+    },
+    "telemetry": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/telemetry_item"
+      }
+    },
+    "write_path_probe": {
+      "$ref": "#/$defs/write_path_probe"
+    },
+    "execution_status": {
+      "enum": [
+        "NOT_EXECUTED",
+        "COMPLETED",
+        "ABSTAINED",
+        "INTEGRITY_HALT",
+        "EXECUTION_FAULT"
+      ]
+    }
+  },
+  "$defs": {
+    "observed_predicate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["predicate", "value"],
+      "properties": {
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": ["string", "number", "boolean", "null"]
+        }
+      }
+    },
+    "representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_predicates"],
+      "properties": {
+        "observed_predicates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/observed_predicate"
+          }
+        }
+      }
+    },
+    "telemetry_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sequence_idx", "sample_epoch_ns", "metric_name", "value"],
+      "properties": {
+        "sequence_idx": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sample_epoch_ns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "metric_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": ["string", "number", "boolean", "null"]
+        }
+      }
+    },
+    "write_path_probe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "probe_mode",
+        "environmental_condition",
+        "write_attempt_performed",
+        "external_mutation_performed"
+      ],
+      "properties": {
+        "probe_mode": {
+          "const": "DECLARATION_ONLY_NO_WRITE"
+        },
+        "environmental_condition": {
+          "type": ["string", "null"]
+        },
+        "write_attempt_performed": {
+          "const": false
+        },
+        "external_mutation_performed": {
+          "const": false
+        }
+      }
+    }
+  },
+  "x_authority": {
+    "observation_only": true,
+    "adjudication_authority": "ZERO",
+    "intent_metadata_authority": "ZERO"
+  }
 }
