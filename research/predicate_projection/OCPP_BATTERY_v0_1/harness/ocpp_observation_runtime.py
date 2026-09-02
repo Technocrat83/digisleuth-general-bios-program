@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """OCPP bounded observation-acquisition adapter.
 
-This module materializes mechanical observation capabilities only. It grants no
-execution, projection, adjudication, scoring, repair, mutation, inference,
-promotion, dispatch, or scientific-standing authority.
+Mechanical observation capability only. No chamber execution, projection,
+adjudication, scoring, repair, inference, mutation, promotion, dispatch, or
+scientific-standing authority is granted by this module.
 """
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 import time
 from pathlib import Path
 from typing import Any, Mapping, Sequence
@@ -29,7 +30,7 @@ DISPATCH_AUTHORIZED = False
 BATTERY_ROOT = Path(__file__).resolve().parents[1]
 ADMITTED_LOAD_ROOTS = tuple((BATTERY_ROOT / name).resolve() for name in ("fixtures", "schemas"))
 
-REQUIRED_RESIDUE_FIELDS = frozenset({
+ROOT_FIELDS = frozenset({
     "chamber_id",
     "source_pre_hash",
     "source_post_hash",
@@ -38,6 +39,15 @@ REQUIRED_RESIDUE_FIELDS = frozenset({
     "write_path_probe",
     "execution_status",
 })
+REPRESENTATION_FIELDS = frozenset({"observed_predicates"})
+OBSERVED_PREDICATE_FIELDS = frozenset({"predicate", "value"})
+TELEMETRY_FIELDS = frozenset({"sequence_idx", "sample_epoch_ns", "metric_name", "value"})
+PROBE_FIELDS = frozenset({
+    "probe_mode",
+    "environmental_condition",
+    "write_attempt_performed",
+    "external_mutation_performed",
+})
 ALLOWED_EXECUTION_STATUS = frozenset({
     "NOT_EXECUTED",
     "COMPLETED",
@@ -45,6 +55,8 @@ ALLOWED_EXECUTION_STATUS = frozenset({
     "INTEGRITY_HALT",
     "EXECUTION_FAULT",
 })
+SCALAR_TYPES = (str, int, float, bool, type(None))
+SHA256_RE = re.compile(r"^[a-f0-9]{64}$")
 
 
 def _canonical_json_bytes(value: Any) -> bytes:
@@ -53,11 +65,7 @@ def _canonical_json_bytes(value: Any) -> bytes:
 
 def _resolve_bounded_path(path: str | Path) -> Path:
     candidate = Path(path)
-    if not candidate.is_absolute():
-        candidate = (BATTERY_ROOT / candidate).resolve()
-    else:
-        candidate = candidate.resolve()
-
+    candidate = (BATTERY_ROOT / candidate).resolve() if not candidate.is_absolute() else candidate.resolve()
     for root in ADMITTED_LOAD_ROOTS:
         try:
             candidate.relative_to(root)
@@ -68,7 +76,7 @@ def _resolve_bounded_path(path: str | Path) -> Path:
 
 
 def load_bounded(path: str | Path) -> Any:
-    """LOAD_BOUNDED: read JSON only from admitted fixture/schema roots."""
+    """LOAD_BOUNDED: decode JSON only from admitted fixture/schema roots."""
     bounded = _resolve_bounded_path(path)
     with bounded.open("r", encoding="utf-8") as handle:
         return json.load(handle)
@@ -85,7 +93,9 @@ def hash_json(value: Any) -> str:
 
 
 def capture(metric_name: str, value: Any, *, sequence_idx: int = 0) -> dict[str, Any]:
-    """CAPTURE: create one timestamped mechanical telemetry observation."""
+    """CAPTURE: create one observation-typed telemetry item."""
+    if not isinstance(value, SCALAR_TYPES):
+        raise TypeError("TELEMETRY_VALUE_NOT_SCALAR")
     return {
         "sequence_idx": int(sequence_idx),
         "sample_epoch_ns": time.time_ns(),
@@ -95,30 +105,93 @@ def capture(metric_name: str, value: Any, *, sequence_idx: int = 0) -> dict[str,
 
 
 def probe_declared_write_path(chamber: Mapping[str, Any]) -> dict[str, Any]:
-    """PROBE: report only a chamber-declared synthetic path condition; never write."""
+    """PROBE: report a declared synthetic path condition without performing a write."""
     attack = chamber.get("attack", {})
     condition = attack.get("environmental_condition") if isinstance(attack, Mapping) else None
     return {
         "probe_mode": "DECLARATION_ONLY_NO_WRITE",
-        "environmental_condition": condition,
+        "environmental_condition": str(condition) if condition is not None else None,
         "write_attempt_performed": False,
         "external_mutation_performed": False,
     }
 
 
+def _closed_keys(obj: Mapping[str, Any], allowed: frozenset[str], label: str) -> list[str]:
+    extra = sorted(set(obj.keys()).difference(allowed))
+    missing = sorted(allowed.difference(obj.keys()))
+    errors = [f"{label}_missing:{key}" for key in missing]
+    errors.extend(f"{label}_extra:{key}" for key in extra)
+    return errors
+
+
+def _is_scalar(value: Any) -> bool:
+    return isinstance(value, SCALAR_TYPES)
+
+
 def validate_raw_residue_shape(residue: Mapping[str, Any]) -> tuple[bool, list[str]]:
-    """VALIDATE_SCHEMA: mechanical pre-R5 shape validation only."""
-    missing = sorted(REQUIRED_RESIDUE_FIELDS.difference(residue.keys()))
-    errors = [f"missing_required:{field}" for field in missing]
-    status = residue.get("execution_status")
-    if status not in ALLOWED_EXECUTION_STATUS:
-        errors.append("invalid_execution_status")
-    if not isinstance(residue.get("representation"), Mapping):
+    """VALIDATE_SCHEMA: enforce recursive observation-only structural closure."""
+    errors = _closed_keys(residue, ROOT_FIELDS, "root")
+
+    if not isinstance(residue.get("chamber_id"), str) or not residue.get("chamber_id"):
+        errors.append("chamber_id_invalid")
+    for field in ("source_pre_hash", "source_post_hash"):
+        value = residue.get(field)
+        if not isinstance(value, str) or SHA256_RE.fullmatch(value) is None:
+            errors.append(f"{field}_invalid_sha256")
+    if residue.get("execution_status") not in ALLOWED_EXECUTION_STATUS:
+        errors.append("execution_status_invalid")
+
+    representation = residue.get("representation")
+    if not isinstance(representation, Mapping):
         errors.append("representation_not_object")
-    if not isinstance(residue.get("telemetry"), Sequence) or isinstance(residue.get("telemetry"), (str, bytes, bytearray)):
+    else:
+        errors.extend(_closed_keys(representation, REPRESENTATION_FIELDS, "representation"))
+        predicates = representation.get("observed_predicates")
+        if not isinstance(predicates, list):
+            errors.append("observed_predicates_not_array")
+        else:
+            for idx, item in enumerate(predicates):
+                if not isinstance(item, Mapping):
+                    errors.append(f"observed_predicate_{idx}_not_object")
+                    continue
+                errors.extend(_closed_keys(item, OBSERVED_PREDICATE_FIELDS, f"observed_predicate_{idx}"))
+                if not isinstance(item.get("predicate"), str) or not item.get("predicate"):
+                    errors.append(f"observed_predicate_{idx}_predicate_invalid")
+                if not _is_scalar(item.get("value")):
+                    errors.append(f"observed_predicate_{idx}_value_not_scalar")
+
+    telemetry = residue.get("telemetry")
+    if not isinstance(telemetry, list):
         errors.append("telemetry_not_array")
-    if not isinstance(residue.get("write_path_probe"), Mapping):
+    else:
+        for idx, item in enumerate(telemetry):
+            if not isinstance(item, Mapping):
+                errors.append(f"telemetry_{idx}_not_object")
+                continue
+            errors.extend(_closed_keys(item, TELEMETRY_FIELDS, f"telemetry_{idx}"))
+            if not isinstance(item.get("sequence_idx"), int) or item.get("sequence_idx", -1) < 0:
+                errors.append(f"telemetry_{idx}_sequence_idx_invalid")
+            if not isinstance(item.get("sample_epoch_ns"), int) or item.get("sample_epoch_ns", -1) < 0:
+                errors.append(f"telemetry_{idx}_sample_epoch_ns_invalid")
+            if not isinstance(item.get("metric_name"), str) or not item.get("metric_name"):
+                errors.append(f"telemetry_{idx}_metric_name_invalid")
+            if not _is_scalar(item.get("value")):
+                errors.append(f"telemetry_{idx}_value_not_scalar")
+
+    probe = residue.get("write_path_probe")
+    if not isinstance(probe, Mapping):
         errors.append("write_path_probe_not_object")
+    else:
+        errors.extend(_closed_keys(probe, PROBE_FIELDS, "write_path_probe"))
+        if probe.get("probe_mode") != "DECLARATION_ONLY_NO_WRITE":
+            errors.append("probe_mode_invalid")
+        if probe.get("environmental_condition") is not None and not isinstance(probe.get("environmental_condition"), str):
+            errors.append("environmental_condition_invalid")
+        if probe.get("write_attempt_performed") is not False:
+            errors.append("write_attempt_performed_must_be_false")
+        if probe.get("external_mutation_performed") is not False:
+            errors.append("external_mutation_performed_must_be_false")
+
     return (not errors, errors)
 
 
@@ -132,7 +205,7 @@ def emit_raw_residue(
     write_path_probe: Mapping[str, Any],
     execution_status: str,
 ) -> dict[str, Any]:
-    """EMIT: construct observation residue without scoring or adjudicating."""
+    """EMIT: emit only recursively validated observation-typed residue."""
     residue: dict[str, Any] = {
         "chamber_id": str(chamber_id),
         "source_pre_hash": hash_json(source_pre),
