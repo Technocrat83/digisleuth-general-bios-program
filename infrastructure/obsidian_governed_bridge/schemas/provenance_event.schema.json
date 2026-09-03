@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Digisleuth Append-Only Provenance Event",
+  "type": "object",
+  "required": ["event_id", "artifact_id", "operation", "timestamp", "input_identity", "standing_delta"],
+  "properties": {
+    "event_id": {"type": "string"},
+    "artifact_id": {"type": "string"},
+    "parent_event": {"type": ["string", "null"]},
+    "operation": {"type": "string"},
+    "timestamp": {"type": "string"},
+    "actor_surface": {"type": "string"},
+    "authorization_envelope": {"type": "string"},
+    "input_identity": {
+      "type": "object",
+      "required": ["git_commit_sha", "content_sha256"],
+      "properties": {
+        "git_commit_sha": {"type": "string"},
+        "content_sha256": {"type": "string"}
+      }
+    },
+    "standing_delta": {
+      "type": "object",
+      "properties": {
+        "authority": {"const": 0},
+        "canon": {"const": 0},
+        "pp": {"const": 0}
+      },
+      "required": ["authority", "canon", "pp"]
+    }
+  }
+}

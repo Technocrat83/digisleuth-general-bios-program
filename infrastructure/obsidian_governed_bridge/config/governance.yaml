@@ -1,0 +1,46 @@
+version: DIGISLEUTH_OBSIDIAN_GOVERNANCE_GATE_v0.1
+principles:
+  - PERSISTENCE_DOES_NOT_CONFER_AUTHORITY
+  - TOPOLOGY_DOES_NOT_CONFER_STANDING
+  - NO_DOWNSTREAM_STAGE_MAY_REPAIR_AN_UPSTREAM_DEFICIENCY
+  - DEFICIENCY_DETECTION_DOES_NOT_EQUAL_RESOLUTION_AUTHORITY
+  - CROSS_SURFACE_AGREEMENT_DOES_NOT_EQUAL_ARTIFACT_AUTHENTICATION
+  - CONTENT_IDENTITY_DOES_NOT_EQUAL_REPOSITORY_LINEAGE_IDENTITY
+
+write_policy:
+  default: DENY
+  destructive_operations: PROHIBITED
+  arbitrary_path_write: PROHIBITED
+  overwrite_existing_note: PROHIBITED
+  allowed_operations:
+    - CREATE_GOVERNED_NOTE
+    - APPEND_PROVENANCE_EVENT
+    - APPEND_TO_AUTHORIZED_HEADING
+    - PATCH_GOVERNED_FRONTMATTER
+    - READ_NOTE
+    - SEARCH_NOTES
+    - VERIFY_REFERENTIAL_BINDING
+
+standing_policy:
+  obsidian_may_originate_standing: false
+  openai_may_originate_standing: false
+  canon_admission_via_bridge: false
+  pp_via_bridge: false
+  authority_delta_default: 0
+
+required_identity_fields:
+  - artifact_id
+  - git_path
+  - git_commit_sha
+  - content_sha256
+
+transaction_order:
+  - AUTHOR
+  - MATERIALIZE_EXACT_BYTES
+  - HASH_EXACT_BYTES
+  - COMMIT_TO_GIT
+  - VERIFY_COMMIT_AND_HASH
+  - REGISTER_IN_AIRTABLE
+  - PROJECT_INTO_OBSIDIAN
+  - VERIFY_CROSS_SURFACE_REFERENTIAL_COHERENCE
+  - STOP

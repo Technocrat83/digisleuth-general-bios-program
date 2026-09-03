@@ -1,0 +1,36 @@
+version: DIGISLEUTH_JURISDICTIONAL_HELM_ROUTES_v0.1
+routes:
+  CFS_ARCHITECTURE:
+    prefix: Digisleuth/Architecture/CFS/
+    allowed_classes:
+      - CONSTITUTIONAL_ARTIFACT
+      - FEDERATION_SPEC
+      - NODE_ENVELOPE
+  GOVERNANCE:
+    prefix: Digisleuth/Governance/
+    allowed_classes:
+      - GOVERNANCE_KERNEL
+      - JURISDICTIONAL_HELM
+      - CONFORMANCE_SPEC
+      - ADMISSION_RECORD
+  GENERAL_BIOS:
+    prefix: Digisleuth/Research/General BIOS/
+    allowed_classes:
+      - EXPERIMENT_SPEC
+      - WITNESS_RECORD
+      - EVIDENCE_LEDGER
+      - SCIENTIFIC_RESIDUE
+  MATHEMATICAL_CONSTELLATION:
+    prefix: Digisleuth/Mathematics/
+    allowed_classes:
+      - MATHEMATICAL_PRIMITIVE
+      - SCIENTIFIC_SEED
+      - DERIVATION_RECORD
+  OPERATIONS:
+    prefix: Digisleuth/Operations/
+    allowed_classes:
+      - RUNTIME_LEDGER
+      - TELEMETRY_RECORD
+      - OPERATIONAL_REGISTRY_PROJECTION
+
+routing_law: HELM_ROUTING_DOES_NOT_EQUAL_ADMISSION
