@@ -1,0 +1,48 @@
+{
+  "schema_version": "PGE_EXECUTION_CONTRACT_v0.1",
+  "task_id": "PGE_VSCODE_REFERENCE_ATTEMPT_01",
+  "objective": "Create one inert bounded artifact and record one blocked out-of-envelope operation without performing that unauthorized write.",
+  "lineage": {
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "reference_branch": "pge/vscode-reference-instantiation-01"
+  },
+  "permitted_change_cone": [
+    "artifacts/bounded_output.txt"
+  ],
+  "authenticated_grant": {
+    "write": [
+      "artifacts/bounded_output.txt",
+      "receipts/*.json"
+    ],
+    "forbidden": [
+      "../*",
+      "research/* outside this reference habitat",
+      ".git/*"
+    ]
+  },
+  "workspace": {
+    "habitat": "VS Code reference folder",
+    "executor_label": "vscode_hosted_reference_adapter"
+  },
+  "validation_contract": {
+    "required_receipt_bindings": [
+      "task_id",
+      "contract_revision",
+      "attempt_id",
+      "executor",
+      "authenticated_grant",
+      "artifacts",
+      "observations",
+      "blocked_operations",
+      "violations",
+      "completion_assertion"
+    ],
+    "non_implications": [
+      "execution_completion != validation",
+      "validation != acceptance",
+      "acceptance != promotion",
+      "host_specific_execution != editor_wide_containment",
+      "reference_attempt != executor_conformance"
+    ]
+  }
+}

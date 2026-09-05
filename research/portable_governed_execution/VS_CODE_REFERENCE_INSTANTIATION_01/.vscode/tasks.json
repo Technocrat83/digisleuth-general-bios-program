@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PGE: bounded reference attempt",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "${workspaceFolder}/pge_attempt.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true,
+        "echo": true
+      }
+    }
+  ]
+}
