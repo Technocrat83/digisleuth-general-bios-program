@@ -1,0 +1,28 @@
+{
+  "adjudication_status": "NOT_PERFORMED",
+  "observation_object": {
+    "apparatus_id": "LATERAL_MANEUVER_NONINTERFERENCE_HARNESS_v0.1",
+    "execution_contract": {
+      "JLK_invoked": false,
+      "coordinate_order": ["D", "F", "V", "R"],
+      "fixture_contract_vector_accessible_to_evaluator": false,
+      "fixture_expectation_fields_accessible_to_evaluator": false,
+      "native_coordinate_codomain": ["C", "X", "U"],
+      "scientific_adjudication_performed": false
+    },
+    "execution_order": ["FX-LM-01", "FX-LM-02", "FX-LM-03", "FX-LM-04", "FX-LM-05", "FX-LM-06"],
+    "posture": "BLIND_SWEEP_COMPLETE_OBSERVATION_LOCKED",
+    "records": [
+      {"consumer_trace":{"standing_after":"HALTED_LOCAL","standing_before":"HALTED_LOCAL","standing_changed":false},"coordinates":{"D":"C","F":"C","R":"C","V":"C"},"execution_ordinal":1,"execution_view_digest":"0a3b6300a8fb7f766ef72301f263682271bd4ce4863b5198b7f25e77ff52c1fb","fixture_id":"FX-LM-01","mechanical_composite":"C","raw_return_sha256":"4bdc88da095f6e450f15231fe68f86477fff4787baf7cca889cd605d66702d2a"},
+      {"consumer_trace":{"standing_after":"HALTED_LOCAL","standing_before":"HALTED_LOCAL","standing_changed":false},"coordinates":{"D":"X","F":"X","R":"C","V":"C"},"execution_ordinal":2,"execution_view_digest":"ceb03e42c91b05560d723b5a3b1af15385623db4d070ac0e722917a47a52e492","fixture_id":"FX-LM-02","mechanical_composite":"X","raw_return_sha256":"adf182b9f9acb107dd28eef37ad92acd90585f8b2c19ef242efd5a6b02b661d7"},
+      {"consumer_trace":{"standing_after":"HALTED_LOCAL","standing_before":"HALTED_LOCAL","standing_changed":false},"coordinates":{"D":"C","F":"C","R":"C","V":"X"},"execution_ordinal":3,"execution_view_digest":"6c19c4310d7a578cc2392e7d31496073a038b2a8acb595e4be88d43a1a49b1c6","fixture_id":"FX-LM-03","mechanical_composite":"X","raw_return_sha256":"5d2a4dc1b835ba5b9d0492492faeaa2d8cb0093944c4537bf9f408ab43df32ac"},
+      {"consumer_trace":{"standing_after":"SYNTHETICALLY_ELEVATED_BY_RESIDUE","standing_before":"HALTED_LOCAL","standing_changed":true},"coordinates":{"D":"C","F":"C","R":"X","V":"C"},"execution_ordinal":4,"execution_view_digest":"938e98036d9293dd5988b1eb0fb23529c0739ed3856106faed4b027156677a28","fixture_id":"FX-LM-04","mechanical_composite":"X","raw_return_sha256":"694d9a6ee46b55b850ca8320c393c6a5d96bec27538e9631949eebc30bebedb9"},
+      {"consumer_trace":{"standing_after":"HALTED_LOCAL","standing_before":"HALTED_LOCAL","standing_changed":false},"coordinates":{"D":"C","F":"C","R":"C","V":"C"},"execution_ordinal":5,"execution_view_digest":"2d56587a05b3a9ed46e5d01bf199345343dedd4287a578c7557f721c92f43ea5","fixture_id":"FX-LM-05","mechanical_composite":"C","raw_return_sha256":"b91a2a90dfe662eed8d3d5a7b8ad278507c99b430652825eb182a9ffd624eed9"},
+      {"consumer_trace":null,"coordinates":{"D":"U","F":"U","R":"U","V":"U"},"execution_ordinal":6,"execution_view_digest":"da9e5e6ff7f4e5e456146c4e560f9e3241fe621a173526cd0d28aefd5b1667dc","fixture_id":"FX-LM-06","mechanical_composite":"U","raw_return_sha256":"6d83c0fcc9fe0f093f2ea63738c30998190f24d4b720ed5f155dd1bad07bbeb2"}
+    ],
+    "research_object": "LAWFUL_LATERAL_MANEUVER_INDEPENDENCE_CRITERION_v0.1",
+    "standing": {"Delta_Adjudication":0,"Delta_Authority":0,"Delta_Canon":0,"Delta_Execution":"POSITIVE","Delta_Observation":"POSITIVE","Delta_PP":0,"Delta_ScientificStanding":0}
+  },
+  "seal_scope": "canonical JSON of observation_object only",
+  "sha256_seal": "f6d5c65a89616cd8c45697d6fb130ad7e6c6aa7e3b2d71c31a720e22dbe6d038"
+}
