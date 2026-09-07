@@ -1,0 +1,124 @@
+{
+  "adjudication_status": "NOT_PERFORMED",
+  "observation_object": {
+    "execution_order": [
+      "FX_POS",
+      "FX_NULL",
+      "FX_REST",
+      "FX_BREACH"
+    ],
+    "experiment_id": "SYNTHETIC_BOUNDARY_RESOLUTION_EXPERIMENT_v0.1",
+    "posture": "BLIND_SWEEP_COMPLETE_OBSERVATION_LOCKED",
+    "records": [
+      {
+        "L0": {
+          "m_apparent_raw": 6,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 0,
+          "r_believed_count": 6,
+          "treatment_digest": "5602d1f2bbd573a6e0a154a5b88096163be1c7d0092083123b8a93cb9133b06f"
+        },
+        "L2": {
+          "m_apparent_raw": 8,
+          "m_certified_raw": 8,
+          "n_unauthorized_raw": 0,
+          "r_believed_count": 8,
+          "treatment_digest": "c491bef714a14fe3ad8261e649243bb4ce19bd1dfbb95f211bddc26231776092"
+        },
+        "execution_ordinal": 1,
+        "fixture_id": "FX_POS",
+        "ground_truth_digest": "9460c168f94e04c3801f08f9563940a6cb618ffb7c91bce18b9c76ce8f1c1f93",
+        "treatment_return": {
+          "delta_m_apparent": 2,
+          "delta_m_certified": 2,
+          "n_unauthorized": 0
+        }
+      },
+      {
+        "L0": {
+          "m_apparent_raw": 6,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 0,
+          "r_believed_count": 6,
+          "treatment_digest": "5602d1f2bbd573a6e0a154a5b88096163be1c7d0092083123b8a93cb9133b06f"
+        },
+        "L2": {
+          "m_apparent_raw": 6,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 0,
+          "r_believed_count": 6,
+          "treatment_digest": "64517d56faddb7e6252882ce5509c405b933ef17b1a93394606869118454c300"
+        },
+        "execution_ordinal": 2,
+        "fixture_id": "FX_NULL",
+        "ground_truth_digest": "9460c168f94e04c3801f08f9563940a6cb618ffb7c91bce18b9c76ce8f1c1f93",
+        "treatment_return": {
+          "delta_m_apparent": 0,
+          "delta_m_certified": 0,
+          "n_unauthorized": 0
+        }
+      },
+      {
+        "L0": {
+          "m_apparent_raw": 8,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 2,
+          "r_believed_count": 8,
+          "treatment_digest": "84cc7ee81f4a568af15ee23392889eaa114a52f1f362cfcf3e825e3f90260d8f"
+        },
+        "L2": {
+          "m_apparent_raw": 6,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 0,
+          "r_believed_count": 6,
+          "treatment_digest": "aaa71da7bc9f3501a0577ad00efa7a0eaa8664400d51c8ff5ad1e95cbc9f66b9"
+        },
+        "execution_ordinal": 3,
+        "fixture_id": "FX_REST",
+        "ground_truth_digest": "9460c168f94e04c3801f08f9563940a6cb618ffb7c91bce18b9c76ce8f1c1f93",
+        "treatment_return": {
+          "delta_m_apparent": -2,
+          "delta_m_certified": 0,
+          "n_unauthorized": 0
+        }
+      },
+      {
+        "L0": {
+          "m_apparent_raw": 6,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 0,
+          "r_believed_count": 6,
+          "treatment_digest": "5602d1f2bbd573a6e0a154a5b88096163be1c7d0092083123b8a93cb9133b06f"
+        },
+        "L2": {
+          "m_apparent_raw": 8,
+          "m_certified_raw": 6,
+          "n_unauthorized_raw": 2,
+          "r_believed_count": 8,
+          "treatment_digest": "ec7892f291a9decd07ce07c8ba4f33f4396104bf7a55c0684a30240e1a06b410"
+        },
+        "execution_ordinal": 4,
+        "fixture_id": "FX_BREACH",
+        "ground_truth_digest": "9460c168f94e04c3801f08f9563940a6cb618ffb7c91bce18b9c76ce8f1c1f93",
+        "treatment_return": {
+          "delta_m_apparent": 2,
+          "delta_m_certified": 0,
+          "n_unauthorized": 2
+        }
+      }
+    ],
+    "standing": {
+      "Delta_Adjudication": 0,
+      "Delta_Canon": 0,
+      "Delta_Execution": "POSITIVE",
+      "Delta_Observation": "POSITIVE",
+      "Delta_PP": 0,
+      "Delta_ScientificStanding": 0
+    },
+    "start_state": "s_000",
+    "state_count": 256,
+    "target_state": "s_100"
+  },
+  "seal_scope": "canonical JSON of observation_object only",
+  "sha256_seal": "d3eed13b99f3a34a0aa71d91056f07fcd2555ddcbb856b019ccf1e3822b5cf47"
+}
