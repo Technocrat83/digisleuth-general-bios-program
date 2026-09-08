@@ -1,0 +1,42 @@
+{
+  "manifest_id": "OAB_FIXTURE_INGRESS_MANIFEST_v0.2",
+  "prior_manifest_id": "OAB_FIXTURE_INGRESS_MANIFEST_v0.1",
+  "prior_contract_id": "OAB_FIXTURE_LOADER_CONTRACT_v0.1",
+  "battery_id": "OMEGA_ORIENTATION_ADVERSARIAL_BATTERY_01",
+  "fixture_schema_version": "OAB_FIXTURE_SHAPE_v0.2",
+  "loader_contract_version": "OAB_FIXTURE_LOADER_v0.2",
+  "semantic_bindings": {
+    "delta_encoding_rule": "ORIENTATION_DELTA_CANONICAL_ENCODING_v0.1",
+    "localization_rule": "JLK_ORIENTATION_DELTA_LOCALIZATION_HOOK_v0.1",
+    "monitor_rule": "ORIENTATION_INVALIDATION_MONITOR_v0.1",
+    "replay_rule": "ORIENTATION_REPLAY_VALIDATOR_v0.1"
+  },
+  "fixture_root": "laboratory/fixtures/oab_v0_2",
+  "fixture_ids": [
+    "OAB1",
+    "OAB2",
+    "OAB3",
+    "OAB4",
+    "OAB5",
+    "OAB6",
+    "OAB7",
+    "OAB8"
+  ],
+  "fixture_sha256": {
+    "OAB1": "805b101e704eb2c3b54500425d88d5956e6cb1b4720aaed406a12abbcedc3461",
+    "OAB2": "7f83f8a29843a7747ec050578013c97201384773fc9dc0103a07a3b8900bfabb",
+    "OAB3": "6e5df0f0c1e9d953879e03679b7857362a7759ec9fa7dda21299177ded29ea05",
+    "OAB4": "3cb30200a3900d298af57b3f6224fd7e068dadc5cc5c48e55228b9ddfae39b5d",
+    "OAB5": "fb3c4bfc0a087ad7a3583aeaa6eaef131a0559bd6a35564d822f94c4f980af4c",
+    "OAB6": "752224a54630d92b0ea7fb7f490dc8802d009da22297d7e5275302a18a64bb7a",
+    "OAB7": "fb0dded9f69fd6c7cca36735a72b51c011f4447d520a8a45315feaf0e0f5839a",
+    "OAB8": "3ebac86cceef399139b2ec2e5ce03897d9fa2eae7e3cd4c36da069e747e95f2e"
+  },
+  "authority": {
+    "interpretation": 0,
+    "repair": 0,
+    "admission": 0,
+    "execution": 0
+  },
+  "boundary_law": "Successor identity does not mutate ancestor meaning; v0.2 must earn independent loader qualification."
+}
