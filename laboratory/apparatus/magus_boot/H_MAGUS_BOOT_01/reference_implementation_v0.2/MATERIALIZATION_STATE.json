@@ -1,0 +1,18 @@
+{
+  "ancestor": {
+    "artifact_id": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.1",
+    "commit": "219e42a51cc55c93d9349b4dea1d7c86dbf76973",
+    "identity": "b1b0cce952b3108618d8e891a44da9a18e11547c9238bae70c9ec9d725563ed5",
+    "standing": "PREFLIGHT_NONCONFORMANT",
+    "terminal_fault": "RAW_PATH_INGRESS_NOT_CONFINED"
+  },
+  "artifact_id": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.2",
+  "contract_anchor_commit": "04a506e7cf2ffcdd8b13d61a641d9dd2849f3c01",
+  "execution_performed": false,
+  "fixture_mutation_authorized": false,
+  "oracle_access_authorized": false,
+  "posture": "MATERIALIZED_UNEXECUTED_PENDING_PREFLIGHT_REENTRY",
+  "pp": "BLOCKED",
+  "preflight_status_inherited": false,
+  "scientific_boot_authorized": false
+}
