@@ -1,0 +1,122 @@
+artifact:
+  id: DNL_BLENDER_BOOT_CONFORMANCE_PROBE_SPECIFICATION_001
+  architecture: DNL_BLENDER_ADMISSION_ARCHITECTURE_v0.1
+  experiment: DNL_BLENDER_PROJECTION_EXPERIMENT_001
+  source_lineage_anchor: "42ff813d2b1932524c20774439e47511238b3c37"
+  epistemic_standing: FROZEN_NONEXECUTABLE_PROBE_SPECIFICATION
+  freeze_state: RATIFIED_AND_LATCHED
+  semantic_payload: NONE
+  execution_authority: ZERO
+  pp_gate: BLOCKED
+
+gate_contract:
+  gate_id: G_boot_conf
+  domain: Q_boot
+  codomain: [AUTHORIZED, DENIED, UNRESOLVED]
+  current_status: UNMATERIALIZED
+  specimen_authority: ZERO
+  rule: "G_boot_conf != G_specimen_admit != Execution_Authority"
+  authorization_scope: STERILE_DISPOSABLE_PROBE_ONLY
+
+sterility:
+  capability_probe_not_specimen: true
+  semantic_distance_rule: "SemanticDistance(Probe_boot, D_specimen) > 0"
+  predicate_support_rule: "Support_Gamma_H(Probe_boot) INTERSECT Support_Gamma_H(D_specimen) = EMPTY"
+  forbidden_semantic_states: [ACTIVE, HALTED, ORIENTING, MEMBER, NON_MEMBER, ADDRESSABLE, COUPLED, EXECUTABLE]
+  forbidden_specimen_surfaces:
+    - organ_A
+    - organ_B
+    - organ_C
+    - federation_relation_A
+    - federation_relation_B
+    - federation_relation_C
+    - addressability_relation_C
+  forbidden_inputs:
+    - DNL_BLENDER_SPECIMEN_001
+    - GAMMA_H_BLENDER_v0.1
+    - BMIMS_BLIND_EVALUATION_FIXTURE_001
+    - BMIMS_EXPECTED
+
+probe_envelope:
+  allowed:
+    - QUERY_RUNTIME_IDENTITY
+    - QUERY_BLENDER_VERSION
+    - QUERY_PYTHON_VERSION
+    - CREATE_EPHEMERAL_SCENE
+    - CREATE_ONE_GENERIC_EPHEMERAL_MESH_PRIMITIVE
+    - CREATE_ONE_GENERIC_EPHEMERAL_NODE_OR_OBJECT
+    - ASSIGN_ONE_EPHEMERAL_MATERIAL
+    - CREATE_ONE_BOUNDED_KEYFRAME
+    - READ_CREATED_OBJECT_STATE
+    - WRITE_PROBE_RECEIPT_TO_BOUNDED_PATH
+    - DESTROY_EPHEMERAL_PROBE_SCENE
+  prohibited:
+    - LOAD_DNL_SPECIMEN_001
+    - READ_GAMMA_H
+    - READ_BMIMS_ORACLE
+    - READ_EXPECTED_OUTCOMES
+    - NETWORK_ACCESS
+    - SHELL_EXECUTION
+    - PACKAGE_INSTALLATION
+    - UNBOUNDED_FILESYSTEM_READ
+    - UNBOUNDED_FILESYSTEM_WRITE
+    - MUTATE_HOST_CONFIGURATION
+    - PERSIST_SCENE_AS_EXPERIMENT_ARTIFACT
+    - COMPILE_HABITAT_ADAPTER
+    - EXECUTE_SEMANTIC_SPECIMEN
+
+controls:
+  disposable_scene_required: true
+  bounded_output_path_required: true
+  clean_teardown_required: true
+  executor_oracle_entitlement: ZERO
+  executor_specimen_entitlement: ZERO
+  operation_allowlist_is_closed: true
+  unspecified_operations: PROHIBITED
+
+receipt_contract:
+  id: DNL_BLENDER_BOOT_CONFORMANCE_RECEIPT_001
+  standing_before_execution: UNMATERIALIZED
+  required_observations:
+    - runtime_identity
+    - blender_version
+    - python_version
+    - execution_mode
+    - each_attempted_primitive
+    - each_primitive_result
+    - created_object_identifiers
+    - teardown_result
+    - bounded_receipt_path
+    - environment_identity
+    - timestamp_utc
+  required_provenance:
+    - probe_specification_sha256
+    - gate_adjudication_sha256
+    - receipt_sha256
+    - lineage_commit
+  capability_claim_ceiling: EXACTLY_EXERCISED_PRIMITIVES
+  failed_or_missing_teardown: N
+  incomplete_observation: U
+
+failure_posture:
+  unauthorized_operation_request: DENIED
+  semantic_overlap_detected: DENIED
+  oracle_reachability_detected: DENIED
+  environment_identity_unresolved: UNRESOLVED
+  no_implicit_retry: true
+  no_authority_escalation: true
+
+current_state:
+  G_boot_conf: UNMATERIALIZED
+  probe_execution: NOT_AUTHORIZED
+  G_specimen_admit: UNMATERIALIZED
+  specimen_execution: PROHIBITED
+  adapter_materialization: PROHIBITED
+
+deltas:
+  Specification: POSITIVE
+  Execution: 0
+  Evidence: 0
+  Authority: 0
+  Canon: 0
+  PP: 0

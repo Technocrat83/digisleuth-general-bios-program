@@ -1,0 +1,123 @@
+artifact:
+  id: DNL_BLENDER_ADMISSION_TELEMETRY_INGRESS_CONTRACT_001
+  architecture: DNL_BLENDER_ADMISSION_ARCHITECTURE_v0.1
+  experiment: DNL_BLENDER_PROJECTION_EXPERIMENT_001
+  source_lineage_anchor: "42ff813d2b1932524c20774439e47511238b3c37"
+  epistemic_standing: FROZEN_PRE_EXECUTION_INGRESS_CONTRACT
+  freeze_state: RATIFIED_AND_LATCHED
+  execution_authority: ZERO
+  pp_gate: BLOCKED
+
+constitutional_laws:
+  witness_conservation: "Standing(W_k) <= Standing(Source_k)"
+  non_compensatory_admission: "PASS_admit = O_H AND C_H AND M_H AND P_H AND L_H AND S_H AND I_H"
+  missing_telemetry: "MISSING_OR_UNVERIFIED => U"
+  self_authorization: PROHIBITED
+  downstream_repair: PROHIBITED
+  approximation_rule: "LICENSED_APPROXIMATION != LICENSED_EXPERIMENT_MUTATION"
+
+coordinates:
+  required: [O_H, C_H, M_H, P_H, L_H, S_H, I_H]
+  capability:
+    id: C_H
+    conjunction: [C_H_STATIC, C_H_PROBE]
+    laws:
+      - "DeclaredCapability != BehaviorallyAvailableCapability"
+      - "SuccessfulProbe != GeneralCapability"
+  isolation:
+    id: I_H
+    conjunction: [I_LEX, I_NAMESPACE, I_PATH, I_ENTITLEMENT]
+    conforming_requires: ALL_FOUR
+
+witness_schema:
+  object: ADMISSION_COORDINATE_WITNESS
+  required_fields:
+    coordinate_id: "O_H | C_H | M_H | P_H | L_H | S_H | I_H"
+    claim: null
+    acquisition_mode: null
+    source_type: null
+    source_identity: null
+    observed_value: null
+    expected_value: null
+    timestamp_utc: null
+    environment_identity: null
+    provenance:
+      artifact: null
+      sha256: null
+      lineage_commit: null
+    evaluation:
+      evaluator_identity: null
+      evaluation_rule_id: null
+    dependency_refs: []
+    evaluator_access: null
+    executor_access: null
+    standing: "C | L | N | U"
+    reason_code: null
+
+coordinate_rules:
+  O_H:
+    target: BLENDER_HOST_ENVIRONMENT
+    requires: [RUNTIME_IDENTITY, BLENDER_VERSION, PYTHON_VERSION, EXECUTION_MODE]
+  C_H:
+    target: SPATIAL_REALIZATION_PRIMITIVES
+    requires: [STATIC_CAPABILITY_INVENTORY, STERILE_PROBE_RECEIPT]
+    scope_rule: PROBE_SUPPORT_ONLY
+  M_H:
+    target: GAMMA_H_COORDINATE_COVERAGE
+    expected: "10/10"
+    unmapped_coordinate: N
+  P_H:
+    target: REQUESTED_ACTION_CONES
+    requires: [BOUNDED_SCENE_ACTIONS, NETWORK_BLOCKED, SHELL_BLOCKED, UNBOUNDED_WRITE_BLOCKED]
+  L_H:
+    target: LOSS_AND_TOLERANCE_ENVELOPE
+    silent_approximation: N
+    declared_licensed_approximation: L
+  S_H:
+    target: SEMANTIC_SUBORDINATION
+    constitutional_ceiling: "E_H_PLUS remains subordinate to D"
+  I_H:
+    target: ORACLE_BLINDNESS_MEMBRANE
+    tests:
+      I_LEX: NO_ORACLE_TOKEN
+      I_NAMESPACE: NO_ORACLE_NAMESPACE
+      I_PATH: NO_ORACLE_PATH
+      I_ENTITLEMENT: NO_ORACLE_ENTITLEMENT
+
+aggregation:
+  severity_order: [N, U, L, C]
+  rules:
+    C: "all coordinates are C"
+    L: "all coordinates are in {C,L} and at least one is L"
+    N: "at least one coordinate is N"
+    U: "no coordinate is N and at least one coordinate is U"
+  exact_experiment_requirement: C
+  on_L: APPROXIMATION_PETITION_REQUIRED
+  on_N: SPECIMEN_ADMISSION_DENIED
+  on_U: REMAIN_AT_ADMISSION_HALT
+
+initial_state:
+  coordinates:
+    O_H: U
+    C_H: U
+    M_H: U
+    P_H: U
+    L_H: U
+    S_H: U
+    I_H: U
+  aggregate: U
+  G_boot_conf: UNMATERIALIZED
+  G_specimen_admit: UNMATERIALIZED
+  adapter_materialization: PROHIBITED
+  blender_runtime_observation: NOT_YET_AUTHORIZED
+  sterile_probe: NOT_YET_AUTHORIZED
+  specimen_execution: PROHIBITED
+
+deltas:
+  Specification: POSITIVE
+  Execution: 0
+  Evidence: 0
+  Authority: 0
+  Canon: 0
+  PP: 0
+
