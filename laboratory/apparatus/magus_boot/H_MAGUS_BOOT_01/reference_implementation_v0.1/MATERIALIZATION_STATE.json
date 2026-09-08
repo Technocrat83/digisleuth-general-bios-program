@@ -1,0 +1,11 @@
+{
+  "artifact_id": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.1",
+  "authority_conferred": false,
+  "execution_performed": false,
+  "fixture_archive_inspected": false,
+  "fixture_bytes_included": false,
+  "next_gate": "ORACLE_ISOLATION_PREFLIGHT",
+  "oracle_expected_outcomes_encoded": false,
+  "posture": "MATERIALIZED_UNEXECUTED",
+  "pp": "BLOCKED"
+}

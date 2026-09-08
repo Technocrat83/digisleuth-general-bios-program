@@ -1,0 +1,10 @@
+{
+  "artifact_id": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.1",
+  "execution_performed": false,
+  "files": {
+    "MATERIALIZATION_STATE.json": "57f51b86e7e83ece476a9b409fdb8934c84fe74f967d51b9833a22a01cab466b",
+    "README.md": "a9dfc4ce2942f328954df31e23e352b60868401b46c9986ffca8769c6fa6ae90",
+    "magus_boot_reference_v0_1.py": "3199c5c6cf2ce3a5ac3e8958a5a73db56e29cc043980fdcd8afaabe9a03f8618"
+  },
+  "implementation_identity_sha256": "b1b0cce952b3108618d8e891a44da9a18e11547c9238bae70c9ec9d725563ed5"
+}
