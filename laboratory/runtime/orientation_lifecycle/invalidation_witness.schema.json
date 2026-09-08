@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "INVALIDATION_WITNESS_SCHEMA_v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["witness_id","object_id","prior_orientation_id","prior_orientation_digest","localization_evidence_digest","lifecycle","affected_surfaces","historical_orientation_preserved","epistemic_standing_changed","repair_attempted","auto_reorientation","authority_effect","execution_effect"],
+  "properties": {
+    "witness_id": {"type":"string","minLength":64,"maxLength":64,"pattern":"^[0-9a-f]{64}$"},
+    "object_id": {"type":"string","minLength":1},
+    "prior_orientation_id": {"type":"string","minLength":1},
+    "prior_orientation_digest": {"type":"string","minLength":1},
+    "localization_evidence_digest": {"type":"string","minLength":64,"maxLength":64,"pattern":"^[0-9a-f]{64}$"},
+    "lifecycle": {"enum":["CURRENT","SUSPENDED","WITHDRAWN"]},
+    "affected_surfaces": {"type":"array","uniqueItems":true,"items":{"enum":["PROVENANCE","PLACEMENT","GRAPH_TOPOLOGY","JURISDICTION","BOUNDARY","STATE_VECTOR","EPOCH","AUTHORITY_USE","ADJACENCY_STRUCTURE"]}},
+    "historical_orientation_preserved": {"const":true},
+    "epistemic_standing_changed": {"const":false},
+    "repair_attempted": {"const":false},
+    "auto_reorientation": {"const":false},
+    "authority_effect": {"const":"NONE"},
+    "execution_effect": {"enum":["NONE","BLOCKED"]}
+  }
+}
