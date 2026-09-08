@@ -8,23 +8,31 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Mapping
 
+from jsonschema import Draft202012Validator
 
-HEX128_RE = re.compile(r"^0x[0-9a-fA-F]{32}$")
-ALLOWED_FIXTURE_IDS = {f"OAB{i}" for i in range(1, 9)}
-ALLOWED_LOCALIZATION = {"LOCALIZED", "NO_MATERIAL_INTERSECTION", "UNRESOLVED"}
-ALLOWED_LIFECYCLE = {"CURRENT", "SUSPENDED", "WITHDRAWN"}
+ALLOWED_FIXTURE_IDS = tuple(f"OAB{i}" for i in range(1, 9))
+ALLOWED_FIXTURE_ID_SET = set(ALLOWED_FIXTURE_IDS)
+EXPECTED_MANIFEST_ID = "OAB_FIXTURE_INGRESS_MANIFEST_v0.1"
+EXPECTED_BATTERY_ID = "OMEGA_ORIENTATION_ADVERSARIAL_BATTERY_01"
+EXPECTED_FIXTURE_SCHEMA_VERSION = "OAB_FIXTURE_SHAPE_v0.1"
+EXPECTED_LOADER_CONTRACT_VERSION = "OAB_FIXTURE_LOADER_v0.1"
 REQUIRED_SEMANTIC_BINDINGS = {
     "delta_encoding_rule": "ORIENTATION_DELTA_CANONICAL_ENCODING_v0.1",
     "localization_rule": "JLK_ORIENTATION_DELTA_LOCALIZATION_HOOK_v0.1",
     "monitor_rule": "ORIENTATION_INVALIDATION_MONITOR_v0.1",
     "replay_rule": "ORIENTATION_REPLAY_VALIDATOR_v0.1",
 }
+EXPECTED_AUTHORITY = {"interpretation": 0, "repair": 0, "admission": 0, "execution": 0}
+HEX256_RE = re.compile(r"^[0-9a-f]{64}$")
+
+SCHEMA_PATH = Path(__file__).with_name("loader_contract.schema.json")
+SCHEMA = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+SCHEMA_VALIDATOR = Draft202012Validator(SCHEMA)
 
 
 class LoaderDisposition(str, Enum):
     LOADED = "LOADED"
     REJECTED = "REJECTED"
-    UNRESOLVED = "UNRESOLVED"
 
 
 @dataclass(frozen=True)
@@ -48,177 +56,103 @@ def _sha256(raw: bytes) -> str:
     return hashlib.sha256(raw).hexdigest()
 
 
-def _require_object(value: Any, field: str) -> Mapping[str, Any]:
-    if not isinstance(value, dict):
-        raise FixtureIngressError(f"{field}:OBJECT_REQUIRED")
-    return value
+def _closed_object_pairs(pairs):
+    out = {}
+    for key, value in pairs:
+        if key in out:
+            raise FixtureIngressError(f"DUPLICATE_JSON_KEY:{key}")
+        out[key] = value
+    return out
 
 
-def _require_fields(obj: Mapping[str, Any], fields: tuple[str, ...], scope: str) -> None:
-    missing = [field for field in fields if field not in obj]
-    if missing:
-        raise FixtureIngressError(f"{scope}:MISSING_REQUIRED_FIELD:{','.join(missing)}")
+def _reject_constant(value: str):
+    raise FixtureIngressError(f"NONSTANDARD_JSON_CONSTANT:{value}")
+
+
+def _parse_json_bytes(raw: bytes, scope: str) -> Mapping[str, Any]:
+    try:
+        text = raw.decode("utf-8")
+    except UnicodeDecodeError as exc:
+        raise FixtureIngressError(f"{scope}:UTF8_REQUIRED") from exc
+    try:
+        obj = json.loads(text, object_pairs_hook=_closed_object_pairs, parse_constant=_reject_constant)
+    except FixtureIngressError:
+        raise
+    except json.JSONDecodeError as exc:
+        raise FixtureIngressError(f"{scope}:INVALID_JSON") from exc
+    if not isinstance(obj, dict):
+        raise FixtureIngressError(f"{scope}:OBJECT_REQUIRED")
+    return obj
+
+
+def _validate_schema(fixture: Mapping[str, Any]) -> None:
+    errors = sorted(SCHEMA_VALIDATOR.iter_errors(fixture), key=lambda e: list(e.path))
+    if errors:
+        first = errors[0]
+        path = "$" + "".join(f"[{p!r}]" if not isinstance(p, int) else f"[{p}]" for p in first.path)
+        validator = str(first.validator).upper()
+        raise FixtureIngressError(f"SCHEMA_REJECT:{validator}:{path}:{first.message}")
 
 
 def _validate_manifest(manifest: Mapping[str, Any]) -> None:
-    _require_fields(
-        manifest,
-        (
-            "manifest_id",
-            "battery_id",
-            "fixture_schema_version",
-            "loader_contract_version",
-            "semantic_bindings",
-            "fixture_ids",
-            "authority",
-        ),
-        "manifest",
-    )
-    bindings = _require_object(manifest["semantic_bindings"], "semantic_bindings")
-    if dict(bindings) != REQUIRED_SEMANTIC_BINDINGS:
+    expected_keys = {
+        "manifest_id", "battery_id", "fixture_schema_version", "loader_contract_version",
+        "semantic_bindings", "fixture_root", "fixture_ids", "fixture_sha256", "authority", "boundary_law"
+    }
+    if set(manifest) != expected_keys:
+        raise FixtureIngressError("manifest:FIELD_SET_MISMATCH")
+    if manifest["manifest_id"] != EXPECTED_MANIFEST_ID:
+        raise FixtureIngressError("manifest:MANIFEST_ID_MISMATCH")
+    if manifest["battery_id"] != EXPECTED_BATTERY_ID:
+        raise FixtureIngressError("manifest:BATTERY_ID_MISMATCH")
+    if manifest["fixture_schema_version"] != EXPECTED_FIXTURE_SCHEMA_VERSION:
+        raise FixtureIngressError("manifest:FIXTURE_SCHEMA_VERSION_MISMATCH")
+    if manifest["loader_contract_version"] != EXPECTED_LOADER_CONTRACT_VERSION:
+        raise FixtureIngressError("manifest:LOADER_CONTRACT_VERSION_MISMATCH")
+    if manifest["semantic_bindings"] != REQUIRED_SEMANTIC_BINDINGS:
         raise FixtureIngressError("manifest:RULE_IDENTITY_MISMATCH")
-    fixture_ids = manifest["fixture_ids"]
-    if not isinstance(fixture_ids, list) or set(fixture_ids) != ALLOWED_FIXTURE_IDS:
-        raise FixtureIngressError("manifest:FIXTURE_ID_SET_MISMATCH")
-    authority = _require_object(manifest["authority"], "authority")
-    for key in ("interpretation", "repair", "admission", "execution"):
-        if authority.get(key) != 0:
-            raise FixtureIngressError(f"manifest:AUTHORITY_NONZERO:{key}")
+    ids = manifest["fixture_ids"]
+    if not isinstance(ids, list) or ids != list(ALLOWED_FIXTURE_IDS) or len(ids) != len(set(ids)):
+        raise FixtureIngressError("manifest:FIXTURE_ID_SEQUENCE_MISMATCH")
+    if manifest["authority"] != EXPECTED_AUTHORITY:
+        raise FixtureIngressError("manifest:AUTHORITY_ENVELOPE_MISMATCH")
+    sha_map = manifest["fixture_sha256"]
+    if not isinstance(sha_map, dict) or set(sha_map) != ALLOWED_FIXTURE_ID_SET:
+        raise FixtureIngressError("manifest:FIXTURE_DIGEST_SET_MISMATCH")
+    for fixture_id, digest in sha_map.items():
+        if not isinstance(digest, str) or not HEX256_RE.fullmatch(digest):
+            raise FixtureIngressError(f"manifest:FIXTURE_DIGEST_FORMAT_INVALID:{fixture_id}")
 
 
-def _validate_jurisdiction_widths(value: Any, path: str = "$.") -> None:
-    if isinstance(value, dict):
-        for key, child in value.items():
-            child_path = f"{path}{key}"
-            if "jurisdiction" in key.lower() and isinstance(child, str) and child.startswith("0x"):
-                if not HEX128_RE.fullmatch(child):
-                    raise FixtureIngressError(f"JURISDICTION_WIDTH_INVALID:{child_path}")
-            _validate_jurisdiction_widths(child, child_path + ".")
-    elif isinstance(value, list):
-        for index, child in enumerate(value):
-            _validate_jurisdiction_widths(child, f"{path}[{index}].")
-
-
-def _validate_fixture_shape(fixture: Mapping[str, Any]) -> None:
-    _require_fields(
-        fixture,
-        ("fixture_id", "single_fault", "field_delta", "expected_localization", "expected_monitor"),
-        "fixture",
-    )
-    fixture_id = fixture["fixture_id"]
-    if fixture_id not in ALLOWED_FIXTURE_IDS:
-        raise FixtureIngressError("UNKNOWN_FIXTURE_TYPE")
-    if fixture["single_fault"] is not True:
-        raise FixtureIngressError("fixture:SINGLE_FAULT_REQUIRED")
-
-    delta = _require_object(fixture["field_delta"], "field_delta")
-    _require_fields(
-        delta,
-        (
-            "object_id",
-            "delta_id",
-            "prior_orientation_hash",
-            "prior_graph_hash",
-            "current_graph_hash",
-            "prior_jurisdiction_hash",
-            "current_jurisdiction_hash",
-            "prior_provenance_hash",
-            "current_provenance_hash",
-            "prior_placement_hash",
-            "current_placement_hash",
-            "prior_state_hash",
-            "current_state_hash",
-            "prior_boundary_hash",
-            "current_boundary_hash",
-            "prior_epoch",
-            "current_epoch",
-            "adjacency_changed",
-            "authority_use_attempted",
-            "evidence_complete",
-        ),
-        "field_delta",
-    )
-    if delta["delta_id"] != fixture_id:
-        raise FixtureIngressError("fixture:DELTA_ID_MISMATCH")
-
-    localization = _require_object(fixture["expected_localization"], "expected_localization")
-    _require_fields(localization, ("standing", "affected_surfaces", "causal_cone", "jurisdictional_cone"), "expected_localization")
-    if localization["standing"] not in ALLOWED_LOCALIZATION:
-        raise FixtureIngressError("fixture:LOCALIZATION_DOMAIN_INVALID")
-
-    monitor = _require_object(fixture["expected_monitor"], "expected_monitor")
-    _require_fields(
-        monitor,
-        (
-            "lifecycle",
-            "historical_orientation_preserved",
-            "epistemic_standing_changed",
-            "repair_attempted",
-            "auto_reorientation",
-            "authority_effect",
-            "execution_effect",
-        ),
-        "expected_monitor",
-    )
-    if monitor["lifecycle"] not in ALLOWED_LIFECYCLE:
-        raise FixtureIngressError("fixture:LIFECYCLE_DOMAIN_INVALID")
-    if monitor["repair_attempted"] is not False:
-        raise FixtureIngressError("fixture:REPAIR_ATTEMPT_DECLARED")
-    if monitor["auto_reorientation"] is not False:
-        raise FixtureIngressError("fixture:AUTO_REORIENTATION_DECLARED")
-
-    _validate_jurisdiction_widths(fixture)
-
-
-def load_fixture_bytes(
-    raw_fixture: bytes,
-    *,
-    source_path: str,
-    manifest: Mapping[str, Any],
-    expected_sha256: str | None = None,
-) -> LoadedFixture:
-    """Parse and validate one fixture without executing or reinterpreting it."""
+def load_fixture_bytes(raw_fixture: bytes, *, source_path: str, manifest: Mapping[str, Any]) -> LoadedFixture:
+    """Parse and validate one fixture without executing, repairing, or reinterpreting it."""
     _validate_manifest(manifest)
-    digest = _sha256(raw_fixture)
-    if expected_sha256 is not None and digest != expected_sha256:
-        raise FixtureIngressError("FIXTURE_DIGEST_MISMATCH")
-
-    try:
-        fixture = json.loads(raw_fixture.decode("utf-8"))
-    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
-        raise FixtureIngressError("NONCANONICAL_OR_INVALID_JSON") from exc
-
-    fixture = _require_object(fixture, "fixture")
-    _validate_fixture_shape(fixture)
+    fixture = _parse_json_bytes(raw_fixture, "fixture")
+    _validate_schema(fixture)
     fixture_id = fixture["fixture_id"]
+    if fixture["field_delta"]["delta_id"] != fixture_id:
+        raise FixtureIngressError("fixture:DELTA_ID_MISMATCH")
     if fixture_id not in manifest["fixture_ids"]:
         raise FixtureIngressError("manifest:FIXTURE_NOT_BOUND")
-
+    digest = _sha256(raw_fixture)
+    expected = manifest["fixture_sha256"][fixture_id]
+    if digest != expected:
+        raise FixtureIngressError("FIXTURE_DIGEST_MISMATCH")
     return LoadedFixture(
         fixture_id=fixture_id,
         source_path=source_path,
         sha256=digest,
-        manifest_id=str(manifest["manifest_id"]),
-        battery_id=str(manifest["battery_id"]),
+        manifest_id=manifest["manifest_id"],
+        battery_id=manifest["battery_id"],
         semantic_bindings=dict(manifest["semantic_bindings"]),
         fixture=fixture,
         disposition=LoaderDisposition.LOADED,
     )
 
 
-def load_fixture_file(
-    fixture_path: Path,
-    *,
-    manifest_path: Path,
-    expected_sha256: str | None = None,
-) -> LoadedFixture:
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    return load_fixture_bytes(
-        fixture_path.read_bytes(),
-        source_path=str(fixture_path),
-        manifest=manifest,
-        expected_sha256=expected_sha256,
-    )
+def load_fixture_file(fixture_path: Path, *, manifest_path: Path) -> LoadedFixture:
+    manifest = _parse_json_bytes(manifest_path.read_bytes(), "manifest")
+    return load_fixture_bytes(fixture_path.read_bytes(), source_path=str(fixture_path), manifest=manifest)
 
 
 __all__ = [
