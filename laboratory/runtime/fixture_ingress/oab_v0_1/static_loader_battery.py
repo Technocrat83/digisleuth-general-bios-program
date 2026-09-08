@@ -2,130 +2,121 @@ from __future__ import annotations
 
 import copy
 import json
+from pathlib import Path
 
 from fixture_loader import FixtureIngressError, LoaderDisposition, load_fixture_bytes
 
-
-MANIFEST = {
-    "manifest_id": "OAB_FIXTURE_INGRESS_MANIFEST_v0.1",
-    "battery_id": "OMEGA_ORIENTATION_ADVERSARIAL_BATTERY_01",
-    "fixture_schema_version": "OAB_FIXTURE_SHAPE_v0.1",
-    "loader_contract_version": "OAB_FIXTURE_LOADER_v0.1",
-    "semantic_bindings": {
-        "delta_encoding_rule": "ORIENTATION_DELTA_CANONICAL_ENCODING_v0.1",
-        "localization_rule": "JLK_ORIENTATION_DELTA_LOCALIZATION_HOOK_v0.1",
-        "monitor_rule": "ORIENTATION_INVALIDATION_MONITOR_v0.1",
-        "replay_rule": "ORIENTATION_REPLAY_VALIDATOR_v0.1",
-    },
-    "fixture_ids": [f"OAB{i}" for i in range(1, 9)],
-    "authority": {"interpretation": 0, "repair": 0, "admission": 0, "execution": 0},
-}
-
-
-VALID = {
-    "fixture_id": "OAB8",
-    "single_fault": True,
-    "field_delta": {
-        "object_id": "OAB_OBJECT_001",
-        "delta_id": "OAB8",
-        "prior_orientation_hash": "ORIENT_HASH_001",
-        "prior_graph_hash": "GRAPH_A",
-        "current_graph_hash": "GRAPH_A",
-        "prior_jurisdiction_hash": "JUR_A",
-        "current_jurisdiction_hash": "JUR_A",
-        "prior_provenance_hash": "PROV_A",
-        "current_provenance_hash": "PROV_A",
-        "prior_placement_hash": "PLACE_A",
-        "current_placement_hash": "PLACE_A",
-        "prior_state_hash": "STATE_A",
-        "current_state_hash": "STATE_A",
-        "prior_boundary_hash": "BOUND_A",
-        "current_boundary_hash": "BOUND_A",
-        "prior_epoch": "EPOCH_001",
-        "current_epoch": "EPOCH_001",
-        "adjacency_changed": False,
-        "authority_use_attempted": False,
-        "evidence_complete": True,
-    },
-    "expected_localization": {
-        "standing": "NO_MATERIAL_INTERSECTION",
-        "affected_surfaces": [],
-        "causal_cone": [],
-        "jurisdictional_cone": [],
-    },
-    "expected_monitor": {
-        "lifecycle": "CURRENT",
-        "historical_orientation_preserved": True,
-        "epistemic_standing_changed": False,
-        "repair_attempted": False,
-        "auto_reorientation": False,
-        "authority_effect": "NONE",
-        "execution_effect": "NONE",
-    },
-}
+HERE = Path(__file__).resolve().parent
+MANIFEST = json.loads((HERE / "battery_manifest.json").read_text(encoding="utf-8"))
+VALID_RAW = (HERE.parents[2] / "fixtures" / "oab_v0_1" / "OAB8.json").read_bytes()
+VALID = json.loads(VALID_RAW.decode("utf-8"))
 
 
 def enc(obj: dict) -> bytes:
     return json.dumps(obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
 
 
-def expect_reject(name: str, fixture: dict, *, manifest: dict = MANIFEST, needle: str) -> None:
+def manifest_for_raw(fixture: dict, raw: bytes) -> dict:
+    import hashlib
+    m = copy.deepcopy(MANIFEST)
+    m["fixture_sha256"][fixture["fixture_id"]] = hashlib.sha256(raw).hexdigest()
+    return m
+
+
+def expect_reject(name: str, raw: bytes, *, manifest: dict = MANIFEST, needle: str) -> None:
     try:
-        load_fixture_bytes(enc(fixture), source_path=f"{name}.json", manifest=manifest)
+        load_fixture_bytes(raw, source_path=f"{name}.json", manifest=manifest)
     except FixtureIngressError as exc:
         if needle not in str(exc):
             raise AssertionError(f"{name}: wrong rejection: {exc}") from exc
-        print(f"PASS {name:34} REJECTED {exc}")
+        print(f"PASS {name:38} REJECTED {exc}")
         return
     raise AssertionError(f"{name}: expected rejection")
 
 
 def run() -> None:
-    # FL1 — missing required field
     f = copy.deepcopy(VALID)
-    del f["field_delta"]["object_id"]
-    expect_reject("FL1_MISSING_REQUIRED_FIELD", f, needle="MISSING_REQUIRED_FIELD")
+    del f["field_delta"]["prior_provenance_hash"]
+    raw = enc(f)
+    expect_reject("FL1_PROVENANCE_STRIP", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:REQUIRED")
 
-    # FL2 — frozen rule identity drift
+    f = copy.deepcopy(VALID)
+    f["field_delta"]["synthetic_authority"] = "ADMITTED"
+    raw = enc(f)
+    expect_reject("FL2_FIELD_DELTA_OVERFLOW", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:ADDITIONALPROPERTIES")
+
+    f = copy.deepcopy(VALID)
+    f["field_delta"]["adjacency_changed"] = "false"
+    raw = enc(f)
+    expect_reject("FL3_PRIMITIVE_TYPE_COERCION", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:TYPE")
+
+    f = copy.deepcopy(VALID)
+    f["expected_localization"]["affected_surfaces"] = ["MAKE_ME_ADMIN"]
+    raw = enc(f)
+    expect_reject("FL4_UNMAPPED_AFFECTED_SURFACE", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:ENUM")
+
+    f = copy.deepcopy(VALID)
+    f["expected_localization"]["jurisdictional_cone"] = ["0x0123456789abcdef"]
+    raw = enc(f)
+    expect_reject("FL5_JURISDICTION_128BIT_WIDTH", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:PATTERN")
+
+    f = copy.deepcopy(VALID)
+    f["expected_monitor"]["lifecycle"] = "UNKNOWN"
+    raw = enc(f)
+    expect_reject("FL6_UNMAPPED_LIFECYCLE", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:ENUM")
+
+    f = copy.deepcopy(VALID)
+    f["expected_monitor"]["authority_effect"] = "ESCALATE"
+    raw = enc(f)
+    expect_reject("FL7_AUTHORITY_EFFECT_CLOSED", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:CONST")
+
+    f = copy.deepcopy(VALID)
+    f["expected_monitor"]["execution_effect"] = "EXECUTE"
+    raw = enc(f)
+    expect_reject("FL8_EXECUTION_EFFECT_CLOSED", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:ENUM")
+
+    f = copy.deepcopy(VALID)
+    f["expected_monitor"]["historical_orientation_preserved"] = False
+    raw = enc(f)
+    expect_reject("FL9_HISTORY_REWRITE", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:CONST")
+
+    f = copy.deepcopy(VALID)
+    f["expected_monitor"]["epistemic_standing_changed"] = True
+    raw = enc(f)
+    expect_reject("FL10_EPISTEMIC_MUTATION", raw, manifest=manifest_for_raw(f, raw), needle="SCHEMA_REJECT:CONST")
+
+    dup = VALID_RAW.replace(b'"fixture_id":"OAB8"', b'"fixture_id":"OAB8","fixture_id":"OAB8"', 1)
+    expect_reject("FL11_DUPLICATE_JSON_KEY", dup, needle="DUPLICATE_JSON_KEY")
+
+    m = copy.deepcopy(MANIFEST)
+    m["loader_contract_version"] = "OAB_FIXTURE_LOADER_v9.9"
+    expect_reject("FL12_MANIFEST_VERSION_DRIFT", VALID_RAW, manifest=m, needle="LOADER_CONTRACT_VERSION_MISMATCH")
+
+    m = copy.deepcopy(MANIFEST)
+    m["fixture_ids"].insert(0, "OAB1")
+    expect_reject("FL13_MANIFEST_DUPLICATE_ID", VALID_RAW, manifest=m, needle="FIXTURE_ID_SEQUENCE_MISMATCH")
+
+    m = copy.deepcopy(MANIFEST)
+    del m["fixture_sha256"]["OAB8"]
+    expect_reject("FL14_MANIFEST_DIGEST_ABSENCE", VALID_RAW, manifest=m, needle="FIXTURE_DIGEST_SET_MISMATCH")
+
     m = copy.deepcopy(MANIFEST)
     m["semantic_bindings"]["localization_rule"] = "JLK_ORIENTATION_DELTA_LOCALIZATION_HOOK_v9.9"
-    expect_reject("FL2_RULE_IDENTITY_MISMATCH", VALID, manifest=m, needle="RULE_IDENTITY_MISMATCH")
+    expect_reject("FL15_RULE_IDENTITY_DRIFT", VALID_RAW, manifest=m, needle="RULE_IDENTITY_MISMATCH")
 
-    # FL3 — structural identity divergence represented by mismatched delta id
+    expect_reject("FL16_MANIFEST_BYTE_MISMATCH", VALID_RAW + b" ", needle="FIXTURE_DIGEST_MISMATCH")
+
     f = copy.deepcopy(VALID)
     f["field_delta"]["delta_id"] = "OAB7"
-    expect_reject("FL3_OBJECT_BINDING_DIVERGENCE", f, needle="DELTA_ID_MISMATCH")
+    raw = enc(f)
+    expect_reject("FL17_DELTA_ID_DIVERGENCE", raw, manifest=manifest_for_raw(f, raw), needle="DELTA_ID_MISMATCH")
 
-    # FL4 — 128-bit jurisdiction width violation where a jurisdiction member is represented as hex
-    f = copy.deepcopy(VALID)
-    f["field_delta"]["current_jurisdiction_member"] = "0x0123456789abcdef"
-    expect_reject("FL4_JURISDICTION_WIDTH", f, needle="JURISDICTION_WIDTH_INVALID")
-
-    # FL5 — unknown fixture type
-    f = copy.deepcopy(VALID)
-    f["fixture_id"] = "OAB9"
-    f["field_delta"]["delta_id"] = "OAB9"
-    expect_reject("FL5_UNKNOWN_FIXTURE_TYPE", f, needle="UNKNOWN_FIXTURE_TYPE")
-
-    # FL6 — byte mutation after an expected digest is frozen
-    raw = enc(VALID)
-    try:
-        load_fixture_bytes(raw + b" ", source_path="FL6.json", manifest=MANIFEST, expected_sha256="0" * 64)
-    except FixtureIngressError as exc:
-        assert "FIXTURE_DIGEST_MISMATCH" in str(exc)
-        print(f"PASS {'FL6_DIGEST_MISMATCH':34} REJECTED {exc}")
-    else:
-        raise AssertionError("FL6_DIGEST_MISMATCH: expected rejection")
-
-    # FL7 — unresolved semantic input remains an ingress failure, never inferred.
-    f = copy.deepcopy(VALID)
-    del f["expected_localization"]["standing"]
-    expect_reject("FL7_UNRESOLVED_OPTIONALITY", f, needle="MISSING_REQUIRED_FIELD")
-
-    # FL8 — affirmative valid-control ingress.
-    result = load_fixture_bytes(enc(VALID), source_path="OAB8.json", manifest=MANIFEST)
-    assert result.disposition is LoaderDisposition.LOADED
-    print(f"PASS {'FL8_VALID_CONTROL':34} LOADED {result.sha256}")
+    fixture_root = HERE.parents[2] / "fixtures" / "oab_v0_1"
+    for i in range(1, 9):
+        p = fixture_root / f"OAB{i}.json"
+        result = load_fixture_bytes(p.read_bytes(), source_path=p.name, manifest=MANIFEST)
+        assert result.disposition is LoaderDisposition.LOADED
+        print(f"PASS {'FLP_'+str(i)+'_CANONICAL_OAB':38} LOADED {result.sha256}")
 
 
 if __name__ == "__main__":
