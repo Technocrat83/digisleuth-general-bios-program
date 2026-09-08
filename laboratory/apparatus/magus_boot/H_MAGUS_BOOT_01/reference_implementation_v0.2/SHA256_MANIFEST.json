@@ -1,0 +1,12 @@
+{
+  "ancestor_identity_sha256": "b1b0cce952b3108618d8e891a44da9a18e11547c9238bae70c9ec9d725563ed5",
+  "artifact_id": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.2",
+  "contract_anchor_commit": "04a506e7cf2ffcdd8b13d61a641d9dd2849f3c01",
+  "execution_performed": false,
+  "files": {
+    "MATERIALIZATION_STATE.json": "f11bec76dccc76e824cf87593adf36eb97231e15e021bd48d56b0d54278d53db",
+    "README.md": "426cfd288fb8eecdbec44fbe1a6935ba36a2c051aae32fc188c3dcb71347796f",
+    "magus_boot_reference_v0_2.py": "cebd8fd1a46c81adbb58e40e333a91395c35a2ed610513daebc3f687fa5a9f49"
+  },
+  "implementation_identity_sha256": "b1ec7bddf3f4635a2ff1107aee8408bec1fbbbe932137130077fa32d71906d4d"
+}
