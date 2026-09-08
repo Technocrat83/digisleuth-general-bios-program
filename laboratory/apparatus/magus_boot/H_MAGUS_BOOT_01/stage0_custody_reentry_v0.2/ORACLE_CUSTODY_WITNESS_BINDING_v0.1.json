@@ -1,0 +1,40 @@
+{
+  "ancestor_stage_0_event": {
+    "rewritable": false,
+    "standing": "HALT",
+    "terminal_reason": "WITNESS_TYPE_MISMATCH"
+  },
+  "artifact_id": "ORACLE_CUSTODY_WITNESS_BINDING_v0.1",
+  "authority": {
+    "behavioral_preflight": "NONE",
+    "canon": "NONE",
+    "pp": "NONE",
+    "reinterpret_prior_stage_0": "NONE",
+    "scientific_execution": "NONE"
+  },
+  "byte_mutation": {
+    "fixtures": 0,
+    "implementation": 0,
+    "oracle": 0
+  },
+  "classification": "CUSTODY_REFERENT_BINDING",
+  "jurisdiction": "CUSTODY_TYPING_ONLY",
+  "witnesses": {
+    "expected_outcome_surface": {
+      "referent": "H_MAGUS_BOOT_01/EXPECTED_OUTCOMES.json",
+      "sha256": "5be0f130e18b0fecf176813288fd870c88c98169e4721d80f8518eceabe74d32",
+      "type": "ORACLE_BYTE_DIGEST"
+    },
+    "fixture_set": {
+      "formula": "SHA256(ASCII_HEX(H_A)||ASCII_HEX(H_B)||ASCII_HEX(H_C))",
+      "referent": "canonical_digest_over_fixture_A_oriented||fixture_B_incomplete||fixture_C_contradiction",
+      "sha256": "737a58504b6665caf100c1ce32cb61507f12bb61fb55c704232a8dde4bf62cc7",
+      "type": "FIXTURE_SET_DIGEST"
+    },
+    "implementation_v0_2": {
+      "referent": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.2 aggregate identity",
+      "sha256": "b1ec7bddf3f4635a2ff1107aee8408bec1fbbbe932137130077fa32d71906d4d",
+      "type": "IMPLEMENTATION_IDENTITY"
+    }
+  }
+}
