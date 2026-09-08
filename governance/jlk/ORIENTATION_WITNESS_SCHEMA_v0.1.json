@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ORIENTATION_WITNESS_SCHEMA_v0.1",
+  "title": "Orientation Witness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["orientation_id", "omega_id", "graph_id", "placement", "localization_witness", "graph_hash", "jurisdiction_hash", "object_epoch", "graph_epoch", "status"],
+  "properties": {
+    "orientation_id": {"type": "string", "minLength": 1},
+    "omega_id": {"type": "string", "minLength": 1},
+    "graph_id": {"type": "string", "minLength": 1},
+    "placement": {"type": "string", "minLength": 1},
+    "localization_witness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["causal_cone", "jurisdictional_cone", "boundary", "localized_scope", "resolved_warrants", "unresolved"],
+      "properties": {
+        "causal_cone": {"type": "array", "items": {"type": "string"}},
+        "jurisdictional_cone": {"type": "array", "items": {"type": "string"}},
+        "boundary": {"type": "object", "required": ["surface_id", "permeability"], "properties": {"surface_id": {"type": "string"}, "permeability": {"enum": ["CLOSED", "BOUNDED", "OPEN", "UNRESOLVED"]}}, "additionalProperties": false},
+        "localized_scope": {"type": "array", "items": {"type": "string"}},
+        "resolved_warrants": {"type": "array", "items": {"type": "string"}},
+        "unresolved": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "graph_hash": {"type": "string", "minLength": 1},
+    "jurisdiction_hash": {"type": "string", "minLength": 1},
+    "object_epoch": {"type": "string", "minLength": 1},
+    "graph_epoch": {"type": "string", "minLength": 1},
+    "status": {"enum": ["CURRENT", "STALE", "UNRESOLVED"]},
+    "authority_effect": {"const": "NONE"},
+    "execution_effect": {"const": "NONE"}
+  }
+}
