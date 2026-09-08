@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "OMEGA_TUPLE_RUNTIME_INTERFACE_v0.1",
+  "title": "Omega Tuple",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["iota", "tau", "pi", "xi", "sigma", "epsilon"],
+  "properties": {
+    "iota": {"type": "string", "minLength": 1},
+    "tau": {"type": "string", "minLength": 1},
+    "pi": {"type": "object", "minProperties": 1},
+    "xi": {"type": "string", "minLength": 1},
+    "sigma": {"type": "object"},
+    "epsilon": {"type": "string", "minLength": 1}
+  }
+}
