@@ -1,0 +1,12 @@
+{
+  "artifact_set": "MAGUS_BOOT_INGRESS_ENVELOPE_DESIGN_v0.2",
+  "execution_performed": false,
+  "files": {
+    "E_ingress.example.NON_EXECUTABLE.json": "2a0af44049ee15a005dca3772b16ac611222632026c1083b0c0739a0dbf4d0dd",
+    "E_ingress.schema.json": "bb0e5fe80904ecfe69c09e88987cd071493c7eb3b2eafa94a64df2e11556d78f",
+    "MAGUS_BOOT_INGRESS_INTERFACE_CONTRACT_v0.2.json": "6206621e70b8aa4b2b14688d72d316354c1f834eb65808211fd02fd5533f7a9e",
+    "ORACLE_ISOLATION_PREFLIGHT_REENTRY_v0.2.json": "1f60ec87b3518b6a0134ef6e37fbd0ae77617e6d1309a7ad8531d802ccf87422"
+  },
+  "pp": "BLOCKED",
+  "scientific_evidence_generated": false
+}

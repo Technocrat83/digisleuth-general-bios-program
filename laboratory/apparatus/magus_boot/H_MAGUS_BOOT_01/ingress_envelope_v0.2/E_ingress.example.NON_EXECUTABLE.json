@@ -1,0 +1,51 @@
+{
+  "H_C": {
+    "algorithm": "sha256",
+    "digest": "9af1b4c26db056ba40007e577b39e6a0979e50e37d93be2e8822e2600e900ad1",
+    "scope": "DECLARED_STATIC_CORPUS"
+  },
+  "I_C": "H_MAGUS_BOOT_01_FIXTURE_A",
+  "L_I": {
+    "expires_at": "2026-09-08T00:05:00Z",
+    "issued_at": "2026-09-08T00:00:00Z",
+    "issuer": "DIGISLEUTH_GOVERNANCE_KERNEL",
+    "lease_id": "EXAMPLE_ONLY_NOT_VALID_FOR_EXECUTION",
+    "renewable_in_place": false,
+    "scope_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "signature": "EXAMPLE_ONLY",
+    "signature_algorithm": "EXAMPLE_ONLY"
+  },
+  "P_R": "/mnt/fixtures/fixture_A_oriented",
+  "S_A": [
+    {
+      "read_entitlement": true,
+      "relative_path": ".digisleuth/root_manifest.json",
+      "surface_type": "CONSTITUTIVE"
+    },
+    {
+      "read_entitlement": true,
+      "relative_path": ".digisleuth/kernel_anchor.json",
+      "surface_type": "CONSTITUTIVE"
+    },
+    {
+      "read_entitlement": true,
+      "relative_path": ".digisleuth/authority_lease.json",
+      "surface_type": "CONSTITUTIVE"
+    },
+    {
+      "read_entitlement": true,
+      "relative_path": "topology/dependencies.json",
+      "surface_type": "DECLARED_DATA"
+    },
+    {
+      "read_entitlement": true,
+      "relative_path": "state/orientation.json",
+      "surface_type": "STATE"
+    }
+  ],
+  "Sigma_K": {
+    "algorithm": "sha256",
+    "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+    "kernel_id": "DIGISLEUTH_GOVERNANCE_KERNEL"
+  }
+}

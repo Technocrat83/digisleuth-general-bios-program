@@ -1,0 +1,65 @@
+{
+  "ancestor_fossil_record": {
+    "P_O": "FAIL",
+    "P_input": "FAIL",
+    "git_commit": "219e42a51cc55c93d9349b4dea1d7c86dbf76973",
+    "identity_digest": "b1b0cce952b3108618d8e891a44da9a18e11547c9238bae70c9ec9d725563ed5",
+    "version": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.1"
+  },
+  "closure": {
+    "P_immut_must_be_retested": true,
+    "P_input_PASS_implies_boot_authorization": false,
+    "P_output_must_be_retested": true,
+    "P_sep_must_be_retested": true,
+    "scientific_boot_execution": "UNAUTHORIZED_UNTIL_P_O_PASS"
+  },
+  "contract_id": "MAGUS_BOOT_INGRESS_INTERFACE_CONTRACT_v0.2",
+  "controlling_invariants": [
+    "REACHABILITY_DOES_NOT_CONFER_INGRESS_AUTHORITY",
+    "PATH_KNOWLEDGE_NEQ_PATH_ENTITLEMENT_NEQ_TRAVERSAL",
+    "DISCOVERY_DOES_NOT_EXPAND_ALLOWED_SURFACE_SET",
+    "INGRESS_ENVELOPE_CANNOT_SELF_EXPAND",
+    "EARLY_FAILURE_DOES_NOT_MANUFACTURE_KNOWLEDGE_OF_UNTESTED_PREDICATES"
+  ],
+  "execution_authorized": false,
+  "fixture_mutation_authorized": false,
+  "ingress_api_contract": {
+    "ambient_network": "PROHIBITED",
+    "ambient_paths": "PROHIBITED",
+    "discovery_may_expand_S_A": false,
+    "raw_path_entrypoint": "PROHIBITED",
+    "required_entrypoint_shape": "boot_corpus(E_ingress)",
+    "undeclared_state_flags": "PROHIBITED"
+  },
+  "ingress_type": "E_ingress",
+  "oracle_access_authorized": false,
+  "path_authorization_predicate": {
+    "all_required": [
+      "Exists(p)",
+      "p_is_descendant_of_P_R",
+      "Rel(p,P_R)_in_S_A",
+      "VerifyLease(L_I,Sigma_K)",
+      "LeaseCurrent(L_I)",
+      "ScopeHashMatches(L_I,S_A,I_C,P_R,H_C,Sigma_K)"
+    ],
+    "on_false": "REJECT_AND_HALT",
+    "self_whitelisting": "PROHIBITED"
+  },
+  "posture": "STATIC_INTERFACE_CONTRACT",
+  "required_failure_semantics": {
+    "dependency_outside_S_A": "ORIENTATION_INCOMPLETE",
+    "kernel_anchor_mismatch": "CONSTITUTIONAL_CONTRADICTION",
+    "lease_expired_or_revoked": "LEASE_INVALID_NO_TRAVERSAL",
+    "path_exists_but_not_entitled": "INGRESS_AUTHORITY_DENIED",
+    "root_hash_mismatch": "LINEAGE_HALT",
+    "scope_hash_mismatch": "INGRESS_SCOPE_DIVERGENCE"
+  },
+  "tuple": [
+    "I_C",
+    "P_R",
+    "H_C",
+    "S_A",
+    "L_I",
+    "Sigma_K"
+  ]
+}

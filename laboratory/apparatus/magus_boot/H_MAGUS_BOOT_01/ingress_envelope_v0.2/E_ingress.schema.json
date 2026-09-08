@@ -1,0 +1,157 @@
+{
+  "$id": "urn:digisleuth:magus:E_ingress:v0.2",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "H_C": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "digest": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "scope": {
+          "enum": [
+            "ROOT_MANIFEST_SET",
+            "DECLARED_STATIC_CORPUS"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "algorithm",
+        "digest",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "I_C": {
+      "description": "Explicit corpus/workspace identity handle.",
+      "minLength": 1,
+      "type": "string"
+    },
+    "L_I": {
+      "additionalProperties": false,
+      "properties": {
+        "expires_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "issued_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "issuer": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "lease_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "renewable_in_place": {
+          "const": false
+        },
+        "scope_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "signature": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "signature_algorithm": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "lease_id",
+        "issued_at",
+        "expires_at",
+        "scope_hash",
+        "signature_algorithm",
+        "signature",
+        "issuer"
+      ],
+      "type": "object"
+    },
+    "P_R": {
+      "description": "Canonical absolute physical root boundary. Boundary anchor only; not an execution target.",
+      "minLength": 1,
+      "type": "string"
+    },
+    "S_A": {
+      "description": "Closed allow-list. Runtime discovery MUST NOT mutate or append to this set.",
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "read_entitlement": {
+            "const": true
+          },
+          "relative_path": {
+            "description": "Normalized relative path; absolute paths and parent traversal are prohibited.",
+            "minLength": 1,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$",
+            "type": "string"
+          },
+          "surface_type": {
+            "enum": [
+              "CONSTITUTIVE",
+              "SCHEMA",
+              "STATE",
+              "LINEAGE",
+              "RUNTIME",
+              "DECLARED_DATA"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "relative_path",
+          "surface_type",
+          "read_entitlement"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "Sigma_K": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "sha256"
+        },
+        "digest": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "kernel_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "kernel_id",
+        "algorithm",
+        "digest"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "I_C",
+    "P_R",
+    "H_C",
+    "S_A",
+    "L_I",
+    "Sigma_K"
+  ],
+  "title": "MAGUS Boot Ingress Envelope",
+  "type": "object"
+}

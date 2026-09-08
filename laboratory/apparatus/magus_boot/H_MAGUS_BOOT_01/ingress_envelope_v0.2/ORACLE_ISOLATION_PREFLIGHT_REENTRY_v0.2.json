@@ -1,0 +1,35 @@
+{
+  "ancestor_v0_1_immutable": true,
+  "candidate": "MAGUS_BOOT_REFERENCE_IMPLEMENTATION_v0.2",
+  "gate_id": "GATE_ORACLE_ISOLATION_PREFLIGHT_REENTRY_v0.2",
+  "predicate_reentry_order": [
+    "P_identity",
+    "P_input",
+    "P_sep",
+    "P_immut",
+    "P_output",
+    "P_noexec"
+  ],
+  "required_before_reentry": [
+    "E_ingress_schema_bound",
+    "raw_path_entrypoint_removed_or_inaccessible",
+    "lease_verification_mechanism_bound",
+    "allowed_surface_set_immutable_at_runtime",
+    "scope_hash_verification_bound"
+  ],
+  "rules": {
+    "P_input_PASS_confers_adapter_authorization": false,
+    "any_FAIL_or_UNRESOLVED_blocks_scientific_boot": true,
+    "prior_PASS_may_be_reused_without_recheck": false,
+    "prior_UNRESOLVED_may_be_inferred_as_PASS": false
+  },
+  "standing": {
+    "authority_delta": 0,
+    "canon_delta": 0,
+    "design_materialization": "AUTHORIZED",
+    "implementation_v0_2": "NOT_MATERIALIZED",
+    "pp": "BLOCKED",
+    "preflight_reentry": "NOT_EXECUTED",
+    "scientific_boot": "UNAUTHORIZED"
+  }
+}
