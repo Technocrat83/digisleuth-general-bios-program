@@ -1,0 +1,45 @@
+{
+  "aggregate": "PASS",
+  "behavioral_predicates": {
+    "P_identity": "U",
+    "P_immut": "U",
+    "P_input": "U",
+    "P_noexec": "U",
+    "P_output": "U",
+    "P_sep": "U"
+  },
+  "coordinates": {
+    "V_F": {
+      "digest_correct": true,
+      "referent_correct": true,
+      "result": "PASS",
+      "type_correct": true
+    },
+    "V_O": {
+      "digest_correct": true,
+      "referent_correct": true,
+      "result": "PASS",
+      "type_correct": true
+    },
+    "V_impl": {
+      "digest_correct": true,
+      "referent_correct": true,
+      "result": "PASS",
+      "type_correct": true
+    }
+  },
+  "event_id": "STAGE_0_CUSTODY_REENTRY_v0.2_S0_2",
+  "inherited_standing": "NONE",
+  "posture": "FRESH_CUSTODY_REENTRY",
+  "predecessor_event": "S0_1_HALTED_WITNESS_TYPE_MISMATCH",
+  "scientific_boot_execution": "UNAUTHORIZED",
+  "standing_deltas": {
+    "Authority": 0,
+    "BehavioralObservation": 0,
+    "Canon": 0,
+    "CustodyTyping": "POSITIVE",
+    "CustodyVerification": "POSITIVE",
+    "PP": 0,
+    "ScientificEvidence": 0
+  }
+}
