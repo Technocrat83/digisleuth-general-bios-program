@@ -1,7 +1,7 @@
 manifest_id: DNL_BLENDER_EXPERIMENT_001_PREFLIGHT_MANIFEST_v0.1
 architecture_id: DNL_HABITAT_PROJECTION_ARCHITECTURE_v0.1
 experiment_id: DNL_BLENDER_PROJECTION_EXPERIMENT_001
-status: FROZEN_PRE_ORACLE_LINEAGE_BOUNDARY
+status: FROZEN_PRE_EXECUTION_ORACLE_LINEAGE_COMPLETE
 execution_standing: UNAUTHORIZED
 pp_gate: BLOCKED
 
@@ -21,16 +21,23 @@ artifacts:
     sha256: 43bd6641e80e8487c912fc02c3eb1d580eaf186d3bc224f70db39def80fe523a
     standing: FROZEN_PREEXECUTION_MAP
 
+  - role: BMIMS_BLIND_EVALUATION_FIXTURE
+    repository_path: research/dnl_habitat_projection/experiments/DNL_BLENDER_PROJECTION_EXPERIMENT_001/evaluation/BMIMS_BLIND_EVALUATION_FIXTURE_001.yaml
+    sha256: 534562081596fe9de828b1e3fc9f4a465781e826408a06c46ca5884f8855728e
+    standing: FROZEN_PRE_EXECUTION_ORACLE
+    source_lineage_anchor: 3ec3c32614520a6f292f05d320bf1eb8e0d2db88
+
 derivational_order:
   - DNL_HABITAT_PROJECTION_ARCHITECTURE_v0.1
   - DNL_BLENDER_SPECIMEN_001
   - DNL_BLENDER_GAMMA_H_001
-  - BMIMS_BLIND_EVALUATION_FIXTURE_PENDING
+  - BMIMS_BLIND_EVALUATION_FIXTURE_001
   - EXECUTION_ADMISSION_PETITION_PENDING
 
 boundary_assertions:
   constitutional_firewall: "P_H(D) != E_H_PLUS"
-  oracle_state: UNMATERIALIZED
+  oracle_state: FROZEN_AND_HASHED
+  oracle_isolation_required: true
   adapter_state: UNMATERIALIZED
   blender_execution: PROHIBITED
   realization_authority: ZERO
@@ -42,4 +49,3 @@ deltas:
   authority: 0
   canon: 0
   pp: 0
-

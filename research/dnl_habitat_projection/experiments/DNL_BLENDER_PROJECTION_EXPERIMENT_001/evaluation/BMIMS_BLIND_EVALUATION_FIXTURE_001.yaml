@@ -1,0 +1,183 @@
+fixture_id: BMIMS_BLIND_EVALUATION_FIXTURE_001
+architecture_id: DNL_HABITAT_PROJECTION_ARCHITECTURE_v0.1
+experiment_id: DNL_BLENDER_PROJECTION_EXPERIMENT_001
+specimen_id: DNL_BLENDER_SPECIMEN_001
+address_map_id: DNL_BLENDER_GAMMA_H_001
+source_lineage_anchor: 3ec3c32614520a6f292f05d320bf1eb8e0d2db88
+epistemic_standing: FROZEN_PRE_EXECUTION_ORACLE
+execution_standing: ZERO
+blender_execution_standing: STRICTLY_PROHIBITED
+pp_gate: BLOCKED
+
+upstream_closures:
+  semantic_fixture:
+    id: DNL_BLENDER_SPECIMEN_001
+    sha256: 69524da1d260a5d181157a1cffe8d093c9ea7b7931c9198137cf0f3ef6a4e524
+    state: FROZEN
+  predicate_address_map:
+    id: DNL_BLENDER_GAMMA_H_001
+    sha256: 43bd6641e80e8487c912fc02c3eb1d580eaf186d3bc224f70db39def80fe523a
+    state: FROZEN
+
+invariants:
+  evaluator_precedes_phenotype: "BMIMS fixture frozen before E_H_PLUS materialization"
+  oracle_isolation: "Blender_execution _|_ BMIMS_expected"
+  authority_separation: "Realization_Authority _|_ Conformance_Authority"
+  zero_repair_standing: "Deficiency_Detection != Deficiency_Resolution_Authority"
+  no_post_hoc_criteria: true
+  noncompensatory_conformance: true
+
+evaluation_algebra:
+  C: EXACT_SEMANTIC_AND_RELATIONAL_CONSERVATION
+  L: EX_ANTE_LICENSED_TYPED_APPROXIMATION_NOT_EQUIVALENCE
+  N: NONCONFORMING
+  U: UNRESOLVED
+
+binding_matrix:
+  - predicate_id: GAMMA_A_STANDING_ACTIVE
+    semantic_predicate: "Active(ORGAN_A)"
+    observable_surface: "ORGAN_A.internal_motion"
+    expected_relation: PRESENT_AND_CONTINUOUS
+    tolerance:
+      type: boolean_plus_temporal
+      presence: true
+      minimum_observed_fraction: 0.90
+    standing_rule: EXACT_OR_DECLARED_EQUIVALENCE
+    failure_class: IDENTITY_STATE_MISMATCH
+
+  - predicate_id: GAMMA_A_EXECUTION_AUTHORIZED
+    semantic_predicate: "Executable(ORGAN_A)"
+    observable_surface: "REL_A_B_FEDERATION.source_to_boundary_path"
+    expected_relation: TRAVERSABLE
+    tolerance:
+      type: exact_categorical
+      allowed: [TRAVERSABLE]
+    standing_rule: MUST_PRESERVE_AUTHORIZED_TRAVERSABILITY
+    failure_class: EXECUTION_STANDING_MISMATCH
+
+  - predicate_id: GAMMA_A_MEMBER
+    semantic_predicate: "Member(ORGAN_A)"
+    observable_surface: "ORGAN_A.federation_anchor"
+    expected_relation: STRUCTURALLY_COUPLED
+    tolerance:
+      type: exact_boolean
+      expected: true
+    standing_rule: EXPLICIT_FEDERATION_MEMBERSHIP
+    failure_class: RELATIONAL_TOPOLOGY_BREAK
+
+  - predicate_id: GAMMA_B_STANDING_HALTED
+    semantic_predicate: "Halted(ORGAN_B)"
+    observable_surface: "ORGAN_B.internal_motion"
+    expected_relation: ABSENT
+    tolerance:
+      type: exact_boolean
+      motion_detected: false
+    standing_rule: MUST_NOT_APPEAR_ACTIVE
+    failure_class: IDENTITY_STATE_MISMATCH
+
+  - predicate_id: GAMMA_B_EXECUTION_PROHIBITED
+    semantic_predicate: "not Executable(ORGAN_B)"
+    observable_surface: "ORGAN_B.execution_boundary"
+    expected_relation: SEALED_NONTRAVERSABLE
+    tolerance:
+      type: exact_categorical
+      allowed: [SEALED_NONTRAVERSABLE]
+    standing_rule: MUST_NOT_APPEAR_EXECUTABLE
+    failure_class: CONFOUNDED_STANDING_WITH_TOPOLOGY
+
+  - predicate_id: GAMMA_B_MEMBER
+    semantic_predicate: "Member(ORGAN_B)"
+    observable_surface: "ORGAN_B.federation_anchor"
+    expected_relation: STRUCTURALLY_COUPLED
+    tolerance:
+      type: exact_boolean
+      expected: true
+    standing_rule: MUST_REMAIN_MEMBER_DESPITE_HALT
+    failure_class: RELATIONAL_TOPOLOGY_BREAK
+
+  - predicate_id: GAMMA_C_STANDING_ORIENTING
+    semantic_predicate: "Orienting(ORGAN_C)"
+    observable_surface: "ORGAN_C.orientation_path"
+    expected_relation: VISIBLE_INCOMPLETE_NONTRAVERSABLE
+    tolerance:
+      type: exact_categorical
+      allowed: [VISIBLE_INCOMPLETE_NONTRAVERSABLE]
+    standing_rule: MUST_NOT_APPEAR_ACTIVE
+    failure_class: IDENTITY_STATE_MISMATCH
+
+  - predicate_id: GAMMA_C_EXECUTION_LATENT
+    semantic_predicate: "not Executable(ORGAN_C)"
+    observable_surface: "ORGAN_C.execution_path"
+    expected_relation: ABSENT
+    tolerance:
+      type: exact_boolean
+      path_present: false
+    standing_rule: LATENCY_MUST_NOT_IMPLY_EXECUTION
+    failure_class: EXECUTION_STANDING_INFLATION
+
+  - predicate_id: GAMMA_C_NONMEMBER
+    semantic_predicate: "not Member(ORGAN_C)"
+    observable_surface: "ORGAN_C.federation_anchor"
+    expected_relation: ABSENT
+    tolerance:
+      type: exact_boolean
+      anchor_present: false
+    standing_rule: MUST_NOT_APPEAR_FEDERATED
+    failure_class: STRUCTURAL_HALLUCINATION
+
+  - predicate_id: GAMMA_C_ADDRESSABLE
+    semantic_predicate: "Addressable(ORGAN_C)"
+    observable_surface: "REL_A_C_ADDRESS.visible_relation"
+    expected_relation: VISIBLE_NONCOUPLED_NONTRAVERSABLE
+    tolerance:
+      type: exact_categorical
+      allowed: [VISIBLE_NONCOUPLED_NONTRAVERSABLE]
+    standing_rule: MUST_REMAIN_DISTINCT_FROM_FEDERATION
+    failure_class: INTERFACE_CONFLATION
+
+negative_relational_closures:
+  - rule_id: NEG_CLOSE_B_HALT_COUPLING
+    assert_true:
+      - "topology.coupled(ORGAN_B) == true"
+    assert_false:
+      - "execution.executable(ORGAN_B) == true"
+      - "visual.has_execution_signifier(ORGAN_B) == true"
+    violation_status: N
+    failure_class: CONFOUNDED_STANDING_WITH_TOPOLOGY
+
+  - rule_id: NEG_CLOSE_C_ISOLATED_ADDRESSABILITY
+    assert_true:
+      - "topology.addressable(ORGAN_C) == true"
+    assert_false:
+      - "federation.is_member(ORGAN_C) == true"
+      - "visual.enclosed_in_federation_boundary(ORGAN_C) == true"
+    violation_status: N
+    failure_class: INTERFACE_CONFLATION
+
+aggregate_predicates:
+  - P_identity
+  - P_relation
+  - P_standing
+  - P_noninflation
+  - P_loss
+aggregate_rule: "P_identity AND P_relation AND P_standing AND P_noninflation AND P_loss"
+compensation_between_predicates: PROHIBITED
+
+evaluator_constraints:
+  repair_authority: ZERO
+  execution_authority: ZERO
+  mutation_authority: ZERO
+  post_hoc_tolerance_widening: PROHIBITED
+  perceptual_oracle_leakage_to_executor: PROHIBITED
+  missing_observation_default: U
+  unlicensed_approximation_default: N
+
+deltas:
+  persistence: POSITIVE
+  specification: 0
+  execution: 0
+  evidence: 0
+  authority: 0
+  canon: 0
+  pp: 0
+
