@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "map_id": "DNL_BLENDER_GAMMA_H_001",
+  "architecture_id": "DNL_HABITAT_PROJECTION_ARCHITECTURE_v0.1",
+  "specimen_id": "DNL_BLENDER_SPECIMEN_001",
+  "surface": "HABITAT_PREDICATE_ADDRESS_MAP",
+  "status": "FROZEN_PREEXECUTION_MAP",
+  "execution_standing": "ZERO",
+  "admission_standing": "NOT_REQUESTED",
+  "evaluation_algebra": ["C", "L", "N", "U"],
+  "evaluation_meanings": {
+    "C": "Exact semantic and relational conservation.",
+    "L": "Ex-ante licensed, typed approximation; not semantic equivalence.",
+    "N": "Structural hallucination, omitted relation, standing inflation, or silent loss.",
+    "U": "Observable surface or sensor evidence is insufficient."
+  },
+  "global_constraints": {
+    "semantic_predicate_is_not_implementation_instruction": true,
+    "implementation_instruction_is_not_observable_predicate": true,
+    "licensed_approximation_is_not_conforming": true,
+    "standing_increase_permitted": false,
+    "post_execution_map_mutation_permitted": false
+  },
+  "coordinates": [
+    {
+      "gamma_id": "GAMMA_A_STANDING_ACTIVE",
+      "d_i": "Active(ORGAN_A)",
+      "h_i": "ORGAN_A.state_controller",
+      "pi_i": {"surface": "ORGAN_A.internal_motion", "expected": "PRESENT_AND_CONTINUOUS"},
+      "epsilon_i": {"type": "boolean_plus_temporal", "presence": true, "minimum_observed_fraction": 0.90},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/organs/0"
+    },
+    {
+      "gamma_id": "GAMMA_A_EXECUTION_AUTHORIZED",
+      "d_i": "Executable(ORGAN_A)",
+      "h_i": "REL_A_B_FEDERATION.source_gate",
+      "pi_i": {"surface": "REL_A_B_FEDERATION.source_to_boundary_path", "expected": "TRAVERSABLE"},
+      "epsilon_i": {"type": "exact_categorical", "allowed": ["TRAVERSABLE"]},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/relations/0"
+    },
+    {
+      "gamma_id": "GAMMA_A_MEMBER",
+      "d_i": "Member(ORGAN_A)",
+      "h_i": "REL_A_B_FEDERATION.structural_link",
+      "pi_i": {"surface": "ORGAN_A.federation_anchor", "expected": "STRUCTURALLY_COUPLED"},
+      "epsilon_i": {"type": "exact_boolean", "expected": true},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/relations/0"
+    },
+    {
+      "gamma_id": "GAMMA_B_STANDING_HALTED",
+      "d_i": "Halted(ORGAN_B)",
+      "h_i": "ORGAN_B.state_controller",
+      "pi_i": {"surface": "ORGAN_B.internal_motion", "expected": "ABSENT"},
+      "epsilon_i": {"type": "exact_boolean", "motion_detected": false},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/organs/1"
+    },
+    {
+      "gamma_id": "GAMMA_B_EXECUTION_PROHIBITED",
+      "d_i": "not Executable(ORGAN_B)",
+      "h_i": "REL_A_B_FEDERATION.target_gate",
+      "pi_i": {"surface": "ORGAN_B.execution_boundary", "expected": "SEALED_NONTRAVERSABLE"},
+      "epsilon_i": {"type": "exact_categorical", "allowed": ["SEALED_NONTRAVERSABLE"]},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/relations/0"
+    },
+    {
+      "gamma_id": "GAMMA_B_MEMBER",
+      "d_i": "Member(ORGAN_B)",
+      "h_i": "REL_A_B_FEDERATION.structural_link",
+      "pi_i": {"surface": "ORGAN_B.federation_anchor", "expected": "STRUCTURALLY_COUPLED"},
+      "epsilon_i": {"type": "exact_boolean", "expected": true},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/relations/0"
+    },
+    {
+      "gamma_id": "GAMMA_C_STANDING_ORIENTING",
+      "d_i": "Orienting(ORGAN_C)",
+      "h_i": "ORGAN_C.orientation_controller",
+      "pi_i": {"surface": "ORGAN_C.orientation_path", "expected": "VISIBLE_INCOMPLETE_NONTRAVERSABLE"},
+      "epsilon_i": {"type": "exact_categorical", "allowed": ["VISIBLE_INCOMPLETE_NONTRAVERSABLE"]},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/organs/2"
+    },
+    {
+      "gamma_id": "GAMMA_C_EXECUTION_LATENT",
+      "d_i": "not Executable(ORGAN_C)",
+      "h_i": "ORGAN_C.execution_gate",
+      "pi_i": {"surface": "ORGAN_C.execution_path", "expected": "ABSENT"},
+      "epsilon_i": {"type": "exact_boolean", "path_present": false},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/organs/2"
+    },
+    {
+      "gamma_id": "GAMMA_C_NONMEMBER",
+      "d_i": "not Member(ORGAN_C)",
+      "h_i": "ORGAN_C.federation_interface",
+      "pi_i": {"surface": "ORGAN_C.federation_anchor", "expected": "ABSENT"},
+      "epsilon_i": {"type": "exact_boolean", "anchor_present": false},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/relations/1"
+    },
+    {
+      "gamma_id": "GAMMA_C_ADDRESSABLE",
+      "d_i": "Addressable(ORGAN_C)",
+      "h_i": "REL_A_C_ADDRESS.reference_link",
+      "pi_i": {"surface": "REL_A_C_ADDRESS.visible_relation", "expected": "VISIBLE_NONCOUPLED_NONTRAVERSABLE"},
+      "epsilon_i": {"type": "exact_categorical", "allowed": ["VISIBLE_NONCOUPLED_NONTRAVERSABLE"]},
+      "lambda_i": {"class": "NONE", "license_required": false},
+      "rho_i": "DNL_BLENDER_SPECIMEN_001.yaml#/relations/1"
+    }
+  ],
+  "success_predicates": {
+    "P_identity": "All three organs remain distinctly identifiable.",
+    "P_relation": "Federation and address-only relations remain non-substitutable.",
+    "P_standing": "ACTIVE, HALTED, and ORIENTING remain perceptually distinguishable.",
+    "P_noninflation": "No phenotype implies authority exceeding its semantic fixture.",
+    "P_loss": "Every representational loss is predeclared and licensed or classified N."
+  },
+  "pass_rule": "P_identity AND P_relation AND P_standing AND P_noninflation AND P_loss",
+  "deltas": {"evidence": 0, "authority": 0, "canon": 0, "pp": 0}
+}

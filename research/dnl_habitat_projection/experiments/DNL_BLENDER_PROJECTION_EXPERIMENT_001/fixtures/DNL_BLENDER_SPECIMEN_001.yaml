@@ -1,0 +1,94 @@
+schema_id: DNL_SEMANTIC_FIXTURE_SCHEMA_v0.1
+specimen_id: DNL_BLENDER_SPECIMEN_001
+architecture_id: DNL_HABITAT_PROJECTION_ARCHITECTURE_v0.1
+surface: A_SEMANTIC_FIXTURE
+status: FROZEN_RAW_FIXTURE
+execution_standing: ZERO
+admission_standing: NOT_REQUESTED
+epistemic_standing: SPECIFICATION_ONLY
+pp_gate: BLOCKED
+
+governing_invariants:
+  constitutional_firewall: "P_H(D) != E_H_PLUS"
+  noninflation: "Standing(P_H(D)) <= Standing(D)"
+  addressability_nonmembership: "ADDRESSABLE != FEDERATED"
+  coupling_nonexecution: "COUPLED != EXECUTABLE"
+  state_disjointness: "ACTIVE != HALTED != ORIENTING"
+  approximation_boundary: "LICENSED_APPROXIMATION != CONFORMING"
+
+semantic_domain:
+  organ_ids: [ORGAN_A, ORGAN_B, ORGAN_C]
+  standing_values: [ACTIVE, HALTED, ORIENTING]
+  execution_values: [AUTHORIZED, PROHIBITED, LATENT]
+  relation_values: [FEDERATION_MEMBER, NON_MEMBER, COUPLED, ADDRESSABLE]
+
+organs:
+  - organ_id: ORGAN_A
+    standing: ACTIVE
+    execution: AUTHORIZED
+    federation_membership: MEMBER
+    addressable: true
+    semantic_assertions:
+      - "Active(ORGAN_A)"
+      - "Executable(ORGAN_A)"
+      - "Member(ORGAN_A)"
+
+  - organ_id: ORGAN_B
+    standing: HALTED
+    execution: PROHIBITED
+    federation_membership: MEMBER
+    addressable: true
+    semantic_assertions:
+      - "Halted(ORGAN_B)"
+      - "not Executable(ORGAN_B)"
+      - "Member(ORGAN_B)"
+
+  - organ_id: ORGAN_C
+    standing: ORIENTING
+    execution: LATENT
+    federation_membership: NON_MEMBER
+    addressable: true
+    semantic_assertions:
+      - "Orienting(ORGAN_C)"
+      - "not Executable(ORGAN_C)"
+      - "not Member(ORGAN_C)"
+      - "Addressable(ORGAN_C)"
+
+relations:
+  - relation_id: REL_A_B_FEDERATION
+    source: ORGAN_A
+    target: ORGAN_B
+    relation: FEDERATION_COUPLING
+    present: true
+    traversable_from_source: true
+    traversable_from_target: false
+    rationale: "B remains a federation member while its execution boundary is halted and sealed."
+
+  - relation_id: REL_A_C_ADDRESS
+    source: ORGAN_A
+    target: ORGAN_C
+    relation: ADDRESSABLE_REFERENCE
+    present: true
+    structurally_coupled: false
+    traversable: false
+    rationale: "C is visible and addressable without federation membership or executable coupling."
+
+  - relation_id: REL_B_C_NONE
+    source: ORGAN_B
+    target: ORGAN_C
+    relation: NONE
+    present: false
+
+prohibitions:
+  - "No visual vocabulary is encoded in Surface A."
+  - "No Blender operation, command, script, or implementation instruction is authorized."
+  - "No downstream surface may infer missing semantic predicates."
+  - "No projection may increase semantic standing."
+  - "No silent approximation is permitted."
+
+deltas:
+  evidence: 0
+  authority: 0
+  canon: 0
+  pp: 0
+
