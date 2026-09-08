@@ -1,0 +1,30 @@
+{
+  "manifest_id": "OAB_FIXTURE_INGRESS_MANIFEST_v0.1",
+  "battery_id": "OMEGA_ORIENTATION_ADVERSARIAL_BATTERY_01",
+  "fixture_schema_version": "OAB_FIXTURE_SHAPE_v0.1",
+  "loader_contract_version": "OAB_FIXTURE_LOADER_v0.1",
+  "semantic_bindings": {
+    "delta_encoding_rule": "ORIENTATION_DELTA_CANONICAL_ENCODING_v0.1",
+    "localization_rule": "JLK_ORIENTATION_DELTA_LOCALIZATION_HOOK_v0.1",
+    "monitor_rule": "ORIENTATION_INVALIDATION_MONITOR_v0.1",
+    "replay_rule": "ORIENTATION_REPLAY_VALIDATOR_v0.1"
+  },
+  "fixture_root": "laboratory/fixtures/oab_v0_1",
+  "fixture_ids": [
+    "OAB1",
+    "OAB2",
+    "OAB3",
+    "OAB4",
+    "OAB5",
+    "OAB6",
+    "OAB7",
+    "OAB8"
+  ],
+  "authority": {
+    "interpretation": 0,
+    "repair": 0,
+    "admission": 0,
+    "execution": 0
+  },
+  "boundary_law": "Fixture semantics are recovered from frozen declarations; missing meaning is never inferred."
+}
