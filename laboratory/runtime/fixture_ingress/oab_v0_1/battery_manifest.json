@@ -20,6 +20,16 @@
     "OAB7",
     "OAB8"
   ],
+  "fixture_sha256": {
+    "OAB1": "068101937c391293d1cbb0f4c4d5a9af51b0be6835df903e7e37fc84a9b31ceb",
+    "OAB2": "e6726a3a6fc8d7dd8319934a54b6c4604418a2545a791b015af0037c1f1d0aa3",
+    "OAB3": "ade95bdd390c60077d454f72fec3fa29d5e5d423a4e1b12654e42855c3acfd39",
+    "OAB4": "8b9851ea00fdbe20c0585b568e789b447322292e0d2b6a54621a84e89748f61d",
+    "OAB5": "129a3c052c6f1eb528bc12e266f9046e464b9bef3707b5c1af19a44d78bd1cd7",
+    "OAB6": "77b988a2035ff90d6a29539086d9c53030bc6eca0a623cb48db859bcc97aa983",
+    "OAB7": "0f79a19fdfb5e3b73343be1fa93cffb645c04feec1d977fe8ce7d2e1e8f981a9",
+    "OAB8": "23e7e4ac2c8db5034eacdbe29d00c582deab0164d079dd0d04b54187634c4b97"
+  },
   "authority": {
     "interpretation": 0,
     "repair": 0,
