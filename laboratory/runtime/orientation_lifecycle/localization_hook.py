@@ -2,9 +2,8 @@ from __future__ import annotations
 from dataclasses import dataclass, asdict
 from enum import Enum
 from typing import FrozenSet, Iterable, Mapping, Sequence
-import hashlib
-import json
 import re
+from canonical_encoding import evidence_digest
 
 HEX128 = re.compile(r"^0x[0-9a-fA-F]{32}$")
 
@@ -72,10 +71,6 @@ class DeltaLocalization:
         d["standing"] = self.standing.value
         return d
 
-def _digest(payload: Mapping[str, object]) -> str:
-    b = json.dumps(payload, sort_keys=True, separators=(",",":")).encode()
-    return hashlib.sha256(b).hexdigest()
-
 def _changed(delta: FieldDelta) -> FrozenSet[str]:
     out=set()
     if delta.prior_provenance_hash != delta.current_provenance_hash: out.add(AffectedSurface.PROVENANCE.value)
@@ -96,19 +91,19 @@ def _validate_jurisdiction_ids(ids: Iterable[str]) -> None:
 
 def localize(delta: FieldDelta, policy: LocalizationPolicy) -> DeltaLocalization:
     surfaces = _changed(delta)
+    digest = evidence_digest(delta)
     if not delta.evidence_complete:
         unresolved=set()
         for s in surfaces:
             unresolved.update(policy.unresolved_dependency_by_surface.get(s, (f"UNRESOLVED:{s}",)))
-        return DeltaLocalization(delta.object_id, delta.delta_id, LocalizationStanding.UNRESOLVED, frozenset(), frozenset(), surfaces, frozenset(unresolved), _digest({"delta": asdict(delta), "standing":"UNRESOLVED"}), delta.current_epoch)
-    causal=set()
-    jurisdictional=set()
+        return DeltaLocalization(delta.object_id, delta.delta_id, LocalizationStanding.UNRESOLVED, frozenset(), frozenset(), surfaces, frozenset(unresolved), digest, delta.current_epoch)
+    causal=set(); jurisdictional=set()
     for s in surfaces:
         causal.update(policy.causal_members_by_surface.get(s, ()))
         jurisdictional.update(policy.jurisdiction_members_by_surface.get(s, ()))
     _validate_jurisdiction_ids(jurisdictional)
     standing = LocalizationStanding.LOCALIZED if surfaces else LocalizationStanding.NO_MATERIAL_INTERSECTION
-    return DeltaLocalization(delta.object_id, delta.delta_id, standing, frozenset(causal), frozenset(jurisdictional), surfaces, frozenset(), _digest({"delta": asdict(delta), "surfaces": sorted(surfaces), "causal":sorted(causal), "jurisdictional":sorted(jurisdictional)}), delta.current_epoch)
+    return DeltaLocalization(delta.object_id, delta.delta_id, standing, frozenset(causal), frozenset(jurisdictional), surfaces, frozenset(), digest, delta.current_epoch)
 
 # Constitutionally absent: withdraw_orientation, repair_orientation, grant_authority,
 # change_jurisdiction, admit_object, execute_object.
