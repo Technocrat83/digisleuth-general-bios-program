@@ -7,8 +7,8 @@ for p in (HERE, LIFECYCLE_DIR):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
-from canonical_encoding import evidence_digest
-from replay_validator import replay_validate, ReplayAxis
+from canonical_encoding import evidence_digest, ENCODING_ID
+from replay_validator import replay_validate, ReplayAxis, LOCALIZATION_RULE_ID, MONITOR_RULE_ID
 from localization_hook import FieldDelta, LocalizationPolicy, localize
 from orientation_monitor import PriorOrientation, evaluate
 
@@ -33,44 +33,70 @@ BASE_DELTA={
 
 def witness_for(delta_dict):
     d=FieldDelta(**delta_dict); loc=localize(d,POLICY); ev=evaluate(PRIOR,loc)
-    return {
+    w={
         "object_id":d.object_id,"delta_id":d.delta_id,
         "prior_orientation_id":PRIOR.orientation_id,"prior_orientation_digest":PRIOR.orientation_digest,
+        "canonical_encoding_id":ENCODING_ID,
+        "localization_rule_id":LOCALIZATION_RULE_ID,
+        "monitor_rule_id":MONITOR_RULE_ID,
         "evidence_digest":evidence_digest(d),
         "localization":{
             "standing":loc.standing.value,
             "affected_surfaces":sorted(loc.affected_surfaces),
             "causal_cone":sorted(loc.causal_cone),
             "jurisdictional_cone":sorted(loc.jurisdictional_cone),
+            "unresolved_dependencies":sorted(loc.unresolved_dependencies),
+            "epoch":loc.epoch,
         },
         "lifecycle":ev.lifecycle.value,
+        "repair_attempted":False,
     }
+    if ev.witness is not None:
+        w.update({
+            "historical_orientation_preserved":ev.witness.historical_orientation_preserved,
+            "epistemic_standing_changed":ev.witness.epistemic_standing_changed,
+            "auto_reorientation":ev.witness.auto_reorientation,
+            "authority_effect":ev.witness.authority_effect,
+            "execution_effect":ev.witness.execution_effect,
+        })
+    return w
 
 def expect(name, result, axes):
-    got=(result.input_binding,result.digest_binding,result.localization_reconstruction,result.disposition_reconstruction)
+    got=(result.input_binding,result.digest_binding,result.localization_reconstruction,result.disposition_reconstruction,result.repair_attempted)
     assert got==axes,(name,result.to_dict())
-    assert result.repair_attempted is False
     print("PASS",name,result.to_dict())
 
 if __name__=="__main__":
     w=witness_for(BASE_DELTA)
-    expect("VALID_CONTROL", replay_validate(BASE_DELTA,PRIOR,w,POLICY), (ReplayAxis.PASS,)*4)
+    expect("VALID_CONTROL", replay_validate(BASE_DELTA,PRIOR,w,POLICY), (ReplayAxis.PASS,)*5)
 
     x=deepcopy(w); x["lifecycle"]="CURRENT"
-    expect("CORRECT_DIGEST_WRONG_DISPOSITION", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL))
+    expect("CORRECT_DIGEST_WRONG_DISPOSITION", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS))
 
     x=deepcopy(w); x["localization"]["causal_cone"]=["wrong:cone"]
-    expect("CORRECT_DISPOSITION_ALTERED_CONE", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS))
+    expect("CORRECT_DISPOSITION_ALTERED_CONE", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS))
 
     x=deepcopy(w); x["evidence_digest"]=hashlib.sha256(json.dumps(BASE_DELTA,indent=2).encode()).hexdigest()
-    expect("NONCANONICAL_BYTES_REJECTED", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS))
+    expect("NONCANONICAL_BYTES_REJECTED", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
 
     x=deepcopy(w); x["prior_orientation_digest"]="STALE_ORIENTATION"
-    expect("STALE_PRIOR_WITNESS_BINDING", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
+    expect("STALE_PRIOR_WITNESS_BINDING", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
 
     unresolved=deepcopy(BASE_DELTA); unresolved["delta_id"]="UNRES"; unresolved["current_graph_hash"]="GRAPH_B"; unresolved["evidence_complete"]=False
     uw=witness_for(unresolved); assert uw["lifecycle"]=="SUSPENDED"; uw["lifecycle"]="WITHDRAWN"
-    expect("UNRESOLVED_COERCED_TO_WITHDRAWN", replay_validate(unresolved,PRIOR,uw,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL))
+    expect("UNRESOLVED_COERCED_TO_WITHDRAWN", replay_validate(unresolved,PRIOR,uw,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS))
 
     x=deepcopy(w); x.pop("prior_orientation_id")
-    expect("MISSING_INPUT_BINDING_UNRESOLVED", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.UNRESOLVED,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
+    expect("MISSING_INPUT_BINDING_UNRESOLVED", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.UNRESOLVED,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
+
+    x=deepcopy(w); x["repair_attempted"]=True
+    expect("REPAIR_ATTEMPT_BLOCKS_QUALIFICATION", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL))
+
+    x=deepcopy(w); x["canonical_encoding_id"]="ORIENTATION_DELTA_CANONICAL_ENCODING_v9"
+    expect("ENCODING_VERSION_DRIFT_REJECTED", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
+
+    x=deepcopy(w); x["localization"]["unresolved_dependencies"]=["fabricated:dep"]
+    expect("UNRESOLVED_DEPENDENCY_DRIFT_REJECTED", replay_validate(BASE_DELTA,PRIOR,x,POLICY), (ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS))
+
+    wrong_prior=PriorOrientation("ORIENT_001","OTHER_OBJECT","ORIENT_HASH_001",True,"SUPPORTED")
+    expect("PRIOR_OBJECT_BINDING_REJECTED", replay_validate(BASE_DELTA,wrong_prior,w,POLICY), (ReplayAxis.FAIL,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS,ReplayAxis.PASS))
