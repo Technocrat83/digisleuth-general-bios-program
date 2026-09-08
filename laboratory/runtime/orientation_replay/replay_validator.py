@@ -2,6 +2,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 from enum import Enum
 from typing import Mapping, Any
+import pathlib, sys
+
+LIFECYCLE_DIR = pathlib.Path(__file__).resolve().parents[1] / "orientation_lifecycle"
+if str(LIFECYCLE_DIR) not in sys.path:
+    sys.path.insert(0, str(LIFECYCLE_DIR))
 
 from canonical_encoding import evidence_digest, ENCODING_ID
 from localization_hook import FieldDelta, LocalizationPolicy, localize
