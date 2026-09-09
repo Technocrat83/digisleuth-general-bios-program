@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digisleuth.org/schemas/TO_MARKET_EVENT_v0.1.schema.json",
+  "title": "TO_MARKET_EVENT_v0.1",
+  "type": "object",
+  "required": [
+    "event_id",
+    "originating_residue_id",
+    "prior_maturity_state",
+    "current_maturity_state",
+    "transition_type",
+    "exact_scientific_standing",
+    "provenance_pointer",
+    "epoch_timestamp"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^TME-[A-Z0-9_-]+$"
+    },
+    "originating_residue_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "prior_maturity_state": {
+      "type": "string"
+    },
+    "current_maturity_state": {
+      "type": "string"
+    },
+    "transition_type": {
+      "type": "string",
+      "enum": [
+        "SPECIFICATION_FROZEN",
+        "ARCHITECTURE_ADMITTED",
+        "STATIC_CONFORMANCE_QUALIFIED",
+        "EXPERIMENT_EXECUTED",
+        "EVIDENCE_ADMITTED",
+        "CAPABILITY_DEMONSTRATED",
+        "RUNTIME_QUALIFIED",
+        "BIOS_CHARACTERIZED",
+        "DEPLOYMENT_CAPABLE",
+        "REPEATED_WORKFLOW_PROVEN",
+        "CLIENT_OUTCOME_OBSERVED",
+        "MATERIAL_TELEMETRY_ACCUMULATED"
+      ]
+    },
+    "exact_scientific_standing": {
+      "type": "string",
+      "enum": [
+        "FORMULATION_READY",
+        "UNPROVEN_SPECIFICATION",
+        "FIXTURE_CONFORMANCE_ONLY",
+        "ISOLATED_EMPIRICAL_PASS",
+        "CANONICAL_BENCHMARK_PROVEN",
+        "PRODUCTION_QUALIFIED"
+      ]
+    },
+    "provenance_pointer": {
+      "type": "object",
+      "required": ["git_commit_sha", "source_node"],
+      "additionalProperties": false,
+      "properties": {
+        "git_commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "source_node": {
+          "type": "string"
+        }
+      }
+    },
+    "epoch_timestamp": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}
