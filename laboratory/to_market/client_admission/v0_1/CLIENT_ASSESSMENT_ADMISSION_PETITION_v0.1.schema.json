@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digisleuth.org/schemas/CLIENT_ASSESSMENT_ADMISSION_PETITION_v0.1.schema.json",
+  "title": "CLIENT_ASSESSMENT_ADMISSION_PETITION_v0.1",
+  "type": "object",
+  "required": [
+    "petition_id",
+    "client_identifier",
+    "offer_lineage_ref",
+    "S_scope_envelope",
+    "B_boundary_specification",
+    "P_permission_binding",
+    "C_claim_ceiling",
+    "A_artifact_contract",
+    "petition_epoch"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "petition_id": {
+      "type": "string",
+      "pattern": "^CAAP-[A-Z0-9_-]+$"
+    },
+    "client_identifier": {
+      "type": "string",
+      "minLength": 3
+    },
+    "offer_lineage_ref": {
+      "type": "object",
+      "required": ["offer_id", "git_commit_sha"],
+      "additionalProperties": false,
+      "properties": {
+        "offer_id": {
+          "type": "string",
+          "enum": ["AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_v0.1"]
+        },
+        "git_commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      }
+    },
+    "S_scope_envelope": {
+      "type": "object",
+      "required": ["included_workflows", "explicit_exclusions", "environment_class"],
+      "additionalProperties": false,
+      "properties": {
+        "included_workflows": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "explicit_exclusions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "environment_class": {
+          "type": "string",
+          "enum": ["STAGING_MIRROR", "COLD_REPLAY_LOGS", "ACTIVE_OBSERVATIONAL_TAP"]
+        }
+      }
+    },
+    "B_boundary_specification": {
+      "type": "object",
+      "required": [
+        "interception_topology",
+        "write_socket_status",
+        "isolation_attestation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "interception_topology": {
+          "type": "string",
+          "enum": ["READ_ONLY_EVENT_STREAM", "OFFLINE_TELEMETRY_DUMP", "EPHEMERAL_SIDECAR_OBSERVER"]
+        },
+        "write_socket_status": {
+          "type": "string",
+          "enum": ["PHYSICALLY_DISABLED", "FIREWALL_BLOCKED", "CREDENTIAL_STRIPPED"]
+        },
+        "isolation_attestation": {
+          "type": "boolean",
+          "enum": [true]
+        }
+      }
+    },
+    "P_permission_binding": {
+      "type": "object",
+      "required": [
+        "authorizing_officer_role",
+        "diagnostic_lease_token",
+        "lease_expiry_utc",
+        "remediation_authorization",
+        "production_execution_authorization"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "authorizing_officer_role": {
+          "type": "string",
+          "minLength": 3
+        },
+        "diagnostic_lease_token": {
+          "type": "string",
+          "minLength": 16
+        },
+        "lease_expiry_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "remediation_authorization": {
+          "type": "string",
+          "enum": ["ZERO_REMEDIATION_PERMITTED"]
+        },
+        "production_execution_authorization": {
+          "type": "string",
+          "enum": ["ZERO_EXECUTION_PERMITTED"]
+        }
+      }
+    },
+    "C_claim_ceiling": {
+      "type": "object",
+      "required": [
+        "inherited_scientific_standing",
+        "acknowledged_prohibited_claims",
+        "client_acknowledged_non_warranty"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "inherited_scientific_standing": {
+          "type": "string",
+          "enum": ["FIXTURE_CONFORMANCE_ONLY"]
+        },
+        "acknowledged_prohibited_claims": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 4
+        },
+        "client_acknowledged_non_warranty": {
+          "type": "boolean",
+          "enum": [true]
+        }
+      }
+    },
+    "A_artifact_contract": {
+      "type": "object",
+      "required": [
+        "output_schema_id",
+        "uncertainty_reporting_mandate",
+        "advisory_disclaimer_bound"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "output_schema_id": {
+          "type": "string",
+          "enum": ["ASSESSMENT_RESULT_SCHEMA_v0.1"]
+        },
+        "uncertainty_reporting_mandate": {
+          "type": "boolean",
+          "enum": [true]
+        },
+        "advisory_disclaimer_bound": {
+          "type": "boolean",
+          "enum": [true]
+        }
+      }
+    },
+    "petition_epoch": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}
