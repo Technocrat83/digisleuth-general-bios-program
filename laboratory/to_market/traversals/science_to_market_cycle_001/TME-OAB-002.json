@@ -1,0 +1,13 @@
+{
+  "event_id": "TME-OAB-002",
+  "originating_residue_id": "OAB_ORIENTATION_GOVERNANCE_LINEAGE",
+  "prior_maturity_state": "SPECIFICATION_FROZEN",
+  "current_maturity_state": "STATIC_CONFORMANCE_QUALIFIED",
+  "transition_type": "STATIC_CONFORMANCE_QUALIFIED",
+  "exact_scientific_standing": "FIXTURE_CONFORMANCE_ONLY",
+  "provenance_pointer": {
+    "git_commit_sha": "3b758ed3119b3be09fb2d7a04909368da093ef21",
+    "source_node": "DIGISLEUTH_LAB_SCIENCE"
+  },
+  "epoch_timestamp": 1788919201
+}
