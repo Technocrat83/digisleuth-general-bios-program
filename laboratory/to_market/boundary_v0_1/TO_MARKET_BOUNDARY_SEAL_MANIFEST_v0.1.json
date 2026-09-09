@@ -1,0 +1,33 @@
+{
+  "seal_id": "TO_MARKET_BOUNDARY_SEAL_MANIFEST_v0.1",
+  "target": "DIGISLEUTH_TO_MARKET_BOUNDARY_v0.1",
+  "branch": "general-bios-laboratory-v1",
+  "ancestor_at_seal_start": "2f83627fa76c625fb22902f75f8dca7a53781565",
+  "qualification_receipt": "TO_MARKET_BOUNDARY_EXECUTABLE_CONFORMANCE_RECEIPT_v0.1.md",
+  "reported_battery": {
+    "tm01_tm12": "PASS_WITHIN_SCOPE",
+    "tm13_lexical_equivalent_tripwire": "PASS",
+    "tm14_emitter_schema_agreement": "PASS"
+  },
+  "standing": {
+    "boundary_semantics": "SPECIFIED",
+    "executable_enforcement": "DEMONSTRATED_BY_REPORTED_CHAMBER",
+    "commercial_translation_authority": "BOUNDED",
+    "scientific_standing_mutation_authority": 0,
+    "canon_delta": 0,
+    "pp": "BLOCKED",
+    "universal_semantic_claim_entitlement": "NOT_ESTABLISHED"
+  },
+  "implementation_seal": {
+    "exact_source_bytes_present_in_git": false,
+    "exact_source_bytes_supplied_for_seal": false,
+    "status": "INCOMPLETE",
+    "blocker": "EXECUTABLE_IMPLEMENTATION_BYTES_NOT_PRESENT"
+  },
+  "persistence": {
+    "qualification_receipt_sealed": true,
+    "airtable_write": false,
+    "airtable_mapping": "BLOCKED_PENDING_EXECUTABLE_IMPLEMENTATION_SEAL"
+  },
+  "next_lawful_operation": "PRESENT_EXACT_EXECUTABLE_SOURCE_BYTES_FOR_HASHED_GIT_SEAL"
+}
