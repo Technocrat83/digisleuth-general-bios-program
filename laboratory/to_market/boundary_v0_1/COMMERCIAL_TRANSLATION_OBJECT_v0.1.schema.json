@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digisleuth.org/schemas/COMMERCIAL_TRANSLATION_OBJECT_v0.1.schema.json",
+  "title": "COMMERCIAL_TRANSLATION_OBJECT_v0.1",
+  "type": "object",
+  "required": [
+    "translation_id",
+    "originating_event_id",
+    "originating_residue_id",
+    "preserved_scientific_standing",
+    "interrogation",
+    "commercial_disposition",
+    "prohibited_claims",
+    "translation_epoch"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "translation_id": {
+      "type": "string",
+      "pattern": "^CTO-[A-Z0-9_-]+$"
+    },
+    "originating_event_id": {
+      "type": "string",
+      "pattern": "^TME-[A-Z0-9_-]+$"
+    },
+    "originating_residue_id": {
+      "type": "string"
+    },
+    "preserved_scientific_standing": {
+      "type": "string"
+    },
+    "interrogation": {
+      "type": "object",
+      "required": [
+        "Q01_demonstrated_capability",
+        "Q02_buyer_problem",
+        "Q03_supported_market_claim",
+        "Q04_economic_buyer",
+        "Q05_smallest_purchasable_embodiment",
+        "Q06_economic_value_measurement",
+        "Q07_commercial_expression_class",
+        "Q08_prohibited_unsupported_claims",
+        "Q09_value_multiplying_delta",
+        "Q10_next_revenue_facing_maneuver"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Q01_demonstrated_capability": { "type": "string", "minLength": 10 },
+        "Q02_buyer_problem": { "type": "string", "minLength": 10 },
+        "Q03_supported_market_claim": { "type": "string", "minLength": 10 },
+        "Q04_economic_buyer": { "type": "string", "minLength": 5 },
+        "Q05_smallest_purchasable_embodiment": { "type": "string", "minLength": 5 },
+        "Q06_economic_value_measurement": { "type": "string", "minLength": 10 },
+        "Q07_commercial_expression_class": { "type": "string", "minLength": 5 },
+        "Q08_prohibited_unsupported_claims": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "Q09_value_multiplying_delta": { "type": "string", "minLength": 5 },
+        "Q10_next_revenue_facing_maneuver": {
+          "type": "string",
+          "enum": [
+            "CREATE_DEMONSTRATION",
+            "CREATE_ASSESSMENT",
+            "CREATE_OFFER",
+            "CREATE_PROOF_OF_WORK",
+            "CREATE_CASE_STUDY",
+            "RUN_BUYER_DISCOVERY",
+            "PACKAGE_CAPABILITY",
+            "BUNDLE_CAPABILITIES",
+            "PRIORITIZE_DEPLOYMENT",
+            "ACCUMULATE_FURTHER_EVIDENCE",
+            "NO_CURRENT_REVENUE_FACING_MANEUVER"
+          ]
+        }
+      }
+    },
+    "commercial_disposition": {
+      "type": "string",
+      "enum": [
+        "COMMERCIALIZE_NOW",
+        "PACKAGE_AS_ASSESSMENT",
+        "PACKAGE_AS_DEPLOYMENT_CAPABILITY",
+        "PACKAGE_AS_RUNTIME_FEATURE",
+        "PACKAGE_AS_MANAGED_RUNTIME",
+        "PACKAGE_AS_SPECIALIZED_BIOS",
+        "PACKAGE_AS_IP_OR_AUTHORITY_CONTENT",
+        "PACKAGE_AS_PROOF_OF_WORK",
+        "ACCUMULATE_UNTIL_COMPOSITE_OFFER",
+        "NO_CURRENT_MARKET_OBJECT"
+      ]
+    },
+    "prohibited_claims": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "translation_epoch": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}
