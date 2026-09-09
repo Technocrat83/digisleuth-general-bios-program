@@ -1,0 +1,31 @@
+{
+  "translation_id": "CTO-OAB-002",
+  "originating_event_id": "TME-OAB-002",
+  "originating_residue_id": "OAB_ORIENTATION_GOVERNANCE_LINEAGE",
+  "preserved_scientific_standing": "FIXTURE_CONFORMANCE_ONLY",
+  "interrogation": {
+    "Q01_demonstrated_capability": "Typed governance boundaries can detect and reject tested stale, malformed, changed, or improperly bound orientation conditions before those specimens cross the qualified ingress boundary.",
+    "Q02_buyer_problem": "Organizations deploying autonomous AI may allow agents to continue acting after permissions, context, workflow topology, jurisdiction, or organizational state changes.",
+    "Q03_supported_market_claim": "Digisleuth can assess where autonomous AI workflows may continue operating from stale, changed, or no-longer-valid organizational context and identify governance controls needed to bound that behavior.",
+    "Q04_economic_buyer": "VP of AI Engineering / Head of Autonomous Systems / Enterprise AI Architect",
+    "Q05_smallest_purchasable_embodiment": "AGENT_RUNTIME_GOVERNANCE_ASSESSMENT",
+    "Q06_economic_value_measurement": "Reduction in unauthorized execution attempts under stale context; reduction in diagnostic latency for context-drift failure modes.",
+    "Q07_commercial_expression_class": "ADVISORY_DIAGNOSTIC_ASSESSMENT",
+    "Q08_prohibited_unsupported_claims": [
+      "PRODUCTION_CERTIFIED_AGENT_GOVERNANCE_RUNTIME",
+      "PROVEN_SAFE_AUTONOMOUS_DEPLOYMENT",
+      "ENTERPRISE_RUNTIME_CERTIFICATION",
+      "UNIVERSAL_AGENT_SAFETY"
+    ],
+    "Q09_value_multiplying_delta": "Runtime orientation telemetry hook integration and live policy boundary design.",
+    "Q10_next_revenue_facing_maneuver": "CREATE_ASSESSMENT"
+  },
+  "commercial_disposition": "PACKAGE_AS_ASSESSMENT",
+  "prohibited_claims": [
+    "PRODUCTION_CERTIFIED_AGENT_GOVERNANCE_RUNTIME",
+    "PROVEN_SAFE_AUTONOMOUS_DEPLOYMENT",
+    "ENTERPRISE_RUNTIME_CERTIFICATION",
+    "UNIVERSAL_AGENT_SAFETY"
+  ],
+  "translation_epoch": 1788919202
+}
