@@ -1,0 +1,48 @@
+{
+  "petition_id": "CAAP-ALPHA-001",
+  "client_identifier": "CLIENT_SPECIMEN_FINTECH_OPS",
+  "offer_lineage_ref": {
+    "offer_id": "AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_v0.1",
+    "git_commit_sha": "35d569fcd23ad5ecf826f83d2adcf9f946bb729e"
+  },
+  "S_scope_envelope": {
+    "included_workflows": [
+      "autonomous_wire_exception_triage_agent_v2",
+      "customer_tier_elevation_dispatch_pipeline"
+    ],
+    "explicit_exclusions": [
+      "core_ledger_mutation_database",
+      "live_swift_payment_network_bridge",
+      "customer_pii_vault_unmasked"
+    ],
+    "environment_class": "STAGING_MIRROR"
+  },
+  "B_boundary_specification": {
+    "interception_topology": "OFFLINE_TELEMETRY_DUMP",
+    "write_socket_status": "CREDENTIAL_STRIPPED",
+    "isolation_attestation": true
+  },
+  "P_permission_binding": {
+    "authorizing_officer_role": "VP_OF_FINANCIAL_ENGINEERING",
+    "diagnostic_lease_token": "DIAG-LEASE-FINTECH-90210-REV1",
+    "lease_expiry_utc": "2026-10-01T00:00:00Z",
+    "remediation_authorization": "ZERO_REMEDIATION_PERMITTED",
+    "production_execution_authorization": "ZERO_EXECUTION_PERMITTED"
+  },
+  "C_claim_ceiling": {
+    "inherited_scientific_standing": "FIXTURE_CONFORMANCE_ONLY",
+    "acknowledged_prohibited_claims": [
+      "PRODUCTION_CERTIFIED_AGENT_GOVERNANCE_RUNTIME",
+      "PROVEN_SAFE_AUTONOMOUS_DEPLOYMENT",
+      "ENTERPRISE_RUNTIME_CERTIFICATION",
+      "UNIVERSAL_AGENT_SAFETY"
+    ],
+    "client_acknowledged_non_warranty": true
+  },
+  "A_artifact_contract": {
+    "output_schema_id": "ASSESSMENT_RESULT_SCHEMA_v0.1",
+    "uncertainty_reporting_mandate": true,
+    "advisory_disclaimer_bound": true
+  },
+  "petition_epoch": 1788950000
+}
