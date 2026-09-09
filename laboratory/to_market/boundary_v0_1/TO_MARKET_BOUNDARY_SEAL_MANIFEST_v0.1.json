@@ -19,15 +19,22 @@
     "universal_semantic_claim_entitlement": "NOT_ESTABLISHED"
   },
   "implementation_seal": {
-    "exact_source_bytes_present_in_git": false,
-    "exact_source_bytes_supplied_for_seal": false,
-    "status": "INCOMPLETE",
-    "blocker": "EXECUTABLE_IMPLEMENTATION_BYTES_NOT_PRESENT"
+    "exact_source_bytes_present_in_git": true,
+    "exact_source_bytes_supplied_for_seal": true,
+    "source_commit_head_before_seal_manifest": "723b91baa6681b41956dd7cde529a3ffe59055ba",
+    "source_sha256": {
+      "TO_MARKET_EVENT_v0.1.schema.json": "b4f799922597e9f692c5d0afa0ebd1984416f030711c75781cc4159f7e5a6538",
+      "COMMERCIAL_TRANSLATION_OBJECT_v0.1.schema.json": "f1fccc9de93c7799fbfef0543e664c9455347273fd0a70d6b514d79a7367cd0b",
+      "maturity_transition_emitter.py": "9f36f7c2ba581988d7d04d25df9d2f52463e815867b55651dc79ddb3bc6d1410",
+      "commercial_translation_validator.py": "a36cb21771cd0fb62a03682c1956b2e38c6c9ead031acb14c60f4ee968f15665"
+    },
+    "status": "COMPLETE",
+    "blocker": "NONE"
   },
   "persistence": {
     "qualification_receipt_sealed": true,
     "airtable_write": false,
-    "airtable_mapping": "BLOCKED_PENDING_EXECUTABLE_IMPLEMENTATION_SEAL"
+    "airtable_mapping": "UNBLOCKED_PENDING_SCHEMA_SERIALIZATION_MAPPING"
   },
-  "next_lawful_operation": "PRESENT_EXACT_EXECUTABLE_SOURCE_BYTES_FOR_HASHED_GIT_SEAL"
+  "next_lawful_operation": "DRAFT_AIRTABLE_SCHEMA_SERIALIZATION_MAPPING"
 }
