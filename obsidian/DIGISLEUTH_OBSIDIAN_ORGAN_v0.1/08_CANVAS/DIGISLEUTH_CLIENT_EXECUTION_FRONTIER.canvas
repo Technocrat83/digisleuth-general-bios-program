@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"cto","type":"file","file":"01_TO_MARKET/COMMERCIAL_TRANSLATION_OBJECT_MODEL.md","x":0,"y":0,"width":420,"height":220},
+		{"id":"offer","type":"file","file":"02_OFFER_TOPOLOGY/AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_v0.1.md","x":500,"y":0,"width":460,"height":240},
+		{"id":"admit","type":"file","file":"02_OFFER_TOPOLOGY/ASSESSMENT_ADMISSION_GATE.md","x":1040,"y":0,"width":420,"height":240},
+		{"id":"caap","type":"file","file":"03_CLIENT_EXECUTION_BOUNDARY/CAAP_ALPHA_001.md","x":1540,"y":0,"width":420,"height":240},
+		{"id":"auth","type":"file","file":"03_CLIENT_EXECUTION_BOUNDARY/CLIENT_FACT_AUTHENTICATION_BUNDLE_v0.1.md","x":2040,"y":0,"width":470,"height":250},
+		{"id":"deap","type":"file","file":"03_CLIENT_EXECUTION_BOUNDARY/DIAGNOSTIC_EXECUTION_AUTHORIZATION_PETITION_v0.1.md","x":2590,"y":0,"width":480,"height":260},
+		{"id":"orient","type":"file","file":"05_STATE_AND_EVIDENCE/ORIENTATION_STATE_MODEL.md","x":3150,"y":0,"width":430,"height":230},
+		{"id":"frontier","type":"file","file":"03_CLIENT_EXECUTION_BOUNDARY/CLIENT_EXECUTION_FRONTIER.md","x":3660,"y":0,"width":460,"height":260},
+		{"id":"wait","type":"file","file":"07_FRONTIERS/WAITING_FOR_REAL_CLIENT_FACT_INGRESS.md","x":3660,"y":360,"width":460,"height":250},
+		{"id":"jex","type":"text","text":"J_EX = 0\\n\\nDIAGNOSTIC_EXECUTION = BLOCKED\\n\\nNo real client fact bundle or current real-client orientation exists.","x":4210,"y":0,"width":420,"height":220}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"cto","fromSide":"right","toNode":"offer","toSide":"left","label":"DERIVES_FROM"},
+		{"id":"e2","fromNode":"offer","fromSide":"right","toNode":"admit","toSide":"left","label":"PETITIONS"},
+		{"id":"e3","fromNode":"admit","fromSide":"right","toNode":"caap","toSide":"left","label":"ADMITS_SPECIMEN_SHAPE"},
+		{"id":"e4","fromNode":"caap","fromSide":"right","toNode":"auth","toSide":"left","label":"REQUIRES_AUTHENTICATION"},
+		{"id":"e5","fromNode":"auth","fromSide":"right","toNode":"deap","toSide":"left","label":"BINDS_AUTHENTICATED_REALITY"},
+		{"id":"e6","fromNode":"deap","fromSide":"right","toNode":"orient","toSide":"left","label":"REQUIRES_CURRENT_ORIENTATION"},
+		{"id":"e7","fromNode":"orient","fromSide":"right","toNode":"frontier","toSide":"left","label":"ORIENTS"},
+		{"id":"e8","fromNode":"frontier","fromSide":"right","toNode":"jex","toSide":"left","label":"BLOCKS"},
+		{"id":"e9","fromNode":"frontier","fromSide":"bottom","toNode":"wait","toSide":"top","label":"CURRENT_FRONTIER"}
+	]
+}

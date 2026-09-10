@@ -1,0 +1,32 @@
+---
+object_id: CLIENT_EXECUTION_FRONTIER
+title: "Client Execution Frontier"
+object_type: FRONTIER_STATE
+standing: QUIESCENT
+authority: ZERO
+obsidian_role:
+  - ORIENTATION
+  - MORPHOLOGICAL_PROJECTION
+  - TRAVERSAL_CARTOGRAPHY
+constitutional_authority: ZERO
+admission_authority: ZERO
+execution_authority: ZERO
+topology_mutation_authority: ZERO
+---
+
+# Client Execution Frontier
+
+- REAL_CLIENT_FACT_BUNDLE: ABSENT
+- REAL_CLIENT_FACT_AUTHENTICATION: NOT_ESTABLISHED
+- REAL_CLIENT_ADMISSION: NOT_ESTABLISHED
+- CURRENT_REAL_CLIENT_ORIENTATION: NOT_ESTABLISHED
+- J_EX: 0
+- DIAGNOSTIC_EXECUTION: BLOCKED
+- REMEDIATION_AUTHORITY: 0
+- CERTIFICATION_AUTHORITY: 0
+- PRODUCTION_EXECUTION_AUTHORITY: 0
+- PP: BLOCKED
+
+`WAITING_FOR_REAL_CLIENT_FACT_INGRESS`
+
+No lawful synthetic continuation exists from this frontier.
