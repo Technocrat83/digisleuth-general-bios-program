@@ -1,0 +1,44 @@
+{
+  "seal_id": "FMCAL_STAGE_2_PROFILE_SEAL_v0.1",
+  "battery_id": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1",
+  "hash_algorithm": "SHA-256",
+  "lineage_parent_commit": "418d3335cf382c59c218d5c0521a93846c2e6feb",
+  "canonical_profile": {
+    "path": "stage_2/actuator_profiles_v0.1.json",
+    "canonicalization": "RFC_8785_JCS",
+    "sha256": "8fbaf8837bdec31d62da029273586946d92e3b0b0ab54eeea35e382c1036778f"
+  },
+  "supporting_artifacts": {
+    "contracts/stage_2/FMCAL_STAGE_2_COMPILATION_CONTRACT_v0.1.json": "077e87ef42fcdade6fbde713057793d1b0cfb964ee37c7acbb6c76a983ca0c70",
+    "schemas/stage_2/actuator_profiles.schema.json": "0a2954b596b2c74dbf72ad77f8d69e00d4c7d6cc9666aa978e367d8aad05346e",
+    "schemas/stage_2/haptic_waveform_fixture.schema.json": "28a554b5394ac281ad509e7b4320de0b87cd82adb7ebe0efc0cb2a06da154b05"
+  },
+  "pre_seal_requirements": {
+    "typed_rate_fields": "SATISFIED",
+    "erm_100_hz_bound_as_command_envelope_rate": "SATISFIED",
+    "erm_driver_modulation_unbound": "SATISFIED",
+    "drive_voltage_refusal_renamed": "SATISFIED",
+    "absolute_bipolar_voltage_test": "SATISFIED",
+    "literal_maximum_spectral_component_removed": "SATISFIED",
+    "effective_occupied_bandwidth_defined": "SATISFIED",
+    "command_and_mechanical_interval_domains_separated": "SATISFIED",
+    "generic_unsupported_pattern_refusal": "SATISFIED",
+    "noncanonical_numeric_plus_signs_removed": "SATISFIED"
+  },
+  "execution_ledger": {
+    "profile_class_compilation": true,
+    "concrete_waveform_fixtures": 0,
+    "waveform_instance_expected_vectors": 0,
+    "physical_observations": 0,
+    "fixture_execution": false,
+    "device_execution": false
+  },
+  "standing": {
+    "engineering": "SYNTHETIC_PROFILE_COMPILATION",
+    "physical": "UNEVALUATED",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "promotion_pp": "HARD_BLOCKED"
+  }
+}

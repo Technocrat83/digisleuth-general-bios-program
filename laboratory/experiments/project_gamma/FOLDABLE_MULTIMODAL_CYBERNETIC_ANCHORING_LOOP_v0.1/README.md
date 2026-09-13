@@ -46,3 +46,13 @@ Command -> Driver -> Actuator -> Chassis -> Contact Boundary
 ```
 
 Human perception and semantic comprehension remain outside this battery. A haptic GLYPH can earn device-level admissibility only if its identity survives the complete measured transfer chain through authenticated contact-surface output.
+
+Stage 2 compiles three synthetic actuator-class profiles under typed rate domains and RFC 8785 JCS canonicalization. It separates structural vocabulary permission from concrete waveform-instance admissibility:
+
+```text
+Actuator profile authorizes a pattern class.
+Concrete waveform fixture binds electrical, temporal, and effective spectral parameters.
+Physical measurement evaluates the fully bound instance.
+```
+
+No concrete waveform fixture or physical observation exists at Stage 2. `STRUCTURALLY_REFUSED` means the profile contract excludes the pattern class; it is not a claim of physical impossibility.

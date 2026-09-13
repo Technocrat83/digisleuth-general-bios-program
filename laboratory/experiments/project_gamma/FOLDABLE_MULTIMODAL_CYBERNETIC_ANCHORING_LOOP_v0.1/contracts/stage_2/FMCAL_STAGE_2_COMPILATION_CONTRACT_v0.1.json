@@ -1,0 +1,34 @@
+{
+  "contract_id": "FMCAL_STAGE_2_COMPILATION_CONTRACT_v0.1",
+  "battery_id": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1",
+  "stage": 2,
+  "authorization": "GRANTED_AFTER_CORRECTIONS",
+  "output": "actuator_profiles_v0.1.json",
+  "canonicalization": "RFC_8785_JCS",
+  "requirements": {
+    "rate_fields_typed": true,
+    "erm_100_hz_domain": "COMMAND_ENVELOPE",
+    "driver_modulation_unbound": true,
+    "voltage_refusal": "DRIVE_VOLTAGE_LIMIT_EXCEEDED",
+    "bipolar_voltage_operator": "ABS_GREATER_THAN",
+    "literal_maximum_spectral_component": "PROHIBITED",
+    "effective_occupied_bandwidth": "REQUIRED",
+    "command_and_mechanical_intervals": "SEPARATELY_TYPED",
+    "generic_unsupported_pattern_refusal": "REQUIRED",
+    "noncanonical_numeric_plus_signs": "PROHIBITED"
+  },
+  "expected_vectors": {
+    "abstract_vocabulary": "PRECOMMITTED",
+    "waveform_instance": "BLOCKED_PENDING_CONCRETE_FIXTURES",
+    "physical_observation": null
+  },
+  "standing": {
+    "stage_1": "SEALED",
+    "stage_2": "COMPILED_SYNTHETIC",
+    "physical_conformance": "UNEVALUATED",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "promotion_pp": "HARD_BLOCKED"
+  }
+}

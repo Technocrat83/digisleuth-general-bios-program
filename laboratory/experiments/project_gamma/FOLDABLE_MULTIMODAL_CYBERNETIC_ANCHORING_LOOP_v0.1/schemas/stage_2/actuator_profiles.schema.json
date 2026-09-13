@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:actuator-profiles:v0.1",
+  "title": "FMCAL Synthetic Actuator Profiles",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "battery_id", "data_class", "rate_type_contract", "vocabulary_states", "profiles", "physical_observation"],
+  "properties": {
+    "artifact_id": {"const": "actuator_profiles_v0.1"},
+    "battery_id": {"const": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1"},
+    "data_class": {"const": "SYNTHETIC_PROFILE_PRECOMMITMENT"},
+    "rate_type_contract": {"type": "object", "minProperties": 5},
+    "vocabulary_states": {"type": "object", "minProperties": 3},
+    "profiles": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/profile"}},
+    "physical_observation": {"type": "null"}
+  },
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["BOUND_SYNTHETIC", "UNBOUND", "NOT_APPLICABLE"]},
+        "value_hz": {"type": "number", "exclusiveMinimum": 0},
+        "minimum_hz": {"type": "number", "minimum": 0},
+        "maximum_hz": {"type": "number", "exclusiveMinimum": 0},
+        "rationale": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "vocabulary_policy": {
+      "type": "object",
+      "additionalProperties": {"enum": ["STRUCTURALLY_ADMISSIBLE", "STRUCTURALLY_REFUSED", "PARAMETER_DEPENDENT"]}
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile_id", "actuator_class", "source_class", "rates", "mechanical_operating_domain", "spectral_policy", "voltage_policy", "interval_policy", "vocabulary_policy", "refusal_rules", "physical_observation"],
+      "properties": {
+        "profile_id": {"type": "string", "minLength": 1},
+        "actuator_class": {"enum": ["ERM", "LRA", "PIEZO_OR_VOICE_COIL"]},
+        "source_class": {"const": "SYNTHETIC"},
+        "rates": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["command_envelope_update_rate_hz", "synthesized_carrier_sample_rate_hz", "driver_modulation_rate_hz", "mechanical_fundamental_frequency_hz", "measurement_sample_rate_hz"],
+          "properties": {
+            "command_envelope_update_rate_hz": {"$ref": "#/$defs/binding"},
+            "synthesized_carrier_sample_rate_hz": {"$ref": "#/$defs/binding"},
+            "driver_modulation_rate_hz": {"$ref": "#/$defs/binding"},
+            "mechanical_fundamental_frequency_hz": {"$ref": "#/$defs/binding"},
+            "measurement_sample_rate_hz": {"$ref": "#/$defs/binding"}
+          }
+        },
+        "mechanical_operating_domain": {"$ref": "#/$defs/binding"},
+        "spectral_policy": {"type": "object"},
+        "voltage_policy": {"type": "object"},
+        "interval_policy": {"type": "object"},
+        "vocabulary_policy": {"$ref": "#/$defs/vocabulary_policy"},
+        "refusal_rules": {"type": "array", "items": {"type": "object"}},
+        "physical_observation": {"type": "null"}
+      }
+    }
+  },
+  "x-invariants": [
+    "manufacturer_inference_is_prohibited",
+    "STRUCTURALLY_REFUSED_does_not_mean_PHYSICALLY_IMPOSSIBLE",
+    "measurement_sample_rate_hz_is_not_mechanical_fundamental_frequency_hz"
+  ]
+}
