@@ -39,6 +39,8 @@ class ExecutableConformanceTests(unittest.TestCase):
             apparatus_id=controller.APPARATUS_ID,
             battery_id=controller.BATTERY_ID,
             authorization_id="ABSENT",
+            serializer_commitment="",
+            order_commitment="",
             authorized=False,
         )
         with self.assertRaises(ExecutionBlocked):

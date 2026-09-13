@@ -23,6 +23,8 @@ class ExecutionAuthorization:
     apparatus_id: str
     battery_id: str
     authorization_id: str
+    serializer_commitment: str = ""
+    order_commitment: str = ""
     authorized: bool = False
 
 
@@ -50,6 +52,8 @@ class CrossFixtureSessionController:
             raise ExecutionBlocked("fixture execution is not authorized")
         if (authorization.apparatus_id, authorization.battery_id) != (self.APPARATUS_ID, self.BATTERY_ID):
             raise ExecutionBlocked("authorization scope mismatch")
+        if authorization.serializer_commitment != rules_hash():
+            raise ExecutionBlocked("serializer was not precommitted")
         expected_ids = {f"CC_F{i:02d}" for i in range(1, 13)}
         if set(fixture_ids) != expected_ids or len(fixture_ids) != 12:
             raise ValueError("the frozen battery requires exactly CC_F01 through CC_F12")
@@ -57,6 +61,8 @@ class CrossFixtureSessionController:
         randomized = list(fixture_ids)
         random.Random(seed).shuffle(randomized)
         commitment = self.order_commitment(randomized, seed)
+        if authorization.order_commitment != commitment:
+            raise ExecutionBlocked("fixture order was not precommitted")
         chamber_rows = []
         verdicts: list[ChamberVerdict] = []
 
