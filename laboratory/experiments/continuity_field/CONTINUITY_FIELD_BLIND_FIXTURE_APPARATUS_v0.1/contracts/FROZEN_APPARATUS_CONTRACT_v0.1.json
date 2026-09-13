@@ -1,0 +1,68 @@
+{
+  "apparatus_id": "CONTINUITY_FIELD_BLIND_FIXTURE_APPARATUS_v0.1",
+  "battery": "CC_F01_THROUGH_CC_F12",
+  "status": {
+    "architecture": "FROZEN",
+    "code_materialization": "AUTHORIZED",
+    "fixture_execution": "NOT_AUTHORIZED",
+    "executable_conformance": "UNEVALUATED",
+    "pp": "HARD_BLOCKED"
+  },
+  "default_execution_mode": "FRESH_PROCESS_PER_FIXTURE",
+  "serializer": {
+    "id": "CFBFA_BLIND_SERIALIZER",
+    "version": "0.1.0",
+    "permitted_output_fields": [
+      "O_t",
+      "O_t_plus_1_candidate",
+      "rho_t",
+      "authenticated_witness_status",
+      "Q_t"
+    ],
+    "normalization": [
+      "field_order",
+      "container_wrapping",
+      "identifier_format",
+      "optional_field_representation",
+      "filename",
+      "serialization_comments",
+      "nonsemantic_object_ids"
+    ],
+    "preservation": [
+      "causal_missingness",
+      "tested_structural_relations"
+    ],
+    "prohibited": [
+      "fixture_specific_normalization",
+      "post_verdict_normalization",
+      "causal_information_removal",
+      "synthetic_completion_of_missing_data"
+    ]
+  },
+  "operator_prohibited_inputs": [
+    "fixture_id",
+    "chamber_id",
+    "attack_family",
+    "expected_verdict",
+    "fixture_order",
+    "remaining_fixture_count",
+    "prior_fixture_verdicts",
+    "aggregate_score",
+    "adaptive_adjudicator_feedback",
+    "randomization_seed"
+  ],
+  "reset_between_fixtures": [
+    "model_context",
+    "runtime_memory",
+    "caches",
+    "temporary_files",
+    "environment_mutations",
+    "random_state",
+    "accumulated_residue",
+    "telemetry_visible_to_operator"
+  ],
+  "persistent_state_exception": {
+    "supported_in_this_battery": false,
+    "separate_battery_required": true
+  }
+}

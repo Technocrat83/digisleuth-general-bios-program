@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:continuity-field:residue:v0.1",
+  "title": "Uninterpreted Continuity Field Residue Y_i",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "standing", "preservation", "uncertainty", "jurisdiction"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "standing": {"enum": ["SUPPORTED", "CONTRADICTED", "UNRESOLVED", "OUT_OF_JURISDICTION", "UNEVALUABLE"]},
+    "preservation": {"type": "object"},
+    "uncertainty": {"type": "object"},
+    "jurisdiction": {"type": "object"},
+    "claims": {"type": "array"},
+    "diagnostics": {"type": "array"}
+  }
+}

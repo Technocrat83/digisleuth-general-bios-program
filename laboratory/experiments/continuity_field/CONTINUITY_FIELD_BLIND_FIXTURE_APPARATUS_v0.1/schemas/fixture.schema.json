@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:continuity-field:hidden-fixture:v0.1",
+  "title": "Hidden Continuity Field Fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["fixture_id", "chamber_id", "operator_input", "witness_artifact", "predicate_bundle"],
+  "properties": {
+    "fixture_id": {"type": "string", "pattern": "^CC_F(0[1-9]|1[0-2])$"},
+    "chamber_id": {"type": "string", "minLength": 1},
+    "attack_family": {"type": ["string", "null"]},
+    "operator_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["O_t", "O_t_plus_1_candidate", "rho_t", "Q_t"],
+      "properties": {
+        "O_t": {},
+        "O_t_plus_1_candidate": {},
+        "rho_t": {},
+        "Q_t": {
+          "type": "object",
+          "required": ["causal_missingness", "tested_structural_relations"],
+          "properties": {
+            "causal_missingness": {},
+            "tested_structural_relations": {"type": "array"}
+          }
+        }
+      }
+    },
+    "witness_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["payload", "declared_sha256"],
+      "properties": {
+        "payload": {"type": "string"},
+        "declared_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "predicate_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bundle_id", "bundle_hash", "predicates"],
+      "properties": {
+        "bundle_id": {"type": "string"},
+        "bundle_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "predicates": {"type": "array", "minItems": 1}
+      }
+    }
+  }
+}

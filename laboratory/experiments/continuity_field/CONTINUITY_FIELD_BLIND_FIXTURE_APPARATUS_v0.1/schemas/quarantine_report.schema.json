@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:continuity-field:quarantine-report:v0.1",
+  "title": "Quarantined Battery Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["apparatus_id", "battery_id", "serializer_commitment", "order_commitment", "chambers", "aggregate"],
+  "properties": {
+    "apparatus_id": {"const": "CONTINUITY_FIELD_BLIND_FIXTURE_APPARATUS_v0.1"},
+    "battery_id": {"const": "CC_F01_THROUGH_CC_F12"},
+    "serializer_commitment": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "order_commitment": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "chambers": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fixture_id", "residue_sha256", "predicate_bundle_id", "predicate_results", "pass"],
+        "properties": {
+          "fixture_id": {"type": "string"},
+          "residue_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "predicate_bundle_id": {"type": "string"},
+          "predicate_results": {"type": "array", "items": {"type": "boolean"}},
+          "pass": {"type": "boolean"}
+        }
+      }
+    },
+    "aggregate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pass", "passed", "total", "standing_ceiling"],
+      "properties": {
+        "pass": {"type": "boolean"},
+        "passed": {"type": "integer"},
+        "total": {"const": 12},
+        "standing_ceiling": {"const": "BOUNDED_BLIND_HARNESS_CONFORMANCE_ONLY"}
+      }
+    }
+  }
+}
