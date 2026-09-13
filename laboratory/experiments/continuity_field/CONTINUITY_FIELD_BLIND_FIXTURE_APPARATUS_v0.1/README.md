@@ -41,6 +41,8 @@ It does not contain `CC_F01` through `CC_F12`, expected verdicts, an operational
 
 `SPECTRAL_GOALPOST_RECONSTRUCTIVE_HELM_PETITION_PROTOCOL_v0.1.md` defines how authenticated external control surfaces may petition—but never directly query—the sealed battery for read-only historical Helm-state reconstruction. Its machine-readable ingress contract is `schemas/reconstructive_helm_petition.schema.json`. The extension is materialized but unexecuted; its SMPTE goalpost battery and interface-plane semantic bindings remain absent.
 
+`INTERFACE_ENVELOPE_N2_CONSTRAINT_BINDING_v0.1.md` corrects the interface carrier to a product of bounded non-periodic coordinates and a toroidal quotient, then binds a synthetic two-entity metric specimen. `apparatus/interface_envelope_n2_verifier.py` and `tests/test_interface_envelope_n2.py` are isolated from the blind fixture battery.
+
 ## Current authority state
 
 ```yaml

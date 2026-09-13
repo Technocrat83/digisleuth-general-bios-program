@@ -1,0 +1,57 @@
+{
+  "bounded_basis": [
+    "s",
+    "q",
+    "g_1",
+    "g_2",
+    "kappa_1",
+    "kappa_2",
+    "L_v1",
+    "L_v2",
+    "p_mask",
+    "C_12"
+  ],
+  "carrier": "[0,1]^10 x T^8",
+  "cc_fixture_execution": false,
+  "cholesky_positive": true,
+  "experiment_id": "INTERFACE_ENVELOPE_N2_NUMERICAL_VERIFICATION_v0.1",
+  "feasible_witness": true,
+  "lattice_action_on_bounded_coordinates": "TRIVIAL",
+  "maneuver_cost": 0.00405,
+  "metric_dimension": 18,
+  "metric_sha256": "bc51fbaf9883c882e2aa5fb51ca1487653610aa2e979447908d1d41556bc6fa8",
+  "minimum_cholesky_pivot": 1.0,
+  "period_lengths": [
+    6.283185307179586,
+    6.283185307179586,
+    6.283185307179586,
+    6.283185307179586,
+    6.283185307179586,
+    6.283185307179586,
+    6.283185307179586,
+    6.283185307179586
+  ],
+  "periodic_basis": [
+    "theta_1",
+    "theta_2",
+    "phi_11",
+    "phi_12",
+    "phi_13",
+    "phi_21",
+    "phi_22",
+    "phi_23"
+  ],
+  "predicate_results": {
+    "P_BMIMS_L_v1": true,
+    "P_BMIMS_L_v2": true,
+    "P_BMIMS_conflict": true,
+    "P_BMIMS_mask": true,
+    "P_HCA_q_floor": true,
+    "P_HCA_s_floor": true,
+    "P_HCE_precedence": true,
+    "P_HCE_wrapped_difference": true,
+    "P_STML_clearance": true
+  },
+  "standing_ceiling": "BOUNDED_SYNTHETIC_NUMERICAL_CONFORMANCE_ONLY",
+  "wrapped_stml_distance": 5.441398092702653
+}
