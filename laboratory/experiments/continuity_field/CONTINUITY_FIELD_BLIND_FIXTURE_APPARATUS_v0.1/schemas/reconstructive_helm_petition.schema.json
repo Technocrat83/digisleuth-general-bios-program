@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:spectral-goalpost:reconstructive-helm-petition:v0.1",
+  "title": "Spectral Goalpost Reconstructive Helm Petition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "petition_id",
+    "petitioner",
+    "target",
+    "requested_planes",
+    "purpose",
+    "reconstruction_method",
+    "authority_ceiling",
+    "return_channel",
+    "petition_sha256",
+    "authentication_witness"
+  ],
+  "properties": {
+    "protocol_version": {"const": "0.1.0"},
+    "petition_id": {"type": "string", "minLength": 1},
+    "petitioner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["control_surface_id", "organism_id", "session_id"],
+      "properties": {
+        "control_surface_id": {"type": "string", "minLength": 1},
+        "organism_id": {"type": "string", "minLength": 1},
+        "session_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["epoch_id", "recording_id", "timecode_in", "timecode_out", "rate", "mode", "first_goalpost_sha256", "terminal_goalpost_sha256"],
+      "properties": {
+        "epoch_id": {"type": "string"},
+        "recording_id": {"type": "string"},
+        "timecode_in": {"type": "string", "pattern": "^[0-2][0-9]:[0-5][0-9]:[0-5][0-9][;:][0-9]{2,3}$"},
+        "timecode_out": {"type": "string", "pattern": "^[0-2][0-9]:[0-5][0-9]:[0-5][0-9][;:][0-9]{2,3}$"},
+        "rate": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["DF", "NDF"]},
+        "first_goalpost_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "terminal_goalpost_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "requested_planes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["HCA", "HCE", "BMIMS", "SPATIAL_TOPOLOGY_ML"]}
+    },
+    "purpose": {"type": "string", "minLength": 1},
+    "reconstruction_method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method_id", "version", "parameters_sha256"],
+      "properties": {
+        "method_id": {"type": "string"},
+        "version": {"type": "string"},
+        "parameters_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "authority_ceiling": {"const": "READ_ONLY_HISTORICAL_RECONSTRUCTION"},
+    "return_channel": {"type": "string", "minLength": 1},
+    "petition_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "authentication_witness": {
+      "type": "object",
+      "required": ["state"],
+      "properties": {
+        "state": {"enum": ["AUTH_VALID", "AUTH_INVALID", "AUTH_UNRESOLVED"]}
+      }
+    }
+  }
+}

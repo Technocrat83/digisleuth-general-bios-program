@@ -37,6 +37,10 @@ It does not contain `CC_F01` through `CC_F12`, expected verdicts, an operational
 
 `contracts/FROZEN_APPARATUS_CONTRACT_v0.1.json` binds the serializer rules, permitted input surface, reset obligations, and blocked runtime state.
 
+## Candidate extension
+
+`SPECTRAL_GOALPOST_RECONSTRUCTIVE_HELM_PETITION_PROTOCOL_v0.1.md` defines how authenticated external control surfaces may petition—but never directly query—the sealed battery for read-only historical Helm-state reconstruction. Its machine-readable ingress contract is `schemas/reconstructive_helm_petition.schema.json`. The extension is materialized but unexecuted; its SMPTE goalpost battery and interface-plane semantic bindings remain absent.
+
 ## Current authority state
 
 ```yaml
