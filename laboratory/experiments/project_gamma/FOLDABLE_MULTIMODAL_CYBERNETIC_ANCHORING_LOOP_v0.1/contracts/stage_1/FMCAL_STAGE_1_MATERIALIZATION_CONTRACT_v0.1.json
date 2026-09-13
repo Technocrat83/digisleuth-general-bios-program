@@ -1,0 +1,38 @@
+{
+  "contract_id": "FMCAL_STAGE_1_MATERIALIZATION_CONTRACT_v0.1",
+  "battery_id": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1",
+  "stage": 1,
+  "authorized": ["SCHEMA_MATERIALIZATION"],
+  "forbidden": [
+    "OBSERVATION_GENERATION",
+    "FIXTURE_EXECUTION",
+    "NUMERICAL_PROFILE_BINDING",
+    "EXPECTED_VECTOR_COMMITMENT",
+    "DEVICE_EXECUTION",
+    "MANUFACTURER_INFERENCE"
+  ],
+  "transfer_chain": ["COMMAND", "DRIVER", "ACTUATOR", "CHASSIS", "CONTACT_BOUNDARY"],
+  "outside_battery": ["USER_PERCEPTION", "SEMANTIC_COMPREHENSION"],
+  "sampling_invariant": "f_measurement > 2 * f_max_measured_with_declared_anti_alias_filter_and_oversampling_margin",
+  "frequency_distinctions": [
+    "f_command",
+    "f_driver",
+    "f_mechanical",
+    "f_measurement"
+  ],
+  "adjudication": {
+    "rule": "V_A requires I_D and I_W and T_A and S_A and D_A and C_A and M_A and L",
+    "weighted_compensation": "PROHIBITED",
+    "measurement_unresolved": "WITHHELD"
+  },
+  "standing": {
+    "headless_engineering_conformance": "PASS_SYNTHETIC_18_OF_18",
+    "physical_conformance": "UNEVALUATED",
+    "user_perception": "UNOBSERVED",
+    "semantic_comprehension": "UNOBSERVED",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "promotion_pp": "HARD_BLOCKED"
+  }
+}

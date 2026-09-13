@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:actuator-profile:v0.1",
+  "title": "FMCAL Actuator Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_id",
+    "actuator_class",
+    "device_capability_profile",
+    "measured_instance_profile",
+    "driver_configuration",
+    "mounting_configuration"
+  ],
+  "properties": {
+    "profile_id": {"type": "string", "minLength": 1},
+    "actuator_class": {"type": "string", "minLength": 1},
+    "device_capability_profile": {
+      "type": "object",
+      "required": ["capability_id", "source_class", "supported_abstract_patterns"],
+      "properties": {
+        "capability_id": {"type": "string", "minLength": 1},
+        "source_class": {"enum": ["SYNTHETIC", "MANUFACTURER_DECLARED", "MEASURED"]},
+        "supported_abstract_patterns": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "measured_instance_profile": {
+      "type": "object",
+      "required": ["instance_id", "binding_state"],
+      "properties": {
+        "instance_id": {"type": "string", "minLength": 1},
+        "binding_state": {"enum": ["UNBOUND", "SYNTHETIC", "MEASURED"]}
+      },
+      "additionalProperties": false
+    },
+    "driver_configuration": {"type": "object"},
+    "mounting_configuration": {
+      "type": "object",
+      "required": ["actuator_mounting_geometry", "chassis_identity", "contact_boundary_definition"],
+      "properties": {
+        "actuator_mounting_geometry": {"type": "string", "minLength": 1},
+        "chassis_identity": {"type": "string", "minLength": 1},
+        "contact_boundary_definition": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    }
+  }
+}

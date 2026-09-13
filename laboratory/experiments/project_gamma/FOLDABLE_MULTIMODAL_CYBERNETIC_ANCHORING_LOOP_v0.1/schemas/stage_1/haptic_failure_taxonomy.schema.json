@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:haptic-failure-taxonomy:v0.1",
+  "title": "FMCAL Typed Haptic Failure",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["failure_id", "failure_type", "domain", "condition", "adjudication"],
+  "properties": {
+    "failure_id": {"type": "string", "minLength": 1},
+    "failure_type": {
+      "enum": [
+        "DIGITAL_ALIASING", "TEMPORAL_SMEAR", "SPECTRAL_DEFORMATION",
+        "OFF_RESONANCE_ATTENUATION", "HARMONIC_DISTORTION",
+        "PHASE_OR_GROUP_DELAY_DEFECT", "ACTUATOR_NON_DELIVERY",
+        "CONTACT_TRANSFER_DEFECT", "MEASUREMENT_UNRESOLVED"
+      ]
+    },
+    "domain": {
+      "enum": [
+        "DIGITAL_SAMPLING", "MECHANICAL_TRANSIENT", "FREQUENCY_RESPONSE",
+        "ACTUATOR_TRANSFER", "NONLINEAR_RESPONSE", "TEMPORAL_SPECTRAL_COUPLING",
+        "PHYSICAL_EXECUTION", "DEVICE_USER_BOUNDARY", "EVIDENCE"
+      ]
+    },
+    "condition": {"type": "string", "minLength": 1},
+    "adjudication": {"enum": ["CONTRADICTED", "WITHHELD"]}
+  },
+  "x-invariants": [
+    "MEASUREMENT_UNRESOLVED_maps_to_WITHHELD",
+    "boolean_flattening_is_prohibited"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:expected-vector:v0.1",
+  "title": "FMCAL Precommitted Expected Vector",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["vector_id", "waveform_id", "prediction", "prediction_hash", "observation"],
+  "properties": {
+    "vector_id": {"type": "string", "minLength": 1},
+    "waveform_id": {"type": "string", "minLength": 1},
+    "prediction": {"type": "object", "minProperties": 1},
+    "prediction_hash": {"type": "string", "pattern": "^[a-z0-9_-]+:[a-fA-F0-9]+$"},
+    "observation": {"type": "null"}
+  },
+  "x-invariants": [
+    "prediction_and_observation_are_separate",
+    "observation_is_null_before_execution",
+    "expected_numerical_values_are_stage_3_only"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:measurement-contract:v0.1",
+  "title": "FMCAL Measurement Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_id", "sensor_type", "sensor_identity", "calibration_identity",
+    "calibration_timestamp", "calibration_traceability", "sensor_mounting_geometry",
+    "actuator_mounting_geometry", "chassis_identity", "measurement_axis",
+    "anti_alias_filter", "measurement_sample_rate_hz", "analysis_band_hz",
+    "oversampling_margin", "window_function", "measurement_window_ms",
+    "trigger_definition", "environmental_conditions", "uncertainty_budget",
+    "transfer_boundary", "analysis_method"
+  ],
+  "properties": {
+    "contract_id": {"type": "string", "minLength": 1},
+    "sensor_type": {"type": "string", "minLength": 1},
+    "sensor_identity": {"type": "string", "minLength": 1},
+    "calibration_identity": {"type": "string", "minLength": 1},
+    "calibration_timestamp": {"type": "string", "format": "date-time"},
+    "calibration_traceability": {"type": "string", "minLength": 1},
+    "sensor_mounting_geometry": {"type": "string", "minLength": 1},
+    "actuator_mounting_geometry": {"type": "string", "minLength": 1},
+    "chassis_identity": {"type": "string", "minLength": 1},
+    "measurement_axis": {"type": "string", "minLength": 1},
+    "anti_alias_filter": {
+      "type": "object",
+      "required": ["filter_id", "type", "cutoff_hz", "order"],
+      "properties": {
+        "filter_id": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "cutoff_hz": {"type": "number", "exclusiveMinimum": 0},
+        "order": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "measurement_sample_rate_hz": {"type": "number", "exclusiveMinimum": 0},
+    "analysis_band_hz": {
+      "type": "object",
+      "required": ["minimum", "maximum"],
+      "properties": {
+        "minimum": {"type": "number", "minimum": 0},
+        "maximum": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "oversampling_margin": {"type": "number", "exclusiveMinimum": 2},
+    "window_function": {"type": "string", "minLength": 1},
+    "measurement_window_ms": {"type": "number", "exclusiveMinimum": 0},
+    "trigger_definition": {"type": "object", "minProperties": 1},
+    "environmental_conditions": {"type": "object", "minProperties": 1},
+    "uncertainty_budget": {"type": "object", "minProperties": 1},
+    "transfer_boundary": {"enum": ["DRIVER_OUTPUT", "ACTUATOR_OUTPUT", "CHASSIS_OUTPUT", "CONTACT_SURFACE_OUTPUT"]},
+    "analysis_method": {"type": "object", "minProperties": 1}
+  },
+  "x-invariants": [
+    "measurement_sample_rate_hz > 2 * analysis_band_hz.maximum",
+    "oversampling_margin = measurement_sample_rate_hz / analysis_band_hz.maximum",
+    "anti_alias_filter.cutoff_hz <= measurement_sample_rate_hz / 2"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:waveform-request:v0.1",
+  "title": "FMCAL Waveform Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "waveform_id",
+    "semantic_class",
+    "command_samples",
+    "command_rate_hz",
+    "amplitude_definition",
+    "duration_ms",
+    "phase_requirements",
+    "braking_request",
+    "tolerances"
+  ],
+  "properties": {
+    "waveform_id": {"type": "string", "minLength": 1},
+    "semantic_class": {
+      "enum": ["FOCUS_ANCHORED", "PREDICATE_LENS_CHANGED", "ADDITIONAL_STANZA_AVAILABLE", "HABITAT_SAFELY_COMPRESSED", "JURISDICTIONAL_BOUNDARY_REACHED", "NO_CERTIFIED_STATE_TRANSITION"]
+    },
+    "command_samples": {"type": "array", "minItems": 1, "items": {"type": "number"}},
+    "command_rate_hz": {"type": "number", "exclusiveMinimum": 0},
+    "amplitude_definition": {"type": "object", "minProperties": 1},
+    "duration_ms": {"type": "number", "exclusiveMinimum": 0},
+    "phase_requirements": {"type": "object"},
+    "braking_request": {"type": "object"},
+    "tolerances": {"type": "object", "minProperties": 1}
+  }
+}

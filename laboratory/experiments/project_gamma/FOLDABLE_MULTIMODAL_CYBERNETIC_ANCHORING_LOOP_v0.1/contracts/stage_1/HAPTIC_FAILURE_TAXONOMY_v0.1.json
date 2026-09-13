@@ -1,0 +1,43 @@
+{
+  "taxonomy_id": "HAPTIC_FAILURE_TAXONOMY_v0.1",
+  "boolean_flattening": "PROHIBITED",
+  "failures": {
+    "DIGITAL_ALIASING": {
+      "domain": "DIGITAL_SAMPLING",
+      "condition": "applicable_sampling_or_reconstruction_bound_violated"
+    },
+    "TEMPORAL_SMEAR": {
+      "domain": "MECHANICAL_TRANSIENT",
+      "condition": "distinct_requested_events_not_mechanically_separable"
+    },
+    "SPECTRAL_DEFORMATION": {
+      "domain": "FREQUENCY_RESPONSE",
+      "condition": "delivered_spectrum_exceeds_precommitted_error_envelope"
+    },
+    "OFF_RESONANCE_ATTENUATION": {
+      "domain": "ACTUATOR_TRANSFER",
+      "condition": "requested_component_attenuated_beyond_passband_bound"
+    },
+    "HARMONIC_DISTORTION": {
+      "domain": "NONLINEAR_RESPONSE",
+      "condition": "thd_exceeds_precommitted_bound"
+    },
+    "PHASE_OR_GROUP_DELAY_DEFECT": {
+      "domain": "TEMPORAL_SPECTRAL_COUPLING",
+      "condition": "phase_or_group_delay_breaks_pattern_discrimination"
+    },
+    "ACTUATOR_NON_DELIVERY": {
+      "domain": "PHYSICAL_EXECUTION",
+      "condition": "authenticated_command_has_no_authenticated_physical_response"
+    },
+    "CONTACT_TRANSFER_DEFECT": {
+      "domain": "DEVICE_USER_BOUNDARY",
+      "condition": "actuator_output_exists_but_required_contact_surface_output_does_not"
+    },
+    "MEASUREMENT_UNRESOLVED": {
+      "domain": "EVIDENCE",
+      "condition": "uncertainty_or_instrument_limit_precludes_adjudication",
+      "required_outcome": "WITHHELD"
+    }
+  }
+}

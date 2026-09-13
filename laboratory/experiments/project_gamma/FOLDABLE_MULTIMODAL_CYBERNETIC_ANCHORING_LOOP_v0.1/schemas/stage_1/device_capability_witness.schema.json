@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:device-capability-witness:v0.1",
+  "title": "FMCAL Device Capability Witness Vector",
+  "description": "H_d,w = <I_D,I_W,T_A,S_A,D_A,C_A,M_A,V_A,L>",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["I_D", "I_W", "T_A", "S_A", "D_A", "C_A", "M_A", "V_A", "L"],
+  "$defs": {
+    "coordinate": {"enum": ["SATISFIED", "CONTRADICTED", "UNRESOLVED", "NOT_EVALUATED"]}
+  },
+  "properties": {
+    "I_D": {"$ref": "#/$defs/coordinate"},
+    "I_W": {"$ref": "#/$defs/coordinate"},
+    "T_A": {"$ref": "#/$defs/coordinate"},
+    "S_A": {"$ref": "#/$defs/coordinate"},
+    "D_A": {"$ref": "#/$defs/coordinate"},
+    "C_A": {"$ref": "#/$defs/coordinate"},
+    "M_A": {"$ref": "#/$defs/coordinate"},
+    "V_A": {"enum": ["ADMITTED", "REJECTED", "WITHHELD", "UNEVALUATED"]},
+    "L": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+  },
+  "x-invariants": [
+    "V_A_ADMITTED_only_if_I_D_I_W_T_A_S_A_D_A_C_A_M_A_are_SATISFIED",
+    "M_A_UNRESOLVED_implies_V_A_WITHHELD",
+    "no_weighted_compensation"
+  ]
+}

@@ -34,7 +34,8 @@
     "actuator_non_delivery"
   ],
   "standing": {
-    "scientific": "UNEVALUATED_BEYOND_SYNTHETIC_HARNESS",
+    "engineering_evidence": "PASS_SYNTHETIC_18_OF_18",
+    "scientific": "UNEVALUATED",
     "physiological": "ZERO",
     "constitutional": "ZERO",
     "production_readiness": "NOT_ESTABLISHED",

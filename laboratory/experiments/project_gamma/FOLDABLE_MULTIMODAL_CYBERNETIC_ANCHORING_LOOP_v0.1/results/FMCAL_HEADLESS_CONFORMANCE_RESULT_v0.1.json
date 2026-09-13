@@ -7,6 +7,7 @@
   "tests_passed": 18,
   "tests_failed": 0,
   "bounded_verdict": "PASS_SYNTHETIC_HEADLESS_CONFORMANCE",
+  "evidence_class": "ENGINEERING_EVIDENCE",
   "established": [
     "ambiguous_failure_patterns_do_not_trigger_positive_confirmation_in_the_harness",
     "positive_confirmation_requires_an_authenticated_exact_delivery_receipt",
@@ -25,5 +26,8 @@
     "promotion_pp_eligibility"
   ],
   "runtime_execution": "BLOCKED_PENDING_DEVICE_BOUND_CONFORMANCE",
+  "scientific_standing": "UNEVALUATED",
+  "physiological_standing": "ZERO",
+  "constitutional_standing": "ZERO",
   "promotion_pp": "HARD_BLOCKED"
 }

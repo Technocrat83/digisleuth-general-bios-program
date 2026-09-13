@@ -1,0 +1,22 @@
+{
+  "seal_id": "FMCAL_STAGE_1_SCHEMA_SEAL_v0.1",
+  "hash_algorithm": "SHA-256",
+  "lineage_parent_commit": "0f4adb513647fcb3760d1d5cd4659429fa12b57c",
+  "scope": "SCHEMA_MATERIALIZATION_ONLY",
+  "artifacts": {
+    "contracts/stage_1/FMCAL_STAGE_1_MATERIALIZATION_CONTRACT_v0.1.json": "03d39cc383ef2abe4a0a5ab7c738832d89fa41b3fa599e045bffeb765607be45",
+    "contracts/stage_1/HAPTIC_FAILURE_TAXONOMY_v0.1.json": "5601a64bf239af3254e910db4c79404c13fc379dd146d3acbe6cb8fe664be7f2",
+    "schemas/stage_1/actuator_profile.schema.json": "582d4d68042b689d866fac4c1a5e035c8eab981c77070d4a5ce4fe381422af7f",
+    "schemas/stage_1/device_capability_witness.schema.json": "b557547c66d11503c709f7bf8d8efc12a6408a31c7c2af59b814e795d0f42605",
+    "schemas/stage_1/expected_vector.schema.json": "9cb0d9269fd24dc6afb002e64889817d32ddd0e5a9aea87dbd862186cd9ae165",
+    "schemas/stage_1/haptic_failure_taxonomy.schema.json": "6dee48db729408c391a74e71c7fb4acf7b8bb442562d703335b02934a9592202",
+    "schemas/stage_1/measurement_contract.schema.json": "4769a84b739669d91cf37786cc354881036cdbca9a4058f2dc2ac212bf352813",
+    "schemas/stage_1/observation_envelope.schema.json": "768571aa0401532ee9a779df6b4d8d36f782fefbaee0e69e5d46a7f46a0578d6",
+    "schemas/stage_1/waveform_request.schema.json": "fe64faec6b497e69127e93fb11fb61b3bfbc3c6999ab4e9cbe58e011839a1074"
+  },
+  "observations_generated": false,
+  "fixtures_executed": false,
+  "numerical_profiles_bound": false,
+  "expected_vectors_committed": false,
+  "device_execution": false
+}
