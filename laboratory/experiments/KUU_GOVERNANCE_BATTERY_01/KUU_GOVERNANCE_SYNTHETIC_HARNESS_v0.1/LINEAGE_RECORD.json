@@ -1,0 +1,11 @@
+{
+  "artifact_id": "KUU_GOVERNANCE_SYNTHETIC_HARNESS_v0.1",
+  "package_digest": "1a892b4951286a718816272d0b75a55ea0506bb4ccf0dc46f483d520ea3a39d0",
+  "fixture_oracle_corpus_sha256": "58758056da52cfd11cf649f1ffeb2177d018748405d7fb8ad80f27c6623539f0",
+  "standing_ceiling": "KUU_REFERENCE_RUNTIME_CONFORMS_UNDER_SYNTHETIC_BATTERY",
+  "scientific_validation": "NOT_ESTABLISHED",
+  "canon_delta": 0,
+  "physiology_delta": 0,
+  "level_0_delta": 0,
+  "PP": "BLOCKED"
+}

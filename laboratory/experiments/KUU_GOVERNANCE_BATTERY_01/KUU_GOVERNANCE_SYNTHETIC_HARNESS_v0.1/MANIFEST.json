@@ -1,0 +1,29 @@
+{
+  "battery_id": "KNOWN_UNKNOWN_UNBOUND_GOVERNANCE_BATTERY_01",
+  "artifact_id": "KUU_GOVERNANCE_SYNTHETIC_HARNESS_v0.1",
+  "parent_spec": {
+    "id": "KNOWN_UNKNOWN_UNBOUND_GOVERNANCE_BATTERY_01_SPEC_v0.1",
+    "status": "FROZEN"
+  },
+  "execution_class": "SYNTHETIC_REFERENCE_CONFORMANCE",
+  "authority": {
+    "fixture_generation": "ALLOWED",
+    "frozen_oracle_execution": "ALLOWED",
+    "result_recording": "ALLOWED",
+    "semantic_mutation": "ZERO",
+    "scientific_adjudication": "ZERO",
+    "constitutional_mutation": "ZERO",
+    "physiology_inference": "ZERO",
+    "canon_mutation": "ZERO",
+    "PP": "BLOCKED"
+  },
+  "master_non_equivalence": "Synthetic Oracle Agreement != Scientific Validation",
+  "internal_jurisdictions": [
+    "FIXTURE_GENERATION",
+    "BINDING_EVALUATION",
+    "EPISTEMIC_CLASSIFICATION",
+    "OPERATION_ELIGIBILITY",
+    "ORACLE_COMPARISON",
+    "RESIDUE_LEDGER"
+  ]
+}

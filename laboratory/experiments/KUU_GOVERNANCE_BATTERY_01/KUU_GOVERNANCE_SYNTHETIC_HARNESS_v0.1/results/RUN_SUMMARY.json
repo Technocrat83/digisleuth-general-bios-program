@@ -1,0 +1,16 @@
+{
+  "fixture_count": 8,
+  "oracle_agreement_all": true,
+  "global_terms": {
+    "B_0": true,
+    "U_0": true,
+    "C_0": true,
+    "A_0": true,
+    "R_0": true,
+    "J_0": true,
+    "L_0": true
+  },
+  "M_lawful": 7,
+  "PASS_KUU": true,
+  "standing_ceiling": "KUU_REFERENCE_RUNTIME_CONFORMS_UNDER_SYNTHETIC_BATTERY"
+}
