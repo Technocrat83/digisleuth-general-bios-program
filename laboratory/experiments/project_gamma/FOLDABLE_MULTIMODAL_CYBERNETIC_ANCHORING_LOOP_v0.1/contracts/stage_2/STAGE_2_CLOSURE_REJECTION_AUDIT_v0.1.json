@@ -1,0 +1,31 @@
+{
+  "audit_id": "STAGE_2_CLOSURE_REJECTION_AUDIT_v0.1",
+  "rejected_commit": "e17952b43e56a2424c9e4fe1dbbe84f6f0943e1e",
+  "rejected_status": "PROVISIONAL_CONTRADICTED",
+  "closure_effect": "RESCINDED",
+  "applicable_defects_in_rejected_git_bytes": {
+    "expected_answers_colocated_in_fixture_schema": true,
+    "vocabulary_rule_not_bound_to_named_map": true,
+    "erm_voltage_predicate_not_closed_interval": true,
+    "multi_pulse_gap_guard_not_executable": true,
+    "multi_failure_precedence_absent": true
+  },
+  "non_applicable_findings_for_rejected_git_bytes": {
+    "maximum_spectral_component_hz_present": false,
+    "noncanonical_integer_valued_decimal_tokens_present": false,
+    "concrete_waveform_fixtures_present": false,
+    "expected_adjudication_instances_present": false,
+    "profile_hash_seal_absent": false
+  },
+  "interpretation": "The broader rejection remains controlling, while defect attribution is localized to the bytes that actually contain each defect.",
+  "preserved_lineage": {
+    "stage_1_commit": "418d3335cf382c59c218d5c0521a93846c2e6feb",
+    "headless_result": "PASS_SYNTHETIC_18_OF_18"
+  },
+  "authority": {
+    "evaluator_materialization": "BLOCKED",
+    "evaluator_execution": "BLOCKED",
+    "fixture_execution": "BLOCKED",
+    "physical_execution": "BLOCKED"
+  }
+}

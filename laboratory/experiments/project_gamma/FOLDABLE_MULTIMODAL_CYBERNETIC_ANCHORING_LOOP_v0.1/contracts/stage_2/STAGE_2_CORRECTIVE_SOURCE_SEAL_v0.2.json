@@ -1,0 +1,48 @@
+{
+  "seal_id": "FMCAL_STAGE_2_CORRECTIVE_SOURCE_SEAL_v0.2",
+  "battery_id": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1",
+  "lineage_parent_commit": "e17952b43e56a2424c9e4fe1dbbe84f6f0943e1e",
+  "supersedes_seal": "FMCAL_STAGE_2_PROFILE_SEAL_v0.1",
+  "seal_status": "CORRECTIVE_SOURCE_BYTES_SEALED",
+  "stage_2_closure": "PENDING_INDEPENDENT_RATIFICATION",
+  "hash_algorithm": "SHA-256",
+  "canonical_artifacts": {
+    "stage_2/actuator_profiles_v0.1.json": "df97f5e02c02bd576cecccab96495ab189f53f0ac8ec1593fb822fd7f01bc7bf",
+    "stage_2/waveform_fixture_cores_v0.1.json": "4b89cce135361237a5fb05c2c888e4e51b765f6e6421a6fffe82ddb209ab2a45",
+    "stage_2/waveform_expected_vectors_v0.1.json": "5e247ad86dfcc34dac80e63cfa2277d95f6be7c5b2177b72e31e9ddd8a198d5e"
+  },
+  "supporting_artifacts": {
+    "contracts/stage_2/FMCAL_STAGE_2_COMPILATION_CONTRACT_v0.1.json": "e0150b29ce5ea50c690d88e7e5ea9543842d3c3a298c4f31ba6144231d65a02c",
+    "contracts/stage_2/STAGE_2_CLOSURE_REJECTION_AUDIT_v0.1.json": "036b2ff6448456823b3231598e530636169fcd33390e71c18c19375188c8539a",
+    "schemas/stage_2/actuator_profiles.schema.json": "12ae93373d53657a5d46bacbc4c8b503031c613c23d84a930c6e06e588bfa9a0",
+    "schemas/stage_2/haptic_waveform_fixture.schema.json": "4d3da8af7ff3f66288bfa6be01ee210d99de5709af01ec2b8131dfa5f6c4fa7a",
+    "schemas/stage_2/waveform_expected_witness.schema.json": "93084414f1181de62b81986e27a16a0758146035c61663029b4482b965d672df",
+    "schemas/stage_2/waveform_fixture_cores.schema.json": "51f879505b048315a5206c90bc2ea0cbeb3058f58b8af9940a2df0d72fb02345",
+    "schemas/stage_2/waveform_expected_vectors.schema.json": "405ee537e1b340125d7a71051e116883b4719df5eef7a0fa14468c2f66d59454"
+  },
+  "corrective_checks": {
+    "deprecated_spectral_field_absent": "PASS",
+    "canonical_numeric_tokens": "PASS",
+    "named_vocabulary_map_bound": "PASS",
+    "erm_closed_voltage_interval": "PASS",
+    "multi_pulse_gap_guard": "PASS",
+    "fixture_core_expected_answer_absence": "PASS",
+    "fixture_schema_completeness": "PASS",
+    "multi_failure_precedence": "PASS"
+  },
+  "execution_ledger": {
+    "concrete_waveform_fixtures": 0,
+    "expected_instance_vectors": 0,
+    "observed_results": 0,
+    "evaluator_materialized": false,
+    "evaluator_executed": false,
+    "physical_execution": false
+  },
+  "standing": {
+    "engineering": "CORRECTIVE_STATIC_SOURCE_VALIDATION",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "promotion_pp": "HARD_BLOCKED"
+  }
+}

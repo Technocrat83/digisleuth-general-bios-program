@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:waveform-fixture-cores:v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "evaluator_visible", "expected_adjudication", "fixtures"],
+  "properties": {
+    "artifact_id": {"const": "waveform_fixture_cores_v0.1"},
+    "evaluator_visible": {"const": true},
+    "expected_adjudication": {"const": "FORBIDDEN"},
+    "fixtures": {"type": "array", "maxItems": 0}
+  }
+}

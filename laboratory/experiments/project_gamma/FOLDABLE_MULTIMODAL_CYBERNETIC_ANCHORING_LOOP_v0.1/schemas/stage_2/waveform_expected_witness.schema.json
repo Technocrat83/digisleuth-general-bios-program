@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:waveform-expected-witness:v0.1",
+  "title": "FMCAL Isolated Expected Witness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["expected_id", "fixture_id", "fixture_core_hash", "expected_adjudication"],
+  "properties": {
+    "expected_id": {"type": "string", "minLength": 1},
+    "fixture_id": {"type": "string", "minLength": 1},
+    "fixture_core_hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "expected_adjudication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["all_triggered_failures", "primary_failure"],
+      "properties": {
+        "all_triggered_failures": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "primary_failure": {"oneOf": [{"type": "string", "minLength": 1}, {"type": "null"}]}
+      }
+    }
+  }
+}

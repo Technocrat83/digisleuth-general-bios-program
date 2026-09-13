@@ -2,7 +2,7 @@
   "contract_id": "FMCAL_STAGE_2_COMPILATION_CONTRACT_v0.1",
   "battery_id": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1",
   "stage": 2,
-  "authorization": "GRANTED_AFTER_CORRECTIONS",
+  "authorization": "CORRECTIVE_COMPILATION_ONLY",
   "output": "actuator_profiles_v0.1.json",
   "canonicalization": "RFC_8785_JCS",
   "requirements": {
@@ -20,11 +20,14 @@
   "expected_vectors": {
     "abstract_vocabulary": "PRECOMMITTED",
     "waveform_instance": "BLOCKED_PENDING_CONCRETE_FIXTURES",
-    "physical_observation": null
+    "physical_observation": null,
+    "fixture_core_artifact": "waveform_fixture_cores_v0.1.json",
+    "isolated_expected_artifact": "waveform_expected_vectors_v0.1.json",
+    "evaluator_answer_visibility": "PROHIBITED"
   },
   "standing": {
     "stage_1": "SEALED",
-    "stage_2": "COMPILED_SYNTHETIC",
+    "stage_2": "CORRECTED_AND_RESEALED_SYNTHETIC",
     "physical_conformance": "UNEVALUATED",
     "scientific": "UNEVALUATED",
     "physiological": "ZERO",

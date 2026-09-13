@@ -1,5 +1,8 @@
 {
   "seal_id": "FMCAL_STAGE_2_PROFILE_SEAL_v0.1",
+  "seal_status": "SUPERSEDED_PROVISIONAL_CONTRADICTED",
+  "closure_valid": false,
+  "supersession_reason": "ANSWER_LEAKAGE_AND_INCOMPLETELY_BOUND_PREDICATES",
   "battery_id": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1",
   "hash_algorithm": "SHA-256",
   "lineage_parent_commit": "418d3335cf382c59c218d5c0521a93846c2e6feb",

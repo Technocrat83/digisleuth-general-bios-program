@@ -4,12 +4,23 @@
   "title": "FMCAL Synthetic Actuator Profiles",
   "type": "object",
   "additionalProperties": false,
-  "required": ["artifact_id", "battery_id", "data_class", "rate_type_contract", "vocabulary_states", "profiles", "physical_observation"],
+  "required": ["artifact_id", "battery_id", "data_class", "rate_type_contract", "adjudication_output", "vocabulary_states", "profiles", "physical_observation"],
   "properties": {
     "artifact_id": {"const": "actuator_profiles_v0.1"},
     "battery_id": {"const": "FMCAL_DEVICE_CAPABILITY_BATTERY_v0.1"},
     "data_class": {"const": "SYNTHETIC_PROFILE_PRECOMMITMENT"},
     "rate_type_contract": {"type": "object", "minProperties": 5},
+    "adjudication_output": {
+      "type": "object",
+      "required": ["all_triggered_failures", "evaluation_short_circuit", "primary_failure", "priority_table"],
+      "properties": {
+        "all_triggered_failures": {"const": "REQUIRED"},
+        "evaluation_short_circuit": {"const": false},
+        "primary_failure": {"type": "object"},
+        "priority_table": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
     "vocabulary_states": {"type": "object", "minProperties": 3},
     "profiles": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/profile"}},
     "physical_observation": {"type": "null"}
@@ -34,7 +45,7 @@
     "profile": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["profile_id", "actuator_class", "source_class", "rates", "mechanical_operating_domain", "spectral_policy", "voltage_policy", "interval_policy", "vocabulary_policy", "refusal_rules", "physical_observation"],
+      "required": ["profile_id", "actuator_class", "source_class", "rates", "mechanical_operating_domain", "spectral_evaluation", "voltage_policy", "interval_policy", "structural_vocabulary_admission", "refusal_rules", "physical_observation"],
       "properties": {
         "profile_id": {"type": "string", "minLength": 1},
         "actuator_class": {"enum": ["ERM", "LRA", "PIEZO_OR_VOICE_COIL"]},
@@ -52,10 +63,10 @@
           }
         },
         "mechanical_operating_domain": {"$ref": "#/$defs/binding"},
-        "spectral_policy": {"type": "object"},
+        "spectral_evaluation": {"type": "object"},
         "voltage_policy": {"type": "object"},
         "interval_policy": {"type": "object"},
-        "vocabulary_policy": {"$ref": "#/$defs/vocabulary_policy"},
+        "structural_vocabulary_admission": {"$ref": "#/$defs/vocabulary_policy"},
         "refusal_rules": {"type": "array", "items": {"type": "object"}},
         "physical_observation": {"type": "null"}
       }

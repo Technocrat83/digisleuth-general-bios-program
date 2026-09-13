@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:fmcal:waveform-expected-vectors:v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "evaluator_visible", "isolated_adjudicator_only", "vectors"],
+  "properties": {
+    "artifact_id": {"const": "waveform_expected_vectors_v0.1"},
+    "evaluator_visible": {"const": false},
+    "isolated_adjudicator_only": {"const": true},
+    "vectors": {"type": "array", "maxItems": 0}
+  }
+}
