@@ -1,0 +1,173 @@
+{
+  "artifact_id": "KUU_GOVERNANCE_SYNTHETIC_HARNESS_v0.1",
+  "runtime_fixtures": {
+    "F01-": {
+      "fixture_id": "81c0ae52-4a15-5425-be50-9ec3aef94568",
+      "entity": {
+        "symbol_id": "s_001",
+        "syntactic_presence": true,
+        "declared_type": "RESOURCE_REFERENCE"
+      },
+      "operations": {
+        "op_a": {
+          "id": "FORENSIC_LOCALIZATION",
+          "referential_contract": {
+            "requires": ["symbol_identity", "source_location"],
+            "supplied": {"symbol_identity": true, "source_location": true}
+          },
+          "evidence_surface": {"established_proposition": true},
+          "requires_epistemic_resolution": false,
+          "authority_key": "localization"
+        },
+        "op_b": {
+          "id": "RUNTIME_EXECUTION",
+          "referential_contract": {
+            "requires": ["symbol_identity", "executable_referent", "authenticated_instance_binding"],
+            "supplied": {"symbol_identity": true, "executable_referent": false, "authenticated_instance_binding": false}
+          },
+          "evidence_surface": {"unresolved": true},
+          "requires_epistemic_resolution": true,
+          "authority_key": "execution"
+        }
+      },
+      "authority_token": {"localization": true, "execution": false}
+    },
+    "F01+": {
+      "fixture_id": "b88dcab7-4bbd-5ae0-b251-0d0ef4eaec85",
+      "entity": {"symbol_id": "s_001p", "syntactic_presence": true, "declared_type": "RESOURCE_REFERENCE"},
+      "operations": {
+        "op_exec": {
+          "id": "RUNTIME_EXECUTION",
+          "referential_contract": {
+            "requires": ["symbol_identity", "executable_referent", "authenticated_instance_binding"],
+            "supplied": {"symbol_identity": true, "executable_referent": true, "authenticated_instance_binding": true}
+          },
+          "evidence_surface": {"established_value": true},
+          "requires_epistemic_resolution": true,
+          "authority_key": "execution"
+        }
+      },
+      "authority_token": {"execution": true}
+    },
+    "F02-": {
+      "fixture_id": "1ddc63be-709a-5444-a846-9575290a067f",
+      "entity": {"id": "x_002", "object_id": "STATE_NODE_17", "field": "target_parameter"},
+      "operations": {
+        "op_exec": {
+          "id": "APPLY_PARAMETERIZED_TRANSITION",
+          "referential_contract": {
+            "requires": ["object_identity", "field_identity", "epoch_binding"],
+            "supplied": {"object_identity": true, "field_identity": true, "epoch_binding": true}
+          },
+          "evidence_surface": {"established_value": false, "unresolved": true},
+          "requires_epistemic_resolution": true,
+          "authority_key": "execute"
+        }
+      },
+      "authority_token": {"inspect": true, "execute": true}
+    },
+    "F02+": {
+      "fixture_id": "b80e41aa-2d2b-57d0-a463-79ccdf58fe93",
+      "entity": {"id": "x_002p", "object_id": "STATE_NODE_17", "field": "target_parameter"},
+      "operations": {
+        "op_exec": {
+          "id": "APPLY_PARAMETERIZED_TRANSITION",
+          "referential_contract": {
+            "requires": ["object_identity", "field_identity", "epoch_binding"],
+            "supplied": {"object_identity": true, "field_identity": true, "epoch_binding": true}
+          },
+          "evidence_surface": {"established_value": true},
+          "requires_epistemic_resolution": true,
+          "authority_key": "execute"
+        }
+      },
+      "authority_token": {"execute": true}
+    },
+    "F03-": {
+      "fixture_id": "2f94b6a4-2f1d-5b84-98cd-849ca92155d2",
+      "entity": {"proposition_id": "p_003", "semantic_form": "resource_R is available at epoch_E"},
+      "operations": {
+        "op_eval": {
+          "id": "EVIDENCE_CLASSIFICATION",
+          "referential_contract": {
+            "requires": ["referent_bound", "scope_bound", "epoch_bound"],
+            "supplied": {"referent_bound": true, "scope_bound": true, "epoch_bound": true}
+          },
+          "evidence_surface": {"admissible_opposition": true},
+          "requires_epistemic_resolution": false,
+          "authority_key": "evidence_classification"
+        }
+      },
+      "authority_token": {"evidence_classification": true}
+    },
+    "F03+": {
+      "fixture_id": "e38394d0-0df4-5ea3-826e-774203e49a29",
+      "entity": {"proposition_id": "p_003p", "semantic_form": "resource_R is available at epoch_E"},
+      "operations": {
+        "op_eval": {
+          "id": "EVIDENCE_CLASSIFICATION",
+          "referential_contract": {
+            "requires": ["referent_bound", "scope_bound", "epoch_bound"],
+            "supplied": {"referent_bound": true, "scope_bound": true, "epoch_bound": true}
+          },
+          "evidence_surface": {"admissible_opposition": false, "established_proposition": true},
+          "requires_epistemic_resolution": false,
+          "authority_key": "evidence_classification"
+        }
+      },
+      "authority_token": {"evidence_classification": true}
+    },
+    "F04-": {
+      "fixture_id": "57142784-d652-5ac5-8034-2cc7277ae92e",
+      "entity": {"id": "TS_004", "source_state": "S_004", "claim_id": "c_004"},
+      "operations": {
+        "op_render": {
+          "id": "TRANSFORM_AND_PROJECT",
+          "referential_contract": {
+            "requires": ["source_identity", "transform_identity"],
+            "supplied": {"source_identity": true, "transform_identity": true}
+          },
+          "evidence_surface": {"established_proposition": true},
+          "requires_epistemic_resolution": false,
+          "authority_key": "render"
+        }
+      },
+      "authority_token": {"render": true, "standing_preservation_declaration": false},
+      "correspondence": {
+        "required_relations": ["r_identity", "r_dependency", "r_epoch"],
+        "preserved_relations": ["r_identity"]
+      }
+    },
+    "F04+": {
+      "fixture_id": "82b8fdc1-43a2-54e8-afbc-ce52052fc2b4",
+      "entity": {"id": "TS_004p", "source_state": "S_004", "claim_id": "c_004"},
+      "operations": {
+        "op_render": {
+          "id": "TRANSFORM_AND_PROJECT",
+          "referential_contract": {
+            "requires": ["source_identity", "transform_identity"],
+            "supplied": {"source_identity": true, "transform_identity": true}
+          },
+          "evidence_surface": {"established_proposition": true},
+          "requires_epistemic_resolution": false,
+          "authority_key": "render"
+        }
+      },
+      "authority_token": {"render": true, "standing_preservation_declaration": false},
+      "correspondence": {
+        "required_relations": ["r_identity", "r_dependency", "r_epoch"],
+        "preserved_relations": ["r_identity", "r_dependency", "r_epoch"]
+      }
+    }
+  },
+  "hidden_oracles": {
+    "F01-": {"fixture_hash": "9fd240927ee9138fc83691bc45fb025c467f24da9c3c8839714d1d229f0121ab", "fixture_id": "81c0ae52-4a15-5425-be50-9ec3aef94568", "expected": {"op_a": {"binding_state": "BOUND", "epistemic_state": "KNOWN", "eligibility_state": "ELIGIBLE"}, "op_b": {"binding_state": "UNBOUND", "epistemic_state": "NOT_APPLICABLE", "eligibility_state": "INELIGIBLE_BINDING"}}},
+    "F01+": {"fixture_hash": "04b0c45741db0e9a24834f5138499dfb72d4b402dc1a0538df85607aedd45777", "fixture_id": "b88dcab7-4bbd-5ae0-b251-0d0ef4eaec85", "expected": {"op_exec": {"binding_state": "BOUND", "epistemic_state": "KNOWN", "eligibility_state": "ELIGIBLE"}}},
+    "F02-": {"fixture_hash": "591fafe7d4cf90c76f155aad17ce5d1f67349ce217c1e7357611d2be4449284c", "fixture_id": "1ddc63be-709a-5444-a846-9575290a067f", "expected": {"op_exec": {"binding_state": "BOUND", "epistemic_state": "UNKNOWN", "eligibility_state": "INELIGIBLE_EPISTEMIC"}}},
+    "F02+": {"fixture_hash": "146cd43e3b5d677368955fc4f6529bffa518c9058ce37486458e470d3ec997b0", "fixture_id": "b80e41aa-2d2b-57d0-a463-79ccdf58fe93", "expected": {"op_exec": {"binding_state": "BOUND", "epistemic_state": "KNOWN", "eligibility_state": "ELIGIBLE"}}},
+    "F03-": {"fixture_hash": "73fef9456ad9753e07738deb1cc240e9f4c3f3e854d51105a332a808b41661ac", "fixture_id": "2f94b6a4-2f1d-5b84-98cd-849ca92155d2", "expected": {"op_eval": {"binding_state": "BOUND", "epistemic_state": "CONTRADICTED", "eligibility_state": "ELIGIBLE"}}},
+    "F03+": {"fixture_hash": "0061c3f2849e0713a48dc03a832d433120a62ff7e66f57969e6ea9e50a22536b", "fixture_id": "e38394d0-0df4-5ea3-826e-774203e49a29", "expected": {"op_eval": {"binding_state": "BOUND", "epistemic_state": "KNOWN", "eligibility_state": "ELIGIBLE"}}},
+    "F04-": {"fixture_hash": "0641039210fedf500f2573cb14989abe9aa2ff7dddc4ca6d6069d8bc06ccd173", "fixture_id": "57142784-d652-5ac5-8034-2cc7277ae92e", "expected": {"op_render": {"binding_state": "BOUND", "epistemic_state": "KNOWN", "eligibility_state": "ELIGIBLE"}, "correspondence": {"required_relations_preserved": false}, "standing": {"inherited_standing": "PROHIBITED", "operative_standing": "ZERO"}}},
+    "F04+": {"fixture_hash": "5267d0b6089fdd20bd67297bc155b21bec31bcf197161279c4a06ff44e193729", "fixture_id": "82b8fdc1-43a2-54e8-afbc-ce52052fc2b4", "expected": {"op_render": {"binding_state": "BOUND", "epistemic_state": "KNOWN", "eligibility_state": "ELIGIBLE"}, "correspondence": {"required_relations_preserved": true}}}
+  }
+}

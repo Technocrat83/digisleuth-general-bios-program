@@ -1,0 +1,27 @@
+{
+  "battery_id": "KNOWN_UNKNOWN_UNBOUND_GOVERNANCE_BATTERY_01",
+  "artifact_id": "KUU_GOVERNANCE_SYNTHETIC_HARNESS_v0.1",
+  "execution_class": "SYNTHETIC_REFERENCE_CONFORMANCE",
+  "fixture_count": 8,
+  "oracle_agreement_all": true,
+  "global_terms": {"B_0": true, "U_0": true, "C_0": true, "A_0": true, "R_0": true, "J_0": true, "L_0": true},
+  "M_lawful": 7,
+  "PASS_KUU": true,
+  "standing_ceiling": "KUU_REFERENCE_RUNTIME_CONFORMS_UNDER_SYNTHETIC_BATTERY",
+  "scientific_validation": "NOT_ESTABLISHED",
+  "scientific_evidence_delta": 0,
+  "canon_delta": 0,
+  "physiology_delta": 0,
+  "level_0_delta": 0,
+  "PP": "BLOCKED",
+  "records": [
+    {"fixture_id":"1ddc63be-709a-5444-a846-9575290a067f","fixture_hash":"591fafe7d4cf90c76f155aad17ce5d1f67349ce217c1e7357611d2be4449284c","runtime_output":{"operations":{"op_exec":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"UNKNOWN","eligibility_state":"INELIGIBLE_EPISTEMIC"}}},"pass":true},
+    {"fixture_id":"2f94b6a4-2f1d-5b84-98cd-849ca92155d2","fixture_hash":"73fef9456ad9753e07738deb1cc240e9f4c3f3e854d51105a332a808b41661ac","runtime_output":{"operations":{"op_eval":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"CONTRADICTED","eligibility_state":"ELIGIBLE"}}},"pass":true},
+    {"fixture_id":"57142784-d652-5ac5-8034-2cc7277ae92e","fixture_hash":"0641039210fedf500f2573cb14989abe9aa2ff7dddc4ca6d6069d8bc06ccd173","runtime_output":{"operations":{"op_render":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"KNOWN","eligibility_state":"ELIGIBLE"}},"correspondence":{"required_relations_preserved":false}},"pass":true},
+    {"fixture_id":"81c0ae52-4a15-5425-be50-9ec3aef94568","fixture_hash":"9fd240927ee9138fc83691bc45fb025c467f24da9c3c8839714d1d229f0121ab","runtime_output":{"operations":{"op_a":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"KNOWN","eligibility_state":"ELIGIBLE"},"op_b":{"binding_state":"UNBOUND","missing_requirements":["executable_referent","authenticated_instance_binding"],"epistemic_state":"NOT_APPLICABLE","eligibility_state":"INELIGIBLE_BINDING"}}},"pass":true},
+    {"fixture_id":"82b8fdc1-43a2-54e8-afbc-ce52052fc2b4","fixture_hash":"5267d0b6089fdd20bd67297bc155b21bec31bcf197161279c4a06ff44e193729","runtime_output":{"operations":{"op_render":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"KNOWN","eligibility_state":"ELIGIBLE"}},"correspondence":{"required_relations_preserved":true}},"pass":true},
+    {"fixture_id":"b80e41aa-2d2b-57d0-a463-79ccdf58fe93","fixture_hash":"146cd43e3b5d677368955fc4f6529bffa518c9058ce37486458e470d3ec997b0","runtime_output":{"operations":{"op_exec":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"KNOWN","eligibility_state":"ELIGIBLE"}}},"pass":true},
+    {"fixture_id":"b88dcab7-4bbd-5ae0-b251-0d0ef4eaec85","fixture_hash":"04b0c45741db0e9a24834f5138499dfb72d4b402dc1a0538df85607aedd45777","runtime_output":{"operations":{"op_exec":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"KNOWN","eligibility_state":"ELIGIBLE"}}},"pass":true},
+    {"fixture_id":"e38394d0-0df4-5ea3-826e-774203e49a29","fixture_hash":"0061c3f2849e0713a48dc03a832d433120a62ff7e66f57969e6ea9e50a22536b","runtime_output":{"operations":{"op_eval":{"binding_state":"BOUND","missing_requirements":[],"epistemic_state":"KNOWN","eligibility_state":"ELIGIBLE"}}},"pass":true}
+  ]
+}
