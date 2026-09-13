@@ -1,0 +1,29 @@
+{
+  "result_id": "FMCAL_HEADLESS_CONFORMANCE_RESULT_v0.1",
+  "contract_id": "FMCAL_HEADLESS_CONFORMANCE_CONTRACT_v0.1",
+  "execution": "SYNTHETIC_HEADLESS",
+  "test_framework": "python_unittest",
+  "tests_run": 18,
+  "tests_passed": 18,
+  "tests_failed": 0,
+  "bounded_verdict": "PASS_SYNTHETIC_HEADLESS_CONFORMANCE",
+  "established": [
+    "ambiguous_failure_patterns_do_not_trigger_positive_confirmation_in_the_harness",
+    "positive_confirmation_requires_an_authenticated_exact_delivery_receipt",
+    "meaning_and_predicate_identity_are_invariant_across_lens_selection",
+    "capability_aliasing_fails_closed"
+  ],
+  "not_established": [
+    "physical_device_behavior",
+    "actuator_waveform_fidelity",
+    "user_perception",
+    "user_comprehension",
+    "scientific_truth",
+    "physiological_standing",
+    "constitutional_standing",
+    "production_readiness",
+    "promotion_pp_eligibility"
+  ],
+  "runtime_execution": "BLOCKED_PENDING_DEVICE_BOUND_CONFORMANCE",
+  "promotion_pp": "HARD_BLOCKED"
+}

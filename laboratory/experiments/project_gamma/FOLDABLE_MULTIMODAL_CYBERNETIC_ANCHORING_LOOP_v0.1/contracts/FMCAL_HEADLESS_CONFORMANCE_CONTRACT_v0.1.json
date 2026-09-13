@@ -1,0 +1,43 @@
+{
+  "contract_id": "FMCAL_HEADLESS_CONFORMANCE_CONTRACT_v0.1",
+  "runtime_id": "FOLDABLE_MULTIMODAL_CYBERNETIC_ANCHORING_LOOP_v0.1",
+  "execution_scope": "SYNTHETIC_HEADLESS_ONLY",
+  "positive_confirmation": {
+    "requires": [
+      "certified_sensor_estimate",
+      "immutable_semantic_digest",
+      "immutable_predicate_bundle",
+      "injective_device_capability_mapping",
+      "authenticated_exact_actuator_delivery_receipt"
+    ],
+    "does_not_establish": [
+      "user_perception",
+      "user_comprehension",
+      "semantic_standing",
+      "physiological_standing",
+      "constitutional_authority"
+    ]
+  },
+  "fail_closed_inputs": [
+    "missing_posture_evidence",
+    "stale_or_out_of_order_event",
+    "nonfinite_sensor_evidence",
+    "uncertainty_ceiling_exceeded",
+    "posture_evidence_conflict",
+    "semantic_digest_mutation",
+    "predicate_bundle_substitution",
+    "unsupported_haptic_pattern",
+    "capability_pattern_alias",
+    "unauthenticated_receipt",
+    "receipt_binding_mismatch",
+    "receipt_replay",
+    "actuator_non_delivery"
+  ],
+  "standing": {
+    "scientific": "UNEVALUATED_BEYOND_SYNTHETIC_HARNESS",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "production_readiness": "NOT_ESTABLISHED",
+    "promotion_pp": "HARD_BLOCKED"
+  }
+}
