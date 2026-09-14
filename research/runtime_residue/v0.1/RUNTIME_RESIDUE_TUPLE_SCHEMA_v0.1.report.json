@@ -1,0 +1,9 @@
+{
+  "schema_metaschema_validation": "PASS",
+  "two_pass_byte_reproduction": "PASS",
+  "canonical_byte_length": 4477,
+  "schema_sha256": "513558752d08c9fb3fab0933defdec9a1265b875ae796c3af7b5d2d31ad8e7dc",
+  "seal_sha256": "43315d78cd1bb2046f931304f055df11d2180f6e07294139a80a3e541860f95b",
+  "independent_rfc8785_reproduction": "PENDING",
+  "git_delta": "ZERO"
+}
