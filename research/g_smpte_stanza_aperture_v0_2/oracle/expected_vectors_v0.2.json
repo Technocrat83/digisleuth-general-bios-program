@@ -1,0 +1,31 @@
+{
+  "evaluator_visible": false,
+  "isolated_adjudicator_only": true,
+  "expected": {
+    "S01":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "S02":{"status":"REFUSED","all_triggered_failures":["INVALID_COORDINATE_COUNT"]},
+    "S03":{"status":"REFUSED","all_triggered_failures":["INVALID_COORDINATE_COUNT"]},
+    "S04":{"status":"REFUSED","all_triggered_failures":["NONINTEGER_COORDINATE_3"]},
+    "S05":{"status":"REFUSED","all_triggered_failures":["OUT_OF_DOMAIN_COORDINATE_3"]},
+    "S06":{"status":"REFUSED","all_triggered_failures":["UNKNOWN_SCHEMA_VERSION"]},
+    "S07":{"status":"REFUSED","all_triggered_failures":["CANONICAL_OBJECT_REQUIRED"]},
+    "S08":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "G01":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "G02":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "G03":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "G04":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "G05":{"status":"REFUSED","all_triggered_failures":["TOPOLOGY_CYCLE_DETECTED"]},
+    "G06":{"status":"REFUSED","all_triggered_failures":["SELF_LOOP","TOPOLOGY_CYCLE_DETECTED"]},
+    "G07":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "G08":{"status":"REFUSED","all_triggered_failures":["UNRESOLVED_EDGE_ENDPOINT"]},
+    "G09":{"status":"REFUSED","all_triggered_failures":["DUPLICATE_VERTEX_IDENTITY"]},
+    "T01":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "T02":{"status":"REFUSED","all_triggered_failures":["EVENT_ORDINAL_REGRESSION"]},
+    "T03":{"status":"REFUSED","all_triggered_failures":["PARENT_HASH_DISCONTINUITY"]},
+    "T04":{"status":"REFUSED","all_triggered_failures":["CROSS_DOMAIN_MONOTONIC_COMPARISON"]},
+    "T05":{"status":"CONFORMANT","all_triggered_failures":[]},
+    "T06":{"status":"REFUSED","all_triggered_failures":["DROP_FRAME_LABEL_INVALID"]},
+    "T07":{"status":"REFUSED","all_triggered_failures":["RTP_CLOCK_RATE_REQUIRED"]},
+    "T08":{"status":"REFUSED","all_triggered_failures":["PTP_GRANDMASTER_IDENTITY_REQUIRED","PTP_ST_2059_PROFILE_IDENTITY_REQUIRED"]}
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "architecture_id": "G_SMPTE_STANZA_APERTURE_v0.2",
+  "historical_specification": {
+    "id": "G_SMPTE_STANZA_APERTURE_v0.1",
+    "status": "FROZEN_SUPERSEDED_FOR_IMPLEMENTATION",
+    "mutation": "PROHIBITED"
+  },
+  "status": "CORRECTED_SPECIFICATION_FROZEN",
+  "separation_of_powers": {
+    "identification": "CODE_IDENTIFIES",
+    "temporal_addressing": "CLOCK_DOMAIN_ANCHORS",
+    "admission_authority": "GOVERNANCE_KERNEL",
+    "projection_boundary": "APERTURE_PROJECTS_ALREADY_ADMITTED_SUBGRAPH",
+    "execution_plane": "TRAVERSAL_EXECUTES",
+    "closure_theorem": "CODE_NE_TIME_NE_GOVERNANCE_NE_APERTURE_NE_TRAVERSAL"
+  },
+  "serialization": {
+    "canonical_schema": "G_SMPTE_STANZA_GRAMMAR_v0.2",
+    "canonical_shape": {"schema": "G_SMPTE_STANZA_GRAMMAR_v0.2", "coordinates": [2, 5, 5, 4, 3, 5]},
+    "display_glyph_example": "G2:5:5:4:3:5",
+    "display_glyph_is_canonical_identity": false,
+    "domain": "ADDRESSABLE_STATES",
+    "serialization_confers_admission": false
+  },
+  "graph_validation": {
+    "algorithms": ["KAHN_TOPOLOGICAL_SORT", "DFS_COLOR_VISITATION"],
+    "cycle_condition": "(u,v)_creates_cycle_iff_u_is_reachable_from_v",
+    "cycle_repair_authority": "ZERO",
+    "edge_admission_authority": "ZERO",
+    "operational_state_mutation": "ZERO"
+  },
+  "temporal_coordinate_bundle": {
+    "lifecycle_order": ["epoch_id", "event_ordinal", "parent_event_hash"],
+    "monotonic_clock": ["clock_domain_id", "monotonic_timestamp", "boot_or_session_id"],
+    "media_frame_label": ["st_12_timecode", "frame_rate_numerator", "frame_rate_denominator", "drop_frame_mode", "media_asset_hash"],
+    "network_media_timing": ["rtp_timestamp", "rtp_clock_rate", "stream_identity", "ptp_domain", "grandmaster_identity", "st_2059_profile_identity"],
+    "uncertainty": ["measurement_uncertainty", "synchronization_status"],
+    "identity_law": "ST12_FRAME_LABEL_NE_RTP_TIMESTAMP_NE_PTP_REFERENCE_TIME_NE_LIFECYCLE_EVENT_ORDER"
+  },
+  "execution_boundary": {
+    "fixtures": "SYNTHETIC_ONLY",
+    "fresh_process_per_fixture": true,
+    "fixture_core_expected_answers": "FORBIDDEN",
+    "oracle_visibility_during_evaluation": "PROHIBITED",
+    "graph_mutation": "ZERO",
+    "lifecycle_mutation": "ZERO",
+    "sonic_state_mutation": "ZERO",
+    "physical_execution": "ZERO"
+  },
+  "standing_ceiling": {
+    "reference_validator_contract": "ENGINEERING_EVIDENCE_ONLY",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "PP": "HARD_BLOCKED"
+  }
+}

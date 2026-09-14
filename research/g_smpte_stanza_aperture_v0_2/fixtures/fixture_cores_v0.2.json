@@ -1,0 +1,34 @@
+{
+  "battery_id": "G_SMPTE_STANZA_APERTURE_SYNTHETIC_BATTERY_v0.2",
+  "evaluator_visible": true,
+  "expected_vectors_forbidden": true,
+  "fixtures": [
+    {"fixture_id":"S01","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.2","coordinates":[2,5,5,4,3,5]}},
+       {"fixture_id":"S02","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.2","coordinates":[2,5,5,4,3]}},
+    {"fixture_id":"S03","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.2","coordinates":[2,5,5,4,3,5,1]}},
+    {"fixture_id":"S04","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.2","coordinates":[2,5,"5",4,3,5]}},
+    {"fixture_id":"S05","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.2","coordinates":[2,5,10,4,3,5]}},
+    {"fixture_id":"S06","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.1","coordinates":[2,5,5,4,3,5]}},
+    {"fixture_id":"S07","surface":"SERIALIZATION","input":"G2:5:5:4:3:5"},
+    {"fixture_id":"S08","surface":"SERIALIZATION","input":{"schema":"G_SMPTE_STANZA_GRAMMAR_v0.2","coordinates":[1,0,0,0,0,0],"lifecycle_state":"ORIENTED","admitted":false}},
+
+    {"fixture_id":"G01","surface":"GRAPH","input":{"vertices":["A","B","C"],"edges":[["A","B"],["B","C"]]}},
+    {"fixture_id":"G02","surface":"GRAPH","input":{"vertices":["A","B","C"],"edges":[["A","B"],["A","C"]]}},
+    {"fixture_id":"G03","surface":"GRAPH","input":{"vertices":["A","B","C"],"edges":[["A","C"],["B","C"]]}},
+    {"fixture_id":"G04","surface":"GRAPH","input":{"vertices":["1","2","3"],"edges":[["3","1"]]}},
+    {"fixture_id":"G05","surface":"GRAPH","input":{"vertices":["A","B","C"],"edges":[["A","B"],["B","C"],["C","A"]]}},
+    {"fixture_id":"G06","surface":"GRAPH","input":{"vertices":["A"],"edges":[["A","A"]]}},
+    {"fixture_id":"G07","surface":"GRAPH","input":{"vertices":["A","B","C","D"],"edges":[["A","B"],["C","D"]]}},
+    {"fixture_id":"G08","surface":"GRAPH","input":{"vertices":["A","B"],"edges":[["A","C"]]}},
+    {"fixture_id":"G09","surface":"GRAPH","input":{"vertices":["A","A"],"edges":[]}},
+
+    {"fixture_id":"T01","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"abc"},"previous_event_ordinal":1,"expected_parent_hash":"abc","monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"LOCKED"}}},
+    {"fixture_id":"T02","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":1,"parent_event_hash":"abc"},"previous_event_ordinal":2,"monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"LOCKED"}}},
+    {"fixture_id":"T03","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"wrong"},"expected_parent_hash":"abc","monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"LOCKED"}}},
+    {"fixture_id":"T04","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"abc"},"monotonic_clock":{"clock_domain_id":"C1","comparison_clock_domain_id":"C2","monotonic_timestamp":20,"boot_or_session_id":"B1"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"UNRESOLVED"}}},
+    {"fixture_id":"T05","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"abc"},"monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"media_frame_label":{"st_12_timecode":"23:59:59:29","frame_rate_numerator":30000,"frame_rate_denominator":1001,"drop_frame_mode":true,"media_asset_hash":"asset"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"LOCKED"}}},
+    {"fixture_id":"T06","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"abc"},"monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"media_frame_label":{"st_12_timecode":"00:01:00;00","frame_rate_numerator":30000,"frame_rate_denominator":1001,"drop_frame_mode":true,"media_asset_hash":"asset"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"LOCKED"}}},
+    {"fixture_id":"T07","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"abc"},"monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"network_media_timing":{"rtp_timestamp":42,"stream_identity":"stream"},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"LOCKED"}}},
+    {"fixture_id":"T08","surface":"TEMPORAL","input":{"lifecycle_order":{"epoch_id":"E1","event_ordinal":2,"parent_event_hash":"abc"},"monotonic_clock":{"clock_domain_id":"C1","monotonic_timestamp":20,"boot_or_session_id":"B1"},"network_media_timing":{"ptp_domain":0},"uncertainty":{"measurement_uncertainty":0,"synchronization_status":"UNRESOLVED"}}}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "artifact_id": "G_SMPTE_STANZA_APERTURE_v0.2",
+  "status": "CORRECTED_SPEC_FROZEN_REFERENCE_VALIDATORS_MATERIALIZED",
+  "historical_v0_1": "FROZEN_SUPERSEDED_FOR_IMPLEMENTATION",
+  "synthetic_battery": "PASS_25_OF_25",
+  "evaluator_materialized": true,
+  "evaluator_execution": "SYNTHETIC_ONLY",
+  "graph_mutation": false,
+  "lifecycle_mutation": false,
+  "sonic_state_mutation": false,
+  "physical_execution": false,
+  "standing": {
+    "engineering": "PASS_SYNTHETIC_REFERENCE_CONTRACT",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "PP": "HARD_BLOCKED"
+  }
+}

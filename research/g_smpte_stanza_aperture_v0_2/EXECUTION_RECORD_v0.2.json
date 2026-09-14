@@ -1,0 +1,24 @@
+{
+  "battery_id": "G_SMPTE_STANZA_APERTURE_SYNTHETIC_BATTERY_v0.2",
+  "execution_class": "SYNTHETIC_REFERENCE_VALIDATOR_ONLY",
+  "fixture_execution_mode": "FRESH_PROCESS_PER_FIXTURE",
+  "fixture_core_expected_answers": false,
+  "oracle_loaded_after_all_observations": true,
+  "fixtures": 25,
+  "conformant": 25,
+  "contradicted": 0,
+  "result": "PASS_SYNTHETIC",
+  "mutations": {
+    "graph": false,
+    "lifecycle": false,
+    "sonic_state": false,
+    "physical": false
+  },
+  "standing": {
+    "reference_validator_contract": "CONFORMS_TO_FROZEN_SYNTHETIC_CONTRACT",
+    "scientific": "UNEVALUATED",
+    "physiological": "ZERO",
+    "constitutional": "ZERO",
+    "PP": "HARD_BLOCKED"
+  }
+}

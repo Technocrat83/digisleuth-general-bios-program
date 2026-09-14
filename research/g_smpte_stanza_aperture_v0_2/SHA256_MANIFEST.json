@@ -1,0 +1,15 @@
+{
+  "algorithm": "SHA-256",
+  "files": {
+    "EXECUTION_RECORD_v0.2.json": "e2b9e1a914d9ad14bb562c0fde13facaa9242105b5eabb62a084d583b59622ba",
+    "README.md": "a076265de30c0883708d19e81e0ea467be10d7603c0a5a94dac9b6b022b57341",
+    "SPECIFICATION_v0.2.json": "fbcf2ff7981ecdd79ba4fe1e831daaff35af69191585ce48ba967f65472cd549",
+    "fixtures/fixture_cores_v0.2.json": "10117d70556f48fbddd0bc77a56ef3f491e153250f6ee872fd08642627927b55",
+    "oracle/expected_vectors_v0.2.json": "7dd4e95600454dd5d094e8e3af73fd58d3c1b334683b76031fe498def8f9947c",
+    "run_blind_battery.py": "dd6dccde9ecf41e3ba977ba1dc4a2ec43e94188cd8a3f990e6c4e5c36b9ac659",
+    "src/__init__.py": "c0b1a993d0a5e619777b87cbcd8c7635e876c4e18999e12542a0713774b42542",
+    "src/evaluate_case.py": "faa99549f02282b80a8731e5a0cfb524b3f1c895098f31a77bdf8eed8c352291",
+    "src/validators.py": "babf16130196b69ba1245378812832274dc9257c278c21e1283f4e4ebedb9434"
+  },
+  "manifest_scope": "EXCLUDES_THIS_MANIFEST_AND_MATERIALIZATION_STATE"
+}
