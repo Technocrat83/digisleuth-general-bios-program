@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "artifact_id": "R_EVAL_DISCOVERY_QUERY_FIXTURE_SUITE_v0.1",
+  "version": "v0.1",
+  "classification": "PROSPECTIVE_DISCOVERY_QUERY_FIXTURE_SUITE",
+  "upstream_contract": {
+    "contract_domain": "R_EVAL_FORENSIC_MODEL_v0.1",
+    "discovery_result_schema": {
+      "artifact_id": "R_EVAL_DISCOVERY_RESULT_SCHEMA_v0.1",
+      "sha256": "4b67e1a3809e6c42171ca53a068e63a1c8f186c34b17a1239c4d2627e3d0663f"
+    },
+    "coordinate_evidence_schema": {
+      "artifact_id": "R_EVAL_COORDINATE_EVIDENCE_SCHEMA_v0.1",
+      "sha256": "da2c83d65b77c5c0d294ae07e2c98495a1a0f9a2e3476d05903b29c9cc18bb9d"
+    }
+  },
+  "standing": {
+    "posture": "MATERIALIZED_PRE_EXECUTION_FIXTURE",
+    "orientation_authority": "M_O",
+    "discovery_authority": "PUBLIC_SURFACE_QUERY_ONLY",
+    "authentication_authority": "ZERO",
+    "comparison_authority": "ZERO",
+    "aggregation_authority": "ZERO",
+    "tau_2_petition_authority": "ZERO",
+    "scientific_standing_delta": "ZERO",
+    "capability_delta": "ZERO",
+    "pp_gate": "HARD_BLOCKED"
+  },
+  "governing_separation": "Discovery != Authentication != Comparison != Aggregation != Tau2Petitionability",
+  "required_bindings": {
+    "thinking_model_checkpoint_identifier": {
+      "value": null,
+      "status": "UNBOUND_REQUIRED",
+      "substitution": "PROHIBITED"
+    },
+    "dataset_checkpoint_identifier": {
+      "value": null,
+      "status": "UNBOUND_REQUIRED",
+      "substitution": "PROHIBITED"
+    },
+    "search_window": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "status": "UNBOUND_REQUIRED"
+    },
+    "declared_public_surfaces": {
+      "value": [],
+      "status": "UNBOUND_REQUIRED",
+      "minimum_items": 1
+    }
+  },
+  "execution_gate": {
+    "predicate": "ALL_REQUIRED_BINDINGS_BOUND_AND_VALIDATED",
+    "current_result": "BLOCKED",
+    "on_failure": "HALT_DISCOVERY_FIXTURE_UNBOUND"
+  },
+  "query_fixtures": [
+    {
+      "fixture_id": "DQF_001_THINKING_MODEL_EXACT_IDENTIFIER",
+      "target_coordinate": "THINKING_MODEL_CHECKPOINT_IDENTIFIER",
+      "query_class": "EXACT_LITERAL_DISCOVERY",
+      "query_template": "\"{{thinking_model_checkpoint_identifier}}\"",
+      "allowed_surfaces": "{{declared_public_surfaces}}",
+      "temporal_filter": "{{search_window}}",
+      "result_policy": {
+        "record_zero_results": true,
+        "record_all_exact_hits": true,
+        "semantic_expansion": "PROHIBITED",
+        "authentication_claim": "PROHIBITED"
+      }
+    },
+    {
+      "fixture_id": "DQF_002_DATASET_EXACT_IDENTIFIER",
+      "target_coordinate": "DATASET_CHECKPOINT_IDENTIFIER",
+      "query_class": "EXACT_LITERAL_DISCOVERY",
+      "query_template": "\"{{dataset_checkpoint_identifier}}\"",
+      "allowed_surfaces": "{{declared_public_surfaces}}",
+      "temporal_filter": "{{search_window}}",
+      "result_policy": {
+        "record_zero_results": true,
+        "record_all_exact_hits": true,
+        "semantic_expansion": "PROHIBITED",
+        "authentication_claim": "PROHIBITED"
+      }
+    },
+    {
+      "fixture_id": "DQF_003_CO_OCCURRENCE",
+      "target_coordinate": "CHECKPOINT_PAIR_RELATION",
+      "query_class": "EXACT_PAIR_DISCOVERY",
+      "query_template": "\"{{thinking_model_checkpoint_identifier}}\" \"{{dataset_checkpoint_identifier}}\"",
+      "allowed_surfaces": "{{declared_public_surfaces}}",
+      "temporal_filter": "{{search_window}}",
+      "result_policy": {
+        "record_zero_results": true,
+        "record_all_pair_hits": true,
+        "relation_inference": "PROHIBITED",
+        "authentication_claim": "PROHIBITED"
+      }
+    },
+    {
+      "fixture_id": "DQF_004_DECLARED_RELATION_TERMS",
+      "target_coordinate": "CHECKPOINT_RELATION_CONTEXT",
+      "query_class": "BOUNDED_CONTEXT_DISCOVERY",
+      "query_templates": [
+        "\"{{thinking_model_checkpoint_identifier}}\" (checkpoint OR manifest OR config OR provenance)",
+        "\"{{dataset_checkpoint_identifier}}\" (checkpoint OR manifest OR dataset OR provenance)"
+      ],
+      "allowed_surfaces": "{{declared_public_surfaces}}",
+      "temporal_filter": "{{search_window}}",
+      "result_policy": {
+        "context_terms_are_search_aids_only": true,
+        "identifier_mutation": "PROHIBITED",
+        "candidate_promotion": "PROHIBITED",
+        "authentication_claim": "PROHIBITED"
+      }
+    }
+  ],
+  "result_capture_contract": {
+    "one_result_object_per_query_surface_pair": true,
+    "required_fields": [
+      "fixture_id",
+      "surface_id",
+      "query_as_executed",
+      "execution_timestamp_normalized",
+      "search_window_as_executed",
+      "result_count",
+      "result_locator",
+      "captured_public_metadata",
+      "raw_capture_digest",
+      "discovery_disposition"
+    ],
+    "allowed_discovery_dispositions": [
+      "FOUND_CANDIDATE",
+      "NO_RESULT",
+      "SURFACE_UNAVAILABLE",
+      "QUERY_INVALID",
+      "WINDOW_UNRESOLVED"
+    ],
+    "prohibited_fields": [
+      "authenticated_identity",
+      "equivalence_verdict",
+      "capability_drift_attribution",
+      "tau_2_petitionability"
+    ]
+  },
+  "static_invariants": {
+    "DQI_01": "NO_QUERY_EXECUTION_WHILE_REQUIRED_BINDINGS_UNBOUND",
+    "DQI_02": "ZERO_RESULTS_ARE_PRESERVED_AS_RESULTS",
+    "DQI_03": "DISCOVERY_HIT_DOES_NOT_AUTHENTICATE_IDENTITY",
+    "DQI_04": "QUERY_EXPANSION_CANNOT_MUTATE_TARGET_IDENTIFIER",
+    "DQI_05": "SEARCH_WINDOW_IS_EXPLICIT_AND_REPLAYABLE",
+    "DQI_06": "EVERY_CAPTURE_BINDS_QUERY_SURFACE_AND_TIME",
+    "DQI_07": "DISCOVERY_OUTPUTS_CONFORM_TO_S1_BEFORE_S2_AUTHENTICATION",
+    "DQI_08": "NO_DOWNSTREAM_STAGE_REPAIRS_MISSING_UPSTREAM_BINDINGS"
+  },
+  "next_lawful_transition": {
+    "when": "ALL_REQUIRED_BINDINGS_BOUND_AND_STATIC_VALIDATION_PASS",
+    "action": "EXECUTE_DISCOVERY_QUERY_BATTERY",
+    "output": "R_EVAL_DISCOVERY_RESULT_SCHEMA_v0.1_INSTANCES",
+    "standing_effect": "NONE"
+  }
+}
