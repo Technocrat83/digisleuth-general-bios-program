@@ -1,0 +1,626 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digisleuth.org/schemas/field-tension/v0.3-candidate.json",
+  "title": "FIELD_TENSION_SCHEMA_v0.3_CANDIDATE",
+  "description": "Non-sovereign schema for representing a field-tension transition question, its structural classification, detached verification binding, and governance-null opaque residue.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "parser_identity",
+    "parser_output",
+    "authority_verification_binding",
+    "opaque_payload_register"
+  ],
+  "properties": {
+    "parser_identity": {
+      "type": "string",
+      "pattern": "^PARSER:[A-Z0-9_-]{3,64}$"
+    },
+    "parser_output": {
+      "$ref": "#/$defs/parser_output"
+    },
+    "authority_verification_binding": {
+      "$ref": "#/$defs/authority_verification_binding"
+    },
+    "opaque_payload_register": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/opaque_payload_record"
+      }
+    }
+  },
+  "$defs": {
+    "sha256_lowercase_hex": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "polarity_value": {
+      "type": "string",
+      "enum": [
+        "POSITIVE",
+        "NEGATIVE",
+        "BOTTOM"
+      ]
+    },
+    "polarity_vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "P_identity",
+        "P_orientation",
+        "P_authority",
+        "P_evidence",
+        "P_habitat",
+        "P_dependency",
+        "P_cease"
+      ],
+      "properties": {
+        "P_identity": {
+          "$ref": "#/$defs/polarity_value"
+        },
+        "P_orientation": {
+          "$ref": "#/$defs/polarity_value"
+        },
+        "P_authority": {
+          "$ref": "#/$defs/polarity_value"
+        },
+        "P_evidence": {
+          "$ref": "#/$defs/polarity_value"
+        },
+        "P_habitat": {
+          "$ref": "#/$defs/polarity_value"
+        },
+        "P_dependency": {
+          "$ref": "#/$defs/polarity_value"
+        },
+        "P_cease": {
+          "$ref": "#/$defs/polarity_value"
+        }
+      }
+    },
+    "positive_polarity_vector": {
+      "type": "object",
+      "required": [
+        "P_identity",
+        "P_orientation",
+        "P_authority",
+        "P_evidence",
+        "P_habitat",
+        "P_dependency",
+        "P_cease"
+      ],
+      "properties": {
+        "P_identity": {
+          "const": "POSITIVE"
+        },
+        "P_orientation": {
+          "const": "POSITIVE"
+        },
+        "P_authority": {
+          "const": "POSITIVE"
+        },
+        "P_evidence": {
+          "const": "POSITIVE"
+        },
+        "P_habitat": {
+          "const": "POSITIVE"
+        },
+        "P_dependency": {
+          "const": "POSITIVE"
+        },
+        "P_cease": {
+          "const": "POSITIVE"
+        }
+      }
+    },
+    "negative_polarity_vector": {
+      "type": "object",
+      "anyOf": [
+        {
+          "required": ["P_identity"],
+          "properties": {"P_identity": {"const": "NEGATIVE"}}
+        },
+        {
+          "required": ["P_orientation"],
+          "properties": {"P_orientation": {"const": "NEGATIVE"}}
+        },
+        {
+          "required": ["P_authority"],
+          "properties": {"P_authority": {"const": "NEGATIVE"}}
+        },
+        {
+          "required": ["P_evidence"],
+          "properties": {"P_evidence": {"const": "NEGATIVE"}}
+        },
+        {
+          "required": ["P_habitat"],
+          "properties": {"P_habitat": {"const": "NEGATIVE"}}
+        },
+        {
+          "required": ["P_dependency"],
+          "properties": {"P_dependency": {"const": "NEGATIVE"}}
+        },
+        {
+          "required": ["P_cease"],
+          "properties": {"P_cease": {"const": "NEGATIVE"}}
+        }
+      ]
+    },
+    "bottom_polarity_vector": {
+      "type": "object",
+      "allOf": [
+        {
+          "not": {
+            "$ref": "#/$defs/negative_polarity_vector"
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "required": ["P_identity"],
+              "properties": {"P_identity": {"const": "BOTTOM"}}
+            },
+            {
+              "required": ["P_orientation"],
+              "properties": {"P_orientation": {"const": "BOTTOM"}}
+            },
+            {
+              "required": ["P_authority"],
+              "properties": {"P_authority": {"const": "BOTTOM"}}
+            },
+            {
+              "required": ["P_evidence"],
+              "properties": {"P_evidence": {"const": "BOTTOM"}}
+            },
+            {
+              "required": ["P_habitat"],
+              "properties": {"P_habitat": {"const": "BOTTOM"}}
+            },
+            {
+              "required": ["P_dependency"],
+              "properties": {"P_dependency": {"const": "BOTTOM"}}
+            },
+            {
+              "required": ["P_cease"],
+              "properties": {"P_cease": {"const": "BOTTOM"}}
+            }
+          ]
+        }
+      ]
+    },
+    "transition_question_object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question_id",
+        "source_state",
+        "target_candidate_state",
+        "polarity_vector"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string",
+          "pattern": "^Q:[A-Z0-9_-]{8,32}$"
+        },
+        "source_state": {
+          "type": "string",
+          "const": "ORIENTED_PRESENCE"
+        },
+        "target_candidate_state": {
+          "type": "string",
+          "const": "BOUNDED_EXECUTION"
+        },
+        "polarity_vector": {
+          "$ref": "#/$defs/polarity_vector"
+        }
+      }
+    },
+    "question_with_positive_vector": {
+      "type": "object",
+      "required": ["polarity_vector"],
+      "properties": {
+        "polarity_vector": {
+          "$ref": "#/$defs/positive_polarity_vector"
+        }
+      }
+    },
+    "question_with_negative_vector": {
+      "type": "object",
+      "required": ["polarity_vector"],
+      "properties": {
+        "polarity_vector": {
+          "$ref": "#/$defs/negative_polarity_vector"
+        }
+      }
+    },
+    "question_with_bottom_vector": {
+      "type": "object",
+      "required": ["polarity_vector"],
+      "properties": {
+        "polarity_vector": {
+          "$ref": "#/$defs/bottom_polarity_vector"
+        }
+      }
+    },
+    "standing_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "structural_only",
+        "authority_determined",
+        "evidence_sufficiency_determined",
+        "admission_determined",
+        "execution_authority_determined"
+      ],
+      "properties": {
+        "structural_only": {
+          "type": "boolean",
+          "const": true
+        },
+        "authority_determined": {
+          "type": "boolean",
+          "const": false
+        },
+        "evidence_sufficiency_determined": {
+          "type": "boolean",
+          "const": false
+        },
+        "admission_determined": {
+          "type": "boolean",
+          "const": false
+        },
+        "execution_authority_determined": {
+          "type": "boolean",
+          "const": false
+        }
+      }
+    },
+    "parser_output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_class",
+        "structural_status",
+        "standing_scope",
+        "transition_question"
+      ],
+      "properties": {
+        "output_class": {
+          "type": "string",
+          "const": "TRANSITION_QUESTION"
+        },
+        "structural_status": {
+          "type": "string",
+          "enum": [
+            "STRUCTURALLY_ELIGIBLE_TO_PETITION",
+            "STRUCTURALLY_BLOCKED",
+            "STRUCTURALLY_UNRESOLVED"
+          ]
+        },
+        "standing_scope": {
+          "$ref": "#/$defs/standing_scope"
+        },
+        "transition_question": {
+          "$ref": "#/$defs/transition_question_object"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["transition_question"],
+            "properties": {
+              "transition_question": {
+                "$ref": "#/$defs/question_with_positive_vector"
+              }
+            }
+          },
+          "then": {
+            "required": ["structural_status"],
+            "properties": {
+              "structural_status": {
+                "const": "STRUCTURALLY_ELIGIBLE_TO_PETITION"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["structural_status"],
+            "properties": {
+              "structural_status": {
+                "const": "STRUCTURALLY_ELIGIBLE_TO_PETITION"
+              }
+            }
+          },
+          "then": {
+            "required": ["transition_question"],
+            "properties": {
+              "transition_question": {
+                "$ref": "#/$defs/question_with_positive_vector"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["transition_question"],
+            "properties": {
+              "transition_question": {
+                "$ref": "#/$defs/question_with_negative_vector"
+              }
+            }
+          },
+          "then": {
+            "required": ["structural_status"],
+            "properties": {
+              "structural_status": {
+                "const": "STRUCTURALLY_BLOCKED"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["structural_status"],
+            "properties": {
+              "structural_status": {
+                "const": "STRUCTURALLY_BLOCKED"
+              }
+            }
+          },
+          "then": {
+            "required": ["transition_question"],
+            "properties": {
+              "transition_question": {
+                "$ref": "#/$defs/question_with_negative_vector"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["transition_question"],
+            "properties": {
+              "transition_question": {
+                "$ref": "#/$defs/question_with_bottom_vector"
+              }
+            }
+          },
+          "then": {
+            "required": ["structural_status"],
+            "properties": {
+              "structural_status": {
+                "const": "STRUCTURALLY_UNRESOLVED"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": ["structural_status"],
+            "properties": {
+              "structural_status": {
+                "const": "STRUCTURALLY_UNRESOLVED"
+              }
+            }
+          },
+          "then": {
+            "required": ["transition_question"],
+            "properties": {
+              "transition_question": {
+                "$ref": "#/$defs/question_with_bottom_vector"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "j_receipt_message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "receipt_class",
+        "receipt_id",
+        "subject_question_id",
+        "subject_question_sha256",
+        "verification_result",
+        "verifier_principal_id"
+      ],
+      "properties": {
+        "receipt_class": {
+          "type": "string",
+          "const": "AUTHORITY_VERIFICATION_RECEIPT"
+        },
+        "receipt_id": {
+          "type": "string",
+          "pattern": "^J:[A-Z0-9_-]{8,64}$"
+        },
+        "subject_question_id": {
+          "type": "string",
+          "pattern": "^Q:[A-Z0-9_-]{8,32}$"
+        },
+        "subject_question_sha256": {
+          "$ref": "#/$defs/sha256_lowercase_hex"
+        },
+        "verification_result": {
+          "type": "string",
+          "enum": [
+            "VERIFIED_EXTERNAL",
+            "REJECTED",
+            "UNRESOLVED"
+          ]
+        },
+        "verifier_principal_id": {
+          "type": "string",
+          "pattern": "^VERIFIER:[A-Z0-9_-]{3,64}$"
+        }
+      }
+    },
+    "detached_j_receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_id",
+        "signature_algorithm",
+        "canonicalization",
+        "digest_algorithm",
+        "digest_encoding",
+        "signature_encoding",
+        "key_id",
+        "message",
+        "signature"
+      ],
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "const": "FT_J_SIG_PROFILE_001"
+        },
+        "signature_algorithm": {
+          "type": "string",
+          "const": "ED25519"
+        },
+        "canonicalization": {
+          "type": "string",
+          "const": "RFC_8785_JCS"
+        },
+        "digest_algorithm": {
+          "type": "string",
+          "const": "SHA_256"
+        },
+        "digest_encoding": {
+          "type": "string",
+          "const": "LOWERCASE_HEX"
+        },
+        "signature_encoding": {
+          "type": "string",
+          "const": "BASE64URL_NOPAD"
+        },
+        "key_id": {
+          "type": "string",
+          "pattern": "^KEY:[A-Z0-9_-]{8,64}$"
+        },
+        "message": {
+          "$ref": "#/$defs/j_receipt_message"
+        },
+        "signature": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{86}$"
+        }
+      }
+    },
+    "authority_verification_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verifier_id",
+        "verifier_artifact_digest",
+        "verification_record_digest",
+        "verification_state"
+      ],
+      "properties": {
+        "verifier_id": {
+          "type": "string",
+          "pattern": "^VERIFIER:[A-Z0-9_-]{3,64}$"
+        },
+        "verifier_artifact_digest": {
+          "$ref": "#/$defs/sha256_lowercase_hex"
+        },
+        "verification_record_digest": {
+          "$ref": "#/$defs/sha256_lowercase_hex"
+        },
+        "verification_state": {
+          "type": "string",
+          "enum": [
+            "VERIFIED_EXTERNAL",
+            "REJECTED",
+            "UNRESOLVED"
+          ]
+        },
+        "detached_j_receipt": {
+          "$ref": "#/$defs/detached_j_receipt"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["verification_state"],
+            "properties": {
+              "verification_state": {
+                "const": "VERIFIED_EXTERNAL"
+              }
+            }
+          },
+          "then": {
+            "required": ["detached_j_receipt"],
+            "properties": {
+              "detached_j_receipt": {
+                "required": ["message"],
+                "properties": {
+                  "message": {
+                    "required": ["verification_result"],
+                    "properties": {
+                      "verification_result": {
+                        "const": "VERIFIED_EXTERNAL"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "opaque_payload_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "payload_digest",
+        "payload_media_type",
+        "governance_effect"
+      ],
+      "properties": {
+        "payload_digest": {
+          "$ref": "#/$defs/sha256_lowercase_hex"
+        },
+        "payload_media_type": {
+          "type": "string",
+          "pattern": "^[a-z0-9.+/-]+$"
+        },
+        "governance_effect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "authority",
+            "evidence",
+            "admission",
+            "execution",
+            "predicate_resolution"
+          ],
+          "properties": {
+            "authority": {
+              "type": "string",
+              "const": "NONE"
+            },
+            "evidence": {
+              "type": "string",
+              "const": "NONE"
+            },
+            "admission": {
+              "type": "string",
+              "const": "NONE"
+            },
+            "execution": {
+              "type": "string",
+              "const": "NONE"
+            },
+            "predicate_resolution": {
+              "type": "string",
+              "const": "NONE"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "receipt_id": "FIELD_TENSION_SCHEMA_v0.3_STATIC_CLOSURE_RECEIPT_v0.1",
+  "target": {
+    "artifact": "FIELD_TENSION_SCHEMA_v0.3_CANDIDATE.json",
+    "byte_length": 16254,
+    "sha256": "43a6e7f6e91187a2de0ee6343b5214ce21893cd643ba98a962a0850d84d8ba77"
+  },
+  "source_binding": {
+    "artifact": "Pasted markdown(7).md",
+    "byte_length": 14834,
+    "sha256": "05d6ab716caf957c3db4b383d4dd5a1cb10fbd304c1bb337b1779345af5b4bc5",
+    "annotation_residue_observed_in_source": true,
+    "annotation_residue_present_in_target": false
+  },
+  "historical_anchor": {
+    "artifact": "FIELD_TENSION_ADVERSARIAL_FIXTURE_CONTRACT_v0.1.json",
+    "fixture_definitions": 26,
+    "byte_length": 13102,
+    "sha256": "344e8c6d43478ce0af6b6f04909dee93832f5afa9ad1ce0cff7e793032c7ca32"
+  },
+  "standing": "LOCAL_STATIC_CLOSURE_PASS_WITH_VALIDATOR_SCOPE_CLAMP",
+  "epistemic_clamps": {
+    "scientific_evidence_delta": "ZERO",
+    "constitutional_delta": "ZERO",
+    "execution_authority": "ZERO",
+    "canon_delta": "ZERO",
+    "admission_authority": "ZERO",
+    "pp_gate": "HARD_BLOCKED"
+  },
+  "execution_boundary": {
+    "network_access": "NOT_USED",
+    "external_calls": "NOT_USED",
+    "parser_execution": "NOT_PERFORMED",
+    "specimens_materialized": false,
+    "signatures_created": false,
+    "keys_created": false,
+    "git_delta": "ZERO"
+  },
+  "validator": {
+    "kind": "PURPOSE_BUILT_JSON_SCHEMA_SUBSET_EVALUATOR",
+    "scope": "ALL_ASSERTION_KEYWORDS_USED_BY_TARGET_SCHEMA",
+    "supported_keywords": [
+      "$ref",
+      "type",
+      "additionalProperties",
+      "required",
+      "properties",
+      "enum",
+      "const",
+      "pattern",
+      "items",
+      "allOf",
+      "anyOf",
+      "not",
+      "if",
+      "then"
+    ],
+    "annotation_keywords_ignored_for_instance_evaluation": [
+      "$schema",
+      "$id",
+      "$defs",
+      "title",
+      "description"
+    ],
+    "local_references_resolved": 29,
+    "official_draft_2020_12_metaschema_validation": "NOT_EXECUTED_VALIDATOR_UNAVAILABLE",
+    "scope_effect": "The receipt proves the enumerated and regression properties under the target's used assertion-keyword subset; it does not constitute independent certification by a general-purpose Draft 2020-12 implementation."
+  },
+  "byte_checks": {
+    "json_parse": "PASS",
+    "duplicate_keys": "NONE",
+    "annotation_residue": "NONE"
+  },
+  "sr8_exhaustive_result": {
+    "dimensions": 7,
+    "domain": [
+      "POSITIVE",
+      "NEGATIVE",
+      "BOTTOM"
+    ],
+    "vectors_evaluated": 2187,
+    "candidate_statuses_per_vector": 3,
+    "vector_status_pairs_evaluated": 6561,
+    "valid_pairs": 2187,
+    "invalid_pairs": 4374,
+    "classification_errors": 0,
+    "accepted_partition_counts": {
+      "STRUCTURALLY_ELIGIBLE_TO_PETITION": 1,
+      "STRUCTURALLY_BLOCKED": 2059,
+      "STRUCTURALLY_UNRESOLVED": 127
+    },
+    "exactly_one_status_per_vector": true,
+    "path_binding": "parser_output.transition_question.polarity_vector",
+    "vacuous_condition_guards_present": true,
+    "result": "PASS_EXHAUSTIVE"
+  },
+  "static_regression_result": {
+    "checks_executed": 17,
+    "failures": 0,
+    "coverage": [
+      "SR1_VERIFIED_EXTERNAL_REQUIRES_RECEIPT_SHAPE",
+      "SR2_STANDING_SCOPE_CLAMPS",
+      "SR3_OPAQUE_GOVERNANCE_NULLITY",
+      "SR5_FORBIDDEN_OUTPUT_PROPERTIES",
+      "SR8_POSITIVE_NEGATIVE_BOTTOM_CLASSIFICATION",
+      "SR8_REQUIRED_PROPERTY_OMISSIONS",
+      "SR8_POLARITY_PATH_DRIFT"
+    ],
+    "result": "PASS"
+  },
+  "gate_evaluations": {
+    "SR1": {
+      "schema_surface": "PASS",
+      "overall": "DETACHED_SIGNATURE_VALIDATION_REQUIRED"
+    },
+    "SR2": {
+      "schema_surface": "PASS",
+      "overall": "PASS"
+    },
+    "SR3": {
+      "schema_surface": "PASS",
+      "overall": "PASS"
+    },
+    "SR4": {
+      "schema_surface": "NOT_DECISIVE",
+      "overall": "DETACHED_IMPLEMENTATION_VALIDATION_REQUIRED"
+    },
+    "SR5": {
+      "schema_surface": "PASS",
+      "overall": "CANDIDATE_RECONCILED"
+    },
+    "SR6": {
+      "schema_surface": "SHAPE_ONLY",
+      "overall": "DETACHED_DIGEST_AND_SIGNATURE_VALIDATION_REQUIRED"
+    },
+    "SR7": {
+      "schema_surface": "NOT_DECISIVE",
+      "overall": "DETACHED_PRINCIPAL_INDEPENDENCE_VALIDATION_REQUIRED"
+    },
+    "SR8": {
+      "schema_surface": "PASS_EXHAUSTIVE",
+      "overall": "CANDIDATE_RECONCILED"
+    }
+  },
+  "signature_profile": {
+    "profile_id": "FT_J_SIG_PROFILE_001",
+    "signature_algorithm": "ED25519",
+    "canonicalization": "RFC_8785_JCS",
+    "digest_algorithm": "SHA_256",
+    "digest_encoding": "LOWERCASE_HEX",
+    "signature_encoding": "BASE64URL_NOPAD",
+    "standing": "PROFILE_FROZEN_CANDIDATE",
+    "cryptographic_verification_performed": false
+  },
+  "frontier": {
+    "candidate_schema_assembly": "COMPLETE",
+    "local_static_closure": "PASS_WITH_VALIDATOR_SCOPE_CLAMP",
+    "general_purpose_draft_2020_12_validation": "REQUIRED_BEFORE_SEAL",
+    "adversarial_specimen_materialization": "BLOCKED",
+    "rfc_8785_canonicalization": "BLOCKED",
+    "byte_seal": "BLOCKED",
+    "detached_harness_execution": "BLOCKED"
+  },
+  "lawful_next_operation": "VALIDATE_EXACT_SCHEMA_BYTES_WITH_AN_INDEPENDENT_GENERAL_PURPOSE_DRAFT_2020_12_VALIDATOR"
+}
