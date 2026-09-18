@@ -1,0 +1,419 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digisleuth.com/schemas/FIELD_TENSION_ANOMALOUS_EXECUTION_PARSING_PACKAGE_SCHEMA_v0.1.json",
+  "title": "Field-Tension Anomalous Execution Parsing Package",
+  "description": "Non-sovereign pre-execution schema for representing observed tension, predicate evaluation, transition disposition, and routing without repair, admission, certification, signing, execution, or constitutional mutation authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_identity",
+    "standing",
+    "ontology_accounting",
+    "observation_context",
+    "observed_field_tension",
+    "predicate_evaluation",
+    "transition_question",
+    "routing",
+    "provenance"
+  ],
+  "properties": {
+    "schema_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_id", "version", "thesis_id", "apparatus_id"],
+      "properties": {
+        "schema_id": {"const": "FIELD_TENSION_ANOMALOUS_EXECUTION_PARSING_PACKAGE_SCHEMA"},
+        "version": {"const": "v0.1"},
+        "thesis_id": {"const": "DIGISLEUTH_BIOMIMETIC_COMPUTATIONAL_TWIN_THESIS_v0.1"},
+        "apparatus_id": {"const": "FIELD_TENSION_ANOMALOUS_EXECUTION_PARSING_PACKAGE_v0.1"}
+      }
+    },
+    "standing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "class",
+        "scientific_evidence_delta",
+        "constitutional_delta",
+        "execution_authority",
+        "admission_authority",
+        "repair_authority",
+        "canon_delta",
+        "pp_gate"
+      ],
+      "properties": {
+        "class": {"const": "PRE_EXECUTION_ORIENTATION_AND_ADMISSION_APPARATUS"},
+        "scientific_evidence_delta": {"const": "ZERO"},
+        "constitutional_delta": {"const": "ZERO"},
+        "execution_authority": {"const": "ZERO"},
+        "admission_authority": {"const": "ZERO"},
+        "repair_authority": {"const": "ZERO"},
+        "canon_delta": {"const": "ZERO"},
+        "pp_gate": {"const": "BLOCKED"}
+      }
+    },
+    "ontology_accounting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["states", "events", "artifacts", "authorities", "cardinality_law"],
+      "properties": {
+        "states": {
+          "const": ["CANDIDATE", "ADMITTED", "VERIFIED_BOOT", "ORIENTED", "EXECUTING", "TERMINATED"]
+        },
+        "events": {
+          "const": ["ENTRY", "BOOT", "ORIENT", "PETITION", "AUTHORITY_BINDING", "EXECUTION_START", "CEASE", "REORIENT", "ESCALATE"]
+        },
+        "artifacts": {
+          "const": ["PETITION_RECORD", "AUTHORITY_RECEIPT", "WITNESS_RECORD", "ADJUDICATION_RECORD"]
+        },
+        "authorities": {
+          "const": ["ORIENTATION", "PETITION", "CERTIFICATION", "ADMISSION", "SIGNING", "EXECUTION", "CEASE", "ADJUDICATION"]
+        },
+        "cardinality_law": {"const": "STATES_NE_TRANSITIONS_NE_AUTHORITIES"}
+      }
+    },
+    "observation_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observation_id",
+        "organism_id",
+        "constitutional_field_id",
+        "habitat_id",
+        "observed_at",
+        "source_evidence"
+      ],
+      "properties": {
+        "observation_id": {"$ref": "#/$defs/opaqueId"},
+        "organism_id": {"$ref": "#/$defs/opaqueId"},
+        "constitutional_field_id": {"$ref": "#/$defs/opaqueId"},
+        "habitat_id": {"$ref": "#/$defs/opaqueId"},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "source_evidence": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/evidenceReference"}
+        }
+      }
+    },
+    "observed_field_tension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["organism_state", "field_state", "tension_vector", "aggregate_posture"],
+      "properties": {
+        "organism_state": {"$ref": "#/$defs/stateVector"},
+        "field_state": {"$ref": "#/$defs/stateVector"},
+        "tension_vector": {"$ref": "#/$defs/tensionVector"},
+        "aggregate_posture": {
+          "enum": ["CONGRUENT", "ANOMALOUS", "UNRESOLVED"]
+        }
+      }
+    },
+    "predicate_evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evaluation_id", "predicate_vector", "evaluation_method", "evaluated_at"],
+      "properties": {
+        "evaluation_id": {"$ref": "#/$defs/opaqueId"},
+        "predicate_vector": {"$ref": "#/$defs/predicateVector"},
+        "evaluation_method": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Identifier for a previously declared deterministic evaluation method; not executable code."
+        },
+        "evaluated_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "transition_question": {
+      "allOf": [
+        {"$ref": "#/$defs/transitionQuestionBase"},
+        {
+          "if": {
+            "properties": {"transition_disposition": {"const": "ADMISSIBLE"}},
+            "required": ["transition_disposition"]
+          },
+          "then": {
+            "properties": {
+              "predicate_snapshot": {"$ref": "#/$defs/allPositivePredicateVector"},
+              "blocking_dimensions": {"maxItems": 0}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {"transition_disposition": {"const": "FAIL_CLOSED"}},
+            "required": ["transition_disposition"]
+          },
+          "then": {
+            "properties": {
+              "predicate_snapshot": {"$ref": "#/$defs/nonPositivePredicateVector"},
+              "blocking_dimensions": {"minItems": 1}
+            }
+          }
+        },
+        {"$ref": "#/$defs/lifecycleTransitionConstraint"}
+      ]
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route", "recipient_authority", "resolution_authority", "automatic_execution"],
+      "properties": {
+        "route": {
+          "enum": ["PETITION", "REORIENT", "ESCALATE", "CEASE", "NO_ACTION"]
+        },
+        "recipient_authority": {"$ref": "#/$defs/authorityClass"},
+        "resolution_authority": {
+          "const": "EXTERNAL_TO_PARSER"
+        },
+        "automatic_execution": {"const": false},
+        "petition_record_id": {"$ref": "#/$defs/opaqueId"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_digest", "parser_version", "output_digest_status", "digest_scope", "lineage_refs"],
+      "properties": {
+        "input_digest": {"$ref": "#/$defs/sha256"},
+        "parser_version": {"type": "string", "minLength": 1},
+        "output_digest_status": {"enum": ["UNSEALED", "SEALED"]},
+        "digest_scope": {
+          "const": "RFC8785_CANONICAL_INSTANCE_EXCLUDING_PROVENANCE_OUTPUT_DIGEST"
+        },
+        "output_digest": {"$ref": "#/$defs/sha256"},
+        "lineage_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/opaqueId"}
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"output_digest_status": {"const": "SEALED"}},
+            "required": ["output_digest_status"]
+          },
+          "then": {"required": ["output_digest"]},
+          "else": {"not": {"required": ["output_digest"]}}
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "opaqueId": {
+      "type": "string",
+      "pattern": "^[A-Z0-9][A-Z0-9_.:-]{2,127}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "authorityClass": {
+      "enum": ["ORIENTATION", "PETITION", "CERTIFICATION", "ADMISSION", "SIGNING", "EXECUTION", "CEASE", "ADJUDICATION"]
+    },
+    "lifecycleState": {
+      "enum": ["CANDIDATE", "ADMITTED", "VERIFIED_BOOT", "ORIENTED", "EXECUTING", "TERMINATED"]
+    },
+    "polarity": {
+      "enum": ["POSITIVE", "NEGATIVE", "BOTTOM"]
+    },
+    "evidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "digest", "relationship"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/opaqueId"},
+        "digest": {"$ref": "#/$defs/sha256"},
+        "relationship": {
+          "enum": ["DIRECT_OBSERVATION", "CONSTRAINT_SOURCE", "STATE_WITNESS", "AUTHORITY_RECEIPT"]
+        }
+      }
+    },
+    "stateVector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state_id", "lifecycle_state", "coordinates", "evidence_refs"],
+      "properties": {
+        "state_id": {"$ref": "#/$defs/opaqueId"},
+        "lifecycle_state": {"$ref": "#/$defs/lifecycleState"},
+        "coordinates": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": ["string", "number", "integer", "boolean", "null", "array", "object"]
+          }
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/opaqueId"}
+        }
+      }
+    },
+    "tensionCoordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension", "organism_value", "field_requirement", "relation", "evidence_refs"],
+      "properties": {
+        "dimension": {
+          "enum": ["IDENTITY", "ORIENTATION", "AUTHORITY", "EVIDENCE", "HABITAT", "CEASE"]
+        },
+        "organism_value": {},
+        "field_requirement": {},
+        "relation": {"enum": ["CONGRUENT", "ANOMALOUS", "UNRESOLVED"]},
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/opaqueId"}
+        }
+      }
+    },
+    "tensionVector": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {"$ref": "#/$defs/tensionCoordinate"},
+      "allOf": [
+        {"contains": {"properties": {"dimension": {"const": "IDENTITY"}}, "required": ["dimension"]}, "minContains": 1, "maxContains": 1},
+        {"contains": {"properties": {"dimension": {"const": "ORIENTATION"}}, "required": ["dimension"]}, "minContains": 1, "maxContains": 1},
+        {"contains": {"properties": {"dimension": {"const": "AUTHORITY"}}, "required": ["dimension"]}, "minContains": 1, "maxContains": 1},
+        {"contains": {"properties": {"dimension": {"const": "EVIDENCE"}}, "required": ["dimension"]}, "minContains": 1, "maxContains": 1},
+        {"contains": {"properties": {"dimension": {"const": "HABITAT"}}, "required": ["dimension"]}, "minContains": 1, "maxContains": 1},
+        {"contains": {"properties": {"dimension": {"const": "CEASE"}}, "required": ["dimension"]}, "minContains": 1, "maxContains": 1}
+      ]
+    },
+    "predicateCoordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["polarity", "basis", "evidence_refs"],
+      "properties": {
+        "polarity": {"$ref": "#/$defs/polarity"},
+        "basis": {"type": "string", "minLength": 1},
+        "evidence_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/opaqueId"}
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"polarity": {"const": "POSITIVE"}}, "required": ["polarity"]},
+          "then": {"properties": {"evidence_refs": {"minItems": 1}}}
+        }
+      ]
+    },
+    "predicateVector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["P_identity", "P_orientation", "P_authority", "P_evidence", "P_habitat", "P_cease"],
+      "properties": {
+        "P_identity": {"$ref": "#/$defs/predicateCoordinate"},
+        "P_orientation": {"$ref": "#/$defs/predicateCoordinate"},
+        "P_authority": {"$ref": "#/$defs/predicateCoordinate"},
+        "P_evidence": {"$ref": "#/$defs/predicateCoordinate"},
+        "P_habitat": {"$ref": "#/$defs/predicateCoordinate"},
+        "P_cease": {"$ref": "#/$defs/predicateCoordinate"}
+      }
+    },
+    "allPositivePredicateVector": {
+      "allOf": [
+        {"$ref": "#/$defs/predicateVector"},
+        {
+          "properties": {
+            "P_identity": {"properties": {"polarity": {"const": "POSITIVE"}}},
+            "P_orientation": {"properties": {"polarity": {"const": "POSITIVE"}}},
+            "P_authority": {"properties": {"polarity": {"const": "POSITIVE"}}},
+            "P_evidence": {"properties": {"polarity": {"const": "POSITIVE"}}},
+            "P_habitat": {"properties": {"polarity": {"const": "POSITIVE"}}},
+            "P_cease": {"properties": {"polarity": {"const": "POSITIVE"}}}
+          }
+        }
+      ]
+    },
+    "nonPositivePredicateVector": {
+      "allOf": [
+        {"$ref": "#/$defs/predicateVector"},
+        {
+          "anyOf": [
+            {"properties": {"P_identity": {"properties": {"polarity": {"enum": ["NEGATIVE", "BOTTOM"]}}}}},
+            {"properties": {"P_orientation": {"properties": {"polarity": {"enum": ["NEGATIVE", "BOTTOM"]}}}}},
+            {"properties": {"P_authority": {"properties": {"polarity": {"enum": ["NEGATIVE", "BOTTOM"]}}}}},
+            {"properties": {"P_evidence": {"properties": {"polarity": {"enum": ["NEGATIVE", "BOTTOM"]}}}}},
+            {"properties": {"P_habitat": {"properties": {"polarity": {"enum": ["NEGATIVE", "BOTTOM"]}}}}},
+            {"properties": {"P_cease": {"properties": {"polarity": {"enum": ["NEGATIVE", "BOTTOM"]}}}}}
+          ]
+        }
+      ]
+    },
+    "transitionQuestionBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "question_id",
+        "from_state",
+        "proposed_event",
+        "proposed_to_state",
+        "predicate_snapshot",
+        "transition_disposition",
+        "blocking_dimensions",
+        "authority_receipt_status"
+      ],
+      "properties": {
+        "question_id": {"$ref": "#/$defs/opaqueId"},
+        "from_state": {"$ref": "#/$defs/lifecycleState"},
+        "proposed_event": {
+          "enum": ["ENTRY", "BOOT", "ORIENT", "PETITION", "AUTHORITY_BINDING", "EXECUTION_START", "CEASE", "REORIENT", "ESCALATE"]
+        },
+        "proposed_to_state": {"$ref": "#/$defs/lifecycleState"},
+        "predicate_snapshot": {"$ref": "#/$defs/predicateVector"},
+        "transition_disposition": {"enum": ["ADMISSIBLE", "FAIL_CLOSED"]},
+        "blocking_dimensions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"enum": ["P_identity", "P_orientation", "P_authority", "P_evidence", "P_habitat", "P_cease"]}
+        },
+        "authority_receipt_status": {"enum": ["VALID", "INVALID", "ABSENT", "NOT_REQUIRED"]},
+        "authority_receipt_id": {"$ref": "#/$defs/opaqueId"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"authority_receipt_status": {"const": "VALID"}}, "required": ["authority_receipt_status"]},
+          "then": {"required": ["authority_receipt_id"]},
+          "else": {"not": {"required": ["authority_receipt_id"]}}
+        },
+        {
+          "if": {"properties": {"proposed_event": {"const": "EXECUTION_START"}}, "required": ["proposed_event"]},
+          "then": {"properties": {"authority_receipt_status": {"const": "VALID"}}}
+        }
+      ]
+    },
+    "lifecycleTransitionConstraint": {
+      "anyOf": [
+        {"properties": {"from_state": {"const": "CANDIDATE"}, "proposed_event": {"const": "ENTRY"}, "proposed_to_state": {"const": "ADMITTED"}}},
+        {"properties": {"from_state": {"const": "ADMITTED"}, "proposed_event": {"const": "BOOT"}, "proposed_to_state": {"const": "VERIFIED_BOOT"}}},
+        {"properties": {"from_state": {"const": "VERIFIED_BOOT"}, "proposed_event": {"const": "ORIENT"}, "proposed_to_state": {"const": "ORIENTED"}}},
+        {"properties": {"from_state": {"const": "ORIENTED"}, "proposed_event": {"const": "PETITION"}, "proposed_to_state": {"const": "ORIENTED"}}},
+        {"properties": {"from_state": {"const": "ORIENTED"}, "proposed_event": {"const": "AUTHORITY_BINDING"}, "proposed_to_state": {"const": "ORIENTED"}}},
+        {"properties": {"from_state": {"const": "ORIENTED"}, "proposed_event": {"const": "EXECUTION_START"}, "proposed_to_state": {"const": "EXECUTING"}}},
+        {"properties": {"from_state": {"enum": ["CANDIDATE", "ADMITTED", "VERIFIED_BOOT", "ORIENTED", "EXECUTING"]}, "proposed_event": {"const": "CEASE"}, "proposed_to_state": {"const": "TERMINATED"}}},
+        {"properties": {"from_state": {"enum": ["ADMITTED", "VERIFIED_BOOT", "ORIENTED"]}, "proposed_event": {"const": "REORIENT"}, "proposed_to_state": {"const": "ORIENTED"}}},
+        {"properties": {"from_state": {"enum": ["CANDIDATE", "ADMITTED", "VERIFIED_BOOT", "ORIENTED", "EXECUTING"]}, "proposed_event": {"const": "ESCALATE"}, "proposed_to_state": {"enum": ["CANDIDATE", "ADMITTED", "VERIFIED_BOOT", "ORIENTED", "EXECUTING"]}}}
+      ]
+    }
+  },
+  "x-digisleuth-invariants": [
+    "OBSERVED_FIELD_TENSION_NE_PREDICATE_EVALUATION",
+    "PREDICATE_EVALUATION_NE_TRANSITION_DISPOSITION",
+    "TRANSITION_DISPOSITION_NE_RESOLUTION_AUTHORITY",
+    "MODELED_MORPHOLOGY_NE_SOURCE_SOVEREIGNTY",
+    "UNRESOLVED_NE_AUTHORIZED",
+    "NOT_FALSE_NE_TRUE",
+    "NO_DOWNSTREAM_STAGE_MAY_REPAIR_AN_UPSTREAM_DEFICIENCY",
+    "CEASE_REACHABLE_FROM_EVERY_NONTERMINAL_STATE"
+  ]
+}
