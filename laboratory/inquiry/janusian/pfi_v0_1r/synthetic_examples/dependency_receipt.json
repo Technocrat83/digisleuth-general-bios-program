@@ -1,0 +1,12 @@
+{
+  "authority_delta": 0,
+  "candidate_digest": "f69b861bd9317ce96f303cb191dcc2abbbbaf028df6e305a884a6faf6997a82b",
+  "dependency_id": "D1",
+  "disposition": "SATISFIED",
+  "pfi_id": "SYNTHETIC_PFI_001",
+  "receipt_id": "SYNTHETIC_D1",
+  "receipt_type": "PFI_DEPENDENCY_RECEIPT",
+  "review_artifact_digest": "2b7ee5c5b2f1d1f3472a49ac197757c4a34eede9ad8c4b3f567e8d20ae1e786b",
+  "reviewer_identity": "SYNTHETIC_REVIEWER",
+  "verification_standing": "DETACHED_VERIFICATION_REQUIRED"
+}

@@ -1,0 +1,128 @@
+{
+  "admission_dependencies": [
+    {
+      "dependency_id": "D1",
+      "dependency_type": "EXTERNAL_REVIEW",
+      "description": "Externally authenticated readiness dependency.",
+      "required": true,
+      "scope": "PFI_READINESS"
+    },
+    {
+      "dependency_id": "D2",
+      "dependency_type": "JURISDICTION_CHECK",
+      "description": "Deferred to governance; no authorization implied.",
+      "required": true,
+      "scope": "GOVERNANCE_REVIEW"
+    }
+  ],
+  "assumptions": [
+    {
+      "assumption_id": "A1",
+      "assumption_type": "SEMANTIC",
+      "standing": "UNEXAMINED",
+      "standing_basis": "Stipulated synthetic definition; no external corroboration asserted.",
+      "statement": "Integer excludes boolean."
+    }
+  ],
+  "candidate": {
+    "proposition": "A declared integer domain can be partitioned into four typed outcomes."
+  },
+  "constructive_pole": {
+    "invariants": [],
+    "minimal_model": "Three disjoint integer ranges and a complement of the integer domain.",
+    "possible_worlds": [
+      {
+        "boundary_conditions": [
+          "Mathematical integers, excluding booleans."
+        ],
+        "predicted_consequences": [
+          "Exactly one classification applies to each input."
+        ],
+        "world_id": "W1"
+      }
+    ],
+    "statement": "A typed partition is possible."
+  },
+  "destructive_pole": {
+    "failure_surfaces": [
+      {
+        "affected_claim": "candidate.proposition",
+        "consequence": "DEFINITIONAL_FAILURE",
+        "explanation": "The mathematical domain and host language types may disagree.",
+        "failure_id": "F1",
+        "trigger": "Boolean accepted as integer."
+      }
+    ],
+    "role": "DEFEATER",
+    "statement": "Ambiguous integer typing can make the classifier overlap."
+  },
+  "discrimination_vector": [
+    {
+      "collapse_requirement": {
+        "acquisition_or_design_obligation": "Downstream formal review must bind definitions.",
+        "against_minus": "A proof removes the alleged overlap in the stated domain.",
+        "against_plus": "An input satisfies two outcome predicates.",
+        "alternative_space": "Incomplete coverage could defeat both narratives.",
+        "alternatives_exhaustive": false,
+        "blindness_declaration": "Not applicable to this synthetic formal example.",
+        "conditions": {
+          "ABSTAIN": {
+            "condition": "Input is an integer greater than zero.",
+            "outcome": "ABSTAIN"
+          },
+          "FAIL": {
+            "condition": "Input is an integer greater than zero.",
+            "outcome": "FAIL"
+          },
+          "INVALID": {
+            "condition": "Input is not an integer; booleans are excluded from integers.",
+            "outcome": "INVALID"
+          },
+          "PASS": {
+            "condition": "Input is an integer equal to zero.",
+            "outcome": "PASS"
+          }
+        },
+        "confounder_declaration": "Host language boolean/integer coercion must be excluded.",
+        "expected_under_minus": "A countermodel exploiting typing ambiguity.",
+        "expected_under_plus": "A proof of all intersections empty.",
+        "investigation_type": "FORMAL_PROOF",
+        "observable_metric": "Proof obligations for typed domain coverage.",
+        "operational_definition": "Check all six intersections and union coverage.",
+        "question": "Do the predicates partition the declared domain?",
+        "scope_and_limits": "A toy mathematical classifier; no physical claims.",
+        "target_of_success": "Partition completeness and disjointness.",
+        "units_or_not_applicable": "NOT_APPLICABLE"
+      },
+      "negative_claim": "Ambiguous typing permits overlap.",
+      "positive_claim": "The partition is disjoint.",
+      "separation_basis": "MISSING_PROOF",
+      "separation_description": "Need proof relative to an explicit integer definition.",
+      "tension_id": "T1"
+    }
+  ],
+  "epistemic_membrane": {
+    "adjudication_power": "ZERO",
+    "authority_delta_claimed": 0,
+    "evidence_delta_claimed": 0,
+    "investigation_authority": "ZERO",
+    "truth_delta_claimed": 0
+  },
+  "pfi_identity": {
+    "candidate_id": "SYNTHETIC_C_001",
+    "pfi_id": "SYNTHETIC_PFI_001",
+    "source_chamber": "JANUSIAN_THINKING_CHAMBER",
+    "source_method": "EINSTEIN_SOCRATES"
+  },
+  "provenance": {
+    "source_digest": "fe1160cd52e31c80f83706f282859afbc72ccda89bc0e54b043b4e21b67076e5",
+    "source_digest_domain": "SHA256_EXACT_BYTES",
+    "source_janusian_object_id": "SYNTHETIC_J_001"
+  },
+  "schema_identity": {
+    "artifact_class": "EPISTEMIC_PETITION_CANDIDATE",
+    "schema_id": "PETITION_FOR_INVESTIGATION_CANDIDATE",
+    "schema_version": "0.1r",
+    "standing": "UNADMITTED_CANDIDATE"
+  }
+}

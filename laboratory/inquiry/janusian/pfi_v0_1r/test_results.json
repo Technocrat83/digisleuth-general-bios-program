@@ -1,0 +1,211 @@
+{
+  "cases": [
+    {
+      "actual": "PFI_READY",
+      "case": "SPECIMEN_01_READY",
+      "expected": "PFI_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "SPECIMEN_02_NOT_READY",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "SPECIMEN_03_ABSTAIN_FAULT",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "EPISTEMIC_MEMBRANE_VIOLATION",
+      "case": "SPECIMEN_04_INVALID_MEMBRANE",
+      "expected": "EPISTEMIC_MEMBRANE_VIOLATION",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "pair_PASS_FAIL",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "pair_PASS_ABSTAIN",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "pair_PASS_INVALID",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "pair_FAIL_ABSTAIN",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "pair_FAIL_INVALID",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "pair_ABSTAIN_INVALID",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "default_denies",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "untrusted_string_identity",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "candidate_byte_change",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "source_mismatch",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "missing_separation",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "missing_dependency",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "duplicate_dependency_receipt",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "artifact_mismatch",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "invalid_json",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "duplicate_json_keys",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "whitespace",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "embedded_review",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "boolean_zero",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "duplicate_tension_id",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SYNTACTICALLY_INVALID",
+      "case": "wrong_outcome_label",
+      "expected": "SYNTACTICALLY_INVALID",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "SEMANTICALLY_UNREVIEWABLE",
+      "case": "semantic_overlap_detached_review",
+      "expected": "SEMANTICALLY_UNREVIEWABLE",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "semantic_unknown",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "EPISTEMIC_MEMBRANE_VIOLATION",
+      "case": "semantic_membrane_violation",
+      "expected": "EPISTEMIC_MEMBRANE_VIOLATION",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    },
+    {
+      "actual": "PFI_NOT_READY",
+      "case": "verifier_exception",
+      "expected": "PFI_NOT_READY",
+      "passed": true,
+      "scope": "SYNTHETIC_ORCHESTRATION_TEST"
+    }
+  ],
+  "governance_admission_implemented": false,
+  "passed": 29,
+  "real_review_events": 0,
+  "tests": 29
+}

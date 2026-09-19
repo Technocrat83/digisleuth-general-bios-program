@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receipt_type",
+    "receipt_id",
+    "pfi_id",
+    "candidate_digest",
+    "reviewer_identity",
+    "review_artifact_digest",
+    "verification_standing",
+    "scope",
+    "authority_delta",
+    "admission_granted",
+    "investigation_authorized",
+    "execution_requested"
+  ],
+  "properties": {
+    "receipt_type": {
+      "const": "AUTHORITY_SEPARATION_RECEIPT"
+    },
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "pfi_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "candidate_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewer_identity": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "review_artifact_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "verification_standing": {
+      "const": "DETACHED_VERIFICATION_REQUIRED"
+    },
+    "scope": {
+      "const": "PFI_EVALUATOR_OUTPUT_ONLY"
+    },
+    "authority_delta": {
+      "const": 0
+    },
+    "admission_granted": {
+      "const": false
+    },
+    "investigation_authorized": {
+      "const": false
+    },
+    "execution_requested": {
+      "const": false
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:AUTHORITY_SEPARATION_RECEIPT:0.1r",
+  "title": "AUTHORITY_SEPARATION_RECEIPT"
+}

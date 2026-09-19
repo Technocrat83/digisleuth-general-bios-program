@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "receipt_type",
+    "receipt_id",
+    "pfi_id",
+    "candidate_digest",
+    "reviewer_identity",
+    "review_artifact_digest",
+    "verification_standing",
+    "dependency_id",
+    "disposition",
+    "authority_delta"
+  ],
+  "properties": {
+    "receipt_type": {
+      "const": "PFI_DEPENDENCY_RECEIPT"
+    },
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "pfi_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "candidate_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewer_identity": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "review_artifact_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "verification_standing": {
+      "const": "DETACHED_VERIFICATION_REQUIRED"
+    },
+    "dependency_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "disposition": {
+      "enum": [
+        "SATISFIED",
+        "UNRESOLVED"
+      ]
+    },
+    "authority_delta": {
+      "const": 0
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:PFI_DEPENDENCY_RECEIPT:0.1r",
+  "title": "PFI_DEPENDENCY_RECEIPT"
+}

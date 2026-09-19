@@ -1,0 +1,637 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_identity",
+    "pfi_identity",
+    "epistemic_membrane",
+    "candidate",
+    "constructive_pole",
+    "destructive_pole",
+    "assumptions",
+    "discrimination_vector",
+    "admission_dependencies",
+    "provenance"
+  ],
+  "properties": {
+    "schema_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_id",
+        "schema_version",
+        "artifact_class",
+        "standing"
+      ],
+      "properties": {
+        "schema_id": {
+          "const": "PETITION_FOR_INVESTIGATION_CANDIDATE"
+        },
+        "schema_version": {
+          "const": "0.1r"
+        },
+        "artifact_class": {
+          "const": "EPISTEMIC_PETITION_CANDIDATE"
+        },
+        "standing": {
+          "const": "UNADMITTED_CANDIDATE"
+        }
+      }
+    },
+    "pfi_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pfi_id",
+        "candidate_id",
+        "source_chamber",
+        "source_method"
+      ],
+      "properties": {
+        "pfi_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_chamber": {
+          "const": "JANUSIAN_THINKING_CHAMBER"
+        },
+        "source_method": {
+          "const": "EINSTEIN_SOCRATES"
+        }
+      }
+    },
+    "epistemic_membrane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_delta_claimed",
+        "truth_delta_claimed",
+        "authority_delta_claimed",
+        "adjudication_power",
+        "investigation_authority"
+      ],
+      "properties": {
+        "evidence_delta_claimed": {
+          "const": 0
+        },
+        "truth_delta_claimed": {
+          "const": 0
+        },
+        "authority_delta_claimed": {
+          "const": 0
+        },
+        "adjudication_power": {
+          "const": "ZERO"
+        },
+        "investigation_authority": {
+          "const": "ZERO"
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposition"
+      ],
+      "properties": {
+        "proposition": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "constructive_pole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement",
+        "minimal_model",
+        "possible_worlds",
+        "invariants"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "minimal_model": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "possible_worlds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "world_id",
+              "boundary_conditions",
+              "predicted_consequences"
+            ],
+            "properties": {
+              "world_id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "boundary_conditions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "minItems": 0
+              },
+              "predicted_consequences": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "minItems": 1
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "invariants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "invariant_id",
+              "formulation",
+              "standing"
+            ],
+            "properties": {
+              "invariant_id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "formulation": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "standing": {
+                "const": "HYPOTHESIS_ONLY"
+              }
+            }
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "destructive_pole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement",
+        "role",
+        "failure_surfaces"
+      ],
+      "properties": {
+        "statement": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "role": {
+          "enum": [
+            "RIVAL_CLAIM",
+            "LIMITATION",
+            "DEFEATER"
+          ]
+        },
+        "failure_surfaces": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "failure_id",
+              "trigger",
+              "affected_claim",
+              "consequence",
+              "explanation"
+            ],
+            "properties": {
+              "failure_id": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "trigger": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "affected_claim": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "consequence": {
+                "enum": [
+                  "CONTRADICTION",
+                  "INDETERMINACY",
+                  "DOMAIN_COLLAPSE",
+                  "DEFINITIONAL_FAILURE",
+                  "CAUSAL_FAILURE",
+                  "OTHER"
+                ]
+              },
+              "explanation": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "assumption_id",
+          "statement",
+          "assumption_type",
+          "standing",
+          "standing_basis"
+        ],
+        "properties": {
+          "assumption_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "assumption_type": {
+            "enum": [
+              "STRUCTURAL",
+              "EMPIRICAL",
+              "SEMANTIC",
+              "CAUSAL",
+              "JURISDICTIONAL",
+              "OPERATIONAL"
+            ]
+          },
+          "standing": {
+            "enum": [
+              "UNEXAMINED",
+              "ANECDOTAL",
+              "PARTIALLY_CORROBORATED",
+              "FORMALLY_CONSTRAINED",
+              "EMPIRICALLY_FALSIFIED"
+            ]
+          },
+          "standing_basis": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "discrimination_vector": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tension_id",
+          "positive_claim",
+          "negative_claim",
+          "separation_basis",
+          "separation_description",
+          "collapse_requirement"
+        ],
+        "properties": {
+          "tension_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "positive_claim": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "negative_claim": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "separation_basis": {
+            "enum": [
+              "MISSING_MEASUREMENT",
+              "MISSING_PROOF",
+              "UNBOUND_DEFINITION",
+              "FRAME_DEPENDENCE",
+              "MISSING_COUNTERFACTUAL",
+              "CAUSAL_AMBIGUITY",
+              "SCALE_DEPENDENCE",
+              "UNKNOWN"
+            ]
+          },
+          "separation_description": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "collapse_requirement": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "investigation_type",
+              "question",
+              "scope_and_limits",
+              "target_of_success",
+              "observable_metric",
+              "operational_definition",
+              "units_or_not_applicable",
+              "acquisition_or_design_obligation",
+              "expected_under_plus",
+              "expected_under_minus",
+              "against_plus",
+              "against_minus",
+              "blindness_declaration",
+              "confounder_declaration",
+              "alternative_space",
+              "alternatives_exhaustive",
+              "conditions"
+            ],
+            "properties": {
+              "investigation_type": {
+                "enum": [
+                  "EMPIRICAL_TEST",
+                  "FORMAL_PROOF",
+                  "COUNTEREXAMPLE_SEARCH",
+                  "SIMULATION",
+                  "MEASUREMENT",
+                  "REPLICATION",
+                  "SOURCE_RECOVERY",
+                  "DEFINITIONAL_ADJUDICATION"
+                ]
+              },
+              "question": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "scope_and_limits": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "target_of_success": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "observable_metric": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "operational_definition": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "units_or_not_applicable": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "acquisition_or_design_obligation": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "expected_under_plus": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "expected_under_minus": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "against_plus": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "against_minus": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "blindness_declaration": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "confounder_declaration": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "alternative_space": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "alternatives_exhaustive": {
+                "const": false
+              },
+              "conditions": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "PASS",
+                  "FAIL",
+                  "ABSTAIN",
+                  "INVALID"
+                ],
+                "properties": {
+                  "PASS": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "outcome",
+                      "condition"
+                    ],
+                    "properties": {
+                      "outcome": {
+                        "const": "PASS"
+                      },
+                      "condition": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    }
+                  },
+                  "FAIL": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "outcome",
+                      "condition"
+                    ],
+                    "properties": {
+                      "outcome": {
+                        "const": "FAIL"
+                      },
+                      "condition": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    }
+                  },
+                  "ABSTAIN": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "outcome",
+                      "condition"
+                    ],
+                    "properties": {
+                      "outcome": {
+                        "const": "ABSTAIN"
+                      },
+                      "condition": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    }
+                  },
+                  "INVALID": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "outcome",
+                      "condition"
+                    ],
+                    "properties": {
+                      "outcome": {
+                        "const": "INVALID"
+                      },
+                      "condition": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "admission_dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dependency_id",
+          "dependency_type",
+          "required",
+          "scope",
+          "description"
+        ],
+        "properties": {
+          "dependency_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "dependency_type": {
+            "enum": [
+              "EXTERNAL_REVIEW",
+              "FORMAL_VERIFICATION",
+              "MEASUREMENT_CAPABILITY",
+              "JURISDICTION_CHECK",
+              "SAFETY_REVIEW",
+              "OTHER"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "scope": {
+            "enum": [
+              "PFI_READINESS",
+              "GOVERNANCE_REVIEW"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_janusian_object_id",
+        "source_digest",
+        "source_digest_domain"
+      ],
+      "properties": {
+        "source_janusian_object_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_digest_domain": {
+          "const": "SHA256_EXACT_BYTES"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:PFI_CANDIDATE_SCHEMA:0.1r",
+  "title": "PFI_CANDIDATE_SCHEMA"
+}

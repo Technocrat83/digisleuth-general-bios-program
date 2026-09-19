@@ -1,0 +1,68 @@
+{
+  "authority_delta": 0,
+  "candidate_digest": "f69b861bd9317ce96f303cb191dcc2abbbbaf028df6e305a884a6faf6997a82b",
+  "coordinate_reviews": [
+    {
+      "findings": {
+        "claim_scope": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "coverage": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "definitions": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "discrimination": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "membrane_nonleakage": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "source_fidelity": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        }
+      },
+      "pairwise_separation": {
+        "ABSTAIN_INVALID": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "FAIL_ABSTAIN": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "FAIL_INVALID": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "PASS_ABSTAIN": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "PASS_FAIL": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        },
+        "PASS_INVALID": {
+          "reason": "Synthetic fixture expectation only.",
+          "status": "PASS"
+        }
+      },
+      "tension_id": "T1"
+    }
+  ],
+  "pfi_id": "SYNTHETIC_PFI_001",
+  "receipt_id": "SYNTHETIC_R1",
+  "receipt_type": "PFI_EXTERNAL_REVIEW_RECEIPT",
+  "review_artifact_digest": "2b7ee5c5b2f1d1f3472a49ac197757c4a34eede9ad8c4b3f567e8d20ae1e786b",
+  "review_disposition": "SEMANTICALLY_REVIEWABLE",
+  "reviewer_identity": "SYNTHETIC_REVIEWER",
+  "verification_standing": "DETACHED_VERIFICATION_REQUIRED"
+}
