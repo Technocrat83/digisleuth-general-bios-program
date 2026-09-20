@@ -17,3 +17,7 @@ PARTITION_PROVEN != PFI_READY != ADMITTED != AUTHORIZED != EXECUTED.
 The four specification files are copied without byte edits from the artifacts created in the authorizing conversation. The pfi_v0_1r tree is extracted from the saved validator package, with each member checked against its included exact-byte manifest. This Git commit establishes prospective repository custody; it does not recreate historical Git provenance or change scientific standing.
 
 The validator README documents the authentication boundary and reproducible test command. Synthetic receipts and fixtures are explicitly test-only. The PD specification defines the next implementation target; the PFI validator has not been silently migrated to that successor geometry.
+
+## PD-v0.2a executable successor
+
+`pd_v0_2a/` implements exact bounded predicate geometry as an EXECUTABLE_REFERENCE_PROTOTYPE. Its 19 named contract fixtures and 16 unittest methods pass, including overlap/gap witnesses, exact unit aliases, independent interval membership checks and deterministic receipts. The engineering gate assessment is scoped to observed synthetic conformance. PD-v0.1 remains the unchanged parent specification; its historical not-executed statement is not rewritten. No RAP, PFI readiness migration, Governance Admission or constitutional-runtime change is included.

@@ -1,0 +1,513 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "binding",
+    "observable",
+    "observation_validity",
+    "predicates",
+    "residual_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "PD-v0.2a"
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_pfi_id",
+        "source_pfi_digest",
+        "discrimination_vector_id",
+        "tension_id"
+      ],
+      "properties": {
+        "source_pfi_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_pfi_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "discrimination_vector_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "tension_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "observable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observable_id",
+        "symbol",
+        "domain",
+        "unit",
+        "nullability",
+        "measurement_semantics"
+      ],
+      "properties": {
+        "observable_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "domain": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "lower",
+                "upper"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "INTEGER",
+                    "REAL"
+                  ]
+                },
+                "lower": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "decimal",
+                        "inclusive"
+                      ],
+                      "properties": {
+                        "decimal": {
+                          "type": "string",
+                          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                          "maxLength": 258
+                        },
+                        "inclusive": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "upper": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "decimal",
+                        "inclusive"
+                      ],
+                      "properties": {
+                        "decimal": {
+                          "type": "string",
+                          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                          "maxLength": 258
+                        },
+                        "inclusive": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "const": "BOOLEAN"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "members"
+              ],
+              "properties": {
+                "type": {
+                  "const": "FINITE_ENUM"
+                },
+                "members": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "minItems": 1,
+                  "maxItems": 256,
+                  "uniqueItems": true
+                }
+              }
+            }
+          ]
+        },
+        "unit": {
+          "enum": [
+            "SECOND",
+            "MILLISECOND",
+            "MICROSECOND",
+            "DIMENSIONLESS",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "nullability": {
+          "const": false
+        },
+        "measurement_semantics": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "observation_validity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "failure_disposition"
+      ],
+      "properties": {
+        "required": {
+          "const": [
+            "measurement_present",
+            "unit_valid",
+            "provenance_valid",
+            "acquisition_successful"
+          ]
+        },
+        "failure_disposition": {
+          "const": "INVALID"
+        }
+      }
+    },
+    "predicates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "SUPPORT",
+        "FAIL",
+        "ABSTAIN"
+      ],
+      "properties": {
+        "SUPPORT": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ast",
+            "require_nonempty"
+          ],
+          "properties": {
+            "ast": {
+              "$ref": "#/$defs/ast"
+            },
+            "require_nonempty": {
+              "type": "boolean"
+            }
+          }
+        },
+        "FAIL": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ast",
+            "require_nonempty"
+          ],
+          "properties": {
+            "ast": {
+              "$ref": "#/$defs/ast"
+            },
+            "require_nonempty": {
+              "type": "boolean"
+            }
+          }
+        },
+        "ABSTAIN": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "ast",
+            "require_nonempty"
+          ],
+          "properties": {
+            "ast": {
+              "$ref": "#/$defs/ast"
+            },
+            "require_nonempty": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "residual_policy": {
+      "enum": [
+        "ROUTE_TO_ABSTAIN",
+        "REJECT_PREDICATE_FAMILY"
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:pd-contract:0.2a",
+  "title": "PD-v0.2a structural contract",
+  "$defs": {
+    "ast": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "observable_ref",
+            "literal"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "LT",
+                "LE",
+                "EQ",
+                "NE",
+                "GE",
+                "GT",
+                "<",
+                "<=",
+                "=",
+                "==",
+                "!=",
+                ">=",
+                ">"
+              ]
+            },
+            "observable_ref": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "literal": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "decimal",
+                    "unit"
+                  ],
+                  "properties": {
+                    "decimal": {
+                      "type": "string",
+                      "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                      "maxLength": 258
+                    },
+                    "unit": {
+                      "enum": [
+                        "SECOND",
+                        "MILLISECOND",
+                        "MICROSECOND",
+                        "DIMENSIONLESS"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "boolean"
+                  ],
+                  "properties": {
+                    "boolean": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "member"
+                  ],
+                  "properties": {
+                    "member": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "\\S"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "observable_ref",
+            "literals"
+          ],
+          "properties": {
+            "op": {
+              "const": "IN"
+            },
+            "observable_ref": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "literals": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "decimal",
+                      "unit"
+                    ],
+                    "properties": {
+                      "decimal": {
+                        "type": "string",
+                        "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+                        "maxLength": 258
+                      },
+                      "unit": {
+                        "enum": [
+                          "SECOND",
+                          "MILLISECOND",
+                          "MICROSECOND",
+                          "DIMENSIONLESS"
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "boolean"
+                    ],
+                    "properties": {
+                      "boolean": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "member"
+                    ],
+                    "properties": {
+                      "member": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      }
+                    }
+                  }
+                ]
+              },
+              "minItems": 0,
+              "maxItems": 256
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "operands"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "AND",
+                "OR"
+              ]
+            },
+            "operands": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ast"
+              },
+              "minItems": 2,
+              "maxItems": 64
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "operand"
+          ],
+          "properties": {
+            "op": {
+              "const": "NOT"
+            },
+            "operand": {
+              "$ref": "#/$defs/ast"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "observable_ref"
+          ],
+          "properties": {
+            "op": {
+              "const": "EMPTY"
+            },
+            "observable_ref": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "$comment": "Structural shape only. Host enforces byte/depth/node/digit limits, domain/type/unit and layer constraints. No proof follows from JSON Schema conformance."
+}
