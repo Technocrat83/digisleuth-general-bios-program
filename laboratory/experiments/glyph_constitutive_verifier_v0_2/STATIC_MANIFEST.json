@@ -1,0 +1,11 @@
+{
+  "validation": "AST_PARSE_AND_DATA_PARSE_ONLY",
+  "specimens_executed": 0,
+  "files": {
+    "README.md": "bb326231cf94d1f0cede132a607a751e997b9e0e38fcc31e73bc3e75f7f9014c",
+    "amended_expectations.json": "5d63651785024edd7fc7109ea1fd2eb06afcf5ac9d279480a2c068f19d60e8bf",
+    "instrumentation_v02.py": "a895a486d40e2297008b5c2bb13142c7cbc20d8062c4507b21c28f82140d11ad",
+    "v0.2_PREREGISTRATION_ADDENDUM.yaml": "175242b18448a6db43f85729f85eebf871698ec52a15287b14ed08053d101ae4",
+    "verifier_v02.py": "922e1be77448e8eea4d34453d8c51bebe1268748a2abd93a2242a5cb9632ce29"
+  }
+}

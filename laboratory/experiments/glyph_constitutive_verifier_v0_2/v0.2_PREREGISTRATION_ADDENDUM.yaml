@@ -1,0 +1,97 @@
+{
+  "artifact_id": "GLYPH_CONSTITUTIVE_VERIFICATION_BATTERY_v0.2_ADDENDUM",
+  "lineage": {
+    "parent_anchor": "5330f1605878dc7993485496f5adcddd57aa82f3",
+    "status": "CANDIDATE_PREREGISTRATION",
+    "v0_1_state": "PRESERVED_ZERO_SPECIMEN_EXECUTION_AS_OF_THIS_ADDENDUM"
+  },
+  "blocker_closure_requirements": {
+    "B_iso": {
+      "mechanism_requirement": "USERNAMESPACE_INDEPENDENT_CONTAINMENT",
+      "status": "UNIMPLEMENTED_UNVERIFIED",
+      "network_requirement": "LOOPBACK_ONLY",
+      "filesystem_requirement": "READ_ONLY_VERIFIER_ROOT_EPHEMERAL_EXTERNAL_RESIDUE_SINK",
+      "persistence_requirement": "ZERO_VERIFIER_SIDE_LEAKAGE",
+      "notes": [
+        "Loopback access remains network access; this explicitly revises the prior no-network requirement.",
+        "Read-only verifier root alone does not block writes elsewhere. The admitted host must restrict all verifier writes.",
+        "Ordinary users, directories, virtual environments, and mock sinks are not confinement proof."
+      ]
+    },
+    "B_S04": {
+      "trigger": "PREDICATE_RAISES_EvaluationEngineException",
+      "interception": "VERIFIER_DISPATCH_EXCEPT_EXCEPTION",
+      "predicate_outcome": "ERROR",
+      "reason_code": "DIAGNOSTIC_ERROR",
+      "status": "IMPLEMENTED_NOT_EXECUTED",
+      "scope": "Ordinary Python Exception; process termination, hangs and resource exhaustion require external supervision."
+    },
+    "B_S10": {
+      "unit": "ms",
+      "source": 100,
+      "candidate": 120,
+      "epsilon_0": 5,
+      "epsilon_1": 50,
+      "mutation_phase": "AFTER_LATENCY_RESIDUE_CAPTURE",
+      "expected_status": "CONTRACT_BINDING_MISMATCH",
+      "expected_reason": "CONTRACT_TOLERANCE_VIOLATION",
+      "preserve_initial_outcome": "FAIL"
+    },
+    "B_S09_S11": {
+      "topology": [
+        "UPSTREAM_CONTRACT_VALIDITY",
+        "WORKING_CONTRACT_STRUCTURE",
+        "BINDING",
+        "EVALUATION",
+        "POST_OBSERVATION_BINDING"
+      ],
+      "S09": {
+        "status": "INVALID_CONTRACT",
+        "reason": "DETERMINISTIC_STRUCTURAL_INVALIDITY"
+      },
+      "S11": {
+        "status": "INVALID_CONTRACT",
+        "reason": "SCHEMA_MODALITY_REJECTION"
+      },
+      "binding_check_on_structural_failure": "NOT_REACHED"
+    },
+    "B_S18": {
+      "scope": "MOCK_DOWNSTREAM_STATE_SINK_ONLY",
+      "requirements": [
+        "PRE_POST_EXACT_EQUALITY",
+        "PRE_POST_HASH_IDENTITY",
+        "OBSERVED_DENIED_INVOCATION"
+      ],
+      "general_authority_leakage": "UNESTABLISHED"
+    }
+  },
+  "execution_gate": {
+    "permitted": false,
+    "condition_to_unlock": [
+      "STATIC_IMPLEMENTATION_REVIEW_ACCEPTED",
+      "ADDENDUM_AND_IMPLEMENTATION_COMMITTED",
+      "HOST_CONTAINMENT_AND_RESOURCE_LIMITS_VERIFIED",
+      "DETACHED_RUNNER_AND_COMPLETE_ORACLE_BOUND",
+      "EXPLICIT_GATE_TRANSITION_RECORDED"
+    ],
+    "commit_alone_unlocks": false
+  },
+  "coverage": {
+    "amended_specimens": [
+      "S04",
+      "S09",
+      "S10",
+      "S11",
+      "S18"
+    ],
+    "full_18_specimen_descendant": "NOT_IMPLEMENTED",
+    "v0_1_oracle": "UNMODIFIED_HISTORICAL_REFERENCE"
+  },
+  "claims": {
+    "specimens_executed": 0,
+    "transport_losslessness": "UNESTABLISHED",
+    "lvs_minimality": "UNESTABLISHED",
+    "production_enforcement": "UNESTABLISHED",
+    "constitutional_promotion": "UNESTABLISHED"
+  }
+}

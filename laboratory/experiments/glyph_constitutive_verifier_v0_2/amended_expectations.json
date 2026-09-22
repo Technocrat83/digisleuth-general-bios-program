@@ -1,0 +1,50 @@
+{
+  "schema": "glyph.amended_expectations.v0.2.candidate",
+  "scope": "FIVE_AMENDED_SPECIMENS_ONLY",
+  "specimens": [
+    {
+      "id": "S04",
+      "status": "INDETERMINATE",
+      "predicate_id": "identity",
+      "outcome": "ERROR",
+      "reason": "DIAGNOSTIC_ERROR",
+      "exception_type": "EvaluationEngineException",
+      "receipt": null
+    },
+    {
+      "id": "S09",
+      "status": "INVALID_CONTRACT",
+      "reason": "DETERMINISTIC_STRUCTURAL_INVALIDITY",
+      "residue_count": 0,
+      "binding_check_reached": false,
+      "receipt": null
+    },
+    {
+      "id": "S10",
+      "status": "CONTRACT_BINDING_MISMATCH",
+      "reason": "CONTRACT_TOLERANCE_VIOLATION",
+      "initial_latency_outcome": "FAIL",
+      "epsilon_before": 5,
+      "epsilon_after": 50,
+      "receipt": null
+    },
+    {
+      "id": "S11",
+      "status": "INVALID_CONTRACT",
+      "reason": "SCHEMA_MODALITY_REJECTION",
+      "residue_count": 0,
+      "binding_check_reached": false,
+      "receipt": null
+    },
+    {
+      "id": "S18",
+      "status": "CONFORMANT",
+      "receipt_required": true,
+      "mock_disposition": "DENIED_NO_ACTION_GRANT",
+      "mock_state_equal": true,
+      "mock_hash_equal": true,
+      "attempt_count": 1,
+      "claim_scope": "MOCK_DOWNSTREAM_STATE_SINK_ONLY"
+    }
+  ]
+}
