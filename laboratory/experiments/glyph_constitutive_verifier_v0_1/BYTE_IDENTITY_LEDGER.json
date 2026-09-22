@@ -1,0 +1,36 @@
+{
+  "schema_version": "glyph.package.byte_identity.v0.1",
+  "standing": "IMPLEMENTED_BATTERY_NOT_EXECUTED",
+  "files": [
+    {
+      "path": "PREREGISTRATION.md",
+      "byte_length": 2220,
+      "sha256": "sha256:805f23c8d093a6a42cd72d3f216de4fdd0732c9c46ef4f8db9814b4b32a3cd50"
+    },
+    {
+      "path": "README.md",
+      "byte_length": 2834,
+      "sha256": "sha256:2c7640b83f4f49e995e0860a281a36651b3d8fc1364dc55fcd369dac89b1407e"
+    },
+    {
+      "path": "baseline.py",
+      "byte_length": 6713,
+      "sha256": "sha256:2bd4ac43372223f1b94a709f568ac21216aaac7dfaecc35d8190d6dafd700e58"
+    },
+    {
+      "path": "expectation_matrix.json",
+      "byte_length": 3848,
+      "sha256": "sha256:804ede5c62a6d9cc7338c2b2fe911c83de70e7f116fccb08f7b4bdd01a33a208"
+    },
+    {
+      "path": "glyph_verifier.py",
+      "byte_length": 16704,
+      "sha256": "sha256:949eb885b75f4f9fd9b3f689dcfc67387396400475c8bb2c2ecac95990aa9334"
+    },
+    {
+      "path": "run_battery.py",
+      "byte_length": 8634,
+      "sha256": "sha256:c93e7d6d31f2c22f02aee7f3b6b18da7b2a93e45956df13e72327b098ce307d9"
+    }
+  ]
+}
