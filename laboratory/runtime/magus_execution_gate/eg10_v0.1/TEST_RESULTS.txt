@@ -1,0 +1,13 @@
+test_HIST_01_unmount_before_actuation_denies (test_eg10.EG10PredeterminedOracleTests.test_HIST_01_unmount_before_actuation_denies) ... ok
+test_HIST_02_local_actuation_before_unmount_permits (test_eg10.EG10PredeterminedOracleTests.test_HIST_02_local_actuation_before_unmount_permits) ... ok
+test_HIST_03_egress_release_then_unmount_retains_liability (test_eg10.EG10PredeterminedOracleTests.test_HIST_03_egress_release_then_unmount_retains_liability) ... ok
+test_HIST_04_unknown_ordering_fails_closed (test_eg10.EG10PredeterminedOracleTests.test_HIST_04_unknown_ordering_fails_closed) ... ok
+test_HIST_05_timeout_requires_reconciliation (test_eg10.EG10PredeterminedOracleTests.test_HIST_05_timeout_requires_reconciliation) ... ok
+test_ancestor_like_invalidation_without_bus_event_still_denies (test_eg10.EG10PredeterminedOracleTests.test_ancestor_like_invalidation_without_bus_event_still_denies) ... ok
+test_sibling_concurrent_reservation_conserves_budget (test_eg10.EG10PredeterminedOracleTests.test_sibling_concurrent_reservation_conserves_budget) ... ok
+test_single_use_attempt_replay_denied (test_eg10.EG10PredeterminedOracleTests.test_single_use_attempt_replay_denied) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK
