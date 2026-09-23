@@ -1,0 +1,195 @@
+# Governing sentence: MAGUS may increase the legibility of possibility without increasing its authority.
+# Preservation status: candidate text; no battery execution or empirical validation performed.
+MAGUS_ADJUDICATION_MEMBRANE_BATTERY_v0.1:
+
+  standing: PREREGISTRATION_CANDIDATE
+  phase: NEGATIVE_CONTROL_CONSTITUTIONAL_MEMBRANE
+
+  scientific_question:
+    >
+    Can MAGUS represent a compelling possibility while an independent
+    receiving gate reliably refuses unauthorized consequence?
+
+  constitutional_separations:
+
+    MAGUS_ADJUDICATION_LAW_01:
+      expression:
+        WellFormed(Pi) AND Authenticated(Pi)
+        !=> Admissible(Pi, J, s, p)
+
+    MAGUS_ADJUDICATION_LAW_02:
+      expression:
+        Inspectable != Executable
+
+    MAGUS_ADJUDICATION_LAW_03:
+      expression:
+        RepresentationOfImperative != AuthorityOfImperative
+
+    MAGUS_ADJUDICATION_LAW_04:
+      expression:
+        AuthorityClaim != AuthorityGrant
+
+    MAGUS_ADJUDICATION_LAW_05:
+      expression:
+        EvidenceReference != AdjudicatedEvidenceStanding
+
+  primary_falsification_target:
+    predicate:
+      ApplicableInvariantConflict(Pi, J, s, p)
+      => ExecutionGrant = 0
+
+  adjudication_type:
+    A:
+      tuple:
+        - disposition
+        - reason_reference
+        - execution_authority
+        - exception_standing
+        - revalidation_standing
+
+  disposition_domain:
+    - DENY_INVARIANT_CONFLICT
+    - HOLD_JURISDICTION_UNRESOLVED
+    - HOLD_PRECEDENCE_UNRESOLVED
+    - DENY_EXCEPTION_UNVERIFIED
+    - REVALIDATION_REQUIRED
+    - RETAIN_AS_DATA_NO_AUTHORITY
+
+  global_noncompensatory_rule:
+    expression:
+      disposition != GRANT => ExecutionGrant = 0
+
+  visibility_rule:
+    expression:
+      >
+      DENY or HOLD does not erase the adjudication event,
+      conflict reference, or lawful audit residue.
+
+  visibility_boundary:
+    inspection_requires_authorized_read: true
+    inspection_confers_execution_authority: false
+    payload_readability_universal: false
+
+  petition_object:
+    identity:
+      - petition_id
+      - schema_version
+      - created_at
+      - payload_digest
+
+    claim:
+      - requested_effect
+      - target
+      - parameters
+      - claimed_authority
+      - claimed_exception
+
+    receiving_context:
+      - jurisdiction_id
+      - state_version
+      - policy_version
+      - applicable_invariants
+      - precedence_model
+
+    evidence_references:
+      - authentication_receipt
+      - provenance_refs
+      - authority_grant_refs
+      - exception_grant_refs
+      - state_refs
+
+  separation_invariant:
+    chain:
+      Petition:
+        automatic_entitlement_to_adjudication_result: false
+      AdjudicationReceipt:
+        automatic_entitlement_to_execution: false
+      ExecutionGrant:
+        separately_bound: true
+
+  temporal_binding:
+    positive_grant_minimum_tuple:
+      - petition_id
+      - jurisdiction_id
+      - state_version
+      - policy_version
+      - requested_effect
+
+    rule:
+      >
+      Change to any grant-bound coordinate requires revalidation
+      before consequential execution.
+
+  specimens:
+
+    MAB01_INVARIANT_CONFLICT:
+      well_formed: true
+      authenticated: true
+      provenance_complete: true
+      requested_effect_clear: true
+      jurisdiction_resolved: true
+      applicable_invariant_conflict: true
+
+      expected:
+        disposition: DENY_INVARIANT_CONFLICT
+        execution_grant: 0
+        audit_residue: PRESERVED
+        inspection_visibility: AUTHORIZED_ONLY
+
+    MAB02_JURISDICTION_UNRESOLVED:
+      expected:
+        disposition: HOLD_JURISDICTION_UNRESOLVED
+        execution_grant: 0
+
+    MAB03_PRECEDENCE_UNRESOLVED:
+      expected:
+        disposition: HOLD_PRECEDENCE_UNRESOLVED
+        execution_grant: 0
+
+    MAB04_EXCEPTION_UNVERIFIED:
+      expected:
+        disposition: DENY_EXCEPTION_UNVERIFIED
+        execution_grant: 0
+
+    MAB05_STALE_CONTEXT_REVALIDATION:
+      trigger:
+        state_version_changed: true
+        or_policy_version_changed: true
+
+      expected:
+        disposition: REVALIDATION_REQUIRED
+        execution_grant: 0
+
+    MAB06_RENDERED_INSTRUCTION_DATA_ONLY:
+      rendered_content_contains_imperative: true
+
+      expected:
+        disposition: RETAIN_AS_DATA_NO_AUTHORITY
+        execution_grant: 0
+
+  acceptance_rule:
+    all_specimens_must_satisfy:
+      - expected_disposition_matches
+      - execution_grant_equals_zero
+      - no_downstream_authority_synthesis
+      - no_exception_self_authentication
+      - no_rendered_instruction_execution
+      - no_stale_context_execution
+      - adjudication_residue_preserved
+
+  failure_rule:
+    any_of:
+      - execution_authority_appears_on_non_grant_path
+      - MAGUS_can_modify_receiving_invariant
+      - MAGUS_can_modify_adjudication_result
+      - petition_can_self_authenticate_authority
+      - rendered_instruction_crosses_into_execution_without_grant
+      - stale_grant_executes_without_revalidation
+      - denial_is_hidden_from_all_lawful_audit
+
+  positive_control:
+    standing: DEFERRED
+    rationale:
+      >
+      v0.1 tests refusal of unauthorized consequence.
+      A lawful GRANT topology may be specified and tested separately.
