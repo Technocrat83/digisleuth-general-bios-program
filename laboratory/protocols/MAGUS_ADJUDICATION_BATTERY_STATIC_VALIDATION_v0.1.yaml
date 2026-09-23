@@ -1,0 +1,110 @@
+MAGUS_ADJUDICATION_BATTERY_STATIC_VALIDATION_v0.1:
+  source_commit: 187f62b46d34a7099bfa79a6592d98d3b7dcb559
+  repository: Technocrat83/digisleuth-general-bios-program
+  branch: general-bios-laboratory-v1
+  observed_at_utc: '2026-09-23T20:16:36.744605+00:00'
+  phase: PRE_EXECUTION_STATIC_VALIDATION
+  identity:
+    artifact_path: laboratory/protocols/MAGUS_ADJUDICATION_MEMBRANE_BATTERY_v0.1.yaml
+    source_tree_sha: 9e400e6e4e0861ed19ac8914a619e6a7a0271532
+    remote_blob_sha: 2ff3b403d58cc0547872cbb7daee7c69eddf3a84
+    computed_git_blob_sha: 2ff3b403d58cc0547872cbb7daee7c69eddf3a84
+    artifact_sha256: 7361c6a6af3fb547a807f207ee9d925be20b0a087ee7d2f84a43b797887db772
+    bytes: 5145
+    remote_content_matches_local: true
+    branch_head_at_identity_check: 187f62b46d34a7099bfa79a6592d98d3b7dcb559
+    parity_scope: Source artifact only; no full local checkout parity claimed
+  method:
+    automated: Safe YAML parse rejecting duplicate keys; exact six specimen IDs; disposition
+      membership; integer zero expected grants; literal non-grant rule; SHA-256 and
+      Git blob SHA computation. GitHub commit, recursive tree and file reads establish
+      remote identity.
+    manual: Static review of required-field definitions, reference contracts, symbols,
+      trigger semantics and fallback coverage.
+    limits: No new normative schema was invented. No runtime behavior or scientific
+      hypothesis was evaluated.
+  checks:
+    yaml_syntax_and_duplicate_key_check: PASS
+    schema_validity: BLOCKED_NO_BOUND_SCHEMA
+    specimen_id_uniqueness: PASS
+    required_field_completeness: BLOCKED_NO_BOUND_REQUIRED_FIELD_SCHEMA
+    reference_closure: BLOCKED_UNBOUND_REFERENCE_CONTRACTS
+    disposition_domain: PASS_DECLARED_EXPECTATIONS_ONLY
+    undefined_symbols_absent: NOT_ESTABLISHED
+    expected_state_consistency: PARTIAL_DECLARED_DISPOSITION_AND_ZERO_GRANT_MATCH
+    fail_closed_default_present: PARTIAL_NON_GRANT_RULE_PRESENT_FALLBACK_UNSPECIFIED
+    non_grant_execution_zero_binding: PASS_DECLARATIVE_ONLY
+    execution_path_invoked: false
+    remote_tree_parity: PASS_SOURCE_ARTIFACT_PATH_BLOB_AND_SIZE_ONLY
+    content_digest_consistency: PASS
+  findings:
+  - id: SV01
+    location: petition_object.identity / entire object
+    finding: schema_version is a declared field name, not a concrete schema identity.
+      No normative validation schema is bound. Syntax validity cannot establish schema
+      validity or required-field completeness.
+  - id: SV02
+    location: specimens.MAB02 through specimens.MAB04
+    finding: Each contains only expected disposition and execution_grant. No concrete
+      initial state, petition, jurisdiction, or explicit input conditions are supplied.
+  - id: SV03
+    location: constitutional_separations / primary_falsification_target / petition_object.evidence_references
+    finding: Predicates such as ApplicableInvariantConflict, WellFormed, Authenticated
+      and Admissible lack bound definitions; Pi, J, s and p lack an explicit symbol/type
+      registry. Receipt and state reference names declare slots without resolution
+      contracts or concrete bindings. These names are not reported as broken URLs
+      or nonexistent artifacts.
+  - id: SV04
+    location: specimens.MAB05_STALE_CONTEXT_REVALIDATION.trigger
+    finding: state_version_changed and or_policy_version_changed are two true mapping
+      values. YAML supplies no logical OR operator here; trigger semantics and grant/context
+      referents are unbound.
+  - id: SV05
+    location: global_noncompensatory_rule / disposition_domain
+    finding: The non-grant zero rule is present as a string. GRANT is intentionally
+      outside the six negative-control dispositions and is not treated as a disposition-domain
+      failure. Missing, unknown, malformed and error outcomes have no explicit fallback
+      contract.
+  - id: SV06
+    location: adjudication_type.A / primary_falsification_target / specimens.*.expected
+    finding: execution_authority, ExecutionGrant and execution_grant have no explicit
+      equivalence or type mapping. A common intended meaning is not a verified binding.
+  - id: SV07
+    location: visibility_boundary / acceptance_rule
+    finding: Authorized-only visibility is declared globally and explicitly expected
+      for MAB01. Audit/read-policy referents and observation criteria are unbound.
+      Presence does not demonstrate enforcement.
+  aggregate:
+    static_validation: BLOCKED
+    static_pass_established: false
+    reason: Identity and basic declarative checks pass; structural and reference closure
+      requirements remain unresolved.
+  execution:
+    specimens_executed: 0
+    execution_path_invoked: false
+    execution_grant: 0
+    scope: This validation operation only; no claim about unrelated historical runs
+  standing_delta:
+    scientific_evidence: ZERO
+    authority: ZERO
+  standing:
+    status: PREREGISTRATION_CANDIDATE
+    source_modified: false
+    freeze_receipt_issued: false
+    formal_freeze_promotion: NOT_ELIGIBLE
+    behavioral_validation: NOT_PERFORMED
+  pre_execution_state_machine:
+    noncollapse:
+    - SPECIFICATION_PINNED != STATIC_VALIDATION
+    - STATIC_VALIDATION != FORMAL_FREEZE
+    - FORMAL_FREEZE != SPECIMEN_EXECUTION
+    - FORMAL_FREEZE != SCIENTIFIC_SUPPORT
+    observed_transition: PREREGISTRATION_CANDIDATE -> PRE_EXECUTION_STATIC_VALIDATION
+      -> STATIC_VALIDATION_BLOCKED
+    freeze_requirements:
+    - STATIC_VALIDATION_PASS
+    - REMOTE_PARITY
+    - BYTE_IDENTITY_FROZEN
+    next_frontier: Resolve or explicitly bind missing structural definitions in a
+      separately versioned candidate; preserve source 187f62b unchanged.
+    specimen_execution_authorized_by_this_receipt: false
