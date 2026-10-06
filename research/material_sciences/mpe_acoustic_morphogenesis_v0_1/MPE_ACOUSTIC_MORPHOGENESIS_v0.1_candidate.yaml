@@ -1,0 +1,228 @@
+artifact:
+  id: MPE_ACOUSTIC_MORPHOGENESIS
+  version: '0.1'
+  title: Bounded Acoustic Morphogenesis Candidate Proposal
+  recorded_on: '2026-10-06'
+  standing: CANDIDATE_PROPOSAL
+  representation: STRUCTURED_DISTILLATION_OF_CURRENT_DISCUSSION
+  canon_effect: NONE
+  simulation_execution: UNEXECUTED
+  physical_validation: UNESTABLISHED
+  solver_implementation: NOT_INCLUDED
+  scientific_standing_delta: NONE
+  execution_authority_granted_by_record: false
+  manufacturing_authority_granted_by_record: false
+
+recording_authorization:
+  source: FOUNDER_CURRENT_CONVERSATION
+  instruction: I authorize Git Lineage
+  instruction_received_at: '2026-10-06T12:47:08Z'
+  scope: Record the discussed MPE proposal and its qualifications in Git.
+  grants_simulation_execution: false
+  grants_physical_exposure: false
+  grants_canon_promotion: false
+
+git_binding:
+  repository: Technocrat83/digisleuth-general-bios-program
+  branch: general-bios-laboratory-v1
+  recording_base_commit: e868017883b97c389676a23984f94a11d5263fdd
+  recording_base_tree: 1313bf28ca7edf53da8ab3b4177864e97f8da12c
+  path: research/material_sciences/mpe_acoustic_morphogenesis_v0_1/MPE_ACOUSTIC_MORPHOGENESIS_v0.1_candidate.yaml
+  ancestry_rule: The actual recording commit supplies prospective Git ancestry.
+  source_history_rule: This record does not manufacture historical commitments.
+
+intent:
+  founder_direction: Investigate geometry emerging from bounded wave-material interactions.
+  candidate_program_name: Morphological Physics Engine
+  abbreviation: MPE
+  proposed_component_labels:
+    layer_3: Morphological Physics Engine
+    layer_3_6: Structural Resonance Field Calculus
+    localized_solver: Tensor C.E.L.L Iterative Relaxation Grid
+  label_standing: PROPOSED_MAPPING_NOT_IMPLEMENTATION_OR_CANON_PROMOTION
+  first_scope: Specify a benchmarkable model and falsification cases before solver loops.
+
+claim_reconciliation:
+  bone_analogy:
+    supplied_claim: Cancellous bone is acoustic foam capturing a frozen wave state.
+    disposition: ANALOGY_ONLY_ORIGIN_HYPOTHESIS_UNESTABLISHED
+    retained_principle: Structure can adapt under bounded mechanical conditions.
+    qualification: >-
+      Porous geometry alone does not establish an acoustic origin. The cited bone
+      study models cellular remodeling coupled to mechanical load transfer.
+    source: SRC_BONE_01
+  supplied_srf_equation:
+    expression: dR/dt = div(K grad(R)) + Omega(Lambda,Sigma) - eta*R
+    usual_interpretation: DIFFUSION_FORCING_AND_DECAY
+    qualification: >-
+      This equation does not establish acoustic propagation or resonance as supplied.
+      R, K, Omega, Lambda, Sigma, and eta require types, units, and constitutive definitions.
+      No universal convergence or stability claim is made for an unspecified Omega.
+    role_if_retained: SEPARATELY_SPECIFIED_RELAXATION_OR_GENERATIVE_MODEL
+  numerical_relaxation:
+    qualification: >-
+      Numerical residual convergence is distinct from physical elapsed time,
+      curing, phase change, and persistent material structure. A relaxation
+      subsolver may be useful within a separately declared physical solver.
+  bmims_mapping:
+    supplied_label: Layer 1 BMIMS Semantic Language Solidified Matrix
+    disposition: PROPOSED_INTERFACE_MAPPING_REQUIRING_RECONCILIATION
+    preserved_identity: Computational membrane and habitat identity.
+    preserved_scoped_role: Perceptual-conformance witness and Predicate Lens.
+    qualification: >-
+      Geometry extraction does not redefine BMIMS or establish semantic truth,
+      source relationships, admission, or action authority. A new interface
+      contract must preserve source identity, evidence, uncertainty, version,
+      and jurisdiction before this mapping is used operationally.
+  metabolic_bound:
+    supplied_expression: W_u > E_m
+    disposition: UNRESOLVED_DEFINITIONS_AND_UNITS
+    qualification: >-
+      Utility cannot be compared directly to joules without a declared mapping.
+      A work-energy comparison does not independently establish entropy reduction.
+      Structural benefit, compute cost, and any defined entropy measure remain separate.
+
+candidate_physical_model:
+  pressure_wave:
+    expression: d2p/dt2 + 2*gamma*dp/dt = c^2*laplacian(p) + s(x,t)
+    standing: PROPOSED_STARTING_APPROXIMATION
+    assumptions:
+      - homogeneous stationary medium
+      - small-amplitude linear acoustic regime
+      - phenomenological nonnegative damping
+    variables:
+      p: {meaning: acoustic_pressure, unit: Pa}
+      t: {meaning: physical_time, unit: s}
+      x: {meaning: spatial_position, unit: m}
+      c: {meaning: sound_speed, unit: m/s}
+      gamma: {meaning: damping_rate, unit: 1/s}
+      s: {meaning: pressure_equation_source, unit: Pa/s^2}
+    extensions_required: >-
+      Heterogeneous density, sound speed, boundary impedance, streaming, and
+      nonlinear regimes require separately declared models and benchmarks.
+    steady_response: Sustained harmonic forcing may settle to a periodic response.
+    source: SRC_ACOUSTICS_01
+  energy_accounting:
+    obligation: Account for input, stored energy, dissipation, and net boundary transport.
+    qualification: Constant field energy is not required in a driven dissipative domain.
+    unforced_passive_case: Stored energy should not increase beyond the pinned numerical tolerance.
+  mass_accounting:
+    obligation: Declare material mass, open-boundary fluxes, and losses when material transport is modeled.
+    qualification: Resonance amplitude is not automatically a material-mass variable.
+  material_response:
+    status: UNSPECIFIED
+    required_mechanisms:
+      - time-averaged acoustic radiation force where its approximation is valid
+      - independently modeled or measured streaming
+      - particle motion and boundary interactions
+      - local crowding and contacts where relevant
+      - separately characterized stabilization for a persistent-object claim
+
+dependency_path:
+  semantics: DEPENDENCY_SEQUENCE_NOT_AUTOMATIC_PROMOTION
+  stages:
+    - specified acoustic pressure and velocity fields
+    - scoped time-averaged force landscape
+    - material and fluid dynamics
+    - measured or explicitly simulated candidate geometry
+    - versioned geometry-extraction rule
+    - source-bound topological representation
+  extraction_contract_required:
+    - input field or material state and its units
+    - threshold and connectivity rules
+    - spatial and temporal resolution
+    - uncertainty and discretization sensitivity
+    - source revision and output digest
+    - relationship and authority separation
+
+benchmark_battery:
+  standing: PROPOSED_UNEXECUTED_NOT_FROZEN_PREREGISTRATION
+  numerical_acceptance_thresholds: UNPINNED
+  fixtures:
+    - id: MPE_B01_KNOWN_CAVITY_MODE
+      requirement: Compare frequency, phase, and spatial pattern with a declared analytical reference.
+      failure_target: Incorrect wave mechanics or numerical dispersion.
+    - id: MPE_B02_DRIVE_REMOVED
+      requirement: Compare stored-energy decay with declared passive losses and numerical tolerance.
+      failure_target: Numerical energy injection or incorrect damping.
+    - id: MPE_B03_BOUNDARY_CHANGED
+      requirement: Verify predicted differences between specified reflecting and absorbing boundaries.
+      failure_target: Boundary settings that do not implement the declared physical response.
+    - id: MPE_B04_DISCRETIZATION_REFINEMENT
+      requirement: Measure field and geometry convergence under mesh and time-step refinement.
+      failure_target: Morphology produced by discretization artifacts.
+    - id: MPE_B05_EXTRACTION_SENSITIVITY
+      requirement: Report sensitivity to the declared threshold and connectivity rules.
+      failure_target: An extraction-imposed shape incorrectly attributed to physical dynamics.
+  outcome_rules:
+    PASS: Sufficient evidence meets the criteria pinned before confirmatory execution.
+    FAIL: Sufficient evidence demonstrates violation of a pinned criterion.
+    UNRESOLVED: Required criteria, calibration, implementation, or observations are missing.
+  current_outcome: UNRESOLVED_NO_EXECUTION_EVIDENCE
+
+runtime_boundary:
+  kernel_role: Enforce authorized changes, exposure and compute budgets, CEASE, and witnessing.
+  solver_role: Implement the declared equations, boundaries, numerical method, and stability controls.
+  distinction: Governance enforcement does not itself establish correct physics or numerical stability.
+  must_pin_before_simulation:
+    - physical variable types and units including Lambda and Sigma if retained
+    - drive spectrum, amplitude, phase, and source model
+    - medium properties and boundary laws
+    - spatial domain, initial conditions, and observation window
+    - discretization, time integration, and appropriate stability bound
+    - quantitative benchmark criteria and geometry-extraction revision
+    - resource limits, stop behavior, and authorized run scope
+  witness_required:
+    - run identifier and artifact revision
+    - solver and configuration digests
+    - commanded and realized numerical parameters
+    - raw fields and scoped material-state outputs
+    - energy and mass accounting where applicable
+    - benchmark evidence and unresolved observations
+    - stop events and preserved available residue
+  cease_rule: Halt forward computation and preserve available residue within the declared stop contract.
+  witness_grants_next_run_authority: false
+
+related_candidate_records:
+  - id: DIGISLEUTH_CYMATIC_FABRICATION_WORKFLOW
+    revision: '0.1.1'
+    inspected_standing: CANDIDATE_SPECIFICATION
+    inspected_stage: UNCURED_MECHANICAL_SCREENING
+    inspected_physical_runs_executed: 0
+    inspected_fixation_status: DEFERRED_PENDING_MECHANICAL_BASELINE
+    bytes_embedded_here: false
+    git_correspondence: UNBOUND
+  - id: DIGISLEUTH_BMIMS_HCA_HCE_CRBRY_v0.1
+    revision: '0.1.1'
+    purpose: Preserve identity and jurisdiction distinctions in the proposed mapping.
+    bytes_embedded_here: false
+    git_correspondence: UNBOUND
+
+sources:
+  - id: SRC_BONE_01
+    title: Effects of mechanical forces on maintenance and adaptation of form in trabecular bone
+    authors: Huiskes, Ruimerman, van Lenthe, and Janssen
+    publication: Nature
+    year: 2000
+    doi: 10.1038/35015116
+    url: https://pubmed.ncbi.nlm.nih.gov/10864330/
+    accessed_on: '2026-10-06'
+    access_scope: Indexed abstract; no full-methods replication claim.
+    evidence_scope: Computational remodeling model with feedback from mechanical load transfer.
+  - id: SRC_ACOUSTICS_01
+    title: Pressure Acoustics, Transient Equations
+    publisher: COMSOL
+    documentation_version: '6.4'
+    url: https://doc.comsol.com/6.4/doc/com.comsol.help.aco/aco_ug_pressure.05.168.html
+    accessed_on: '2026-10-06'
+    evidence_scope: Transient pressure acoustics in a stationary fluid uses a pressure-wave equation.
+    limitation: This reference does not validate the candidate damping term or an implemented solver.
+
+standing_boundary:
+  git_recording_establishes: Recorded artifact bytes and prospective revision ancestry.
+  git_recording_does_not_establish:
+    - acoustic or biological mechanism validation
+    - implemented MPE or Tensor C.E.L.L components
+    - persistent physical fabrication
+    - semantic truth from spatial geometry
+    - canonical promotion or execution permission
