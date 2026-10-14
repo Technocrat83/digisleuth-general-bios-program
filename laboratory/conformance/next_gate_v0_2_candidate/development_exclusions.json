@@ -1,0 +1,2512 @@
+{
+  "artifact_id": "DIGISLEUTH_DEVELOPMENT_EXCLUSIONS_v0.2_candidate",
+  "standing": "BYTE_PINNED_KNOWN_MATERIAL_INVENTORY",
+  "parent_binding": {
+    "filename": "DIGISLEUTH_CONFORMANCE_REPAIR_v0.2_candidate.zip",
+    "sha256": "83420e34d6079c3124e062f55bd2d650e96f69e070280d86f17e5b2b6da908dd",
+    "size_bytes": 6341277,
+    "validator_source_sha256": "be47b71e8c76cb08d028034ab42a97cf3b30b42289b906277b6414ce4c03351e",
+    "lockfile_sha256": "3b90d84fded3155157d38e63f76060c1ba9af993958098f762345d9d8c8d704e",
+    "fixture_manifest_sha256": "08ed9d8ab239d3236ae2ef7cdbe8089ae75c7d34b390eccbd040f10fe63e46f1"
+  },
+  "permanently_excluded_families": [
+    "DNL_CONTEXT",
+    "DNL_DUPLICATE_PREDICATE",
+    "DNL_FLOAT_SERIALIZATION_COLLISION",
+    "DNL_IDENTITY",
+    "DNL_PREDICATE_VALUE",
+    "DNL_RELATION_TYPE",
+    "DNL_STALE_VERDICT",
+    "GRC_DUPLICATE_REGISTRY_ID",
+    "GRC_NODE_CYCLE",
+    "GRC_UNUSED_DIGEST_ARGUMENTS"
+  ],
+  "known_case_count": 66,
+  "cases": [
+    {
+      "case_id": "DNL_POSITIVE_ROUNDTRIP",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "9a4a7f96a70a4a0877e1add9664d7a553a37a2a0d47ea61cefca1b1079b59fb8",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_POSITIVE_ROUNDTRIP/artifact.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_POSITIVE_ROUNDTRIP/expectation.json",
+          "sha256": "4fecb653cdde2ada529d8954f3f5969f7f52e16b4b4c1ead7c035962e286b1b8",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_POSITIVE_ROUNDTRIP/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_POSITIVE_ROUNDTRIP/receipt.json",
+          "sha256": "8768dd4f1f977213c6f27c83904efeb27a8a5c9542b442749af27cf7dc516ec7",
+          "size_bytes": 1630,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_PREDICATE_VALUE",
+      "parent_recorded_artifact_sha256": "9f2b7e97eb7874da5a4b4629d34bce24fa73845dc51bb8c6d995f773846a2f18",
+      "bundle_index_sha256": "34e6f952b88ccece4f186e98dc5848c8fe7943c65fdfbed93f4e23ce1509e3b6",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_PREDICATE_VALUE/artifact.json",
+          "sha256": "9f2b7e97eb7874da5a4b4629d34bce24fa73845dc51bb8c6d995f773846a2f18",
+          "size_bytes": 503,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PREDICATE_VALUE/expectation.json",
+          "sha256": "3efde42001b6b0975870d237fe9a7ab8cb84373eda5988f0e94c0c25e99f10f0",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PREDICATE_VALUE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PREDICATE_VALUE/receipt.json",
+          "sha256": "c77b0e30c02c2a906625b921e3ee6f2517b4d680b6ffe12aa046bbf6b16c4e27",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_RELATION_TYPE",
+      "parent_recorded_artifact_sha256": "4264a7a668c7fd58986932013eb50b861437b7c641d3fe5fccfd38e24df484b9",
+      "bundle_index_sha256": "d4e5afad8db53d03bb377026010233c40dabf413bd89726753233191a2f14a31",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TYPE/artifact.json",
+          "sha256": "4264a7a668c7fd58986932013eb50b861437b7c641d3fe5fccfd38e24df484b9",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TYPE/expectation.json",
+          "sha256": "50f7dc5bf31261615805cf4ec5a38df939b759d953101dbfa5c1231d18a2fd4b",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TYPE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TYPE/receipt.json",
+          "sha256": "e241aa9bd330570d4353dabf3a8ba5ecddb522af178588bea58562ff90f8aae1",
+          "size_bytes": 1470,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_IDENTITY",
+      "parent_recorded_artifact_sha256": "59ff3cd6655dd80e21525f7bd97f87900bf2d6c3fe2678a11773fe890f8132bc",
+      "bundle_index_sha256": "d33e9955a04d39dd27b6bbf967c9c688218b0ab2ce15a05060d666fad103010e",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_IDENTITY/artifact.json",
+          "sha256": "59ff3cd6655dd80e21525f7bd97f87900bf2d6c3fe2678a11773fe890f8132bc",
+          "size_bytes": 505,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_IDENTITY/expectation.json",
+          "sha256": "f2f524a011528d9705c0fe1caf9c20ee64b1338e999f9078e18306f66ba19ebc",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_IDENTITY/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_IDENTITY/receipt.json",
+          "sha256": "37164715dbc3f49ae69d6948195a6d83456a983942841186cb652f8d412adcb6",
+          "size_bytes": 1463,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_CONTEXT",
+      "parent_recorded_artifact_sha256": "10e7fce1b6787eb7e5d543dd1d9756d50cc436dc01e8135d510c3f8c9fafa80e",
+      "bundle_index_sha256": "e854e29c7fa5064d9ba72e9cef5e44ad395e9c4c6b1cc4cb7705becf9fd44466",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_CONTEXT/artifact.json",
+          "sha256": "10e7fce1b6787eb7e5d543dd1d9756d50cc436dc01e8135d510c3f8c9fafa80e",
+          "size_bytes": 505,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_CONTEXT/expectation.json",
+          "sha256": "09f483fcb22323358a3560386b46f77a328bae68cda4f0f498b8518c53070065",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_CONTEXT/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_CONTEXT/receipt.json",
+          "sha256": "26926af03624524c0ffb03aa24690fddd89e401c962bb4f927881ca65fbff1b8",
+          "size_bytes": 1462,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_STALE_VERDICT",
+      "parent_recorded_artifact_sha256": "9f2b7e97eb7874da5a4b4629d34bce24fa73845dc51bb8c6d995f773846a2f18",
+      "bundle_index_sha256": "77afa073eb490b300f139375d601dbff71243f93225b28a0a5eeafbd16e00f31",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_STALE_VERDICT/consumer_bindings.json",
+          "sha256": "84b334461c2995d3ff38844803d23e170a547599eaf14b5e2146db1b3494a54f",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_STALE_VERDICT/expectation_raw.json",
+          "sha256": "4fecb653cdde2ada529d8954f3f5969f7f52e16b4b4c1ead7c035962e286b1b8",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_STALE_VERDICT/raw.json",
+          "sha256": "9f2b7e97eb7874da5a4b4629d34bce24fa73845dc51bb8c6d995f773846a2f18",
+          "size_bytes": 503,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_STALE_VERDICT/receipt_raw.json",
+          "sha256": "8768dd4f1f977213c6f27c83904efeb27a8a5c9542b442749af27cf7dc516ec7",
+          "size_bytes": 1630,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_DUPLICATE_PREDICATE",
+      "parent_recorded_artifact_sha256": "870759065ab0b96bd411f7561987fa18470b17e583ae5d15572997a02b73e69e",
+      "bundle_index_sha256": "e2d0f709ce7fd7d07a2c5a4a395ec4ca97a20bb5205c443fba5f187a4c673e4f",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_PREDICATE/artifact.json",
+          "sha256": "870759065ab0b96bd411f7561987fa18470b17e583ae5d15572997a02b73e69e",
+          "size_bytes": 546,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_PREDICATE/expectation.json",
+          "sha256": "edb8dd18eefd54c3f625bd7667f6ef6ae54e0893a56849856e6f8d2afc4a08f4",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_PREDICATE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_PREDICATE/receipt.json",
+          "sha256": "7281b47e653eeeb488b9c40a7152cbd47f74f872500a7caf44cb009b4aecf8f7",
+          "size_bytes": 1465,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_POSITIVE_NA",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "975aa0b8b628cab871babb9dc540a7e4021b3ecf5734d333baaec7514f412068",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_NA/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_NA/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_NA/expectation.json",
+          "sha256": "1c073f1423d2a6053f1b50c0ecaa695f37fa96a880f19f3d9ea27e3dbd485f18",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_NA/receipt.json",
+          "sha256": "85fb4f3821340c505a0194cd39becb8033dcd20e4abe079e74f377af0ae6731e",
+          "size_bytes": 2014,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_NA/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_NA/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_UNUSED_DIGEST_ARGUMENTS",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "6ea0d817c14ceef8f00faa6f151c39e94c71d8b8302f65be720638c20a19af07",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_UNUSED_DIGEST_ARGUMENTS/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNUSED_DIGEST_ARGUMENTS/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNUSED_DIGEST_ARGUMENTS/expectation.json",
+          "sha256": "e2b2d8b164a86f690d31847fd61f986b7eac4bfe2fb3711889f307af269c9b0b",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNUSED_DIGEST_ARGUMENTS/receipt.json",
+          "sha256": "54024886833e09d03d8f70857dc1c93966e91c6af12ba1897de1b47c975ee314",
+          "size_bytes": 1694,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNUSED_DIGEST_ARGUMENTS/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNUSED_DIGEST_ARGUMENTS/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_NODE_CYCLE",
+      "parent_recorded_artifact_sha256": "fc9c143ba41846d6240d33fcffcd697a2ba190901afabd53f777102272427c14",
+      "bundle_index_sha256": "493f264b383ea3bd0b16e3cd1fc98ac6457823f1202787be9a9410386549afc5",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_NODE_CYCLE/artifact.json",
+          "sha256": "fc9c143ba41846d6240d33fcffcd697a2ba190901afabd53f777102272427c14",
+          "size_bytes": 2360,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NODE_CYCLE/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NODE_CYCLE/expectation.json",
+          "sha256": "d5aefb1841b52855b2e5a9ec89676f5cf1b07b166b365cc7aee4206b42aee822",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NODE_CYCLE/receipt.json",
+          "sha256": "380741716ef262c88e3f1a066c4b03804dcd3e6ee4271e6fb125c72d506a711d",
+          "size_bytes": 1685,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NODE_CYCLE/registry.json",
+          "sha256": "340622321fb1baf0c8af376563d9c3aea94618b0b9443c73c7c7a782b7ffecd1",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NODE_CYCLE/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_DUPLICATE_REGISTRY_ID",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "73b8a4b806110f6f7f3ced93b9ce6a0a0941e12a82885d5c9f12b621643fa7eb",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_REGISTRY_ID/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_REGISTRY_ID/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_REGISTRY_ID/expectation.json",
+          "sha256": "87fc303634814055651f5b7b59cea95432ff475981e22673072b2233972dc953",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_REGISTRY_ID/receipt.json",
+          "sha256": "f86c45d445763c581dc81eb5fbc4d646d789618323b1a0600bc29bcbe6debc63",
+          "size_bytes": 1691,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_REGISTRY_ID/registry.json",
+          "sha256": "ec5d0affae1f313dca8818ab3f27bb6b76a7561b99591760e6b2270ea8d658a2",
+          "size_bytes": 310,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_REGISTRY_ID/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_FLOAT_SERIALIZATION_COLLISION",
+      "parent_recorded_artifact_sha256": "e9bb668ce2e96a8cd7cd6aa1e9f44a676be68c9c6b78237543273f79ebf466a5",
+      "bundle_index_sha256": "e5b611988ad069b436905c6486bb0ee6e3a33d06f23a2fdb653761d8da9d6287",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_SERIALIZATION_COLLISION/artifact.json",
+          "sha256": "e9bb668ce2e96a8cd7cd6aa1e9f44a676be68c9c6b78237543273f79ebf466a5",
+          "size_bytes": 508,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_SERIALIZATION_COLLISION/expectation.json",
+          "sha256": "d224eb68643d78b5e3edfc98a59aee17757bdd5140994577d5c0c9daf03eb406",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_SERIALIZATION_COLLISION/expected_source.json",
+          "sha256": "9f3b7e8fedc3aa186b9c19dc85fbd21a3b6e226a5cf949042ef68bceafe632c0",
+          "size_bytes": 508,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_SERIALIZATION_COLLISION/receipt.json",
+          "sha256": "408f569fa5ed605610b5941249cb965ea8198415ac04c674adbf9e1cf152ff08",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_BOOL_VS_INT",
+      "parent_recorded_artifact_sha256": "5496ea3ca9e0c638c06a4927d39602c44a8db6def8040bc2d220ddbe337fa51b",
+      "bundle_index_sha256": "1d76e3b9e63e8477167bac70cf5ce0956344beab911eeccd0999deef9e4c8952",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_BOOL_VS_INT/artifact.json",
+          "sha256": "5496ea3ca9e0c638c06a4927d39602c44a8db6def8040bc2d220ddbe337fa51b",
+          "size_bytes": 500,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_BOOL_VS_INT/expectation.json",
+          "sha256": "cfb79ff5380d8a7eb2f5db5aa9731ea913bed2074b427d0f0416e6524e6a62e9",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_BOOL_VS_INT/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_BOOL_VS_INT/receipt.json",
+          "sha256": "5e83dffaacb96cb1f0f494a9249cc5ac017e7b8ad3d3a1e3e7d6bf0c74477e73",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_RELATION_DIRECTION",
+      "parent_recorded_artifact_sha256": "68a93a86ddb71470ed4e299297aba6f4dc9dbe4a05626c7238511a5ac13e48be",
+      "bundle_index_sha256": "c5608c0386feb0cd4bd7debb93e6ada304745d4573fc9ff329d95d489d43c6a2",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_DIRECTION/artifact.json",
+          "sha256": "68a93a86ddb71470ed4e299297aba6f4dc9dbe4a05626c7238511a5ac13e48be",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_DIRECTION/expectation.json",
+          "sha256": "3450050ace1abff5a6cd76d9434e3866f54335e8cc0554210bab1d7708c69304",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_DIRECTION/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_DIRECTION/receipt.json",
+          "sha256": "2080145f018d276134264224dab3981fae48236748094afa7d443babdfa7e01d",
+          "size_bytes": 1470,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_RELATION_TERMINAL",
+      "parent_recorded_artifact_sha256": "0858c5da6d3d5999de4c3038456a94ec2c40064bcc08ff72194a701e976a5feb",
+      "bundle_index_sha256": "b25841f2e6f10e7628626c2f3984eb8de793f4ed053d2d788cd85cbb48ad1d6c",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TERMINAL/artifact.json",
+          "sha256": "0858c5da6d3d5999de4c3038456a94ec2c40064bcc08ff72194a701e976a5feb",
+          "size_bytes": 516,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TERMINAL/expectation.json",
+          "sha256": "371086948fe61d43cc5bddc53b465a35d92fae93073a2f2bdf233a5504fbb638",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TERMINAL/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RELATION_TERMINAL/receipt.json",
+          "sha256": "bb0c9221ccc0e3fff2348e84da1f5a2a804366a1bf8ceffc975023ade1cb74a7",
+          "size_bytes": 1470,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_DUPLICATE_IDENTICAL_PREDICATE",
+      "parent_recorded_artifact_sha256": "17ba24c07f6b66a17e75892bdd283d3326f44ee63b2a9fb0200c3d3fdd060c88",
+      "bundle_index_sha256": "1d62e4aab9e1c5f9e685c4b867f5d0524152ab30b4bccb3b1807c980cfffbc4d",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_IDENTICAL_PREDICATE/artifact.json",
+          "sha256": "17ba24c07f6b66a17e75892bdd283d3326f44ee63b2a9fb0200c3d3fdd060c88",
+          "size_bytes": 547,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_IDENTICAL_PREDICATE/expectation.json",
+          "sha256": "de8d23ef1803884f6c4f78acf0cba3e7730f3f2bdf5526986b4d09cd8b55e381",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_IDENTICAL_PREDICATE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_IDENTICAL_PREDICATE/receipt.json",
+          "sha256": "04f3182ee2b0b70df41e24c198172fafc22fa9e9e3ef30cebe02309f523357e0",
+          "size_bytes": 1465,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_DUPLICATE_RELATION",
+      "parent_recorded_artifact_sha256": "044a929618e63390dcd9f8fcdafea7e3d28d3e788dacabf4d6fc2741207a74e9",
+      "bundle_index_sha256": "cb06e844512dee277479204b308daa15ea72bfc3fbc42f635095556a8597ca5e",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_RELATION/artifact.json",
+          "sha256": "044a929618e63390dcd9f8fcdafea7e3d28d3e788dacabf4d6fc2741207a74e9",
+          "size_bytes": 602,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_RELATION/expectation.json",
+          "sha256": "10576d1b49e22136bc7cffc0a1a222f67d9b3470248e344ac9b8b646c905a594",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_RELATION/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_RELATION/receipt.json",
+          "sha256": "936734ff2e1ebb71f166d3ea8e2305bbf63de945d5b0495a861122dce9cce76b",
+          "size_bytes": 1464,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_DUPLICATE_CONSTRAINT",
+      "parent_recorded_artifact_sha256": "bcd330e25879ecd7baea8ed5085bfca74e001dbf9f390d225fc170ebcec73ea7",
+      "bundle_index_sha256": "13802c77333ca54d091bd5a967ba50593302f5c3707743a1534d1c361c3754f5",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_CONSTRAINT/artifact.json",
+          "sha256": "bcd330e25879ecd7baea8ed5085bfca74e001dbf9f390d225fc170ebcec73ea7",
+          "size_bytes": 537,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_CONSTRAINT/expectation.json",
+          "sha256": "7b7b082aeeac4a0cdf05fe5605d8348b5cfed67bd25fedfbe34ac409a5500027",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_CONSTRAINT/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_CONSTRAINT/receipt.json",
+          "sha256": "42c92650afba74b53a0b23321818372845c7190f597625092b48d9aa5fe4d970",
+          "size_bytes": 1467,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_MISSING_PREDICATE",
+      "parent_recorded_artifact_sha256": "dc8ff6c97c71ab319b99c54e77922318c4930def7d7b44ef1b53edecf876c9ce",
+      "bundle_index_sha256": "2bd5e5bdff77dc448bacc6812776fbe524a98b67459feefd65d8515211a9338a",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_MISSING_PREDICATE/artifact.json",
+          "sha256": "dc8ff6c97c71ab319b99c54e77922318c4930def7d7b44ef1b53edecf876c9ce",
+          "size_bytes": 462,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_MISSING_PREDICATE/expectation.json",
+          "sha256": "319fa4ec38ab8d8dbf2822c84edb1c96dd4619870f73249c6515705b93f9c6e9",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_MISSING_PREDICATE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_MISSING_PREDICATE/receipt.json",
+          "sha256": "667a4cf114e1eab578f152f67c66a03ce5a8d4d83078a940c065cabacf25e1d7",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_EXTRA_PREDICATE",
+      "parent_recorded_artifact_sha256": "936679f88b63d9f5b6bbe59ca5926081b114b24140ddccfbf4e7b684fce51a65",
+      "bundle_index_sha256": "e345e8012af7cbde5095d4974286605aef4ce0f195c5a10e17a97d386f4338ac",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_PREDICATE/artifact.json",
+          "sha256": "936679f88b63d9f5b6bbe59ca5926081b114b24140ddccfbf4e7b684fce51a65",
+          "size_bytes": 537,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_PREDICATE/expectation.json",
+          "sha256": "568527557fa4969e0e22933877c1dd677b1de970158af4378b5e5e00cd58c204",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_PREDICATE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_PREDICATE/receipt.json",
+          "sha256": "1bf9919869130139c6ff9044123934d5ca0700665082a0047ab6525c7306d07a",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_EXTRA_FIELD",
+      "parent_recorded_artifact_sha256": "4b4dff0a1b92238cfcc653c4cd34d9c55497f29f59b6d0770f913b3cbee2ef5d",
+      "bundle_index_sha256": "4b926161ac0bce0bd5012c84461899d4080e9b91d3211cad352070951eb4994d",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_FIELD/artifact.json",
+          "sha256": "4b4dff0a1b92238cfcc653c4cd34d9c55497f29f59b6d0770f913b3cbee2ef5d",
+          "size_bytes": 523,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_FIELD/expectation.json",
+          "sha256": "ab20d26c997ee98ed49a18bd57ceb772428c1019209df92c36b0074b32db82e7",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_FIELD/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EXTRA_FIELD/receipt.json",
+          "sha256": "7f47a10c6a4499c8ba77337e798bfc3a466724a4c9d3561c8d2ad85b8460df82",
+          "size_bytes": 1460,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_CONSTRAINT_OMISSION",
+      "parent_recorded_artifact_sha256": "8ccdc879d823b20a7b06bb14a74760fc4bcc9e209e3488dd115e2c9eb2584a22",
+      "bundle_index_sha256": "7e6ef09b6cc59145e9ff026e468ee7f0efe2d8d4df5ee06057b20bec874c1d6e",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_CONSTRAINT_OMISSION/artifact.json",
+          "sha256": "8ccdc879d823b20a7b06bb14a74760fc4bcc9e209e3488dd115e2c9eb2584a22",
+          "size_bytes": 472,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_CONSTRAINT_OMISSION/expectation.json",
+          "sha256": "b95cfefb9b9e87a157f1684ca655312df06f788bf6fa13bb638db8c83aeb9a45",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_CONSTRAINT_OMISSION/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_CONSTRAINT_OMISSION/receipt.json",
+          "sha256": "48fd01c27496a213b1936eb48d92fa6bb229fc4c3228aa378578e18fbd0a9664",
+          "size_bytes": 1461,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_PROVENANCE_SEVERANCE",
+      "parent_recorded_artifact_sha256": "127261a15d8f357442ab97b640800e76663bfd63b2a373e09ab6bb725acd4abe",
+      "bundle_index_sha256": "0ce4d7a03673fb5f86b7eb941c10f6e18658839d822e9432fe45f52c6585bc62",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_PROVENANCE_SEVERANCE/artifact.json",
+          "sha256": "127261a15d8f357442ab97b640800e76663bfd63b2a373e09ab6bb725acd4abe",
+          "size_bytes": 492,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PROVENANCE_SEVERANCE/expectation.json",
+          "sha256": "def95b52a4be15026f3840c0b92fde0fedd47965920b9e52bf30e0ab16332405",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PROVENANCE_SEVERANCE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PROVENANCE_SEVERANCE/receipt.json",
+          "sha256": "37530ab96d5ac97dd7270ebb19b81507191f92b796646c3309512344b393eb83",
+          "size_bytes": 1466,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_AUTHORITY_INJECTION",
+      "parent_recorded_artifact_sha256": "86c4e58a53792d4aeace9e332d59ef623a9809d54fa443433097e11be2548a85",
+      "bundle_index_sha256": "49d3da235656ebca3d1aa8c9b15b6965e6b585def28b12fb1e0fb89d7294f1c5",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_AUTHORITY_INJECTION/artifact.json",
+          "sha256": "86c4e58a53792d4aeace9e332d59ef623a9809d54fa443433097e11be2548a85",
+          "size_bytes": 500,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_AUTHORITY_INJECTION/expectation.json",
+          "sha256": "b1cd89ab783b2b3756797f125fab0f5d6647c05b1e38dd52c17b31c9c178a88c",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_AUTHORITY_INJECTION/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_AUTHORITY_INJECTION/receipt.json",
+          "sha256": "02b57d0e4894c0b98bc7c41da82205e8faf24381cfeb4ca1f5dcad63b026c4fb",
+          "size_bytes": 1465,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_EPOCH_CHANGE",
+      "parent_recorded_artifact_sha256": "a62a1250d29afc3d6cc76bc72fdaf6bab8fa3a0af310c66d7dd6503af2141309",
+      "bundle_index_sha256": "9a5cd5d03e5c8e701e6ef9bf460b6c108a4d8498156ad429e7fdb340e89ac27c",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_EPOCH_CHANGE/artifact.json",
+          "sha256": "a62a1250d29afc3d6cc76bc72fdaf6bab8fa3a0af310c66d7dd6503af2141309",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EPOCH_CHANGE/expectation.json",
+          "sha256": "caff6087c256c61a86aa57cb8520604f68e7f1b5b3ef37bfeac5f9d267163d12",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EPOCH_CHANGE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_EPOCH_CHANGE/receipt.json",
+          "sha256": "56ff9a1fca46a0f15d6aa07b64e06d5191f57b91e4a0f02093bf290376229b7d",
+          "size_bytes": 1462,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_VERSION_CHANGE",
+      "parent_recorded_artifact_sha256": "4170f5f0034ee89b5f912f1f530ac162efc7f3e84a28ae9c0226498935d2c2b0",
+      "bundle_index_sha256": "8feb1d810e0917e7d23c6aab2857e5f17e62c98589850eab694619d3c63c3d89",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_VERSION_CHANGE/artifact.json",
+          "sha256": "4170f5f0034ee89b5f912f1f530ac162efc7f3e84a28ae9c0226498935d2c2b0",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_VERSION_CHANGE/expectation.json",
+          "sha256": "9e4fcdf9aa42047e116a69eebff19faa0d2634e1bde589aace88300d45b04013",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_VERSION_CHANGE/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_VERSION_CHANGE/receipt.json",
+          "sha256": "cb35a814c2556237b0b5e25d201b1bc5271d55f723bd46fc348b4831033700c8",
+          "size_bytes": 1462,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_REDUNDANCY_FLAG",
+      "parent_recorded_artifact_sha256": "b2ae6676a506b38044709a875bfc7f1bd17a2ab08bd637e141430ea2d3d19c35",
+      "bundle_index_sha256": "0386b1e188f5f86dae7e6a4ef7d0905974c448673c53ec7530fcb7c804a6e9ec",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_REDUNDANCY_FLAG/artifact.json",
+          "sha256": "b2ae6676a506b38044709a875bfc7f1bd17a2ab08bd637e141430ea2d3d19c35",
+          "size_bytes": 503,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_REDUNDANCY_FLAG/expectation.json",
+          "sha256": "155b4814519b3e35878f06a19a3109d1e9f9a976222b814eafbf8484e0f4339f",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_REDUNDANCY_FLAG/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_REDUNDANCY_FLAG/receipt.json",
+          "sha256": "18c35a31be022cf06b140c25b9aaebda0c94c349542228bf80324c11ac6aa48b",
+          "size_bytes": 1470,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_DUPLICATE_JSON_KEY",
+      "parent_recorded_artifact_sha256": "7e98249b0ce5b9b1206e0a68c55fff54b0d25abf332d2596f733435d03116fa0",
+      "bundle_index_sha256": "1070145a5c4ec3f81440e857db8ed3d41546f9210cb273a6ba1a73af7efdd918",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_JSON_KEY/artifact.json",
+          "sha256": "7e98249b0ce5b9b1206e0a68c55fff54b0d25abf332d2596f733435d03116fa0",
+          "size_bytes": 60,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_JSON_KEY/expectation.json",
+          "sha256": "b962d0a4265326826fef4bbf35918ebaff18eaf6270f253f8f6c492cb8987f44",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_JSON_KEY/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_DUPLICATE_JSON_KEY/receipt.json",
+          "sha256": "65cd51401917caacfc902729276ab09e86ed058e7b211d47351dfe55e12592c4",
+          "size_bytes": 1463,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_NAN",
+      "parent_recorded_artifact_sha256": "159f99e03ec6dfb7edcad87bac613ac97a235493ad8b79b33cfa4002fb4477f8",
+      "bundle_index_sha256": "2d98c59e1f98116e0ccf614f4e75a77f70448aa7e7742f3acb4bd75316e773c7",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_NAN/artifact.json",
+          "sha256": "159f99e03ec6dfb7edcad87bac613ac97a235493ad8b79b33cfa4002fb4477f8",
+          "size_bytes": 13,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_NAN/expectation.json",
+          "sha256": "b6b8e9d0e53887a395376776c0308c66255afd63c6f3f858b296ebaff76f9fcc",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_NAN/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_NAN/receipt.json",
+          "sha256": "ba00bb896b8da98be31a5e3c064c78fc6b174b1b27be6e54f5825f6c9fdfa9cf",
+          "size_bytes": 1461,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_INFINITY_EXPONENT",
+      "parent_recorded_artifact_sha256": "96e9bfb6a469c2125b46ae8eea18e5ec3e695790d9bec892cfcf7b56d165bf3e",
+      "bundle_index_sha256": "84f7c7787a5d8137f85c82838167fd12900cf146c7a2ab41b8e7aa12e418ac09",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_INFINITY_EXPONENT/artifact.json",
+          "sha256": "96e9bfb6a469c2125b46ae8eea18e5ec3e695790d9bec892cfcf7b56d165bf3e",
+          "size_bytes": 16,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_INFINITY_EXPONENT/expectation.json",
+          "sha256": "92f352873a06d26bfb9c5310ae53bdbb6df4817a91b9496a061553922b90cfbf",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_INFINITY_EXPONENT/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_INFINITY_EXPONENT/receipt.json",
+          "sha256": "7b43084530a4c6b919e5f11e509dc4bf82ace58eb9acf117129cf71b55f5150f",
+          "size_bytes": 1461,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_UNSAFE_INTEGER",
+      "parent_recorded_artifact_sha256": "3b0d9a238f369ef1d4cb7182e6ca467e10b5501cbab84e9c80d1d91053253504",
+      "bundle_index_sha256": "b739d3f65bae2d9c6bf770b7bdf99ccc66145bf66acfd9c9c5167da05677d93c",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_UNSAFE_INTEGER/artifact.json",
+          "sha256": "3b0d9a238f369ef1d4cb7182e6ca467e10b5501cbab84e9c80d1d91053253504",
+          "size_bytes": 26,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_UNSAFE_INTEGER/expectation.json",
+          "sha256": "6c9c46b41ecab17afddc75e83f9ab458f42efb286a6c3428af8411990242c24c",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_UNSAFE_INTEGER/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_UNSAFE_INTEGER/receipt.json",
+          "sha256": "8874c0c84df3c9ae6a3a504749d223f329145daebfe167c180278fd40d1a57aa",
+          "size_bytes": 1459,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_BAD_JSON",
+      "parent_recorded_artifact_sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+      "bundle_index_sha256": "d94b9caf492d53c1a6971c1bdb08d4eb800102ced317471051bc376387795b7e",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_BAD_JSON/artifact.json",
+          "sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+          "size_bytes": 1,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_BAD_JSON/expectation.json",
+          "sha256": "76295bbcce55ae228a44507a09c5188803b8f0f5acb899e380084b7110d683e5",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_BAD_JSON/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_BAD_JSON/receipt.json",
+          "sha256": "0d0001d9bcfca7fb7db071d1bb3f3fa02590bd5c19f848fa8ac72d49a18c75d9",
+          "size_bytes": 1456,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_INT_VS_FLOAT",
+      "parent_recorded_artifact_sha256": "6af97178e3c70f2f458eb2cff593688de94aade10f33b63949370e457b332c36",
+      "bundle_index_sha256": "777793981f8ae4d56bd5db86bec212681897e6c022a806cce14974737ad73a31",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_INT_VS_FLOAT/artifact.json",
+          "sha256": "6af97178e3c70f2f458eb2cff593688de94aade10f33b63949370e457b332c36",
+          "size_bytes": 502,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_INT_VS_FLOAT/expectation.json",
+          "sha256": "88ef6931809d089b82e0b4101ea0893be51c31f93cba6e394dfbc71af693f2a3",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_INT_VS_FLOAT/expected_source.json",
+          "sha256": "475efc468f72454904bfaf5389e1362bde8389197a2e60d0700701337105a803",
+          "size_bytes": 500,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_INT_VS_FLOAT/receipt.json",
+          "sha256": "88337f3749faf37136bffea7f40a167063362c86f6a16a96313221000a1e4e7a",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_SIGNED_ZERO",
+      "parent_recorded_artifact_sha256": "42079451c20e8f9e2f689c1d01df71da7e579821470bb9b363eeee526c3eaa94",
+      "bundle_index_sha256": "8cc1ab81a26f61b0b34d2f0faf55f18b531b88bb8e93a3486e9b45eebb24c64d",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_SIGNED_ZERO/artifact.json",
+          "sha256": "42079451c20e8f9e2f689c1d01df71da7e579821470bb9b363eeee526c3eaa94",
+          "size_bytes": 503,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_SIGNED_ZERO/expectation.json",
+          "sha256": "c65349499651a440ae6b34e875b57909ad14b70e778b5face248f81835412a7b",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_SIGNED_ZERO/expected_source.json",
+          "sha256": "017f5ff92c1544ee1f8df4fc99d92c48c67136f49f9f56df88dd8778580e7d46",
+          "size_bytes": 502,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_SIGNED_ZERO/receipt.json",
+          "sha256": "dbf4e8cac844f6e6bfe30bd3173532a5f7e83c9019a2257f3255c32dc3d3041c",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_FLOAT_VS_STRING",
+      "parent_recorded_artifact_sha256": "833ba27b3b4100d9a6331868e264f67d416eb2a2cbde62285aa3c82e4fd65da7",
+      "bundle_index_sha256": "876f1f07f76e522a5098c80bdf4eaae14aa0b2ea3e12a64f9a6619e76cfaa13f",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_VS_STRING/artifact.json",
+          "sha256": "833ba27b3b4100d9a6331868e264f67d416eb2a2cbde62285aa3c82e4fd65da7",
+          "size_bytes": 509,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_VS_STRING/expectation.json",
+          "sha256": "f5485a3944ff59b7fb2e2ec66362efa442123378710c9fbc88a6eac886ddf7b6",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_VS_STRING/expected_source.json",
+          "sha256": "df01cda23ffae4b3cfd5e7428da8541478f3ac403cb3b1146b3b607f66ef7b39",
+          "size_bytes": 503,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FLOAT_VS_STRING/receipt.json",
+          "sha256": "e637e770d20c055b6d5cbcf14f67c8f6a675364899f5be425269d7daadad80b8",
+          "size_bytes": 1478,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "RECEIPT_UNSIGNED_ENUM",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "4b0f2e8f54a11467e428f42740ffff1ea9e53696044a800223f78711c9c24c9f",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNSIGNED_ENUM/consumer_bindings.json",
+          "sha256": "84b334461c2995d3ff38844803d23e170a547599eaf14b5e2146db1b3494a54f",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNSIGNED_ENUM/expectation_raw.json",
+          "sha256": "4fecb653cdde2ada529d8954f3f5969f7f52e16b4b4c1ead7c035962e286b1b8",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNSIGNED_ENUM/raw.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNSIGNED_ENUM/receipt_raw.json",
+          "sha256": "53e4338e059d9e17cbe7afa923f5f4b8d826ea0d20f3a366de6e07c421d62ef2",
+          "size_bytes": 7,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "RECEIPT_TAMPER",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "44a182257e31234dc89a5f6d5904f62a625d5e9654636a7492cbce0c65dc410d",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_TAMPER/consumer_bindings.json",
+          "sha256": "84b334461c2995d3ff38844803d23e170a547599eaf14b5e2146db1b3494a54f",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_TAMPER/expectation_raw.json",
+          "sha256": "4fecb653cdde2ada529d8954f3f5969f7f52e16b4b4c1ead7c035962e286b1b8",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_TAMPER/raw.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_TAMPER/receipt_raw.json",
+          "sha256": "c1a9d9cafdde59b9e53b71fbb85468e1dcbe366ee7eadbc0996d118e81ac32ed",
+          "size_bytes": 1527,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "RECEIPT_UNTRUSTED_KEY",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "dc7c74c54a7161c8e8d3815657be2d1d99ed6139ed7d8f205a097151145337af",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNTRUSTED_KEY/consumer_bindings.json",
+          "sha256": "7aea15fdc20814f584a4e832c952df89ab154fa668a17155f08102e15aa0e71b",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNTRUSTED_KEY/expectation_raw.json",
+          "sha256": "4fecb653cdde2ada529d8954f3f5969f7f52e16b4b4c1ead7c035962e286b1b8",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNTRUSTED_KEY/raw.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_UNTRUSTED_KEY/receipt_raw.json",
+          "sha256": "8768dd4f1f977213c6f27c83904efeb27a8a5c9542b442749af27cf7dc516ec7",
+          "size_bytes": 1630,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "RECEIPT_CHANGED_CONFIG",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "ad40e24c6e9bd0d0005ccf24f7219667b0eb59aaaf82b3bfc328af72fb09ad18",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_CONFIG/consumer_bindings.json",
+          "sha256": "84b334461c2995d3ff38844803d23e170a547599eaf14b5e2146db1b3494a54f",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_CONFIG/expectation_raw.json",
+          "sha256": "0573be01736ca34d737c335765fcff36a4ee13c1e8f0dee1f29656acba3c6e06",
+          "size_bytes": 946,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_CONFIG/raw.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_CONFIG/receipt_raw.json",
+          "sha256": "8768dd4f1f977213c6f27c83904efeb27a8a5c9542b442749af27cf7dc516ec7",
+          "size_bytes": 1630,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "RECEIPT_CHANGED_SOURCE",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "a0e78c1197fedd404d5195a62b402b9fcea7429143311df4b41b836a5f650ff1",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_SOURCE/consumer_bindings.json",
+          "sha256": "8bb2a27271fc966422c4b409543c3d7deda18ec11524c90940032b6e8e3e40be",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_SOURCE/expectation_raw.json",
+          "sha256": "4fecb653cdde2ada529d8954f3f5969f7f52e16b4b4c1ead7c035962e286b1b8",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_SOURCE/raw.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CHANGED_SOURCE/receipt_raw.json",
+          "sha256": "8768dd4f1f977213c6f27c83904efeb27a8a5c9542b442749af27cf7dc516ec7",
+          "size_bytes": 1630,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "RECEIPT_CONFIG_RAW_BYTES",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "886fa1b491e2e8db9b3bb9c48c5edcef426b91ccca303f51c8ab0251f798d6f1",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CONFIG_RAW_BYTES/consumer_bindings.json",
+          "sha256": "84b334461c2995d3ff38844803d23e170a547599eaf14b5e2146db1b3494a54f",
+          "size_bytes": 204,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CONFIG_RAW_BYTES/expectation_raw.json",
+          "sha256": "ae47218797dc0f4a38ed77891b211e0275faf7d854bf1355cc028cbece01b5ea",
+          "size_bytes": 959,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CONFIG_RAW_BYTES/raw.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/RECEIPT_CONFIG_RAW_BYTES/receipt_raw.json",
+          "sha256": "8768dd4f1f977213c6f27c83904efeb27a8a5c9542b442749af27cf7dc516ec7",
+          "size_bytes": 1630,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_STALE_RECEIPT",
+      "parent_recorded_artifact_sha256": "fd84dc19306ffe5087bd3145999e39d00ce47f79a451dfc6d9aa5e18ce175dcf",
+      "bundle_index_sha256": "fb47f055be66ec9285fc72bd4d92a95787754f478b049f4a04773b1a85a36b41",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_STALE_RECEIPT/consumer_bindings.json",
+          "sha256": "30f8cbc50b0a21345507d200a08b270333662209e92b9696f9e508a0cb7b13f7",
+          "size_bytes": 367,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_STALE_RECEIPT/expectation_raw.json",
+          "sha256": "1c073f1423d2a6053f1b50c0ecaa695f37fa96a880f19f3d9ea27e3dbd485f18",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_STALE_RECEIPT/raw.json",
+          "sha256": "fd84dc19306ffe5087bd3145999e39d00ce47f79a451dfc6d9aa5e18ce175dcf",
+          "size_bytes": 2174,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_STALE_RECEIPT/receipt_raw.json",
+          "sha256": "85fb4f3821340c505a0194cd39becb8033dcd20e4abe079e74f377af0ae6731e",
+          "size_bytes": 2014,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_RECEIPT_REGISTRY_CHANGE",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "29e4173c0fe1f69b251a64f1be40d57e2fb9429254fee507495ad5c1eda8c4f6",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_REGISTRY_CHANGE/consumer_bindings.json",
+          "sha256": "86ebc41533665e18d224787198a30e0e02297e54202ffde122d230705177b594",
+          "size_bytes": 367,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_REGISTRY_CHANGE/expectation_raw.json",
+          "sha256": "1c073f1423d2a6053f1b50c0ecaa695f37fa96a880f19f3d9ea27e3dbd485f18",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_REGISTRY_CHANGE/raw.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_REGISTRY_CHANGE/receipt_raw.json",
+          "sha256": "85fb4f3821340c505a0194cd39becb8033dcd20e4abe079e74f377af0ae6731e",
+          "size_bytes": 2014,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_RECEIPT_SCHEMA_CHANGE",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "88bd0645928ad995abce9674906091d94d227f446570bd5085fd73a1002ef1db",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_SCHEMA_CHANGE/consumer_bindings.json",
+          "sha256": "dd6a7458e554a7eb4d7b729fea54da12df09700b374a4e18f126acfb32fea852",
+          "size_bytes": 367,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_SCHEMA_CHANGE/expectation_raw.json",
+          "sha256": "1c073f1423d2a6053f1b50c0ecaa695f37fa96a880f19f3d9ea27e3dbd485f18",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_SCHEMA_CHANGE/raw.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_RECEIPT_SCHEMA_CHANGE/receipt_raw.json",
+          "sha256": "85fb4f3821340c505a0194cd39becb8033dcd20e4abe079e74f377af0ae6731e",
+          "size_bytes": 2014,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_FIXED_COMMITMENT_TAMPER",
+      "parent_recorded_artifact_sha256": "9f2b7e97eb7874da5a4b4629d34bce24fa73845dc51bb8c6d995f773846a2f18",
+      "bundle_index_sha256": "a2ce86bac0a9219b54260ee379cea8f12b5e3a6c4118cf3a445c0e750bafdde3",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_FIXED_COMMITMENT_TAMPER/artifact.json",
+          "sha256": "9f2b7e97eb7874da5a4b4629d34bce24fa73845dc51bb8c6d995f773846a2f18",
+          "size_bytes": 503,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FIXED_COMMITMENT_TAMPER/expectation.json",
+          "sha256": "7648f7b3c8b07b600231816330ebff7fbddd7ea44cc1f57782354dd712d55fdc",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FIXED_COMMITMENT_TAMPER/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_FIXED_COMMITMENT_TAMPER/receipt.json",
+          "sha256": "ec2e9fd6facc6ff4c6d1dc028798bcd95da67bdfb5b05d6167b56b79cad59989",
+          "size_bytes": 1464,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_RAW_DIGEST_TAMPER",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "084080d00d3ddf1d421ae79a3c9481b2d541fffbb40fd355e273cc9d5e0fad82",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_RAW_DIGEST_TAMPER/artifact.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RAW_DIGEST_TAMPER/expectation.json",
+          "sha256": "0ff6217263e6797db26d762f9ca207c9168fa5313e16ac4e7315053b025fc702",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RAW_DIGEST_TAMPER/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_RAW_DIGEST_TAMPER/receipt.json",
+          "sha256": "8ba1cbfc64bc428a4670e05671e0fe5321f5df82aab4f8b93560f31086c274bd",
+          "size_bytes": 1470,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "DNL_PROFILE_TAMPER",
+      "parent_recorded_artifact_sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+      "bundle_index_sha256": "af51aee273dce3ce7b7a91f94688d2e4e43085608c1419ea3e64486ce17c4969",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/DNL_PROFILE_TAMPER/artifact.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PROFILE_TAMPER/expectation.json",
+          "sha256": "6e9d47a2fc58b085b11a958cdeabb7263912723e5ea49334b72790ff3bded74c",
+          "size_bytes": 958,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PROFILE_TAMPER/expected_source.json",
+          "sha256": "9d42954dd201c43b98c52d09a6fb20f3a63b8623a24f22eb7d3999187a91cd1f",
+          "size_bytes": 504,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/DNL_PROFILE_TAMPER/receipt.json",
+          "sha256": "3118913d4be4ee43e8f0751eec685dbc6bd665731264a0b5c253a52528e55fe8",
+          "size_bytes": 1462,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_VALIDATOR_DIGEST",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "cce9ef95768bc6b221ab78547e3f668a6d7fe4b783d8e386f80f61b4e415216a",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_VALIDATOR_DIGEST/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_VALIDATOR_DIGEST/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_VALIDATOR_DIGEST/expectation.json",
+          "sha256": "8919ccf731f901e81abe246ac1d47b672ec3be8c25376d4aae32f9ea1e340482",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_VALIDATOR_DIGEST/receipt.json",
+          "sha256": "e7fe294a326e4fbb290f2e53e0c2341265cbb3050c33af7195d8e6374fbd2f52",
+          "size_bytes": 1697,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_VALIDATOR_DIGEST/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_VALIDATOR_DIGEST/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_REGISTRY_DIGEST",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "dfd2daf8dadb99fcb8968fe0431ab7798600f75e0a7dac53c121c0a41adb4639",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_DIGEST/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_DIGEST/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_DIGEST/expectation.json",
+          "sha256": "74813a77a5618b6e292dfeed69d85315e339bf571eb5640d8e46aec2b55450de",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_DIGEST/receipt.json",
+          "sha256": "9a33bec4051d7287d949e7ebf6862bf706784b8bdf293158c71f8bcf01fc2f1c",
+          "size_bytes": 1694,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_DIGEST/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_DIGEST/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_REGISTRY_SCHEMA_DIGEST",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "8cd6e8dd7a4da0bff6ea37cbea7d4ad012a3bef2a17e37a53552cd4ca0df2770",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_SCHEMA_DIGEST/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_SCHEMA_DIGEST/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_SCHEMA_DIGEST/expectation.json",
+          "sha256": "394672f4d78817d5e9990e52b24f0203f8f748c707a4ccc73f8891c9a0ec1196",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_SCHEMA_DIGEST/receipt.json",
+          "sha256": "6df3547520f851868a2ffb96f7c7e36e4497746d198434bacbc470db0b3497e2",
+          "size_bytes": 1694,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_SCHEMA_DIGEST/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_REGISTRY_SCHEMA_DIGEST/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_EXTRA_FIELD",
+      "parent_recorded_artifact_sha256": "a82680153b189b64d07031f3baff2f8596d95d6275ac8b13c2af80eac70a7ea2",
+      "bundle_index_sha256": "80430db67ec1081ae9f16a0c0239e11853df3b1c1e4cfddbf21ea978811c0b02",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_EXTRA_FIELD/artifact.json",
+          "sha256": "a82680153b189b64d07031f3baff2f8596d95d6275ac8b13c2af80eac70a7ea2",
+          "size_bytes": 2185,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EXTRA_FIELD/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EXTRA_FIELD/expectation.json",
+          "sha256": "eff5e7ed9efc653caa3280499ffefac72f379badb8221c1803c74bf612a6b546",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EXTRA_FIELD/receipt.json",
+          "sha256": "e40d061d6db597264726394fe9ae1e629d4f36fde075a9a28d61fd6d41fae3e4",
+          "size_bytes": 1684,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EXTRA_FIELD/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EXTRA_FIELD/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_PERMISSION_TRUE",
+      "parent_recorded_artifact_sha256": "39a498624dcbfe0559766c430f08ba3ad176b00ccc282032ba5275f86f0b5939",
+      "bundle_index_sha256": "70a5ef82087f98f51f384e5ccb5ed695405f09e74bf0e35b2ae67688f2cc7cde",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_PERMISSION_TRUE/artifact.json",
+          "sha256": "39a498624dcbfe0559766c430f08ba3ad176b00ccc282032ba5275f86f0b5939",
+          "size_bytes": 2172,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_PERMISSION_TRUE/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_PERMISSION_TRUE/expectation.json",
+          "sha256": "520170ae64aaf8900b654a436e5bef72e2af7ba80816978b67bfbc412994cf2d",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_PERMISSION_TRUE/receipt.json",
+          "sha256": "a587266adbb46fe7a3f08e393871c5419f069785b31c922cef9966a8ca8816bc",
+          "size_bytes": 1684,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_PERMISSION_TRUE/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_PERMISSION_TRUE/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_UNKNOWN_G4_RULE",
+      "parent_recorded_artifact_sha256": "ec8d036052843dcc5d393f394be3682b739ba321094258c17f5dce8464120602",
+      "bundle_index_sha256": "cbe6f73d5ce5d0e434dc7a0af6274c7206724d59f312239eee74c444ff642080",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_UNKNOWN_G4_RULE/artifact.json",
+          "sha256": "ec8d036052843dcc5d393f394be3682b739ba321094258c17f5dce8464120602",
+          "size_bytes": 2166,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNKNOWN_G4_RULE/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNKNOWN_G4_RULE/expectation.json",
+          "sha256": "4478f42d903295fbbac926fae191d8823c4334fd05682bf45e911a5028436617",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNKNOWN_G4_RULE/receipt.json",
+          "sha256": "e582db1383322fa3fcd67eecd717b382ac1467960362567c30a0b9b49fb30163",
+          "size_bytes": 1684,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNKNOWN_G4_RULE/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNKNOWN_G4_RULE/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_DUPLICATE_INVARIANT",
+      "parent_recorded_artifact_sha256": "8235be9cc88b33d2beb9dbd91d2336a1452671efc260bcae13a80722a2f5abc6",
+      "bundle_index_sha256": "e677a34abc0e3cfc2d62901d5dae4668d77313bf36a53211a5b45dc1f9c19b4a",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_INVARIANT/artifact.json",
+          "sha256": "8235be9cc88b33d2beb9dbd91d2336a1452671efc260bcae13a80722a2f5abc6",
+          "size_bytes": 2459,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_INVARIANT/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_INVARIANT/expectation.json",
+          "sha256": "1a2bd541d984d26b502188ddccba7e9b4a0eeb1605018bf152bb5502f7bef2ca",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_INVARIANT/receipt.json",
+          "sha256": "cc2b71a6d350c150b306e125e699b6224ec2406edcd1395f3d498fb9e84de763",
+          "size_bytes": 1692,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_INVARIANT/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_INVARIANT/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_BINDING_ID_MISMATCH",
+      "parent_recorded_artifact_sha256": "1c27b3fbd165140c638ea679843a1f042a618849c6621f247ca51bf7ea559307",
+      "bundle_index_sha256": "ed32ee1fc9471fdda6ef5177ff7fa920f76471f8637eeb2623502e62f72a6b10",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_BINDING_ID_MISMATCH/artifact.json",
+          "sha256": "1c27b3fbd165140c638ea679843a1f042a618849c6621f247ca51bf7ea559307",
+          "size_bytes": 2167,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_BINDING_ID_MISMATCH/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_BINDING_ID_MISMATCH/expectation.json",
+          "sha256": "228882a2a1ee5e2f35900e1d8aa6c0a49f9e5bc74e54e23601bc5e01ac6e804b",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_BINDING_ID_MISMATCH/receipt.json",
+          "sha256": "213aa71ba11b711b2ffb01eacb7f135cced03bb74c08e2ccd642c31c52fc1dbf",
+          "size_bytes": 1694,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_BINDING_ID_MISMATCH/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_BINDING_ID_MISMATCH/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_JURISDICTION_OVERLAP",
+      "parent_recorded_artifact_sha256": "6de8389d8c7d48310e7cf69a950c98ef7fe906a1fdc2e5c3d207993f2b0eb9b2",
+      "bundle_index_sha256": "79b7f08bc574815356e3af20649c7d9659729e2097abbe4d0615e34910d720bb",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_JURISDICTION_OVERLAP/artifact.json",
+          "sha256": "6de8389d8c7d48310e7cf69a950c98ef7fe906a1fdc2e5c3d207993f2b0eb9b2",
+          "size_bytes": 2184,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_JURISDICTION_OVERLAP/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_JURISDICTION_OVERLAP/expectation.json",
+          "sha256": "ae006a7ede2b42abcc61af06377b8041ac5c9d16b9051a422b0e265f6f814426",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_JURISDICTION_OVERLAP/receipt.json",
+          "sha256": "b419c80f225760b1bdafcc35d2a5d89a9532bd130a01ff21c62cc7b45c0e126d",
+          "size_bytes": 1692,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_JURISDICTION_OVERLAP/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_JURISDICTION_OVERLAP/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_CONDITIONAL_LABELS_MISSING",
+      "parent_recorded_artifact_sha256": "e5489d888d498da0cc7c35ffa33a73c8b004598339a054985e13c421ebf9d7d2",
+      "bundle_index_sha256": "64f646d8bb06b732eaf814c8c7e92d48bf5f31a144bc5a96b7eff1ce97560291",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_CONDITIONAL_LABELS_MISSING/artifact.json",
+          "sha256": "e5489d888d498da0cc7c35ffa33a73c8b004598339a054985e13c421ebf9d7d2",
+          "size_bytes": 2175,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_CONDITIONAL_LABELS_MISSING/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_CONDITIONAL_LABELS_MISSING/expectation.json",
+          "sha256": "35c8002c96fe7abfd1a72f49f28c16252e1bd97e61342b10061dcf04fc6e99d8",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_CONDITIONAL_LABELS_MISSING/receipt.json",
+          "sha256": "8770ba9f2d74fea469af37c3f35216671e757f4ed581fb04206c0964a501c2c0",
+          "size_bytes": 1684,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_CONDITIONAL_LABELS_MISSING/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_CONDITIONAL_LABELS_MISSING/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_MANDATORY_NOT_REPRESENTABLE",
+      "parent_recorded_artifact_sha256": "5e76ee7b92eb771bdf1a4026644e03b0fd2be02d4f526f3f55a16a681093638a",
+      "bundle_index_sha256": "224846c3accdc123f7f804c857ea97702db6160b99f630aa8a7bd553b8bd38c1",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_MANDATORY_NOT_REPRESENTABLE/artifact.json",
+          "sha256": "5e76ee7b92eb771bdf1a4026644e03b0fd2be02d4f526f3f55a16a681093638a",
+          "size_bytes": 2174,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MANDATORY_NOT_REPRESENTABLE/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MANDATORY_NOT_REPRESENTABLE/expectation.json",
+          "sha256": "d27e03a68d53fc6cb940f7ce69fadf9331c9b93f6a6706685df3b29fd7d1bfa6",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MANDATORY_NOT_REPRESENTABLE/receipt.json",
+          "sha256": "4e3ec67a445490b892097fc8fa9899f20248a028f471f98beb7954b6e7d8be53",
+          "size_bytes": 1684,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MANDATORY_NOT_REPRESENTABLE/registry.json",
+          "sha256": "b1fede83bdb8a354dc9890ec60ec03c32e7cca1dddcf6beac10a082f544a58c0",
+          "size_bytes": 191,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MANDATORY_NOT_REPRESENTABLE/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_POSITIVE_ALTERNATE_PATHS",
+      "parent_recorded_artifact_sha256": "52507353e65d713e3fabb89ea7f4da98beb4ab616ee0539115222df9624f5dcd",
+      "bundle_index_sha256": "4e5a35854e53f134d34014413b4b5d23b32c566f3b1a39fcac67001a45ba947c",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_ALTERNATE_PATHS/artifact.json",
+          "sha256": "52507353e65d713e3fabb89ea7f4da98beb4ab616ee0539115222df9624f5dcd",
+          "size_bytes": 2346,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_ALTERNATE_PATHS/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_ALTERNATE_PATHS/expectation.json",
+          "sha256": "e3f708ec7b3d822d4a2184cd04472cab9cc1f60d9e35e3fc1936587a2acea103",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_ALTERNATE_PATHS/receipt.json",
+          "sha256": "d5dc28d284c357bff9e62ab738f0c393561bb507d51b4985a3d694bcb7f4ca95",
+          "size_bytes": 2034,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_ALTERNATE_PATHS/registry.json",
+          "sha256": "4fd35184ec3d2022e1474159715b1f2d72f7d25b45f0c6760c3257a7774314eb",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_POSITIVE_ALTERNATE_PATHS/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_DUPLICATE_PATH_ID",
+      "parent_recorded_artifact_sha256": "1cd47f96df86af123eb284b67cdd98481a41044191c0ec1764e31b9b85b41dcf",
+      "bundle_index_sha256": "22e0026d5789691d8aee20e8ee8da048a9e17504423cbb30ec4c1d9499916a4c",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_PATH_ID/artifact.json",
+          "sha256": "1cd47f96df86af123eb284b67cdd98481a41044191c0ec1764e31b9b85b41dcf",
+          "size_bytes": 2350,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_PATH_ID/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_PATH_ID/expectation.json",
+          "sha256": "d1385e21c68c9978f16970d19edaa72a43885120a2b0e4ef0ddebf0461a11986",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_PATH_ID/receipt.json",
+          "sha256": "b115ed339b818adccb8f7b3508ced5db5569d6df60525ea6979c239646793428",
+          "size_bytes": 1687,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_PATH_ID/registry.json",
+          "sha256": "4fd35184ec3d2022e1474159715b1f2d72f7d25b45f0c6760c3257a7774314eb",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_DUPLICATE_PATH_ID/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_COLLAPSED_TRAVERSAL",
+      "parent_recorded_artifact_sha256": "578bac083d3ea40bff58e2348b48b4c1d04ffaf3e4c3a63189bee2253c612692",
+      "bundle_index_sha256": "fe6c73faf5a180fa5fb1cbaebad1dca7fb606df266a18c2b1016b28b83c897df",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_COLLAPSED_TRAVERSAL/artifact.json",
+          "sha256": "578bac083d3ea40bff58e2348b48b4c1d04ffaf3e4c3a63189bee2253c612692",
+          "size_bytes": 2366,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_COLLAPSED_TRAVERSAL/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_COLLAPSED_TRAVERSAL/expectation.json",
+          "sha256": "4d4e60054a4e4813f3716bd369f8551f806632bf637f96d304f5b667cd80c496",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_COLLAPSED_TRAVERSAL/receipt.json",
+          "sha256": "ebd0df4b7692c1fe30e6f9fa9a1558b76b01d4211ff072f89628e37bfdc7be7d",
+          "size_bytes": 1694,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_COLLAPSED_TRAVERSAL/registry.json",
+          "sha256": "4fd35184ec3d2022e1474159715b1f2d72f7d25b45f0c6760c3257a7774314eb",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_COLLAPSED_TRAVERSAL/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_EMPTY_PATH",
+      "parent_recorded_artifact_sha256": "b86e6c7f1476dafda8b0ce35c5675996c7f67b5616fc3b2113fce7f85db69e63",
+      "bundle_index_sha256": "a2f595b541e2931c5d5cc617ecd3c2c801df70ef031e1e59c0d909a7cf4de7aa",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_EMPTY_PATH/artifact.json",
+          "sha256": "b86e6c7f1476dafda8b0ce35c5675996c7f67b5616fc3b2113fce7f85db69e63",
+          "size_bytes": 2307,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EMPTY_PATH/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EMPTY_PATH/expectation.json",
+          "sha256": "e25a36e11ab1ce1b992743dbb983266681ad29614d70330adda827b6fc0953b3",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EMPTY_PATH/receipt.json",
+          "sha256": "e2ca9444272d53acc535de5b3acba40a955b8e72f38caecff1b90a26f5ffab2f",
+          "size_bytes": 1684,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EMPTY_PATH/registry.json",
+          "sha256": "4fd35184ec3d2022e1474159715b1f2d72f7d25b45f0c6760c3257a7774314eb",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_EMPTY_PATH/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_UNREGISTERED_PATH",
+      "parent_recorded_artifact_sha256": "56d3965fd1dec788c373eafdcc325067d0debb46f5a3b0ed0f4f2a65a7af1a73",
+      "bundle_index_sha256": "b46e662c34cc410c6391fa8892a761a6e3d1aad20f24bcb9218621d8c64d7ec1",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_UNREGISTERED_PATH/artifact.json",
+          "sha256": "56d3965fd1dec788c373eafdcc325067d0debb46f5a3b0ed0f4f2a65a7af1a73",
+          "size_bytes": 2365,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNREGISTERED_PATH/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNREGISTERED_PATH/expectation.json",
+          "sha256": "f434837b24acc3bc06cb759731be8fa59435451d20902c0f04e1917c0d6dc83f",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNREGISTERED_PATH/receipt.json",
+          "sha256": "9f227a69747b7875b383ba7e764c31f035f73e74845cc0b45c812696cf2d87e0",
+          "size_bytes": 1708,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNREGISTERED_PATH/registry.json",
+          "sha256": "4fd35184ec3d2022e1474159715b1f2d72f7d25b45f0c6760c3257a7774314eb",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_UNREGISTERED_PATH/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_NONCONTIGUOUS_PATH",
+      "parent_recorded_artifact_sha256": "75476a6657c04c7d0c81a9b4e7aa9d17439e3bb778fdae48e0c4152df234d917",
+      "bundle_index_sha256": "cacac6b547b13900ff677bb225e384402983bfd844c93b89b5abc1cc503b096a",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_NONCONTIGUOUS_PATH/artifact.json",
+          "sha256": "75476a6657c04c7d0c81a9b4e7aa9d17439e3bb778fdae48e0c4152df234d917",
+          "size_bytes": 2346,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NONCONTIGUOUS_PATH/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NONCONTIGUOUS_PATH/expectation.json",
+          "sha256": "5a16f8909bd7cfb31a10638e46b19624bf7181faf3ccb29abad274b3dd49eeae",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NONCONTIGUOUS_PATH/receipt.json",
+          "sha256": "657ccfcd9fc500badfc1200ff9575572f53eb792263fea2704ab89906dcd851e",
+          "size_bytes": 1689,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NONCONTIGUOUS_PATH/registry.json",
+          "sha256": "4fd35184ec3d2022e1474159715b1f2d72f7d25b45f0c6760c3257a7774314eb",
+          "size_bytes": 427,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_NONCONTIGUOUS_PATH/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_INADMISSIBLE_PATH",
+      "parent_recorded_artifact_sha256": "52507353e65d713e3fabb89ea7f4da98beb4ab616ee0539115222df9624f5dcd",
+      "bundle_index_sha256": "27288e54991b96163818e3c16bd35856a8411f6ec89e2cb807a0a3dde900055a",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_INADMISSIBLE_PATH/artifact.json",
+          "sha256": "52507353e65d713e3fabb89ea7f4da98beb4ab616ee0539115222df9624f5dcd",
+          "size_bytes": 2346,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_INADMISSIBLE_PATH/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_INADMISSIBLE_PATH/expectation.json",
+          "sha256": "689e03db3008db651822e219d1175b4f5fe2859121640496f1de790a50873d68",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_INADMISSIBLE_PATH/receipt.json",
+          "sha256": "748d759d1f44cb0daab1ff7b0de2a4df8e5abacd1f7eb8c2e94237bc31bea383",
+          "size_bytes": 1708,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_INADMISSIBLE_PATH/registry.json",
+          "sha256": "e3320dca578a23c1b8296f85db72ef87b81262fbc6a0b230a4759d59a6db0609",
+          "size_bytes": 428,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_INADMISSIBLE_PATH/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    },
+    {
+      "case_id": "GRC_MAIN_BOUNDARY_UNREGISTERED",
+      "parent_recorded_artifact_sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+      "bundle_index_sha256": "08352e9645a67bb80c584b5e5084b576e03ab69b08bcd260efec7509b2a79908",
+      "partition": "DEVELOPMENT_REGRESSION",
+      "fresh_holdout_eligible": false,
+      "members": [
+        {
+          "path_in_parent": "evidence/regression/GRC_MAIN_BOUNDARY_UNREGISTERED/artifact.json",
+          "sha256": "278fc925b4aa71c4135a3df3d5ef7ddbb6c6acbbefa65ac135c4d84a4c54d3e3",
+          "size_bytes": 2173,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MAIN_BOUNDARY_UNREGISTERED/contract_schema.json",
+          "sha256": "a6d717213272e1940eac9e1b0aa3a3556b18a6e746a3a51659a250753554c844",
+          "size_bytes": 12105,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MAIN_BOUNDARY_UNREGISTERED/expectation.json",
+          "sha256": "b85c0fe472d2c1aa14961ec0ab843c76cc3e13140c8c665f541fbb11a3e8e92a",
+          "size_bytes": 1056,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MAIN_BOUNDARY_UNREGISTERED/receipt.json",
+          "sha256": "1207e73294238c565b1952d8b80ef8807173d991432541c866f862046a50bdfd",
+          "size_bytes": 1707,
+          "role": "KNOWN_CASE_OR_EXPECTATION_MATERIAL"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MAIN_BOUNDARY_UNREGISTERED/registry.json",
+          "sha256": "c8a81353e78ead3672565f52dad3188ed68d5019812f2dfd8c35ad18114257b6",
+          "size_bytes": 188,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        },
+        {
+          "path_in_parent": "evidence/regression/GRC_MAIN_BOUNDARY_UNREGISTERED/registry_schema.json",
+          "sha256": "031fa1311eefa7991ea9b721f054f3e2764d95d93e019ddb4cb542967571c778",
+          "size_bytes": 1068,
+          "role": "SHARED_SCHEMA_OR_REGISTRY_RESOURCE"
+        }
+      ]
+    }
+  ],
+  "policy": {
+    "permanent_family_exclusion_from_fresh_holdout": true,
+    "derivative_exclusion": [
+      "paraphrases",
+      "renamed_ids",
+      "edge_mutations",
+      "composed_examples",
+      "corrected_targets",
+      "shared_source_or_conversation_lineage"
+    ],
+    "all_known_development_cases_excluded": true,
+    "shared_resources": "A shared public schema is not alone evidence of task contamination; case/oracle reuse and lineage still require review.",
+    "unknown_lineage_or_family_membership": "HOLD_OUTSIDE_HOLDOUT",
+    "derivative_discovery_complete": false,
+    "hash_matching_proves_semantic_independence": false,
+    "enforcement_implementation": "NOT_IMPLEMENTED_BY_THIS_PACKAGE",
+    "coverage": "Fresh holdout claims must exclude these ten families. Continue their separate regression reporting.",
+    "restriction_for_all_excluded_lineages": "regression_dev only; barred from train and holdout"
+  },
+  "additional_development_material": [
+    {
+      "path": "tests/test_manifest_schemas.py",
+      "sha256": "ca1bc8c8ca32e27da165762344fbf70049f9d073e7dac1bc8732111b03e333af",
+      "restriction": "regression_dev only; derivatives excluded from train and fresh holdout"
+    },
+    {
+      "path": "evidence/schema_guard_results.json",
+      "sha256": "5a8b1590a3c7d6eda154d61e1533516e734f0d8d1e30b15c0ea1010580006d4e",
+      "restriction": "known development results; not an independent review or admission receipt"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "artifact_id": "DIGISLEUTH_NEXT_GATE_RECORDING_PROVENANCE_v0.2_candidate",
+  "recorded_at": "2026-10-14T02:13:44.354752+00:00",
+  "git_binding": {
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "branch": "general-bios-laboratory-v1",
+    "recording_base_commit": "03c9580fb28b286c5664035a63a080c8834f13c8",
+    "recording_base_tree": "e6b9972fef6a50d2120f22dbdc37c6015218c396",
+    "path": "laboratory/conformance/next_gate_v0_2_candidate",
+    "user_authorization": {
+      "source": "CURRENT_CONVERSATION",
+      "instruction": "Perform the correction before binding then I authorize the Git Wryie",
+      "received_at": "2026-10-13T22:07:34-04:00",
+      "scope": "Correct successor schema and record the candidate artifacts in Git",
+      "authority_changes_authorized": false,
+      "corpus_admissions_authorized": false
+    }
+  },
+  "parent_next_gate": {
+    "filename": "DIGISLEUTH_NEXT_GATE_v0.1_candidate.zip",
+    "sha256": "66f9942559604f3f2cd5a4f9ec1346348a75dcbf5577cf7301b4c92f535e1b91",
+    "archived_byte_for_byte": true
+  },
+  "parent_repair": {
+    "filename": "DIGISLEUTH_CONFORMANCE_REPAIR_v0.2_candidate.zip",
+    "sha256": "83420e34d6079c3124e062f55bd2d650e96f69e070280d86f17e5b2b6da908dd",
+    "size_bytes": 6341277,
+    "validator_source_sha256": "be47b71e8c76cb08d028034ab42a97cf3b30b42289b906277b6414ce4c03351e",
+    "lockfile_sha256": "3b90d84fded3155157d38e63f76060c1ba9af993958098f762345d9d8c8d704e",
+    "fixture_manifest_sha256": "08ed9d8ab239d3236ae2ef7cdbe8089ae75c7d34b390eccbd040f10fe63e46f1"
+  },
+  "source_of_amendment": "Founder current conversation: manifest admission and isolation protocol followed by correction-before-Git authorization",
+  "prospective_recording": true,
+  "historical_commitments_manufactured": false,
+  "commit_signature_claim": "NONE; Git commit recording is not the required authenticated corpus partition freeze",
+  "actual_corpus_examples_admitted": 0,
+  "runtime_authority_enforcement": "NOT_EVALUATED",
+  "release": "HOLD"
+}

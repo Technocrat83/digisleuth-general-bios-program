@@ -1,0 +1,763 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_id",
+    "schema_revision",
+    "inventory_complete",
+    "source_registry",
+    "exclusion_registry",
+    "admission_policy",
+    "examples"
+  ],
+  "properties": {
+    "manifest_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "schema_revision": {
+      "const": "DIGISLEUTH_ADMITTED_CORPUS_MANIFEST_v0.2_candidate"
+    },
+    "inventory_complete": {
+      "const": true
+    },
+    "source_registry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locator",
+        "sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "exclusion_registry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locator",
+        "sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "admission_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locator",
+        "sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "locator": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "example_id",
+          "source_revision",
+          "reviewed_target",
+          "lineage_group",
+          "assigned_split",
+          "input",
+          "invariants_and_rubric",
+          "provenance",
+          "admission"
+        ],
+        "properties": {
+          "example_id": {
+            "type": "string",
+            "pattern": "^ex_[0-9a-f]{64}$"
+          },
+          "source_revision": {
+            "type": "string",
+            "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64}|snapshot:sha256:[0-9a-f]{64})$"
+          },
+          "reviewed_target": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "artifact",
+              "independent_review"
+            ],
+            "properties": {
+              "artifact": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locator",
+                  "sha256",
+                  "size_bytes"
+                ],
+                "properties": {
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "size_bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              },
+              "independent_review": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "review_status",
+                  "reviewer_identity",
+                  "receipt",
+                  "independence_evidence",
+                  "authentication_evidence",
+                  "authentication_status"
+                ],
+                "properties": {
+                  "review_status": {
+                    "const": "ACCEPTED"
+                  },
+                  "reviewer_identity": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "receipt": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "locator",
+                      "sha256",
+                      "size_bytes"
+                    ],
+                    "properties": {
+                      "locator": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{64}$"
+                      },
+                      "size_bytes": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  },
+                  "independence_evidence": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "locator",
+                      "sha256",
+                      "size_bytes"
+                    ],
+                    "properties": {
+                      "locator": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{64}$"
+                      },
+                      "size_bytes": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  },
+                  "authentication_evidence": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "locator",
+                      "sha256",
+                      "size_bytes"
+                    ],
+                    "properties": {
+                      "locator": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "\\S"
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{64}$"
+                      },
+                      "size_bytes": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  },
+                  "authentication_status": {
+                    "const": "VERIFIED"
+                  }
+                }
+              }
+            }
+          },
+          "lineage_group": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "group_id",
+              "ancestor_group_ids",
+              "origin_families",
+              "derived_from_families",
+              "known_development_case_ids",
+              "lineage_complete",
+              "verification_receipt"
+            ],
+            "properties": {
+              "group_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+              },
+              "ancestor_group_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+                },
+                "uniqueItems": true
+              },
+              "origin_families": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "DNL_CONTEXT",
+                    "DNL_DUPLICATE_PREDICATE",
+                    "DNL_FLOAT_SERIALIZATION_COLLISION",
+                    "DNL_IDENTITY",
+                    "DNL_PREDICATE_VALUE",
+                    "DNL_RELATION_TYPE",
+                    "DNL_STALE_VERDICT",
+                    "GRC_DUPLICATE_REGISTRY_ID",
+                    "GRC_NODE_CYCLE",
+                    "GRC_UNUSED_DIGEST_ARGUMENTS"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "derived_from_families": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "DNL_CONTEXT",
+                    "DNL_DUPLICATE_PREDICATE",
+                    "DNL_FLOAT_SERIALIZATION_COLLISION",
+                    "DNL_IDENTITY",
+                    "DNL_PREDICATE_VALUE",
+                    "DNL_RELATION_TYPE",
+                    "DNL_STALE_VERDICT",
+                    "GRC_DUPLICATE_REGISTRY_ID",
+                    "GRC_NODE_CYCLE",
+                    "GRC_UNUSED_DIGEST_ARGUMENTS"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "known_development_case_ids": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "DNL_POSITIVE_ROUNDTRIP",
+                    "DNL_PREDICATE_VALUE",
+                    "DNL_RELATION_TYPE",
+                    "DNL_IDENTITY",
+                    "DNL_CONTEXT",
+                    "DNL_STALE_VERDICT",
+                    "DNL_DUPLICATE_PREDICATE",
+                    "GRC_POSITIVE_NA",
+                    "GRC_UNUSED_DIGEST_ARGUMENTS",
+                    "GRC_NODE_CYCLE",
+                    "GRC_DUPLICATE_REGISTRY_ID",
+                    "DNL_FLOAT_SERIALIZATION_COLLISION",
+                    "DNL_BOOL_VS_INT",
+                    "DNL_RELATION_DIRECTION",
+                    "DNL_RELATION_TERMINAL",
+                    "DNL_DUPLICATE_IDENTICAL_PREDICATE",
+                    "DNL_DUPLICATE_RELATION",
+                    "DNL_DUPLICATE_CONSTRAINT",
+                    "DNL_MISSING_PREDICATE",
+                    "DNL_EXTRA_PREDICATE",
+                    "DNL_EXTRA_FIELD",
+                    "DNL_CONSTRAINT_OMISSION",
+                    "DNL_PROVENANCE_SEVERANCE",
+                    "DNL_AUTHORITY_INJECTION",
+                    "DNL_EPOCH_CHANGE",
+                    "DNL_VERSION_CHANGE",
+                    "DNL_REDUNDANCY_FLAG",
+                    "DNL_DUPLICATE_JSON_KEY",
+                    "DNL_NAN",
+                    "DNL_INFINITY_EXPONENT",
+                    "DNL_UNSAFE_INTEGER",
+                    "DNL_BAD_JSON",
+                    "DNL_INT_VS_FLOAT",
+                    "DNL_SIGNED_ZERO",
+                    "DNL_FLOAT_VS_STRING",
+                    "RECEIPT_UNSIGNED_ENUM",
+                    "RECEIPT_TAMPER",
+                    "RECEIPT_UNTRUSTED_KEY",
+                    "RECEIPT_CHANGED_CONFIG",
+                    "RECEIPT_CHANGED_SOURCE",
+                    "RECEIPT_CONFIG_RAW_BYTES",
+                    "GRC_STALE_RECEIPT",
+                    "GRC_RECEIPT_REGISTRY_CHANGE",
+                    "GRC_RECEIPT_SCHEMA_CHANGE",
+                    "DNL_FIXED_COMMITMENT_TAMPER",
+                    "DNL_RAW_DIGEST_TAMPER",
+                    "DNL_PROFILE_TAMPER",
+                    "GRC_VALIDATOR_DIGEST",
+                    "GRC_REGISTRY_DIGEST",
+                    "GRC_REGISTRY_SCHEMA_DIGEST",
+                    "GRC_EXTRA_FIELD",
+                    "GRC_PERMISSION_TRUE",
+                    "GRC_UNKNOWN_G4_RULE",
+                    "GRC_DUPLICATE_INVARIANT",
+                    "GRC_BINDING_ID_MISMATCH",
+                    "GRC_JURISDICTION_OVERLAP",
+                    "GRC_CONDITIONAL_LABELS_MISSING",
+                    "GRC_MANDATORY_NOT_REPRESENTABLE",
+                    "GRC_POSITIVE_ALTERNATE_PATHS",
+                    "GRC_DUPLICATE_PATH_ID",
+                    "GRC_COLLAPSED_TRAVERSAL",
+                    "GRC_EMPTY_PATH",
+                    "GRC_UNREGISTERED_PATH",
+                    "GRC_NONCONTIGUOUS_PATH",
+                    "GRC_INADMISSIBLE_PATH",
+                    "GRC_MAIN_BOUNDARY_UNREGISTERED"
+                  ]
+                },
+                "uniqueItems": true
+              },
+              "lineage_complete": {
+                "const": true
+              },
+              "verification_receipt": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locator",
+                  "sha256",
+                  "size_bytes"
+                ],
+                "properties": {
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "size_bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            }
+          },
+          "assigned_split": {
+            "enum": [
+              "train",
+              "regression_dev",
+              "holdout"
+            ]
+          },
+          "input": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "locator",
+              "sha256",
+              "size_bytes"
+            ],
+            "properties": {
+              "locator": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "size_bytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "invariants_and_rubric": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "locator",
+              "sha256",
+              "size_bytes"
+            ],
+            "properties": {
+              "locator": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "size_bytes": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "provenance": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_artifact",
+              "source_standing",
+              "founder_intention_reference",
+              "jurisdiction",
+              "epoch",
+              "source_verification_receipt",
+              "prior_admission_dependencies",
+              "admission_dependencies_complete"
+            ],
+            "properties": {
+              "source_artifact": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locator",
+                  "sha256",
+                  "size_bytes"
+                ],
+                "properties": {
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "size_bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              },
+              "source_standing": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "founder_intention_reference": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "jurisdiction": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "epoch": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "source_verification_receipt": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locator",
+                  "sha256",
+                  "size_bytes"
+                ],
+                "properties": {
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "size_bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              },
+              "prior_admission_dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "locator",
+                    "sha256",
+                    "size_bytes"
+                  ],
+                  "properties": {
+                    "locator": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "\\S"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "size_bytes": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  }
+                }
+              },
+              "admission_dependencies_complete": {
+                "const": true
+              }
+            }
+          },
+          "admission": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "disposition",
+              "receipt",
+              "verifier_identity",
+              "authentication_evidence",
+              "authentication_status"
+            ],
+            "properties": {
+              "disposition": {
+                "const": "ADMITTED"
+              },
+              "receipt": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locator",
+                  "sha256",
+                  "size_bytes"
+                ],
+                "properties": {
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "size_bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              },
+              "verifier_identity": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "authentication_evidence": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "locator",
+                  "sha256",
+                  "size_bytes"
+                ],
+                "properties": {
+                  "locator": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  },
+                  "size_bytes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              },
+              "authentication_status": {
+                "const": "VERIFIED"
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "type": "object",
+              "required": [
+                "lineage_group"
+              ],
+              "properties": {
+                "lineage_group": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "origin_families"
+                      ],
+                      "properties": {
+                        "origin_families": {
+                          "minItems": 1
+                        }
+                      }
+                    },
+                    {
+                      "required": [
+                        "derived_from_families"
+                      ],
+                      "properties": {
+                        "derived_from_families": {
+                          "minItems": 1
+                        }
+                      }
+                    },
+                    {
+                      "required": [
+                        "known_development_case_ids"
+                      ],
+                      "properties": {
+                        "known_development_case_ids": {
+                          "minItems": 1
+                        }
+                      }
+                    },
+                    {
+                      "required": [
+                        "group_id"
+                      ],
+                      "properties": {
+                        "group_id": {
+                          "enum": [
+                            "DNL_CONTEXT",
+                            "DNL_DUPLICATE_PREDICATE",
+                            "DNL_FLOAT_SERIALIZATION_COLLISION",
+                            "DNL_IDENTITY",
+                            "DNL_PREDICATE_VALUE",
+                            "DNL_RELATION_TYPE",
+                            "DNL_STALE_VERDICT",
+                            "GRC_DUPLICATE_REGISTRY_ID",
+                            "GRC_NODE_CYCLE",
+                            "GRC_UNUSED_DIGEST_ARGUMENTS"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "required": [
+                        "ancestor_group_ids"
+                      ],
+                      "properties": {
+                        "ancestor_group_ids": {
+                          "contains": {
+                            "enum": [
+                              "DNL_CONTEXT",
+                              "DNL_DUPLICATE_PREDICATE",
+                              "DNL_FLOAT_SERIALIZATION_COLLISION",
+                              "DNL_IDENTITY",
+                              "DNL_PREDICATE_VALUE",
+                              "DNL_RELATION_TYPE",
+                              "DNL_STALE_VERDICT",
+                              "GRC_DUPLICATE_REGISTRY_ID",
+                              "GRC_NODE_CYCLE",
+                              "GRC_UNUSED_DIGEST_ARGUMENTS"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "assigned_split": {
+                  "const": "regression_dev"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Admitted corpus manifest candidate v0.2",
+  "$comment": "Schema validation checks representation only. Real receipt authentication, deterministic IDs, ID uniqueness, source-content binding and transitive lineage checks are mandatory separately before inclusion. No corpus instance is provided."
+}

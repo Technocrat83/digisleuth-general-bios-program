@@ -1,0 +1,184 @@
+{
+  "artifact_id": "DIGISLEUTH_NEXT_OPERATIONAL_GATE_v0.2_candidate",
+  "standing": "CANDIDATE_SPECIFICATION",
+  "recorded_at": "2026-10-14T02:13:44.354752+00:00",
+  "parent_binding": {
+    "filename": "DIGISLEUTH_CONFORMANCE_REPAIR_v0.2_candidate.zip",
+    "sha256": "83420e34d6079c3124e062f55bd2d650e96f69e070280d86f17e5b2b6da908dd",
+    "size_bytes": 6341277,
+    "validator_source_sha256": "be47b71e8c76cb08d028034ab42a97cf3b30b42289b906277b6414ce4c03351e",
+    "lockfile_sha256": "3b90d84fded3155157d38e63f76060c1ba9af993958098f762345d9d8c8d704e",
+    "fixture_manifest_sha256": "08ed9d8ab239d3236ae2ef7cdbe8089ae75c7d34b390eccbd040f10fe63e46f1"
+  },
+  "founder_protocol": "Four-gate protocol supplied in the current conversation; no canonical ratification inferred.",
+  "artifacts": {
+    "corpus_manifest_schema": "corpus_manifest.schema.json",
+    "development_exclusions": "development_exclusions.json",
+    "pending_admission_ledger_schema": "pending_admission_ledger.schema.json",
+    "partition_freeze_schema": "partition_freeze.schema.json",
+    "manifest_admission_contract": "manifest_admission_contract.json"
+  },
+  "gates": [
+    {
+      "gate": "G1_CORPUS_PINNING",
+      "status": "BLOCKED",
+      "required_inputs": [
+        "Complete owner-designated candidate corpus bytes and source registry",
+        "Source revisions, standing, Founder intention, jurisdiction, epoch and lineage",
+        "Prior admission dependencies and affected-example inventory"
+      ],
+      "procedure": [
+        "Resolve actual source inventory and finalized independently verified target list.",
+        "Apply all full-admission obligations before including any row in the admitted manifest.",
+        "Use exact core fields example_id, source_revision, reviewed_target, lineage_group and assigned_split; permitted splits are train, regression_dev and holdout.",
+        "Keep missing, unverified or unresolved submissions in a separate PENDING_ADMISSION ledger.",
+        "Materialize a nonempty admitted manifest only after target finalization and row admission; produce a detached SHA-256 digest.",
+        "Verify independent review, prior admission dependencies and required requalification; no manifest or target list is supplied by this correction."
+      ],
+      "acceptance_evidence": [
+        "Nonempty corpus manifest, raw corpus bytes and manifest digest",
+        "Inventory completeness review and authenticated requalification receipts"
+      ],
+      "seal_limits": "Digest binds exact bytes; it does not authenticate source, prove completeness or admit examples."
+    },
+    {
+      "gate": "G2_INDEPENDENT_TARGET_REVIEW",
+      "status": "BLOCKED",
+      "required_inputs": [
+        "Actual target outputs and invariant labels",
+        "Reviewer identity and independently pinned authentication method",
+        "Evidence that reviewer and target review are independent of development fixtures"
+      ],
+      "procedure": [
+        "Review target correctness, source standing, applicable equivalence and acceptable abstention before subject-model exposure.",
+        "Resolve disputed labels; hold unresolved targets.",
+        "Bind each review to exact input, source, target, rubric and context digests.",
+        "Authenticate reviews against separately established trust anchors; self-asserted reviewer names are insufficient."
+      ],
+      "acceptance_evidence": [
+        "Authenticated independent review receipts and target inventory",
+        "Reviewer independence and conflict-resolution record"
+      ]
+    },
+    {
+      "gate": "G3_HOLDOUT_ISOLATION",
+      "status": "BLOCKED",
+      "required_inputs": [
+        "Fresh independently authored cases outside every excluded family",
+        "Complete ancestry, duplication and exposure records",
+        "Separate evaluator custody and verifiable access controls"
+      ],
+      "procedure": [
+        "Resolve transitive source/conversation/correction lineage before model, prompting or repair-cycle exposure.",
+        "Restrict all ten repair-family origins and derivatives and all 66 known development cases to regression_dev; prohibit them from train and holdout.",
+        "Freeze exact train/regression_dev/holdout membership and authenticate a detached signature over the bound payload.",
+        "Keep held-out material completely unexposed throughout active iteration; use detached evaluator custody and verify access/exposure controls.",
+        "Disclose held-out inputs to the subject only in the separately bound final evaluation; keep oracle targets and review receipts outside subject context and retrieval.",
+        "Retire any exposed or lesson-admitted case from freshness claims, preserve its historical result, and create a separately reviewed successor holdout."
+      ],
+      "acceptance_evidence": [
+        "Reviewed lineage-separated holdout manifest and detached digests",
+        "Custody/access test evidence and exposure log",
+        "Frozen task family coverage, sample counts and statistical/acceptance plan"
+      ],
+      "coverage_limits": "Excluding entire known defect families narrows the fresh-holdout claim; those families retain development-regression evidence only."
+    },
+    {
+      "gate": "G4_RUNTIME_AUTHORITY_ENFORCEMENT",
+      "status": "BLOCKED",
+      "required_inputs": [
+        "Actual candidate runtime and protected recipient implementation",
+        "Runtime/code/configuration/lockfile digests and jurisdiction/epoch",
+        "Recipient-local admission policy and independently bound verifier",
+        "Decision/commit/revocation linearization and conflict/retry semantics",
+        "Resource envelope, isolation, durability boundary and covered crash model",
+        "Effect-history observation and trusted receipt issuance"
+      ],
+      "procedure": [
+        "Freeze applicable runtime obligations, fixture mapping and pass/fail criteria before execution.",
+        "Exercise the actual bound protected boundary; a newly authored mock cannot establish an unbound candidate runtime.",
+        "Observe decision order and the full covered effect history, including compensated effects.",
+        "Adjudicate structural preservation, interpretive fidelity and authority enforcement independently."
+      ],
+      "acceptance_evidence": [
+        "Runtime-bound authoritative order and effect-history traces",
+        "Authenticated per-obligation verdict receipts and scope limitations"
+      ],
+      "obligations": [
+        {
+          "id": "LOCAL_ADMISSION",
+          "criterion": "Receiving or verifying a proposal alone grants no authority. Absent or rejected recipient-local admission yields no protected effect."
+        },
+        {
+          "id": "REVOCATION_ORDER",
+          "criterion": "R precedes D in the authoritative order implies finalized REJECT and no protected commitment or forbidden effect. Exercise both race schedules and adjudicate the actual order; timestamps are diagnostic."
+        },
+        {
+          "id": "COMMIT_AND_RETRY",
+          "criterion": "Pin the admission/commit atomicity rule. Successful retries do not duplicate protected effects; unfinished attempts are not relabeled as rejection."
+        },
+        {
+          "id": "ISOLATION",
+          "criterion": "A different recipient, scope or epoch cannot reuse the authority. Verify covered bypass paths cannot mutate protected state."
+        },
+        {
+          "id": "CESSATION",
+          "criterion": "After the pinned cease event, no new protected effects occur within the covered boundary; report disposition of in-flight work."
+        },
+        {
+          "id": "DURABILITY_AND_RECOVERY",
+          "criterion": "Test the declared crash/durability boundary and recovery behavior. A later compensation does not erase an earlier forbidden effect."
+        },
+        {
+          "id": "WITNESSING",
+          "criterion": "Bind attempted input, decision, commitment, revocation/cease state, ordering and observed effects to authenticated exact-artifact receipts."
+        }
+      ],
+      "verdict_policy": {
+        "not_executed": "NOT_EVALUATED",
+        "executed_with_insufficient_or_unauthenticated_evidence": "UNRESOLVED",
+        "sufficient_evidence_satisfying_pinned_obligation": "PASS",
+        "sufficient_evidence_establishing_violation": "FAIL",
+        "any_required_fail_unresolved_or_not_evaluated": "HOLD",
+        "not_applicable": "Requires predeclared applicability and remains separate from PASS"
+      },
+      "promotion_limits": "A scoped local runtime pass does not establish production enforcement or confer deployment authority."
+    }
+  ],
+  "model_comparisons": {
+    "parent_plan": "evidence/controlled_comparison_plan.json",
+    "dispatch": "HOLD_PENDING_CORPUS_REQUALIFICATION_REVIEW_HOLDOUT_AND_MODEL_BINDINGS",
+    "C0_C1_C2_runs": 0,
+    "C3_status": "NOT_DISPATCHED",
+    "semantic_scores_establish_runtime_authority": false
+  },
+  "effects": {
+    "corpus_admissions": 0,
+    "authority_changes": 0,
+    "model_runs": 0,
+    "training_runs": 0,
+    "deployment": "NONE",
+    "canonical_ratification": "NONE"
+  },
+  "release": "HOLD",
+  "supersedes_for_future_schema_use": {
+    "filename": "DIGISLEUTH_NEXT_GATE_v0.1_candidate.zip",
+    "sha256": "66f9942559604f3f2cd5a4f9ec1346348a75dcbf5577cf7301b4c92f535e1b91",
+    "preservation": "Exact v0.1 bytes archived; no prior evidence is rewritten."
+  },
+  "git_binding": {
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "branch": "general-bios-laboratory-v1",
+    "recording_base_commit": "03c9580fb28b286c5664035a63a080c8834f13c8",
+    "recording_base_tree": "e6b9972fef6a50d2120f22dbdc37c6015218c396",
+    "path": "laboratory/conformance/next_gate_v0_2_candidate",
+    "user_authorization": {
+      "source": "CURRENT_CONVERSATION",
+      "instruction": "Perform the correction before binding then I authorize the Git Wryie",
+      "received_at": "2026-10-13T22:07:34-04:00",
+      "scope": "Correct successor schema and record the candidate artifacts in Git",
+      "authority_changes_authorized": false,
+      "corpus_admissions_authorized": false
+    }
+  }
+}

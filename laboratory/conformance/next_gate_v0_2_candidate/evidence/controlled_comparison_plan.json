@@ -1,0 +1,47 @@
+{
+  "artifact_id": "DIGISLEUTH_CONTROLLED_COMPARISON_PLAN_v0.2_candidate",
+  "standing": "CANDIDATE_PLAN_UNEXECUTED",
+  "conditions": {
+    "C0": "Same existing model with neutral task instructions",
+    "C1": "Same model with frozen DNCL and conformance instructions",
+    "C2": "Same model and instructions plus versioned retrieval",
+    "C3": "Adapted candidate with the same base, retrieval, and instructions; optional and separately dispatched"
+  },
+  "paired_comparisons": ["C1_minus_C0", "C2_minus_C1", "C3_minus_C2"],
+  "required_shared_bindings": [
+    "task_set_raw_digest", "reviewed_source_corpus_manifest_digest", "lineage_group_partition_digest",
+    "detached_oracle_and_rubric_digest", "model_and_provider_version", "tokenizer_and_chat_template_revision",
+    "output_limit", "truncation_and_loss_mask_policy", "inference_settings", "resource_envelope",
+    "repeated_trial_count", "preregistered_statistical_treatment", "family_denominators", "acceptance_criteria_revision"
+  ],
+  "condition_specific_bindings": {
+    "C0": ["neutral_instruction_digest"],
+    "C1": ["DNCL_instruction_digest"],
+    "C2": ["DNCL_instruction_digest", "retrieval_snapshot_digest", "retriever_configuration_digest"],
+    "C3": ["C2_bindings", "base_weight_identity", "adapter_checkpoint_digest", "training_corpus_digest", "training_configuration_digest"]
+  },
+  "metrics": [
+    "structural_preservation", "interpretive_fidelity", "authority_boundary_interpretation_errors",
+    "justified_abstentions", "unnecessary_abstentions", "usable_task_results", "latency", "input_tokens", "output_tokens", "compute_cost"
+  ],
+  "runtime_authority_enforcement": "Independent protected-boundary fixtures and receipts required; semantic scores cannot establish it",
+  "known_material_policy": {
+    "regression_material": "DEVELOPMENT_ONLY",
+    "ten_known_counterexample_families": "PERMANENT_REGRESSION_FIXTURES",
+    "independent_heldout_material_resolved": false,
+    "sealed_holdout_count": 0,
+    "oracle_exposure_to_training_or_retrieval": "PROHIBITED",
+    "failure_admitted_as_lesson": "Retire from fresh holdout claims and preserve the historical result"
+  },
+  "dispatch": {
+    "C0": "BLOCKED_MISSING_REVIEWED_CORPUS_AND_INDEPENDENT_HOLDOUT_BINDINGS",
+    "C1": "BLOCKED_MISSING_REVIEWED_CORPUS_AND_INDEPENDENT_HOLDOUT_BINDINGS",
+    "C2": "BLOCKED_MISSING_REVIEWED_CORPUS_AND_INDEPENDENT_HOLDOUT_BINDINGS",
+    "C3": "NOT_DISPATCHED_PENDING_MEASURED_DEFICIT_AND_TRAINING_BINDINGS"
+  },
+  "model_runs": 0,
+  "training_runs": 0,
+  "production_enforcement": "UNESTABLISHED",
+  "conformance_confers_authority": false,
+  "release": "HOLD"
+}

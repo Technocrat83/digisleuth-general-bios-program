@@ -1,0 +1,54 @@
+{
+  "artifact_id": "DIGISLEUTH_MANIFEST_ADMISSION_CONTRACT_v0.2_candidate",
+  "standing": "CANDIDATE_SPECIFICATION",
+  "required_core_fields": [
+    "example_id",
+    "source_revision",
+    "reviewed_target",
+    "lineage_group",
+    "assigned_split"
+  ],
+  "assigned_split_values": [
+    "train",
+    "regression_dev",
+    "holdout"
+  ],
+  "admitted_manifest_only": true,
+  "pending_admission_location": "Separate ledger; never the admitted manifest or a model execution input",
+  "missing_obligation_rule": "Exclude from admitted manifest and mark PENDING_ADMISSION in the intake ledger",
+  "deterministic_example_id_profile": {
+    "name": "DIGISLEUTH_EXAMPLE_ID_v0.2_candidate",
+    "expression": "ex_ + lowercase SHA-256 hex of UTF-8 JSON array [source_revision, input.sha256, reviewed_target.artifact.sha256, lineage_group.group_id]",
+    "serialization": "Compact JSON array of four ASCII strings in the stated order, no whitespace or trailing LF",
+    "assigned_split_in_identity": false,
+    "uniqueness": "Globally unique across all three splits. A split change cannot disguise reuse of an example."
+  },
+  "mandatory_checks_beyond_json_schema": [
+    "Recompute each example_id with the bound profile; reject duplicate IDs even when other fields differ.",
+    "Verify every bound raw artifact digest, length and immutable source revision; compare snapshot SHA-256 to the exact source content.",
+    "Authenticate accepted target reviews against independently pinned reviewers and trust anchors; bind input, source, target, rubric, context and independence evidence.",
+    "Authenticate admission receipts and prior dependencies against the applicable recipient-local policy. Self-declared ADMITTED or VERIFIED values cannot substitute for this.",
+    "Resolve full lineage ancestry, semantic derivatives and known development fingerprints. Missing or disputed ancestry remains PENDING_ADMISSION.",
+    "Keep each transitive lineage group in exactly one split. Every repair-family origin or derivative and every known development case is restricted to regression_dev.",
+    "Validate split membership completeness, freeze exact manifest/membership and review identities, and authenticate the detached signature before any model/prompt/repair-cycle exposure.",
+    "Verify real holdout custody and access controls plus the exposure audit. A signed manifest does not by itself prove isolation or zero prior leakage."
+  ],
+  "permanent_excluded_families": [
+    "DNL_CONTEXT",
+    "DNL_DUPLICATE_PREDICATE",
+    "DNL_FLOAT_SERIALIZATION_COLLISION",
+    "DNL_IDENTITY",
+    "DNL_PREDICATE_VALUE",
+    "DNL_RELATION_TYPE",
+    "DNL_STALE_VERDICT",
+    "GRC_DUPLICATE_REGISTRY_ID",
+    "GRC_NODE_CYCLE",
+    "GRC_UNUSED_DIGEST_ARGUMENTS"
+  ],
+  "known_development_cases": 66,
+  "schema_test_material": "DEVELOPMENT_ONLY; permanently excluded from fresh-holdout claims including derivatives",
+  "implemented_scope": "JSON Schema structural guards only; full admission, authentication, ancestry and access-control mechanisms remain unbound",
+  "authority_enforcement": "NOT_EVALUATED",
+  "actual_corpus_examples_admitted": 0,
+  "release": "HOLD"
+}

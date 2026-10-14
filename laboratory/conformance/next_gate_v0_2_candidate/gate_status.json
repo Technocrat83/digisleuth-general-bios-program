@@ -1,0 +1,56 @@
+{
+  "artifact_id": "DIGISLEUTH_NEXT_GATE_STATUS_v0.2_candidate",
+  "standing": "CANDIDATE_SPECIFICATION",
+  "recorded_at": "2026-10-14T02:13:44.354752+00:00",
+  "new_work": {
+    "schema_reconciliation": "COMPLETED_AND_STRUCTURALLY_CHECKED",
+    "admission_or_access_controls_implemented": false,
+    "v0_1_preserved_sha256": "66f9942559604f3f2cd5a4f9ec1346348a75dcbf5577cf7301b4c92f535e1b91",
+    "schema_guard_checks": {
+      "passed": 103,
+      "failed": 0,
+      "scope": "SYNTHETIC_DEVELOPMENT_ONLY"
+    },
+    "full_admission_authentication_implementation": "UNBOUND"
+  },
+  "historical_reported_results": {
+    "regression_passes": 66,
+    "regression_failures": 0,
+    "policy_tests": 6,
+    "rerun_in_this_turn": false,
+    "scope": "KNOWN_LOCAL_DEVELOPMENT_MATERIAL"
+  },
+  "corpus": {
+    "complete_manifest_resolved": false,
+    "manifest_sha256": null,
+    "sealed_in_this_turn": false,
+    "actual_examples_requalified": 0,
+    "admitted_manifest_materialized": false,
+    "pending_ledger_materialized": false
+  },
+  "independent_review": {
+    "reviewer_bound": false,
+    "authenticated_targets_reviewed": 0
+  },
+  "holdout": {
+    "constructed": false,
+    "isolated": false,
+    "sealed_case_count": 0,
+    "executions": 0,
+    "generalization": "UNTESTED"
+  },
+  "authority_enforcement": {
+    "runtime_bound": false,
+    "verdict": "NOT_EVALUATED",
+    "production_enforcement": "UNESTABLISHED"
+  },
+  "model_comparisons": 0,
+  "training_runs": 0,
+  "release": "HOLD",
+  "retrieval_limit": "Scoped current-source searches and repair-archive inspection did not resolve the complete corpus. This is not an exhaustive absence claim.",
+  "partition_freeze": {
+    "materialized": false,
+    "authenticated_signature": false,
+    "first_model_exposure_authorized": false
+  }
+}

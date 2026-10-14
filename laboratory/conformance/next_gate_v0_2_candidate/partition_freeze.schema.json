@@ -1,0 +1,318 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "freeze_id",
+    "schema_revision",
+    "signed_payload",
+    "signed_payload_sha256",
+    "signature"
+  ],
+  "properties": {
+    "freeze_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "schema_revision": {
+      "const": "DIGISLEUTH_PARTITION_FREEZE_v0.2_candidate"
+    },
+    "signed_payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifest",
+        "split_membership",
+        "exclusion_registry",
+        "independent_target_review_inventory",
+        "custody_and_access_policy",
+        "exposure_audit",
+        "signing_profile",
+        "freeze_before_first_exposure",
+        "split_counts"
+      ],
+      "properties": {
+        "manifest": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "split_membership": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "exclusion_registry": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "independent_target_review_inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "custody_and_access_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "exposure_audit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "signing_profile": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "freeze_before_first_exposure": {
+          "const": true
+        },
+        "split_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "train",
+            "regression_dev",
+            "holdout"
+          ],
+          "properties": {
+            "train": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "regression_dev": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "holdout": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "signed_payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "signer_identity",
+        "detached_signature",
+        "independently_pinned_trust_anchor",
+        "verification_receipt",
+        "verification_status"
+      ],
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "signer_identity": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "detached_signature": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "independently_pinned_trust_anchor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "verification_receipt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "locator",
+            "sha256",
+            "size_bytes"
+          ],
+          "properties": {
+            "locator": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "size_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "verification_status": {
+          "const": "VERIFIED"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Detached partition membership freeze candidate v0.2",
+  "$comment": "Keep freeze and signature separate from the signed manifest to avoid a self-referential manifest digest. Digest, signature authentication and actual custody/access verification are distinct obligations. No real freeze or signature is supplied."
+}

@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ledger_id",
+    "schema_revision",
+    "execution_eligible",
+    "pending_records"
+  ],
+  "properties": {
+    "ledger_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+    },
+    "schema_revision": {
+      "const": "DIGISLEUTH_PENDING_ADMISSION_LEDGER_v0.2_candidate"
+    },
+    "execution_eligible": {
+      "const": false
+    },
+    "pending_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "intake_id",
+          "raw_record",
+          "disposition",
+          "blocking_obligations"
+        ],
+        "properties": {
+          "intake_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]*$"
+          },
+          "raw_record": {
+            "type": "object"
+          },
+          "disposition": {
+            "const": "PENDING_ADMISSION"
+          },
+          "blocking_obligations": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "SCHEMA_INCOMPLETE",
+                "PROVENANCE_UNVERIFIED",
+                "INDEPENDENT_REVIEW_UNVERIFIED",
+                "LINEAGE_UNRESOLVED",
+                "ADMISSION_UNVERIFIED",
+                "ID_OR_SPLIT_CONFLICT",
+                "EXCLUSION_POLICY_VIOLATION"
+              ]
+            }
+          }
+        }
+      },
+      "uniqueItems": true
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Separate pending-admission intake ledger candidate v0.2",
+  "$comment": "A bookkeeping ledger may hold incomplete raw submissions. It is not an admitted corpus, target list or execution bucket."
+}

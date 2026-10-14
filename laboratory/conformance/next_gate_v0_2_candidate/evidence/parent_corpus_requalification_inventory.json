@@ -1,0 +1,9 @@
+{
+  "manifest_id": "DIGISLEUTH_CORPUS_REQUALIFICATION_INVENTORY_v0.2_candidate",
+  "inventory_complete": false,
+  "defective_validator_revisions": [
+    "sha256:e6485d81ea57590467079fdfe0f3d761c1b045b753e8efd2b57f30da000815da",
+    "sha256:8ff4c392a119edd0dfbe3b9edbb9b208a11ef27611bcf1aaba69e6a5e7f8f96d"
+  ],
+  "examples": []
+}

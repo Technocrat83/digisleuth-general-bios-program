@@ -1,0 +1,28 @@
+DIGISLEUTH CONFORMANCE REPAIR v0.2 — CANDIDATE LOCAL RESULTS
+Date: October 13, 2026
+
+The repaired local reference implementation passes 66/66 known development checks, covering all ten diagnostic counterexample families. Six separate synthetic corpus-requalification hold-policy tests also pass. Reproduction succeeded in a clean Python 3.12 environment using only the bundled hash-pinned wheels.
+
+EVIDENCE PRESERVED
+The original audit ZIP, extracted code, six-case passes and ten counterexamples are retained. The original archive's integrity manifest verifies. A separate rerun reproduces the parent battery and counterexamples in its original missing-BLAKE3 environment. These historical passes retain their original limited scope.
+
+REPAIRS IMPLEMENTED
+The DNL validator compares typed predicate values, complete directed relations and terminals, source identity, redundant context, schema, epoch, provenance, constraints, version and declared redundancy status. It rejects duplicates before mapping and requires BLAKE3 without fallback.
+
+The GRC entry point checks exact resource and validator digests, executes both recovered Draft 2020-12 schemas plus meta checks, and validates path registration, admissibility, contiguity, endpoints and node acyclicity. RFC 8785 remains its post-validation canonicalization profile. A path-eligibility result does not prove path commutation or the G1–G4 realization gates.
+
+Ed25519 receipts bind exact artifact and expectation bytes, resource digests and lengths, validator revision/source hash, profile, dependency versions and lockfile identity. The decoder authenticates the pinned local issuer and all bindings before decoding the same bytes. Bare verdicts, altered receipts and artifact/configuration reuse are refused. This local development issuer is not a production trust anchor.
+
+The explicitly declared successor DNL numeric profile compares exact typed binary64 values, including signed zero, without the old six-decimal rounding. It does not recover precision already lost upstream or claim arbitrary-decimal semantics. Old commitment formats remain archived rather than silently redefined.
+
+CORPUS AND MODEL STATUS
+The complete admitted LLM corpus manifest and its prior admission dependencies remain unresolved. Zero real corpus examples have been requalified. The supplied requalification code holds affected or unresolved examples and grants no new admission. All 66 current fixtures are development material; zero fresh independently held-out cases have been executed.
+
+The saved C0–C3 comparison plan separates neutral instructions, DNCL conditioning, retrieval and optional adaptation. C0–C2 remain blocked on reviewed corpus, independent holdout and model/evaluation bindings. C3 remains undispatched. Model comparison runs: 0. Training runs: 0.
+
+VERDICT BOUNDARIES
+DNL structural preservation and interpretive fidelity are evaluated against supplied local reference semantics. Human/model comprehension is unassessed. Authority enforcement is NOT_EVALUATED throughout. Production enforcement, generalization, corpus admission completeness and canonical ratification remain unestablished. Release remains HOLD.
+
+Package: DIGISLEUTH_CONFORMANCE_REPAIR_v0.2_candidate.zip
+Validator source SHA-256: be47b71e8c76cb08d028034ab42a97cf3b30b42289b906277b6414ce4c03351e
+No Git lineage was created by this task.

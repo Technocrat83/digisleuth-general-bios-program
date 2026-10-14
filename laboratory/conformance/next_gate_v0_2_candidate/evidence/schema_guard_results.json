@@ -1,0 +1,883 @@
+{
+  "scope": "SYNTHETIC_DEVELOPMENT_SCHEMA_GUARDS_ONLY",
+  "standing": "CANDIDATE_SPECIFICATION",
+  "recorded_at": "2026-10-14T02:15:33.420011+00:00",
+  "python": "3.12.14",
+  "jsonschema": "4.25.1",
+  "schemas": {
+    "corpus_manifest.schema.json": "d2282175d7d0c6cadec4a8e48e7756293768a02fe2cf94b2a89d6188da71e8b9",
+    "pending_admission_ledger.schema.json": "53649186d6215387a1f434b7103e33cdefd0ccc5d1649829b3f3f702a08e546e",
+    "partition_freeze.schema.json": "a6f838f42fb1c5e2f46aa7fdb8c3935a37bcbc859bcd3d96f3400e60ed2d48bb"
+  },
+  "test_source_sha256": "ca1bc8c8ca32e27da165762344fbf70049f9d073e7dac1bc8732111b03e333af",
+  "dependency_lock_sha256": "3b90d84fded3155157d38e63f76060c1ba9af993958098f762345d9d8c8d704e",
+  "checks": 103,
+  "passed": 103,
+  "failed": 0,
+  "records": [
+    {
+      "case": "META_SCHEMA:corpus_manifest.schema.json",
+      "pass": true
+    },
+    {
+      "case": "META_SCHEMA:pending_admission_ledger.schema.json",
+      "pass": true
+    },
+    {
+      "case": "META_SCHEMA:partition_freeze.schema.json",
+      "pass": true
+    },
+    {
+      "case": "EXACT_SPLIT:train",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "EXACT_SPLIT:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "EXACT_SPLIT:holdout",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "MISSING_CORE_FIELD:example_id",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "MISSING_CORE_FIELD:source_revision",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "MISSING_CORE_FIELD:reviewed_target",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "MISSING_CORE_FIELD:lineage_group",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "MISSING_CORE_FIELD:assigned_split",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "LEGACY_SPLIT_REJECTED:TRAIN",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "LEGACY_SPLIT_REJECTED:DEVELOPMENT_VALIDATION",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "LEGACY_SPLIT_REJECTED:QUARANTINE",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "LEGACY_SPLIT_REJECTED:UNASSIGNED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "LEGACY_SPLIT_REJECTED:dev",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_CONTEXT:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_CONTEXT:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_CONTEXT:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_CONTEXT:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_CONTEXT:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_CONTEXT:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_DUPLICATE_PREDICATE:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_DUPLICATE_PREDICATE:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_DUPLICATE_PREDICATE:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_DUPLICATE_PREDICATE:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_DUPLICATE_PREDICATE:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_DUPLICATE_PREDICATE:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_FLOAT_SERIALIZATION_COLLISION:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_FLOAT_SERIALIZATION_COLLISION:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_FLOAT_SERIALIZATION_COLLISION:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_FLOAT_SERIALIZATION_COLLISION:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_FLOAT_SERIALIZATION_COLLISION:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_FLOAT_SERIALIZATION_COLLISION:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_IDENTITY:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_IDENTITY:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_IDENTITY:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_IDENTITY:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_IDENTITY:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_IDENTITY:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_PREDICATE_VALUE:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_PREDICATE_VALUE:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_PREDICATE_VALUE:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_PREDICATE_VALUE:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_PREDICATE_VALUE:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_PREDICATE_VALUE:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_RELATION_TYPE:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_RELATION_TYPE:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_RELATION_TYPE:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_RELATION_TYPE:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_RELATION_TYPE:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_RELATION_TYPE:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_STALE_VERDICT:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_STALE_VERDICT:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_STALE_VERDICT:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_STALE_VERDICT:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_STALE_VERDICT:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:DNL_STALE_VERDICT:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_DUPLICATE_REGISTRY_ID:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_DUPLICATE_REGISTRY_ID:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_DUPLICATE_REGISTRY_ID:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_DUPLICATE_REGISTRY_ID:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_DUPLICATE_REGISTRY_ID:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_DUPLICATE_REGISTRY_ID:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_NODE_CYCLE:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_NODE_CYCLE:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_NODE_CYCLE:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_NODE_CYCLE:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_NODE_CYCLE:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_NODE_CYCLE:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_UNUSED_DIGEST_ARGUMENTS:origin_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_UNUSED_DIGEST_ARGUMENTS:origin_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_UNUSED_DIGEST_ARGUMENTS:origin_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_UNUSED_DIGEST_ARGUMENTS:derived_from_families:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_UNUSED_DIGEST_ARGUMENTS:derived_from_families:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "FAMILY_PARTITION:GRC_UNUSED_DIGEST_ARGUMENTS:derived_from_families:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "KNOWN_CASE_PARTITION:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "KNOWN_ANCESTOR_PARTITION:train",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "KNOWN_CASE_PARTITION:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "KNOWN_ANCESTOR_PARTITION:regression_dev",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "KNOWN_CASE_PARTITION:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "KNOWN_ANCESTOR_PARTITION:holdout",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'assigned_split']"
+      ]
+    },
+    {
+      "case": "PROVENANCE_MISSING",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "MUTABLE_BRANCH_REVISION_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'source_revision']"
+      ]
+    },
+    {
+      "case": "ABBREVIATED_COMMIT_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'source_revision']"
+      ]
+    },
+    {
+      "case": "NONDETERMINISTIC_ID_FORMAT_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'example_id']"
+      ]
+    },
+    {
+      "case": "UNACCEPTED_TARGET_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'reviewed_target', 'independent_review', 'review_status']"
+      ]
+    },
+    {
+      "case": "MISSING_REVIEW_AUTHENTICATION_REFERENCE",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'reviewed_target', 'independent_review']"
+      ]
+    },
+    {
+      "case": "UNVERIFIED_REVIEW_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'reviewed_target', 'independent_review', 'authentication_status']"
+      ]
+    },
+    {
+      "case": "INCOMPLETE_LINEAGE_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'lineage_group', 'lineage_complete']"
+      ]
+    },
+    {
+      "case": "INCOMPLETE_ADMISSION_DEPENDENCIES_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'provenance', 'admission_dependencies_complete']"
+      ]
+    },
+    {
+      "case": "PENDING_ROW_BARRED_FROM_MANIFEST",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0, 'admission', 'disposition']"
+      ]
+    },
+    {
+      "case": "EMPTY_MANIFEST_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples']"
+      ]
+    },
+    {
+      "case": "IDENTICAL_DUPLICATE_RECORD_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples']"
+      ]
+    },
+    {
+      "case": "INCOMPLETE_INVENTORY_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['inventory_complete']"
+      ]
+    },
+    {
+      "case": "LEGACY_ALIAS_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['examples', 0]"
+      ]
+    },
+    {
+      "case": "PARTIAL_RECORD_ALLOWED_ONLY_IN_PENDING_LEDGER",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "PENDING_EXECUTION_ELIGIBILITY_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['execution_eligible']"
+      ]
+    },
+    {
+      "case": "ADMITTED_DISPOSITION_REJECTED_IN_PENDING_LEDGER",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['pending_records', 0, 'disposition']"
+      ]
+    },
+    {
+      "case": "DETACHED_FREEZE_REFERENCE_STRUCTURE",
+      "expected_structural_validity": true,
+      "observed_structural_validity": true,
+      "pass": true,
+      "schema_error_paths": []
+    },
+    {
+      "case": "DIGEST_WITHOUT_SIGNATURE_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "[]"
+      ]
+    },
+    {
+      "case": "SIGNATURE_WITHOUT_TRUST_ANCHOR_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['signature']"
+      ]
+    },
+    {
+      "case": "POST_EXPOSURE_FREEZE_REJECTED",
+      "expected_structural_validity": false,
+      "observed_structural_validity": false,
+      "pass": true,
+      "schema_error_paths": [
+        "['signed_payload', 'freeze_before_first_exposure']"
+      ]
+    }
+  ],
+  "receipt_authentication": "NOT_EVALUATED; all accepted/verified examples are synthetic representation stubs",
+  "full_admission_checks": "UNBOUND; schemas do not recompute IDs, authenticate receipts, resolve semantic ancestry or verify custody",
+  "actual_corpus_examples_admitted": 0,
+  "holdout_executions": 0,
+  "authority_enforcement": "NOT_EVALUATED",
+  "release": "HOLD"
+}
