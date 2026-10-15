@@ -1,0 +1,12 @@
+{
+  "parent_library_file_id": "libfile_509ac539debc81919e8765588d90d235",
+  "parent_filename": "BIO_HOLOGRAPHY_MECHANICAL_STATE_MACHINE_v0.1_candidate.zip",
+  "parent_archive_sha256": "9ff3df41eec507477c9d212fb8af97587677a5d71e4d48b17d9529b0b2c91d88",
+  "parent_member_digests_verified": 13,
+  "parent_modified": false,
+  "child_record_id": "BIO_HOLOGRAPHY_SOLVER_NUMERICAL_SPECIFICATION_v0.1_candidate",
+  "lineage_type": "ARTIFACT_CONTENT_HASH_LINK",
+  "git_lineage": "NOT_ESTABLISHED_IN_THIS_RUN",
+  "authoring_local_date": "2026-10-14",
+  "authoring_utc_date": "2026-10-15"
+}

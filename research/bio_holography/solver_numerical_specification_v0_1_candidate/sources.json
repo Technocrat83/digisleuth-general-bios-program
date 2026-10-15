@@ -1,0 +1,17 @@
+{
+  "references": [
+    {
+      "doi": "10.1371/journal.pcbi.1009333",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009333",
+      "role": "Primary hydro-osmotic theory; existing lumens; no nucleation",
+      "external_code_imported": false
+    },
+    {
+      "doi": "10.1038/s41467-023-43246-7",
+      "url": "https://www.repository.cam.ac.uk/items/f62d21c9-98fc-4b1f-aca0-c1283e1494f9",
+      "role": "Author-repository primary abstract; lipid-vesicle hydraulic adhesion experiments; not mouse calibration evidence"
+    }
+  ],
+  "model_status": "INDEPENDENT_CANDIDATE_REDUCTION",
+  "physical_validation": "UNESTABLISHED"
+}

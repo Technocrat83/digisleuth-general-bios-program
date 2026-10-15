@@ -1,0 +1,329 @@
+{
+  "standing": "CANDIDATE_PARAMETER_REQUIREMENTS",
+  "parent_groups_mapped": 18,
+  "branch_parameter_groups": 25,
+  "parameters": [
+    {
+      "id": "cortical_gamma_by_class",
+      "units": "N/m",
+      "role": "INDEPENDENT_MEASUREMENT",
+      "required_evidence": "Bare cortex tension by declared class; measured effective adhesive tension cannot replace it",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "normal_stiffness_Kn",
+      "units": "Pa/m",
+      "role": "INDEPENDENT_CONTACT_MEASUREMENT",
+      "required_evidence": "Normal loading/unloading or independently justified bound",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "equilibrium_peak_t0",
+      "units": "Pa",
+      "role": "INDEPENDENT_CONTACT_MEASUREMENT",
+      "required_evidence": "Quasistatic equilibrium cohesive peak, distinct from dynamic traction",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "quasistatic_work_W0",
+      "units": "J/m2",
+      "role": "INDEPENDENT_CONTACT_MEASUREMENT",
+      "required_evidence": "Quasistatic loading work; separate from rate-dependent dissipated work",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "normal_viscosity_eta_n",
+      "units": "Pa s/m",
+      "role": "INDEPENDENT_CONTACT_MEASUREMENT",
+      "required_evidence": "Multiple loading rates with independent stiffness/work constraints",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "tangential_viscosity_eta_s",
+      "units": "Pa s/m",
+      "role": "INDEPENDENT_CONTACT_MEASUREMENT",
+      "required_evidence": "Opening-dominated residual sliding characterization; no shear-damage interpretation",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "geometry_drag",
+      "units": "N s/m",
+      "role": "INDEPENDENT_RELAXATION_MEASUREMENT",
+      "required_evidence": "Geometry response to known load with tension scale constrained",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "fluid_viscosity_mu",
+      "units": "Pa s",
+      "role": "INDEPENDENT_MEASUREMENT",
+      "required_evidence": "Matched fluid composition and temperature",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "fluid_density_rho",
+      "units": "kg/m3",
+      "role": "INDEPENDENT_MEASUREMENT",
+      "required_evidence": "Needed to evaluate pinned slit Reynolds scope",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "fluid_solute_diffusivity_D",
+      "units": "m2/s",
+      "role": "INDEPENDENT_TRACER_MEASUREMENT",
+      "required_evidence": "Matched effective osmolyte and fluid",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "membrane_Lp_by_class",
+      "units": "m/(Pa s)",
+      "role": "INDEPENDENT_TRANSPORT_MEASUREMENT",
+      "required_evidence": "Controlled water exchange under measured pressure/concentration differences",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "membrane_Ps_by_class",
+      "units": "m/s",
+      "role": "INDEPENDENT_TRANSPORT_MEASUREMENT",
+      "required_evidence": "Matched solute-transfer measurements",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "membrane_reflection_by_class",
+      "units": "dimensionless",
+      "role": "INDEPENDENT_TRANSPORT_MEASUREMENT",
+      "required_evidence": "Values in [0,1] from a jointly consistent membrane transport characterization",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "cell_dry_volume",
+      "units": "m3",
+      "role": "INDEPENDENT_CELL_MEASUREMENT",
+      "required_evidence": "Fixed non-osmotic cell fraction/volume and uncertainty",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "resting_cleft_h0",
+      "units": "m",
+      "role": "INDEPENDENT_MEASUREMENT_OR_BOUND",
+      "required_evidence": "Resting molecular gap; independent uncertainty and sensitivity qualification",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "exterior_leak_conductance",
+      "units": "m3/(Pa s)",
+      "role": "INDEPENDENT_SEAL_MEASUREMENT_OR_BOUND",
+      "required_evidence": "Baseline sealed setting conditional on evidence; leakage cannot absorb pumping errors",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "active_pump_rate_by_class",
+      "units": "mol/(m2 s)",
+      "role": "CONDITIONAL_BASELINE_FIT",
+      "required_evidence": "Only after fixed independent transport/mechanics and water/solute initial inventories; rank/profile checks may still refuse fit",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "initial_cell_geometry",
+      "units": "m; m2; m3",
+      "role": "MEASURED_INITIAL_INPUT",
+      "required_evidence": "Initial-time-only calibrated complete 3D cell surfaces and identities",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "initial_fluid_geometry",
+      "units": "m; m2; m3",
+      "role": "MEASURED_INITIAL_INPUT",
+      "required_evidence": "Cleft/lumen/junction inventory and neck geometry with coverage review",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "initial_cell_solute",
+      "units": "mol",
+      "role": "INDEPENDENT_INITIAL_INPUT",
+      "required_evidence": "Amount/concentration and cell water/dry-volume mapping",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "initial_fluid_solute",
+      "units": "mol",
+      "role": "INDEPENDENT_INITIAL_INPUT",
+      "required_evidence": "Effective osmolyte amounts/concentrations; no guessed shared concentration",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "bath_conditions",
+      "units": "Pa; mol/m3; K",
+      "role": "RECORDED_BOUNDARY_INPUT",
+      "required_evidence": "Pressure gauge, osmolarity, composition, temperature and bath transport classes",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "cohesive_delta0_deltaf",
+      "units": "m",
+      "role": "DERIVED_ONLY",
+      "required_evidence": "delta0=t0/Kn and deltaf=2W0/t0; not free fit parameters",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "contact_retardation_scale",
+      "units": "s",
+      "role": "DERIVED_ONLY",
+      "required_evidence": "eta_n/Kn; not a stress-relaxation time",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    },
+    {
+      "id": "effective_contact_angle_descriptor",
+      "units": "dimensionless",
+      "role": "DERIVED_OBSERVABLE",
+      "required_evidence": "Mapping from surface/cohesive state and geometry; not independent gamma_cc optimizer",
+      "value": null,
+      "uncertainty": null,
+      "source_revision": null
+    }
+  ],
+  "parent_mapping": [
+    {
+      "parent_id": "gamma_cc_effective",
+      "branch_role": "DERIVED_OBSERVABLE_ONLY",
+      "mapping": "No independent effective adhesive tension in this branch"
+    },
+    {
+      "parent_id": "gamma_cell_lumen",
+      "branch_role": "INDEPENDENT_BARE_CORTEX_TENSION",
+      "mapping": "Class-specific bare tensions remain on all membrane patches"
+    },
+    {
+      "parent_id": "gamma_cell_medium_mapping",
+      "branch_role": "EXCLUDED_AS_FREE_PARAMETER",
+      "mapping": "Use independently recorded interface-class tensions; any ratio is derived"
+    },
+    {
+      "parent_id": "W_separation",
+      "branch_role": "INDEPENDENT_W0",
+      "mapping": "Quasistatic cohesive work"
+    },
+    {
+      "parent_id": "traction_peak",
+      "branch_role": "INDEPENDENT_t0",
+      "mapping": "Equilibrium cohesive peak"
+    },
+    {
+      "parent_id": "separation_length",
+      "branch_role": "DERIVED_delta0_deltaf",
+      "mapping": "Requires additional independent Kn"
+    },
+    {
+      "parent_id": "adhesion_turnover",
+      "branch_role": "EXCLUDED_FROM_BRANCH",
+      "mapping": "Repair/rebinding requires alternate branch"
+    },
+    {
+      "parent_id": "contact_relaxation_time",
+      "branch_role": "EXCLUDED_AS_RELAXATION_PARAMETER",
+      "mapping": "KV retardation eta/Kn is derived; fixed-opening relaxation is outside this branch"
+    },
+    {
+      "parent_id": "geometry_drag",
+      "branch_role": "INDEPENDENT_MEASUREMENT",
+      "mapping": "Reduced overdamped mobility"
+    },
+    {
+      "parent_id": "water_permeability",
+      "branch_role": "INDEPENDENT_Lp",
+      "mapping": "Membrane classes"
+    },
+    {
+      "parent_id": "solute_permeability",
+      "branch_role": "INDEPENDENT_Ps",
+      "mapping": "Membrane classes"
+    },
+    {
+      "parent_id": "active_solute_pumping",
+      "branch_role": "CONDITIONAL_BASELINE_FIT",
+      "mapping": "Only after auxiliary evidence and identifiability qualification"
+    },
+    {
+      "parent_id": "fluid_viscosity",
+      "branch_role": "INDEPENDENT_MEASUREMENT",
+      "mapping": "Matched material conditions"
+    },
+    {
+      "parent_id": "bridge_aperture",
+      "branch_role": "MEASURED_GEOMETRY_OR_INDEPENDENT_BOUND",
+      "mapping": "h0 and neck geometry; never numerical rescue knob"
+    },
+    {
+      "parent_id": "initial_geometry",
+      "branch_role": "MEASURED_INITIAL_INPUT",
+      "mapping": "Complete calibrated initial-time-only geometry"
+    },
+    {
+      "parent_id": "osmolarity_reference",
+      "branch_role": "INDEPENDENT_INPUT",
+      "mapping": "Bath/cell/fluid amounts plus membrane reflection"
+    },
+    {
+      "parent_id": "temperature",
+      "branch_role": "RECORDED_BOUNDARY_INPUT",
+      "mapping": "Absolute temperature"
+    },
+    {
+      "parent_id": "exterior_leakage",
+      "branch_role": "INDEPENDENT_SEAL_BOUND",
+      "mapping": "Explicit bath-fluid edge; independently constrained"
+    }
+  ],
+  "fit_candidates": [
+    "active_pump_rate_by_class"
+  ],
+  "optimizer_parameter_count": null,
+  "fit_rule": "No point estimates until baseline admission; unresolved rank/profile bounds cause IDENTIFIABILITY_HOLD"
+}

@@ -1,0 +1,16 @@
+{
+  "manifest_id": "BH_CZ_KV_OPENING_FV_3D_COHORT_v0.1_candidate",
+  "requirements_file": "cohort_requirements.json",
+  "member_schema_file": "cohort_member.schema.json",
+  "members": [],
+  "membership_materialized": false,
+  "lineage_review": null,
+  "design_review": null,
+  "split_freeze_sha256": null,
+  "predictions_freeze_sha256": null,
+  "actual_biological_independence": "UNESTABLISHED",
+  "calibration": "HOLD",
+  "promotion_authority": false,
+  "requirements_revision": 2,
+  "specimen_condition_review": null
+}

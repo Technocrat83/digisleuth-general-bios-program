@@ -1,0 +1,18 @@
+{
+  "record_id": "BIO_HOLOGRAPHY_SOLVER_SPECIFICATION_REVISION_LINK",
+  "candidate_version": "0.1",
+  "specification_revision": 2,
+  "previous_specification_revision": 1,
+  "previous_archive_sha256": "afd1e5bd21a6880c01b87ac52acfccbfea4cbce4818ee035d7427418602fbef4",
+  "previous_member_digests_verified": 16,
+  "parent_archive_sha256": "9ff3df41eec507477c9d212fb8af97587677a5d71e4d48b17d9529b0b2c91d88",
+  "parent_modified": false,
+  "selected_branch": "BH_CZ_KV_OPENING_FV_3D_V1",
+  "numerical_branch_modified": false,
+  "change_scope": "Explicit specimen genotype and treatment evidence requirements; review receipts",
+  "lineage_type": "ARTIFACT_CONTENT_HASH_LINK",
+  "authenticated_freeze": "NOT_FROZEN",
+  "git_lineage": "NOT_ESTABLISHED_IN_THIS_RUN",
+  "review_local_date": "2026-10-14",
+  "review_utc_date": "2026-10-15"
+}

@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:bio-holography:solver-cohort-member:v0.1:revision2:candidate",
+  "title": "Solver-specific cohort member, candidate v0.1 revision 2",
+  "type": "object",
+  "required": [
+    "embryo_id",
+    "identity_namespace",
+    "dam_id",
+    "litter_id",
+    "harvest_event_id",
+    "culture_dish_id",
+    "collection_batch_id",
+    "acquisition_batch_id",
+    "treatment_batch_id",
+    "acquisition_session_id",
+    "operator_id",
+    "partition",
+    "sire_record",
+    "genotype_record_sha256",
+    "strain_background_record",
+    "stage_age_record",
+    "physical_voxel_spacing_m",
+    "frame_timestamps_s",
+    "instrument_calibration_sha256",
+    "raw_data_sha256",
+    "annotation_sha256",
+    "coverage_review_id",
+    "viability_review_id",
+    "seal_review_id",
+    "initial_geometry_revision",
+    "initial_inventory_revision",
+    "mechanics_transport_measurement_set_sha256",
+    "scope_adequacy_review_id",
+    "prediction_input_cutoff_s",
+    "prior_exposure_record",
+    "exclusion_censoring_record",
+    "genotype_status",
+    "treatment_condition",
+    "treatment_record_sha256"
+  ],
+  "properties": {
+    "embryo_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity_namespace": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dam_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "litter_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "harvest_event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "culture_dish_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "collection_batch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acquisition_batch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "treatment_batch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acquisition_session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "partition": {
+      "enum": [
+        "baseline_calibration",
+        "baseline_validation",
+        "holdout_validation"
+      ]
+    },
+    "sire_record": {
+      "type": "object",
+      "required": [
+        "status",
+        "identity"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "KNOWN",
+            "UNKNOWN_DOCUMENTED"
+          ]
+        },
+        "identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "KNOWN"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "identity": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "identity": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "genotype_record_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "strain_background_record": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage_age_record": {
+      "type": "object",
+      "required": [
+        "stage",
+        "relative_development_time_s",
+        "time_uncertainty_s"
+      ],
+      "properties": {
+        "stage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relative_development_time_s": {
+          "type": "number"
+        },
+        "time_uncertainty_s": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "physical_voxel_spacing_m": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
+    },
+    "frame_timestamps_s": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "instrument_calibration_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "raw_data_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "annotation_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "coverage_review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "viability_review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seal_review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "initial_geometry_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "initial_inventory_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mechanics_transport_measurement_set_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scope_adequacy_review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prediction_input_cutoff_s": {
+      "type": "number"
+    },
+    "prior_exposure_record": {
+      "type": "object",
+      "required": [
+        "status",
+        "review_record_id"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "DESIGN_EXPOSED",
+            "OUTCOME_WITHHELD_VERIFIED",
+            "EXPOSURE_UNRESOLVED"
+          ]
+        },
+        "review_record_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "exclusion_censoring_record": {
+      "type": "object",
+      "required": [
+        "status",
+        "record_id"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "INCLUDED_UNCENSORED",
+            "INCLUDED_CENSORED",
+            "EXCLUDED"
+          ]
+        },
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "genotype_status": {
+      "enum": [
+        "WILD_TYPE",
+        "GENETICALLY_ALTERED",
+        "UNRESOLVED"
+      ],
+      "description": "Specimen-level declaration bound to genotype_record_sha256; authenticated review is separately required."
+    },
+    "treatment_condition": {
+      "enum": [
+        "BASELINE_UNPERTURBED",
+        "PERTURBATION",
+        "OTHER",
+        "UNRESOLVED"
+      ],
+      "description": "Specimen-level condition bound to treatment_record_sha256; treatment_batch_id alone does not establish treatment identity."
+    },
+    "treatment_record_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "Digest of the specimen-linked treatment/control record including agent or manipulation, timing, dose or boundary conditions, and provenance where applicable."
+    }
+  },
+  "additionalProperties": false,
+  "$comment": "Structural schema is not admission. Timestamps must be strictly increasing and voxel order ZYX established by semantic review; global grouping, lineage authenticity, adequacy/power, initial cutoff and ancillary measurements require separate checks. Revision 2 requires explicit specimen genotype/treatment declarations and a treatment record hash. Both baseline partitions require declared wild-type, unperturbed records. A schema-valid declaration or digest does not authenticate its contents; unresolved holdout declarations remain pending review.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "partition": {
+            "enum": [
+              "baseline_calibration",
+              "baseline_validation"
+            ]
+          }
+        },
+        "required": [
+          "partition"
+        ]
+      },
+      "then": {
+        "properties": {
+          "genotype_status": {
+            "const": "WILD_TYPE"
+          },
+          "treatment_condition": {
+            "const": "BASELINE_UNPERTURBED"
+          }
+        }
+      }
+    }
+  ]
+}

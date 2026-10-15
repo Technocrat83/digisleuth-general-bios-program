@@ -1,0 +1,26 @@
+{
+  "metadata_group_audit": "UNRESOLVED",
+  "invalid": [],
+  "unresolved": [
+    "cohort_membership_unmaterialized"
+  ],
+  "counts": {
+    "embryos": 0,
+    "dams": 0,
+    "litters": 0,
+    "collection_batches": 0,
+    "acquisition_batches": 0,
+    "treatment_batches": 0
+  },
+  "dam_batch_cross_tab": [],
+  "shared_batches": [],
+  "acquisition_batch_entropy_nats": null,
+  "entropy_scope": "records with valid acquisition batch IDs only; diagnostic, not independence evidence",
+  "biological_independence": "NOT_ESTABLISHED_BY_METADATA_AUDIT",
+  "effective_biological_sample_size": null,
+  "admission": "PENDING_ADMISSION",
+  "calibration_gate": "HOLD",
+  "promotion_authority": false,
+  "requirements_revision": 2,
+  "specimen_condition_bindings": "UNMATERIALIZED"
+}

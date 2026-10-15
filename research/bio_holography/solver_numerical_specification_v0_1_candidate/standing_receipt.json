@@ -1,0 +1,50 @@
+{
+  "record_id": "BIO_HOLOGRAPHY_SOLVER_NUMERICAL_SPECIFICATION_STANDING_v0.1_candidate",
+  "standing": "CANDIDATE_SPECIFICATION",
+  "specification_definition": "CONTENT_HASHED_CANDIDATE",
+  "authenticated_freeze": "NOT_FROZEN",
+  "branch": "BH_CZ_KV_OPENING_FV_3D_V1",
+  "contact_transport_initial_boundary_topology_rules": "SPECIFIED",
+  "parameter_roles": {
+    "parent_groups_mapped": 18,
+    "branch_groups": 25,
+    "physical_estimates": 0,
+    "conditional_fit_groups": [
+      "active_pump_rate_by_class"
+    ]
+  },
+  "cohort_requirements": {
+    "schema_required_fields": 34,
+    "requirements_status": "DEFINED_FOR_SELECTED_BRANCH",
+    "actual_members": 0,
+    "admitted_members": 0,
+    "dam_records": 0,
+    "batch_records": 0,
+    "sample_design_review": "UNREVIEWED",
+    "membership_freeze": "NOT_FROZEN",
+    "specimen_condition_bindings": "REQUIRED_UNMATERIALIZED"
+  },
+  "reference_checks": {
+    "executed": 31,
+    "passed": 31,
+    "scope": "Algebraic laws, conservation identities and synthetic lineage metadata; no integration/mesh/event solver qualification"
+  },
+  "full_solver_numerical_acceptance": {
+    "families_specified": 17,
+    "families_executed": 0,
+    "verdict": "NOT_EVALUATED"
+  },
+  "solver_implementation": "UNIMPLEMENTED",
+  "biological_simulations": 0,
+  "parameter_fits": 0,
+  "blinded_validation_runs": 0,
+  "calibration": "HOLD",
+  "ratification": "WITHHELD",
+  "authority_enforcement": "NOT_EVALUATED",
+  "bios_phenotype_standard_conformance": "NOT_EVALUATED",
+  "promotion_authority": false,
+  "release": "HOLD",
+  "git_write_performed": false,
+  "next_gate": "Implement the selected solver against the pinned synthetic acceptance battery; materialize and independently review the cohort and ancillary physical measurements before calibration.",
+  "specification_revision": 2
+}

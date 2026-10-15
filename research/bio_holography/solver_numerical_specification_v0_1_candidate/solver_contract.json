@@ -1,0 +1,134 @@
+{
+  "profile_id": "BH_CZ_KV_OPENING_FV_3D_V1",
+  "standing": "CANDIDATE_SPECIFICATION",
+  "contact_branch": "BILINEAR_IRREVERSIBLE_COHESIVE_OPENING_WITH_KELVIN_VOIGT_DAMPING",
+  "geometry_branch": "3D_TRIANGULATED_CORTICAL_SURFACES_WITH_VOLUME_CONSTRAINTS",
+  "transport_branch": "CONSERVATIVE_FINITE_VOLUME_WATER_SOLUTE_WITH_UPWIND_ADVECTION",
+  "cell_reservoir_branch": "FINITE_WATER_AND_SOLUTE_WITH_FIXED_NON_OSMOTIC_VOLUME",
+  "bath_branch": "CLAMPED_EXTERNAL_PRESSURE_OSMOLARITY_TEMPERATURE",
+  "branch_selection": "SPECIFIED_CANDIDATE",
+  "parameter_values": "UNMEASURED_UNFROZEN",
+  "physical_parameters_fitted": 0,
+  "laws": {
+    "delta0": "t0/Kn",
+    "deltaf": "2*W0/t0",
+    "admissibility": "Kn>0, t0>0, W0>0, eta_n>=0, eta_s>=0, deltaf>delta0",
+    "history": "kappa_next=max(kappa_accepted,delta_trial), committed only after accepted step",
+    "damage": "0 if kappa<=delta0; 1 if kappa>=deltaf; otherwise deltaf*(kappa-delta0)/(kappa*(deltaf-delta0))",
+    "normal_traction": "(1-d)*(Kn*delta+eta_n*delta_dot)",
+    "tangential_traction": "(1-d)*eta_s*v_s",
+    "slit_conductance": "w*h^3/(12*mu*ell)",
+    "fluid_solute_flux": "D*w*h*(c_a-c_b)/ell + Q*c_upwind",
+    "membrane_water_flux": "Lp*A*((p_i-p_q)-reflection*Rg*Theta*(c_i-c_q))",
+    "membrane_solute_flux": "A*(j_a+Ps*(c_i-c_q))+(1-reflection)*c_upwind*Q",
+    "cell_concentration": "N_i/W_i",
+    "cell_geometry_constraint": "Vgeom_i=Vdry_i+W_i",
+    "fluid_geometry_constraint": "Vgeom_q=V_q"
+  },
+  "scope_limits": {
+    "shear_to_equilibrium_peak_max": 0.1,
+    "slit_height_to_length_max": 0.1,
+    "slit_height_to_width_max": 0.1,
+    "slit_reynolds_max": 0.1,
+    "slit_reynolds_definition": "rho*abs(Q)*h/(w*h*mu)",
+    "diffusive_mixing_to_exchange_time_max": 0.1,
+    "mixing_scope_review": "independent cell/lumen mixing evidence or conservative timescale bound required",
+    "cell_division": "HALT_MODEL_SCOPE_EXCEEDED",
+    "adhesive_repair": "HALT_MODEL_SCOPE_EXCEEDED",
+    "contact_fixed_opening_stress_relaxation": "REQUIRES_ALTERNATE_CONSTITUTIVE_BRANCH",
+    "initial_gap": "positive independently measured/bounded physical h0; never fitted as numerical floor"
+  },
+  "state_extension": {
+    "cell_water": "W_i>0 m3",
+    "cell_solute": "N_i>=0 mol",
+    "cell_dry_volume": "Vdry_i>=0 m3",
+    "contact_history": "kappa m",
+    "damage": "d in [0,1]",
+    "cumulative_boundary_fluxes": [
+      "bath_water_m3",
+      "bath_solute_mol"
+    ]
+  },
+  "cardinalities": {
+    "biological_milestones": 5,
+    "milestone_transitions": 4,
+    "parent_local_event_types": 6,
+    "representable_parent_event_types": 5,
+    "scope_halt_parent_event_types": 1,
+    "defined_governance_roles": 3,
+    "authenticated_authorities": 0
+  },
+  "numerics": {
+    "integration": "MONOLITHIC_IMPLICIT_BACKWARD_EULER",
+    "nonlinear_solver": "SEMISMOOTH_NEWTON_ACTIVE_SET_WITH_SCALED_LINE_SEARCH",
+    "iteration_limit": 50,
+    "nonlinear_residual_max": 1e-08,
+    "constraint_residual_max": 1e-08,
+    "step_error_relative": 0.0001,
+    "step_error_normalized_absolute": 1e-08,
+    "estimator": "FULL_STEP_VS_TWO_HALF_STEPS_ACCEPT_TWO_HALF_STEP_STATE",
+    "error_norm": "maximum component difference divided by atol*component_scale+rtol*max(abs(full),abs(two_half))",
+    "event_time_tolerance_in_t_ref": 0.0001,
+    "final_water_solute_budget_relative": 1e-07,
+    "event_map_relative": 1e-10,
+    "global_budget_denominator": "initial finite inventory + integrated absolute bath transfer + reference inventory scale",
+    "dt_initial_max_in_t_ref": 0.1,
+    "dt_max_in_t_ref": 0.25,
+    "dt_min_in_t_ref": 1e-06,
+    "step_rejection_limit": 20,
+    "accepted_step_limit_synthetic": 1000000,
+    "topology_event_limit_synthetic": 10000,
+    "wall_time_limit_synthetic_s": 3600,
+    "invalid_trial_policy": "REJECT_AND_ROLLBACK_WITHOUT_CLIPPING",
+    "ambiguous_event_policy": "CONSERVATIVE_SIMULTANEOUS_GROUP_OR_UNRESOLVED_EVENT_GROUP",
+    "residual_scaling": {
+      "coordinate": "L_ref",
+      "opening_history": "L_ref",
+      "water_volume": "V_ref",
+      "solute": "solute_ref",
+      "pressure": "p_ref",
+      "force": "p_ref*L_ref^2"
+    },
+    "event_comparison_map": "Conservative common fluid partition with immutable cell/patch IDs; unreconciled event groups reject the timestep"
+  },
+  "physical_run_scales": {
+    "L_ref_m": null,
+    "V_ref_m3": null,
+    "p_ref_Pa": null,
+    "solute_ref_mol": null,
+    "t_ref_s": null,
+    "source_rule": "frozen initial median cell radius, independent reference tension, bath concentration, reference acquisition interval"
+  },
+  "bindings": {
+    "solver_implementation_sha256": null,
+    "environment_lock_sha256": null,
+    "run_manifest_sha256": null,
+    "observation_operator_sha256": null,
+    "physical_parameter_freeze_sha256": null,
+    "execution_authority_record": null,
+    "cessation_binding": null
+  },
+  "standing_summary": {
+    "calibration": "HOLD",
+    "full_solver_implementation": "UNIMPLEMENTED",
+    "full_solver_acceptance": "NOT_EXECUTED",
+    "biological_simulation": "UNEXECUTED",
+    "blind_validation": "UNEXECUTED",
+    "authority_enforcement": "NOT_EVALUATED",
+    "promotion_authority": false,
+    "release": "HOLD"
+  },
+  "specification_revision": 2,
+  "cohort_contract": {
+    "schema_revision": 2,
+    "member_schema": "cohort_member.schema.json",
+    "required_specimen_condition_fields": [
+      "genotype_status",
+      "treatment_condition",
+      "treatment_record_sha256"
+    ],
+    "baseline_genotype": "WILD_TYPE",
+    "baseline_treatment": "BASELINE_UNPERTURBED",
+    "authenticated_specimen_review": "REQUIRED_BEFORE_ADMISSION"
+  }
+}

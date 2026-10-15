@@ -1,0 +1,146 @@
+{
+  "standing": "FULL_SOLVER_TEST_PLAN",
+  "family_count": 17,
+  "full_solver_families_executed": 0,
+  "criteria_origin": "Pinned candidate numerical design choices; not biological error tolerances",
+  "families": [
+    {
+      "id": "NA01",
+      "name": "Capillary pressure balance",
+      "fixture": "Sphere mesh with constant bare gamma and no cohesive or active forcing",
+      "acceptance": "relative pressure error <=1e-4 under geometric refinement",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA02",
+      "name": "Cohesive loading work",
+      "fixture": "Prescribed monotone normal opening, eta_n=0",
+      "acceptance": "quadrature loading work/W0 error <=1e-6; peak and completion match delta0/deltaf",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA03",
+      "name": "Damage irreversibility and unloading",
+      "fixture": "Load above onset, unload, reload and close",
+      "acceptance": "kappa and damage never decrease; no traction recovery after d=1; event history survives rollback",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA04",
+      "name": "Membrane osmotic equilibrium",
+      "fixture": "Known equal hydrostatic/osmotic driving with active pumping disabled",
+      "acceptance": "normalized net water flux <=1e-10; independent sign tests for water and solute",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA05",
+      "name": "Water and solute budgets",
+      "fixture": "Closed cell-fluid network and separate driven bath-boundary fixture",
+      "acceptance": "closed final relative budgets <=1e-8; driven signed boundary budget <=1e-7",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA06",
+      "name": "Analytic two-compartment diffusion",
+      "fixture": "Fixed volumes and Q=0 with known diffusive conductance",
+      "acceptance": "concentration difference matches exponential decay within 1e-3; inventory conserved",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA07",
+      "name": "Advection and positivity",
+      "fixture": "Manufactured transport with explicit inlet/outlet boundary inventories",
+      "acceptance": "upwind donor consistency, no negative accepted amount, normalized analytic error <=1e-3 under refinement",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA08",
+      "name": "Passive mechanical dissipation",
+      "fixture": "Disable active pump, imposed active-tension variation and bath driving",
+      "acceptance": "energy-accounting residual <=1e-6; viscosity/drag/damage dissipation nonnegative; no fabricated equilibrium requirement",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA09",
+      "name": "Spatial refinement",
+      "fixture": "Two successive mesh and fluid-volume partition refinements with identical physical coefficients",
+      "acceptance": "dominant-cavity fraction and coarsening time change <=1%; cavity centroid displacement <=0.05 L_ref; independent geometry and transport refinement",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA10",
+      "name": "Temporal and event refinement",
+      "fixture": "Two successive timestep halvings; matched reference event sequence",
+      "acceptance": "fraction/time change <=0.5%; centroid displacement <=0.025 L_ref; event localization <=1e-4 t_ref; smooth-window backward-Euler order target [0.8,1.2]",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA11",
+      "name": "Rejection rollback and resource halt",
+      "fixture": "Injected invalid trial, failed nonlinear solve and exhausted step/event budget",
+      "acceptance": "no accepted-state or ledger mutation; exact last-accepted checkpoint restored; explicit NUMERICAL_HALT receipt",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA12",
+      "name": "Partial contact and exterior seal isolation",
+      "fixture": "One patch fails while another stays bound, then all fail",
+      "acceptance": "adhesive edge persists until all patches fail; exterior leak topology unchanged by internal failure",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA13",
+      "name": "Conservative topology event maps",
+      "fixture": "Nucleation reclassification, drainage to background clefts and merger",
+      "acceptance": "both water and solute remap residual <=1e-10; no inventory insertion/deletion or forced pressure equality",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA14",
+      "name": "Scope and input refusal",
+      "fixture": "Repair, division, excessive shear, non-slender/slit-Re, invalid mixing, invalid initial history",
+      "acceptance": "MODEL_SCOPE_EXCEEDED or UNRESOLVED as appropriate; no silent branch substitution",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA15",
+      "name": "Symmetry equivariance",
+      "fixture": "Rotate initial geometry and relabel cells/compartments in an otherwise identical run",
+      "acceptance": "rotated centroid residual <=0.01 L_ref; scalar trajectory changes <=1e-4; no unrecorded lumen seeds",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA16",
+      "name": "Cohort lineage and batch boundaries",
+      "fixture": "Shared dam across splits, repeated litters, shared dish, missing lineage, high batch entropy",
+      "acceptance": "cross-cluster splits invalid; unknown lineage unresolved; entropy never grants independence or admission",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    },
+    {
+      "id": "NA17",
+      "name": "Frozen-environment replay",
+      "fixture": "Same binary/environment/input hashes and canonical mesh/edge order",
+      "acceptance": "same event groups and output counts; normalized continuous-field discrepancy <=1e-12 on same approved platform",
+      "status": "NOT_EXECUTED",
+      "evidence_sha256": null
+    }
+  ],
+  "overall_verdict": "NOT_EVALUATED",
+  "reference_fixture_results_separate": true
+}

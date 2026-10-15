@@ -1,0 +1,77 @@
+{
+  "requirements_status": "DEFINED_FOR_SELECTED_CANDIDATE_BRANCH",
+  "membership_status": "UNMATERIALIZED",
+  "cohort_freeze": "NOT_FROZEN",
+  "calibration": "HOLD",
+  "branch_id": "BH_CZ_KV_OPENING_FV_3D_V1",
+  "member_schema": "cohort_member.schema.json",
+  "partitions": [
+    "baseline_calibration",
+    "baseline_validation",
+    "holdout_validation"
+  ],
+  "cluster_split_keys": [
+    "dam_id",
+    "litter_id",
+    "harvest_event_id",
+    "culture_dish_id"
+  ],
+  "cluster_assignment_rule": "Connected components sharing any cluster key cannot span partitions",
+  "batch_keys": [
+    "collection_batch_id",
+    "acquisition_batch_id",
+    "treatment_batch_id"
+  ],
+  "sire_rule": "Record identity or authenticated unavailable status and assess pedigree covariance before independence claims",
+  "repeated_litter_rule": "Same dam remains one grouped split unit even across litters or batches",
+  "frames_and_cells_as_replicates": false,
+  "batch_entropy_role": "DIAGNOSTIC_ONLY_NEVER_INDEPENDENCE_OR_EFFECTIVE_SAMPLE_SIZE",
+  "crossed_nested_design_required": true,
+  "sample_size_design": {
+    "dam_clusters": null,
+    "litter_clusters": null,
+    "embryos_per_cluster": null,
+    "batch_counts": null,
+    "power_precision_review_id": null,
+    "cluster_effect_uncertainty_method": null,
+    "status": "UNREVIEWED"
+  },
+  "independent_measurement_set": "parameter_roles.json",
+  "sampling_adequacy_rule": "Physical timing/resolution must resolve selected constitutive and transport timescales or independently bound them; review records required",
+  "initial_condition_rule": "Only pre-cutoff observations and permitted independent physical measurements; no hidden-outcome geometry",
+  "unseen_batch_claim": {
+    "requested": false,
+    "requires_disjoint_relevant_holdout_batches": true
+  },
+  "authenticated_reviews_required": [
+    "identity_and_lineage",
+    "genotype_and_treatment",
+    "coverage_and_physical_calibration",
+    "initial_inventory",
+    "mechanics_and_transport",
+    "model_scope",
+    "power_and_cluster_design",
+    "split_freeze_and_exposure",
+    "execution_binding"
+  ],
+  "actual_members": [],
+  "admission": "PENDING_ADMISSION",
+  "specification_revision": 2,
+  "specimen_condition_bindings": {
+    "required_fields": [
+      "genotype_status",
+      "treatment_condition",
+      "treatment_record_sha256"
+    ],
+    "genotype_evidence_field": "genotype_record_sha256",
+    "baseline_partitions": [
+      "baseline_calibration",
+      "baseline_validation"
+    ],
+    "baseline_required_genotype_status": "WILD_TYPE",
+    "baseline_required_treatment_condition": "BASELINE_UNPERTURBED",
+    "treatment_record_rule": "Record binds embryo identity, genotype, control/intervention, time course and source revision; reviewed contents must agree with declared condition. Batch identity cannot substitute.",
+    "holdout_rule": "Each admitted condition must match the separately frozen intervention mapping and scope review; UNRESOLVED is never sufficient for admission.",
+    "declaration_authentication": "PENDING_AUTHENTICATED_REVIEW"
+  }
+}

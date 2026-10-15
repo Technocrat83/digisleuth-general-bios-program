@@ -1,0 +1,21 @@
+{
+  "record_id": "BIO_HOLOGRAPHY_SOLVER_SPECIFICATION_REVIEW",
+  "specification_revision": 2,
+  "reference_checks_reproduced": 31,
+  "reference_checks_passed": 31,
+  "old_numerical_contract_fields_preserved": true,
+  "required_member_fields": 34,
+  "specimen_genotype_treatment_fields_declared": true,
+  "parent_group_mappings": 18,
+  "branch_parameter_groups": 25,
+  "physical_parameter_values_estimated": 0,
+  "full_solver_acceptance_families": 17,
+  "full_solver_acceptance_executed": 0,
+  "cohort_members": 0,
+  "calibration": "HOLD",
+  "ratification": "WITHHELD",
+  "authority_enforcement": "NOT_EVALUATED",
+  "promotion_authority": false,
+  "json_schema_draft_2020_12_validator_execution": "NOT_EXECUTED",
+  "review_scope": "JSON parse and targeted contract consistency assertions; algebraic/reference-fixture rerun; no automated JSON Schema qualification or biological validation"
+}
