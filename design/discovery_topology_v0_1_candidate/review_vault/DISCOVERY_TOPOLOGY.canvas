@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "id": "560e3e12b1e0dafa",
+      "type": "group",
+      "x": -100,
+      "y": -170,
+      "width": 2130,
+      "height": 1200,
+      "label": "DISCOVERY TOPOLOGY — DESIGN CANDIDATE; NO OBSERVED HEAT"
+    },
+    {
+      "id": "3784070fe3e7e3de",
+      "type": "group",
+      "x": 0,
+      "y": -70,
+      "width": 640,
+      "height": 1050,
+      "label": "SEMANTIC — proposed"
+    },
+    {
+      "id": "5b6e8cf657cce338",
+      "type": "group",
+      "x": 20,
+      "y": -25,
+      "width": 600,
+      "height": 980,
+      "label": "AI governance silo (candidate membership)"
+    },
+    {
+      "id": "24ba3d49c498f1da",
+      "type": "file",
+      "file": "notes/silo.md",
+      "x": 60,
+      "y": 40,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "d4a32b7cc7762447",
+      "type": "file",
+      "file": "notes/publication.md",
+      "x": 60,
+      "y": 260,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "2198c6d94f4473a9",
+      "type": "file",
+      "file": "notes/question.md",
+      "x": 60,
+      "y": 480,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "567246a35a431046",
+      "type": "file",
+      "file": "notes/evidence.md",
+      "x": 60,
+      "y": 700,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "d70d5a7909ed5910",
+      "type": "group",
+      "x": 680,
+      "y": -70,
+      "width": 640,
+      "height": 1050,
+      "label": "NAVIGATION — proposed"
+    },
+    {
+      "id": "7de79fd2db8704e3",
+      "type": "file",
+      "file": "notes/habitat.md",
+      "x": 740,
+      "y": 40,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "2dabacc962171e17",
+      "type": "file",
+      "file": "notes/discovery.md",
+      "x": 740,
+      "y": 260,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "53286ff85c57ce3d",
+      "type": "file",
+      "file": "notes/glass.md",
+      "x": 740,
+      "y": 480,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "25fdf380b77e6f9f",
+      "type": "file",
+      "file": "notes/formula.md",
+      "x": 740,
+      "y": 700,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "08bf2418cca97fef",
+      "type": "group",
+      "x": 1360,
+      "y": -70,
+      "width": 640,
+      "height": 1050,
+      "label": "BEHAVIOR — proposed"
+    },
+    {
+      "id": "a1b67e6e7675e7e9",
+      "type": "file",
+      "file": "notes/observation.md",
+      "x": 1420,
+      "y": 40,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "0df00edc15f355ed",
+      "type": "file",
+      "file": "notes/basin.md",
+      "x": 1420,
+      "y": 260,
+      "width": 520,
+      "height": 170
+    },
+    {
+      "id": "db75becfd0564cd6",
+      "type": "file",
+      "file": "notes/petition.md",
+      "x": 1420,
+      "y": 480,
+      "width": 520,
+      "height": 170
+    }
+  ],
+  "edges": [
+    {
+      "id": "b9807a57f7860244",
+      "fromNode": "d4a32b7cc7762447",
+      "toNode": "24ba3d49c498f1da",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED MEMBER_OF"
+    },
+    {
+      "id": "4a162bcf89b4e98d",
+      "fromNode": "d4a32b7cc7762447",
+      "toNode": "2198c6d94f4473a9",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED ADDRESSES"
+    },
+    {
+      "id": "ddffd4e8099ea33e",
+      "fromNode": "d4a32b7cc7762447",
+      "toNode": "567246a35a431046",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED LINKS_TO_EVIDENCE_INDEX"
+    },
+    {
+      "id": "fd14feaca3d6a36e",
+      "fromNode": "7de79fd2db8704e3",
+      "toNode": "d4a32b7cc7762447",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED DERIVES_FROM"
+    },
+    {
+      "id": "8093c6fb985984f0",
+      "fromNode": "7de79fd2db8704e3",
+      "toNode": "2dabacc962171e17",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED OFFERS_ROUTE"
+    },
+    {
+      "id": "fb1628c6d1a97b30",
+      "fromNode": "7de79fd2db8704e3",
+      "toNode": "53286ff85c57ce3d",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED OFFERS_ROUTE"
+    },
+    {
+      "id": "d4550d97d9badbad",
+      "fromNode": "7de79fd2db8704e3",
+      "toNode": "25fdf380b77e6f9f",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED OFFERS_ROUTE"
+    },
+    {
+      "id": "5a2abf163c96b1bf",
+      "fromNode": "2dabacc962171e17",
+      "toNode": "2198c6d94f4473a9",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED LINKS_TO"
+    },
+    {
+      "id": "b153f2243b090baa",
+      "fromNode": "53286ff85c57ce3d",
+      "toNode": "567246a35a431046",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED LINKS_TO"
+    },
+    {
+      "id": "9b02d5d3a682dbf9",
+      "fromNode": "0df00edc15f355ed",
+      "toNode": "a1b67e6e7675e7e9",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED REQUIRES_OBSERVATIONS_FROM"
+    },
+    {
+      "id": "bf12b94f7a89e956",
+      "fromNode": "db75becfd0564cd6",
+      "toNode": "0df00edc15f355ed",
+      "fromSide": "right",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "PROPOSED MAY_REFERENCE"
+    }
+  ]
+}
