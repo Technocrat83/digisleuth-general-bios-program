@@ -1,0 +1,158 @@
+{
+  "authority_attributes": "Read current authoritative SQLite rows; graph membership does not confer authority.",
+  "edges": [
+    [
+      "primary",
+      "ASSIGNED_TO",
+      "task"
+    ],
+    [
+      "delegate",
+      "ASSIGNED_TO",
+      "task"
+    ],
+    [
+      "task",
+      "DEPENDS_ON",
+      "revision"
+    ],
+    [
+      "source",
+      "SUPPORTS",
+      "revision"
+    ],
+    [
+      "review",
+      "APPROVES",
+      "revision"
+    ],
+    [
+      "grant-primary",
+      "GRANTS",
+      "primary"
+    ],
+    [
+      "grant-delegate",
+      "GRANTS",
+      "delegate"
+    ],
+    [
+      "primary",
+      "DELEGATES_TO",
+      "delegate"
+    ],
+    [
+      "task",
+      "TARGETS",
+      "sink"
+    ],
+    [
+      "boundary",
+      "MEDIATES",
+      "sink"
+    ],
+    [
+      "lock",
+      "LOCKS",
+      "sink"
+    ],
+    [
+      "checkpoint",
+      "CHECKPOINTS",
+      "task"
+    ]
+  ],
+  "evidence_sha256": "b22a157f80f232cdd56b06c3e58d2cb45debc21b91da5ce8cdfaa471c96af0ed",
+  "nodes": [
+    {
+      "id": "primary",
+      "type": "Actor"
+    },
+    {
+      "id": "delegate",
+      "type": "Actor"
+    },
+    {
+      "id": "task",
+      "type": "Task"
+    },
+    {
+      "id": "revision",
+      "type": "ArtifactRevision"
+    },
+    {
+      "id": "source",
+      "type": "EvidenceRecord"
+    },
+    {
+      "id": "review",
+      "type": "Approval"
+    },
+    {
+      "id": "grant-primary",
+      "type": "AuthorityGrant"
+    },
+    {
+      "id": "grant-delegate",
+      "type": "AuthorityGrant"
+    },
+    {
+      "id": "sink",
+      "type": "Resource"
+    },
+    {
+      "id": "boundary",
+      "type": "Boundary"
+    },
+    {
+      "id": "lock",
+      "type": "Lock"
+    },
+    {
+      "id": "checkpoint",
+      "type": "Checkpoint"
+    }
+  ],
+  "relation_signatures": {
+    "APPROVES": [
+      "Approval",
+      "ArtifactRevision"
+    ],
+    "ASSIGNED_TO": [
+      "Actor",
+      "Task"
+    ],
+    "CHECKPOINTS": [
+      "Checkpoint",
+      "Task"
+    ],
+    "DELEGATES_TO": [
+      "Actor",
+      "Actor"
+    ],
+    "DEPENDS_ON": [
+      "Task",
+      "ArtifactRevision"
+    ],
+    "GRANTS": [
+      "AuthorityGrant",
+      "Actor"
+    ],
+    "LOCKS": [
+      "Lock",
+      "Resource"
+    ],
+    "MEDIATES": [
+      "Boundary",
+      "Resource"
+    ],
+    "SUPPORTS": [
+      "EvidenceRecord",
+      "ArtifactRevision"
+    ],
+    "TARGETS": [
+      "Task",
+      "Resource"
+    ]
+  }
+}
