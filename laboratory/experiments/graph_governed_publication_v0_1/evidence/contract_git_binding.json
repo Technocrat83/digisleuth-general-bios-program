@@ -1,0 +1,81 @@
+{
+  "schema_version": "0.1.0",
+  "receipt_kind": "GIT_BINDING",
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "branch": "candidate/graph-governed-publication-v0.1",
+  "subject_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+  "subject_tree": "e2653865b9b5ce0fdc89ab060e7883209fc3d8f4",
+  "manifest_path": "candidate_manifest.json",
+  "manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+  "files": [
+    {
+      "path": "candidate_manifest.json",
+      "sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+      "git_blob_sha": "e654eedefcdac8e4ea2af4632e5bf3f13218b521"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e0057d22829b8bb9a82550714dfd73f3beb1e196aac77b266ef53c592ed80ad7",
+      "git_blob_sha": "8512101104bf9a1e5448cf852d2e1801d1793657"
+    },
+    {
+      "path": "config/envelope.json",
+      "sha256": "fc2f4e9d17a529334d916152d658ac2f81d11e25b1c43dd82978539f0e567a07",
+      "git_blob_sha": "e29d21028e119888db1b8176b6b5a0534b137500"
+    },
+    {
+      "path": "config/policy.json",
+      "sha256": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+      "git_blob_sha": "186677d2795d71a2e3c02e2e7728dfde19b50b65"
+    },
+    {
+      "path": "config/requirements.json",
+      "sha256": "60f4585c31a34f667a81a7291bca0b9e4878f4fb7b5089a85fafcadc63c8490c",
+      "git_blob_sha": "d5ff27ee02df89aba765bb4ee50fdfb7309ecb55"
+    },
+    {
+      "path": "fixtures/registry.json",
+      "sha256": "0fdae6df5ff161cae5861c9bb554b31f98d59477794f5df79e3f8fbf709acc04",
+      "git_blob_sha": "c688083795634e07ba724198a61526f25cda05a7"
+    },
+    {
+      "path": "schemas/candidate-manifest.schema.json",
+      "sha256": "2e96f4bbcb1e0ce7bcf9a85a27a63c9743b0ce20a6d8a151f16d4271f9d14ce5",
+      "git_blob_sha": "6b95b8c683aa4936b1ae77572ae07d9ca9da67d0"
+    },
+    {
+      "path": "schemas/fixture-receipt.schema.json",
+      "sha256": "99cb1f286e3c4885144e13de4575a3e778416bea86fdbd5be122b0dece80a30d",
+      "git_blob_sha": "8ed4d5b76e8b83c2abca33d225948f9206855e44"
+    },
+    {
+      "path": "schemas/fixture-registry.schema.json",
+      "sha256": "da6f74a5aae75f8c13ab1a0e476921f6d63753a66c53e22c59bfbb2b8d14265b",
+      "git_blob_sha": "f39a5e9cea23a3270539c0e287c77c2c17644874"
+    },
+    {
+      "path": "schemas/git-binding-receipt.schema.json",
+      "sha256": "3c859e1460ba2e69f19e406c3eb7e10898d61a5879ba78938b87e60cdd14e985",
+      "git_blob_sha": "4a6b176008dcbb559852eba91373c209c3eb1719"
+    },
+    {
+      "path": "sources/original_proposal.md",
+      "sha256": "27e417198e717cf2a1bde778977d138d14e4dfe26119f8816742ce51fcf8c991",
+      "git_blob_sha": "59ee0d4cfed497c2222b6718320c05963f77d861"
+    },
+    {
+      "path": "validation/requirements.txt",
+      "sha256": "0aa9200c9c682799cad0b6d1c3892dc89e817a01ff0ebd13c4426999a67d6862",
+      "git_blob_sha": "9e687f528f08a88eb8a347cc68972c55e69d6728"
+    },
+    {
+      "path": "validation/validate_contract.py",
+      "sha256": "4550f633ad3a5c73490814180fc7835adc77fe42528988c1bae2aab1ae68a0aa",
+      "git_blob_sha": "dd8abd607558c00c6c5c9e05b7f04987140b1044"
+    }
+  ],
+  "verification": "VERIFIED_REMOTE_BLOBS",
+  "signature_status": "UNSIGNED",
+  "self_reference_rule": "Receipt binds a prior subject commit; its own containing commit is not embedded.",
+  "production_enforcement": "NOT_EVALUATED"
+}
