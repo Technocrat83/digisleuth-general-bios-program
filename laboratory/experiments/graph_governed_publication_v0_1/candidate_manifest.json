@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_kind": "CONTRACT_CANDIDATE",
+  "specimen_id": "EBA_TEST_001",
+  "standing": "CANDIDATE_PENDING_REVIEW",
+  "record_date": "2026-10-21",
+  "record_timezone": "America/New_York",
+  "source": {
+    "path": "sources/original_proposal.md",
+    "sha256": "27e417198e717cf2a1bde778977d138d14e4dfe26119f8816742ce51fcf8c991",
+    "library_file_id": "libfile_d468a122954c81919c5307116af9a261",
+    "byte_identity": "MATCHED_CURRENT_READ_TO_AVAILABLE_BYTES"
+  },
+  "lineage": {
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "base_branch": "general-bios-laboratory-v1",
+    "base_commit": "b194dd3fe745350f870a63a2f139e170dcb8f530",
+    "candidate_branch": "candidate/graph-governed-publication-v0.1",
+    "binding_receipt": "evidence/contract_git_binding.json"
+  },
+  "schema_versions": {
+    "git-binding-receipt.schema.json": "0.1.0",
+    "candidate-manifest.schema.json": "0.1.0",
+    "fixture-receipt.schema.json": "0.1.0",
+    "fixture-registry.schema.json": "0.1.0"
+  },
+  "execution_envelope": {
+    "path": "config/envelope.json",
+    "sha256": "fc2f4e9d17a529334d916152d658ac2f81d11e25b1c43dd82978539f0e567a07"
+  },
+  "fixture_registry": {
+    "path": "fixtures/registry.json",
+    "sha256": "0fdae6df5ff161cae5861c9bb554b31f98d59477794f5df79e3f8fbf709acc04",
+    "family_count": 12,
+    "case_count": 34
+  },
+  "dependencies": {
+    "mock_runtime": "PYTHON_STDLIB_ONLY",
+    "development_python": "3.12.14",
+    "development_sqlite": "3.53.1",
+    "schema_validation": "validation/requirements.txt",
+    "dependency_lock_limit": "Version pins; no binary distribution hash lock. Not a hermetic environment claim.",
+    "real_boundary_adapter": "NOT_BUILT"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "e0057d22829b8bb9a82550714dfd73f3beb1e196aac77b266ef53c592ed80ad7",
+      "size_bytes": 3561
+    },
+    {
+      "path": "config/envelope.json",
+      "sha256": "fc2f4e9d17a529334d916152d658ac2f81d11e25b1c43dd82978539f0e567a07",
+      "size_bytes": 981
+    },
+    {
+      "path": "config/policy.json",
+      "sha256": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+      "size_bytes": 1199
+    },
+    {
+      "path": "config/requirements.json",
+      "sha256": "60f4585c31a34f667a81a7291bca0b9e4878f4fb7b5089a85fafcadc63c8490c",
+      "size_bytes": 524
+    },
+    {
+      "path": "fixtures/registry.json",
+      "sha256": "0fdae6df5ff161cae5861c9bb554b31f98d59477794f5df79e3f8fbf709acc04",
+      "size_bytes": 31847
+    },
+    {
+      "path": "schemas/candidate-manifest.schema.json",
+      "sha256": "2e96f4bbcb1e0ce7bcf9a85a27a63c9743b0ce20a6d8a151f16d4271f9d14ce5",
+      "size_bytes": 4482
+    },
+    {
+      "path": "schemas/fixture-receipt.schema.json",
+      "sha256": "99cb1f286e3c4885144e13de4575a3e778416bea86fdbd5be122b0dece80a30d",
+      "size_bytes": 15236
+    },
+    {
+      "path": "schemas/fixture-registry.schema.json",
+      "sha256": "da6f74a5aae75f8c13ab1a0e476921f6d63753a66c53e22c59bfbb2b8d14265b",
+      "size_bytes": 5183
+    },
+    {
+      "path": "schemas/git-binding-receipt.schema.json",
+      "sha256": "3c859e1460ba2e69f19e406c3eb7e10898d61a5879ba78938b87e60cdd14e985",
+      "size_bytes": 2044
+    },
+    {
+      "path": "sources/original_proposal.md",
+      "sha256": "27e417198e717cf2a1bde778977d138d14e4dfe26119f8816742ce51fcf8c991",
+      "size_bytes": 22890
+    },
+    {
+      "path": "validation/requirements.txt",
+      "sha256": "0aa9200c9c682799cad0b6d1c3892dc89e817a01ff0ebd13c4426999a67d6862",
+      "size_bytes": 133
+    },
+    {
+      "path": "validation/validate_contract.py",
+      "sha256": "4550f633ad3a5c73490814180fc7835adc77fe42528988c1bae2aab1ae68a0aa",
+      "size_bytes": 5479
+    }
+  ],
+  "exclusions": [
+    "candidate_manifest.json"
+  ],
+  "kernel_properties": {
+    "non_bypassability": "REQUIREMENT_UNESTABLISHED",
+    "tamper_resistance": "REQUIREMENT_UNESTABLISHED",
+    "isolation": "REQUIREMENT_UNESTABLISHED",
+    "atomic_authorization_to_commit": "REQUIREMENT_UNESTABLISHED"
+  },
+  "runtime_execution": "NOT_RUN",
+  "production_enforcement": "NOT_EVALUATED",
+  "promotion_authority": false
+}
