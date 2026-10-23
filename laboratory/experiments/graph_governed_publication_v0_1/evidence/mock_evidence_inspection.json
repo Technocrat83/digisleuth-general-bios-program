@@ -1,0 +1,270 @@
+{
+  "audit_tool_sha256": "6bca53077342150543aeb912e61ae8c281968707ead116c2882b0ae6b394be43",
+  "certification": "NOT_GRANTED",
+  "contract_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+  "diagnostic_defect_controls": [
+    {
+      "case_id": "F03-revoke-gap",
+      "expected": "CONTRADICTED",
+      "failed_assertions": [
+        "publication_count",
+        "identity_count",
+        "protected_rows_changed",
+        "last_decision",
+        "required_reasons_present"
+      ],
+      "mutant": "unsafe_stale_commit",
+      "observed": "CONTRADICTED"
+    },
+    {
+      "case_id": "F05-direct",
+      "expected": "CONTRADICTED",
+      "failed_assertions": [
+        "publication_count",
+        "identity_count",
+        "protected_rows_changed",
+        "last_decision"
+      ],
+      "mutant": "unsafe_bypass",
+      "observed": "CONTRADICTED"
+    },
+    {
+      "case_id": "F10-policy",
+      "expected": "CONTRADICTED",
+      "failed_assertions": [
+        "governing_bytes_unchanged",
+        "last_decision",
+        "required_reasons_present",
+        "authority_and_control_rows_unchanged"
+      ],
+      "mutant": "unsafe_tamper",
+      "observed": "CONTRADICTED"
+    },
+    {
+      "case_id": "F07-lost-ack",
+      "expected": "CONTRADICTED",
+      "failed_assertions": [
+        "publication_count",
+        "last_decision",
+        "unique_publication_intents",
+        "identity_rows_match_publications"
+      ],
+      "mutant": "unsafe_dedup",
+      "observed": "CONTRADICTED"
+    }
+  ],
+  "effect_observation_independence": "Read-only SQL observer, logically separate code, same trusted test host process. No OS isolation claim.",
+  "families_accounted_for": 12,
+  "implementation_commit": "81cec7539f8c64cad0ca36f3b6c6c37f1b813a6a",
+  "invalid_receipt_probes": [
+    {
+      "expected": "REJECT",
+      "id": "wrong-implementation",
+      "observed": "REJECT"
+    },
+    {
+      "expected": "REJECT",
+      "id": "missing-oracle",
+      "observed": "REJECT"
+    },
+    {
+      "expected": "REJECT",
+      "id": "no-revision",
+      "observed": "REJECT"
+    },
+    {
+      "expected": "REJECT",
+      "id": "unobserved-positive",
+      "observed": "REJECT"
+    },
+    {
+      "expected": "REJECT",
+      "id": "forged-effect-count",
+      "observed": "REJECT"
+    },
+    {
+      "expected": "REJECT",
+      "id": "false-signature-label",
+      "observed": "REJECT"
+    },
+    {
+      "expected": "REJECT",
+      "id": "tampered-effect-artifact",
+      "observed": "REJECT"
+    }
+  ],
+  "jsonschema_version": "4.25.1",
+  "kernel_properties": {
+    "atomic_authorization_to_commit": "REQUIREMENT_UNESTABLISHED",
+    "isolation": "REQUIREMENT_UNESTABLISHED",
+    "non_bypassability": "REQUIREMENT_UNESTABLISHED",
+    "tamper_resistance": "REQUIREMENT_UNESTABLISHED"
+  },
+  "manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+  "normal_cases_inspected": 34,
+  "normal_outcomes": {
+    "SUPPORTED_WITHIN_FIXTURE": 34
+  },
+  "observer_sha256": "7a3aa55778fe4de9a05a9c0798a0184823b87bad1ac26f48cc978946f4d24f4b",
+  "production_enforcement": "NOT_EVALUATED",
+  "python": "3.12.14",
+  "real_boundary_cases": "NOT_RUN",
+  "receipt_kind": "MOCK_EVIDENCE_INSPECTION",
+  "replay": {
+    "all_match": true,
+    "case_results": [
+      {
+        "case_id": "F01-normal",
+        "matched": true
+      },
+      {
+        "case_id": "F02-revoked-before-admission",
+        "matched": true
+      },
+      {
+        "case_id": "F03-revoke-gap",
+        "matched": true
+      },
+      {
+        "case_id": "F03-lock-gap",
+        "matched": true
+      },
+      {
+        "case_id": "F04-continue-draft",
+        "matched": true
+      },
+      {
+        "case_id": "F05-queued",
+        "matched": true
+      },
+      {
+        "case_id": "F05-delegated",
+        "matched": true
+      },
+      {
+        "case_id": "F05-direct",
+        "matched": true
+      },
+      {
+        "case_id": "F05-indirect",
+        "matched": true
+      },
+      {
+        "case_id": "F05-retained_handle",
+        "matched": true
+      },
+      {
+        "case_id": "F05-alter",
+        "matched": true
+      },
+      {
+        "case_id": "F05-delete",
+        "matched": true
+      },
+      {
+        "case_id": "F06-stale-checkpoint",
+        "matched": true
+      },
+      {
+        "case_id": "F07-lost-ack",
+        "matched": true
+      },
+      {
+        "case_id": "F07-conflicting-payload",
+        "matched": true
+      },
+      {
+        "case_id": "F08-unknown-prior-outcome",
+        "matched": true
+      },
+      {
+        "case_id": "F09-expired",
+        "matched": true
+      },
+      {
+        "case_id": "F09-missing-evidence",
+        "matched": true
+      },
+      {
+        "case_id": "F09-budget-zero",
+        "matched": true
+      },
+      {
+        "case_id": "F09-budget-boundary",
+        "matched": true
+      },
+      {
+        "case_id": "F10-policy",
+        "matched": true
+      },
+      {
+        "case_id": "F10-authoritative_evidence",
+        "matched": true
+      },
+      {
+        "case_id": "F10-authority_store",
+        "matched": true
+      },
+      {
+        "case_id": "F10-thresholds",
+        "matched": true
+      },
+      {
+        "case_id": "F11-unlock-only",
+        "matched": true
+      },
+      {
+        "case_id": "F11-fresh-grant",
+        "matched": true
+      },
+      {
+        "case_id": "F11-changed-draft",
+        "matched": true
+      },
+      {
+        "case_id": "F11-commit-before-controls",
+        "matched": true
+      },
+      {
+        "case_id": "F12-below",
+        "matched": true
+      },
+      {
+        "case_id": "F12-warning-equality",
+        "matched": true
+      },
+      {
+        "case_id": "F12-warning-above",
+        "matched": true
+      },
+      {
+        "case_id": "F12-lock-equality",
+        "matched": true
+      },
+      {
+        "case_id": "F12-lock-above",
+        "matched": true
+      },
+      {
+        "case_id": "F12-unknown",
+        "matched": true
+      }
+    ],
+    "cases": 34,
+    "comparison_excludes": [
+      "run_id",
+      "receipt_id",
+      "wall_clock_elapsed_seconds"
+    ]
+  },
+  "scientific_adjudication": "NOT_PERFORMED",
+  "signature_status": "UNSIGNED",
+  "sqlite": "3.53.1",
+  "structural_checks": {
+    "artifact_digests_checked": 12,
+    "cases": 34,
+    "families": 12,
+    "schema_definitions_checked": 4
+  },
+  "validator_sha256": "4550f633ad3a5c73490814180fc7835adc77fe42528988c1bae2aab1ae68a0aa"
+}

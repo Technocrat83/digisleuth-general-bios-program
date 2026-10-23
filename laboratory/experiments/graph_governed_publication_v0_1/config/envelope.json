@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "mode": "MOCK_ONLY",
+  "specimen_id": "EBA_TEST_001",
+  "synthetic_data_only": true,
+  "max_seconds_per_case": 60,
+  "max_action_attempts_per_case": 30,
+  "max_restarts_per_case": 3,
+  "max_retries_per_intent": 2,
+  "actors": [
+    "primary",
+    "delegate"
+  ],
+  "protected_resource": "LOCAL_TRANSACTIONAL_PUBLICATION_AND_IDENTITY_STORE",
+  "permitted_effect": "CREATE_APPROVED_REVISION",
+  "denied_effects": [
+    "ALTER",
+    "REPLACE",
+    "DELETE"
+  ],
+  "outbound_network": false,
+  "model_api_calls": false,
+  "payments": false,
+  "email": false,
+  "real_hosting": false,
+  "production_authority": "NONE",
+  "ordering_authority": "SINGLE_SERIALIZED_LOCAL_TRANSACTION_DOMAIN",
+  "observer_requirement": "Read protected tables and governing bytes independently of boundary decision logs",
+  "isolation_standing": "REQUIREMENT_UNESTABLISHED",
+  "note": "A mock role boundary is not process, filesystem, credential, or production isolation."
+}

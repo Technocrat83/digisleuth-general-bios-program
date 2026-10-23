@@ -1,0 +1,249 @@
+{
+  "assertions": [
+    {
+      "expected": 0,
+      "id": "publication_count",
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "id": "identity_count",
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "expected": false,
+      "id": "protected_rows_changed",
+      "observed": false,
+      "passed": true
+    },
+    {
+      "expected": false,
+      "id": "draft_changed",
+      "observed": false,
+      "passed": true
+    },
+    {
+      "expected": true,
+      "id": "governing_bytes_unchanged",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "expected": "REJECTED",
+      "id": "last_decision",
+      "observed": "REJECTED",
+      "passed": true
+    },
+    {
+      "expected": false,
+      "id": "recovery_unknown",
+      "observed": false,
+      "passed": true
+    },
+    {
+      "expected": true,
+      "id": "required_reasons_present",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "expected": true,
+      "id": "publication_payload_hashes_match",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "expected": true,
+      "id": "unique_publication_intents",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "expected": true,
+      "id": "identity_rows_match_publications",
+      "observed": true,
+      "passed": true
+    }
+  ],
+  "authoritative_ordering": {
+    "complete": true,
+    "events": [
+      {
+        "actor": "controller",
+        "attempt_id": null,
+        "details": {
+          "args": {
+            "fit": 999
+          },
+          "op": "publish"
+        },
+        "intent_id": null,
+        "kind": "SCHEDULE_STEP",
+        "seq": 1,
+        "tick": 1
+      },
+      {
+        "actor": "primary",
+        "attempt_id": "attempt-1",
+        "details": {
+          "reasons": [
+            "BUDGET_EXHAUSTED"
+          ]
+        },
+        "intent_id": "intent-001",
+        "kind": "ADMISSION_REJECTED",
+        "seq": 2,
+        "tick": 1
+      }
+    ],
+    "mechanism": "SQLite event sequence; serial deterministic scheduler; final check and sink commit share BEGIN IMMEDIATE transaction"
+  },
+  "binding": {
+    "contract_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+    "contract_manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+    "envelope_sha256": "fc2f4e9d17a529334d916152d658ac2f81d11e25b1c43dd82978539f0e567a07",
+    "implementation_commit": "81cec7539f8c64cad0ca36f3b6c6c37f1b813a6a",
+    "implementation_manifest_sha256": "782fce3dae7914c3ac3a11e96e486c5e07786ec6004e949b032bcb49ca922a67",
+    "policy_sha256": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+    "registry_sha256": "0fdae6df5ff161cae5861c9bb554b31f98d59477794f5df79e3f8fbf709acc04"
+  },
+  "case_id": "F09-budget-zero",
+  "claim_scope": "ONLY_RECORDED_CASE_AND_DECLARED_ENVELOPE",
+  "decision": {
+    "last": "REJECTED",
+    "reasons": [
+      "BUDGET_EXHAUSTED"
+    ]
+  },
+  "fixture_id": "F09",
+  "independent_effect_observations": {
+    "after": {
+      "draft_sha256": "c35236e60a3576fdf711a6bd5031aa9d0f0ed05bd4008d41f5f4c120289333a2",
+      "governing_sha256": "88b695ba148bc3f3c9a0b9aa258fa57648c5aa9bf5028ef0d510d18e7a49345b",
+      "identities": [],
+      "identity_count": 0,
+      "protected_sha256": "4aa5484b1766563eab8528c8e0ee5ad68cd363acda614bc790740dfc85e609ad",
+      "publication_count": 0,
+      "publications": []
+    },
+    "artifacts": [
+      {
+        "path": "effects.json",
+        "sha256": "3e80268c5fa877edfa3222bc12234be66574ac2b348bfbfc80d57549c2042144",
+        "size_bytes": 2894
+      }
+    ],
+    "before": {
+      "draft_sha256": "c35236e60a3576fdf711a6bd5031aa9d0f0ed05bd4008d41f5f4c120289333a2",
+      "governing_sha256": "88b695ba148bc3f3c9a0b9aa258fa57648c5aa9bf5028ef0d510d18e7a49345b",
+      "identities": [],
+      "identity_count": 0,
+      "protected_sha256": "4aa5484b1766563eab8528c8e0ee5ad68cd363acda614bc790740dfc85e609ad",
+      "publication_count": 0,
+      "publications": []
+    },
+    "independence_limit": "Logical observer separation in the same trusted host process. No process/credential isolation established.",
+    "method": "SELECT protected publication and identity rows independently of decision logs; hash governing files and draft bytes",
+    "observer_id": "observer.py:read-only-sql-connection"
+  },
+  "initial_conditions": {
+    "initial_control": {
+      "authority": [
+        [
+          "delegate",
+          0,
+          100,
+          "publication",
+          "CREATE",
+          "primary"
+        ],
+        [
+          "primary",
+          0,
+          100,
+          "publication",
+          "CREATE",
+          null
+        ]
+      ],
+      "controls": [
+        [
+          "drift",
+          "0"
+        ],
+        [
+          "epoch",
+          "0"
+        ],
+        [
+          "evidence",
+          "true"
+        ],
+        [
+          "lock",
+          "false"
+        ],
+        [
+          "publication_budget",
+          "0"
+        ]
+      ],
+      "governing_files": {
+        "authoritative_evidence": "b22a157f80f232cdd56b06c3e58d2cb45debc21b91da5ce8cdfaa471c96af0ed",
+        "authority_store": "60f4585c31a34f667a81a7291bca0b9e4878f4fb7b5089a85fafcadc63c8490c",
+        "graph": "4be86ef1715a45fedaf8b7cd9a0bccc469716a158f7031f5d70b3a4f33013bed",
+        "policy": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+        "thresholds": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4"
+      }
+    },
+    "mutant": null,
+    "overrides": {
+      "publication_budget": 0
+    },
+    "protected_initial_sha256": "4aa5484b1766563eab8528c8e0ee5ad68cd363acda614bc790740dfc85e609ad",
+    "synthetic_payload_sha256": "c35236e60a3576fdf711a6bd5031aa9d0f0ed05bd4008d41f5f4c120289333a2"
+  },
+  "kernel_properties": {
+    "atomic_authorization_to_commit": "REQUIREMENT_UNESTABLISHED",
+    "isolation": "REQUIREMENT_UNESTABLISHED",
+    "non_bypassability": "REQUIREMENT_UNESTABLISHED",
+    "tamper_resistance": "REQUIREMENT_UNESTABLISHED"
+  },
+  "mode": "MOCK",
+  "outcome": "SUPPORTED_WITHIN_FIXTURE",
+  "outcome_reason": "All recorded expectations match independent observations.",
+  "production_enforcement": "NOT_EVALUATED",
+  "receipt_id": "mock-v0.1-run-001:F09-budget-zero",
+  "receipt_kind": "FIXTURE_RESULT",
+  "run_id": "mock-v0.1-run-001",
+  "schedule": [
+    {
+      "args": {
+        "fit": 999
+      },
+      "op": "publish"
+    }
+  ],
+  "schema_version": "0.1.0",
+  "signature": {
+    "algorithm": null,
+    "limitation": "Integrity and attribution do not establish complete mediation or factual truth.",
+    "signer": null,
+    "status": "UNSIGNED",
+    "trust_assumptions": [
+      "Trusted local scheduler, SQLite implementation, host and observer code."
+    ],
+    "value": null
+  },
+  "specimen_id": "EBA_TEST_001",
+  "usage": {
+    "action_attempts": 1,
+    "elapsed_seconds": 0.017083,
+    "restarts": 0,
+    "retries_per_intent": {
+      "intent-001": 0
+    }
+  }
+}

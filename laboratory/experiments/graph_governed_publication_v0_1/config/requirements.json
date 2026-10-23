@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1.0",
+  "kernel_properties": {
+    "non_bypassability": "REQUIREMENT_UNESTABLISHED",
+    "tamper_resistance": "REQUIREMENT_UNESTABLISHED",
+    "isolation": "REQUIREMENT_UNESTABLISHED",
+    "atomic_authorization_to_commit": "REQUIREMENT_UNESTABLISHED"
+  },
+  "previous_structural_findings": "REPORTED_NOT_REQUALIFIED_BY_THIS_PACKAGE",
+  "production_enforcement": "NOT_EVALUATED",
+  "scientific_adjudication": "EXTERNAL_TO_EXECUTION_APPARATUS",
+  "certification": "NOT_GRANTED",
+  "release": "HOLD"
+}

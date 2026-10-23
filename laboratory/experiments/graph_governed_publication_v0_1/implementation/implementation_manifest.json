@@ -1,0 +1,58 @@
+{
+  "contract_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+  "contract_manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+  "dependencies": {
+    "external_runtime_packages": [],
+    "python": "3.12.14",
+    "sqlite": "3.53.1"
+  },
+  "implementation_files": [
+    {
+      "path": "implementation/README.md",
+      "sha256": "95cbe919d63c47a5f74241496513a4a0b0afde9a45086fccba2e5e14867e1b5c",
+      "size_bytes": 3229
+    },
+    {
+      "path": "implementation/graph.json",
+      "sha256": "4be86ef1715a45fedaf8b7cd9a0bccc469716a158f7031f5d70b3a4f33013bed",
+      "size_bytes": 2405
+    },
+    {
+      "path": "implementation/graph_rules.py",
+      "sha256": "1682408f1ba351902df6f6f382b4f4fe8943bc80aefe0e14f9374b462cac961e",
+      "size_bytes": 884
+    },
+    {
+      "path": "implementation/mock_harness.py",
+      "sha256": "ef85fc28f05b486064070d573a78d0e6be346fa773257dc187ba72f578817c93",
+      "size_bytes": 16682
+    },
+    {
+      "path": "implementation/observer.py",
+      "sha256": "7a3aa55778fe4de9a05a9c0798a0184823b87bad1ac26f48cc978946f4d24f4b",
+      "size_bytes": 3877
+    },
+    {
+      "path": "implementation/synthetic_evidence.json",
+      "sha256": "b22a157f80f232cdd56b06c3e58d2cb45debc21b91da5ce8cdfaa471c96af0ed",
+      "size_bytes": 230
+    }
+  ],
+  "kernel_properties": {
+    "atomic_authorization_to_commit": "REQUIREMENT_UNESTABLISHED",
+    "isolation": "REQUIREMENT_UNESTABLISHED",
+    "non_bypassability": "REQUIREMENT_UNESTABLISHED",
+    "tamper_resistance": "REQUIREMENT_UNESTABLISHED"
+  },
+  "mode": "MOCK_ONLY",
+  "model_limitations": [
+    "Single trusted process; role ports are modeled, not OS-enforced.",
+    "Deterministic serial interleavings; no universal concurrent race-freedom claim.",
+    "Worker reopen recovery; no host power-loss durability claim.",
+    "Synthetic drift plumbing; operational calibration unestablished."
+  ],
+  "production_enforcement": "NOT_EVALUATED",
+  "schema_version": "0.1.0",
+  "specimen_id": "EBA_TEST_001",
+  "standing": "CANDIDATE_PENDING_REVIEW"
+}

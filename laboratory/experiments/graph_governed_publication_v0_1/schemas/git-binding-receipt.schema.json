@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:publication:git-binding:0.1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "receipt_kind": {
+      "const": "GIT_BINDING"
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "branch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "subject_tree": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "manifest_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "git_blob_sha": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "git_blob_sha"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "verification": {
+      "enum": [
+        "VERIFIED_REMOTE_BLOBS",
+        "UNRESOLVED"
+      ]
+    },
+    "signature_status": {
+      "const": "UNSIGNED"
+    },
+    "self_reference_rule": {
+      "const": "Receipt binds a prior subject commit; its own containing commit is not embedded."
+    },
+    "production_enforcement": {
+      "const": "NOT_EVALUATED"
+    }
+  },
+  "required": [
+    "schema_version",
+    "receipt_kind",
+    "repository",
+    "branch",
+    "subject_commit",
+    "subject_tree",
+    "manifest_path",
+    "manifest_sha256",
+    "files",
+    "verification",
+    "signature_status",
+    "self_reference_rule",
+    "production_enforcement"
+  ],
+  "additionalProperties": false
+}

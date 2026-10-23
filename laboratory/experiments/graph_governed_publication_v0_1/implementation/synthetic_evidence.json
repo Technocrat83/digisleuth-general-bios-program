@@ -1,0 +1,7 @@
+{
+  "artifact_id": "EBA_TEST_001",
+  "payload_sha256": "c35236e60a3576fdf711a6bd5031aa9d0f0ed05bd4008d41f5f4c120289333a2",
+  "review_id": "review-001",
+  "source_id": "source-001",
+  "standing": "SYNTHETIC_EXPECTED_RECORD_ONLY"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "receipt_kind": "GIT_BINDING",
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "branch": "candidate/graph-governed-publication-v0.1",
+  "subject_commit": "81cec7539f8c64cad0ca36f3b6c6c37f1b813a6a",
+  "subject_tree": "1f0e449b6bf682ce3b51c27f86b03b60eb7b075d",
+  "manifest_path": "implementation/implementation_manifest.json",
+  "manifest_sha256": "782fce3dae7914c3ac3a11e96e486c5e07786ec6004e949b032bcb49ca922a67",
+  "files": [
+    {
+      "path": "implementation/README.md",
+      "sha256": "95cbe919d63c47a5f74241496513a4a0b0afde9a45086fccba2e5e14867e1b5c",
+      "git_blob_sha": "77a529e19953ae7fc0a29970e44176ae4f19a345"
+    },
+    {
+      "path": "implementation/graph.json",
+      "sha256": "4be86ef1715a45fedaf8b7cd9a0bccc469716a158f7031f5d70b3a4f33013bed",
+      "git_blob_sha": "63f16153798793829ee6520ec0e584209148949f"
+    },
+    {
+      "path": "implementation/graph_rules.py",
+      "sha256": "1682408f1ba351902df6f6f382b4f4fe8943bc80aefe0e14f9374b462cac961e",
+      "git_blob_sha": "cf77246cb0e527bf5c4e97dfeedd87abd1e69e68"
+    },
+    {
+      "path": "implementation/implementation_manifest.json",
+      "sha256": "782fce3dae7914c3ac3a11e96e486c5e07786ec6004e949b032bcb49ca922a67",
+      "git_blob_sha": "5bb1a156060cae4e33b506cd8e3bfea780cb7b94"
+    },
+    {
+      "path": "implementation/mock_harness.py",
+      "sha256": "ef85fc28f05b486064070d573a78d0e6be346fa773257dc187ba72f578817c93",
+      "git_blob_sha": "ab197f8727cab43ad1b5abcf023e98d00e602190"
+    },
+    {
+      "path": "implementation/observer.py",
+      "sha256": "7a3aa55778fe4de9a05a9c0798a0184823b87bad1ac26f48cc978946f4d24f4b",
+      "git_blob_sha": "83b183d22518270efd26d9cd8d92c06241735e85"
+    },
+    {
+      "path": "implementation/synthetic_evidence.json",
+      "sha256": "b22a157f80f232cdd56b06c3e58d2cb45debc21b91da5ce8cdfaa471c96af0ed",
+      "git_blob_sha": "053b1ec78112132f0437db2b3c25d48419918508"
+    }
+  ],
+  "verification": "VERIFIED_REMOTE_BLOBS",
+  "signature_status": "UNSIGNED",
+  "self_reference_rule": "Receipt binds a prior subject commit; its own containing commit is not embedded.",
+  "production_enforcement": "NOT_EVALUATED"
+}

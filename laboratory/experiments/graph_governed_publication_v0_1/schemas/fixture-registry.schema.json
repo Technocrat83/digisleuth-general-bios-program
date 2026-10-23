@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:publication:fixture-registry:0.1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "specimen_id": {
+      "const": "EBA_TEST_001"
+    },
+    "source_proposal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "family_count": {
+      "const": 12
+    },
+    "case_count": {
+      "type": "integer",
+      "minimum": 12
+    },
+    "families": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "properties": {
+          "fixture_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_section": {
+            "const": "9"
+          },
+          "case_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "standing": {
+            "const": "PROSPECTIVE_DEFINITION"
+          }
+        },
+        "required": [
+          "fixture_id",
+          "title",
+          "source_section",
+          "case_ids",
+          "standing"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fixture_id": {
+            "type": "string",
+            "pattern": "^F(0[1-9]|1[0-2])$"
+          },
+          "case_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "origin": {
+            "type": "string",
+            "minLength": 1
+          },
+          "initial_overrides": {
+            "type": "object"
+          },
+          "schedule": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "op": {
+                  "enum": [
+                    "publish",
+                    "admit",
+                    "commit",
+                    "revoke",
+                    "lock",
+                    "unlock",
+                    "grant",
+                    "revise_draft",
+                    "enqueue",
+                    "drain",
+                    "bypass",
+                    "checkpoint",
+                    "restart",
+                    "reconcile",
+                    "unavailable",
+                    "available",
+                    "advance",
+                    "set_evidence",
+                    "tamper",
+                    "drift"
+                  ]
+                },
+                "args": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "op",
+                "args"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "expectations": {
+            "type": "object",
+            "properties": {
+              "publication_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "identity_count": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "protected_rows_changed": {
+                "type": "boolean"
+              },
+              "draft_changed": {
+                "type": "boolean"
+              },
+              "governing_bytes_unchanged": {
+                "type": "boolean"
+              },
+              "last_decision": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "required_reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0
+              },
+              "recovery_unknown": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "publication_count",
+              "identity_count",
+              "protected_rows_changed",
+              "draft_changed",
+              "governing_bytes_unchanged",
+              "last_decision",
+              "required_reasons",
+              "recovery_unknown"
+            ],
+            "additionalProperties": false
+          },
+          "runtime_status": {
+            "const": "NOT_RUN"
+          }
+        },
+        "required": [
+          "fixture_id",
+          "case_id",
+          "title",
+          "origin",
+          "initial_overrides",
+          "schedule",
+          "expectations",
+          "runtime_status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 12
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "specimen_id",
+    "source_proposal",
+    "family_count",
+    "case_count",
+    "families",
+    "cases",
+    "interpretation"
+  ],
+  "additionalProperties": false
+}
