@@ -1,0 +1,180 @@
+{
+  "record_id": "DP_WORKBOOK_E2E_v01",
+  "record_revision": "v0.1",
+  "record_kind": "CONFIGURATION_SNAPSHOT_AND_CANDIDATE_TEST_PLAN",
+  "standing": "REGISTERED_SANDBOX_CONFIGURED_EXECUTION_BLOCKED",
+  "recorded_at_utc": "2026-10-22T00:18:52.844618Z",
+  "user_facing_date": "2026-10-21",
+  "timezone": "America/New_York",
+  "origin": {
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "base_branch": "general-bios-laboratory-v1",
+    "base_commit": "b194dd3fe745350f870a63a2f139e170dcb8f530",
+    "authorization": "Founder explicitly authorized Git Write in this conversation on 2026-10-21.",
+    "scope": "Sanitized candidate documentation only."
+  },
+  "private_source_registration": {
+    "filename": "DP_Workbook_Checkout_Test_Registration_v0.1.json",
+    "recorded_at_utc": "2026-10-22T00:08:59.448Z",
+    "sha256": "9104926b1bb5db94914ef36f9ff3008fb9103a3a37af50cf36812c6a028b1012",
+    "bytes": 9166,
+    "binding": "Complete extracted UTF-8 source text matches the registered source byte count; retained privately.",
+    "included_in_repository": false
+  },
+  "selected_offer": {
+    "name": "Small Business AI Control Kit",
+    "publisher": "Digi Prose",
+    "filename": "Small_Business_AI_Control_Kit_v0.1.xlsx",
+    "version": "v0.1",
+    "sha256": "2d83ab0e77792f6b08baf3da563b2db7ad4f874bfe41076e2ed1debb39bd98d3",
+    "bytes": 16072,
+    "byte_identity_check": "Local workbook bytes recomputed and matched the registered SHA-256 and byte count.",
+    "workbook_included_in_repository": false,
+    "price_minor": 2900,
+    "currency": "usd",
+    "billing": "one_time",
+    "quantity": 1
+  },
+  "configuration_observation": {
+    "method": "Authenticated Stripe API GET inspection before Git preparation; configuration snapshot only.",
+    "observations": {
+      "payment_link_active": true,
+      "livemode": false,
+      "currency": "usd",
+      "line_items": [
+        {
+          "quantity": 1,
+          "amount_subtotal": 2900,
+          "amount_total": 2900,
+          "amount_tax": 0,
+          "unit_amount": 2900,
+          "billing_type": "one_time",
+          "recurring": null
+        }
+      ],
+      "allow_promotion_codes": false,
+      "automatic_tax_enabled": false,
+      "invoice_creation_enabled": false,
+      "managed_payments_enabled": false,
+      "terms_version": "DP_WORKBOOK_REFUND_v01",
+      "release": "HOLD",
+      "test_registration": "DP_WORKBOOK_E2E_v01",
+      "webhook_endpoint_count": 0,
+      "webhook_list_complete": true,
+      "account_flags": {
+        "charges_enabled": false,
+        "payouts_enabled": false,
+        "details_submitted": false,
+        "business_type": null,
+        "support_email_configured": false,
+        "disabled_reason": "requirements.pending_verification"
+      }
+    },
+    "payment_link_locator_sha256": "27b93d0a590bf5da62f380424f47e626724d04a6924f2e85aad90ae04af15573",
+    "external_state_note": "Stripe objects are mutable. This snapshot records the observed state, not a guarantee of future configuration or live readiness."
+  },
+  "registered_terms": {
+    "declared_seller": "Digisleuth Operations LLC",
+    "seller_evidence": "Founder declaration",
+    "seller_identity_verified": false,
+    "support_operation_verified": false,
+    "intake_operation_verified": false,
+    "refund_version": "DP_WORKBOOK_REFUND_v01",
+    "refund_text_redacted": "Full refund within 14 days of purchase upon written request to [REGISTERED_SUPPORT_CONTACT] if the kit does not fit the operational workflow.",
+    "refund_text_original_sha256": "c38c9bcffce028aaa102df1d643acf214492edc90aa85a7f4878c1c67d4fc5ed",
+    "refund_execution_tested": false,
+    "license_terms": null
+  },
+  "test_plan": {
+    "standing": "CANDIDATE_UNEXECUTED",
+    "timing_and_observation_window": "UNBOUND",
+    "cases": [
+      {
+        "id": "T1",
+        "name": "Success",
+        "status": "NOT_RUN",
+        "required": "Complete sandbox checkout; correct product and $29 USD price, tax separately if any, no subscription/extras; successful provider payment, one order, receipt received and opened."
+      },
+      {
+        "id": "T2",
+        "name": "Delivery",
+        "status": "NOT_RUN",
+        "required": "Actual test buyer authenticates, downloads and opens workbook; filename, six sheets and SHA-256 match; unrelated fresh session denied."
+      },
+      {
+        "id": "T3",
+        "name": "Failed payment",
+        "status": "NOT_RUN",
+        "required": "Provider designated failure case; no captured payment, paid-order confirmation or delivery entitlement; retry path visible."
+      },
+      {
+        "id": "T4",
+        "name": "Cancellation",
+        "status": "NOT_RUN",
+        "required": "Cancel or leave before payment; no capture, paid confirmation or paid delivery after the configured observation window."
+      }
+    ],
+    "execution_gaps": [
+      "Bind concrete authenticated delivery destination to this exact workbook.",
+      "Bind payment success to idempotent entitlement issuance; verify webhook signatures and paid state before fulfillment.",
+      "Supply or make available actual test buyer mailbox and authenticated session; verify receipt arrival and workbook opening.",
+      "Fix test deadlines and fulfillment observation window before attempting payment.",
+      "Verify seller and support presentation; declared inputs are not merchant identity or inbox-operation proof.",
+      "Record chosen usage/license terms before paid launch."
+    ],
+    "fulfillment_requirements": {
+      "events": [
+        "checkout.session.completed",
+        "checkout.session.async_payment_succeeded"
+      ],
+      "entitlement_condition": "Verified event, correct test account/mode, expected product/price/currency/order, payment_status=paid.",
+      "deduplication": "One entitlement per paid order; replayed events do not duplicate fulfillment.",
+      "delivery_identity": "A bearer signed URL alone does not restrict use to the buyer email. Use authenticated identity/ACL enforcement and test denial for an unrelated session.",
+      "failure_and_cancel": "Never issue paid access from an unpaid session or a success-page redirect."
+    }
+  },
+  "operational_bindings": {
+    "authenticated_delivery_url": null,
+    "payment_to_delivery_handler_verified": false,
+    "buyer_session_available": false,
+    "receipt_delivery_verified": false,
+    "workbook_download_and_open_verified": false,
+    "unrelated_session_denial_verified": false
+  },
+  "milestone_invariants": {
+    "delta_paying_readers": 0,
+    "delta_live_collections_usd": 0,
+    "live_release": "HOLD",
+    "live_gateway_handshake": "NOT_VERIFIED",
+    "note": "A live gateway handshake alone does not establish successful fulfillment, terms readiness or first paying-reader milestone."
+  },
+  "boundary": {
+    "record_effect": "Preserve versioned candidate configuration and test intent.",
+    "execution_receipts_included": false,
+    "test_result_promotion": false,
+    "scientific_standing_delta": 0,
+    "canon_delta": 0,
+    "runtime_authority_delta": 0,
+    "production_authority_delta": 0,
+    "admission": "NOT_EVALUATED",
+    "cpfk": "HOLD",
+    "physical_dispatch": "BLOCKED_UNCONDITIONALLY"
+  },
+  "other_offers": {
+    "diagnostic_1500": "Separate Proposed v0.1 candidate; unchanged; no checkout created.",
+    "workflow_review_299": "Separate offer; unchanged; workbook test does not validate its seven-stage customer route."
+  },
+  "public_sanitization": {
+    "omitted": [
+      "Workbook binary",
+      "Buyer and contact addresses",
+      "Mailbox identities and sessions",
+      "Payment account and object identifiers",
+      "Checkout and delivery URLs",
+      "Internal Library identifiers",
+      "Credentials and secrets"
+    ],
+    "terms_redaction": "Only the support email is replaced in the public refund text; the original text digest is retained.",
+    "private_evidence_note": "Private evidence must be supplied through an authorized route for independent comparison."
+  }
+}
