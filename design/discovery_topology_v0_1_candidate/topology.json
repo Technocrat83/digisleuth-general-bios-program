@@ -1,0 +1,373 @@
+{
+  "schema_version": "0.1",
+  "source_git_commit": "b194dd3fe745350f870a63a2f139e170dcb8f530",
+  "source_basis": "Founder-authored expansion, not an extracted or admitted UA graph",
+  "standing": "DESIGN_CANDIDATE",
+  "authority_effect": "NONE",
+  "production_enforcement": "NOT_EVALUATED",
+  "commercial_release": "HOLD",
+  "real_ua_admissions": 0,
+  "real_behavior_events": 0,
+  "promotion_authority": false,
+  "nodes": [
+    {
+      "id": "candidate:discovery-v0.1:silo",
+      "key": "silo",
+      "label": "Silo: AI governance",
+      "type": "SILO",
+      "layer": "semantic",
+      "description": "A proposed subject collection. Membership does not imply authority.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:publication",
+      "key": "publication",
+      "label": "Publication: AI agent permissions",
+      "type": "PUBLICATION",
+      "layer": "semantic",
+      "description": "Proposed stable URL: /insights/ai-agent-permissions. Preserve answers, claim standing and evidence across derivatives.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:question",
+      "key": "question",
+      "label": "Question: What happens after revocation?",
+      "type": "QUESTION",
+      "layer": "semantic",
+      "description": "An explicit reader question. Its selection records expressed interest, not a psychological diagnosis.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:evidence",
+      "key": "evidence",
+      "label": "Evidence: revocation tests",
+      "type": "EVIDENCE_INDEX",
+      "layer": "semantic",
+      "description": "Proposed URL: /research/revocation-testing. Actual run records must be bound independently; this note asserts no result.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:habitat",
+      "key": "habitat",
+      "label": "Cloned publication habitat",
+      "type": "HABITAT",
+      "layer": "navigation",
+      "description": "Derived interactive presentation. Same content variations normally retain one stable URL; a distinct application may have its own address.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:discovery",
+      "key": "discovery",
+      "label": "Discovery",
+      "type": "ROUTE",
+      "layer": "navigation",
+      "description": "Explain terms and adjacent questions. Preserve ordinary reading and exit.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:glass",
+      "key": "glass",
+      "label": "Glass Box",
+      "type": "ROUTE",
+      "layer": "navigation",
+      "description": "Inspect a clearly labeled bounded demonstration and its assumptions; no claim of deployed enforcement.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:formula",
+      "key": "formula",
+      "label": "Formula One",
+      "type": "ROUTE",
+      "layer": "navigation",
+      "description": "Express a need and inspect advisory fit. Selection grants no deeper access or activation.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:observation",
+      "key": "observation",
+      "label": "Traversal observations",
+      "type": "OBSERVATION_COLLECTION",
+      "layer": "behavior",
+      "description": "Empty collection: no visitor telemetry ingested. Future records bind source/target IDs, route exposure, timestamp, consent scope and source revision.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:basin",
+      "key": "basin",
+      "label": "Attention basin assessment",
+      "type": "ASSESSMENT",
+      "layer": "behavior",
+      "description": "UNESTABLISHED. A bounded, time-windowed hypothesis about aggregate traversal concentration; never semantic truth or visitor identity.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    },
+    {
+      "id": "candidate:discovery-v0.1:petition",
+      "key": "petition",
+      "label": "Editorial change petition",
+      "type": "PETITION",
+      "layer": "behavior",
+      "description": "Observations may motivate a review request. An authorized independent process determines changes; no direct write into semantic facts.",
+      "standing": "DESIGN_CANDIDATE",
+      "authority_effect": "NONE",
+      "production_enforcement": "NOT_EVALUATED",
+      "commercial_release": "HOLD",
+      "real_ua_admissions": 0,
+      "real_behavior_events": 0,
+      "promotion_authority": false
+    }
+  ],
+  "relationships": [
+    {
+      "id": "candidate:edge:01",
+      "subject": "candidate:discovery-v0.1:publication",
+      "relation": "MEMBER_OF",
+      "object": "candidate:discovery-v0.1:silo",
+      "layer": "semantic",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:02",
+      "subject": "candidate:discovery-v0.1:publication",
+      "relation": "ADDRESSES",
+      "object": "candidate:discovery-v0.1:question",
+      "layer": "semantic",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:03",
+      "subject": "candidate:discovery-v0.1:publication",
+      "relation": "LINKS_TO_EVIDENCE_INDEX",
+      "object": "candidate:discovery-v0.1:evidence",
+      "layer": "semantic",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:04",
+      "subject": "candidate:discovery-v0.1:habitat",
+      "relation": "DERIVES_FROM",
+      "object": "candidate:discovery-v0.1:publication",
+      "layer": "semantic",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:05",
+      "subject": "candidate:discovery-v0.1:habitat",
+      "relation": "OFFERS_ROUTE",
+      "object": "candidate:discovery-v0.1:discovery",
+      "layer": "navigation",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:06",
+      "subject": "candidate:discovery-v0.1:habitat",
+      "relation": "OFFERS_ROUTE",
+      "object": "candidate:discovery-v0.1:glass",
+      "layer": "navigation",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:07",
+      "subject": "candidate:discovery-v0.1:habitat",
+      "relation": "OFFERS_ROUTE",
+      "object": "candidate:discovery-v0.1:formula",
+      "layer": "navigation",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:08",
+      "subject": "candidate:discovery-v0.1:discovery",
+      "relation": "LINKS_TO",
+      "object": "candidate:discovery-v0.1:question",
+      "layer": "navigation",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:09",
+      "subject": "candidate:discovery-v0.1:glass",
+      "relation": "LINKS_TO",
+      "object": "candidate:discovery-v0.1:evidence",
+      "layer": "navigation",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:10",
+      "subject": "candidate:discovery-v0.1:basin",
+      "relation": "REQUIRES_OBSERVATIONS_FROM",
+      "object": "candidate:discovery-v0.1:observation",
+      "layer": "behavior",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    },
+    {
+      "id": "candidate:edge:11",
+      "subject": "candidate:discovery-v0.1:petition",
+      "relation": "MAY_REFERENCE",
+      "object": "candidate:discovery-v0.1:basin",
+      "layer": "behavior",
+      "scope": "DESIGN_ONLY",
+      "evidence": [
+        "founder-request:2026-10-17",
+        "README.md"
+      ],
+      "certainty": "PROPOSED",
+      "version": "0.1",
+      "authority": "NONE",
+      "standing": "PROPOSED",
+      "basis": "AUTHORED_DESIGN_NOT_UA_EXTRACTION"
+    }
+  ],
+  "observed_events": [],
+  "measured_basins": [],
+  "states": [],
+  "transitions": [],
+  "authorities": []
+}

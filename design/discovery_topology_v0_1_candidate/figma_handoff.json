@@ -1,0 +1,226 @@
+{
+  "status": "HANDOFF_ONLY_NOT_IMPORTED",
+  "source_graph_sha256": "e2b59f31f8183e56375edf7fc91c3edbeb3938442bca43b95aecfb2e825af471",
+  "source_revision": "b194dd3fe745350f870a63a2f139e170dcb8f530",
+  "coordinate_system": "canvas-pixels",
+  "frame_groups": [
+    {
+      "id": "560e3e12b1e0dafa",
+      "type": "group",
+      "x": -100,
+      "y": -170,
+      "width": 2130,
+      "height": 1200,
+      "label": "DISCOVERY TOPOLOGY — DESIGN CANDIDATE; NO OBSERVED HEAT"
+    },
+    {
+      "id": "3784070fe3e7e3de",
+      "type": "group",
+      "x": 0,
+      "y": -70,
+      "width": 640,
+      "height": 1050,
+      "label": "SEMANTIC — proposed"
+    },
+    {
+      "id": "5b6e8cf657cce338",
+      "type": "group",
+      "x": 20,
+      "y": -25,
+      "width": 600,
+      "height": 980,
+      "label": "AI governance silo (candidate membership)"
+    },
+    {
+      "id": "d70d5a7909ed5910",
+      "type": "group",
+      "x": 680,
+      "y": -70,
+      "width": 640,
+      "height": 1050,
+      "label": "NAVIGATION — proposed"
+    },
+    {
+      "id": "08bf2418cca97fef",
+      "type": "group",
+      "x": 1360,
+      "y": -70,
+      "width": 640,
+      "height": 1050,
+      "label": "BEHAVIOR — proposed"
+    }
+  ],
+  "nodes": [
+    {
+      "source_object_id": "candidate:discovery-v0.1:silo",
+      "canvas_id": "24ba3d49c498f1da",
+      "label": "Silo: AI governance",
+      "layer": "semantic",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:publication",
+      "canvas_id": "d4a32b7cc7762447",
+      "label": "Publication: AI agent permissions",
+      "layer": "semantic",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:question",
+      "canvas_id": "2198c6d94f4473a9",
+      "label": "Question: What happens after revocation?",
+      "layer": "semantic",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:evidence",
+      "canvas_id": "567246a35a431046",
+      "label": "Evidence: revocation tests",
+      "layer": "semantic",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:habitat",
+      "canvas_id": "7de79fd2db8704e3",
+      "label": "Cloned publication habitat",
+      "layer": "navigation",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:discovery",
+      "canvas_id": "2dabacc962171e17",
+      "label": "Discovery",
+      "layer": "navigation",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:glass",
+      "canvas_id": "53286ff85c57ce3d",
+      "label": "Glass Box",
+      "layer": "navigation",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:formula",
+      "canvas_id": "25fdf380b77e6f9f",
+      "label": "Formula One",
+      "layer": "navigation",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:observation",
+      "canvas_id": "a1b67e6e7675e7e9",
+      "label": "Traversal observations",
+      "layer": "behavior",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:basin",
+      "canvas_id": "0df00edc15f355ed",
+      "label": "Attention basin assessment",
+      "layer": "behavior",
+      "standing": "DESIGN_CANDIDATE"
+    },
+    {
+      "source_object_id": "candidate:discovery-v0.1:petition",
+      "canvas_id": "db75becfd0564cd6",
+      "label": "Editorial change petition",
+      "layer": "behavior",
+      "standing": "DESIGN_CANDIDATE"
+    }
+  ],
+  "connectors": [
+    {
+      "source_relation_id": "candidate:edge:01",
+      "canvas_id": "b9807a57f7860244",
+      "from": "candidate:discovery-v0.1:publication",
+      "to": "candidate:discovery-v0.1:silo",
+      "predicate": "MEMBER_OF",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:02",
+      "canvas_id": "4a162bcf89b4e98d",
+      "from": "candidate:discovery-v0.1:publication",
+      "to": "candidate:discovery-v0.1:question",
+      "predicate": "ADDRESSES",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:03",
+      "canvas_id": "ddffd4e8099ea33e",
+      "from": "candidate:discovery-v0.1:publication",
+      "to": "candidate:discovery-v0.1:evidence",
+      "predicate": "LINKS_TO_EVIDENCE_INDEX",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:04",
+      "canvas_id": "fd14feaca3d6a36e",
+      "from": "candidate:discovery-v0.1:habitat",
+      "to": "candidate:discovery-v0.1:publication",
+      "predicate": "DERIVES_FROM",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:05",
+      "canvas_id": "8093c6fb985984f0",
+      "from": "candidate:discovery-v0.1:habitat",
+      "to": "candidate:discovery-v0.1:discovery",
+      "predicate": "OFFERS_ROUTE",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:06",
+      "canvas_id": "fb1628c6d1a97b30",
+      "from": "candidate:discovery-v0.1:habitat",
+      "to": "candidate:discovery-v0.1:glass",
+      "predicate": "OFFERS_ROUTE",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:07",
+      "canvas_id": "d4550d97d9badbad",
+      "from": "candidate:discovery-v0.1:habitat",
+      "to": "candidate:discovery-v0.1:formula",
+      "predicate": "OFFERS_ROUTE",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:08",
+      "canvas_id": "5a2abf163c96b1bf",
+      "from": "candidate:discovery-v0.1:discovery",
+      "to": "candidate:discovery-v0.1:question",
+      "predicate": "LINKS_TO",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:09",
+      "canvas_id": "b153f2243b090baa",
+      "from": "candidate:discovery-v0.1:glass",
+      "to": "candidate:discovery-v0.1:evidence",
+      "predicate": "LINKS_TO",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:10",
+      "canvas_id": "9b02d5d3a682dbf9",
+      "from": "candidate:discovery-v0.1:basin",
+      "to": "candidate:discovery-v0.1:observation",
+      "predicate": "REQUIRES_OBSERVATIONS_FROM",
+      "standing": "PROPOSED"
+    },
+    {
+      "source_relation_id": "candidate:edge:11",
+      "canvas_id": "bf12b94f7a89e956",
+      "from": "candidate:discovery-v0.1:petition",
+      "to": "candidate:discovery-v0.1:basin",
+      "predicate": "MAY_REFERENCE",
+      "standing": "PROPOSED"
+    }
+  ],
+  "attention_metric": null,
+  "heat_overlay_status": "UNESTABLISHED",
+  "layout_source": "review_vault/DISCOVERY_TOPOLOGY.canvas",
+  "mutation_policy": "LAYOUT_ONLY; semantic edits are petitions"
+}
