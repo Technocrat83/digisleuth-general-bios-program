@@ -1,0 +1,204 @@
+{
+  "record_type": "GOVERNED_INGESTION_CASE_RECOVERY_RECORD",
+  "record_version": "0.1",
+  "case_id": "GIC-001",
+  "scope": "Standalone case record based on the supplied conversation; no existing stored GIC-001 record was located. This does not establish source-content recovery, enforcement, customer delivery acceptance, or commercial validation.",
+  "created_at": "2026-10-23T02:30:45Z",
+  "created_at_basis": "Current session clock read before preparation; source event time remains unknown.",
+  "case_state": "AWAITING_SUBMITTER_INPUT",
+  "admission_standing": "HELD",
+  "ingestion_decision": "PENDING_RECOVERY",
+  "publication_standing": "HELD",
+  "historical_specimen_identity": "Constellation Aviv / Source: X",
+  "historical_baseline": {
+    "event_id": "BASELINE-REPORTED-001",
+    "event_class": "ACCESS_LIMITATION_OBSERVED",
+    "evidence_basis": "SUPPLIED_HISTORY_ONLY",
+    "independently_inspected": false,
+    "occurred_at": null,
+    "submitted_locator": "https://share.google/jFAqmJdPES5Ejl4aa",
+    "locator_label": "Source: X",
+    "historical_directive": "Constellation Aviv",
+    "underlying_post_url": null,
+    "underlying_source_bytes": "ABSENT",
+    "historical_attempt_count": "UNVERIFIED",
+    "historical_attempt_budget": "UNDECLARED",
+    "historical_exhaustion_claim": "UNVERIFIED",
+    "diagnosed_root_cause": "UNDETERMINED",
+    "underlying_source_bytes_scope": "No underlying post bytes are registered in this case; this does not establish source absence."
+  },
+  "recovery_scope": {
+    "selected_path": "REQUEST_SUBMITTER_MATERIAL_AND_INTENT",
+    "submitter_response_channel": "Reply in the originating GIC-001 conversation; register supplied material and intent in this case record.",
+    "recovery_request_cycles": 1,
+    "automatic_source_retrieval_attempt_budget": 0,
+    "budget_scope": "Prospective scope only; does not retrospectively establish historical exhaustion.",
+    "deadline_local": "2026-10-29T23:59:00-04:00",
+    "deadline_timezone": "America/New_York",
+    "deadline_utc": "2026-10-30T03:59:00Z",
+    "request_text": "GIC-001 remains open with admission held. Please reply here by October 29, 2026, at 11:59 p.m. America/New_York (EDT; October 30, 2026, at 03:59 UTC). Supply the direct X post URL, an accessible archive/export, or the post's text or screenshots. Include the author, posting date, and original URL where available. Specify the intended AVIV output and destination, such as a claim assessment for review or a candidate knowledge-graph record. Pasted text and screenshots will be recorded as submitter-provided material; attribution to the original post will be assessed separately. You may also explicitly decline or ask to stop. If required input remains missing at the deadline, the case will close as EXPLAINED_BLOCK, identifying the missing input. It can reopen when usable source material and the intended output/destination are supplied. Recovery and admission are separate decisions.",
+    "request_delivery": "Included in the accompanying response in the originating conversation; no external message sent.",
+    "minimum_inputs": [
+      "A registered recovery submission: direct X post URL, archive/export reference or file, or post text/screenshots",
+      "Intended AVIV output",
+      "Intended destination"
+    ],
+    "attribution_inputs_if_available": [
+      "Author",
+      "Posting date",
+      "Original URL"
+    ],
+    "input_presence_rule": "Check whether each required input is supplied and recorded before evaluating its reliability. A supplied locator or material may be present while its identity, accessibility, completeness, or attribution remains unresolved. The historical shortened link alone does not satisfy the requested recovery submission.",
+    "optional_input_rule": "Author, posting date, and original URL are requested where available. Their omission does not automatically fail the required-input check; insufficient attribution is handled in review.",
+    "missing_input_deadline_extension": "NONE"
+  },
+  "evidence_handling": {
+    "supplied_material_provenance": "SUBMITTER_PROVIDED",
+    "original_source_attribution": "UNASSESSED",
+    "captured_byte_digest": null,
+    "digest_interpretation": "Any future digest identifies captured bytes; attribution requires separate evidence connecting them to the claimed post.",
+    "identity_assessment": "PENDING",
+    "completeness_assessment": "PENDING",
+    "deliverable_suitability_assessment": "PENDING",
+    "destination_admission_assessment": "PENDING",
+    "original_source_content_evidence_delta": 0,
+    "delta_scope": "No original-source content was retrieved during either administrative preparation or this ruleset reconciliation; record and automation changes are administrative mutations.",
+    "captured_byte_integrity": {
+      "status": "NOT_EVALUATED_NO_CAPTURE",
+      "algorithm": "SHA-256",
+      "capture_baseline_digest": null,
+      "recomputed_digest": null,
+      "capture_reference": null,
+      "verification_rule": "Hash the bytes actually captured and bind the digest to the capture record. For a later integrity check, recompute over those bytes and compare with the recorded capture baseline. Record the method, observation times, reference, and result. A first digest establishes a captured-byte baseline; it does not alone verify pre-capture integrity or independently authenticate that baseline.",
+      "attribution_non_implication": "A matching digest does not link the bytes to the submitted locator, claimed author, date, or post."
+    },
+    "source_attribution": {
+      "status": "UNASSESSED",
+      "evidence_refs": [],
+      "verification_rule": "Assess evidence independently connecting the captured material to the submitted locator and claimed post, including author, post identity, date, context, and discrepancies where available. Submitter assertions remain attributed to the submitter until independently supported.",
+      "digest_non_substitution": "Captured-byte digest verification cannot substitute for attribution evidence."
+    }
+  },
+  "declared_constraints": {
+    "reconstructing_unseen_source_content": "PROHIBITED",
+    "treating_synthetic_content_as_original_source_evidence": "PROHIBITED",
+    "graph_admission_while_held": "PROHIBITED",
+    "publication_while_held": "PROHIBITED",
+    "enforcement_standing": "NOT_DEMONSTRATED",
+    "zero_leakage_verification": "NOT_EVALUATED",
+    "tamper_evident_receipt_mechanism": "NOT_ESTABLISHED"
+  },
+  "disposition_rules": [
+    {
+      "priority": 1,
+      "trigger": "Explicit submitter decline or stop",
+      "action": "Close administratively as EXPLAINED_BLOCK with reason SUBMITTER_DECLINED_OR_STOPPED; preserve evidence and epistemic standing and record actual decision time."
+    },
+    {
+      "priority": 2,
+      "trigger": "Required input absent before the input deadline",
+      "action": "Keep AWAITING_SUBMITTER_INPUT with admission HELD; identify each missing required input without extending the deadline."
+    },
+    {
+      "priority": 3,
+      "trigger": "At or after the input deadline, ANY required input is missing",
+      "action": "Close as EXPLAINED_BLOCK with reason REQUIRED_INPUT_MISSING, recording each missing item. This check precedes assessment-reliability branches and applies to partial as well as absent submissions."
+    },
+    {
+      "priority": 4,
+      "trigger": "Before the review deadline, required-input presence cannot be established reliably",
+      "action": "Record REVIEW_UNRESOLVED; do not infer missing input. Apply the bounded review deadline and retain admission HELD."
+    },
+    {
+      "priority": 5,
+      "trigger": "Before the review deadline, all required inputs are present but identity, byte integrity, completeness, attribution, suitability, or destination assessment is unreliable",
+      "action": "Record REVIEW_UNRESOLVED with the precise unresolved issue, applicable evidence, and the bounded review deadline. Keep admission HELD."
+    },
+    {
+      "priority": 6,
+      "trigger": "Review remains unresolved at or after the review deadline",
+      "action": "Close administratively as EXPLAINED_BLOCK with reason REVIEW_DEADLINE_REACHED; keep epistemic_standing UNRESOLVED and review_standing REVIEW_UNRESOLVED. Closure establishes neither source absence nor falsity."
+    },
+    {
+      "priority": 7,
+      "trigger": "Recovery and assessment checks succeed",
+      "action": "Record ingestion and destination admission decisions separately, each with evidence, scope, authority, and time. Material receipt or successful ingestion does not grant admission or publication authority."
+    },
+    {
+      "priority": 8,
+      "trigger": "Ingestion succeeds but destination admission is held or rejected",
+      "action": "Record usable capture and the admission outcome separately. Preserve the publication decision as separate."
+    }
+  ],
+  "reopening_condition": "After EXPLAINED_BLOCK, register the missing required inputs or evidence addressing the unresolved assessment, plus the intended AVIV output and destination. Reopen explicitly under a newly recorded attempt/review scope and deadline; preserve the previous closure and evidence.",
+  "response_log": [],
+  "decision_log": [],
+  "terminal_disposition": null,
+  "terminal_decision_at": null,
+  "automation_status": {
+    "status": "SCHEDULED",
+    "automation_id": "6adac7750d8c8191b3df27885e7ac3e7",
+    "title": "Review GIC-001 deadline",
+    "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/New_York:20261029T235900\nRRULE:FREQ=DAILY;COUNT=2\nEND:VEVENT",
+    "timezone": "America/New_York",
+    "is_enabled": true,
+    "scheduled_review_local": "2026-10-29T23:59:00-04:00",
+    "limitation": "Enabled schedule and instructions were inspected and updated. No run result is established by this configuration check. Closure must record actual decision and confirmed persistence; inaccessible evidence cannot establish missing input or source absence.",
+    "scheduled_final_review_local": "2026-10-30T23:59:00-04:00",
+    "ruleset_version": "0.2",
+    "configuration_inspected_and_updated_at": "2026-10-23T02:58:41.720643+00:00",
+    "last_recorded_run": null
+  },
+  "service_promise": "A bounded procedure and documented disposition.",
+  "commercial_willingness_to_pay": "HYPOTHESIS_UNTESTED",
+  "ruleset_version": "0.2",
+  "updated_at": "2026-10-23T02:56:31Z",
+  "administrative_standing": "OPEN",
+  "review_standing": "NOT_STARTED",
+  "epistemic_standing": "UNRESOLVED",
+  "exhaustion_gate": {
+    "current_retrieval_posture": "ACCESS_LIMITATION_OBSERVED",
+    "historical_exhaustion_standing": "UNVERIFIED",
+    "required_to_record_exhausted_unresolved": [
+      "A declared attempt budget bound to the attempted recovery scope",
+      "An inspectable attempt record identifying attempted routes and outcomes",
+      "A documented comparison establishing that the scoped budget was consumed or its declared stopping condition met"
+    ],
+    "zero_budget_interpretation": "The prospective automatic retrieval budget of zero permits no automatic source retrieval; it does not establish historical exhaustion."
+  },
+  "review_scope": {
+    "review_deadline_local": "2026-10-30T23:59:00-04:00",
+    "review_deadline_timezone": "America/New_York",
+    "review_deadline_utc": "2026-10-31T03:59:00Z",
+    "maximum_extension_beyond_input_deadline_hours": 24,
+    "applies_to": "Only unresolved assessment of supplied inputs, including inability to establish presence reliably. The original required-input deadline remains unchanged.",
+    "review_status_when_inputs_present_but_assessment_unreliable": "REVIEW_UNRESOLVED",
+    "stopping_rule": "At or after the review deadline, close an otherwise unresolved case administratively as EXPLAINED_BLOCK with reason REVIEW_DEADLINE_REACHED and epistemic_standing UNRESOLVED. Preserve review_standing REVIEW_UNRESOLVED and admission HELD. Record the actual decision/write result; do not backdate closure.",
+    "closure_non_implications": [
+      "Source absence",
+      "Source falsity",
+      "Successful recovery",
+      "Graph admission",
+      "Publication approval"
+    ],
+    "further_review": "Requires explicit reopening with a newly recorded bounded scope; no silent extension."
+  },
+  "ruleset_revision_log": [
+    {
+      "revision": "0.2",
+      "recorded_at": "2026-10-23T02:56:31Z",
+      "reason": "Reconcile exhaustion, input-check precedence, bounded unresolved review, and independent integrity/attribution checks.",
+      "source": "Current submitter instruction in the originating conversation.",
+      "administrative_change_only": true,
+      "source_content_retrieved": false,
+      "ingestion_or_admission_decision_made": false
+    }
+  ],
+  "adjudication_order": [
+    "Respect a current terminal disposition or explicit stop; preserve prior decisions.",
+    "Evaluate each required input as PRESENT, MISSING, or UNKNOWN. At or after the input deadline, any MISSING required input takes precedence and yields EXPLAINED_BLOCK, including a partial submission.",
+    "UNKNOWN input presence or unreliable assessment yields REVIEW_UNRESOLVED before the review deadline; do not classify UNKNOWN as MISSING.",
+    "At or after the review deadline, any remaining unresolved review closes administratively as EXPLAINED_BLOCK with epistemic_standing UNRESOLVED.",
+    "When checks are reliable, record their supported outcomes and separate ingestion, admission, and publication decisions."
+  ]
+}

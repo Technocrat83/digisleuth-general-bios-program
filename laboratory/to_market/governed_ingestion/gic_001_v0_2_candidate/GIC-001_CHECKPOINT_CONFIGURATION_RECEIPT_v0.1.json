@@ -1,0 +1,42 @@
+{
+  "receipt_type": "GIC_CHECKPOINT_CONFIGURATION_OBSERVATION",
+  "receipt_version": "0.1",
+  "case_id": "GIC-001",
+  "ruleset_version": "0.2",
+  "observed_at_utc": "2026-10-23T03:26:47Z",
+  "observer": "Codex assistant using the connected automation read API",
+  "observation_method": "Fresh read of the identified automation configuration; no checkpoint was invoked.",
+  "observation_scope": "Selected configuration fields and returned run metadata; not an independent runtime or signature audit.",
+  "source_record": {
+    "library_file_id": "libfile_1efe553798a08191b61af12bebdeb481",
+    "library_version": "2"
+  },
+  "configuration": {
+    "task_id": "6adac7750d8c8191b3df27885e7ac3e7",
+    "title": "Review GIC-001 deadline",
+    "is_enabled": true,
+    "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/New_York:20261029T235900\nRRULE:FREQ=DAILY;COUNT=2\nEND:VEVENT",
+    "timezone": "America/New_York",
+    "timing_mode": "exact_schedule",
+    "configuration_updated_at": "2026-10-23T02:59:04.699830+00:00",
+    "prompt": "Review GIC-001 using the current GIC-001_Recovery_Record_v0.1.json (Library ID libfile_1efe553798a08191b61af12bebdeb481). Read the complete current record and preserve its identity, logs, unrelated fields, newer decisions, and terminal disposition. Apply ruleset 0.2 or a newer expressly authorized revision, including adjudication_order. The required-input deadline is October 29, 2026 at 11:59 p.m. America/New_York (2026-10-30T03:59:00Z); the final unresolved-review deadline is October 30, 2026 at 11:59 p.m. America/New_York (2026-10-31T03:59:00Z). First assess required-input presence as PRESENT, MISSING, or UNKNOWN from registered case evidence. A source recovery submission, intended AVIV output, and intended destination are required. Author/date/original URL are requested where available; their absence can affect attribution review but is not automatically missing required input. At or after the input deadline, ANY MISSING required input, including in a partial submission, yields administrative EXPLAINED_BLOCK with reason REQUIRED_INPUT_MISSING. Apply this before assessment-reliability branches. UNKNOWN is not MISSING. If required inputs are present but assessment is unreliable, or their presence cannot be established reliably, record REVIEW_UNRESOLVED with a precise reason and admission HELD before the final review deadline. At or after the final review deadline, remaining unresolved review yields administrative EXPLAINED_BLOCK with reason REVIEW_DEADLINE_REACHED, epistemic_standing UNRESOLVED, review_standing REVIEW_UNRESOLVED, and admission HELD. Closure establishes neither source absence nor falsity. An explicit decline/stop closes as EXPLAINED_BLOCK and is recorded separately. Verify captured-byte integrity against a recorded capture baseline and assess source attribution with independent connecting evidence; a digest alone cannot establish locator/post identity or pre-capture authenticity. Preserve the supplied-history ACCESS_LIMITATION_OBSERVED baseline and historical exhaustion UNVERIFIED; EXHAUSTED_UNRESOLVED requires inspectable attempts tied to a declared consumed budget. Automatic source retrieval budget remains zero: do not fetch X or other source URLs. Successful recovery never automatically authorizes admission or publication; record decisions separately with authority and evidence. On closure record exact missing input or unresolved issue, actual decision time, observation scope (registered case evidence only), deadline, and reopening condition. Do not infer no response in unobserved channels. Do not silently extend review. Read the Library skill and replace the same current file using its actual version guard. Report only a confirmed saved disposition; if the record cannot be read or written, report the unresolved operational failure without claiming a persisted closure. If already closed, do not rewrite it or notify me again unless a new issue requires action. Do not invent source evidence, enforcement, tamper-evidence, zero-leakage, or commercial validation. Do not send external messages or publish."
+  },
+  "observed_run_metadata": {
+    "last_run": null,
+    "latest_result": null,
+    "delivery_status": "unknown",
+    "interpretation": "No last-run record or latest result was returned by this observation. Null history does not prove that the task never ran."
+  },
+  "execution_standing": "UNVERIFIED",
+  "enforcement_standing": "NOT_DEMONSTRATED",
+  "signature_standing": "NOT_ESTABLISHED",
+  "signing_requirement": "Signer identity, signed content, mechanism, and signature verification procedure have not been defined or demonstrated in this package.",
+  "source_content_retrieval_performed": false,
+  "admission_change_performed": false,
+  "limitations": [
+    "An enabled schedule establishes configuration only; it does not prove triggering, evaluation, persistence, delivery, enforcement, or signing.",
+    "The configuration can change after this observation.",
+    "Package digests do not establish attribution or truth of the unseen X source."
+  ]
+}
+

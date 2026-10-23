@@ -1,0 +1,57 @@
+{
+  "manifest_type": "GIC_CANDIDATE_PROTOCOL_LINEAGE_MANIFEST",
+  "manifest_version": "0.1",
+  "case_id": "GIC-001",
+  "ruleset_version": "0.2",
+  "standing": "CANDIDATE_PROCEDURE_AND_CASE_SNAPSHOT",
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "target_branch": "general-bios-laboratory-v1",
+  "repository_path": "laboratory/to_market/governed_ingestion/gic_001_v0_2_candidate",
+  "observed_parent_commit": "b194dd3fe745350f870a63a2f139e170dcb8f530",
+  "observed_parent_tree": "e06208a9d21b0936b19a1d5a8ef569dba66c1b4d",
+  "prepared_at_utc": "2026-10-23T03:26:47Z",
+  "source_record": {
+    "library_file_id": "libfile_1efe553798a08191b61af12bebdeb481",
+    "library_version": "2",
+    "file_name": "GIC-001_Recovery_Record_v0.1.json",
+    "source_size_bytes": 13454,
+    "snapshot_mode": "Pinned source-file materialization; bytes preserved without modification."
+  },
+  "files": [
+    {
+      "path": "GIC-001_Recovery_Record_v0.1.json",
+      "size_bytes": 13454,
+      "sha256": "dc61c712d1c60d5eeef7749401dbb1dec99007291e4aae519851171ad773a3cf",
+      "git_blob_sha1": "e6316a85cd0fe9b7072eb2b78bdbebabe5ed0fbe"
+    },
+    {
+      "path": "GIC-001_CHECKPOINT_CONFIGURATION_RECEIPT_v0.1.json",
+      "size_bytes": 5071,
+      "sha256": "af95b9f9f1f4644ac2cd64ff59744add890bebf9c91d44eb2d3d15ada98d36ca",
+      "git_blob_sha1": "b3b9221e879b9d5accfce80a7453c66c38f54f84"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4036,
+      "sha256": "bc0d370f67a4a92f41e462a8a1a42005c31bac670fb51feba6b8438191e1972e",
+      "git_blob_sha1": "8cd071accad7ac8b0512d1df76e2240fa1a6c188"
+    }
+  ],
+  "digest_scope": "Package bytes only; not source-post attribution, authenticity, truth, or signing.",
+  "self_reference_rule": "The manifest excludes its own digest. The resulting Git commit binds the complete package, including this manifest; its identity is verified after creation rather than embedded here.",
+  "verification_scope": [
+    "JSON parsing and preservation of recorded case hold, ruleset, historical exhaustion uncertainty and zero automatic retrieval budget.",
+    "Observed checkpoint schedule consistency with the two declared deadlines.",
+    "Local SHA-256 and Git blob identities for the included payloads.",
+    "Remote tree, committed bytes, parentage, and branch reference to be checked after writing."
+  ],
+  "runtime_verification": "NOT_PERFORMED",
+  "original_source_recovery": "NOT_ESTABLISHED",
+  "source_attribution": "UNASSESSED",
+  "admission_standing": "HELD",
+  "publication_standing": "HELD",
+  "enforcement_standing": "NOT_DEMONSTRATED",
+  "signature_standing": "NOT_ESTABLISHED",
+  "commercial_demand": "HYPOTHESIS_UNTESTED",
+  "authority_promotion": false
+}
