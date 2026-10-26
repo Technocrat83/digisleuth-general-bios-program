@@ -1,0 +1,11 @@
+{
+  "admission": "HELD",
+  "author_attribution": "USER_SUPPLIED_NOT_INDEPENDENTLY_AUTHENTICATED",
+  "capture_method": "PROSPECTIVE_UTF8_SERIALIZATION_OF_CURRENT_USER_MESSAGE_WITH_FINAL_NEWLINE",
+  "external_retrieval": false,
+  "permission": "SESSION_TASK_SCOPE_LOCAL_PREPARATION_ONLY",
+  "real_secrets_in_fixtures": false,
+  "sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+  "source_id": "USER_SUBMITTED_PROTOTYPE_REQUIREMENTS",
+  "visibility": "FOUNDER_REVIEWER"
+}

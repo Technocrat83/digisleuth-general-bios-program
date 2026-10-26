@@ -1,0 +1,64 @@
+{
+  "complete_valid_evidence": "APPLY_ACCEPTANCE_PREDICATE_WITHOUT_PRESUMING_SUPPORT",
+  "defect_id": "PHC-10-OBSERVER-01",
+  "duplicate_or_unexpected_scenario_ids": "SCHEMA_VIOLATION_ABORT_AGGREGATION",
+  "historical_receipts": "PRESERVE_UNMODIFIED",
+  "independent_review": "OUTSTANDING",
+  "missing_or_unusable_mandatory_evidence": "UNRESOLVED",
+  "multi_scenario_sweep_cases": [
+    "PHC-02",
+    "PHC-10",
+    "PHC-11"
+  ],
+  "omission_sweep": [
+    {
+      "case_id": "PHC-02",
+      "omitted_scenario": "missing_source"
+    },
+    {
+      "case_id": "PHC-02",
+      "omitted_scenario": "missing_permission"
+    },
+    {
+      "case_id": "PHC-10",
+      "omitted_scenario": "revoked"
+    },
+    {
+      "case_id": "PHC-10",
+      "omitted_scenario": "stopped"
+    },
+    {
+      "case_id": "PHC-10",
+      "omitted_scenario": "budget"
+    },
+    {
+      "case_id": "PHC-11",
+      "omitted_scenario": "crash_capture"
+    },
+    {
+      "case_id": "PHC-11",
+      "omitted_scenario": "crash_draft"
+    },
+    {
+      "case_id": "PHC-11",
+      "omitted_scenario": "crash_receipt"
+    }
+  ],
+  "parent_commit": "f36edde767d445524ce4d3ea8e49679b12d7095b",
+  "pp_gate": "BLOCKED",
+  "primary_omission_probes": [
+    "PHC-10/revoked",
+    "PHC-10/stopped",
+    "PHC-10/budget"
+  ],
+  "publication_authority": "WITHHELD",
+  "required_extra_probe_classes": [
+    "UNUSABLE_EVIDENCE",
+    "DUPLICATE_IDS",
+    "UNEXPECTED_IDS",
+    "COMPLETE_BUT_FALSE_ACCEPTANCE"
+  ],
+  "source": "CURRENT_USER_LOCKED_REPAIR_SPECIFICATION",
+  "source_admission": "HELD",
+  "version": "0.1.2"
+}

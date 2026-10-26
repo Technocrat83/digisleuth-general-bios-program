@@ -1,0 +1,186 @@
+{
+  "acceptance_applied": true,
+  "bindings": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+    "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "case_id": "PHC-04",
+  "checks": [
+    {
+      "name": "fixture_execution_completed",
+      "observed": [
+        {
+          "scenario": "unsupported",
+          "status": "EXECUTED"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_file_observation_available",
+      "observed": {
+        "driver_returncode": 0,
+        "overflow": false,
+        "timed_out": false
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:six_record_schema",
+      "observed": [
+        "authority_record",
+        "claim_evidence_map",
+        "disposition",
+        "draft_asset",
+        "execution_receipt",
+        "source_record"
+      ],
+      "passed": true
+    },
+    {
+      "name": "unsupported:exact_revision_bindings",
+      "observed": {
+        "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+        "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:component_byte_bindings",
+      "observed": {
+        "authority_record": "00e27470fd49db4a5cce78734710e6bead36eee68f3b5c3fdbd8e7f0f56bc3d4",
+        "claim_evidence_map": "a2e0e73c68eba29a740140857e2d106b2ce5bbd2b2e3d81ca0507f2ec34719d4",
+        "disposition": "b797d72bb8dec8c88c005831238f13e04701c15871512197d5a11974dfa35359",
+        "draft_asset": "33027790e9f2f1fe510ee72e66750c3ae72b719d13495a0489a14bd4655a30fb",
+        "source_record": "730885c1ae38e5e80dd57a043bebdbeb258a152ec12fa5beb4420dee6b5c39c2"
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:whole_package_separate_witness",
+      "observed": {
+        "binding_scope": "PACKAGE_BYTES_ONLY",
+        "package_sha256": "d20fe367b574b5a89c3b8b9296b501cfc3940a04ad62e178d2b4c290bc4ec825"
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:unchanged_published.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:unchanged_registry.json",
+      "observed": {
+        "final_sha256": "925f912af3888e6b41a86a7dc89d0b479f6460ff5076bd8d70e96d22213e55bb",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:unchanged_authoritative_index.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:unchanged_policy.json",
+      "observed": {
+        "final_sha256": "d50112a7609089fa91dad9818e92f57fcbb0b734d3678698fcfe55a851d7db90",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:unchanged_credential_fixture.json",
+      "observed": {
+        "final_sha256": "72bee6865b1c8cb186893780a4c5f356aa99f480392939ee6a4d29d6bbf0bbe7",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported:budget_observed",
+      "observed": {
+        "capture_attempts": 1,
+        "steps": 2
+      },
+      "passed": true
+    },
+    {
+      "name": "unsupported_claim_exposed_and_excluded",
+      "observed": {
+        "claim": {
+          "claim_id": "C-UNSUPPORTED",
+          "classification": "UNRESOLVED",
+          "counterevidence": null,
+          "evidence": [],
+          "inference_reasoning": null,
+          "reason": "SUPPORTING_QUOTE_ABSENT",
+          "review": "CANDIDATE",
+          "text": "This process guarantees regulatory compliance."
+        },
+        "disposition": {
+          "at": "2026-10-26T15:17:31.120546+00:00",
+          "disposition": "REVISION_REQUIRED",
+          "epistemic_standing": "UNRESOLVED",
+          "next_work": [
+            "C-UNSUPPORTED"
+          ],
+          "reason": null,
+          "responsible_reviewer": "founder-reviewer",
+          "run_outcome": "COMPLETED"
+        }
+      },
+      "passed": true
+    }
+  ],
+  "completeness": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "mandatory_scenario_ids": [
+      "unsupported"
+    ],
+    "missing_scenario_ids": [],
+    "observed_scenario_ids": [
+      "unsupported"
+    ],
+    "status": "COMPLETE",
+    "unassigned_evidence_issues": [],
+    "unusable_scenarios": {},
+    "valid_scenario_ids": [
+      "unsupported"
+    ]
+  },
+  "evidence_paths": [
+    "results/sandbox/PHC-04/unsupported"
+  ],
+  "execution_status": "EXECUTED",
+  "limitations": [
+    "DETERMINISTIC_CURATED_FIXTURES_ONLY",
+    "SAME_UID_LOCAL_MOCK_BOUNDARY",
+    "HUMAN_USEFULNESS_UNASSESSED",
+    "NO_MODEL_OR_PRODUCTION_ENFORCEMENT_ASSESSMENT"
+  ],
+  "required_observation": "The map exposes it as unresolved; the draft excludes or explicitly qualifies it; disposition names the required evidence or block.",
+  "scenario_cpu_seconds": 0.002267553999999998,
+  "scenario_wall_seconds": 0.0023717210005997913,
+  "verdict": "SUPPORTED_WITHIN_TESTED_SCOPE",
+  "workflow_attempts": 1
+}

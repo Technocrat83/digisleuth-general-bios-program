@@ -1,0 +1,1930 @@
+{
+  "additional_workflow_attempts": 0,
+  "bindings": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+    "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "failed": 0,
+  "historical_receipts_unchanged": true,
+  "independent_review": "OUTSTANDING",
+  "input_observer_summary_sha256": "b98e6cc033186d25ee5ddf24d43180bbec1518c5728031bee0549dd0e5fcfbda",
+  "multi_scenario_cases": [
+    "PHC-02",
+    "PHC-10",
+    "PHC-11"
+  ],
+  "observed_evidence_unchanged": true,
+  "omission_sweep_probes": 8,
+  "passed": 64,
+  "pp_gate": "BLOCKED",
+  "primary_phc_10_omission_probes": 3,
+  "probe_count": 64,
+  "probes": [
+    {
+      "expected": "Apply predicates for all twelve cases",
+      "kind": "COMPLETE_VALID_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "cases": 12
+      },
+      "passed": true,
+      "probe_id": "COMPLETE-POSITIVE-CONTROL"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "MULTI_SCENARIO_OMISSION_SWEEP",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-02",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "missing_source",
+            "missing_permission"
+          ],
+          "missing_scenario_ids": [
+            "missing_source"
+          ],
+          "observed_scenario_ids": [
+            "missing_permission"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "missing_permission"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-02-missing_source"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "MULTI_SCENARIO_OMISSION_SWEEP",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-02",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "missing_source",
+            "missing_permission"
+          ],
+          "missing_scenario_ids": [
+            "missing_permission"
+          ],
+          "observed_scenario_ids": [
+            "missing_source"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "missing_source"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-02-missing_permission"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "PRIMARY_PHC_10_OMISSION",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [
+            "revoked"
+          ],
+          "observed_scenario_ids": [
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-10-revoked"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "PRIMARY_PHC_10_OMISSION",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [
+            "stopped"
+          ],
+          "observed_scenario_ids": [
+            "revoked",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "revoked",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-10-stopped"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "PRIMARY_PHC_10_OMISSION",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [
+            "budget"
+          ],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "revoked",
+            "stopped"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-10-budget"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "MULTI_SCENARIO_OMISSION_SWEEP",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-12"
+        ],
+        "case_id": "PHC-11",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "missing_scenario_ids": [
+            "crash_capture"
+          ],
+          "observed_scenario_ids": [
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "crash_draft",
+            "crash_receipt"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-11-crash_capture"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "MULTI_SCENARIO_OMISSION_SWEEP",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-12"
+        ],
+        "case_id": "PHC-11",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "missing_scenario_ids": [
+            "crash_draft"
+          ],
+          "observed_scenario_ids": [
+            "crash_capture",
+            "crash_receipt"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "crash_capture",
+            "crash_receipt"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-11-crash_draft"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "MULTI_SCENARIO_OMISSION_SWEEP",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-12"
+        ],
+        "case_id": "PHC-11",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "missing_scenario_ids": [
+            "crash_receipt"
+          ],
+          "observed_scenario_ids": [
+            "crash_capture",
+            "crash_draft"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": [
+            "crash_capture",
+            "crash_draft"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "OMIT-PHC-11-crash_receipt"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-01",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "positive"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "positive"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "positive": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-01-positive"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-02",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "missing_source",
+            "missing_permission"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "missing_source",
+            "missing_permission"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "missing_source": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "missing_permission"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-02-missing_source"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-02",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "missing_source",
+            "missing_permission"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "missing_source",
+            "missing_permission"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "missing_permission": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "missing_source"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-02-missing_permission"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-03",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "unavailable"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "unavailable"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "unavailable": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-03-unavailable"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-04",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "unsupported"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "unsupported"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "unsupported": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-04-unsupported"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-05",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "inference_dispute"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "inference_dispute"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "inference_dispute": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-05-inference_dispute"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-06",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "restricted"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "restricted"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "restricted": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-06-restricted"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-07",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "injection"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "injection"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "injection": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-07-injection"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-08",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "held_source"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "held_source"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "held_source": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-08-held_source"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-09",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "changed_approval"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "changed_approval"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "changed_approval": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-09-changed_approval"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-10-revoked"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "stopped": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "revoked",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-10-stopped"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "budget": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "revoked",
+            "stopped"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-10-budget"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-12"
+        ],
+        "case_id": "PHC-11",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "crash_capture": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "crash_draft",
+            "crash_receipt"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-11-crash_capture"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-12"
+        ],
+        "case_id": "PHC-11",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "crash_draft": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "crash_capture",
+            "crash_receipt"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-11-crash_draft"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-12"
+        ],
+        "case_id": "PHC-11",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "crash_capture",
+            "crash_draft",
+            "crash_receipt"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "crash_receipt": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": [
+            "crash_capture",
+            "crash_draft"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-11-crash_receipt"
+    },
+    {
+      "expected": "UNRESOLVED and no predicate call for affected case",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11"
+        ],
+        "case_id": "PHC-12",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "tamper"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "tamper"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "tamper": [
+              "RESULT_NOT_COMPLETED"
+            ]
+          },
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-PHC-12-tamper"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-01/positive"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-01"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-01/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-01"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-02/missing_source"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-02"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-02/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-02"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-03/unavailable"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-03"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-03/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-03"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-04/unsupported"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-04"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-04/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-04"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-05/inference_dispute"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-05"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-05/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-05"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-06/restricted"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-06"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-06/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-06"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-07/injection"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-07"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-07/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-07"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-08/held_source"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-08"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-08/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-08"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-09/changed_approval"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-09"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-09/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-09"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-10/revoked"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-10"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-10/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-10"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-11/crash_capture"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-11"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-11/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-11"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "DUPLICATE_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-12/tamper"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-PHC-12"
+    },
+    {
+      "expected": "Abort all aggregation before any acceptance predicate",
+      "kind": "UNEXPECTED_SCENARIO_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_SCENARIO_ID",
+        "detail": "PHC-12/UNEXPECTED_SCENARIO"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-PHC-12"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "MISSING_ALL_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "observed_scenario_ids": [],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "NO-PHC-10-RESULTS"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "MISSING_POSITIVE_CONTROL",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-01",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "positive"
+          ],
+          "missing_scenario_ids": [
+            "positive"
+          ],
+          "observed_scenario_ids": [],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {},
+          "valid_scenario_ids": []
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "NO-POSITIVE-CONTROL"
+    },
+    {
+      "expected": "All cases UNRESOLVED; no predicates",
+      "kind": "UNUSABLE_RESULT_INDEX",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "verdicts": {
+          "PHC-01": "UNRESOLVED",
+          "PHC-02": "UNRESOLVED",
+          "PHC-03": "UNRESOLVED",
+          "PHC-04": "UNRESOLVED",
+          "PHC-05": "UNRESOLVED",
+          "PHC-06": "UNRESOLVED",
+          "PHC-07": "UNRESOLVED",
+          "PHC-08": "UNRESOLVED",
+          "PHC-09": "UNRESOLVED",
+          "PHC-10": "UNRESOLVED",
+          "PHC-11": "UNRESOLVED",
+          "PHC-12": "UNRESOLVED"
+        }
+      },
+      "passed": true,
+      "probe_id": "UNUSABLE-INDEX-CONTAINER"
+    },
+    {
+      "expected": "All cases UNRESOLVED; no predicates",
+      "kind": "UNUSABLE_IDENTITY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "verdicts": {
+          "PHC-01": "UNRESOLVED",
+          "PHC-02": "UNRESOLVED",
+          "PHC-03": "UNRESOLVED",
+          "PHC-04": "UNRESOLVED",
+          "PHC-05": "UNRESOLVED",
+          "PHC-06": "UNRESOLVED",
+          "PHC-07": "UNRESOLVED",
+          "PHC-08": "UNRESOLVED",
+          "PHC-09": "UNRESOLVED",
+          "PHC-10": "UNRESOLVED",
+          "PHC-11": "UNRESOLVED",
+          "PHC-12": "UNRESOLVED"
+        }
+      },
+      "passed": true,
+      "probe_id": "UNIDENTIFIABLE-RESULT"
+    },
+    {
+      "expected": "Abort aggregation",
+      "kind": "UNEXPECTED_CASE_SCHEMA",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "UNEXPECTED_CASE_ID",
+        "detail": "PHC-UNEXPECTED"
+      },
+      "passed": true,
+      "probe_id": "UNEXPECTED-CASE"
+    },
+    {
+      "expected": "Abort aggregation",
+      "kind": "INVALID_MANDATORY_PLAN",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "aggregation_status": "ABORTED_SCHEMA_VIOLATION",
+        "code": "PLAN_DUPLICATE_SCENARIO_ID",
+        "detail": "PHC-10"
+      },
+      "passed": true,
+      "probe_id": "DUPLICATE-FROZEN-PLAN-ID"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "UNUSABLE_PACKAGE_LOCATOR"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "MISSING-PACKAGE-LOCATOR"
+    },
+    {
+      "expected": "All cases UNRESOLVED; no predicates",
+      "kind": "UNUSABLE_EFFECT_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [],
+        "verdicts": {
+          "PHC-01": "UNRESOLVED",
+          "PHC-02": "UNRESOLVED",
+          "PHC-03": "UNRESOLVED",
+          "PHC-04": "UNRESOLVED",
+          "PHC-05": "UNRESOLVED",
+          "PHC-06": "UNRESOLVED",
+          "PHC-07": "UNRESOLVED",
+          "PHC-08": "UNRESOLVED",
+          "PHC-09": "UNRESOLVED",
+          "PHC-10": "UNRESOLVED",
+          "PHC-11": "UNRESOLVED",
+          "PHC-12": "UNRESOLVED"
+        }
+      },
+      "passed": true,
+      "probe_id": "OBSERVER-OVERFLOW"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "UNUSABLE_EVIDENCE:FileNotFoundError"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "PACKAGE-FILE-ABSENT"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "UNUSABLE_EVIDENCE:JSONDecodeError"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "PACKAGE-JSON-UNUSABLE"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "PACKAGE_WITNESS_MISMATCH"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "PACKAGE-WITNESS-MISMATCH"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "ATTEMPT_TRACE_COUNT_MISMATCH",
+              "UNUSABLE_EVIDENCE:FileNotFoundError"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "ATTEMPT-TRACE-ABSENT"
+    },
+    {
+      "expected": "UNRESOLVED",
+      "kind": "UNUSABLE_MANDATORY_EVIDENCE",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "case_id": "PHC-10",
+        "completeness": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "mandatory_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "missing_scenario_ids": [],
+          "observed_scenario_ids": [
+            "revoked",
+            "stopped",
+            "budget"
+          ],
+          "status": "UNRESOLVED",
+          "unassigned_evidence_issues": [],
+          "unusable_scenarios": {
+            "revoked": [
+              "PACKAGE_BINDING_MISMATCH",
+              "PACKAGE_WITNESS_MISMATCH"
+            ]
+          },
+          "valid_scenario_ids": [
+            "stopped",
+            "budget"
+          ]
+        },
+        "verdict": "UNRESOLVED"
+      },
+      "passed": true,
+      "probe_id": "REVISION-BINDING-MISMATCH"
+    },
+    {
+      "expected": "Apply predicate and return CONTRADICTED",
+      "kind": "COMPLETE_DOES_NOT_IMPLY_SUPPORT",
+      "observed": {
+        "acceptance_predicate_calls": [
+          "PHC-01",
+          "PHC-02",
+          "PHC-03",
+          "PHC-04",
+          "PHC-05",
+          "PHC-06",
+          "PHC-07",
+          "PHC-08",
+          "PHC-09",
+          "PHC-10",
+          "PHC-11",
+          "PHC-12"
+        ],
+        "completeness": "COMPLETE",
+        "verdict": "CONTRADICTED"
+      },
+      "passed": true,
+      "probe_id": "COMPLETE-EVIDENCE-FAILS-ACCEPTANCE"
+    }
+  ],
+  "publication_authority": "WITHHELD",
+  "regression_scope": "PRODUCER_SIDE_COMPLETENESS_REPAIR_NOT_INDEPENDENT_REVIEW",
+  "source_admission": "HELD"
+}

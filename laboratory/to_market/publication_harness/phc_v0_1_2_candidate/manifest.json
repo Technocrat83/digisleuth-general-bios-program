@@ -1,0 +1,106 @@
+{
+  "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+  "case_namespace": "PHC-01_THROUGH_PHC-12_FROM_PUBLICATION_CONTRACT",
+  "contract_library_file_id": "libfile_662ec4b6e5c0819183c33bd10d6aa88a",
+  "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+  "dependencies": "PYTHON_STANDARD_LIBRARY_ONLY",
+  "files": {
+    "contract/BIOS_PUBLICATION_HARNESS_CONTRACT_v0.1_candidate.md": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "fixtures/execution_envelope.json": "570cf01ff8faee44f41974ca7b6b756eb4dca1c89dc3062db422d54328a77e47",
+    "fixtures/plan.json": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "fixtures/repair_scope.json": "ba668ac36ebd2ea1e7e3b57f2e48eac34eb85db4ab3d6fdf17f940d07c928f76",
+    "fixtures/useful_draft_criterion.json": "e5438f0c2732c8731317cc923b7198622ff83a918c525b3f11dad875639fead7",
+    "history/PHC_PROTOTYPE_EVIDENCE_v0.1.1_candidate.zip": "b8fef1e5ccddcb8097aab21d630d7ddd39d3ee0d1c518cbd2cddaf5229a1e558",
+    "history/prior_execution.json": "74b614317a4ba4a7b55d78a2b7cd548b64357e7e1d9e6f85cb2179aa3ac0335a",
+    "inputs/source_record.json": "df717cd5b2072791fa1909b7e9bfc0d2da2b8556311ba70c971f67d56d55972e",
+    "inputs/submitted_source.txt": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+    "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+    "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7",
+    "src/build_report.py": "78070780ca7ec7c9c6e4181d9392365583fcc84cb3d9f936d7294e67c7475e1e",
+    "src/phc_driver.py": "ab235696b18325495b0da052e7e3e00944a1ad84961a99c2b24009e7e41271ab",
+    "src/phc_observer.py": "5fdd3cdbfa29b36ea6af23c24c8b1592979fbd8c76fd984ada3cb2aa73d7d4a1",
+    "src/phc_runtime.py": "57148f7b31f028b70562991b3fef2ca7b0c39cb2a70e7114f958fd4f698d74ea",
+    "src/prepare_run.py": "37a1525b04717ebffa4b9c9d9adc95385a992462be3e2039af9facb5b20d3f0f",
+    "src/scenario_completeness.py": "dda241025fd0a0b4cb53eb07e89b976b302e91bd16f3a6b4f960f07d1e586614",
+    "src/schema_subset.py": "ada7f0478d994b3a1158c5ec2e4b7f029a2f75e84ee8109aafb0b46002b54c16",
+    "src/test_scenario_completeness.py": "29edc781f5da8aa3d95925e0f6bde0e4353ab55111dc61a5c15f732f1b98fcfc"
+  },
+  "frozen_at_utc": "2026-10-26T15:17:30.702579+00:00",
+  "git_binding": "UNBOUND",
+  "implementation_digest_method": "SHA256_OF_SORTED_COMPACT_JSON_PATH_TO_SHA256_MAP",
+  "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "prior_execution": {
+    "audit_library_file_id": "libfile_433806ec0abc819187368486f0042d9a",
+    "defect_id": "PHC-10-OBSERVER-01",
+    "earlier_failed_runtime_attempts": 17,
+    "previous_archive": "history/PHC_PROTOTYPE_EVIDENCE_v0.1.1_candidate.zip",
+    "previous_archive_sha256": "b8fef1e5ccddcb8097aab21d630d7ddd39d3ee0d1c518cbd2cddaf5229a1e558",
+    "previous_commit": "f36edde767d445524ce4d3ea8e49679b12d7095b",
+    "previous_evidence_commit": "8e70427dd93f0c8717343d343dc3facafd321aca",
+    "previous_receipts_preserved": true,
+    "previous_runtime_attempts": 20,
+    "previous_specimen": "PHC_LOCAL_PROTOTYPE_v0.1.1_candidate",
+    "previous_summary": {
+      "acceptance_cases_executed": 12,
+      "at_utc": "2026-10-26T14:26:00.836118+00:00",
+      "bindings": {
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f7d45b79ab52bbcfe8e0e49d186ed4f6f0e6e56d1a2f4b9d7ef6bbc93d27c56a",
+        "manifest_sha256": "9fbf4a5f4a0c02d0591c527e2d7152a43d162a8869ec1c561cd9fa5ccb5a8d88",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "certification": "NOT_ISSUED",
+      "cost": {
+        "external_service_calls": 0,
+        "external_service_cost_usd": 0,
+        "host_and_assistant_cost": "UNKNOWN_NOT_MEASURED",
+        "scenario_cpu_seconds": 0.07553660199999998,
+        "suite_wall_seconds": 0.13096460199994908
+      },
+      "driver_returncode": 0,
+      "driver_stderr": "",
+      "driver_stdout": "{\"scenarios\": 17, \"workflow_attempts\": 20, \"driver_errors\": 0}",
+      "failed_checks": [],
+      "freeze_mismatches": [],
+      "frozen_files_unchanged": true,
+      "git_binding": "UNBOUND",
+      "human_review": "PENDING",
+      "market_demand": "NOT_ESTABLISHED",
+      "observer": {
+        "boundary": "PREPARED_LOCAL_MOCK_EFFECT_FILES",
+        "inotify_queue_overflow": false,
+        "observed_effect_events": 22,
+        "same_uid": true,
+        "separate_process": true
+      },
+      "production_enforcement": "NOT_ESTABLISHED",
+      "publication_effects": "NO_MOCK_PUBLISHER_WRITES_OBSERVED",
+      "scenario_count": 17,
+      "source_admission": "HELD",
+      "specimen_id": "PHC_LOCAL_PROTOTYPE_v0.1.1_candidate",
+      "standing": "EXECUTED_LOCAL_MOCK_CANDIDATE_UNPROMOTED",
+      "suite_executions": 1,
+      "transformation_experiment_mapping": "NONE_ASSERTED",
+      "verdict_counts": {
+        "SUPPORTED_WITHIN_TESTED_SCOPE": 12
+      },
+      "workflow_attempts": 20
+    },
+    "repair_scope": "MANDATORY_SCENARIO_EVIDENCE_CLOSURE_BEFORE_ACCEPTANCE",
+    "total_prior_runtime_attempts": 37
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "schema_sha256": {
+    "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+    "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+  },
+  "schema_validation": "DECLARED_KEYWORD_SUBSET_PLUS_OBSERVER_SEMANTIC_CHECKS",
+  "source_admission": "HELD",
+  "specimen_id": "PHC_LOCAL_PROTOTYPE_v0.1.2_candidate",
+  "specimen_version": "0.1.2",
+  "transformation_mapping": "NONE_ASSERTED"
+}

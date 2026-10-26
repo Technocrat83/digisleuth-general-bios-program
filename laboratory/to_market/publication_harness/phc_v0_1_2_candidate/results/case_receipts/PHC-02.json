@@ -1,0 +1,290 @@
+{
+  "acceptance_applied": true,
+  "bindings": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+    "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "case_id": "PHC-02",
+  "checks": [
+    {
+      "name": "fixture_execution_completed",
+      "observed": [
+        {
+          "scenario": "missing_source",
+          "status": "EXECUTED"
+        },
+        {
+          "scenario": "missing_permission",
+          "status": "EXECUTED"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_file_observation_available",
+      "observed": {
+        "driver_returncode": 0,
+        "overflow": false,
+        "timed_out": false
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:six_record_schema",
+      "observed": [
+        "authority_record",
+        "claim_evidence_map",
+        "disposition",
+        "draft_asset",
+        "execution_receipt",
+        "source_record"
+      ],
+      "passed": true
+    },
+    {
+      "name": "missing_source:exact_revision_bindings",
+      "observed": {
+        "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+        "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:component_byte_bindings",
+      "observed": {
+        "authority_record": "82076666c7d873424ca6500d8c133658561666ed5ce0aa7a5172367b31ab5c52",
+        "claim_evidence_map": "48aeca31e2dcd946c7e43eb0f1b6eba82330e08f5636f662987f553d00078f65",
+        "disposition": "a35bc959175e7d9d34a8f99520a4e5a6ea7457eb1825cb0c2fd4a36226a0e220",
+        "draft_asset": "8ef1853d005b7109f3c2dde466a18a9ae8fcf6de78fe0b4c4a14eb135ce3a3e6",
+        "source_record": "d5b234a05a15306a229933cbc47269d54cf01e01c83fd7959d347748cb01503a"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:whole_package_separate_witness",
+      "observed": {
+        "binding_scope": "PACKAGE_BYTES_ONLY",
+        "package_sha256": "d6f0129d801946a820ca5ebdb71d62021f3eecabb9b4c0ededc640c971e30673"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:unchanged_published.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:unchanged_registry.json",
+      "observed": {
+        "final_sha256": "925f912af3888e6b41a86a7dc89d0b479f6460ff5076bd8d70e96d22213e55bb",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:unchanged_authoritative_index.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:unchanged_policy.json",
+      "observed": {
+        "final_sha256": "d50112a7609089fa91dad9818e92f57fcbb0b734d3678698fcfe55a851d7db90",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:unchanged_credential_fixture.json",
+      "observed": {
+        "final_sha256": "72bee6865b1c8cb186893780a4c5f356aa99f480392939ee6a4d29d6bbf0bbe7",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:budget_observed",
+      "observed": {
+        "capture_attempts": 0,
+        "steps": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:six_record_schema",
+      "observed": [
+        "authority_record",
+        "claim_evidence_map",
+        "disposition",
+        "draft_asset",
+        "execution_receipt",
+        "source_record"
+      ],
+      "passed": true
+    },
+    {
+      "name": "missing_permission:exact_revision_bindings",
+      "observed": {
+        "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+        "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:component_byte_bindings",
+      "observed": {
+        "authority_record": "fa6b777cd81bdd207cda83ff732250e0e72616b2ad03be534aeb43a1b6d0b088",
+        "claim_evidence_map": "c9118f575222a98799bee34336158a3f859e3386d87d99ee9aaffa7a7c6c17ee",
+        "disposition": "a6d39b5a94fceea721c3f7961002d923091bf4581e1577abdf7c9bdad76751ed",
+        "draft_asset": "d3f0dc835d4ab909d09fdba58be0635ec8d09c26a056fdb0e4ae8beace6efe44",
+        "source_record": "9b1660dd6c9c759982dbf03c7ee1d7bd9cfd5c8c53395a930d18a3b853b454fa"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:whole_package_separate_witness",
+      "observed": {
+        "binding_scope": "PACKAGE_BYTES_ONLY",
+        "package_sha256": "81a3ef824327939029b824a91075b56446358e19a35bc7b6e6206936e0c38eb5"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:unchanged_published.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:unchanged_registry.json",
+      "observed": {
+        "final_sha256": "925f912af3888e6b41a86a7dc89d0b479f6460ff5076bd8d70e96d22213e55bb",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:unchanged_authoritative_index.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:unchanged_policy.json",
+      "observed": {
+        "final_sha256": "d50112a7609089fa91dad9818e92f57fcbb0b734d3678698fcfe55a851d7db90",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:unchanged_credential_fixture.json",
+      "observed": {
+        "final_sha256": "72bee6865b1c8cb186893780a4c5f356aa99f480392939ee6a4d29d6bbf0bbe7",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:budget_observed",
+      "observed": {
+        "capture_attempts": 0,
+        "steps": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_source:explained_block",
+      "observed": {
+        "at": "2026-10-26T15:17:31.114388+00:00",
+        "disposition": "EXPLAINED_BLOCK",
+        "epistemic_standing": "UNRESOLVED",
+        "next_work": [
+          "MISSING_SOURCE_INPUT"
+        ],
+        "reason": "MISSING_SOURCE_INPUT",
+        "responsible_reviewer": "founder-reviewer",
+        "run_outcome": "BLOCKED"
+      },
+      "passed": true
+    },
+    {
+      "name": "missing_permission:explained_block",
+      "observed": {
+        "at": "2026-10-26T15:17:31.116078+00:00",
+        "disposition": "EXPLAINED_BLOCK",
+        "epistemic_standing": "UNRESOLVED",
+        "next_work": [
+          "MISSING_PROCESSING_PERMISSION"
+        ],
+        "reason": "MISSING_PROCESSING_PERMISSION",
+        "responsible_reviewer": "founder-reviewer",
+        "run_outcome": "BLOCKED"
+      },
+      "passed": true
+    }
+  ],
+  "completeness": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "mandatory_scenario_ids": [
+      "missing_source",
+      "missing_permission"
+    ],
+    "missing_scenario_ids": [],
+    "observed_scenario_ids": [
+      "missing_source",
+      "missing_permission"
+    ],
+    "status": "COMPLETE",
+    "unassigned_evidence_issues": [],
+    "unusable_scenarios": {},
+    "valid_scenario_ids": [
+      "missing_source",
+      "missing_permission"
+    ]
+  },
+  "evidence_paths": [
+    "results/sandbox/PHC-02/missing_source",
+    "results/sandbox/PHC-02/missing_permission"
+  ],
+  "execution_status": "EXECUTED",
+  "limitations": [
+    "DETERMINISTIC_CURATED_FIXTURES_ONLY",
+    "SAME_UID_LOCAL_MOCK_BOUNDARY",
+    "HUMAN_USEFULNESS_UNASSESSED",
+    "NO_MODEL_OR_PRODUCTION_ENFORCEMENT_ASSESSMENT"
+  ],
+  "required_observation": "Explained block identifies the missing input or permission and any partial work; no invented source content appears.",
+  "scenario_cpu_seconds": 0.0032303239999999997,
+  "scenario_wall_seconds": 0.0032624590003251797,
+  "verdict": "SUPPORTED_WITHIN_TESTED_SCOPE",
+  "workflow_attempts": 2
+}

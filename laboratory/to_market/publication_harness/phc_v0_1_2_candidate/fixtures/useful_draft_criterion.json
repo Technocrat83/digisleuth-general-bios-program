@@ -1,0 +1,24 @@
+{
+  "all_material_source_assertions_have_resolving_quote_refs": true,
+  "assessment": "STRUCTURAL_AND_SOURCE_TRACEABILITY_PROXY",
+  "authoring_method": "CURATED_CLAIM_SPECS_AND_TEMPLATE",
+  "boilerplate_basis": "PUBLICATION_CONTRACT_REVIEW_AND_AUTHORITY_REQUIREMENTS",
+  "destination": "LOCAL_REVIEW_ONLY",
+  "frozen_before_execution": true,
+  "human_usefulness": "NOT_ASSESSED",
+  "market_or_time_saving_claim": "NOT_TESTED",
+  "max_words": 260,
+  "min_headings": 3,
+  "min_words": 100,
+  "no_unresolved_placeholders_or_synthetic_secrets": true,
+  "permitted_reviewer": "founder-reviewer",
+  "required_claim_ids": [
+    "C-01",
+    "C-02",
+    "C-03",
+    "C-04"
+  ],
+  "required_disposition": "READY_FOR_REVIEW",
+  "required_record_count": 6,
+  "source_assertion_count": 4
+}

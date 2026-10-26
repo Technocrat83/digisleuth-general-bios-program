@@ -1,0 +1,447 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "attempt_id": {
+      "type": "string"
+    },
+    "bindings": {
+      "type": "object"
+    },
+    "components": {
+      "additionalProperties": false,
+      "properties": {
+        "authority_record": {
+          "additionalProperties": true,
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "component_type": {
+              "enum": [
+                "source_record",
+                "claim_evidence_map",
+                "draft_asset",
+                "authority_record",
+                "execution_receipt",
+                "disposition"
+              ]
+            },
+            "data": {
+              "type": "object"
+            },
+            "evidence_status": {
+              "enum": [
+                "OBSERVED",
+                "PARTIAL",
+                "MISSING",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "missing_fields": {
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_status": {
+              "enum": [
+                "PRESENT",
+                "NOT_PRODUCED",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "visibility_scope": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "record_id",
+            "run_id",
+            "component_type",
+            "record_status",
+            "evidence_status",
+            "visibility_scope",
+            "missing_fields",
+            "reason",
+            "author",
+            "data"
+          ],
+          "type": "object"
+        },
+        "claim_evidence_map": {
+          "additionalProperties": true,
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "component_type": {
+              "enum": [
+                "source_record",
+                "claim_evidence_map",
+                "draft_asset",
+                "authority_record",
+                "execution_receipt",
+                "disposition"
+              ]
+            },
+            "data": {
+              "type": "object"
+            },
+            "evidence_status": {
+              "enum": [
+                "OBSERVED",
+                "PARTIAL",
+                "MISSING",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "missing_fields": {
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_status": {
+              "enum": [
+                "PRESENT",
+                "NOT_PRODUCED",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "visibility_scope": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "record_id",
+            "run_id",
+            "component_type",
+            "record_status",
+            "evidence_status",
+            "visibility_scope",
+            "missing_fields",
+            "reason",
+            "author",
+            "data"
+          ],
+          "type": "object"
+        },
+        "disposition": {
+          "additionalProperties": true,
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "component_type": {
+              "enum": [
+                "source_record",
+                "claim_evidence_map",
+                "draft_asset",
+                "authority_record",
+                "execution_receipt",
+                "disposition"
+              ]
+            },
+            "data": {
+              "type": "object"
+            },
+            "evidence_status": {
+              "enum": [
+                "OBSERVED",
+                "PARTIAL",
+                "MISSING",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "missing_fields": {
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_status": {
+              "enum": [
+                "PRESENT",
+                "NOT_PRODUCED",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "visibility_scope": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "record_id",
+            "run_id",
+            "component_type",
+            "record_status",
+            "evidence_status",
+            "visibility_scope",
+            "missing_fields",
+            "reason",
+            "author",
+            "data"
+          ],
+          "type": "object"
+        },
+        "draft_asset": {
+          "additionalProperties": true,
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "component_type": {
+              "enum": [
+                "source_record",
+                "claim_evidence_map",
+                "draft_asset",
+                "authority_record",
+                "execution_receipt",
+                "disposition"
+              ]
+            },
+            "data": {
+              "type": "object"
+            },
+            "evidence_status": {
+              "enum": [
+                "OBSERVED",
+                "PARTIAL",
+                "MISSING",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "missing_fields": {
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_status": {
+              "enum": [
+                "PRESENT",
+                "NOT_PRODUCED",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "visibility_scope": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "record_id",
+            "run_id",
+            "component_type",
+            "record_status",
+            "evidence_status",
+            "visibility_scope",
+            "missing_fields",
+            "reason",
+            "author",
+            "data"
+          ],
+          "type": "object"
+        },
+        "execution_receipt": {
+          "additionalProperties": true,
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "component_type": {
+              "enum": [
+                "source_record",
+                "claim_evidence_map",
+                "draft_asset",
+                "authority_record",
+                "execution_receipt",
+                "disposition"
+              ]
+            },
+            "data": {
+              "type": "object"
+            },
+            "evidence_status": {
+              "enum": [
+                "OBSERVED",
+                "PARTIAL",
+                "MISSING",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "missing_fields": {
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_status": {
+              "enum": [
+                "PRESENT",
+                "NOT_PRODUCED",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "visibility_scope": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "record_id",
+            "run_id",
+            "component_type",
+            "record_status",
+            "evidence_status",
+            "visibility_scope",
+            "missing_fields",
+            "reason",
+            "author",
+            "data"
+          ],
+          "type": "object"
+        },
+        "source_record": {
+          "additionalProperties": true,
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "component_type": {
+              "enum": [
+                "source_record",
+                "claim_evidence_map",
+                "draft_asset",
+                "authority_record",
+                "execution_receipt",
+                "disposition"
+              ]
+            },
+            "data": {
+              "type": "object"
+            },
+            "evidence_status": {
+              "enum": [
+                "OBSERVED",
+                "PARTIAL",
+                "MISSING",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "missing_fields": {
+              "type": "array"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_status": {
+              "enum": [
+                "PRESENT",
+                "NOT_PRODUCED",
+                "UNAVAILABLE",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "run_id": {
+              "type": "string"
+            },
+            "visibility_scope": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "record_id",
+            "run_id",
+            "component_type",
+            "record_status",
+            "evidence_status",
+            "visibility_scope",
+            "missing_fields",
+            "reason",
+            "author",
+            "data"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "source_record",
+        "claim_evidence_map",
+        "draft_asset",
+        "authority_record",
+        "execution_receipt",
+        "disposition"
+      ],
+      "type": "object"
+    },
+    "original_attempts_preserved": {
+      "type": "boolean"
+    },
+    "recovery_authorship": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "attempt_id",
+    "bindings",
+    "components",
+    "recovery_authorship",
+    "original_attempts_preserved"
+  ],
+  "title": "PHC local package envelope schema; detailed semantics checked by observer",
+  "type": "object"
+}

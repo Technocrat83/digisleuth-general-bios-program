@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "acceptance_applied": {
+      "type": "boolean"
+    },
+    "bindings": {
+      "type": "object"
+    },
+    "case_id": {
+      "pattern": "^PHC-[0-9]{2}$",
+      "type": "string"
+    },
+    "checks": {
+      "items": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "passed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "passed",
+          "observed"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "completeness": {
+      "properties": {
+        "acceptance_plan_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "mandatory_scenario_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "missing_scenario_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "observed_scenario_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "COMPLETE",
+            "UNRESOLVED"
+          ]
+        },
+        "unassigned_evidence_issues": {
+          "type": "array"
+        },
+        "unusable_scenarios": {
+          "type": "object"
+        },
+        "valid_scenario_ids": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "mandatory_scenario_ids",
+        "observed_scenario_ids",
+        "valid_scenario_ids",
+        "missing_scenario_ids",
+        "unusable_scenarios",
+        "unassigned_evidence_issues",
+        "acceptance_plan_sha256"
+      ],
+      "type": "object"
+    },
+    "evidence_paths": {
+      "type": "array"
+    },
+    "execution_status": {
+      "enum": [
+        "EXECUTED",
+        "BLOCKED",
+        "NOT_RUN"
+      ]
+    },
+    "limitations": {
+      "type": "array"
+    },
+    "verdict": {
+      "enum": [
+        "SUPPORTED_WITHIN_TESTED_SCOPE",
+        "CONTRADICTED",
+        "UNRESOLVED",
+        "NOT_RUN"
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "execution_status",
+    "verdict",
+    "checks",
+    "bindings",
+    "evidence_paths",
+    "limitations",
+    "completeness",
+    "acceptance_applied"
+  ],
+  "type": "object"
+}

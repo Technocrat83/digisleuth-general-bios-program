@@ -1,0 +1,10 @@
+Agreed, John. **The publication harness contract must define the prototype’s six delivery records and 12 acceptance cases.** Any mapping to transformation-experiment envelopes or fixtures requires explicit justification.
+
+The next run should produce an inspectable evidence package containing:
+
+- Exact contract, implementation, and schema digests.
+- One permitted source and a predefined useful-draft acceptance criterion.
+- Independent observations of effects, costs, exceptions, and evidence gaps.
+- A receipt for every acceptance case, distinguishing executed, blocked, and not-run outcomes.
+
+**Reported runtime count: 0. Standing: candidate.** This turn establishes neither execution evidence nor verified workspace unavailability.

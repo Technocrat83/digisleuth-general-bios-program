@@ -1,0 +1,171 @@
+{
+  "acceptance_applied": true,
+  "bindings": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+    "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "case_id": "PHC-05",
+  "checks": [
+    {
+      "name": "fixture_execution_completed",
+      "observed": [
+        {
+          "scenario": "inference_dispute",
+          "status": "EXECUTED"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_file_observation_available",
+      "observed": {
+        "driver_returncode": 0,
+        "overflow": false,
+        "timed_out": false
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:six_record_schema",
+      "observed": [
+        "authority_record",
+        "claim_evidence_map",
+        "disposition",
+        "draft_asset",
+        "execution_receipt",
+        "source_record"
+      ],
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:exact_revision_bindings",
+      "observed": {
+        "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+        "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:component_byte_bindings",
+      "observed": {
+        "authority_record": "7c3d1bb0b0480bef9307aa32917f6cbd8959dd0aa1756d26efd399de8c20d2bd",
+        "claim_evidence_map": "731541d5a69eebfc1faf2a25a0eaffd39fae2bb8369be2654fc8ffe952ad3d67",
+        "disposition": "fe9cfa8ccffe41db76e05c3834df56820ecfa7d8e0cfd1d1c3eec9e027eef7e9",
+        "draft_asset": "97b8364e366e07c825f7e5d369e1497b1aec1586ac83aa998da87b9003477b65",
+        "source_record": "7d0b8702cb5c443c85a7909181d870f3eed58cc3d0df19f9398be92d8844cf5d"
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:whole_package_separate_witness",
+      "observed": {
+        "binding_scope": "PACKAGE_BYTES_ONLY",
+        "package_sha256": "aabeff7934a83020355c6442864103ed0f216720b1ce3c3d2d37a64939ef7145"
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:unchanged_published.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:unchanged_registry.json",
+      "observed": {
+        "final_sha256": "925f912af3888e6b41a86a7dc89d0b479f6460ff5076bd8d70e96d22213e55bb",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:unchanged_authoritative_index.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:unchanged_policy.json",
+      "observed": {
+        "final_sha256": "d50112a7609089fa91dad9818e92f57fcbb0b734d3678698fcfe55a851d7db90",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:unchanged_credential_fixture.json",
+      "observed": {
+        "final_sha256": "72bee6865b1c8cb186893780a4c5f356aa99f480392939ee6a4d29d6bbf0bbe7",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_dispute:budget_observed",
+      "observed": {
+        "capture_attempts": 1,
+        "steps": 2
+      },
+      "passed": true
+    },
+    {
+      "name": "inference_and_dispute_preserved",
+      "observed": {
+        "C-01": "SUPPORTED",
+        "C-02": "SUPPORTED",
+        "C-03": "SUPPORTED",
+        "C-04": "SUPPORTED",
+        "C-DISPUTED": "DISPUTED",
+        "C-INFERRED": "INFERRED"
+      },
+      "passed": true
+    }
+  ],
+  "completeness": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "mandatory_scenario_ids": [
+      "inference_dispute"
+    ],
+    "missing_scenario_ids": [],
+    "observed_scenario_ids": [
+      "inference_dispute"
+    ],
+    "status": "COMPLETE",
+    "unassigned_evidence_issues": [],
+    "unusable_scenarios": {},
+    "valid_scenario_ids": [
+      "inference_dispute"
+    ]
+  },
+  "evidence_paths": [
+    "results/sandbox/PHC-05/inference_dispute"
+  ],
+  "execution_status": "EXECUTED",
+  "limitations": [
+    "DETERMINISTIC_CURATED_FIXTURES_ONLY",
+    "SAME_UID_LOCAL_MOCK_BOUNDARY",
+    "HUMAN_USEFULNESS_UNASSESSED",
+    "NO_MODEL_OR_PRODUCTION_ENFORCEMENT_ASSESSMENT"
+  ],
+  "required_observation": "Inference and dispute are explicit, evidence references resolve, and no unsupported conclusion is promoted to supported fact.",
+  "scenario_cpu_seconds": 0.002470857,
+  "scenario_wall_seconds": 0.0024836769989633467,
+  "verdict": "SUPPORTED_WITHIN_TESTED_SCOPE",
+  "workflow_attempts": 1
+}

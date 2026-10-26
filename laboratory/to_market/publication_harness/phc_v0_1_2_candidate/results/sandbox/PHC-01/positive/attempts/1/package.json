@@ -1,0 +1,309 @@
+{
+  "attempt_id": "1",
+  "bindings": {
+    "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+    "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "components": {
+    "authority_record": {
+      "author": "RUNTIME_PROCESS",
+      "component_type": "authority_record",
+      "data": {
+        "authority_reference": "CURRENT_SESSION_BOUNDED_LOCAL_PROTOTYPE_ONLY",
+        "claim_approval": "NOT_GRANTED",
+        "credential_principal_id": "NONE_NO_AUTHENTICATED_SERVICE",
+        "effort_budget": {
+          "external_service_cost_cap_usd": 0,
+          "max_attempts": 2,
+          "max_steps": 4
+        },
+        "executor_id": "local-deterministic-specimen",
+        "expiry_condition": "END_OF_THIS_ATTEMPT",
+        "operation": "PREPARE_REVIEW_PACKAGE",
+        "policy_revision": "LOCAL_PREPARE_ONLY_V1",
+        "processing_authority": true,
+        "publication_authority": "ZERO",
+        "requester_id": "founder-task-requester",
+        "resource": "PHC-01-positive",
+        "result_audience_ids": [
+          "founder-reviewer"
+        ],
+        "reviewer_id": "founder-reviewer",
+        "source_admission": "HELD"
+      },
+      "evidence_status": "OBSERVED",
+      "missing_fields": [],
+      "reason": null,
+      "record_id": "PHC-01-positive-1-authority_record",
+      "record_status": "PRESENT",
+      "run_id": "PHC-01-positive",
+      "visibility_scope": [
+        "founder-reviewer"
+      ]
+    },
+    "claim_evidence_map": {
+      "author": "RUNTIME_PROCESS",
+      "component_type": "claim_evidence_map",
+      "data": {
+        "assessment_method": "CURATED_CLAIM_SPECS_EXACT_QUOTE_MATCHING_NOT_SEMANTIC_VERIFICATION",
+        "claims": [
+          {
+            "claim_id": "C-01",
+            "classification": "SUPPORTED",
+            "counterevidence": null,
+            "evidence": [
+              {
+                "end": 122,
+                "quote": "The publication harness contract must define the prototype’s six delivery records and 12 acceptance cases.",
+                "source_sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+                "start": 16
+              }
+            ],
+            "inference_reasoning": null,
+            "reason": "EXACT_QUOTE_FOUND_IN_CURATED_FIXTURE",
+            "review": "CANDIDATE",
+            "text": "Use the publication harness contract to define the six delivery records and the 12 acceptance cases."
+          },
+          {
+            "claim_id": "C-02",
+            "classification": "SUPPORTED",
+            "counterevidence": null,
+            "evidence": [
+              {
+                "end": 348,
+                "quote": "Exact contract, implementation, and schema digests.",
+                "source_sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+                "start": 297
+              }
+            ],
+            "inference_reasoning": null,
+            "reason": "EXACT_QUOTE_FOUND_IN_CURATED_FIXTURE",
+            "review": "CANDIDATE",
+            "text": "Include exact contract, implementation, and schema digests in the evidence package."
+          },
+          {
+            "claim_id": "C-03",
+            "classification": "SUPPORTED",
+            "counterevidence": null,
+            "evidence": [
+              {
+                "end": 500,
+                "quote": "Independent observations of effects, costs, exceptions, and evidence gaps.",
+                "source_sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+                "start": 426
+              }
+            ],
+            "inference_reasoning": null,
+            "reason": "EXACT_QUOTE_FOUND_IN_CURATED_FIXTURE",
+            "review": "CANDIDATE",
+            "text": "Include independent observations of effects, costs, exceptions, and evidence gaps."
+          },
+          {
+            "claim_id": "C-04",
+            "classification": "SUPPORTED",
+            "counterevidence": null,
+            "evidence": [
+              {
+                "end": 595,
+                "quote": "A receipt for every acceptance case, distinguishing executed, blocked, and not-run outcomes.",
+                "source_sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+                "start": 503
+              }
+            ],
+            "inference_reasoning": null,
+            "reason": "EXACT_QUOTE_FOUND_IN_CURATED_FIXTURE",
+            "review": "CANDIDATE",
+            "text": "Provide a receipt for every acceptance case and distinguish executed, blocked, and not-run outcomes."
+          }
+        ]
+      },
+      "evidence_status": "OBSERVED",
+      "missing_fields": [],
+      "reason": null,
+      "record_id": "PHC-01-positive-1-claim_evidence_map",
+      "record_status": "PRESENT",
+      "run_id": "PHC-01-positive",
+      "visibility_scope": [
+        "founder-reviewer"
+      ]
+    },
+    "disposition": {
+      "author": "RUNTIME_PROCESS",
+      "component_type": "disposition",
+      "data": {
+        "at": "2026-10-26T15:17:31.112005+00:00",
+        "disposition": "READY_FOR_REVIEW",
+        "epistemic_standing": "ASSESSED_WITH_LIMITATIONS",
+        "next_work": [
+          "FOUNDER_REVIEW_PENDING"
+        ],
+        "reason": null,
+        "responsible_reviewer": "founder-reviewer",
+        "run_outcome": "COMPLETED"
+      },
+      "evidence_status": "OBSERVED",
+      "missing_fields": [],
+      "reason": null,
+      "record_id": "PHC-01-positive-1-disposition",
+      "record_status": "PRESENT",
+      "run_id": "PHC-01-positive",
+      "visibility_scope": [
+        "founder-reviewer"
+      ]
+    },
+    "draft_asset": {
+      "author": "RUNTIME_PROCESS",
+      "component_type": "draft_asset",
+      "data": {
+        "asset_revision": "PHC-01-positive-draft-1",
+        "asset_sha256": "f5ab9c7a890ad2ce582ee0e5d002993d1c23989f13ebc023bfec52f54a82ee99",
+        "asset_type": "DBA",
+        "destination": "LOCAL_REVIEW_ONLY",
+        "intended_audience": "BUSINESS_OWNER_REVIEWER",
+        "text": "# Reviewing a publication prototype evidence package\n\n## What to inspect\n\n- **SUPPORTED** [C-01]: Use the publication harness contract to define the six delivery records and the 12 acceptance cases.\n- **SUPPORTED** [C-02]: Include exact contract, implementation, and schema digests in the evidence package.\n- **SUPPORTED** [C-03]: Include independent observations of effects, costs, exceptions, and evidence gaps.\n- **SUPPORTED** [C-04]: Provide a receipt for every acceptance case and distinguish executed, blocked, and not-run outcomes.\n\n## Review decision\n\nThis is a proposed draft for review. Inspect the linked source evidence and the outstanding issues before recording a disposition. The source record, claim map, authority record, execution receipt, and disposition accompany this draft so the reviewer can inspect the work and its limits. Any unsupported assertion is excluded and listed for further review. Editorial review does not grant permission to publish this asset.\n",
+        "unresolved_work": []
+      },
+      "evidence_status": "OBSERVED",
+      "missing_fields": [],
+      "reason": null,
+      "record_id": "PHC-01-positive-1-draft_asset",
+      "record_status": "PRESENT",
+      "run_id": "PHC-01-positive",
+      "visibility_scope": [
+        "founder-reviewer"
+      ]
+    },
+    "execution_receipt": {
+      "author": "RUNTIME_PROCESS",
+      "component_type": "execution_receipt",
+      "data": {
+        "bindings": {
+          "acceptance_plan_sha256": "faaecb901533d9511fb1ede60d890c8091b4b68185872e4194b9c231edaed750",
+          "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+          "implementation_sha256": "f9a1122cbba5f1001e6cb4c9dea2ce2886e69e5073d298948955a071e4d2eed1",
+          "manifest_sha256": "901de4badc5a98a66329a56ba5ec26b7e4e01afba78374fe62bfeddf42012a95",
+          "schema_sha256": {
+            "schemas/case_receipt.schema.json": "6f07cee70f50657f7b213947c8bae3f2d5ae26432807e1988292cb53d294d601",
+            "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+          }
+        },
+        "capture_attempts": 1,
+        "component_digests": {
+          "authority_record": "b0cf049bbc58e1e923d22cd560174ba09d8587b2a5618f9e79126b31c5b0f489",
+          "claim_evidence_map": "0c16c741f4c06e28aa3ce430f425d83df180acad13a1973d6eb8cc53e76ca092",
+          "disposition": "6293e05f6744259e7229ade307db4fc294eab82fdca15dc123d9a90caff2d360",
+          "draft_asset": "2d91a0ea908f7074e3c505ffdd8db92212e2655c1fe4b5d5f9c76c4bfbbcd9b5",
+          "source_record": "00121f1302fe4d52f30c1dfd693a085e9c0287191eed57c4e24193a3c1a0a63b"
+        },
+        "cost": {
+          "authenticated_service_calls": 0,
+          "external_service_cost_usd": 0,
+          "host_and_assistant_cost": "UNKNOWN_NOT_MEASURED",
+          "local_cpu_seconds_before_finalization": 0.0010359470000000023,
+          "local_wall_seconds_before_finalization": 0.00103564299934078,
+          "model_calls": 0
+        },
+        "events": [
+          {
+            "at": "2026-10-26T15:17:31.111070+00:00",
+            "attempt": 1,
+            "event": "ATTEMPT_START",
+            "recovery": false,
+            "sequence": 1
+          },
+          {
+            "at": "2026-10-26T15:17:31.111315+00:00",
+            "event": "STEP",
+            "sequence": 2,
+            "step_name": "CAPTURE",
+            "used": 1
+          },
+          {
+            "at": "2026-10-26T15:17:31.111344+00:00",
+            "event": "CAPTURE_ATTEMPT",
+            "number": 1,
+            "result": "CAPTURED",
+            "sequence": 3
+          },
+          {
+            "at": "2026-10-26T15:17:31.111589+00:00",
+            "event": "STEP",
+            "sequence": 4,
+            "step_name": "DRAFT",
+            "used": 2
+          },
+          {
+            "allowed": true,
+            "at": "2026-10-26T15:17:31.111655+00:00",
+            "control_epoch": 0,
+            "event": "AUTHORITY_DECISION",
+            "sequence": 5
+          },
+          {
+            "at": "2026-10-26T15:17:31.111882+00:00",
+            "event": "PROTECTED_COMMIT",
+            "key": "PHC-01-positive-draft",
+            "sequence": 6
+          },
+          {
+            "at": "2026-10-26T15:17:31.112074+00:00",
+            "disposition": "READY_FOR_REVIEW",
+            "event": "FINALIZING",
+            "sequence": 7
+          }
+        ],
+        "evidence_gaps": [
+          "HUMAN_USEFULNESS_UNASSESSED",
+          "NO_MODEL_REASONING_TESTED",
+          "SAME_UID_MOCK_EFFECT_BOUNDARY",
+          "NO_CONCURRENT_OR_PRODUCTION_ENFORCEMENT_TEST"
+        ],
+        "exceptions": [],
+        "independent_effect_observation": "PENDING_SEPARATE_OBSERVER_CASE_RECEIPT",
+        "steps_used": 2
+      },
+      "evidence_status": "OBSERVED",
+      "missing_fields": [],
+      "reason": null,
+      "record_id": "PHC-01-positive-1-execution_receipt",
+      "record_status": "PRESENT",
+      "run_id": "PHC-01-positive",
+      "visibility_scope": [
+        "founder-reviewer"
+      ]
+    },
+    "source_record": {
+      "author": "RUNTIME_PROCESS",
+      "component_type": "source_record",
+      "data": {
+        "access_limits": [],
+        "admission": "HELD",
+        "attribution": "USER_SUBMITTED_NOT_INDEPENDENTLY_AUTHENTICATED",
+        "byte_integrity": "DIGEST_BOUND",
+        "capture_status": "CAPTURED",
+        "input_locator": "CURRENT_USER_MESSAGE_PLUS_LABELED_FIXTURE_OVERLAY_IF_PRESENT",
+        "processing_restrictions": "LOCAL_PREPARATION_FOR_DECLARED_REVIEWER_ONLY",
+        "source_sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+        "source_text": "Agreed, John. **The publication harness contract must define the prototype’s six delivery records and 12 acceptance cases.** Any mapping to transformation-experiment envelopes or fixtures requires explicit justification.\n\nThe next run should produce an inspectable evidence package containing:\n\n- Exact contract, implementation, and schema digests.\n- One permitted source and a predefined useful-draft acceptance criterion.\n- Independent observations of effects, costs, exceptions, and evidence gaps.\n- A receipt for every acceptance case, distinguishing executed, blocked, and not-run outcomes.\n\n**Reported runtime count: 0. Standing: candidate.** This turn establishes neither execution evidence nor verified workspace unavailability.\n"
+      },
+      "evidence_status": "OBSERVED",
+      "missing_fields": [],
+      "reason": null,
+      "record_id": "PHC-01-positive-1-source_record",
+      "record_status": "PRESENT",
+      "run_id": "PHC-01-positive",
+      "visibility_scope": [
+        "founder-reviewer"
+      ]
+    }
+  },
+  "original_attempts_preserved": false,
+  "recovery_authorship": "RUNTIME_PROCESS",
+  "run_id": "PHC-01-positive"
+}
