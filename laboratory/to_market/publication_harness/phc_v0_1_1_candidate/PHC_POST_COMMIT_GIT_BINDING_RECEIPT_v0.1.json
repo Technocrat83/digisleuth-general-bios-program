@@ -1,0 +1,291 @@
+{
+  "receipt_type": "PHC_POST_COMMIT_GIT_BINDING_RECEIPT",
+  "receipt_version": "0.1",
+  "observed_at_utc": "2026-10-26T14:36:41.028Z",
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "branch": "general-bios-laboratory-v1",
+  "repository_path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate",
+  "evidence_commit_sha": "8e70427dd93f0c8717343d343dc3facafd321aca",
+  "evidence_commit_parent": "fdfc032d97445b7cb13c452a47b9ba2f57ca34f9",
+  "evidence_tree_sha": "5562a79ae49db03274dfc32e828997c8ce4c2583",
+  "branch_head_observed_after_evidence_update": "8e70427dd93f0c8717343d343dc3facafd321aca",
+  "write_authority": {
+    "source": "CURRENT_USER_SESSION",
+    "instruction": "GIt Write Authorized",
+    "scope": "SCOPED_PUBLICATION_HARNESS_CANDIDATE_LINEAGE"
+  },
+  "git_binding": "EVIDENCE_COMMIT_AND_BRANCH_READBACK_VERIFIED",
+  "git_object_mechanism": "PROSPECTIVE_GITHUB_GIT_DATA_COMMIT",
+  "local_git_commit_predecessor": "NONE_ASSERTED",
+  "archive": {
+    "path": "archive/PHC_PROTOTYPE_EVIDENCE_v0.1.1_candidate.zip",
+    "size_bytes": 535563,
+    "sha256": "b8fef1e5ccddcb8097aab21d630d7ddd39d3ee0d1c518cbd2cddaf5229a1e558",
+    "git_blob_sha1": "7d410885f59f78ac00272252970afc2f008c5920",
+    "library_file_id": "libfile_bf660c91a85c8191a2f4cd16b1cad8fa",
+    "library_version": 0
+  },
+  "verification": {
+    "new_files": 38,
+    "new_file_blob_identities": "ALL_MATCH_LOCAL_BYTES",
+    "existing_file_blobs": 302,
+    "existing_file_blobs_preserved": true,
+    "archive_integrity_index_files": 402,
+    "archive_index_sha256_checks": "ALL_MATCH",
+    "parentage": "VERIFIED_BY_COMMIT_READBACK",
+    "tree": "VERIFIED_BY_RECURSIVE_TREE_READBACK",
+    "branch_update": "NON_FORCE_WITH_EXPECTED_PARENT",
+    "runtime_reexecution_during_git_write": false,
+    "commit_signature": "NO_SIGNING_ASSERTION"
+  },
+  "payload_files": [
+    {
+      "path": "ARCHIVE_README.md",
+      "size_bytes": 8293,
+      "sha256": "64af07825a70a6c7a93c7114ba6adffed3fe018d4f2cca5ba62f453845dfb787",
+      "git_blob_sha1": "0eb97f5da049e731c637f8a92b5762a00f53b8f0"
+    },
+    {
+      "path": "PHC_GIT_LINEAGE_MANIFEST_v0.1.json",
+      "size_bytes": 10973,
+      "sha256": "6ad745a02802358c226be107fb7368c407e47a528e0335be06aaad32997b37b4",
+      "git_blob_sha1": "06b3a75bae02ad1e302ceebc7eca6f638d686392"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3479,
+      "sha256": "da4e1226e389f4d3345c3e6a1c39fb44620ec72206a79c46b3a7cb7b3d216274",
+      "git_blob_sha1": "41989a07c8243e75b9dc36e59f5578cb8e462783"
+    },
+    {
+      "path": "archive/PHC_PROTOTYPE_EVIDENCE_v0.1.1_candidate.zip",
+      "size_bytes": 535563,
+      "sha256": "b8fef1e5ccddcb8097aab21d630d7ddd39d3ee0d1c518cbd2cddaf5229a1e558",
+      "git_blob_sha1": "7d410885f59f78ac00272252970afc2f008c5920"
+    },
+    {
+      "path": "contract/BIOS_PUBLICATION_HARNESS_CONTRACT_v0.1_candidate.md",
+      "size_bytes": 18549,
+      "sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+      "git_blob_sha1": "671a61ae053cec771c9c2982c712462195c2877b"
+    },
+    {
+      "path": "fixtures/execution_envelope.json",
+      "size_bytes": 694,
+      "sha256": "570cf01ff8faee44f41974ca7b6b756eb4dca1c89dc3062db422d54328a77e47",
+      "git_blob_sha1": "21c785b6f127acfe855c291165c495056081171b"
+    },
+    {
+      "path": "fixtures/plan.json",
+      "size_bytes": 6280,
+      "sha256": "5b345ab17ad871fa71957e23c4ffa6a4f5b1cf833e9e089451d18e17684df9cb",
+      "git_blob_sha1": "f03f924915713837a15ed860656ed07bfa871d32"
+    },
+    {
+      "path": "fixtures/useful_draft_criterion.json",
+      "size_bytes": 777,
+      "sha256": "e5438f0c2732c8731317cc923b7198622ff83a918c525b3f11dad875639fead7",
+      "git_blob_sha1": "ad64cec252be6ddf112bc961170fd11e523b8c94"
+    },
+    {
+      "path": "history/prior_execution.json",
+      "size_bytes": 5327,
+      "sha256": "9c1cfb5d9b21968b2e2fc089efcf36deb8aacec726cf244a08d2d78372d9b4bd",
+      "git_blob_sha1": "e4752fa27a6a66253924ed3357c5bfd9da06fa17"
+    },
+    {
+      "path": "inputs/source_record.json",
+      "size_bytes": 497,
+      "sha256": "df717cd5b2072791fa1909b7e9bfc0d2da2b8556311ba70c971f67d56d55972e",
+      "git_blob_sha1": "73dd7cf93fb106639c80442af18895f7c4374c0f"
+    },
+    {
+      "path": "inputs/submitted_source.txt",
+      "size_bytes": 739,
+      "sha256": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+      "git_blob_sha1": "890d906e647bd8dec0594b59096c6db91b63da85"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 8543,
+      "sha256": "9fbf4a5f4a0c02d0591c527e2d7152a43d162a8869ec1c561cd9fa5ccb5a8d88",
+      "git_blob_sha1": "1cbbaf40ca1ad7187c14b2d9cfabb9fd2fc866a3"
+    },
+    {
+      "path": "results/case_receipts/PHC-01.json",
+      "size_bytes": 5115,
+      "sha256": "6f2b5616710c0b0080b1bdba2a9bb14567275650ab10d21ee5865bf94ce74b21",
+      "git_blob_sha1": "f20bef0cde132baf0199bcb30630eeb8c6916709"
+    },
+    {
+      "path": "results/case_receipts/PHC-02.json",
+      "size_bytes": 9007,
+      "sha256": "3f85bd676d66065e34acb0a553a49a47683b54059110eef9b3bfa6aed70b8cfe",
+      "git_blob_sha1": "24262e2bb00f95c73d1390be46618f2af6789a56"
+    },
+    {
+      "path": "results/case_receipts/PHC-03.json",
+      "size_bytes": 5283,
+      "sha256": "037079b095b17b032851577b49ae70d54b6a5e7f859ee16c831612960f563438",
+      "git_blob_sha1": "c4f3d57d509795b86e37480760e488ec4ac89d69"
+    },
+    {
+      "path": "results/case_receipts/PHC-04.json",
+      "size_bytes": 5578,
+      "sha256": "01437957b8d4d1ad4de6caf8c01b290945d74aad7f85ee3db4fadedc83303f69",
+      "git_blob_sha1": "5c17fbeb8560a95e27972ab966514c43f1d276f0"
+    },
+    {
+      "path": "results/case_receipts/PHC-05.json",
+      "size_bytes": 5099,
+      "sha256": "41e9238365e6be00d97de77a3df2890223924800829d96c72ff8e14fcea54ff9",
+      "git_blob_sha1": "7bde56ca3c959207f6e55046fa24b8548608fd3b"
+    },
+    {
+      "path": "results/case_receipts/PHC-06.json",
+      "size_bytes": 5317,
+      "sha256": "26dfc199b1c0e44b4470359f43258110c5af5d2160e6ca3d15d3435d166ff4e0",
+      "git_blob_sha1": "6504ba54beeabf3a07f796162579e359e72d248a"
+    },
+    {
+      "path": "results/case_receipts/PHC-07.json",
+      "size_bytes": 4913,
+      "sha256": "0975aab9ca6a571b08ccc4d50ca8db56ee00aaa46f91e04a93baed36cf76871a",
+      "git_blob_sha1": "c3339d45cff4d53eed6944c9352e8324bfb0160c"
+    },
+    {
+      "path": "results/case_receipts/PHC-08.json",
+      "size_bytes": 4986,
+      "sha256": "e235e454537bf1bcd141f6a36a539f5cc260f0aa813397b72aa48488459e81d4",
+      "git_blob_sha1": "aa409a4692f7b6f7d895584f638cb0bccfb7ebf3"
+    },
+    {
+      "path": "results/case_receipts/PHC-09.json",
+      "size_bytes": 5636,
+      "sha256": "f7f0181190aabfaf5c2af59343335a05df07f286ee7e37ac4fc3706b371885c8",
+      "git_blob_sha1": "d403905300c5c157cde9d4919fe4e72ab4bd1d03"
+    },
+    {
+      "path": "results/case_receipts/PHC-10.json",
+      "size_bytes": 12834,
+      "sha256": "fef8e3e3e4778429ab2a82f040e991f28d97eb532b106fa49957345a9fabf607",
+      "git_blob_sha1": "e0cfe13cd5a264424d5bd0b9b43c9187d6f630b5"
+    },
+    {
+      "path": "results/case_receipts/PHC-11.json",
+      "size_bytes": 12296,
+      "sha256": "fc853cbac9d8509db97a8c8b20b9e4d82116c81875d613191d315a38a7a0e02d",
+      "git_blob_sha1": "b07142823db2044f4ca7712769863458f7b3ac76"
+    },
+    {
+      "path": "results/case_receipts/PHC-12.json",
+      "size_bytes": 5053,
+      "sha256": "64051b323a8c5a7a2b4f86e4d5ed2a17a6f0fa983b9470af4eb58b6603ee0a49",
+      "git_blob_sha1": "d6a85757b0dd4869a83afdcf48c2a3e61d05a621"
+    },
+    {
+      "path": "results/file_effect_observations.json",
+      "size_bytes": 3958,
+      "sha256": "58226293bab24727417a91835f679a3101f6a99c342458cfdbe5e67545902f12",
+      "git_blob_sha1": "250f7fa6d468d2f1496bb99cd3409e5e9730e6fc"
+    },
+    {
+      "path": "results/observer_preflight.json",
+      "size_bytes": 15998,
+      "sha256": "570f804d0b3ca75052fbf4dec0cc29c75ee5e71fa365fa991c5cd69a1ccb0cd1",
+      "git_blob_sha1": "5d30dad9ee9518b58e3dbb3ec17fe8134a2f6efa"
+    },
+    {
+      "path": "results/observer_summary.json",
+      "size_bytes": 1865,
+      "sha256": "49bef8600ee2c10ba45defbabcdddad1bd0a6fcf6c084eeb3091fb468e75ab38",
+      "git_blob_sha1": "9ff755d4a3f900c862920e703c3b1f841841efc4"
+    },
+    {
+      "path": "results/positive_control_draft.md",
+      "size_bytes": 983,
+      "sha256": "f5ab9c7a890ad2ce582ee0e5d002993d1c23989f13ebc023bfec52f54a82ee99",
+      "git_blob_sha1": "9c6992542529ebd181006a0d81191c9cbb906886"
+    },
+    {
+      "path": "results/sandbox/PHC-01/positive/attempts/1/package.json",
+      "size_bytes": 13207,
+      "sha256": "9c668ebaf570fe99b2c8d5eefa14ef6427b4df02b648808409fc97db24f1f548",
+      "git_blob_sha1": "5b9a23c295d0a0a7240f585d0c051c0327a71f93"
+    },
+    {
+      "path": "results/sandbox/PHC-01/positive/attempts/1/package_witness.json",
+      "size_bytes": 132,
+      "sha256": "5e27f3e1aadcc5bdce575c4bae34abad066a331b21911d5c9e453afcb6549236",
+      "git_blob_sha1": "ed43bc951f1131d686ec28f3014459ef5fefa32d"
+    },
+    {
+      "path": "schemas/case_receipt.schema.json",
+      "size_bytes": 1132,
+      "sha256": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+      "git_blob_sha1": "412221dd79842124eee1a4aa35d1dd1913bc833b"
+    },
+    {
+      "path": "schemas/package.schema.json",
+      "size_bytes": 11259,
+      "sha256": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7",
+      "git_blob_sha1": "f6baae482d9462bbb42f5481db022b87d65baa4e"
+    },
+    {
+      "path": "src/build_report.py",
+      "size_bytes": 10046,
+      "sha256": "c46b24dd2d1ec870e1f9030e91c8e7eeedf8031de68a5c36acaae4e53504be99",
+      "git_blob_sha1": "a3aaefb3e6d4cdec37a5b4984200edb1eaf2fe92"
+    },
+    {
+      "path": "src/phc_driver.py",
+      "size_bytes": 9568,
+      "sha256": "085530368abaaa583b00f4c61241eb7a9275bb38eec4a6d38b3d8542bc8b21ea",
+      "git_blob_sha1": "d9b4f746dbeb1046dd00c71ffcd9e32c8e88e60d"
+    },
+    {
+      "path": "src/phc_observer.py",
+      "size_bytes": 20602,
+      "sha256": "f7803b41f21a626384b53806ee45c1cdd5a7accc8ba90e3a5b1e5b631a732b41",
+      "git_blob_sha1": "66f60593e22842d87e1b1d1d4f1bd602e7508b64"
+    },
+    {
+      "path": "src/phc_runtime.py",
+      "size_bytes": 14142,
+      "sha256": "57148f7b31f028b70562991b3fef2ca7b0c39cb2a70e7114f958fd4f698d74ea",
+      "git_blob_sha1": "60ff2491a304d02c912210e7e5de3d4aa0d10c03"
+    },
+    {
+      "path": "src/prepare_run.py",
+      "size_bytes": 10765,
+      "sha256": "8c888c7f375dee751df8e651f3de9179b7cbad95895c44a485ad98c008cd574a",
+      "git_blob_sha1": "d63debec7c126b07687312e7547d464f5d3e4e56"
+    },
+    {
+      "path": "src/schema_subset.py",
+      "size_bytes": 2004,
+      "sha256": "ada7f0478d994b3a1158c5ec2e4b7f029a2f75e84ee8109aafb0b46002b54c16",
+      "git_blob_sha1": "0ff60a1afb6f9a80cdcc74dfe17f552996461e23"
+    }
+  ],
+  "evidence_counts": {
+    "repaired_cases": 12,
+    "repaired_scenarios": 17,
+    "repaired_attempts": 20,
+    "prior_failed_attempts": 17,
+    "total_observed_attempts": 37,
+    "prior_failure_preserved": true
+  },
+  "standing": "EXECUTED_LOCAL_MOCK_CANDIDATE_UNPROMOTED",
+  "interpretation": "Existing local fixture reports preserved; no independent scientific adjudication or authority promotion.",
+  "source_admission": "HELD",
+  "publication_authority": "ZERO",
+  "certification": "NOT_ISSUED",
+  "production_enforcement": "NOT_ESTABLISHED",
+  "human_usefulness": "NOT_ASSESSED",
+  "market_demand": "NOT_ESTABLISHED",
+  "observer_limits": "SEPARATE_PROCESS_SAME_OS_USER_LOCAL_MOCK_EFFECT_BOUNDARIES",
+  "transformation_experiment_mapping": "NONE_ASSERTED",
+  "historical_snapshot_rule": "The archived manifest and contract retain their original UNBOUND or zero-count fields. This subsequent receipt binds the later Git object without rewriting historical bytes.",
+  "self_reference_rule": "This receipt identifies the preceding evidence commit. Its own containing commit SHA is intentionally not embedded; that commit is verified separately after creation."
+}
