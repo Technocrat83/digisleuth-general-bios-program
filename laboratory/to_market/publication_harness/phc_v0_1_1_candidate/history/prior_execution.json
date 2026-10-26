@@ -1,0 +1,187 @@
+{
+  "failed_run_archive": "history/PHC_PROTOTYPE_FAILED_RUN_v0.1.zip",
+  "failed_run_archive_sha256": "615bdfe08833aae6c386913dde981472b9a1ef540b79157d08a1cc338ff2c8cd",
+  "previous_evidence_preserved": true,
+  "previous_manifest_sha256": "f790c1b9cf9582fd57bfe1ff128cf866dbf56e97fd01c6d24d77a023590a3e5c",
+  "previous_specimen": "PHC_LOCAL_PROTOTYPE_v0.1_candidate",
+  "previous_summary": {
+    "acceptance_cases_executed": 12,
+    "at_utc": "2026-10-26T14:24:52.801858+00:00",
+    "bindings": {
+      "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+      "implementation_sha256": "09da5f813999c47ae77dd761e03c15c77d86cf1e6c13d6b1a2242bdeceb2502d",
+      "manifest_sha256": "f790c1b9cf9582fd57bfe1ff128cf866dbf56e97fd01c6d24d77a023590a3e5c",
+      "schema_sha256": {
+        "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+        "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+      }
+    },
+    "certification": "NOT_ISSUED",
+    "cost": {
+      "external_service_calls": 0,
+      "external_service_cost_usd": 0,
+      "host_and_assistant_cost": "UNKNOWN_NOT_MEASURED",
+      "scenario_cpu_seconds": 0.015084744999999997,
+      "suite_wall_seconds": 0.06665848699958588
+    },
+    "driver_returncode": 0,
+    "driver_stderr": "",
+    "driver_stdout": "{\"scenarios\": 17, \"workflow_attempts\": 17, \"driver_errors\": 15}",
+    "failed_checks": [
+      {
+        "case_id": "PHC-01",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "positive",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-03",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "unavailable",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-04",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "unsupported",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-05",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "inference_dispute",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-06",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "restricted",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-07",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "injection",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-08",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "held_source",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-09",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "changed_approval",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-10",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "revoked",
+            "status": "ERROR"
+          },
+          {
+            "scenario": "stopped",
+            "status": "ERROR"
+          },
+          {
+            "scenario": "budget",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-11",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "crash_capture",
+            "status": "ERROR"
+          },
+          {
+            "scenario": "crash_draft",
+            "status": "ERROR"
+          },
+          {
+            "scenario": "crash_receipt",
+            "status": "ERROR"
+          }
+        ]
+      },
+      {
+        "case_id": "PHC-12",
+        "check": "fixture_execution_completed",
+        "observed": [
+          {
+            "scenario": "tamper",
+            "status": "ERROR"
+          }
+        ]
+      }
+    ],
+    "freeze_mismatches": [],
+    "frozen_files_unchanged": true,
+    "git_binding": "UNBOUND",
+    "human_review": "PENDING",
+    "market_demand": "NOT_ESTABLISHED",
+    "observer": {
+      "boundary": "PREPARED_LOCAL_MOCK_EFFECT_FILES",
+      "inotify_queue_overflow": false,
+      "observed_effect_events": 0,
+      "same_uid": true,
+      "separate_process": true
+    },
+    "production_enforcement": "NOT_ESTABLISHED",
+    "publication_effects": "NO_MOCK_PUBLISHER_WRITES_OBSERVED",
+    "scenario_count": 17,
+    "source_admission": "HELD",
+    "specimen_id": "PHC_LOCAL_PROTOTYPE_v0.1_candidate",
+    "standing": "EXECUTED_LOCAL_MOCK_CANDIDATE_UNPROMOTED",
+    "suite_executions": 1,
+    "transformation_experiment_mapping": "NONE_ASSERTED",
+    "verdict_counts": {
+      "CONTRADICTED": 11,
+      "SUPPORTED_WITHIN_TESTED_SCOPE": 1
+    },
+    "workflow_attempts": 17
+  },
+  "prior_workflow_attempts": 17,
+  "repair": "Rename event metadata key from name to step_name to avoid Python argument collision.",
+  "total_prior_suite_executions": 1
+}

@@ -1,0 +1,141 @@
+{
+  "coverage": "DIRECT_CHILD_MOCK_EFFECT_FILES_IN_EACH_PREPARED_SCENARIO_DIRECTORY",
+  "events": [
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649075857921,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-01/positive/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649076143154,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-01/positive/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649087423148,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-04/unsupported/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649087470237,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-04/unsupported/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649090958191,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-05/inference_dispute/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649091003048,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-05/inference_dispute/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649094354059,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-06/restricted/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649094396281,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-06/restricted/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649100112333,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-07/injection/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649100514669,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-07/injection/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649107011727,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-08/held_source/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649107109862,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-08/held_source/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649112564517,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-09/changed_approval/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649112611687,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-09/changed_approval/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649135397760,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-11/crash_capture/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649135505519,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-11/crash_capture/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649140170226,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-11/crash_draft/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649140216724,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-11/crash_draft/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649147129558,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-11/crash_receipt/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649147176788,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-11/crash_receipt/protected.json"
+    },
+    {
+      "mask": 2,
+      "observed_at_monotonic_ns": 8649151464075,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-12/tamper/protected.json"
+    },
+    {
+      "mask": 8,
+      "observed_at_monotonic_ns": 8649151509091,
+      "observer_pid": 2,
+      "path": "results/sandbox/PHC-12/tamper/protected.json"
+    }
+  ],
+  "observer_pid": 2,
+  "processes_distinct": true,
+  "queue_overflow": false,
+  "runtime_driver_pid": 6
+}

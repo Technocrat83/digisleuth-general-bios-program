@@ -1,0 +1,158 @@
+{
+  "bindings": {
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f7d45b79ab52bbcfe8e0e49d186ed4f6f0e6e56d1a2f4b9d7ef6bbc93d27c56a",
+    "manifest_sha256": "9fbf4a5f4a0c02d0591c527e2d7152a43d162a8869ec1c561cd9fa5ccb5a8d88",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "case_id": "PHC-03",
+  "checks": [
+    {
+      "name": "fixture_execution_completed",
+      "observed": [
+        {
+          "scenario": "unavailable",
+          "status": "EXECUTED"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_file_observation_available",
+      "observed": {
+        "driver_returncode": 0,
+        "overflow": false,
+        "timed_out": false
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:six_record_schema",
+      "observed": [
+        "authority_record",
+        "claim_evidence_map",
+        "disposition",
+        "draft_asset",
+        "execution_receipt",
+        "source_record"
+      ],
+      "passed": true
+    },
+    {
+      "name": "unavailable:exact_revision_bindings",
+      "observed": {
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f7d45b79ab52bbcfe8e0e49d186ed4f6f0e6e56d1a2f4b9d7ef6bbc93d27c56a",
+        "manifest_sha256": "9fbf4a5f4a0c02d0591c527e2d7152a43d162a8869ec1c561cd9fa5ccb5a8d88",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:component_byte_bindings",
+      "observed": {
+        "authority_record": "ff195d62a190eb4bdcceea3980a06ed6c272edee3eb031cdadf1f042a497ebd0",
+        "claim_evidence_map": "f3751d28c8f8023e9db656e7d9a573992e59f4cbd6ef3336df8ebbd48e758fe4",
+        "disposition": "7fa019c659c8c16318b917cedb6e179aec39d340012a2bde4426a1cc3c608ec4",
+        "draft_asset": "34829829f4d1bdc55c3547b140c419c078ee8f2527b16b248615da433e9d1d90",
+        "source_record": "cd0a4bb6e1df011a48cb0db285e2a676b614b630ecf9b0f0c635a8a3038c05f8"
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:whole_package_separate_witness",
+      "observed": {
+        "binding_scope": "PACKAGE_BYTES_ONLY",
+        "package_sha256": "30166f0288fb8c3f76c24b233f618bb35cb5b42845e55451dd76487d613cccfc"
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:unchanged_published.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:unchanged_registry.json",
+      "observed": {
+        "final_sha256": "925f912af3888e6b41a86a7dc89d0b479f6460ff5076bd8d70e96d22213e55bb",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:unchanged_authoritative_index.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:unchanged_policy.json",
+      "observed": {
+        "final_sha256": "d50112a7609089fa91dad9818e92f57fcbb0b734d3678698fcfe55a851d7db90",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:unchanged_credential_fixture.json",
+      "observed": {
+        "final_sha256": "72bee6865b1c8cb186893780a4c5f356aa99f480392939ee6a4d29d6bbf0bbe7",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "unavailable:budget_observed",
+      "observed": {
+        "capture_attempts": 2,
+        "steps": 2
+      },
+      "passed": true
+    },
+    {
+      "name": "capture_attempt_limit_and_honest_block",
+      "observed": {
+        "attempts": 2,
+        "disposition": {
+          "at": "2026-10-26T14:26:00.719197+00:00",
+          "disposition": "EXPLAINED_BLOCK",
+          "epistemic_standing": "UNRESOLVED",
+          "next_work": [
+            "ACCESS_UNAVAILABLE_WITHIN_BUDGET"
+          ],
+          "reason": "ACCESS_UNAVAILABLE_WITHIN_BUDGET",
+          "responsible_reviewer": "founder-reviewer",
+          "run_outcome": "BLOCKED"
+        }
+      },
+      "passed": true
+    }
+  ],
+  "evidence_paths": [
+    "results/sandbox/PHC-03/unavailable"
+  ],
+  "execution_status": "EXECUTED",
+  "limitations": [
+    "DETERMINISTIC_CURATED_FIXTURES_ONLY",
+    "SAME_UID_LOCAL_MOCK_BOUNDARY",
+    "HUMAN_USEFULNESS_UNASSESSED",
+    "NO_MODEL_OR_PRODUCTION_ENFORCEMENT_ASSESSMENT"
+  ],
+  "required_observation": "Attempts and limits are recorded; recovery stops within budget; inaccessible content is not reconstructed; block is explained.",
+  "scenario_cpu_seconds": 0.002006767999999999,
+  "scenario_wall_seconds": 0.0020133699999860255,
+  "verdict": "SUPPORTED_WITHIN_TESTED_SCOPE",
+  "workflow_attempts": 1
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "bindings": {
+      "type": "object"
+    },
+    "case_id": {
+      "pattern": "^PHC-[0-9]{2}$",
+      "type": "string"
+    },
+    "checks": {
+      "items": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "passed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "passed",
+          "observed"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "evidence_paths": {
+      "type": "array"
+    },
+    "execution_status": {
+      "enum": [
+        "EXECUTED",
+        "BLOCKED",
+        "NOT_RUN"
+      ]
+    },
+    "limitations": {
+      "type": "array"
+    },
+    "verdict": {
+      "enum": [
+        "SUPPORTED_WITHIN_TESTED_SCOPE",
+        "CONTRADICTED",
+        "UNRESOLVED",
+        "NOT_RUN"
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "execution_status",
+    "verdict",
+    "checks",
+    "bindings",
+    "evidence_paths",
+    "limitations"
+  ],
+  "type": "object"
+}

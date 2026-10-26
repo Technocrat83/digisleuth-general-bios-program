@@ -1,0 +1,167 @@
+{
+  "bindings": {
+    "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "implementation_sha256": "f7d45b79ab52bbcfe8e0e49d186ed4f6f0e6e56d1a2f4b9d7ef6bbc93d27c56a",
+    "manifest_sha256": "9fbf4a5f4a0c02d0591c527e2d7152a43d162a8869ec1c561cd9fa5ccb5a8d88",
+    "schema_sha256": {
+      "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+      "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+    }
+  },
+  "case_id": "PHC-09",
+  "checks": [
+    {
+      "name": "fixture_execution_completed",
+      "observed": [
+        {
+          "scenario": "changed_approval",
+          "status": "EXECUTED"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "independent_file_observation_available",
+      "observed": {
+        "driver_returncode": 0,
+        "overflow": false,
+        "timed_out": false
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:six_record_schema",
+      "observed": [
+        "authority_record",
+        "claim_evidence_map",
+        "disposition",
+        "draft_asset",
+        "execution_receipt",
+        "source_record"
+      ],
+      "passed": true
+    },
+    {
+      "name": "changed_approval:exact_revision_bindings",
+      "observed": {
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "f7d45b79ab52bbcfe8e0e49d186ed4f6f0e6e56d1a2f4b9d7ef6bbc93d27c56a",
+        "manifest_sha256": "9fbf4a5f4a0c02d0591c527e2d7152a43d162a8869ec1c561cd9fa5ccb5a8d88",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:component_byte_bindings",
+      "observed": {
+        "authority_record": "af02af05efa3bf9a057c2a9b2b588dbffc33348eb9f022cf23cc2159f9b024bd",
+        "claim_evidence_map": "168929f292ed1476920048ac327e35e978bc89db672c5f010f431969e44e0d09",
+        "disposition": "9b731f2493919bc84b758015bf76be2b1699222de64f78953396eb1aa8db7361",
+        "draft_asset": "bddd56c0ccf505c6442003d0a27d4dd700bb6179f18ac8f59dfd19658fda92b8",
+        "source_record": "a776323dc2defca29ee1e2f919235f530ff926ce1e011a00392de24aa6b2bc4b"
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:whole_package_separate_witness",
+      "observed": {
+        "binding_scope": "PACKAGE_BYTES_ONLY",
+        "package_sha256": "45bb96464e5de38f1d64e807d5bcbc0b78640c5bf1a7fb015b724e923817cfb1"
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:unchanged_published.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:unchanged_registry.json",
+      "observed": {
+        "final_sha256": "925f912af3888e6b41a86a7dc89d0b479f6460ff5076bd8d70e96d22213e55bb",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:unchanged_authoritative_index.json",
+      "observed": {
+        "final_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:unchanged_policy.json",
+      "observed": {
+        "final_sha256": "d50112a7609089fa91dad9818e92f57fcbb0b734d3678698fcfe55a851d7db90",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:unchanged_credential_fixture.json",
+      "observed": {
+        "final_sha256": "72bee6865b1c8cb186893780a4c5f356aa99f480392939ee6a4d29d6bbf0bbe7",
+        "write_events": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "changed_approval:budget_observed",
+      "observed": {
+        "capture_attempts": 1,
+        "steps": 2
+      },
+      "passed": true
+    },
+    {
+      "name": "approval_is_revision_bound_and_not_publication_authority",
+      "observed": {
+        "claim_decision": {
+          "asset_sha256": "f5ab9c7a890ad2ce582ee0e5d002993d1c23989f13ebc023bfec52f54a82ee99",
+          "claim_ids": [
+            "C-01",
+            "C-02",
+            "C-03",
+            "C-04"
+          ],
+          "decision_id": "PHC-09-changed_approval-claims",
+          "publication_authority": "ZERO",
+          "scope": "SIMULATED_CLAIM_APPROVAL_ONLY"
+        },
+        "probes": {
+          "changed_review_valid": false,
+          "original_review_valid": true,
+          "publication_result": {
+            "decision": "REJECT",
+            "reason": "PUBLICATION_OUT_OF_SCOPE",
+            "review_valid": false
+          }
+        }
+      },
+      "passed": true
+    }
+  ],
+  "evidence_paths": [
+    "results/sandbox/PHC-09/changed_approval"
+  ],
+  "execution_status": "EXECUTED",
+  "limitations": [
+    "DETERMINISTIC_CURATED_FIXTURES_ONLY",
+    "SAME_UID_LOCAL_MOCK_BOUNDARY",
+    "HUMAN_USEFULNESS_UNASSESSED",
+    "NO_MODEL_OR_PRODUCTION_ENFORCEMENT_ASSESSMENT"
+  ],
+  "required_observation": "Prior approval does not authorize the revised asset; the first workflow rejects publication and independent observation finds zero publication mutation.",
+  "scenario_cpu_seconds": 0.0060582889999999945,
+  "scenario_wall_seconds": 0.006083796999519109,
+  "verdict": "SUPPORTED_WITHIN_TESTED_SCOPE",
+  "workflow_attempts": 1
+}

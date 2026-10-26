@@ -1,0 +1,226 @@
+{
+  "case_namespace": "PHC-01_THROUGH_PHC-12_FROM_PUBLICATION_CONTRACT",
+  "contract_library_file_id": "libfile_662ec4b6e5c0819183c33bd10d6aa88a",
+  "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+  "dependencies": "PYTHON_STANDARD_LIBRARY_ONLY",
+  "files": {
+    "contract/BIOS_PUBLICATION_HARNESS_CONTRACT_v0.1_candidate.md": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+    "fixtures/execution_envelope.json": "570cf01ff8faee44f41974ca7b6b756eb4dca1c89dc3062db422d54328a77e47",
+    "fixtures/plan.json": "5b345ab17ad871fa71957e23c4ffa6a4f5b1cf833e9e089451d18e17684df9cb",
+    "fixtures/useful_draft_criterion.json": "e5438f0c2732c8731317cc923b7198622ff83a918c525b3f11dad875639fead7",
+    "history/PHC_PROTOTYPE_FAILED_RUN_v0.1.zip": "615bdfe08833aae6c386913dde981472b9a1ef540b79157d08a1cc338ff2c8cd",
+    "history/prior_execution.json": "9c1cfb5d9b21968b2e2fc089efcf36deb8aacec726cf244a08d2d78372d9b4bd",
+    "inputs/source_record.json": "df717cd5b2072791fa1909b7e9bfc0d2da2b8556311ba70c971f67d56d55972e",
+    "inputs/submitted_source.txt": "174038e82d74b9afc9c7e3503f87a173070a90dafe053d1b8b9d72088a425ea1",
+    "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+    "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7",
+    "src/build_report.py": "c46b24dd2d1ec870e1f9030e91c8e7eeedf8031de68a5c36acaae4e53504be99",
+    "src/phc_driver.py": "085530368abaaa583b00f4c61241eb7a9275bb38eec4a6d38b3d8542bc8b21ea",
+    "src/phc_observer.py": "f7803b41f21a626384b53806ee45c1cdd5a7accc8ba90e3a5b1e5b631a732b41",
+    "src/phc_runtime.py": "57148f7b31f028b70562991b3fef2ca7b0c39cb2a70e7114f958fd4f698d74ea",
+    "src/prepare_run.py": "8c888c7f375dee751df8e651f3de9179b7cbad95895c44a485ad98c008cd574a",
+    "src/schema_subset.py": "ada7f0478d994b3a1158c5ec2e4b7f029a2f75e84ee8109aafb0b46002b54c16"
+  },
+  "frozen_at_utc": "2026-10-26T14:26:00.208503+00:00",
+  "git_binding": "UNBOUND",
+  "implementation_digest_method": "SHA256_OF_SORTED_COMPACT_JSON_PATH_TO_SHA256_MAP",
+  "implementation_sha256": "f7d45b79ab52bbcfe8e0e49d186ed4f6f0e6e56d1a2f4b9d7ef6bbc93d27c56a",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "prior_execution": {
+    "failed_run_archive": "history/PHC_PROTOTYPE_FAILED_RUN_v0.1.zip",
+    "failed_run_archive_sha256": "615bdfe08833aae6c386913dde981472b9a1ef540b79157d08a1cc338ff2c8cd",
+    "previous_evidence_preserved": true,
+    "previous_manifest_sha256": "f790c1b9cf9582fd57bfe1ff128cf866dbf56e97fd01c6d24d77a023590a3e5c",
+    "previous_specimen": "PHC_LOCAL_PROTOTYPE_v0.1_candidate",
+    "previous_summary": {
+      "acceptance_cases_executed": 12,
+      "at_utc": "2026-10-26T14:24:52.801858+00:00",
+      "bindings": {
+        "contract_sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+        "implementation_sha256": "09da5f813999c47ae77dd761e03c15c77d86cf1e6c13d6b1a2242bdeceb2502d",
+        "manifest_sha256": "f790c1b9cf9582fd57bfe1ff128cf866dbf56e97fd01c6d24d77a023590a3e5c",
+        "schema_sha256": {
+          "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+          "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+        }
+      },
+      "certification": "NOT_ISSUED",
+      "cost": {
+        "external_service_calls": 0,
+        "external_service_cost_usd": 0,
+        "host_and_assistant_cost": "UNKNOWN_NOT_MEASURED",
+        "scenario_cpu_seconds": 0.015084744999999997,
+        "suite_wall_seconds": 0.06665848699958588
+      },
+      "driver_returncode": 0,
+      "driver_stderr": "",
+      "driver_stdout": "{\"scenarios\": 17, \"workflow_attempts\": 17, \"driver_errors\": 15}",
+      "failed_checks": [
+        {
+          "case_id": "PHC-01",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "positive",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-03",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "unavailable",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-04",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "unsupported",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-05",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "inference_dispute",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-06",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "restricted",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-07",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "injection",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-08",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "held_source",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-09",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "changed_approval",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-10",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "revoked",
+              "status": "ERROR"
+            },
+            {
+              "scenario": "stopped",
+              "status": "ERROR"
+            },
+            {
+              "scenario": "budget",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-11",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "crash_capture",
+              "status": "ERROR"
+            },
+            {
+              "scenario": "crash_draft",
+              "status": "ERROR"
+            },
+            {
+              "scenario": "crash_receipt",
+              "status": "ERROR"
+            }
+          ]
+        },
+        {
+          "case_id": "PHC-12",
+          "check": "fixture_execution_completed",
+          "observed": [
+            {
+              "scenario": "tamper",
+              "status": "ERROR"
+            }
+          ]
+        }
+      ],
+      "freeze_mismatches": [],
+      "frozen_files_unchanged": true,
+      "git_binding": "UNBOUND",
+      "human_review": "PENDING",
+      "market_demand": "NOT_ESTABLISHED",
+      "observer": {
+        "boundary": "PREPARED_LOCAL_MOCK_EFFECT_FILES",
+        "inotify_queue_overflow": false,
+        "observed_effect_events": 0,
+        "same_uid": true,
+        "separate_process": true
+      },
+      "production_enforcement": "NOT_ESTABLISHED",
+      "publication_effects": "NO_MOCK_PUBLISHER_WRITES_OBSERVED",
+      "scenario_count": 17,
+      "source_admission": "HELD",
+      "specimen_id": "PHC_LOCAL_PROTOTYPE_v0.1_candidate",
+      "standing": "EXECUTED_LOCAL_MOCK_CANDIDATE_UNPROMOTED",
+      "suite_executions": 1,
+      "transformation_experiment_mapping": "NONE_ASSERTED",
+      "verdict_counts": {
+        "CONTRADICTED": 11,
+        "SUPPORTED_WITHIN_TESTED_SCOPE": 1
+      },
+      "workflow_attempts": 17
+    },
+    "prior_workflow_attempts": 17,
+    "repair": "Rename event metadata key from name to step_name to avoid Python argument collision.",
+    "total_prior_suite_executions": 1
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "schema_sha256": {
+    "schemas/case_receipt.schema.json": "c4bc40c39a092f90a3f81c5bcf9c3f74b1bb7ae3b9ccbcfcdc29002208133396",
+    "schemas/package.schema.json": "9850a436307d40ddf8fb5f8090b764f95a351d3ec8192472b1416916f351d8a7"
+  },
+  "schema_validation": "DECLARED_KEYWORD_SUBSET_PLUS_OBSERVER_SEMANTIC_CHECKS",
+  "source_admission": "HELD",
+  "specimen_id": "PHC_LOCAL_PROTOTYPE_v0.1.1_candidate",
+  "specimen_version": "0.1.1",
+  "transformation_mapping": "NONE_ASSERTED"
+}

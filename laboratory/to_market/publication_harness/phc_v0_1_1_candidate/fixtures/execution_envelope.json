@@ -1,0 +1,21 @@
+{
+  "allowed_effect_root": "results/sandbox",
+  "authority": "SESSION_SCOPE_FOR_REVERSIBLE_LOCAL_PREPARATION_AND_TESTING",
+  "fixture_source_policy": "SUBMITTED_TEXT_AND_LABELED_SYNTHETIC_OVERLAYS",
+  "max_external_service_calls": 0,
+  "max_suite_runs": 1,
+  "max_wall_seconds": 30,
+  "max_workflow_attempts": 30,
+  "network_operations_in_runtime": 0,
+  "no_live_publication_authority": true,
+  "not_claimed": [
+    "LLM_REASONING",
+    "PRODUCTION_NON_BYPASSABILITY",
+    "INTERPROCESS_ATOMICITY",
+    "TRANSFORMATION_EXPERIMENT_EQUIVALENCE",
+    "MARKET_DEMAND"
+  ],
+  "observer": "SEPARATE_PROCESS_SAME_UID",
+  "production_credentials": "NONE",
+  "publisher": "LOCAL_EMPTY_JSON_MOCK_SINK"
+}
