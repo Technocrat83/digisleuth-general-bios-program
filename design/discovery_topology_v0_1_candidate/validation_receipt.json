@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Unique semantic and relationship IDs",
+    "Typed edges resolve and retain proposed standing",
+    "Canvas IDs unique and 16 lowercase hex",
+    "Canvas edge endpoints and labels",
+    "Canvas required fields and file references",
+    "Figma mapping preserves all source IDs and edge predicates",
+    "Graph digest matches handoff",
+    "No fabricated observations or promotions",
+    "Note records match silo",
+    "Note records match publication",
+    "Note records match question",
+    "Note records match evidence",
+    "Note records match habitat",
+    "Note records match discovery",
+    "Note records match glass",
+    "Note records match formula",
+    "Note records match observation",
+    "Note records match basin",
+    "Note records match petition"
+  ],
+  "check_count": 19,
+  "scope": "Local structural checks of authored candidate; no application rendering, UA execution, independent semantic review or runtime enforcement tested"
+}
