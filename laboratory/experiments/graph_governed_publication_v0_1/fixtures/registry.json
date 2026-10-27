@@ -1,0 +1,1232 @@
+{
+  "schema_version": "0.1.0",
+  "specimen_id": "EBA_TEST_001",
+  "source_proposal": "sources/original_proposal.md",
+  "family_count": 12,
+  "case_count": 34,
+  "families": [
+    {
+      "fixture_id": "F01",
+      "title": "Valid publication",
+      "source_section": "9",
+      "case_ids": [
+        "F01-normal"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F02",
+      "title": "Revocation before admission",
+      "source_section": "9",
+      "case_ids": [
+        "F02-revoked-before-admission"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F03",
+      "title": "Authorization-to-commit gap",
+      "source_section": "9",
+      "case_ids": [
+        "F03-revoke-gap",
+        "F03-lock-gap"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F04",
+      "title": "Scoped lock and continuing draft",
+      "source_section": "9",
+      "case_ids": [
+        "F04-continue-draft"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F05",
+      "title": "Queued/delegated/bypass/effect paths",
+      "source_section": "9",
+      "case_ids": [
+        "F05-queued",
+        "F05-delegated",
+        "F05-direct",
+        "F05-indirect",
+        "F05-retained_handle",
+        "F05-alter",
+        "F05-delete"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F06",
+      "title": "Stale checkpoint recovery",
+      "source_section": "9",
+      "case_ids": [
+        "F06-stale-checkpoint"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F07",
+      "title": "Commit then lost acknowledgment",
+      "source_section": "9",
+      "case_ids": [
+        "F07-lost-ack",
+        "F07-conflicting-payload"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F08",
+      "title": "Uncertain outcome and unavailable sink",
+      "source_section": "9",
+      "case_ids": [
+        "F08-unknown-prior-outcome"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F09",
+      "title": "Hard predicates outrank fit",
+      "source_section": "9",
+      "case_ids": [
+        "F09-expired",
+        "F09-missing-evidence",
+        "F09-budget-zero",
+        "F09-budget-boundary"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F10",
+      "title": "Governing-state tamper attempts",
+      "source_section": "9",
+      "case_ids": [
+        "F10-policy",
+        "F10-authoritative_evidence",
+        "F10-authority_store",
+        "F10-thresholds"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F11",
+      "title": "Unlock, fresh grants, and revision binding",
+      "source_section": "9",
+      "case_ids": [
+        "F11-unlock-only",
+        "F11-fresh-grant",
+        "F11-changed-draft",
+        "F11-commit-before-controls"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    },
+    {
+      "fixture_id": "F12",
+      "title": "Synthetic drift boundaries",
+      "source_section": "9",
+      "case_ids": [
+        "F12-below",
+        "F12-warning-equality",
+        "F12-warning-above",
+        "F12-lock-equality",
+        "F12-lock-above",
+        "F12-unknown"
+      ],
+      "standing": "PROSPECTIVE_DEFINITION"
+    }
+  ],
+  "cases": [
+    {
+      "fixture_id": "F01",
+      "case_id": "F01-normal",
+      "title": "All predicates true",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "COMMITTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F02",
+      "case_id": "F02-revoked-before-admission",
+      "title": "R precedes D",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "revoke",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "AUTHORITY_REVOKED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F03",
+      "case_id": "F03-revoke-gap",
+      "title": "D precedes R precedes C_attempt",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "admit",
+          "args": {}
+        },
+        {
+          "op": "revoke",
+          "args": {}
+        },
+        {
+          "op": "commit",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "AUTHORITY_REVOKED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F03",
+      "case_id": "F03-lock-gap",
+      "title": "D precedes L precedes C_attempt",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "admit",
+          "args": {}
+        },
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "commit",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "SCOPE_LOCKED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F04",
+      "case_id": "F04-continue-draft",
+      "title": "Scoped lock preserves independently authorized draft output",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        },
+        {
+          "op": "revise_draft",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": true,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-queued",
+      "title": "Locked queued path",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "enqueue",
+          "args": {}
+        },
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "drain",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-delegated",
+      "title": "Locked delegated path",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {
+            "actor": "delegate"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-direct",
+      "title": "Locked direct path",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "bypass",
+          "args": {
+            "route": "direct"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-indirect",
+      "title": "Locked indirect path",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "bypass",
+          "args": {
+            "route": "indirect"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-retained_handle",
+      "title": "Locked retained_handle path",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "bypass",
+          "args": {
+            "route": "retained_handle"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-alter",
+      "title": "Deny alter and preserve seeded identity",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {
+        "seed_publications": 1
+      },
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {
+            "effect": "alter"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F05",
+      "case_id": "F05-delete",
+      "title": "Deny delete and preserve seeded identity",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {
+        "seed_publications": 1
+      },
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {
+            "effect": "delete"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F06",
+      "case_id": "F06-stale-checkpoint",
+      "title": "Checkpoint cannot restore revoked authority or unlocked state",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "checkpoint",
+          "args": {}
+        },
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "revoke",
+          "args": {}
+        },
+        {
+          "op": "restart",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F07",
+      "case_id": "F07-lost-ack",
+      "title": "Committed effect survives lost acknowledgment and restart",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {
+            "lose_ack": true
+          }
+        },
+        {
+          "op": "restart",
+          "args": {}
+        },
+        {
+          "op": "reconcile",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "EXISTING",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F07",
+      "case_id": "F07-conflicting-payload",
+      "title": "Same intent with changed bytes rejects",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {
+            "payload": "conflicting bytes"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "INTENT_PAYLOAD_CONFLICT"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F08",
+      "case_id": "F08-unknown-prior-outcome",
+      "title": "Unavailable sink prevents blind retry",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {
+            "lose_ack": true
+          }
+        },
+        {
+          "op": "restart",
+          "args": {}
+        },
+        {
+          "op": "unavailable",
+          "args": {}
+        },
+        {
+          "op": "reconcile",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        },
+        {
+          "op": "available",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "BLOCKED_UNKNOWN",
+        "required_reasons": [],
+        "recovery_unknown": true
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F09",
+      "case_id": "F09-expired",
+      "title": "High fit cannot offset expired authority",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "advance",
+          "args": {
+            "ticks": 101
+          }
+        },
+        {
+          "op": "publish",
+          "args": {
+            "fit": 999
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "AUTHORITY_EXPIRED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F09",
+      "case_id": "F09-missing-evidence",
+      "title": "High fit cannot offset absent evidence",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "set_evidence",
+          "args": {
+            "present": false
+          }
+        },
+        {
+          "op": "publish",
+          "args": {
+            "fit": 999
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "EVIDENCE_MISSING"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F09",
+      "case_id": "F09-budget-zero",
+      "title": "High fit cannot offset exhausted budget",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {
+        "publication_budget": 0
+      },
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {
+            "fit": 999
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F09",
+      "case_id": "F09-budget-boundary",
+      "title": "One permitted commitment consumes final budget unit",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {
+        "publication_budget": 1
+      },
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {
+            "intent": "intent-002"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "BUDGET_EXHAUSTED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F10",
+      "case_id": "F10-policy",
+      "title": "Worker cannot edit policy",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "tamper",
+          "args": {
+            "target": "policy"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "MODEL_ACCESS_DENIED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F10",
+      "case_id": "F10-authoritative_evidence",
+      "title": "Worker cannot edit authoritative_evidence",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "tamper",
+          "args": {
+            "target": "authoritative_evidence"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "MODEL_ACCESS_DENIED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F10",
+      "case_id": "F10-authority_store",
+      "title": "Worker cannot edit authority_store",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "tamper",
+          "args": {
+            "target": "authority_store"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "MODEL_ACCESS_DENIED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F10",
+      "case_id": "F10-thresholds",
+      "title": "Worker cannot edit thresholds",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "tamper",
+          "args": {
+            "target": "thresholds"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "MODEL_ACCESS_DENIED"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F11",
+      "case_id": "F11-unlock-only",
+      "title": "Unlock does not recreate a grant",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "revoke",
+          "args": {}
+        },
+        {
+          "op": "unlock",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F11",
+      "case_id": "F11-fresh-grant",
+      "title": "Fresh scoped grant permits approved revision",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "lock",
+          "args": {}
+        },
+        {
+          "op": "revoke",
+          "args": {}
+        },
+        {
+          "op": "unlock",
+          "args": {}
+        },
+        {
+          "op": "grant",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "COMMITTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F11",
+      "case_id": "F11-changed-draft",
+      "title": "Approval remains bound to old draft digest",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "revise_draft",
+          "args": {}
+        },
+        {
+          "op": "publish",
+          "args": {
+            "payload": "draft revision two"
+          }
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": true,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [
+          "APPROVAL_DIGEST_MISMATCH"
+        ],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F11",
+      "case_id": "F11-commit-before-controls",
+      "title": "Earlier commitment remains after later revocation and lock",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "publish",
+          "args": {}
+        },
+        {
+          "op": "revoke",
+          "args": {}
+        },
+        {
+          "op": "lock",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "COMMITTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F12",
+      "case_id": "F12-below",
+      "title": "Synthetic drift boundary below",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "drift",
+          "args": {
+            "value": 1
+          }
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 1,
+        "identity_count": 1,
+        "protected_rows_changed": true,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "COMMITTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F12",
+      "case_id": "F12-warning-equality",
+      "title": "Synthetic drift boundary warning-equality",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "drift",
+          "args": {
+            "value": 2
+          }
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REVIEW_REQUIRED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F12",
+      "case_id": "F12-warning-above",
+      "title": "Synthetic drift boundary warning-above",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "drift",
+          "args": {
+            "value": 3
+          }
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REVIEW_REQUIRED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F12",
+      "case_id": "F12-lock-equality",
+      "title": "Synthetic drift boundary lock-equality",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "drift",
+          "args": {
+            "value": 4
+          }
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F12",
+      "case_id": "F12-lock-above",
+      "title": "Synthetic drift boundary lock-above",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "drift",
+          "args": {
+            "value": 5
+          }
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    },
+    {
+      "fixture_id": "F12",
+      "case_id": "F12-unknown",
+      "title": "Synthetic drift boundary unknown",
+      "origin": "SECTION_9_ORIGINAL_FAMILY_WITH_EXPLICIT_PROSPECTIVE_SUBCASE",
+      "initial_overrides": {},
+      "schedule": [
+        {
+          "op": "drift",
+          "args": {
+            "value": null
+          }
+        },
+        {
+          "op": "publish",
+          "args": {}
+        }
+      ],
+      "expectations": {
+        "publication_count": 0,
+        "identity_count": 0,
+        "protected_rows_changed": false,
+        "draft_changed": false,
+        "governing_bytes_unchanged": true,
+        "last_decision": "REJECTED",
+        "required_reasons": [],
+        "recovery_unknown": false
+      },
+      "runtime_status": "NOT_RUN"
+    }
+  ],
+  "interpretation": "Subcases are explicit prospective expansions; family IDs and required behavior follow the original proposal. No prior execution is inferred."
+}

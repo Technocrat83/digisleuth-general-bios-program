@@ -1,0 +1,119 @@
+{
+  "after": {
+    "draft_sha256": "c35236e60a3576fdf711a6bd5031aa9d0f0ed05bd4008d41f5f4c120289333a2",
+    "governing_sha256": "88b695ba148bc3f3c9a0b9aa258fa57648c5aa9bf5028ef0d510d18e7a49345b",
+    "identities": [],
+    "identity_count": 0,
+    "protected_sha256": "4aa5484b1766563eab8528c8e0ee5ad68cd363acda614bc790740dfc85e609ad",
+    "publication_count": 0,
+    "publications": []
+  },
+  "after_control": {
+    "authority": [
+      [
+        "delegate",
+        0,
+        100,
+        "publication",
+        "CREATE",
+        "primary"
+      ],
+      [
+        "primary",
+        0,
+        100,
+        "publication",
+        "CREATE",
+        null
+      ]
+    ],
+    "controls": [
+      [
+        "drift",
+        "0"
+      ],
+      [
+        "epoch",
+        "0"
+      ],
+      [
+        "evidence",
+        "true"
+      ],
+      [
+        "lock",
+        "false"
+      ],
+      [
+        "publication_budget",
+        "3"
+      ]
+    ],
+    "governing_files": {
+      "authoritative_evidence": "b22a157f80f232cdd56b06c3e58d2cb45debc21b91da5ce8cdfaa471c96af0ed",
+      "authority_store": "60f4585c31a34f667a81a7291bca0b9e4878f4fb7b5089a85fafcadc63c8490c",
+      "graph": "4be86ef1715a45fedaf8b7cd9a0bccc469716a158f7031f5d70b3a4f33013bed",
+      "policy": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+      "thresholds": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4"
+    }
+  },
+  "before": {
+    "draft_sha256": "c35236e60a3576fdf711a6bd5031aa9d0f0ed05bd4008d41f5f4c120289333a2",
+    "governing_sha256": "88b695ba148bc3f3c9a0b9aa258fa57648c5aa9bf5028ef0d510d18e7a49345b",
+    "identities": [],
+    "identity_count": 0,
+    "protected_sha256": "4aa5484b1766563eab8528c8e0ee5ad68cd363acda614bc790740dfc85e609ad",
+    "publication_count": 0,
+    "publications": []
+  },
+  "before_control": {
+    "authority": [
+      [
+        "delegate",
+        0,
+        100,
+        "publication",
+        "CREATE",
+        "primary"
+      ],
+      [
+        "primary",
+        0,
+        100,
+        "publication",
+        "CREATE",
+        null
+      ]
+    ],
+    "controls": [
+      [
+        "drift",
+        "0"
+      ],
+      [
+        "epoch",
+        "0"
+      ],
+      [
+        "evidence",
+        "true"
+      ],
+      [
+        "lock",
+        "false"
+      ],
+      [
+        "publication_budget",
+        "3"
+      ]
+    ],
+    "governing_files": {
+      "authoritative_evidence": "b22a157f80f232cdd56b06c3e58d2cb45debc21b91da5ce8cdfaa471c96af0ed",
+      "authority_store": "60f4585c31a34f667a81a7291bca0b9e4878f4fb7b5089a85fafcadc63c8490c",
+      "graph": "4be86ef1715a45fedaf8b7cd9a0bccc469716a158f7031f5d70b3a4f33013bed",
+      "policy": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+      "thresholds": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4"
+    }
+  },
+  "logical_separation_only": true
+}

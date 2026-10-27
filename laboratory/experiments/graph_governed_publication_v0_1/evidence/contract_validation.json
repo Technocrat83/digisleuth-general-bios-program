@@ -1,0 +1,52 @@
+{
+  "receipt_kind": "STATIC_CONTRACT_INSPECTION",
+  "subject_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+  "manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+  "validator_sha256": "4550f633ad3a5c73490814180fc7835adc77fe42528988c1bae2aab1ae68a0aa",
+  "python": "3.12.14",
+  "jsonschema_version": "4.25.1",
+  "checks": {
+    "schema_definitions_checked": 4,
+    "families": 12,
+    "cases": 34,
+    "artifact_digests_checked": 12
+  },
+  "negative_probes": [
+    {
+      "id": "unknown-family",
+      "expected": "REJECT",
+      "observed": "REJECT"
+    },
+    {
+      "id": "unknown-step",
+      "expected": "REJECT",
+      "observed": "REJECT"
+    },
+    {
+      "id": "schema-version",
+      "expected": "REJECT",
+      "observed": "REJECT"
+    },
+    {
+      "id": "production-promotion",
+      "expected": "REJECT",
+      "observed": "REJECT"
+    },
+    {
+      "id": "missing-source",
+      "expected": "REJECT",
+      "observed": "REJECT"
+    },
+    {
+      "id": "added-authority",
+      "expected": "REJECT",
+      "observed": "REJECT"
+    }
+  ],
+  "remote_git_blobs_verified": 13,
+  "prior_structural_findings": "REPORTED_NOT_REQUALIFIED",
+  "mock_execution": "NOT_RUN",
+  "production_enforcement": "NOT_EVALUATED",
+  "signature_status": "UNSIGNED",
+  "scope": "Exact new contract bytes and remote Git blob identity only; no runtime or Kernel property finding."
+}

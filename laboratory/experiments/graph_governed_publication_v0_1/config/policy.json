@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "graph_node_types": [
+    "Actor",
+    "Task",
+    "ArtifactRevision",
+    "EvidenceRecord",
+    "Approval",
+    "AuthorityGrant",
+    "Resource",
+    "Boundary",
+    "Lock",
+    "Checkpoint"
+  ],
+  "graph_relation_types": [
+    "ASSIGNED_TO",
+    "DEPENDS_ON",
+    "DERIVED_FROM",
+    "SUPPORTS",
+    "APPROVES",
+    "GRANTS",
+    "DELEGATES_TO",
+    "TARGETS",
+    "MEDIATES",
+    "LOCKS",
+    "CHECKPOINTS"
+  ],
+  "admission_predicates": [
+    "A_CURRENT_AUTHORITY",
+    "H_TYPED_GRAPH_AND_SCOPE",
+    "E_BOUND_EVIDENCE",
+    "B_BUDGET",
+    "D_DRIFT",
+    "NOT_L_EFFECTIVE_LOCK"
+  ],
+  "unknown_required_predicate": "DENY",
+  "best_fit": "RANK_ADMISSIBLE_CANDIDATES_ONLY",
+  "commit_requires_current_predicates": true,
+  "approval_binds": "EXACT_PAYLOAD_SHA256",
+  "delegation": "CANNOT_EXPAND_PARENT_SCOPE",
+  "drift": {
+    "measurement": "steps_since_independently_verified_milestone",
+    "unit": "LOGICAL_STEP",
+    "warning_at": 2,
+    "lock_at": 4,
+    "warning_behavior": "HITL_REQUIRED_NO_COMMIT",
+    "lock_behavior": "NO_COMMIT",
+    "required_missing": "DENY",
+    "calibration_standing": "SYNTHETIC_PLUMBING_ONLY_NOT_OPERATIONALLY_CALIBRATED"
+  }
+}

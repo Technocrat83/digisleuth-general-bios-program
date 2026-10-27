@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:digisleuth:publication:candidate-manifest:0.1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "manifest_kind": {
+      "const": "CONTRACT_CANDIDATE"
+    },
+    "specimen_id": {
+      "const": "EBA_TEST_001"
+    },
+    "standing": {
+      "const": "CANDIDATE_PENDING_REVIEW"
+    },
+    "record_date": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_timezone": {
+      "const": "America/New_York"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "library_file_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "byte_identity": {
+          "const": "MATCHED_CURRENT_READ_TO_AVAILABLE_BYTES"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "library_file_id",
+        "byte_identity"
+      ],
+      "additionalProperties": false
+    },
+    "lineage": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "candidate_branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "binding_receipt": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "repository",
+        "base_branch",
+        "base_commit",
+        "candidate_branch",
+        "binding_receipt"
+      ],
+      "additionalProperties": false
+    },
+    "schema_versions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "execution_envelope": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "fixture_registry": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "family_count": {
+          "const": 12
+        },
+        "case_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "family_count",
+        "case_count"
+      ],
+      "additionalProperties": false
+    },
+    "dependencies": {
+      "type": "object"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "size_bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "size_bytes"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "kernel_properties": {
+      "type": "object",
+      "additionalProperties": {
+        "const": "REQUIREMENT_UNESTABLISHED"
+      }
+    },
+    "runtime_execution": {
+      "const": "NOT_RUN"
+    },
+    "production_enforcement": {
+      "const": "NOT_EVALUATED"
+    },
+    "promotion_authority": {
+      "const": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "manifest_kind",
+    "specimen_id",
+    "standing",
+    "record_date",
+    "record_timezone",
+    "source",
+    "lineage",
+    "schema_versions",
+    "execution_envelope",
+    "fixture_registry",
+    "dependencies",
+    "files",
+    "exclusions",
+    "kernel_properties",
+    "runtime_execution",
+    "production_enforcement",
+    "promotion_authority"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,229 @@
+{
+  "binding": {
+    "contract_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+    "contract_manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+    "envelope_sha256": "fc2f4e9d17a529334d916152d658ac2f81d11e25b1c43dd82978539f0e567a07",
+    "implementation_commit": "81cec7539f8c64cad0ca36f3b6c6c37f1b813a6a",
+    "implementation_manifest_sha256": "782fce3dae7914c3ac3a11e96e486c5e07786ec6004e949b032bcb49ca922a67",
+    "policy_sha256": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4",
+    "registry_sha256": "0fdae6df5ff161cae5861c9bb554b31f98d59477794f5df79e3f8fbf709acc04"
+  },
+  "kernel_properties": {
+    "atomic_authorization_to_commit": "REQUIREMENT_UNESTABLISHED",
+    "isolation": "REQUIREMENT_UNESTABLISHED",
+    "non_bypassability": "REQUIREMENT_UNESTABLISHED",
+    "tamper_resistance": "REQUIREMENT_UNESTABLISHED"
+  },
+  "mode": "MOCK",
+  "production_enforcement": "NOT_EVALUATED",
+  "registered_cases": 34,
+  "registered_families": 12,
+  "results": [
+    {
+      "case_id": "F01-normal",
+      "fixture_id": "F01",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F01-normal/receipt.json"
+    },
+    {
+      "case_id": "F02-revoked-before-admission",
+      "fixture_id": "F02",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F02-revoked-before-admission/receipt.json"
+    },
+    {
+      "case_id": "F03-revoke-gap",
+      "fixture_id": "F03",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F03-revoke-gap/receipt.json"
+    },
+    {
+      "case_id": "F03-lock-gap",
+      "fixture_id": "F03",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F03-lock-gap/receipt.json"
+    },
+    {
+      "case_id": "F04-continue-draft",
+      "fixture_id": "F04",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F04-continue-draft/receipt.json"
+    },
+    {
+      "case_id": "F05-queued",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-queued/receipt.json"
+    },
+    {
+      "case_id": "F05-delegated",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-delegated/receipt.json"
+    },
+    {
+      "case_id": "F05-direct",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-direct/receipt.json"
+    },
+    {
+      "case_id": "F05-indirect",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-indirect/receipt.json"
+    },
+    {
+      "case_id": "F05-retained_handle",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-retained_handle/receipt.json"
+    },
+    {
+      "case_id": "F05-alter",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-alter/receipt.json"
+    },
+    {
+      "case_id": "F05-delete",
+      "fixture_id": "F05",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F05-delete/receipt.json"
+    },
+    {
+      "case_id": "F06-stale-checkpoint",
+      "fixture_id": "F06",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F06-stale-checkpoint/receipt.json"
+    },
+    {
+      "case_id": "F07-lost-ack",
+      "fixture_id": "F07",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F07-lost-ack/receipt.json"
+    },
+    {
+      "case_id": "F07-conflicting-payload",
+      "fixture_id": "F07",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F07-conflicting-payload/receipt.json"
+    },
+    {
+      "case_id": "F08-unknown-prior-outcome",
+      "fixture_id": "F08",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F08-unknown-prior-outcome/receipt.json"
+    },
+    {
+      "case_id": "F09-expired",
+      "fixture_id": "F09",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F09-expired/receipt.json"
+    },
+    {
+      "case_id": "F09-missing-evidence",
+      "fixture_id": "F09",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F09-missing-evidence/receipt.json"
+    },
+    {
+      "case_id": "F09-budget-zero",
+      "fixture_id": "F09",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F09-budget-zero/receipt.json"
+    },
+    {
+      "case_id": "F09-budget-boundary",
+      "fixture_id": "F09",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F09-budget-boundary/receipt.json"
+    },
+    {
+      "case_id": "F10-policy",
+      "fixture_id": "F10",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F10-policy/receipt.json"
+    },
+    {
+      "case_id": "F10-authoritative_evidence",
+      "fixture_id": "F10",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F10-authoritative_evidence/receipt.json"
+    },
+    {
+      "case_id": "F10-authority_store",
+      "fixture_id": "F10",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F10-authority_store/receipt.json"
+    },
+    {
+      "case_id": "F10-thresholds",
+      "fixture_id": "F10",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F10-thresholds/receipt.json"
+    },
+    {
+      "case_id": "F11-unlock-only",
+      "fixture_id": "F11",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F11-unlock-only/receipt.json"
+    },
+    {
+      "case_id": "F11-fresh-grant",
+      "fixture_id": "F11",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F11-fresh-grant/receipt.json"
+    },
+    {
+      "case_id": "F11-changed-draft",
+      "fixture_id": "F11",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F11-changed-draft/receipt.json"
+    },
+    {
+      "case_id": "F11-commit-before-controls",
+      "fixture_id": "F11",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F11-commit-before-controls/receipt.json"
+    },
+    {
+      "case_id": "F12-below",
+      "fixture_id": "F12",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F12-below/receipt.json"
+    },
+    {
+      "case_id": "F12-warning-equality",
+      "fixture_id": "F12",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F12-warning-equality/receipt.json"
+    },
+    {
+      "case_id": "F12-warning-above",
+      "fixture_id": "F12",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F12-warning-above/receipt.json"
+    },
+    {
+      "case_id": "F12-lock-equality",
+      "fixture_id": "F12",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F12-lock-equality/receipt.json"
+    },
+    {
+      "case_id": "F12-lock-above",
+      "fixture_id": "F12",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F12-lock-above/receipt.json"
+    },
+    {
+      "case_id": "F12-unknown",
+      "fixture_id": "F12",
+      "outcome": "SUPPORTED_WITHIN_FIXTURE",
+      "receipt": "F12-unknown/receipt.json"
+    }
+  ],
+  "run_id": "mock-v0.1-run-001",
+  "specimen_id": "EBA_TEST_001"
+}

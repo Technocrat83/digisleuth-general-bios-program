@@ -1,0 +1,14 @@
+{
+  "fixture_binding": {
+    "contract_manifest_sha256": "f284444bb839f28006aa79398e96a0e65cb7085734b23502030c1a0e7609683d",
+    "contract_commit": "c47b03411eb33831ef9e8f7ba9a225afab8f2aae",
+    "implementation_commit": "81cec7539f8c64cad0ca36f3b6c6c37f1b813a6a",
+    "implementation_manifest_sha256": "782fce3dae7914c3ac3a11e96e486c5e07786ec6004e949b032bcb49ca922a67",
+    "registry_sha256": "0fdae6df5ff161cae5861c9bb554b31f98d59477794f5df79e3f8fbf709acc04",
+    "envelope_sha256": "fc2f4e9d17a529334d916152d658ac2f81d11e25b1c43dd82978539f0e567a07",
+    "policy_sha256": "aa355e1203bd46a174dc656aa430ded1cacca53f478ea92c6916f122b82908b4"
+  },
+  "remote_blobs_verified": 7,
+  "signature_status": "UNSIGNED",
+  "production_enforcement": "NOT_EVALUATED"
+}
