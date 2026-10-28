@@ -1,0 +1,118 @@
+{
+  "schema_version": "invocation-receipt/0.1",
+  "run_id": "UA_OBSIDIAN_BINDING_20261028_01",
+  "observed_at_utc": "2026-10-28T13:41:47.560466+00:00",
+  "user_instruction": "Now, Invoke Digisleuth Binding of UA and Obsidian Graph workflow",
+  "operation": "SOURCE_PREFLIGHT_ONLY",
+  "disposition": "HOLD_SOURCE",
+  "reason": "SOURCE_SUFFICIENCY_UNESTABLISHED",
+  "requested_research_source": {
+    "commit": "e05f1e9",
+    "status": "REMOTE_RESOLUTION_FAILED",
+    "http_status": 422,
+    "message": "No commit found for SHA: e05f1e9",
+    "equivalence_to_observed_remote_head": "NOT_ESTABLISHED"
+  },
+  "observed_remote_snapshot": {
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "branch": "general-bios-laboratory-v1",
+    "commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+    "tree_sha": "c4f1af40744d0f5ca0f9e727f1e839d966867d55",
+    "recursive_tree_truncated": false,
+    "tree_entry_count": 496,
+    "scope": "Tree-wide path inventory; exact content verified for six manifest-listed files only",
+    "commit_signature_verification": "NOT_ESTABLISHED"
+  },
+  "workflow": [
+    "JF_SOURCE",
+    "JF_UA",
+    "JF_DOSSIER",
+    "JF_RENDER",
+    "JF_VALIDATE",
+    "JF_ADMIT",
+    "JF_WRITE",
+    "JF_WITNESS"
+  ],
+  "stage_results": {
+    "JF_SOURCE": "PARTIAL_REMOTE_SNAPSHOT_BOUND_REQUESTED_RESEARCH_SOURCE_UNAVAILABLE",
+    "JF_UA": "NOT_EXECUTED_NO_PRESERVED_GRAPH",
+    "JF_DOSSIER": "NOT_EXECUTED_AUTHORITATIVE_REGISTRY_UNBOUND",
+    "JF_RENDER": "NOT_EXECUTED",
+    "JF_VALIDATE": "SOURCE_PREFLIGHT_AND_EXISTING_CANVAS_STRUCTURE_ONLY",
+    "JF_ADMIT": "NOT_EXECUTED",
+    "JF_WRITE": "NOT_EXECUTED",
+    "JF_WITNESS": "PREFLIGHT_RECEIPT_ONLY"
+  },
+  "blockers": [
+    {
+      "id": "B01",
+      "input": "Requested research commit e05f1e9 and exact dossier/capability-register bytes",
+      "status": "UNRESOLVED",
+      "scope": "GitHub cannot resolve commit; local-only copies not examined"
+    },
+    {
+      "id": "B02",
+      "input": "Preserved raw UA export with producer revision and source coverage manifest",
+      "status": "UNBOUND",
+      "scope": "No .ua/, legacy .understand-anything/, or knowledge-graph.json path in the observed branch tree; other locations not excluded"
+    },
+    {
+      "id": "B03",
+      "input": "Authoritative Dossier schema, identity registry and typed relationship crosswalk for this specimen",
+      "status": "UNBOUND",
+      "scope": "Candidate adapter artifact exists separately; its existence is not actual-specimen conformance"
+    },
+    {
+      "id": "B04",
+      "input": "Independent signed adjudication, exact projection grant, destination and writer guarantees",
+      "status": "NOT_PRESENTED_TO_THIS_INVOCATION",
+      "scope": "Later-stage requirements; do not infer global absence"
+    }
+  ],
+  "source_standing_preserved": {
+    "phc_repair_candidate": "EXECUTED_LOCAL_REPAIR_CANDIDATE_UNPROMOTED",
+    "admission": "HELD",
+    "publication_authority": "WITHHELD",
+    "pp_gate": "BLOCKED",
+    "independent_review": "OUTSTANDING",
+    "producer_regressions": {
+      "reported_passed": 64,
+      "reported_failed": 0,
+      "fresh_replay_this_invocation": false
+    }
+  },
+  "relationship_records": [],
+  "admitted_records": 0,
+  "projection_plan": null,
+  "kernel_grant": null,
+  "vault_writes": 0,
+  "canvas_mutations": 0,
+  "structural_topology_changes": 0,
+  "canonical_authority_delta": "ZERO",
+  "resume_requirements": [
+    "Resolve the requested research source without treating the remote snapshot as an equivalent substitute.",
+    "Bind exact source bytes and coverage plus raw UA graph and producer revision.",
+    "Bind actual Dossier schema/identity registry and preserve all eight relationship coordinates.",
+    "Perform interrogative reconciliation and independent signed adjudication; retain UNRESOLVED where appropriate.",
+    "Compile admitted records only; validate sealed bytes/destinations and separate Kernel projection authority.",
+    "Apply through bound writer; verify exact readback and activation receipt."
+  ],
+  "eight_relationship_coordinates": [
+    "subject",
+    "object",
+    "relation_type",
+    "scope",
+    "evidence_refs",
+    "certainty",
+    "schema_version",
+    "authority_id"
+  ],
+  "standing_coordinate": "admission_status",
+  "source_coordinates": [
+    "git_commit",
+    "file_path",
+    "line_start",
+    "line_end",
+    "blob_sha256"
+  ]
+}
