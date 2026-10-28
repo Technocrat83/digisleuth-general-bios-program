@@ -1,0 +1,327 @@
+{
+  "menu_id": "MENU_OF_VIABILITY_AVIV_GSS_v0.1",
+  "date": "2026-10-28",
+  "operation_id": "MENU_OF_VIABILITY_RUN_HYGIENE_OPERATION_v1.0",
+  "operation_path": "governance/run_hygiene/MENU_OF_VIABILITY_v1.0.md",
+  "predecessor": null,
+  "outcome": "MENU_PROJECTED",
+  "application_status": "FIRST_RECORDED_OPERATIONAL_PROJECTION_NOT_A_VALIDATED_OFFER",
+  "candidate": {
+    "candidate_id": "AVIV_GOVERNED_STATE_STABILIZATION_v0.1_candidate",
+    "repository": "Technocrat83/digisleuth-general-bios-program",
+    "commit": "00a09ab154e32513dbb41c667b0c177041912a48",
+    "source_paths": [
+      "research/harness_engineering/AVIV_GOVERNED_STATE_STABILIZATION_v0.1_candidate.md",
+      "research/harness_engineering/AVIV_GOVERNED_STATE_STABILIZATION_REVIEW_v0.1_candidate.md",
+      "research/harness_engineering/AVIV_GOVERNED_STATE_STABILIZATION_H01_PREREGISTRATION_v0.1_draft.json"
+    ],
+    "pr_url": "https://github.com/Technocrat83/digisleuth-general-bios-program/pull/9",
+    "standing": "UNTESTED_NON_CANONICAL",
+    "experimental_runs": 0,
+    "scientific_evidence_delta": 0
+  },
+  "claim_ceiling": {
+    "demonstrated_capability": "No experimental harness capability demonstrated by this candidate; documents and static consistency checks exist.",
+    "commercial_evidence": "NONE_RECORDED",
+    "prohibited_claims": [
+      "proven reduction in failures or supervision cost",
+      "established demand or willingness to pay",
+      "BIOS constitutiveness or General BIOS Theorem proof",
+      "quantum mind-to-matter validation",
+      "production readiness",
+      "independent ratification"
+    ],
+    "authority": "COMMERCIAL_PROJECTION_ONLY"
+  },
+  "feature_catalog": [
+    {
+      "feature_id": "F01",
+      "name": "Bounded authorized execution",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "Intent contract",
+        "Authority membrane",
+        "Effect-boundary inventory"
+      ],
+      "separability": "COUPLED_WITH_AUTHORITY_BINDING",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F02",
+      "name": "Workflow drift detection and containment",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "F01",
+        "Invariant monitor",
+        "Governed correction",
+        "Independent witness"
+      ],
+      "separability": "COUPLED_WITH_MONITORING_AND_CORRECTION",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F03",
+      "name": "Recovery of interrupted work",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "Versioned objective/obligation state",
+        "Recovery semantics",
+        "Authority preservation"
+      ],
+      "separability": "UNKNOWN_PENDING_INTERFACE_AND_RECOVERY_TESTS",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F04",
+      "name": "Rejection of false completion",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "Tool receipt binding",
+        "Independent postcondition witness"
+      ],
+      "separability": "POTENTIALLY_ISOLATABLE_PENDING_PROOF",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F05",
+      "name": "Exception-focused supervision",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "F01",
+        "F02",
+        "Escalation rules",
+        "Operator interface"
+      ],
+      "separability": "COUPLED_WITH_EFFECTIVE_CONTROLS_AND_ESCALATION",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F06",
+      "name": "Audit and investigation evidence",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "Trace identity",
+        "Provenance",
+        "Evidence retention",
+        "Read access controls"
+      ],
+      "separability": "POTENTIALLY_ISOLATABLE_PENDING_PROOF",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F07",
+      "name": "Assessment of existing agent governance",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "Protected-boundary inventory",
+        "Control tests",
+        "F04",
+        "F06"
+      ],
+      "separability": "POTENTIALLY_ISOLATABLE_AS_A_BOUNDED_ASSESSMENT",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    },
+    {
+      "feature_id": "F08",
+      "name": "Evidence-preserving implementation change",
+      "maturity": "PROPOSED_UNVALIDATED",
+      "commercial_benefit_status": "HYPOTHESIS",
+      "dependencies": [
+        "Versioned contracts",
+        "Replay protocol",
+        "Independent implementation comparison"
+      ],
+      "separability": "UNKNOWN_PENDING_EQUIVALENCE_PROTOCOL",
+      "proof_needed": "Bound implementation, scoped tests, integration evidence, and customer-outcome evidence appropriate to this feature."
+    }
+  ],
+  "offerings": [
+    {
+      "offering_id": "O01",
+      "name": "Agent Runtime Governance Assessment",
+      "buyer_hypothesis": "An operator or technical owner responsible for a specific AI workflow.",
+      "problem_hypothesis": "Unclear action boundaries, ineffective controls, or insufficient evidence of actual effects.",
+      "minimum_bounded_deliverable": "Assessment of one declared workflow, with a protected-boundary inventory, control-gap findings, evidence limits, and scoped remediation proposals.",
+      "feature_ids": [
+        "F01",
+        "F04",
+        "F06",
+        "F07"
+      ],
+      "fit_rationale": "Packages boundary mapping and verification as an assessment deliverable. Deliverability depends on a defined assessment method and access; the candidate supplies no proven runtime guarantee.",
+      "viability_conditions": [
+        "Buyer can provide a bounded workflow and permitted read/test access.",
+        "Findings must be actionable and supported by observations.",
+        "Customer validates that the assessment resolves a worthwhile uncertainty."
+      ],
+      "defeat_conditions": [
+        "No actionable uncertainty is found.",
+        "Access prevents defensible observation.",
+        "The buyer obtains no sufficient value from the assessment."
+      ],
+      "resource_implications": {
+        "build": "Define assessment method, evidence requirements, and reporting format.",
+        "validation": "Qualify controls and false-acceptance checks on admitted specimens.",
+        "integration": "Obtain scoped access and inventory protected boundaries.",
+        "delivery_support": "Reviewer effort, findings review, and correction lineage.",
+        "time_estimate": null,
+        "cost_estimate": null,
+        "estimate_basis": "UNBOUND",
+        "committed_resources": null
+      },
+      "next_information_object": "A scoped assessment specification and customer problem-validation record; no outreach or execution is authorized by this menu."
+    },
+    {
+      "offering_id": "O02",
+      "name": "Governed Workflow Pilot",
+      "buyer_hypothesis": "An operations owner seeking controlled automation for one repeatable workflow.",
+      "problem_hypothesis": "Manual supervision, drift, interruptions, and false completion limit useful automation.",
+      "minimum_bounded_deliverable": "A separately admitted pilot for one workflow with declared intent, effects, constraints, witnessing, recovery, and escalation.",
+      "feature_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05"
+      ],
+      "fit_rationale": "Combines the candidate's control-loop mechanisms into a bounded operational embodiment; the evidence and implementation burden spans multiple unvalidated features.",
+      "viability_conditions": [
+        "Exact workflow, constraints, success criterion, and authority envelope are bound.",
+        "Relevant controls and witnesses are qualified.",
+        "A matched customer baseline permits evaluation of supervision, rework, completion, and cost."
+      ],
+      "defeat_conditions": [
+        "Useful completion does not improve within the accepted cost/risk envelope.",
+        "Integration effort exceeds justified customer value.",
+        "Controls or recovery fail their declared requirements."
+      ],
+      "resource_implications": {
+        "build": "Implement the bounded harness, adapters, persistence, controls, and operator interface.",
+        "validation": "H01 plus separate feature-specific and boundary tests; H01 alone does not validate all features.",
+        "integration": "Customer workflow, tool identity, permissions, and deployment environment.",
+        "delivery_support": "Monitoring, escalation ownership, incident response, and maintenance.",
+        "time_estimate": null,
+        "cost_estimate": null,
+        "estimate_basis": "UNBOUND",
+        "committed_resources": null
+      },
+      "next_information_object": "A candidate pilot envelope and evidence-gap plan; pilot admission and dispatch require separate authority."
+    },
+    {
+      "offering_id": "O03",
+      "name": "Workflow Evidence and Continuity Module",
+      "buyer_hypothesis": "A team that needs traceability, verified completion, or recoverable workflow state.",
+      "problem_hypothesis": "Success reports are hard to verify and interrupted work is difficult to reconstruct.",
+      "minimum_bounded_deliverable": "A bounded module for an agreed workflow that records provenance and supports independently checked completion or recovery.",
+      "feature_ids": [
+        "F03",
+        "F04",
+        "F06",
+        "F08"
+      ],
+      "fit_rationale": "Explores modular packaging of evidence and continuity capabilities; technical separability and interoperability remain unresolved.",
+      "viability_conditions": [
+        "Dependencies can be isolated behind an accepted interface.",
+        "Evidence and recovery semantics match the customer's workflow.",
+        "The module's overhead and maintenance burden are acceptable."
+      ],
+      "defeat_conditions": [
+        "Required features cannot be separated without the full harness.",
+        "Recorded evidence is insufficient for the customer's decision.",
+        "Overhead or integration cost exceeds the supported benefit."
+      ],
+      "resource_implications": {
+        "build": "Define module interfaces, evidence retention, and state/recovery contracts.",
+        "validation": "Test false completion, recovery, provenance, access controls, and any portability claim separately.",
+        "integration": "Adapters, event identity, storage, and customer access policies.",
+        "delivery_support": "Retention, trace review, incident reconstruction, and version compatibility.",
+        "time_estimate": null,
+        "cost_estimate": null,
+        "estimate_basis": "UNBOUND",
+        "committed_resources": null
+      },
+      "next_information_object": "A feature-separability and interface proposal; no portability or recovery guarantee is earned by this projection."
+    }
+  ],
+  "overall_comparison": {
+    "method": "QUALITATIVE_MULTIDIMENSIONAL_FIT_NO_AGGREGATE_SCORE",
+    "dimensions": [
+      "buyer-problem correspondence",
+      "feature separability",
+      "evidence burden",
+      "implementation and integration work",
+      "ongoing support burden",
+      "uncertainty"
+    ],
+    "tradeoffs": [
+      "O01 can be specified around bounded assessment evidence; it still requires a qualified method and access.",
+      "O02 combines more candidate features and therefore carries a broader validation and integration scope.",
+      "O03 depends on separability and interoperability that have not been established."
+    ],
+    "shared_dependencies": [
+      "F01/F04/F06 recur across offerings; implementation, validation, and resource needs must be accounted for once at the shared-dependency level.",
+      "No demand, effort, pricing, or revenue ranking is established."
+    ]
+  },
+  "founder_isolation_surface": [
+    {
+      "feature_ids": [
+        "F04",
+        "F06"
+      ],
+      "possible_focus": "Effect verification and traceability",
+      "dependency_limit": "Requires exact postconditions, independent witness binding, and evidence/access contracts."
+    },
+    {
+      "feature_ids": [
+        "F01",
+        "F07"
+      ],
+      "possible_focus": "Governance assessment",
+      "dependency_limit": "Requires inventory scope and a qualified assessment method."
+    },
+    {
+      "feature_ids": [
+        "F02",
+        "F03",
+        "F05"
+      ],
+      "possible_focus": "Stabilization, continuity, and exception supervision",
+      "dependency_limit": "Coupled controls, recovery, escalation, and customer-specific validation remain necessary."
+    },
+    {
+      "feature_ids": [
+        "F08"
+      ],
+      "possible_focus": "Implementation change and portability",
+      "dependency_limit": "Independent cross-implementation evidence is absent."
+    }
+  ],
+  "founder_decisions": [],
+  "unresolved_inputs": [
+    "buyer/problem validation",
+    "Founder resource envelope",
+    "delivery capacities",
+    "time and cost estimates",
+    "pricing and willingness to pay",
+    "implementation and feature separability",
+    "scientific and operational evidence required for each offer"
+  ],
+  "next_information_object": "Founder may identify a feature or offering for further scoping; an actual resource commitment requires its own recorded decision.",
+  "deltas": {
+    "operational_projection_created": 1,
+    "scientific_standing": 0,
+    "scientific_canon": 0,
+    "architectural_candidate_promotion": 0,
+    "experimental_execution": 0,
+    "resource_commitment": 0
+  },
+  "production_promotion": "NOT_GRANTED"
+}

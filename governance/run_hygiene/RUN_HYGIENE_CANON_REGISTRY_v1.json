@@ -1,0 +1,56 @@
+{
+  "registry_id": "RUN_HYGIENE_CANON_REGISTRY_v1",
+  "scope": "FOUNDER_AUTHORIZED_COMPANY_LEVEL_RUN_HYGIENE_OPERATIONS",
+  "version": "1.0",
+  "date": "2026-10-28",
+  "index_role": "Records operational Canon entries; does not issue authority or replace scientific/authority registries.",
+  "entries": [
+    {
+      "operation_id": "MENU_OF_VIABILITY_RUN_HYGIENE_OPERATION_v1.0",
+      "display_name": "Menu of Viability",
+      "version": "1.0",
+      "status": "CANONICAL_OPERATIONAL_WORKFLOW",
+      "canonical_path": "governance/run_hygiene/MENU_OF_VIABILITY_v1.0.md",
+      "first_application_path": "governance/run_hygiene/examples/MENU_OF_VIABILITY_AVIV_GSS_v0.1.json",
+      "authority_source": {
+        "actor": "Founder Node",
+        "type": "EXPLICIT_CURRENT_USER_DIRECTIVE",
+        "date": "2026-10-28",
+        "approval_text": "I want this workflow to enter Canon",
+        "definition": "A Menu of Viability is a Run Hygiene Operation which projects a line of best fit of commercial offerings of an architectural candidate so that Founder may pinpoint and isolate features and overall assess allocation of resources"
+      },
+      "scope": "RUN_HYGIENE_COMMERCIAL_PROJECTION_AND_FOUNDER_RESOURCE_DECISION_SUPPORT",
+      "hygiene": {
+        "definition_preserved": true,
+        "candidate_identity_required": true,
+        "feature_isolation_and_dependencies_required": true,
+        "commercial_hypotheses_distinguished": true,
+        "resource_estimate_basis_required": true,
+        "founder_allocation_authority_preserved": true,
+        "no_undeclared_scalarization": true,
+        "no_scientific_promotion": true
+      },
+      "promotion_record": {
+        "basis": "CURRENT_FOUNDER_DIRECTIVE_PLUS_RECORDED_HYGIENE_AND_AUTHORITY_SCOPE",
+        "historical_intermediate_approvals_claimed": false,
+        "independent_scientific_ratification_claimed": false
+      },
+      "authority_limits": {
+        "select_features": "FOUNDER",
+        "allocate_resources": "FOUNDER",
+        "scientific_ratification": "EXTERNAL_GENERAL_BIOS_JURISDICTION",
+        "experiment_dispatch": "NONE_CONFERRED",
+        "self_amendment": "PROHIBITED"
+      },
+      "deltas": {
+        "operational_canon_entry_added": 1,
+        "scientific_standing": 0,
+        "scientific_canon": 0,
+        "architectural_candidate_promotion": 0,
+        "resource_commitment": 0,
+        "experimental_execution": 0,
+        "production_promotion": 0
+      }
+    }
+  ]
+}
