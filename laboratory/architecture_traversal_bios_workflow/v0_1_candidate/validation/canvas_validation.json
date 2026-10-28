@@ -1,0 +1,20 @@
+{
+  "canvases": [
+    {
+      "path": "current_run/Execution_Graph.canvas",
+      "nodes": 1,
+      "edges": 0,
+      "structure_and_file_references": "PASS",
+      "standing": "CANDIDATE_STAGING_ONLY"
+    },
+    {
+      "path": "obsidian_staging/blueprint/Workflow_Blueprint.canvas",
+      "nodes": 10,
+      "edges": 0,
+      "structure_and_file_references": "PASS",
+      "standing": "CANDIDATE_STAGING_ONLY"
+    }
+  ],
+  "wikilink_targets": "PASS",
+  "active_vault_mutations": 0
+}

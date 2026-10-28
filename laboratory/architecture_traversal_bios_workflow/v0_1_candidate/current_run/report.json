@@ -1,0 +1,12 @@
+{
+  "schema_version": "DS_ATBR/0.1-candidate",
+  "disposition": "EXPLAINED_BLOCK",
+  "projection_eligible": false,
+  "editorial_eligible": false,
+  "external_publication_authority": false,
+  "real_execution_performed": false,
+  "gates": {},
+  "blockers": [
+    "ValidationError: 2 validation errors for Packet\npayload\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\nreceipts\n  Field required [type=missing, input_value={}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+  ]
+}

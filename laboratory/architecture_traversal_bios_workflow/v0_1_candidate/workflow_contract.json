@@ -1,0 +1,88 @@
+{
+  "workflow_id": "DS_ARCHITECTURE_BIOS_COMMERCIALIZATION_001",
+  "schema_version": "DS_ATBR/0.1-candidate",
+  "standing": "IMPLEMENTED_LOCAL_CANDIDATE_NOT_ADMITTED",
+  "owner_role": "Data Scientist",
+  "source_parent": "d6757c9138cd18d1cfd8dcfeeae6b3ab11ef9d84",
+  "prior_invocation": "UA_OBSIDIAN_BINDING_20261028_01",
+  "ua_role": "CANDIDATE_EXTRACTION_ONLY",
+  "obsidian_role": "NON_SOVEREIGN_PROJECTION",
+  "kernel_role": "EXTERNAL_ADMISSION_AUTHORITY",
+  "bios_theorem_method": "EXTERNAL_RATIFICATION_REQUIRED",
+  "gates": [
+    {
+      "stage": "UA_RECONCILIATION",
+      "required_role": "semantic_reviewer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "PLAN_SHA256"
+    },
+    {
+      "stage": "THEOREM_ENTITLEMENT",
+      "required_role": "theorem_adjudicator",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "PLAN_SHA256"
+    },
+    {
+      "stage": "GRAPH_CERTIFICATION",
+      "required_role": "certifier",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "PLAN_SHA256"
+    },
+    {
+      "stage": "GRAPH_ADMISSION",
+      "required_role": "kernel",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "PLAN_SHA256"
+    },
+    {
+      "stage": "EXECUTION_AUTHORIZATION",
+      "required_role": "runtime_authorizer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "PLAN_SHA256"
+    },
+    {
+      "stage": "TRANSFORMATION_WITNESS",
+      "required_role": "observer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "OUTCOME_PAYLOAD_SHA256"
+    },
+    {
+      "stage": "PRODUCT_QUALIFICATION",
+      "required_role": "product_reviewer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "OUTCOME_PAYLOAD_SHA256"
+    },
+    {
+      "stage": "COMMERCIALIZATION_AUTHORIZATION",
+      "required_role": "commercialization_authorizer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "OUTCOME_PAYLOAD_SHA256"
+    },
+    {
+      "stage": "EDITORIAL_PREPARATION",
+      "required_role": "editorial_authorizer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "OUTCOME_PAYLOAD_SHA256"
+    },
+    {
+      "stage": "CLAIM_APPROVAL",
+      "required_role": "claim_reviewer",
+      "status": "UNBOUND_FOR_REAL_RUN",
+      "binding": "OUTCOME_PAYLOAD_SHA256"
+    }
+  ],
+  "all_required_gates_must_pass": true,
+  "missing_or_unresolved_gate": "HOLD",
+  "actual_dossier_schema_binding": "UNBOUND",
+  "ua_normalization_adapter": "UNBOUND",
+  "kernel_api_binding": "UNBOUND",
+  "production_enforcement": "NOT_ESTABLISHED",
+  "biospub_handoff_interface": "CANDIDATE_SIX_RECORD_PUBLICATION_PACKAGE",
+  "biospub_live_transport": "UNBOUND",
+  "editorial_destination": "Substack:DigiProse",
+  "publication_automation": "NOT_IMPLEMENTED",
+  "separate_projection_grant_required": true,
+  "separate_publication_decision_required": true,
+  "real_successful_transformations": 0,
+  "data_feedback_rule": "NEW_REVISION_AND_IMPACT_REVIEW_PROPOSAL_ONLY"
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": "candidate-file-manifest/0.1",
+  "parent_commit": "d6757c9138cd18d1cfd8dcfeeae6b3ab11ef9d84",
+  "authority_delta": "ZERO",
+  "self_excluded": true,
+  "files": [
+    {
+      "path": "DIGIPROSE_EDITORIAL_TEMPLATE.md",
+      "bytes": 1850,
+      "sha256": "2cb75b9146754df5e5ab11342450a6db09314d3e7fc724f9eaf65edce4c4d9ee",
+      "git_blob_sha1": "d478ecd6d1654cda81dbdee93ae2b0e89d093d4c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9554,
+      "sha256": "50a254a247580ef93f7486c0d02690bc38afbbfea68dbb279da573b752644e4c",
+      "git_blob_sha1": "0246d61d4e35aa84573471f43e09c4b770dc4133"
+    },
+    {
+      "path": "SCIENTIFIC_PROTOCOL.md",
+      "bytes": 5133,
+      "sha256": "4cecb7c485c009fd19dfc55735a0d9d4127f2bddbeedc373d8b735b722f183ba",
+      "git_blob_sha1": "46f4741a322970ad6b2d6abc8261b80bf239b0b5"
+    },
+    {
+      "path": "current_input_status.json",
+      "bytes": 511,
+      "sha256": "767d170fcd1ba54ea25d90972fd0b165cd82e41b7a99959fc0e1173dc96f718a",
+      "git_blob_sha1": "8058e48c58ec4443a764795342861b7c5c783c0f"
+    },
+    {
+      "path": "current_run/Execution_Graph.canvas",
+      "bytes": 201,
+      "sha256": "4bc4c235b876b28170abe5f73b3081323e367f5c65baf9b3a7086148dbe582d3",
+      "git_blob_sha1": "0e1a337416a3ce4754097efd335913df503d42ea"
+    },
+    {
+      "path": "current_run/SHA256SUMS",
+      "bytes": 332,
+      "sha256": "b7a36e06a4b645816b1a7e584148e6b7be9112263769b8b69a8e3d7aa156462a",
+      "git_blob_sha1": "495232dd861db3523ac22c3dfb3df4250c1735af"
+    },
+    {
+      "path": "current_run/biospub/queue.json",
+      "bytes": 134,
+      "sha256": "74de0abc48fe2b90818d5edee0ebf8ed3317083c763e7bc080ffa8ce40ad73f3",
+      "git_blob_sha1": "5010728e1cc5d6a0389b34028dcec206436ced02"
+    },
+    {
+      "path": "current_run/notes/HOLD.md",
+      "bytes": 484,
+      "sha256": "ff2b632e1eaa94b307b7feb38107a1af6b945e2a81c96002d2f271069ce806c5",
+      "git_blob_sha1": "44cc0beadb39b9396ebf6fc298ea9ab7dc2a2810"
+    },
+    {
+      "path": "current_run/report.json",
+      "bytes": 624,
+      "sha256": "1ca76fab0d43eb04578eeac1ee1d913ebbcb8e55b04069eeb482e17e8f5ed819",
+      "git_blob_sha1": "10ec0b97d162d1411dfba718e27077df48aae4d7"
+    },
+    {
+      "path": "fixtures/unbound_packet.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "git_blob_sha1": "0967ef424bce6791893e9a57bb952f80fd536e93"
+    },
+    {
+      "path": "fixtures/unbound_trust_snapshot.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "git_blob_sha1": "0967ef424bce6791893e9a57bb952f80fd536e93"
+    },
+    {
+      "path": "obsidian_staging/blueprint/00_WORKFLOW.md",
+      "bytes": 709,
+      "sha256": "f4ba04efd4e5c1e4bab69e4748ce4a6048e360bb5e6188c2b47493c9421fdf75",
+      "git_blob_sha1": "487c9edc2c2a8d8140185057145cc464bfd12ed2"
+    },
+    {
+      "path": "obsidian_staging/blueprint/01_GIT_UA.md",
+      "bytes": 648,
+      "sha256": "677864ab93d283227c977b5b0342d99408580bc5d971e015ab5bb0ab94dfcafb",
+      "git_blob_sha1": "4c6121a9fbda202ebc21a1d24811c0e47056ecc6"
+    },
+    {
+      "path": "obsidian_staging/blueprint/02_TRAVERSAL.md",
+      "bytes": 641,
+      "sha256": "3f798aa96bc088d30f48447d3c7596bb1aab4156426142436442218af82e091f",
+      "git_blob_sha1": "9d7082f437b90fc56d8bd24432c43a6825c76e36"
+    },
+    {
+      "path": "obsidian_staging/blueprint/03_THEOREM.md",
+      "bytes": 711,
+      "sha256": "27970888bd52b102fb6a3b8d9aa1df5fe793130a09bd72a5c9f0030ee7dcfaca",
+      "git_blob_sha1": "16fc6b6e9dc1685316959d54c04a1d2a42934e9f"
+    },
+    {
+      "path": "obsidian_staging/blueprint/04_BOUNDARY.md",
+      "bytes": 723,
+      "sha256": "288783b5f941f3ca7df9709828645d8f0179fba994d2ee1d86b36862e9660401",
+      "git_blob_sha1": "d8d98b0e1943c318b560718720380940f0fc92db"
+    },
+    {
+      "path": "obsidian_staging/blueprint/05_EXECUTION_GRAPH.md",
+      "bytes": 774,
+      "sha256": "b541ba5d8c711ecfdcdd5f81df1f44bc842635336329a869577e03e3174aed37",
+      "git_blob_sha1": "a46a3b079ccece719ea2917a7d8263b9e0d09190"
+    },
+    {
+      "path": "obsidian_staging/blueprint/06_PRODUCT.md",
+      "bytes": 672,
+      "sha256": "324013e963a2270c2d838fa06b1802b131e51c653752379513201552d3900659",
+      "git_blob_sha1": "b75924f958411955e01f0fc48f120b3d9c9e3b74"
+    },
+    {
+      "path": "obsidian_staging/blueprint/07_BIOSPUB.md",
+      "bytes": 761,
+      "sha256": "2806b5b586f5baf5a2694fd9ae1d3d3599fe0bff921f0e5938d9fbc13f389e8c",
+      "git_blob_sha1": "3d771a089e35da43db1e4b1045c51c9f1871782a"
+    },
+    {
+      "path": "obsidian_staging/blueprint/08_DIGIPROSE.md",
+      "bytes": 756,
+      "sha256": "6042f16a1ebda8f40c167ed8247394e5bc6afe3992fa8ad585d086cc7e8edca0",
+      "git_blob_sha1": "436b70f38900ef430b62a26ff136151864ddcc3c"
+    },
+    {
+      "path": "obsidian_staging/blueprint/09_CURRENT_HOLD.md",
+      "bytes": 801,
+      "sha256": "aa2b7fb7e065dd43be591b277fd261c0fb7c7d758e3aec8c0ac358629fc83525",
+      "git_blob_sha1": "71dc041faf2bc0a7cf5cd51474cfa9d57ba0dfed"
+    },
+    {
+      "path": "obsidian_staging/blueprint/Workflow_Blueprint.canvas",
+      "bytes": 1739,
+      "sha256": "24cce471b937525754ec0c8d6197ec5d5aaf3608fc76f7401705ec5e7a1c8ef7",
+      "git_blob_sha1": "113e2f03b2203888e1334b8b0b9ccf44dced3225"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 38,
+      "sha256": "5322ed443a31b834393032dcddbf810b027753c4ffd13ae7b75239b464561717",
+      "git_blob_sha1": "f1428aa78f5f2d5a5031fb4a0885ca00f3440909"
+    },
+    {
+      "path": "schemas/packet.schema.json",
+      "bytes": 16161,
+      "sha256": "ab938b0afd9364edfbe3fbb54813e46d53b4bfa6c7394988d4853f9cec22072b",
+      "git_blob_sha1": "7dfe700b583815749d178736faa2a3532281ecda"
+    },
+    {
+      "path": "schemas/trust_snapshot.schema.json",
+      "bytes": 1556,
+      "sha256": "5884ab17576fb16666dcf4e0318a743f7e7ec834d22d404efd0b9894b469f5dc",
+      "git_blob_sha1": "f584b4a231732f6cd5eabb1572a0a269f40b5424"
+    },
+    {
+      "path": "source_bindings.json",
+      "bytes": 1668,
+      "sha256": "0baab55f632cd7f33ac1632b961fccfe4192a1dff21806742639a230ce846637",
+      "git_blob_sha1": "93264280f6588483c61309e6188fab779ca03836"
+    },
+    {
+      "path": "test_workflow.py",
+      "bytes": 14551,
+      "sha256": "391f7f1ef12f1742310a4d178450a90716919d4d155e1ac2c5e9ffd253e86e2c",
+      "git_blob_sha1": "4210df3049606a294831138c31742e94fc445c78"
+    },
+    {
+      "path": "validation/canvas_validation.json",
+      "bytes": 485,
+      "sha256": "d520f3eb835c98f8b64d31d699e6213f4fab8c42c278d0b23e307926bf9c2f25",
+      "git_blob_sha1": "40615353425ab084e981a763c78c766fc6729b58"
+    },
+    {
+      "path": "validation/result.json",
+      "bytes": 534,
+      "sha256": "c757ed0ab4a553a3465d277c6fa699541c1f351da561a6568327b3f1d551f0c7",
+      "git_blob_sha1": "58b73193ef81104402a367e64bd16c00e3b99afc"
+    },
+    {
+      "path": "validation/unittest_output.txt",
+      "bytes": 3273,
+      "sha256": "7aad787ea35d6b113b304e2968c413dc5fe8a189e93ecc5c649b76120bfed15d",
+      "git_blob_sha1": "8be59ecd3a5a2eacd441702b3833aabbba807379"
+    },
+    {
+      "path": "workflow.py",
+      "bytes": 24704,
+      "sha256": "255576dbde19f0f040b0715bc8a03ce4c0a0f3f900ab96bcefe0ffc1d0345879",
+      "git_blob_sha1": "7f61ab8b45c565f231c9350c82c8f77355dcc849"
+    },
+    {
+      "path": "workflow_contract.json",
+      "bytes": 2916,
+      "sha256": "b9a67185653016a0dcd35dfdc0ba57fff2be5a6e6405db7e18692982dc22e5e0",
+      "git_blob_sha1": "2ec212f44a5ee8c9f8dbd82064a83f6cb2b9a349"
+    }
+  ]
+}

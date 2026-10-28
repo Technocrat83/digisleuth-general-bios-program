@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/d6757c9138cd18d1cfd8dcfeeae6b3ab11ef9d84/laboratory/to_market/publication_harness/phc_v0_1_2_candidate/contract/BIOS_PUBLICATION_HARNESS_CONTRACT_v0.1_candidate.md",
+      "git_blob_sha1": "671a61ae053cec771c9c2982c712462195c2877b",
+      "sha256": "76eff70957f4339ab51eea2a29a4695d3d173c83377c87843c1e62998012e749",
+      "size_bytes": 18549,
+      "interpretation": "BOUND_SOURCE_REQUIREMENT_NOT_A_NEW_GRANT"
+    },
+    {
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/d6757c9138cd18d1cfd8dcfeeae6b3ab11ef9d84/obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION/CLOSURE_THEOREM.md",
+      "git_blob_sha1": "9bf11f4e4247eefcc5effaec88dc494717e6adad",
+      "sha256": "74fa50eb2d63498c986c10eb6348795e4fba7e0be68f2b05b493a2e1068994a5",
+      "size_bytes": 569,
+      "interpretation": "BOUND_SOURCE_REQUIREMENT_NOT_A_NEW_GRANT"
+    },
+    {
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/d6757c9138cd18d1cfd8dcfeeae6b3ab11ef9d84/.agents/skills/json-canvas/DIGISLEUTH_BINDING.md",
+      "git_blob_sha1": "53b31e0ea8397eeb351859ba1dde8001105d222d",
+      "sha256": "044af0501f190aa2f501da4cec080f3a22bd2914792540652a6c36b4ae6206d7",
+      "size_bytes": 3144,
+      "interpretation": "BOUND_SOURCE_REQUIREMENT_NOT_A_NEW_GRANT"
+    }
+  ],
+  "inherited_invocation_commit": "d6757c9138cd18d1cfd8dcfeeae6b3ab11ef9d84",
+  "memory_only_theorem_context": "MT_BIOS anatomy and entitlement obligations recovered from prior context; authoritative theorem specimen/schema remains unbound"
+}

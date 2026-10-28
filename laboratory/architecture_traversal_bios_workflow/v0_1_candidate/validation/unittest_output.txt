@@ -1,0 +1,35 @@
+test_cease (test_workflow.BoundaryTests.test_cease) ... ok
+test_cli_rejects_detected_active_vault (test_workflow.BoundaryTests.test_cli_rejects_detected_active_vault) ... ok
+test_dangling_relation (test_workflow.BoundaryTests.test_dangling_relation) ... ok
+test_duplicate_json_keys_rejected (test_workflow.BoundaryTests.test_duplicate_json_keys_rejected) ... ok
+test_expired_receipt (test_workflow.BoundaryTests.test_expired_receipt) ... ok
+test_expired_trust_snapshot (test_workflow.BoundaryTests.test_expired_trust_snapshot) ... ok
+test_graph_cannot_depend_on_future_outcome_bytes (test_workflow.BoundaryTests.test_graph_cannot_depend_on_future_outcome_bytes) ... ok
+test_hold_cli_returns_two_and_refuses_overwrite (test_workflow.BoundaryTests.test_hold_cli_returns_two_and_refuses_overwrite) ... ok
+test_implementation_swap (test_workflow.BoundaryTests.test_implementation_swap) ... ok
+test_independence_cannot_collapse (test_workflow.BoundaryTests.test_independence_cannot_collapse) ... ok
+test_missing_graph_admission (test_workflow.BoundaryTests.test_missing_graph_admission) ... ok
+test_missing_packet_stages_no_earned_edges (test_workflow.BoundaryTests.test_missing_packet_stages_no_earned_edges) ... ok
+test_missing_preregistration (test_workflow.BoundaryTests.test_missing_preregistration) ... ok
+test_missing_product_qualification_retains_only_graph (test_workflow.BoundaryTests.test_missing_product_qualification_retains_only_graph) ... ok
+test_payload_change_invalidates_decisions (test_workflow.BoundaryTests.test_payload_change_invalidates_decisions) ... ok
+test_plan_changes_invalidate_earlier_decisions (test_workflow.BoundaryTests.test_plan_changes_invalidate_earlier_decisions) ... ok
+test_plan_digest_does_not_require_future_outcome (test_workflow.BoundaryTests.test_plan_digest_does_not_require_future_outcome) ... ok
+test_positive_control_and_six_editorial_records (test_workflow.BoundaryTests.test_positive_control_and_six_editorial_records) ... ok
+test_producer_self_adjudication (test_workflow.BoundaryTests.test_producer_self_adjudication) ... ok
+test_revoked_receipt (test_workflow.BoundaryTests.test_revoked_receipt) ... ok
+test_source_digest_mismatch (test_workflow.BoundaryTests.test_source_digest_mismatch) ... ok
+test_tampered_signature (test_workflow.BoundaryTests.test_tampered_signature) ... ok
+test_ua_digest_mismatch (test_workflow.BoundaryTests.test_ua_digest_mismatch) ... ok
+test_unknown_field_cannot_inject_authority (test_workflow.BoundaryTests.test_unknown_field_cannot_inject_authority) ... ok
+test_unmapped_constitutional_predicate (test_workflow.BoundaryTests.test_unmapped_constitutional_predicate) ... ok
+test_unresolved_claim_is_not_drafted (test_workflow.BoundaryTests.test_unresolved_claim_is_not_drafted) ... ok
+test_unresolved_contradiction (test_workflow.BoundaryTests.test_unresolved_contradiction) ... ok
+test_unresolved_theorem_despite_signed_pass (test_workflow.BoundaryTests.test_unresolved_theorem_despite_signed_pass) ... ok
+test_wrong_authority_role (test_workflow.BoundaryTests.test_wrong_authority_role) ... ok
+test_wrong_destination_receipt (test_workflow.BoundaryTests.test_wrong_destination_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.890s
+
+OK

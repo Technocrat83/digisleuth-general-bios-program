@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {
+      "id": "b101e22faa8ac6cd",
+      "type": "file",
+      "file": "notes/HOLD.md",
+      "x": 0,
+      "y": 0,
+      "width": 600,
+      "height": 380
+    }
+  ],
+  "edges": []
+}

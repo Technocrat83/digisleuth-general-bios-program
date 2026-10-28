@@ -1,0 +1,77 @@
+{
+  "$defs": {
+    "TrustedKey": {
+      "additionalProperties": false,
+      "properties": {
+        "principal_id": {
+          "minLength": 1,
+          "title": "Principal Id",
+          "type": "string"
+        },
+        "roles": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Roles",
+          "type": "array"
+        },
+        "public_key_base64": {
+          "minLength": 1,
+          "title": "Public Key Base64",
+          "type": "string"
+        }
+      },
+      "required": [
+        "principal_id",
+        "roles",
+        "public_key_base64"
+      ],
+      "title": "TrustedKey",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "snapshot_id": {
+      "minLength": 1,
+      "title": "Snapshot Id",
+      "type": "string"
+    },
+    "valid_from": {
+      "minLength": 1,
+      "title": "Valid From",
+      "type": "string"
+    },
+    "valid_until": {
+      "minLength": 1,
+      "title": "Valid Until",
+      "type": "string"
+    },
+    "keys": {
+      "additionalProperties": {
+        "$ref": "#/$defs/TrustedKey"
+      },
+      "title": "Keys",
+      "type": "object"
+    },
+    "revoked_receipts": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Revoked Receipts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "snapshot_id",
+    "valid_from",
+    "valid_until",
+    "keys",
+    "revoked_receipts"
+  ],
+  "title": "TrustSnapshot",
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+{
+  "test_scope": "SYNTHETIC_LOCAL_BOUNDARY_TESTS_ONLY",
+  "tests_run": 30,
+  "failures": 0,
+  "errors": 0,
+  "passed": 30,
+  "python_version": "3.12.14",
+  "implementation_sha256": "255576dbde19f0f040b0715bc8a03ce4c0a0f3f900ab96bcefe0ffc1d0345879",
+  "test_source_sha256": "391f7f1ef12f1742310a4d178450a90716919d4d155e1ac2c5e9ffd253e86e2c",
+  "actual_theorem_ratifications": 0,
+  "actual_product_successes": 0,
+  "production_enforcement": "NOT_ESTABLISHED",
+  "sources": "Temporary Git fixture and ephemeral test authorities only"
+}
