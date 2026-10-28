@@ -1,0 +1,684 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "classification": {
+          "enum": [
+            "SUPPORTED",
+            "INFERRED",
+            "DISPUTED",
+            "UNRESOLVED"
+          ],
+          "title": "Classification",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "rationale": {
+          "minLength": 1,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "limitation": {
+          "minLength": 1,
+          "title": "Limitation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "text",
+        "classification",
+        "evidence_refs",
+        "rationale",
+        "limitation"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Decision": {
+      "additionalProperties": false,
+      "properties": {
+        "receipt_id": {
+          "minLength": 1,
+          "title": "Receipt Id",
+          "type": "string"
+        },
+        "stage": {
+          "minLength": 1,
+          "title": "Stage",
+          "type": "string"
+        },
+        "run_id": {
+          "minLength": 1,
+          "title": "Run Id",
+          "type": "string"
+        },
+        "transformation_id": {
+          "minLength": 1,
+          "title": "Transformation Id",
+          "type": "string"
+        },
+        "payload_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Payload Sha256",
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNRESOLVED"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "principal_id": {
+          "minLength": 1,
+          "title": "Principal Id",
+          "type": "string"
+        },
+        "authority_id": {
+          "minLength": 1,
+          "title": "Authority Id",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "title": "Scope",
+          "type": "string"
+        },
+        "destination": {
+          "minLength": 1,
+          "title": "Destination",
+          "type": "string"
+        },
+        "issued_at": {
+          "minLength": 1,
+          "title": "Issued At",
+          "type": "string"
+        },
+        "expires_at": {
+          "minLength": 1,
+          "title": "Expires At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "receipt_id",
+        "stage",
+        "run_id",
+        "transformation_id",
+        "payload_sha256",
+        "decision",
+        "principal_id",
+        "authority_id",
+        "scope",
+        "destination",
+        "issued_at",
+        "expires_at"
+      ],
+      "title": "Decision",
+      "type": "object"
+    },
+    "Node": {
+      "additionalProperties": false,
+      "properties": {
+        "object_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Object Id",
+          "type": "string"
+        },
+        "object_class": {
+          "enum": [
+            "STATE",
+            "TRANSFORMATION",
+            "EVIDENCE",
+            "AUTHORITY_REFERENCE"
+          ],
+          "title": "Object Class",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "object_id",
+        "object_class",
+        "title",
+        "evidence_refs"
+      ],
+      "title": "Node",
+      "type": "object"
+    },
+    "Payload": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "DS_ATBR/0.1-candidate",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "implementation_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Implementation Sha256",
+          "type": "string"
+        },
+        "run_id": {
+          "minLength": 1,
+          "title": "Run Id",
+          "type": "string"
+        },
+        "transformation_id": {
+          "minLength": 1,
+          "title": "Transformation Id",
+          "type": "string"
+        },
+        "producer_id": {
+          "minLength": 1,
+          "title": "Producer Id",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "title": "Scope",
+          "type": "string"
+        },
+        "source_repository": {
+          "minLength": 1,
+          "title": "Source Repository",
+          "type": "string"
+        },
+        "source_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Source Commit",
+          "type": "string"
+        },
+        "scope_paths": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Scope Paths",
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "minItems": 1,
+          "title": "Sources",
+          "type": "array"
+        },
+        "outcome_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Outcome Commit",
+          "type": "string"
+        },
+        "outcome_sources": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "minItems": 1,
+          "title": "Outcome Sources",
+          "type": "array"
+        },
+        "ua": {
+          "$ref": "#/$defs/UABinding"
+        },
+        "theorem": {
+          "$ref": "#/$defs/Theorem"
+        },
+        "trial": {
+          "$ref": "#/$defs/Trial"
+        },
+        "nodes": {
+          "items": {
+            "$ref": "#/$defs/Node"
+          },
+          "minItems": 1,
+          "title": "Nodes",
+          "type": "array"
+        },
+        "relations": {
+          "items": {
+            "$ref": "#/$defs/Relation"
+          },
+          "title": "Relations",
+          "type": "array"
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "minItems": 1,
+          "title": "Claims",
+          "type": "array"
+        },
+        "destination": {
+          "const": "Substack:DigiProse",
+          "title": "Destination",
+          "type": "string"
+        },
+        "audience": {
+          "minLength": 1,
+          "title": "Audience",
+          "type": "string"
+        },
+        "preparation_budget_ref": {
+          "minLength": 1,
+          "title": "Preparation Budget Ref",
+          "type": "string"
+        },
+        "ceased": {
+          "title": "Ceased",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema_version",
+        "implementation_sha256",
+        "run_id",
+        "transformation_id",
+        "producer_id",
+        "scope",
+        "source_repository",
+        "source_commit",
+        "scope_paths",
+        "sources",
+        "outcome_commit",
+        "outcome_sources",
+        "ua",
+        "theorem",
+        "trial",
+        "nodes",
+        "relations",
+        "claims",
+        "destination",
+        "audience",
+        "preparation_budget_ref",
+        "ceased"
+      ],
+      "title": "Payload",
+      "type": "object"
+    },
+    "Receipt": {
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "$ref": "#/$defs/Decision"
+        },
+        "signature_base64": {
+          "minLength": 1,
+          "title": "Signature Base64",
+          "type": "string"
+        }
+      },
+      "required": [
+        "body",
+        "signature_base64"
+      ],
+      "title": "Receipt",
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "relation_id": {
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Relation Id",
+          "type": "string"
+        },
+        "subject": {
+          "minLength": 1,
+          "title": "Subject",
+          "type": "string"
+        },
+        "object": {
+          "minLength": 1,
+          "title": "Object",
+          "type": "string"
+        },
+        "relation_type": {
+          "minLength": 1,
+          "title": "Relation Type",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "title": "Scope",
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "certainty": {
+          "enum": [
+            "DECLARED_IN_SOURCE",
+            "SYNTACTICALLY_EXTRACTED",
+            "MODEL_INFERRED"
+          ],
+          "title": "Certainty",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "DS_ATBR/0.1-candidate",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "authority_id": {
+          "minLength": 1,
+          "title": "Authority Id",
+          "type": "string"
+        },
+        "admission_status": {
+          "const": "CANDIDATE",
+          "title": "Admission Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "relation_id",
+        "subject",
+        "object",
+        "relation_type",
+        "scope",
+        "evidence_refs",
+        "certainty",
+        "schema_version",
+        "authority_id",
+        "admission_status"
+      ],
+      "title": "Relation",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "file_path": {
+          "minLength": 1,
+          "title": "File Path",
+          "type": "string"
+        },
+        "blob_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Blob Sha256",
+          "type": "string"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "source_id",
+        "file_path",
+        "blob_sha256",
+        "line_start",
+        "line_end"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "Theorem": {
+      "additionalProperties": false,
+      "properties": {
+        "theorem_id": {
+          "minLength": 1,
+          "title": "Theorem Id",
+          "type": "string"
+        },
+        "proposition": {
+          "minLength": 1,
+          "title": "Proposition",
+          "type": "string"
+        },
+        "proposition_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Proposition Sha256",
+          "type": "string"
+        },
+        "assumptions": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "representation_domain": {
+          "minLength": 1,
+          "title": "Representation Domain",
+          "type": "string"
+        },
+        "jurisdiction": {
+          "minLength": 1,
+          "title": "Jurisdiction",
+          "type": "string"
+        },
+        "derivation_ref": {
+          "minLength": 1,
+          "title": "Derivation Ref",
+          "type": "string"
+        },
+        "applicability_ref": {
+          "minLength": 1,
+          "title": "Applicability Ref",
+          "type": "string"
+        },
+        "provenance_ref": {
+          "minLength": 1,
+          "title": "Provenance Ref",
+          "type": "string"
+        },
+        "abstention_ref": {
+          "minLength": 1,
+          "title": "Abstention Ref",
+          "type": "string"
+        },
+        "falsification_protocol_ref": {
+          "minLength": 1,
+          "title": "Falsification Protocol Ref",
+          "type": "string"
+        },
+        "result": {
+          "enum": [
+            "SATISFIED",
+            "FAILED",
+            "UNRESOLVED"
+          ],
+          "title": "Result",
+          "type": "string"
+        },
+        "obligations": {
+          "additionalProperties": {
+            "enum": [
+              "SATISFIED",
+              "FAILED",
+              "UNRESOLVED"
+            ],
+            "type": "string"
+          },
+          "title": "Obligations",
+          "type": "object"
+        },
+        "unresolved_contradictions": {
+          "minimum": 0,
+          "title": "Unresolved Contradictions",
+          "type": "integer"
+        },
+        "limitation": {
+          "minLength": 1,
+          "title": "Limitation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theorem_id",
+        "proposition",
+        "proposition_sha256",
+        "assumptions",
+        "representation_domain",
+        "jurisdiction",
+        "derivation_ref",
+        "applicability_ref",
+        "provenance_ref",
+        "abstention_ref",
+        "falsification_protocol_ref",
+        "result",
+        "obligations",
+        "unresolved_contradictions",
+        "limitation"
+      ],
+      "title": "Theorem",
+      "type": "object"
+    },
+    "Trial": {
+      "additionalProperties": false,
+      "properties": {
+        "preregistration_ref": {
+          "minLength": 1,
+          "title": "Preregistration Ref",
+          "type": "string"
+        },
+        "outcome_evidence_ref": {
+          "minLength": 1,
+          "title": "Outcome Evidence Ref",
+          "type": "string"
+        },
+        "criteria": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Criteria",
+          "type": "array"
+        },
+        "observation_scope": {
+          "minLength": 1,
+          "title": "Observation Scope",
+          "type": "string"
+        },
+        "market_demand": {
+          "enum": [
+            "NOT_ESTABLISHED",
+            "OBSERVED_WITHIN_DECLARED_TRIAL"
+          ],
+          "title": "Market Demand",
+          "type": "string"
+        }
+      },
+      "required": [
+        "preregistration_ref",
+        "outcome_evidence_ref",
+        "criteria",
+        "observation_scope",
+        "market_demand"
+      ],
+      "title": "Trial",
+      "type": "object"
+    },
+    "UABinding": {
+      "additionalProperties": false,
+      "properties": {
+        "raw_export_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Raw Export Sha256",
+          "type": "string"
+        },
+        "producer_revision": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Producer Revision",
+          "type": "string"
+        },
+        "source_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "title": "Source Commit",
+          "type": "string"
+        },
+        "scope_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Scope Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "raw_export_sha256",
+        "producer_revision",
+        "source_commit",
+        "scope_sha256"
+      ],
+      "title": "UABinding",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "payload": {
+      "$ref": "#/$defs/Payload"
+    },
+    "receipts": {
+      "items": {
+        "$ref": "#/$defs/Receipt"
+      },
+      "title": "Receipts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "payload",
+    "receipts"
+  ],
+  "title": "Packet",
+  "type": "object"
+}

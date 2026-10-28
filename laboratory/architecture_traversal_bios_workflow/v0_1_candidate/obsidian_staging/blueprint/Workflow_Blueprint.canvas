@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "709f3dba3d887e40",
+      "type": "file",
+      "file": "00_WORKFLOW.md",
+      "x": 0,
+      "y": 0,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "0cf6b24bc159aa32",
+      "type": "file",
+      "file": "01_GIT_UA.md",
+      "x": 480,
+      "y": 0,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "93dd16f6ab4c7cf0",
+      "type": "file",
+      "file": "02_TRAVERSAL.md",
+      "x": 960,
+      "y": 0,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "eb5fca5ad09fb5fa",
+      "type": "file",
+      "file": "03_THEOREM.md",
+      "x": 0,
+      "y": 330,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "213eeada8c81f2a6",
+      "type": "file",
+      "file": "04_BOUNDARY.md",
+      "x": 480,
+      "y": 330,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "a9933102130df987",
+      "type": "file",
+      "file": "05_EXECUTION_GRAPH.md",
+      "x": 960,
+      "y": 330,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "61b600dc91de6c87",
+      "type": "file",
+      "file": "06_PRODUCT.md",
+      "x": 0,
+      "y": 660,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "f22870b196f75684",
+      "type": "file",
+      "file": "07_BIOSPUB.md",
+      "x": 480,
+      "y": 660,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "491e530598f47c90",
+      "type": "file",
+      "file": "08_DIGIPROSE.md",
+      "x": 960,
+      "y": 660,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "6866953e74101573",
+      "type": "file",
+      "file": "09_CURRENT_HOLD.md",
+      "x": 0,
+      "y": 990,
+      "width": 400,
+      "height": 250
+    }
+  ],
+  "edges": []
+}
