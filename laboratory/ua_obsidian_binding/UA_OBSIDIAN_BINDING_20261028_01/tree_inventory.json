@@ -1,0 +1,3864 @@
+{
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+  "tree_sha": "c4f1af40744d0f5ca0f9e727f1e839d966867d55",
+  "truncated": false,
+  "entries": [
+    {
+      "path": ".agents",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f969be97cf5baca4aeb72c5b204e4ad06549ba5a",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f969be97cf5baca4aeb72c5b204e4ad06549ba5a"
+    },
+    {
+      "path": ".agents/skills",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0dab208bd02810b42456f5c97f15ccf42fb005c5",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/0dab208bd02810b42456f5c97f15ccf42fb005c5"
+    },
+    {
+      "path": ".agents/skills/json-canvas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8444cc13f8b2c3573d03f78c0e041009baefed1c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/8444cc13f8b2c3573d03f78c0e041009baefed1c"
+    },
+    {
+      "path": ".agents/skills/json-canvas/DIGISLEUTH_BINDING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53b31e0ea8397eeb351859ba1dde8001105d222d",
+      "size": 3144,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/53b31e0ea8397eeb351859ba1dde8001105d222d"
+    },
+    {
+      "path": ".agents/skills/json-canvas/LICENSE_UPSTREAM.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddc5cb1bbdb6635e4469cd6af74c5272a61f01dd",
+      "size": 1242,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ddc5cb1bbdb6635e4469cd6af74c5272a61f01dd"
+    },
+    {
+      "path": ".agents/skills/json-canvas/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e0fad4b50812274050c7fc46823cbb247cfcb9c",
+      "size": 3537,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1e0fad4b50812274050c7fc46823cbb247cfcb9c"
+    },
+    {
+      "path": "DISCOVERY_QUERY_FIXTURE_SUITE_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6484ce863f7287b2ae4b80ed3661c33eab0de4a5",
+      "size": 5897,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6484ce863f7287b2ae4b80ed3661c33eab0de4a5"
+    },
+    {
+      "path": "FIELD_TENSION_ANOMALOUS_EXECUTION_PARSING_PACKAGE_SCHEMA_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2868770b23d861b4e7c36d2912e36408fd7a130a",
+      "size": 17299,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2868770b23d861b4e7c36d2912e36408fd7a130a"
+    },
+    {
+      "path": "FIELD_TENSION_SCHEMA_v0.3_CANDIDATE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25417786e6d905a570093b76ec2e064832d8d15e",
+      "size": 16254,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/25417786e6d905a570093b76ec2e064832d8d15e"
+    },
+    {
+      "path": "FIELD_TENSION_SCHEMA_v0.3_STATIC_CLOSURE_RECEIPT_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62792cb83ad6b3a21ecd908b7ba67e924f5980ba",
+      "size": 5190,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/62792cb83ad6b3a21ecd908b7ba67e924f5980ba"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85ae8852a1cf122116da554ab32b47a44b883849",
+      "size": 264,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/85ae8852a1cf122116da554ab32b47a44b883849"
+    },
+    {
+      "path": "governance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fee34d9310fb01996f44f64921c09ddc22e09d7",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/9fee34d9310fb01996f44f64921c09ddc22e09d7"
+    },
+    {
+      "path": "governance/GENERAL_BIOS_PROVENANCE_CONSTITUTION_v1.0.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": "governance/jlk",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ec0bec34d2f08a7902691e272b7e67f1b97c8d5",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/4ec0bec34d2f08a7902691e272b7e67f1b97c8d5"
+    },
+    {
+      "path": "governance/jlk/JLK_OMEGA_LOCALIZATION_CONTRACT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaedce246d62a83588dde69e945cc875fff8f2ee",
+      "size": 3943,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/aaedce246d62a83588dde69e945cc875fff8f2ee"
+    },
+    {
+      "path": "governance/jlk/JLK_ORIENTATION_DELTA_LOCALIZATION_HOOK_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfb70c549f73d9188170436f68e8b37050b31ec6",
+      "size": 1995,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/dfb70c549f73d9188170436f68e8b37050b31ec6"
+    },
+    {
+      "path": "governance/jlk/ORIENTATION_WITNESS_SCHEMA_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc54ac719f65b1be33a1df0b5ab0077e5f2d3fe",
+      "size": 1834,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1dc54ac719f65b1be33a1df0b5ab0077e5f2d3fe"
+    },
+    {
+      "path": "laboratory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78038c89371cef273bfa6fadade1251445c57fbb",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/78038c89371cef273bfa6fadade1251445c57fbb"
+    },
+    {
+      "path": "laboratory/GENERAL_BIOS_LABORATORY_CONSTITUTION_v1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78d9c36d7b8c4553c4fb23cff2922f7201c2a62e",
+      "size": 1426,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/78d9c36d7b8c4553c4fb23cff2922f7201c2a62e"
+    },
+    {
+      "path": "laboratory/LABORATORY_REGISTRY_STATE_v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71a74958b9a55782e3e83a65f489711c0928c476",
+      "size": 591,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/71a74958b9a55782e3e83a65f489711c0928c476"
+    },
+    {
+      "path": "laboratory/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f729a2462f0f1ec317d7816c7737ec096dfbe3ed",
+      "size": 2582,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f729a2462f0f1ec317d7816c7737ec096dfbe3ed"
+    },
+    {
+      "path": "laboratory/conformance",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2aff2a3d3c722ef18e58d54ba4a114bf8a74669b",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/2aff2a3d3c722ef18e58d54ba4a114bf8a74669b"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdfdce47383400e453b69deadf50aeab7a254dbf",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/cdfdce47383400e453b69deadf50aeab7a254dbf"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15068bdc9a052fbbcfb548e7ce8ce997db86d64a",
+      "size": 3452,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/15068bdc9a052fbbcfb548e7ce8ce997db86d64a"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/SHA256SUMS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa588917902dfd49fc2c06c202e8fe1233eb9867",
+      "size": 1873,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/aa588917902dfd49fc2c06c202e8fe1233eb9867"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/corpus_manifest.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8d6094ed964b861a95fc104e6adc9c38a77ac4a",
+      "size": 24261,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a8d6094ed964b861a95fc104e6adc9c38a77ac4a"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/development_exclusions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb9be7df96c262c6f76c85d498ded1fb99530070",
+      "size": 114674,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/fb9be7df96c262c6f76c85d498ded1fb99530070"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c6597060161b59437f26c03658bb802ed0616f3",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/9c6597060161b59437f26c03658bb802ed0616f3"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/controlled_comparison_plan.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5fdf341e5563127e97af66cff5a1796b72a3225",
+      "size": 2635,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a5fdf341e5563127e97af66cff5a1796b72a3225"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/inspection.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "124be197c601f4709828b68cf6f2fa8fac471709",
+      "size": 1360,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/124be197c601f4709828b68cf6f2fa8fac471709"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/parent_RESULTS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d89fc21df24bd7a8ae53ed7b74fa5ca91ec2982a",
+      "size": 3373,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d89fc21df24bd7a8ae53ed7b74fa5ca91ec2982a"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/parent_corpus_requalification_inventory.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0aa5e08fb90e00f133ea00ae7d84444b82755bb2",
+      "size": 330,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0aa5e08fb90e00f133ea00ae7d84444b82755bb2"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/parent_permanent_regression_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fecbb2641a4e8f6c585572c435287088102c0d5f",
+      "size": 15921,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/fecbb2641a4e8f6c585572c435287088102c0d5f"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/parent_requalification_test_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2389e39861ffc0e49c3b586472f863e2887d7da",
+      "size": 137,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d2389e39861ffc0e49c3b586472f863e2887d7da"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/evidence/schema_guard_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a293fca65fb74215b9a7d81c23e7a896cf4d1d5",
+      "size": 27450,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9a293fca65fb74215b9a7d81c23e7a896cf4d1d5"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/gate_contract.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45fa6f70b5d07c419d5f48ed3b69f20e3d87188d",
+      "size": 10147,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/45fa6f70b5d07c419d5f48ed3b69f20e3d87188d"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/gate_status.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89d70440fd799bb6a5774cfdd3e5b11a8c50f15e",
+      "size": 1794,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/89d70440fd799bb6a5774cfdd3e5b11a8c50f15e"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/history",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bda54d58dcec27d26ff68d53223675ed40b31604",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/bda54d58dcec27d26ff68d53223675ed40b31604"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/history/DIGISLEUTH_NEXT_GATE_v0.1_candidate.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c69ea4bd5380b799e22d245860d7ece7fb4b867",
+      "size": 33199,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1c69ea4bd5380b799e22d245860d7ece7fb4b867"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/manifest_admission_contract.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "424fc9202a1e6104eb82fd4f1db8c1dd166d6336",
+      "size": 3150,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/424fc9202a1e6104eb82fd4f1db8c1dd166d6336"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/partition_freeze.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "135ec55404a088eb1047e3bdfda3bbce450ab733",
+      "size": 8175,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/135ec55404a088eb1047e3bdfda3bbce450ab733"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/pending_admission_ledger.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d83fd226ba67a829a5cc66918fe76e283537d57",
+      "size": 1831,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9d83fd226ba67a829a5cc66918fe76e283537d57"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/recording_provenance.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffc6ed69f69155b59c676ae2901aa78873690355",
+      "size": 2019,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ffc6ed69f69155b59c676ae2901aa78873690355"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cd12f0d49bb110eb8c86492297c6f22197623c7",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/3cd12f0d49bb110eb8c86492297c6f22197623c7"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/tests/test_manifest_schemas.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e968856f605b3fd795df82232c8bb86c14838689",
+      "size": 10772,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e968856f605b3fd795df82232c8bb86c14838689"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/validation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8af231e08bd959d6117f65fbfe7b568d6b51b51a",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/8af231e08bd959d6117f65fbfe7b568d6b51b51a"
+    },
+    {
+      "path": "laboratory/conformance/next_gate_v0_2_candidate/validation/requirements.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5333c8dd868c7d373b406d1ceec937f6440a9e09",
+      "size": 1080,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5333c8dd868c7d373b406d1ceec937f6440a9e09"
+    },
+    {
+      "path": "laboratory/experiments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58d45c7a2d6179534e69d782c096de52af306252",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/58d45c7a2d6179534e69d782c096de52af306252"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0ce8a716c2e7aa5cbbff1cc3662b49d5c9c3b2c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f0ce8a716c2e7aa5cbbff1cc3662b49d5c9c3b2c"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/BYTE_IDENTITY_LEDGER.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a386ee38ae71976267890fb0a42955d8df32154e",
+      "size": 1107,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a386ee38ae71976267890fb0a42955d8df32154e"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/PREREGISTRATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "731f6c5c4dfe82711426208090383ea7f3f8dfeb",
+      "size": 2220,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/731f6c5c4dfe82711426208090383ea7f3f8dfeb"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6116ac6b0f97d53b9269ec52d234565caeee2214",
+      "size": 2834,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6116ac6b0f97d53b9269ec52d234565caeee2214"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/apparatus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6e9593083a10fa88c57c472748189055a0882cf",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c6e9593083a10fa88c57c472748189055a0882cf"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/apparatus/reconciliation_wrapper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55a7b914a01af4405056693da038beea5811cc94",
+      "size": 11223,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/55a7b914a01af4405056693da038beea5811cc94"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/package",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c26d589dd655f9dc15430a5f33238b29f699c4e7",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c26d589dd655f9dc15430a5f33238b29f699c4e7"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_1/package/glyph_constitutive_verifier_v0_1.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fb8089c525d3a32a0d12d72150af32b55d192ea",
+      "size": 14147,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3fb8089c525d3a32a0d12d72150af32b55d192ea"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f92a5d828f5b1762cb9435145fd21be0020b70f",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/6f92a5d828f5b1762cb9435145fd21be0020b70f"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1814fd54d72a61e8467afbca3641193955521712",
+      "size": 2559,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1814fd54d72a61e8467afbca3641193955521712"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2/STATIC_MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24928e2ea2626e64f7a31f94ce7e8504edde6694",
+      "size": 581,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/24928e2ea2626e64f7a31f94ce7e8504edde6694"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2/amended_expectations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fca822821b6c00056526f8773f98ab0c096a457",
+      "size": 1299,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/4fca822821b6c00056526f8773f98ab0c096a457"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2/instrumentation_v02.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f5a178866775395ae9a5e476cd2ed93688fad28",
+      "size": 3279,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7f5a178866775395ae9a5e476cd2ed93688fad28"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2/v0.2_PREREGISTRATION_ADDENDUM.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cabc45f60c0e5fa8ef2ddc1c2a1987f4e2e2263",
+      "size": 3325,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9cabc45f60c0e5fa8ef2ddc1c2a1987f4e2e2263"
+    },
+    {
+      "path": "laboratory/experiments/glyph_constitutive_verifier_v0_2/verifier_v02.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c24feb51b8eb95d759b43de4bdf29aa8412dd3db",
+      "size": 7569,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c24feb51b8eb95d759b43de4bdf29aa8412dd3db"
+    },
+    {
+      "path": "laboratory/experiments/governed_epistemic_plasticity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f7030a6e9b96fc3b05b88dc0050858b24713d2f9",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f7030a6e9b96fc3b05b88dc0050858b24713d2f9"
+    },
+    {
+      "path": "laboratory/experiments/governed_epistemic_plasticity/GEP_WD_STATIC_CONFORMANCE_CHECKER_v0.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74df0a024a6471791b14fed17d9878b061795b98",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/74df0a024a6471791b14fed17d9878b061795b98"
+    },
+    {
+      "path": "laboratory/experiments/governed_epistemic_plasticity/GEP_WD_STATIC_CONFORMANCE_CHECKER_v0.1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77733cdec438ba8ee601bfb3f2e070218417a2be",
+      "size": 1525,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/77733cdec438ba8ee601bfb3f2e070218417a2be"
+    },
+    {
+      "path": "laboratory/experiments/governed_epistemic_plasticity/GEP_WD_STATIC_CONFORMANCE_CHECKER_v0.1/adversarial_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a87a8131156a1b56a59abd0fed16435aff083e6",
+      "size": 2986,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3a87a8131156a1b56a59abd0fed16435aff083e6"
+    },
+    {
+      "path": "laboratory/experiments/governed_epistemic_plasticity/GEP_WD_STATIC_CONFORMANCE_CHECKER_v0.1/checker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "482a8224df5714f1eefa5ac02497f65f523100d0",
+      "size": 8636,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/482a8224df5714f1eefa5ac02497f65f523100d0"
+    },
+    {
+      "path": "laboratory/experiments/governed_epistemic_plasticity/GEP_WD_STATIC_CONFORMANCE_CHECKER_v0.1/wd_contract.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8167aad40922c7a46be14b8a60afe0993626b0f6",
+      "size": 1480,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8167aad40922c7a46be14b8a60afe0993626b0f6"
+    },
+    {
+      "path": "laboratory/experiments/project_gamma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6db3d1d63e4c0bbd3ef6e3cad844a1ee32d9aeea",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/6db3d1d63e4c0bbd3ef6e3cad844a1ee32d9aeea"
+    },
+    {
+      "path": "laboratory/experiments/project_gamma/GAMMA_LAW_MANEUVERABILITY_COORDINATE_GENESIS_001.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dcc23528a00fab5b1dcd6f2fad3bbe599e27c5c",
+      "size": 2476,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1dcc23528a00fab5b1dcd6f2fad3bbe599e27c5c"
+    },
+    {
+      "path": "laboratory/experiments/project_gamma/GENERATIVE_UX_JURISDICTION_EXPERIMENT_01_STAGE_2_RUNTIME_BINDING_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0e4be568ab8048b23950c31d8d742ca0db94b8b",
+      "size": 10314,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b0e4be568ab8048b23950c31d8d742ca0db94b8b"
+    },
+    {
+      "path": "laboratory/experiments/project_gamma/PROJECT_GAMMA_HABITAT_REGISTRY_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08743b8e2484dd101e4868cd494ae7ee0ca5756",
+      "size": 3667,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b08743b8e2484dd101e4868cd494ae7ee0ca5756"
+    },
+    {
+      "path": "laboratory/experiments/rcce01",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "338b94f77da06a3bc57ceba8420f5bcaa0835884",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/338b94f77da06a3bc57ceba8420f5bcaa0835884"
+    },
+    {
+      "path": "laboratory/experiments/rcce01/RCCE01_FIXTURE_FIELD_CLOSURE_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fe6a057b641b65c06ff84b360e87dca72d641bd",
+      "size": 4346,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7fe6a057b641b65c06ff84b360e87dca72d641bd"
+    },
+    {
+      "path": "laboratory/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebc1a8e0188dbc193cd90c4938f5e11edc7cc72f",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/ebc1a8e0188dbc193cd90c4938f5e11edc7cc72f"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f837170b3792fb8542dda3357273c4d9ac1067f6",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f837170b3792fb8542dda3357273c4d9ac1067f6"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2f1619f39e14bef4cc5cc57588ff26dd73b88b5",
+      "size": 1129,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c2f1619f39e14bef4cc5cc57588ff26dd73b88b5"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae56cc2de52ca02fdf8dd75171363c141b0b8a77",
+      "size": 1137,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ae56cc2de52ca02fdf8dd75171363c141b0b8a77"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB3.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8007f57a55218414a714623b9564cfaf237d4f2",
+      "size": 1144,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f8007f57a55218414a714623b9564cfaf237d4f2"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb3198178b2db4dd16d0a32e406e47ffb74b2e8e",
+      "size": 1146,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/bb3198178b2db4dd16d0a32e406e47ffb74b2e8e"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB5.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4a26020b972f54626468126237e581596ae3e91",
+      "size": 1162,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e4a26020b972f54626468126237e581596ae3e91"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB6.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a132eb46ec63ff98e4a06647b46b3ec22bcf87e",
+      "size": 1182,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2a132eb46ec63ff98e4a06647b46b3ec22bcf87e"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB7.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4d57a6f9e84834b8892cba60f4eb7cd1289c177",
+      "size": 1217,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a4d57a6f9e84834b8892cba60f4eb7cd1289c177"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/OAB8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dfe3f9a803f88e6ab4ae8f671eed7715d631f7b",
+      "size": 1129,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6dfe3f9a803f88e6ab4ae8f671eed7715d631f7b"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0eb284ff472fe23ee622154bdca2853d10c8b73",
+      "size": 897,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e0eb284ff472fe23ee622154bdca2853d10c8b73"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_1/fixture_oracle.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b554138fb653fa5ec1494b6eac077e789ca8350",
+      "size": 2108,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/4b554138fb653fa5ec1494b6eac077e789ca8350"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf5171827f2a4befca5dfd2ad01365b96057b82d",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/cf5171827f2a4befca5dfd2ad01365b96057b82d"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b82052a014f6f9da2b47471590ac47184acd848e",
+      "size": 1293,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b82052a014f6f9da2b47471590ac47184acd848e"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7043310ffab8d8f2470a70341ce2c6b668513391",
+      "size": 1299,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7043310ffab8d8f2470a70341ce2c6b668513391"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB3.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2783cdae07fdbbf049b899b6b5a153079e1b614d",
+      "size": 1309,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2783cdae07fdbbf049b899b6b5a153079e1b614d"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baca093df15a9d11cdb3b8e7e09f0bdb18632753",
+      "size": 1304,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/baca093df15a9d11cdb3b8e7e09f0bdb18632753"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB5.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3a5e872230c4c6151815e2ec279e35101ef4d80",
+      "size": 1324,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a3a5e872230c4c6151815e2ec279e35101ef4d80"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB6.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aae02eb137fec43cf5be00090c324b7eadf22e92",
+      "size": 1343,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/aae02eb137fec43cf5be00090c324b7eadf22e92"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB7.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "162698b8828c2f2ec054222832b61248faa913b2",
+      "size": 1391,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/162698b8828c2f2ec054222832b61248faa913b2"
+    },
+    {
+      "path": "laboratory/fixtures/oab_v0_2/OAB8.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3711454b12dbf2c627150f13396c3f9d5785d09b",
+      "size": 1277,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3711454b12dbf2c627150f13396c3f9d5785d09b"
+    },
+    {
+      "path": "laboratory/inquiry",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eaa50c48cee65e10d484deb1bc0d9ef1a56b8858",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/eaa50c48cee65e10d484deb1bc0d9ef1a56b8858"
+    },
+    {
+      "path": "laboratory/inquiry/janusian",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88b34da01e2b81237154762a367af24c014402f0",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/88b34da01e2b81237154762a367af24c014402f0"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/EINSTEIN_SOCRATES_CHAMBER_MOUNT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cf2892f0ced7810e669c6ce5389cc9f87e2d12c",
+      "size": 4512,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0cf2892f0ced7810e669c6ce5389cc9f87e2d12c"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/JANUSIAN_THINKING_CHAMBER_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4dceff848faeda1648b864867e773825a6bc1f6",
+      "size": 5774,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f4dceff848faeda1648b864867e773825a6bc1f6"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/PETITION_FOR_INVESTIGATION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcac7c1d3bcf85701d6ff31e5dbcfc9655b30907",
+      "size": 15032,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/bcac7c1d3bcf85701d6ff31e5dbcfc9655b30907"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/PREDICATE_DISJOINTNESS_SPECIFICATION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "126954b38a1b92b7d927500752669020ef8764b7",
+      "size": 19871,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/126954b38a1b92b7d927500752669020ef8764b7"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "575aa6d0bf70661b063d748139799e710696178e",
+      "size": 2095,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/575aa6d0bf70661b063d748139799e710696178e"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1da1f0d5d4614149892022297b4cd2e2886b146c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/1da1f0d5d4614149892022297b4cd2e2886b146c"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b2e29738983bc445272dc75456b6eda475d94d6",
+      "size": 10946,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8b2e29738983bc445272dc75456b6eda475d94d6"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/build_schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2a2a4c51beb329c34e8902e50375368e7d8f25",
+      "size": 2464,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6a2a2a4c51beb329c34e8902e50375368e7d8f25"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8ff2ae710ccf292c3a9f35ef81e42c9d4a6c79e",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/b8ff2ae710ccf292c3a9f35ef81e42c9d4a6c79e"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD01_INTERVAL_PARTITION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5f5ba9efa19ebfd41ff25d07cce01fefb912b9d",
+      "size": 1163,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c5f5ba9efa19ebfd41ff25d07cce01fefb912b9d"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD02_ENDPOINT_COLLISION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bd2dfd7e39b9557e2a28c2dae5ec2fda8f5fabb",
+      "size": 1003,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1bd2dfd7e39b9557e2a28c2dae5ec2fda8f5fabb"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD03_SINGLETON_GAP.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47cea0069d88d9ac767ea60746a2e51f2f4d9605",
+      "size": 1003,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/47cea0069d88d9ac767ea60746a2e51f2f4d9605"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD04_UNIT_ALIAS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d10922d7f6373d91d1927cae115b64095e122a9b",
+      "size": 1041,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d10922d7f6373d91d1927cae115b64095e122a9b"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD05_ENUM_OVERLAP.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eafc3f308946869f9c527916876b52607e9d2a0e",
+      "size": 998,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/eafc3f308946869f9c527916876b52607e9d2a0e"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD06_UNSATISFIABLE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "986865d95fe8559f1f1b5c8ea341920bb90f0503",
+      "size": 1116,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/986865d95fe8559f1f1b5c8ea341920bb90f0503"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD07_UNSUPPORTED_OPERATOR.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5693752f41eb06e80a7b00d9b45df6fb57020c35",
+      "size": 958,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5693752f41eb06e80a7b00d9b45df6fb57020c35"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD08_INVALID_LAYER_LEAK.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d05bb3e020574398c72d9bd429a3573d236a79d",
+      "size": 1246,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8d05bb3e020574398c72d9bd429a3573d236a79d"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD09_RESIDUAL_ROUTING.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "839fdcf7bb3d9f5fdd56aee297a848ea8829bd92",
+      "size": 996,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/839fdcf7bb3d9f5fdd56aee297a848ea8829bd92"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD10_SERIALIZATION_VARIANCE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16869111f312aea49589f3cece4d6852bd90a13f",
+      "size": 1186,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/16869111f312aea49589f3cece4d6852bd90a13f"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD11_BOOLEAN_PARTITION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "694710695cdf9d7637a79b9e17397efdf1557729",
+      "size": 932,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/694710695cdf9d7637a79b9e17397efdf1557729"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD12_INTEGER_FRACTION_BOUNDARY.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2be2c6eb521ec2650ca42e24bb04d2067c937d34",
+      "size": 1168,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2be2c6eb521ec2650ca42e24bb04d2067c937d34"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD13_ENUM_PARTITION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd2e910268708c451ec329ee0ff4fe2e14e1891",
+      "size": 986,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ecd2e910268708c451ec329ee0ff4fe2e14e1891"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD14_MISSING_POLICY.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c1ba65c1045e1113180ae610099bdf93a2edc23",
+      "size": 1119,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8c1ba65c1045e1113180ae610099bdf93a2edc23"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD15_INVALID_DOMAIN.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27e45721794639ae031e08b4fa2b0140da487c42",
+      "size": 1192,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/27e45721794639ae031e08b4fa2b0140da487c42"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD16_UNKNOWN_OBSERVABLE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dfe4e5b9d5bf873854ad7c0cf66836cfd9bc555",
+      "size": 1163,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6dfe4e5b9d5bf873854ad7c0cf66836cfd9bc555"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD17_UNIT_MISMATCH.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a8582e05d9a7fa74cc3ac49b77f3856454148fe",
+      "size": 996,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5a8582e05d9a7fa74cc3ac49b77f3856454148fe"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD18_TYPE_MISMATCH.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9fc3336009e05a4b48e57e4fdc963456055acec",
+      "size": 1142,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d9fc3336009e05a4b48e57e4fdc963456055acec"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/PD19_RESOURCE_LIMIT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "536672e0ac12923499bb2b65a44207fff7b521ac",
+      "size": 6692,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/536672e0ac12923499bb2b65a44207fff7b521ac"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/fixtures/synthetic_source_pfi.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "519bff6475c2127ccb65dd4cc94667baa699f7f8",
+      "size": 87,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/519bff6475c2127ccb65dd4cc94667baa699f7f8"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a6bbbe1bef3383a910c140f35082882bc5ae61",
+      "size": 6286,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/06a6bbbe1bef3383a910c140f35082882bc5ae61"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/observation_example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14f8c32c5a317a03e623ffae26b818ad93bfaeb2",
+      "size": 169,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/14f8c32c5a317a03e623ffae26b818ad93bfaeb2"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/pd_contract.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a135df4d72ce739446a9d3fcca5da4af75440940",
+      "size": 13272,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a135df4d72ce739446a9d3fcca5da4af75440940"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/pd_engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b1c87e17978779c84ffadc53a34767acbf2e697",
+      "size": 22872,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9b1c87e17978779c84ffadc53a34767acbf2e697"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/prototype_gate_assessment.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d41658bc5f5f6022e54e309696e4b94821639a35",
+      "size": 1468,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d41658bc5f5f6022e54e309696e4b94821639a35"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3d896dd4fd555b24a4a0988aaae457791bbc1df",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/d3d896dd4fd555b24a4a0988aaae457791bbc1df"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD01_INTERVAL_PARTITION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db8c35aaa8e1750cd56eadcceef881e621510344",
+      "size": 3919,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/db8c35aaa8e1750cd56eadcceef881e621510344"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD02_ENDPOINT_COLLISION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a948c5f9a0793b74d6839990f7c0f6e98b1a2018",
+      "size": 2724,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a948c5f9a0793b74d6839990f7c0f6e98b1a2018"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD03_SINGLETON_GAP.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165b07831eb0e42b4a7dc827aa6fe7370b02297a",
+      "size": 2876,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/165b07831eb0e42b4a7dc827aa6fe7370b02297a"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD04_UNIT_ALIAS.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cff6edffed06207920e276a3f0ba46cab295e744",
+      "size": 2785,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/cff6edffed06207920e276a3f0ba46cab295e744"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD05_ENUM_OVERLAP.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50d0289c0900c4e8f852f99f322b99cb96577492",
+      "size": 2083,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/50d0289c0900c4e8f852f99f322b99cb96577492"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD06_UNSATISFIABLE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1348e451532fc4efc4e0d69f241321fc81547d7",
+      "size": 1582,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f1348e451532fc4efc4e0d69f241321fc81547d7"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD07_UNSUPPORTED_OPERATOR.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b9b472e778b3b59b14b8173208c0e968ca0c7d7",
+      "size": 562,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/4b9b472e778b3b59b14b8173208c0e968ca0c7d7"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD08_INVALID_LAYER_LEAK.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e4efe03f6bc48b851ee2539152f92ffdfd8f09f",
+      "size": 567,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6e4efe03f6bc48b851ee2539152f92ffdfd8f09f"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD09_RESIDUAL_ROUTING.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "464c6810d3d3be8d49cf6698185c6851ac42b692",
+      "size": 3950,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/464c6810d3d3be8d49cf6698185c6851ac42b692"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD10_SERIALIZATION_VARIANCE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48748aa3164c609fc4deb3f0832aa03436d5a020",
+      "size": 3919,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/48748aa3164c609fc4deb3f0832aa03436d5a020"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD11_BOOLEAN_PARTITION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f0e91adf73ba5ba6a0e3848f638e32f58ef61bf",
+      "size": 2776,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/4f0e91adf73ba5ba6a0e3848f638e32f58ef61bf"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD12_INTEGER_FRACTION_BOUNDARY.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3a16d5b78525a453a89fca4149eb4f78afe4213",
+      "size": 3944,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a3a16d5b78525a453a89fca4149eb4f78afe4213"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD13_ENUM_PARTITION.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93a41abdc56f7ad8265d706ee0496fc399058ee5",
+      "size": 2808,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/93a41abdc56f7ad8265d706ee0496fc399058ee5"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD14_MISSING_POLICY.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb9ba2e28743575585de961dcd2e9f8af74d9060",
+      "size": 570,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/bb9ba2e28743575585de961dcd2e9f8af74d9060"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD15_INVALID_DOMAIN.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d68220b86aa79c1d447b33085fb66568d4a4640",
+      "size": 534,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7d68220b86aa79c1d447b33085fb66568d4a4640"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD16_UNKNOWN_OBSERVABLE.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4e378646a4f29c373f6c98c54f59206f5bea71a",
+      "size": 551,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d4e378646a4f29c373f6c98c54f59206f5bea71a"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD17_UNIT_MISMATCH.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "466df2163ffb2fb2c821fd529afa98de84222f58",
+      "size": 523,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/466df2163ffb2fb2c821fd529afa98de84222f58"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD18_TYPE_MISMATCH.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "351fb78a982c719346b62dbb5e89e202c84c9e9b",
+      "size": 547,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/351fb78a982c719346b62dbb5e89e202c84c9e9b"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/receipts/PD19_RESOURCE_LIMIT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb3b64a8947a81ef6a73c744ed31128d010a259b",
+      "size": 550,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/eb3b64a8947a81ef6a73c744ed31128d010a259b"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/test_pd_engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fa8d5eacf16dd094c8a83080e2b918ceb92bead",
+      "size": 12582,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7fa8d5eacf16dd094c8a83080e2b918ceb92bead"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pd_v0_2a/test_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c93e17b4039ed1a227449eb6b194dbbaacce6bf2",
+      "size": 5580,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c93e17b4039ed1a227449eb6b194dbbaacce6bf2"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8400228a559e1cea0017bfacb8f1b411174cc882",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/8400228a559e1cea0017bfacb8f1b411174cc882"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fa7b7891a6c606ec265b7c4e15c79c7e792ab69",
+      "size": 10526,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3fa7b7891a6c606ec265b7c4e15c79c7e792ab69"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/authority_separation_receipt.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f724b3823357357fc109999378742ed2a140c5b3",
+      "size": 1471,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f724b3823357357fc109999378742ed2a140c5b3"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/build_schemas.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38fe422fadd42ff45ff631282c821781c5abbb4c",
+      "size": 5397,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/38fe422fadd42ff45ff631282c821781c5abbb4c"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/dependency_receipt.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a8a33362f97deda3dba82582a180341412097d8",
+      "size": 1350,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0a8a33362f97deda3dba82582a180341412097d8"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c803fbcde229a15488fc49a7af12b7a45545a015",
+      "size": 3015,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c803fbcde229a15488fc49a7af12b7a45545a015"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/pfi_candidate.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5f596fed74c267d004a2b1d9cacd55929efca0",
+      "size": 17100,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9c5f596fed74c267d004a2b1d9cacd55929efca0"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/pfi_validator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8edd6edf51e4a5c551c3f85a80c8ce73d9434d25",
+      "size": 7181,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8edd6edf51e4a5c551c3f85a80c8ce73d9434d25"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ee1ea1a4270a73d0a83859fefca415177450121",
+      "size": 19,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3ee1ea1a4270a73d0a83859fefca415177450121"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/review_receipt.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cda8cde73a6be5bc85396da3e61eb7d0c9226f07",
+      "size": 10295,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/cda8cde73a6be5bc85396da3e61eb7d0c9226f07"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45edaf3e48e43d3c40931adae3f8de2f639be1c1",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/45edaf3e48e43d3c40931adae3f8de2f639be1c1"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/abstain_fault.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77f6b5feeee0477ff516721e095556dd212171a6",
+      "size": 4729,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/77f6b5feeee0477ff516721e095556dd212171a6"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/authority_separation_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3954b80098ba958ca804547007d5a6832b57ef7d",
+      "size": 574,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3954b80098ba958ca804547007d5a6832b57ef7d"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/candidate.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "270658945f7ceb2ccdc41dcac9cc64b7dcccfa58",
+      "size": 4726,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/270658945f7ceb2ccdc41dcac9cc64b7dcccfa58"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/dependency_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a677c3b092a1e49645a820f34ed4f3bc42ee5f5b",
+      "size": 483,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a677c3b092a1e49645a820f34ed4f3bc42ee5f5b"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/membrane_fault.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3380849139fedf2814a7c85f52bd24c588db9a3",
+      "size": 4726,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b3380849139fedf2814a7c85f52bd24c588db9a3"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/review_artifact.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a7776c4ea7a8df75293d977adf127592f7065c7",
+      "size": 72,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0a7776c4ea7a8df75293d977adf127592f7065c7"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/review_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e1c6b64b5507f00ab466ecefea6c455d7da4fe1",
+      "size": 2101,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0e1c6b64b5507f00ab466ecefea6c455d7da4fe1"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/synthetic_examples/source_janusian.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a036cd24c079d6f67c997ba42fce190ab0feb6cc",
+      "size": 109,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a036cd24c079d6f67c997ba42fce190ab0feb6cc"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/test_results.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac195a930c726e92270ab85d451bdd6ae3b881b7",
+      "size": 5871,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ac195a930c726e92270ab85d451bdd6ae3b881b7"
+    },
+    {
+      "path": "laboratory/inquiry/janusian/pfi_v0_1r/test_validator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e5b95a67272968341febe063a576a2b94cae657",
+      "size": 10414,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3e5b95a67272968341febe063a576a2b94cae657"
+    },
+    {
+      "path": "laboratory/protocols",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0473d990f71ad9ba6de495202bb737307ea79b48",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/0473d990f71ad9ba6de495202bb737307ea79b48"
+    },
+    {
+      "path": "laboratory/protocols/MAGUS_ADJUDICATION_BATTERY_STATIC_VALIDATION_v0.1.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e8921b2127c11eb01d6dc4228512edfa0bbbe4",
+      "size": 5707,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/10e8921b2127c11eb01d6dc4228512edfa0bbbe4"
+    },
+    {
+      "path": "laboratory/protocols/MAGUS_ADJUDICATION_MEMBRANE_BATTERY_v0.1.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ff3b403d58cc0547872cbb7daee7c69eddf3a84",
+      "size": 5145,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2ff3b403d58cc0547872cbb7daee7c69eddf3a84"
+    },
+    {
+      "path": "laboratory/runtime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b111be383877af2cd098936918e7b927a219ca58",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/b111be383877af2cd098936918e7b927a219ca58"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5b98beade9393ea2d75738810183d5e9a6ecfa1",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/d5b98beade9393ea2d75738810183d5e9a6ecfa1"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9fae1065ace266dc87bd0f46d3d6ada189bb7ea",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/a9fae1065ace266dc87bd0f46d3d6ada189bb7ea"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1/LOADER_CONFORMANCE_EVALUATION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce44065ac1dc38964d82f4a6b2a9c63589f13e38",
+      "size": 3634,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ce44065ac1dc38964d82f4a6b2a9c63589f13e38"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "371700abf9a45f06f84a637fb1cb9c8a0b0cf806",
+      "size": 3027,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/371700abf9a45f06f84a637fb1cb9c8a0b0cf806"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1/battery_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f911bff02849fcaccda22c9af6cfe689458800c5",
+      "size": 1570,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f911bff02849fcaccda22c9af6cfe689458800c5"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1/fixture_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "240faba07a10bb9b4f1aed65b32a845b848718c9",
+      "size": 6373,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/240faba07a10bb9b4f1aed65b32a845b848718c9"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1/loader_contract.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8a62ac724f11d2fd9e44a82da087bdc4d5d150c",
+      "size": 3306,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c8a62ac724f11d2fd9e44a82da087bdc4d5d150c"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_1/static_loader_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ad56019487c36c1f91c92a3fb19c84a40e51cbc",
+      "size": 5170,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5ad56019487c36c1f91c92a3fb19c84a40e51cbc"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c39afe431d7924880cc663cc51a551a3b1049663",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c39afe431d7924880cc663cc51a551a3b1049663"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2/OAB_FIXTURE_INGRESS_VERSIONING_ADJUDICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26f4e7ee5e038467b1b874cdaabb49c124834044",
+      "size": 799,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/26f4e7ee5e038467b1b874cdaabb49c124834044"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "438d88079520fe1e4e9895ca251d4fa05ab1e6d2",
+      "size": 1757,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/438d88079520fe1e4e9895ca251d4fa05ab1e6d2"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2/battery_manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5400337799fd2c815bfd8c881ceb4c0c6cd4a6f9",
+      "size": 1697,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5400337799fd2c815bfd8c881ceb4c0c6cd4a6f9"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2/fixture_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dea9cb65d467d46308b51c08057d4130d74c7f74",
+      "size": 6923,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/dea9cb65d467d46308b51c08057d4130d74c7f74"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2/loader_contract.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cdb0cab10cefbb51fa797bee6c9490db62dffdd",
+      "size": 3618,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2cdb0cab10cefbb51fa797bee6c9490db62dffdd"
+    },
+    {
+      "path": "laboratory/runtime/fixture_ingress/oab_v0_2/static_loader_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fde97c2aed0ecb1ae5833a4907552f9a9e9e8a9",
+      "size": 3376,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5fde97c2aed0ecb1ae5833a4907552f9a9e9e8a9"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43187112ba4ef464f02d327af6b03083dfd27a6a",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/43187112ba4ef464f02d327af6b03083dfd27a6a"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fab30ef4f1d5e3465c96ddbe8fc9289e79357c99",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/fab30ef4f1d5e3465c96ddbe8fc9289e79357c99"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1/MAGUS_EG10_PREREGISTRATION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f1a572179b4e047a09e3e2f0dbc702025caa69",
+      "size": 4917,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/68f1a572179b4e047a09e3e2f0dbc702025caa69"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d51386abd4bd4ba94d795510fbcb07fb2cb1a7fd",
+      "size": 473,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d51386abd4bd4ba94d795510fbcb07fb2cb1a7fd"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1/SHA256SUMS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d37466921fbf5c24f91ad2b2334e0776e950b50e",
+      "size": 425,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d37466921fbf5c24f91ad2b2334e0776e950b50e"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1/TEST_RESULTS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e32b59cab39c4618f1b6db4590e43a5fd9a9e70",
+      "size": 1278,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1e32b59cab39c4618f1b6db4590e43a5fd9a9e70"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1/magus_eg10_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6ea2383362034edd44f1ae2004ab315b2b5f561",
+      "size": 10345,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e6ea2383362034edd44f1ae2004ab315b2b5f561"
+    },
+    {
+      "path": "laboratory/runtime/magus_execution_gate/eg10_v0.1/test_eg10.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bc46e3a8d7d950ff9a6a938fa299bed1ec54421",
+      "size": 5764,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8bc46e3a8d7d950ff9a6a938fa299bed1ec54421"
+    },
+    {
+      "path": "laboratory/runtime/omega_tuple",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "61b6e36de041bff7bed2afb8bd97a4ffd4a8d45d",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/61b6e36de041bff7bed2afb8bd97a4ffd4a8d45d"
+    },
+    {
+      "path": "laboratory/runtime/omega_tuple/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ac6785647cb07b59ff136243a8bb274e86bec96",
+      "size": 1107,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1ac6785647cb07b59ff136243a8bb274e86bec96"
+    },
+    {
+      "path": "laboratory/runtime/omega_tuple/omega_tuple.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee9e0ee698801f16fc32c904295d9e7207cf2c28",
+      "size": 550,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ee9e0ee698801f16fc32c904295d9e7207cf2c28"
+    },
+    {
+      "path": "laboratory/runtime/omega_tuple/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efcd9d4c73f6e3ecc3f69d653582f652ae766beb",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/efcd9d4c73f6e3ecc3f69d653582f652ae766beb"
+    },
+    {
+      "path": "laboratory/runtime/omega_tuple/src/lib.rs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a3a3662ddf09597a03cee0ee1c504d30d76d174",
+      "size": 4986,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3a3a3662ddf09597a03cee0ee1c504d30d76d174"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5453123b02625b351e7d3dc345633e85806bbcd5",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/5453123b02625b351e7d3dc345633e85806bbcd5"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "455b175a06dbcab376ccce35270680d263e775da",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/455b175a06dbcab376ccce35270680d263e775da"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/PACKAGE_MANIFEST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7452fce3c2804502b9ce03ad01aa70e8294eb4f1",
+      "size": 1054,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7452fce3c2804502b9ce03ad01aa70e8294eb4f1"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "805c9a64b7ae5382be024bac163ea8d1de578811",
+      "size": 797,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/805c9a64b7ae5382be024bac163ea8d1de578811"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/SHA256SUMS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ae65688aed90d747713e9356cd619d8865e23cb",
+      "size": 1154,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2ae65688aed90d747713e9356cd619d8865e23cb"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/SP_PREREGISTRATION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63dcfc89eaf5fee36c6d8492329184fe794e8321",
+      "size": 2045,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/63dcfc89eaf5fee36c6d8492329184fe794e8321"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/package",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c734ed2187ac036b83064cf39894d0fa46acfaf",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/5c734ed2187ac036b83064cf39894d0fa46acfaf"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/package/SP_OPERATIONAL_TOPOLOGY_REFERENCE_v0.1.zip.part00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4a18ea94d83ac84037173fd26b35ff30f62af91",
+      "size": 3000,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a4a18ea94d83ac84037173fd26b35ff30f62af91"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/package/SP_OPERATIONAL_TOPOLOGY_REFERENCE_v0.1.zip.part01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "748b34c7d43fad71169ae4274667baa22099b3bb",
+      "size": 3000,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/748b34c7d43fad71169ae4274667baa22099b3bb"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/package/SP_OPERATIONAL_TOPOLOGY_REFERENCE_v0.1.zip.part02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "190722a5f63b2d175058d4bc5b4708cdc987ee4a",
+      "size": 3000,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/190722a5f63b2d175058d4bc5b4708cdc987ee4a"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/package/SP_OPERATIONAL_TOPOLOGY_REFERENCE_v0.1.zip.part03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc70a3413194076faa383e8e6c1de0c395c1a14d",
+      "size": 3000,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/cc70a3413194076faa383e8e6c1de0c395c1a14d"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.1/package/SP_OPERATIONAL_TOPOLOGY_REFERENCE_v0.1.zip.part04",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7453f988cdc7a0b67f47ddd4a9f16076001220a",
+      "size": 2215,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e7453f988cdc7a0b67f47ddd4a9f16076001220a"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0aa0962b1896df009a4db0010e1ca258c709cda0",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/0aa0962b1896df009a4db0010e1ca258c709cda0"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/PACKAGE_MANIFEST.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "826d0d819ac95f9777b5e56bafe5257679c7fcb0",
+      "size": 914,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/826d0d819ac95f9777b5e56bafe5257679c7fcb0"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "647b2ec4bb69017ffd93e32fc751a96749ed1145",
+      "size": 641,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/647b2ec4bb69017ffd93e32fc751a96749ed1145"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/SHA256SUMS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41d6491e8086e282e45692a365cd6b98460c9719",
+      "size": 906,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/41d6491e8086e282e45692a365cd6b98460c9719"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/SP_DESCENDANT_PREREGISTRATION_v0.2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7243669d657460ad9174a234f04e480a6db95961",
+      "size": 1914,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7243669d657460ad9174a234f04e480a6db95961"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/package",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07258c19ab122ff7d97b7ec491ebb9866a05b834",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/07258c19ab122ff7d97b7ec491ebb9866a05b834"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/package/SP_DESCENDANT_ORACLE_SUITE_v0.2.zip.part00",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d68fd9d5cb585cb8285e37f3467802b2123b183",
+      "size": 3500,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8d68fd9d5cb585cb8285e37f3467802b2123b183"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/package/SP_DESCENDANT_ORACLE_SUITE_v0.2.zip.part01",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6981c3892764474ac4309731f4338c144ae9db39",
+      "size": 3500,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6981c3892764474ac4309731f4338c144ae9db39"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/package/SP_DESCENDANT_ORACLE_SUITE_v0.2.zip.part02",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "147fd899b718575fba92efebfb54a7f7c224f623",
+      "size": 3500,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/147fd899b718575fba92efebfb54a7f7c224f623"
+    },
+    {
+      "path": "laboratory/runtime/operational_topology/sp_v0.2/package/SP_DESCENDANT_ORACLE_SUITE_v0.2.zip.part03",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cd2e44982e7aedad6d2d80af30e967a9da3767c",
+      "size": 2645,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6cd2e44982e7aedad6d2d80af30e967a9da3767c"
+    },
+    {
+      "path": "laboratory/runtime/orientation_lifecycle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5cceebd2b5274ce6dbd110ec24a7246426d9847",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f5cceebd2b5274ce6dbd110ec24a7246426d9847"
+    },
+    {
+      "path": "laboratory/runtime/orientation_lifecycle/canonical_encoding.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21ab590248c670bc1091b34dea6bc8c2bcc724af",
+      "size": 2006,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/21ab590248c670bc1091b34dea6bc8c2bcc724af"
+    },
+    {
+      "path": "laboratory/runtime/orientation_lifecycle/invalidation_witness.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "438714b23458da141c17361e05678dad426798ba",
+      "size": 1422,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/438714b23458da141c17361e05678dad426798ba"
+    },
+    {
+      "path": "laboratory/runtime/orientation_lifecycle/localization_hook.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b010c30c4abf63db6b63c1f196724450052dbecc",
+      "size": 4561,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b010c30c4abf63db6b63c1f196724450052dbecc"
+    },
+    {
+      "path": "laboratory/runtime/orientation_lifecycle/orientation_monitor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6061c4972819ea33bf68b04d4b065856666e9984",
+      "size": 2774,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6061c4972819ea33bf68b04d4b065856666e9984"
+    },
+    {
+      "path": "laboratory/runtime/orientation_lifecycle/static_localization_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe68768cd79ff3fa26a447e7a28d73e50af7cbd1",
+      "size": 2696,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/fe68768cd79ff3fa26a447e7a28d73e50af7cbd1"
+    },
+    {
+      "path": "laboratory/runtime/orientation_replay",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92aa20e5294d50f0098748879b741b12ec966a85",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/92aa20e5294d50f0098748879b741b12ec966a85"
+    },
+    {
+      "path": "laboratory/runtime/orientation_replay/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f6b3bc3fd3a9622778dc3fffbcfbcee5bb0543c",
+      "size": 4229,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6f6b3bc3fd3a9622778dc3fffbcfbcee5bb0543c"
+    },
+    {
+      "path": "laboratory/runtime/orientation_replay/adversarial_replay_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e1a25d158961857cb4ac3325c7a9870b5dbc785",
+      "size": 6431,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7e1a25d158961857cb4ac3325c7a9870b5dbc785"
+    },
+    {
+      "path": "laboratory/runtime/orientation_replay/replay_validator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff76f60407186a032cc100e90ef30ed0ffbc7b8c",
+      "size": 9252,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ff76f60407186a032cc100e90ef30ed0ffbc7b8c"
+    },
+    {
+      "path": "laboratory/to_market",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5532874356f39a7309aec334a537f85fd14a84f3",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/5532874356f39a7309aec334a537f85fd14a84f3"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16fb47f7e89f0b4fb6cb8104d5da2c2eb86524df",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/16fb47f7e89f0b4fb6cb8104d5da2c2eb86524df"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1/COMMERCIAL_TRANSLATION_OBJECT_v0.1.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa8664022a5fd2c9cdd0b53c87a89cdf35ee17ed",
+      "size": 3322,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/aa8664022a5fd2c9cdd0b53c87a89cdf35ee17ed"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1/TO_MARKET_BOUNDARY_EXECUTABLE_CONFORMANCE_RECEIPT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76ccba66c4eea41069cfeb6ecd3898538ddf8c38",
+      "size": 2845,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/76ccba66c4eea41069cfeb6ecd3898538ddf8c38"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1/TO_MARKET_BOUNDARY_SEAL_MANIFEST_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65844cc70be3223c8e41b5890b2aaf9dfe859ad5",
+      "size": 1793,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/65844cc70be3223c8e41b5890b2aaf9dfe859ad5"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1/TO_MARKET_EVENT_v0.1.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf72c586b09c1a298b73523856e31edadd1a4ef4",
+      "size": 1966,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/cf72c586b09c1a298b73523856e31edadd1a4ef4"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1/commercial_translation_validator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f1de3c2869dc0d855208357047a36ff83762fb4",
+      "size": 2239,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2f1de3c2869dc0d855208357047a36ff83762fb4"
+    },
+    {
+      "path": "laboratory/to_market/boundary_v0_1/maturity_transition_emitter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "447d948dce70b530099d0597250ae3414db538b3",
+      "size": 2062,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/447d948dce70b530099d0597250ae3414db538b3"
+    },
+    {
+      "path": "laboratory/to_market/client_admission",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25fb4949cac5ab75f4e22693b3788068f2d3e447",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/25fb4949cac5ab75f4e22693b3788068f2d3e447"
+    },
+    {
+      "path": "laboratory/to_market/client_admission/v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c89e7f7b2cf10dd164e7048853921214236838f",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/6c89e7f7b2cf10dd164e7048853921214236838f"
+    },
+    {
+      "path": "laboratory/to_market/client_admission/v0_1/CLIENT_ASSESSMENT_ADMISSION_PETITION_v0.1.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b4e9f9cb5b980f3866aa3318885a66c5f4bb4dd",
+      "size": 4665,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2b4e9f9cb5b980f3866aa3318885a66c5f4bb4dd"
+    },
+    {
+      "path": "laboratory/to_market/client_admission/v0_1/CLIENT_ASSESSMENT_ADMISSION_RECEIPT_CAAP_ALPHA_001_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "859a4601989c0d2cb9e41619e3aaefdeb146eb43",
+      "size": 2395,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/859a4601989c0d2cb9e41619e3aaefdeb146eb43"
+    },
+    {
+      "path": "laboratory/to_market/client_admission/v0_1/SPECIMEN_CAAP_ALPHA_001.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f74daa95e4c7b38e54b7ecad636b132abca8a928",
+      "size": 1681,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f74daa95e4c7b38e54b7ecad636b132abca8a928"
+    },
+    {
+      "path": "laboratory/to_market/client_admission/v0_1/client_assessment_adjudicator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c802405cf6d1b07d4f17788f18b68a841828f903",
+      "size": 3964,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c802405cf6d1b07d4f17788f18b68a841828f903"
+    },
+    {
+      "path": "laboratory/to_market/governed_ingestion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae9ecaf74fae08d59d157e58df4cef7b9abdca02",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/ae9ecaf74fae08d59d157e58df4cef7b9abdca02"
+    },
+    {
+      "path": "laboratory/to_market/governed_ingestion/gic_001_v0_2_candidate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3bbdf1439f820d3a4e9bb2f6927647ec4cc9be6f",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/3bbdf1439f820d3a4e9bb2f6927647ec4cc9be6f"
+    },
+    {
+      "path": "laboratory/to_market/governed_ingestion/gic_001_v0_2_candidate/GIC-001_CHECKPOINT_CONFIGURATION_RECEIPT_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3b9221e879b9d5accfce80a7453c66c38f54f84",
+      "size": 5071,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b3b9221e879b9d5accfce80a7453c66c38f54f84"
+    },
+    {
+      "path": "laboratory/to_market/governed_ingestion/gic_001_v0_2_candidate/GIC-001_LINEAGE_MANIFEST_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19237a03e5cfda96c4aec434350a64e77dbf75ed",
+      "size": 2721,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/19237a03e5cfda96c4aec434350a64e77dbf75ed"
+    },
+    {
+      "path": "laboratory/to_market/governed_ingestion/gic_001_v0_2_candidate/GIC-001_Recovery_Record_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6316a85cd0fe9b7072eb2b78bdbebabe5ed0fbe",
+      "size": 13454,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e6316a85cd0fe9b7072eb2b78bdbebabe5ed0fbe"
+    },
+    {
+      "path": "laboratory/to_market/governed_ingestion/gic_001_v0_2_candidate/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cd071accad7ac8b0512d1df76e2240fa1a6c188",
+      "size": 4036,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8cd071accad7ac8b0512d1df76e2240fa1a6c188"
+    },
+    {
+      "path": "laboratory/to_market/offers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e51d5b52f414f433c1c9a2f6232ed9faa6c9030e",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/e51d5b52f414f433c1c9a2f6232ed9faa6c9030e"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c60129bd1f7da6b8f473b45152596ade49ac1c17",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c60129bd1f7da6b8f473b45152596ade49ac1c17"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_ADMISSION_CONFORMANCE_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58d9d549de68b42227bfcea6aaace3d7c16e960c",
+      "size": 1956,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/58d9d549de68b42227bfcea6aaace3d7c16e960c"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_CONTRACT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08535541ee5443601da56dee48f2693b70fc5100",
+      "size": 1602,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/08535541ee5443601da56dee48f2693b70fc5100"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_CONTRACT_v0.1.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2182070724e5274d3c500e5f01f03e38b38723b",
+      "size": 2931,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f2182070724e5274d3c500e5f01f03e38b38723b"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/ASSESSMENT_ADMISSION_GATE_v0.1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c20ce24e78e6b4e4807803e779260e93760505e",
+      "size": 2997,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5c20ce24e78e6b4e4807803e779260e93760505e"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/ASSESSMENT_FINDING_SCHEMA_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec71be1c12f6ac1b868e352ccb38d21082ef0813",
+      "size": 1298,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ec71be1c12f6ac1b868e352ccb38d21082ef0813"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/ASSESSMENT_RESULT_SCHEMA_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45c71e9989e4fa61292aed30a832aada40eb6010",
+      "size": 2119,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/45c71e9989e4fa61292aed30a832aada40eb6010"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/ASSESSMENT_SCOPE_SCHEMA_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eed0cfcde60b171cbf79e13a5e7ed92ea747ad73",
+      "size": 599,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/eed0cfcde60b171cbf79e13a5e7ed92ea747ad73"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83bb478c26e26ab1525714e7705d89f44ad95353",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/83bb478c26e26ab1525714e7705d89f44ad95353"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/CLIENT_AUTHENTICATION_AND_DIAGNOSTIC_EXECUTION_CONFORMANCE_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba440a9d6dea13699a3108e652db8fdbc3599687",
+      "size": 1349,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ba440a9d6dea13699a3108e652db8fdbc3599687"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/CLIENT_FACT_AUTHENTICATION_BUNDLE_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca2cd18891c61e9ffdbd92a809153a1eb675d396",
+      "size": 972,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ca2cd18891c61e9ffdbd92a809153a1eb675d396"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/CLIENT_FACT_AUTHENTICATION_BUNDLE_v0.1.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8917834042067b9279a42cc49f3cad6136ad622d",
+      "size": 1350,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8917834042067b9279a42cc49f3cad6136ad622d"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/DIAGNOSTIC_EXECUTION_AUTHORIZATION_PETITION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d331b2991079eb36db86250b5303e66d7652de97",
+      "size": 928,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d331b2991079eb36db86250b5303e66d7652de97"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/DIAGNOSTIC_EXECUTION_AUTHORIZATION_PETITION_v0.1.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "636d0cd9ee9c654330b89dd783abc491fe1d96c5",
+      "size": 1228,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/636d0cd9ee9c654330b89dd783abc491fe1d96c5"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/client_auth_exec_gate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffc1c67da351e6cc2857185d1038fa2b73cef8c0",
+      "size": 3464,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ffc1c67da351e6cc2857185d1038fa2b73cef8c0"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/client_execution_boundary_v0_1/synthetic_client_auth_exec_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c562402653a6d4f83374e178f761cbe9277a9ae8",
+      "size": 4558,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c562402653a6d4f83374e178f761cbe9277a9ae8"
+    },
+    {
+      "path": "laboratory/to_market/offers/agent_runtime_governance_assessment_v0_1/synthetic_assessment_admission_battery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87f8acdd8b255dc5a04d3039f7db4764d36e1fef",
+      "size": 4007,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/87f8acdd8b255dc5a04d3039f7db4764d36e1fef"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0733f2ebd8bc90da61917e93e21f92048134bb2",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f0733f2ebd8bc90da61917e93e21f92048134bb2"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "370212e0a962837ddc4985a4cd4319a493c283cf",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/370212e0a962837ddc4985a4cd4319a493c283cf"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/ARCHIVE_README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eb97f5da049e731c637f8a92b5762a00f53b8f0",
+      "size": 8293,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0eb97f5da049e731c637f8a92b5762a00f53b8f0"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/PHC_GIT_LINEAGE_MANIFEST_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06b3a75bae02ad1e302ceebc7eca6f638d686392",
+      "size": 10973,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/06b3a75bae02ad1e302ceebc7eca6f638d686392"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/PHC_POST_COMMIT_GIT_BINDING_RECEIPT_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7928d819f93d9d1389c7f9c6a3caaa5b1710f456",
+      "size": 12077,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7928d819f93d9d1389c7f9c6a3caaa5b1710f456"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41989a07c8243e75b9dc36e59f5578cb8e462783",
+      "size": 3479,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/41989a07c8243e75b9dc36e59f5578cb8e462783"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c67bdb43e70c5256eb89b052fd15b7f56015bb1e",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c67bdb43e70c5256eb89b052fd15b7f56015bb1e"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/archive/PHC_PROTOTYPE_EVIDENCE_v0.1.1_candidate.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d410885f59f78ac00272252970afc2f008c5920",
+      "size": 535563,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7d410885f59f78ac00272252970afc2f008c5920"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/contract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f24c4c29b7f8c651a636ebcc511ba027476b558c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f24c4c29b7f8c651a636ebcc511ba027476b558c"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/contract/BIOS_PUBLICATION_HARNESS_CONTRACT_v0.1_candidate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "671a61ae053cec771c9c2982c712462195c2877b",
+      "size": 18549,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/671a61ae053cec771c9c2982c712462195c2877b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "354cc14ee5c6302c09e7134f72f0509e04876c70",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/354cc14ee5c6302c09e7134f72f0509e04876c70"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/fixtures/execution_envelope.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21c785b6f127acfe855c291165c495056081171b",
+      "size": 694,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/21c785b6f127acfe855c291165c495056081171b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/fixtures/plan.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f03f924915713837a15ed860656ed07bfa871d32",
+      "size": 6280,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f03f924915713837a15ed860656ed07bfa871d32"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/fixtures/useful_draft_criterion.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad64cec252be6ddf112bc961170fd11e523b8c94",
+      "size": 777,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ad64cec252be6ddf112bc961170fd11e523b8c94"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/history",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9d47a8bd10b17b8b80892cfc6cda144f95e6570",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f9d47a8bd10b17b8b80892cfc6cda144f95e6570"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/history/prior_execution.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4752fa27a6a66253924ed3357c5bfd9da06fa17",
+      "size": 5327,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e4752fa27a6a66253924ed3357c5bfd9da06fa17"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/inputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f74f80d9f94fd9f9ccdad306d6f598d68a60270",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/3f74f80d9f94fd9f9ccdad306d6f598d68a60270"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/inputs/source_record.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73dd7cf93fb106639c80442af18895f7c4374c0f",
+      "size": 497,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/73dd7cf93fb106639c80442af18895f7c4374c0f"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/inputs/submitted_source.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "890d906e647bd8dec0594b59096c6db91b63da85",
+      "size": 739,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/890d906e647bd8dec0594b59096c6db91b63da85"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cbbaf40ca1ad7187c14b2d9cfabb9fd2fc866a3",
+      "size": 8543,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1cbbaf40ca1ad7187c14b2d9cfabb9fd2fc866a3"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b879f50806103afd14a045823548f4b634052b7c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/b879f50806103afd14a045823548f4b634052b7c"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "302b063cef9f8496a020eabe6065c085f72bfd7d",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/302b063cef9f8496a020eabe6065c085f72bfd7d"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-01.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20bef0cde132baf0199bcb30630eeb8c6916709",
+      "size": 5115,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f20bef0cde132baf0199bcb30630eeb8c6916709"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-02.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24262e2bb00f95c73d1390be46618f2af6789a56",
+      "size": 9007,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/24262e2bb00f95c73d1390be46618f2af6789a56"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-03.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4f3d57d509795b86e37480760e488ec4ac89d69",
+      "size": 5283,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c4f3d57d509795b86e37480760e488ec4ac89d69"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-04.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c17fbeb8560a95e27972ab966514c43f1d276f0",
+      "size": 5578,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5c17fbeb8560a95e27972ab966514c43f1d276f0"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-05.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bde56ca3c959207f6e55046fa24b8548608fd3b",
+      "size": 5099,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7bde56ca3c959207f6e55046fa24b8548608fd3b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-06.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6504ba54beeabf3a07f796162579e359e72d248a",
+      "size": 5317,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6504ba54beeabf3a07f796162579e359e72d248a"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-07.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3339d45cff4d53eed6944c9352e8324bfb0160c",
+      "size": 4913,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c3339d45cff4d53eed6944c9352e8324bfb0160c"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-08.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa409a4692f7b6f7d895584f638cb0bccfb7ebf3",
+      "size": 4986,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/aa409a4692f7b6f7d895584f638cb0bccfb7ebf3"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-09.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d403905300c5c157cde9d4919fe4e72ab4bd1d03",
+      "size": 5636,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d403905300c5c157cde9d4919fe4e72ab4bd1d03"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-10.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0cfe13cd5a264424d5bd0b9b43c9187d6f630b5",
+      "size": 12834,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e0cfe13cd5a264424d5bd0b9b43c9187d6f630b5"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-11.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b07142823db2044f4ca7712769863458f7b3ac76",
+      "size": 12296,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b07142823db2044f4ca7712769863458f7b3ac76"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/case_receipts/PHC-12.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a85757b0dd4869a83afdcf48c2a3e61d05a621",
+      "size": 5053,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d6a85757b0dd4869a83afdcf48c2a3e61d05a621"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/file_effect_observations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "250f7fa6d468d2f1496bb99cd3409e5e9730e6fc",
+      "size": 3958,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/250f7fa6d468d2f1496bb99cd3409e5e9730e6fc"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/observer_preflight.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d30dad9ee9518b58e3dbb3ec17fe8134a2f6efa",
+      "size": 15998,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5d30dad9ee9518b58e3dbb3ec17fe8134a2f6efa"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/observer_summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ff755d4a3f900c862920e703c3b1f841841efc4",
+      "size": 1865,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9ff755d4a3f900c862920e703c3b1f841841efc4"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/positive_control_draft.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c6992542529ebd181006a0d81191c9cbb906886",
+      "size": 983,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9c6992542529ebd181006a0d81191c9cbb906886"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8c9b00303522c7bd1c51ab7132deaf179425ec3",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/a8c9b00303522c7bd1c51ab7132deaf179425ec3"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox/PHC-01",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b9107e9eba943eac41a7a3beb4c71da32e04099",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/2b9107e9eba943eac41a7a3beb4c71da32e04099"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox/PHC-01/positive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9dc39981f7215d090268b354acf092305bb720b",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f9dc39981f7215d090268b354acf092305bb720b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox/PHC-01/positive/attempts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efb2377f6d2ba54dae1b4aac83fd3c1b78897507",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/efb2377f6d2ba54dae1b4aac83fd3c1b78897507"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox/PHC-01/positive/attempts/1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "549af1c39ddc78ebda14ae2aa0291bfe5d88e731",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/549af1c39ddc78ebda14ae2aa0291bfe5d88e731"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox/PHC-01/positive/attempts/1/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b9a23c295d0a0a7240f585d0c051c0327a71f93",
+      "size": 13207,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5b9a23c295d0a0a7240f585d0c051c0327a71f93"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/results/sandbox/PHC-01/positive/attempts/1/package_witness.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed43bc951f1131d686ec28f3014459ef5fefa32d",
+      "size": 132,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ed43bc951f1131d686ec28f3014459ef5fefa32d"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/schemas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1519f3330c9fd0587283311a80468fef507d4e83",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/1519f3330c9fd0587283311a80468fef507d4e83"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/schemas/case_receipt.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "412221dd79842124eee1a4aa35d1dd1913bc833b",
+      "size": 1132,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/412221dd79842124eee1a4aa35d1dd1913bc833b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/schemas/package.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6baae482d9462bbb42f5481db022b87d65baa4e",
+      "size": 11259,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f6baae482d9462bbb42f5481db022b87d65baa4e"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d408a700a35240f6e8c042419a99a51a2ef3168b",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/d408a700a35240f6e8c042419a99a51a2ef3168b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src/build_report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3aaefb3e6d4cdec37a5b4984200edb1eaf2fe92",
+      "size": 10046,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a3aaefb3e6d4cdec37a5b4984200edb1eaf2fe92"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src/phc_driver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b4f746dbeb1046dd00c71ffcd9e32c8e88e60d",
+      "size": 9568,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d9b4f746dbeb1046dd00c71ffcd9e32c8e88e60d"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src/phc_observer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66f60593e22842d87e1b1d1d4f1bd602e7508b64",
+      "size": 20602,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/66f60593e22842d87e1b1d1d4f1bd602e7508b64"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src/phc_runtime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60ff2491a304d02c912210e7e5de3d4aa0d10c03",
+      "size": 14142,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/60ff2491a304d02c912210e7e5de3d4aa0d10c03"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src/prepare_run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d63debec7c126b07687312e7547d464f5d3e4e56",
+      "size": 10765,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d63debec7c126b07687312e7547d464f5d3e4e56"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_1_candidate/src/schema_subset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff60a1afb6f9a80cdcc74dfe17f552996461e23",
+      "size": 2004,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0ff60a1afb6f9a80cdcc74dfe17f552996461e23"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e2cf8555f439de9a31ac02fd8bfd67db9591fbb",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/0e2cf8555f439de9a31ac02fd8bfd67db9591fbb"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/ARCHIVE_README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "281f76d020893f8b7a718797950fca8a8a6a624e",
+      "size": 7140,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/281f76d020893f8b7a718797950fca8a8a6a624e"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/PHC_REPAIR_GIT_LINEAGE_MANIFEST_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7a90ac3fc8ac6f3465b3db80a0cacedee97cabd",
+      "size": 11515,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c7a90ac3fc8ac6f3465b3db80a0cacedee97cabd"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/PHC_REPAIR_POST_COMMIT_GIT_BINDING_RECEIPT_v0.1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0fc937a3e4bb1494016691084f6189150e84ed4",
+      "size": 12720,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d0fc937a3e4bb1494016691084f6189150e84ed4"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4494f363546b9fada75433e1c177056c3f91ab0a",
+      "size": 2609,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/4494f363546b9fada75433e1c177056c3f91ab0a"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/archive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bdec16a351ef4920a68182a902ae72427db336ee",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/bdec16a351ef4920a68182a902ae72427db336ee"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/archive/PHC_PROTOTYPE_EVIDENCE_v0.1.2_candidate.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd336ca0a677d9010c7970331f4b1bd6917d3326",
+      "size": 884798,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/dd336ca0a677d9010c7970331f4b1bd6917d3326"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/contract",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f24c4c29b7f8c651a636ebcc511ba027476b558c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f24c4c29b7f8c651a636ebcc511ba027476b558c"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/contract/BIOS_PUBLICATION_HARNESS_CONTRACT_v0.1_candidate.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "671a61ae053cec771c9c2982c712462195c2877b",
+      "size": 18549,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/671a61ae053cec771c9c2982c712462195c2877b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/fixtures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8367d5c8e8b11e6383c49b66fecb296f4021277",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c8367d5c8e8b11e6383c49b66fecb296f4021277"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/fixtures/execution_envelope.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21c785b6f127acfe855c291165c495056081171b",
+      "size": 694,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/21c785b6f127acfe855c291165c495056081171b"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/fixtures/plan.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9aeed5d52b2375dc9b9721a2747c959edee985ee",
+      "size": 7020,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9aeed5d52b2375dc9b9721a2747c959edee985ee"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/fixtures/repair_scope.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10d862509abaa61f4f765f1747b447430c2a4585",
+      "size": 1576,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/10d862509abaa61f4f765f1747b447430c2a4585"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/fixtures/useful_draft_criterion.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad64cec252be6ddf112bc961170fd11e523b8c94",
+      "size": 777,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ad64cec252be6ddf112bc961170fd11e523b8c94"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/history",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b019f6dc14a6e1735f7041d01002f770c076504",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/1b019f6dc14a6e1735f7041d01002f770c076504"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/history/prior_execution.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "456e2be0913be72fd98ffd60177d774dc895f00c",
+      "size": 2699,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/456e2be0913be72fd98ffd60177d774dc895f00c"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/inputs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f74f80d9f94fd9f9ccdad306d6f598d68a60270",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/3f74f80d9f94fd9f9ccdad306d6f598d68a60270"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/inputs/source_record.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73dd7cf93fb106639c80442af18895f7c4374c0f",
+      "size": 497,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/73dd7cf93fb106639c80442af18895f7c4374c0f"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/inputs/submitted_source.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "890d906e647bd8dec0594b59096c6db91b63da85",
+      "size": 739,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/890d906e647bd8dec0594b59096c6db91b63da85"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c75bc374053ff3c06c61e95b90fb7e57525c730",
+      "size": 6088,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2c75bc374053ff3c06c61e95b90fb7e57525c730"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0970073aec088fd331ab7c9267e60149b0733a89",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/0970073aec088fd331ab7c9267e60149b0733a89"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a784e128b6b2601363583454f188dada71fc87f",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/3a784e128b6b2601363583454f188dada71fc87f"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-01.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "252037e23698a8b649f19e36b7db1ca312dd3c60",
+      "size": 5759,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/252037e23698a8b649f19e36b7db1ca312dd3c60"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-02.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16dd814dfe984dba3b68992b52f375a81228b94d",
+      "size": 9853,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/16dd814dfe984dba3b68992b52f375a81228b94d"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-03.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ae2e5a8b70d5da41f6763c1bb293f6f8f5ea7df",
+      "size": 5934,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2ae2e5a8b70d5da41f6763c1bb293f6f8f5ea7df"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-04.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39d6026f5c5fd6dd869cf33ac98fce87148c56a8",
+      "size": 6227,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/39d6026f5c5fd6dd869cf33ac98fce87148c56a8"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-05.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a33e42f1bd29280b3d846cb86872ee911db76367",
+      "size": 5759,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a33e42f1bd29280b3d846cb86872ee911db76367"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-06.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46f4fde9988a0bc628302c1bad57fd04092d5fea",
+      "size": 5972,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/46f4fde9988a0bc628302c1bad57fd04092d5fea"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-07.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5c4e2fea8de6f3f62248605c4eeedaa213865b2",
+      "size": 5557,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f5c4e2fea8de6f3f62248605c4eeedaa213865b2"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-08.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5da66b2c70fd52d189be006c72390649274ec00",
+      "size": 5637,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e5da66b2c70fd52d189be006c72390649274ec00"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-09.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6969a37c8eefaee13b867bcc35c2ad32c2bb7d93",
+      "size": 6300,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6969a37c8eefaee13b867bcc35c2ad32c2bb7d93"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-10.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10c34142131f54aba54b250911bf06f4d6d74523",
+      "size": 13778,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/10c34142131f54aba54b250911bf06f4d6d74523"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-11.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad1673f3b97952a27c640a31ce4e71f9444c5e70",
+      "size": 13288,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ad1673f3b97952a27c640a31ce4e71f9444c5e70"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/case_receipts/PHC-12.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a86b944d7b07a9b10d2dfea0f6125b152649f4f4",
+      "size": 5687,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a86b944d7b07a9b10d2dfea0f6125b152649f4f4"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/file_effect_observations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6733baa00fe3a3d485960771c530bfc3c152c0c0",
+      "size": 3980,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6733baa00fe3a3d485960771c530bfc3c152c0c0"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/observer_preflight.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72ddc0a4a3f5fd118f0262efe573de20bc7ee91d",
+      "size": 16096,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/72ddc0a4a3f5fd118f0262efe573de20bc7ee91d"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/observer_summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "468f15b406752c781185143e20c23e4cefa930a1",
+      "size": 1955,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/468f15b406752c781185143e20c23e4cefa930a1"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/positive_control_draft.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c6992542529ebd181006a0d81191c9cbb906886",
+      "size": 983,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9c6992542529ebd181006a0d81191c9cbb906886"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/repair_regressions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "017d2655800868e51f387e07e41fd359f4c3e6c4",
+      "size": 54406,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/017d2655800868e51f387e07e41fd359f4c3e6c4"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bad6e985bd50207a93489bcec25cb3209a9da66c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/bad6e985bd50207a93489bcec25cb3209a9da66c"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox/PHC-01",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef8ffcd805ddd1ec850d0b3b79df602b6be1f3df",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/ef8ffcd805ddd1ec850d0b3b79df602b6be1f3df"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox/PHC-01/positive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ab3631f2dfeed5563968bc37d3d365717ba7909",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/6ab3631f2dfeed5563968bc37d3d365717ba7909"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox/PHC-01/positive/attempts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "78fb6f0bddae71bf8abd8c45b83668b886249286",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/78fb6f0bddae71bf8abd8c45b83668b886249286"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox/PHC-01/positive/attempts/1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6b897cddbed29ffd56ee0b37e0f3fe7eb1b7f220",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/6b897cddbed29ffd56ee0b37e0f3fe7eb1b7f220"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox/PHC-01/positive/attempts/1/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcd683fb9b2b343164555cf428bd55ee576943ff",
+      "size": 13409,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/fcd683fb9b2b343164555cf428bd55ee576943ff"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/results/sandbox/PHC-01/positive/attempts/1/package_witness.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06fca47de7e6bea57467d0272449ac377c3175a2",
+      "size": 132,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/06fca47de7e6bea57467d0272449ac377c3175a2"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/schemas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90052ee4cbd4247a7540920ea9354657c73e3609",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/90052ee4cbd4247a7540920ea9354657c73e3609"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/schemas/case_receipt.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf3d01cfc6681d2f0416c08b5a94c2234490d5b8",
+      "size": 2530,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/cf3d01cfc6681d2f0416c08b5a94c2234490d5b8"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/schemas/package.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6baae482d9462bbb42f5481db022b87d65baa4e",
+      "size": 11259,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f6baae482d9462bbb42f5481db022b87d65baa4e"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "822766a000b44688fa0830203613afaf5fbccd52",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/822766a000b44688fa0830203613afaf5fbccd52"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/build_report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80f10d41104d589593ca9de4d6bf715fba651490",
+      "size": 9706,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/80f10d41104d589593ca9de4d6bf715fba651490"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/phc_driver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaa22e5da5796261d0004e5819d402332d83a291",
+      "size": 9641,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/eaa22e5da5796261d0004e5819d402332d83a291"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/phc_observer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9273cd7ef38fae333966c2edca2c28dd396c47c6",
+      "size": 21818,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9273cd7ef38fae333966c2edca2c28dd396c47c6"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/phc_runtime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60ff2491a304d02c912210e7e5de3d4aa0d10c03",
+      "size": 14142,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/60ff2491a304d02c912210e7e5de3d4aa0d10c03"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/prepare_run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12666217631e87f91032ac01a3675631a46584d5",
+      "size": 13687,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/12666217631e87f91032ac01a3675631a46584d5"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/scenario_completeness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea4d2ec763d9cfe944f6a6b2fd710948b29e0aac",
+      "size": 8277,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ea4d2ec763d9cfe944f6a6b2fd710948b29e0aac"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/schema_subset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ff60a1afb6f9a80cdcc74dfe17f552996461e23",
+      "size": 2004,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0ff60a1afb6f9a80cdcc74dfe17f552996461e23"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/src/test_scenario_completeness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de3eeea6c39ffe241a0246853ce5fb17bd9a902e",
+      "size": 11831,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/de3eeea6c39ffe241a0246853ce5fb17bd9a902e"
+    },
+    {
+      "path": "laboratory/to_market/traversals",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe2d4c74b7a54481f566c13e6c3d35dbebe12646",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/fe2d4c74b7a54481f566c13e6c3d35dbebe12646"
+    },
+    {
+      "path": "laboratory/to_market/traversals/science_to_market_cycle_001",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fe89da57e946112b98b936040a6474e92ad431f9",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/fe89da57e946112b98b936040a6474e92ad431f9"
+    },
+    {
+      "path": "laboratory/to_market/traversals/science_to_market_cycle_001/CTO-OAB-002.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e26418140302f9efa78871772208e794878ad7a9",
+      "size": 2007,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e26418140302f9efa78871772208e794878ad7a9"
+    },
+    {
+      "path": "laboratory/to_market/traversals/science_to_market_cycle_001/SCIENCE_TO_MARKET_CYCLE_001_CORRECTION_RECEIPT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "029fdab30f4f10b1eb04bf71a22ee80f606df5f8",
+      "size": 2194,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/029fdab30f4f10b1eb04bf71a22ee80f606df5f8"
+    },
+    {
+      "path": "laboratory/to_market/traversals/science_to_market_cycle_001/TME-OAB-002.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "181b3f2e1e3538d50f31977b6a4b143068dcc1c4",
+      "size": 494,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/181b3f2e1e3538d50f31977b6a4b143068dcc1c4"
+    },
+    {
+      "path": "laboratory/to_market/traversals/science_to_market_cycle_001/TO_MARKET_VALIDATION_RECEIPT_OAB_002_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77efe670821acabf7dc4da8f6ededd3d063358b4",
+      "size": 2908,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/77efe670821acabf7dc4da8f6ededd3d063358b4"
+    },
+    {
+      "path": "obsidian",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f666c6a7277f8066f1d3054d5b7f7a07f60d7477",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f666c6a7277f8066f1d3054d5b7f7a07f60d7477"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3ededbc4ced2f8e01477dbb633427263981ba3c",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/c3ededbc4ced2f8e01477dbb633427263981ba3c"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/.obsidian",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ecb6e728fa06341b24df5f754c6d836468fb724",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/5ecb6e728fa06341b24df5f754c6d836468fb724"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/.obsidian/app.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59c467e9be7b87b345035415384551c453809935",
+      "size": 123,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/59c467e9be7b87b345035415384551c453809935"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/.obsidian/appearance.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e26dfeeb6e641a33dae4961196235bdb965b21b",
+      "size": 2,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9e26dfeeb6e641a33dae4961196235bdb965b21b"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/.obsidian/core-plugins.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "639b90da7172bebbc1a65e30ed0a1c611b5b26dc",
+      "size": 696,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/639b90da7172bebbc1a65e30ed0a1c611b5b26dc"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/.obsidian/workspace.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c722273face93dfc886199cec52542e9df0ccf",
+      "size": 5342,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a6c722273face93dfc886199cec52542e9df0ccf"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94e4984683b48e3bdf90d386a58d39c2b62fa727",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/94e4984683b48e3bdf90d386a58d39c2b62fa727"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION/CLOSURE_THEOREM.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bf11f4e4247eefcc5effaec88dc494717e6adad",
+      "size": 569,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9bf11f4e4247eefcc5effaec88dc494717e6adad"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION/DIGISLEUTH_OPERATING_LAWS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f787e12e280a2e4dbef48926b17314e0afc7a6aa",
+      "size": 1087,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f787e12e280a2e4dbef48926b17314e0afc7a6aa"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION/MANEUVERABILITY_LAW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddce338e72af5c10d02baab02e67489e9603d0c2",
+      "size": 608,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ddce338e72af5c10d02baab02e67489e9603d0c2"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION/NO_ORIENTATION_NO_EXECUTION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "722563d854a13e41744f3c8d7c3bd022b7b41e27",
+      "size": 721,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/722563d854a13e41744f3c8d7c3bd022b7b41e27"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/00_CANONICAL_ORIENTATION/SEPARATION_OF_POWERS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01787c81e1e39779299e39bc6734fef1f3f21873",
+      "size": 826,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/01787c81e1e39779299e39bc6734fef1f3f21873"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/01_TO_MARKET",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "756d216df6933c8819e897ccbdf2a037b7dc129e",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/756d216df6933c8819e897ccbdf2a037b7dc129e"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/01_TO_MARKET/COMMERCIAL_TRANSLATION_OBJECT_MODEL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68c0c5b7a9c54bfd79d1e9154745ea9e0828affb",
+      "size": 723,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/68c0c5b7a9c54bfd79d1e9154745ea9e0828affb"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/01_TO_MARKET/DIGISLEUTH_TO_MARKET_BOUNDARY_OPERATION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41fa40662da60c26faa0e4449ed64c8e5551b4d1",
+      "size": 967,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/41fa40662da60c26faa0e4449ed64c8e5551b4d1"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/01_TO_MARKET/SCIENCE_TO_MARKET_CYCLE_001.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02ec4b07a651e71aae16ec73fa95a446cb69f79a",
+      "size": 614,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/02ec4b07a651e71aae16ec73fa95a446cb69f79a"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/01_TO_MARKET/TO_MARKET_EVENT_MODEL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81d0d438482011b32f9539ccd0c125114fb3dbdb",
+      "size": 647,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/81d0d438482011b32f9539ccd0c125114fb3dbdb"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/02_OFFER_TOPOLOGY",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc132aee63fc933780276d3a7d6aabc813e937a5",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/cc132aee63fc933780276d3a7d6aabc813e937a5"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/02_OFFER_TOPOLOGY/AGENT_RUNTIME_GOVERNANCE_ASSESSMENT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7d02b9331e6b8690343c23a0438f59b07a8c929",
+      "size": 1011,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f7d02b9331e6b8690343c23a0438f59b07a8c929"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/02_OFFER_TOPOLOGY/ASSESSMENT_ADMISSION_GATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3415b84d9b53d2cb780865c78585218c7f060829",
+      "size": 688,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3415b84d9b53d2cb780865c78585218c7f060829"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/02_OFFER_TOPOLOGY/ASSESSMENT_FINDING_TAXONOMY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e035d937d946b0abea20c4959c389089cab486c0",
+      "size": 743,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/e035d937d946b0abea20c4959c389089cab486c0"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/03_CLIENT_EXECUTION_BOUNDARY",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37197c771a3275336f65af9f64dc32609bc8c220",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/37197c771a3275336f65af9f64dc32609bc8c220"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/03_CLIENT_EXECUTION_BOUNDARY/CAAP_ALPHA_001.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71164e9e26e599bf50e1bbf69d69a2739d277c9c",
+      "size": 730,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/71164e9e26e599bf50e1bbf69d69a2739d277c9c"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/03_CLIENT_EXECUTION_BOUNDARY/CLIENT_EXECUTION_FRONTIER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b3027a9d5451ed2e13d207f61e5143d867e61fd",
+      "size": 803,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8b3027a9d5451ed2e13d207f61e5143d867e61fd"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/03_CLIENT_EXECUTION_BOUNDARY/CLIENT_FACT_AUTHENTICATION_BUNDLE_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ce372afef156ed2c5128ce7f86891f7b7f2ce37",
+      "size": 685,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0ce372afef156ed2c5128ce7f86891f7b7f2ce37"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/03_CLIENT_EXECUTION_BOUNDARY/DIAGNOSTIC_EXECUTION_AUTHORIZATION_PETITION_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d883e3c01615889c2d1aded3726139a2bb61c6f",
+      "size": 820,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/2d883e3c01615889c2d1aded3726139a2bb61c6f"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/04_AUTHORITY_OBJECTS",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d5d27d80873175489e6fe5f7fecbcd33632ff9a",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/2d5d27d80873175489e6fe5f7fecbcd33632ff9a"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/04_AUTHORITY_OBJECTS/ADMISSION_AUTHORITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84c329aaa2fae922ef153355767dd1cd629e1b87",
+      "size": 454,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/84c329aaa2fae922ef153355767dd1cd629e1b87"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/04_AUTHORITY_OBJECTS/AUTHENTICATION_AUTHORITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c86a1a781dcb0b7b46532c388137e902669f237f",
+      "size": 468,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c86a1a781dcb0b7b46532c388137e902669f237f"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/04_AUTHORITY_OBJECTS/DECLARATION_AUTHORITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d38eb16499697cfac551bfb0a21345cccc81cd77",
+      "size": 439,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d38eb16499697cfac551bfb0a21345cccc81cd77"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/04_AUTHORITY_OBJECTS/DIAGNOSTIC_AUTHORITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42854ae86a9d9f4b38c21e67075c5947e6a14c68",
+      "size": 482,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/42854ae86a9d9f4b38c21e67075c5947e6a14c68"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/04_AUTHORITY_OBJECTS/EXECUTION_AUTHORIZATION_AUTHORITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "217cf848d71d480c49386434c4e993aa5ffe68d0",
+      "size": 522,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/217cf848d71d480c49386434c4e993aa5ffe68d0"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/05_STATE_AND_EVIDENCE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4d43f455472380db094fba3efed6714578a48cb",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f4d43f455472380db094fba3efed6714578a48cb"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/05_STATE_AND_EVIDENCE/AUTHENTICATION_STATE_VECTOR.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c0ce4819528ee25dd63972526c5dab946e2b007",
+      "size": 531,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5c0ce4819528ee25dd63972526c5dab946e2b007"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/05_STATE_AND_EVIDENCE/CORRECTION_LINEAGE_MODEL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a89619363ff645f14c2748d6d6d9b56692c86d3e",
+      "size": 496,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a89619363ff645f14c2748d6d6d9b56692c86d3e"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/05_STATE_AND_EVIDENCE/EXECUTION_AUTHORIZATION_STATE_VECTOR.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b8a84708ca035420eb2c4d6c74bcae5123e1d5c",
+      "size": 578,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6b8a84708ca035420eb2c4d6c74bcae5123e1d5c"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/05_STATE_AND_EVIDENCE/ORIENTATION_STATE_MODEL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a262c0e8e74a7f6c19470fb2e66ea25716bb903",
+      "size": 677,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3a262c0e8e74a7f6c19470fb2e66ea25716bb903"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/06_GIT_LINEAGE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ad0ea890722e542eec85105a88606c8dc97673e",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/6ad0ea890722e542eec85105a88606c8dc97673e"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/06_GIT_LINEAGE/ASSESSMENT_ADMISSION_GIT_SPINE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0042d887ab1b8a571da72b20a523bb0e43a865a2",
+      "size": 485,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0042d887ab1b8a571da72b20a523bb0e43a865a2"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/06_GIT_LINEAGE/CLIENT_EXECUTION_BOUNDARY_GIT_SPINE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdec1b6c57f6001154998bd79deb03d66f724102",
+      "size": 623,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/fdec1b6c57f6001154998bd79deb03d66f724102"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/06_GIT_LINEAGE/SCIENCE_TO_MARKET_GIT_SPINE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cae7b930ba524085bcb7b732cf953bfe59aced0",
+      "size": 807,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/9cae7b930ba524085bcb7b732cf953bfe59aced0"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/07_FRONTIERS",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acdadcf83d76201b3d4f5638ed00994733ed5469",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/acdadcf83d76201b3d4f5638ed00994733ed5469"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/07_FRONTIERS/WAITING_FOR_REAL_CLIENT_FACT_INGRESS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de874931f06118c9c37e9206be0325128622004",
+      "size": 789,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8de874931f06118c9c37e9206be0325128622004"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/08_CANVAS",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fbe8f1eb9de41894806c3e4362bc2d2ebacadb2",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/5fbe8f1eb9de41894806c3e4362bc2d2ebacadb2"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/08_CANVAS/DIGISLEUTH_CLIENT_EXECUTION_FRONTIER.canvas",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bfe85fc6ed22b5076a069c397f1c1cdcbbc5e9a",
+      "size": 2496,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6bfe85fc6ed22b5076a069c397f1c1cdcbbc5e9a"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c7a52980d883e1d2307daaffff8a5b343d6ed54",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/9c7a52980d883e1d2307daaffff8a5b343d6ed54"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS/01_PHENOTYPES",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "205d52869f406e996a11d84cbdc3b19ccf3f9fa6",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/205d52869f406e996a11d84cbdc3b19ccf3f9fa6"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS/01_PHENOTYPES/MAGUS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01e9ba4d3af608f09cd0d4fd96b1b8404b712aef",
+      "size": 1209,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/01e9ba4d3af608f09cd0d4fd96b1b8404b712aef"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS/02_GOVERNANCE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9250ec897a05585a286e75a6f4d15ee9631da67b",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/9250ec897a05585a286e75a6f4d15ee9631da67b"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS/02_GOVERNANCE/GOVERNANCE_KERNEL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd7a42f706b96b8f98cce53ef10ba33bf72d59c3",
+      "size": 815,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/cd7a42f706b96b8f98cce53ef10ba33bf72d59c3"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS/GOALPOST_2026-09-10_PHYSIOLOGICAL_TOPOLOGY_PASS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "330abc29f525e7f31700283c691e9d9be2b91285",
+      "size": 1691,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/330abc29f525e7f31700283c691e9d9be2b91285"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/09_PHYSIOLOGICAL_CORPUS/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae9b810428e1bf291492c0dfbc70faed5d4689df",
+      "size": 1632,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/ae9b810428e1bf291492c0dfbc70faed5d4689df"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/CANVAS_SKILL_BINDING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce4b6aa1ac9f350d0df74ecf3af186ba32036d9",
+      "size": 1048,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/7ce4b6aa1ac9f350d0df74ecf3af186ba32036d9"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/FOUNDER_BEHEST_EXECUTION_PROVENANCE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f721ee8b2435911adc9555fcc9817ff379aa817f",
+      "size": 678,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/f721ee8b2435911adc9555fcc9817ff379aa817f"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/INSTALL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b84cf4a00ed5ccc8706164b550b03ed37785a189",
+      "size": 840,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/b84cf4a00ed5ccc8706164b550b03ed37785a189"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "315d564099a42e75714095f410a1db5fdb3c2e04",
+      "size": 751,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/315d564099a42e75714095f410a1db5fdb3c2e04"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/REMOTE_INSTANTIATION_PROTOCOL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "139e92382365a4a461004da77f2c2df0ec8d7c7a",
+      "size": 1081,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/139e92382365a4a461004da77f2c2df0ec8d7c7a"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/REMOTE_WRITE_POLICY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "510910336c984212b61dc4dc7d68fbec2c86abf5",
+      "size": 986,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/510910336c984212b61dc4dc7d68fbec2c86abf5"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/VAULT_MANIFEST_SHA256.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91a638d8ed17b33ea5692e8fb3dee389b110bae8",
+      "size": 5159,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/91a638d8ed17b33ea5692e8fb3dee389b110bae8"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/VAULT_RELEASE_POINTER.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67db3726b7efcb2b8aafe7b06e268101b21acfac",
+      "size": 463,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/67db3726b7efcb2b8aafe7b06e268101b21acfac"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2b5ce0dd45d819bcd8409b3147be484fb890b5d",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/b2b5ce0dd45d819bcd8409b3147be484fb890b5d"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases/00_DIGISLEUTH_OPERATIONAL_MORPHOLOGY.canvas",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04109238bca7e63c12aa3b431bc70b8564cb4d32",
+      "size": 7781,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/04109238bca7e63c12aa3b431bc70b8564cb4d32"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases/OPERATIONAL_MORPHOLOGY_PROJECTION_RECEIPT_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1aa10a375ee7b40a08ad00b61e7bd5e670a84f1b",
+      "size": 1923,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/1aa10a375ee7b40a08ad00b61e7bd5e670a84f1b"
+    },
+    {
+      "path": "obsidian/releases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16ff325f4e639afdffe836a3f872f024ae3d4066",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/16ff325f4e639afdffe836a3f872f024ae3d4066"
+    },
+    {
+      "path": "obsidian/releases/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a95f16560ede9825701886ada6385fd75e469dc9",
+      "size": 21627,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/a95f16560ede9825701886ada6385fd75e469dc9"
+    },
+    {
+      "path": "research",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "757d9c3bd3d4e5cc57dccdf75b87d0dfd86e711d",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/757d9c3bd3d4e5cc57dccdf75b87d0dfd86e711d"
+    },
+    {
+      "path": "research/bio_holography",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2bdaef36580a84567be9724c3b415e89d1d24e73",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/2bdaef36580a84567be9724c3b415e89d1d24e73"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f60830f9fc50f21094d70dd93b84df18201f8ebe",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/f60830f9fc50f21094d70dd93b84df18201f8ebe"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/GIT_IMPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfa01d35ba353b5c78821242ded7a8629fdf3b55",
+      "size": 1303,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/dfa01d35ba353b5c78821242ded7a8629fdf3b55"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/GIT_IMPORT_RECEIPT.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d10cfa8cc31e318d1d2260046dac3712d711bbea",
+      "size": 1957,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d10cfa8cc31e318d1d2260046dac3712d711bbea"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/GIT_SHA256SUMS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af519c533779e8c71457f103b7821fc089ffa554",
+      "size": 2091,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/af519c533779e8c71457f103b7821fc089ffa554"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e3a0996370c11a72ad0105f45021733c1742e1d",
+      "size": 2031,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6e3a0996370c11a72ad0105f45021733c1742e1d"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/SHA256SUMS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28481222fe80fbc34a64a58512eededfb65788b7",
+      "size": 1703,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/28481222fe80fbc34a64a58512eededfb65788b7"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/SOLVER_SPECIFICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06cc3d12f252229307fea844b05524a917b2ebc1",
+      "size": 22349,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/06cc3d12f252229307fea844b05524a917b2ebc1"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/SPECIFICATION_REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "855f2c8c76280230677734b886658f082a00a386",
+      "size": 1579,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/855f2c8c76280230677734b886658f082a00a386"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/artifacts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f8b53731295d395180cf27435b50a4d7c92ddf7",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/1f8b53731295d395180cf27435b50a4d7c92ddf7"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/artifacts/BIO_HOLOGRAPHY_SOLVER_NUMERICAL_SPECIFICATION_v0.1_candidate.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3657a309e8ff8b6c3665c87cbec8d815b85081ad",
+      "size": 35686,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/3657a309e8ff8b6c3665c87cbec8d815b85081ad"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/cohort_audit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "201966761e28f312cd507708d69c9d2f48a9e1e2",
+      "size": 4165,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/201966761e28f312cd507708d69c9d2f48a9e1e2"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/cohort_manifest_template.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be6fa4bf33bc6f332981bd78faaf6fc08e919811",
+      "size": 521,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/be6fa4bf33bc6f332981bd78faaf6fc08e919811"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/cohort_member.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d24b1302ddb101db1ff13f473d94d415bc899faa",
+      "size": 7940,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d24b1302ddb101db1ff13f473d94d415bc899faa"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/cohort_readiness_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44590a9e03483f905276ac0c2cebe3bf0664b344",
+      "size": 769,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/44590a9e03483f905276ac0c2cebe3bf0664b344"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/cohort_requirements.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25d2b51871ce6334dfd22a754200e371ac3f479d",
+      "size": 3080,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/25d2b51871ce6334dfd22a754200e371ac3f479d"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/numerical_acceptance_tests.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f7e81a1d15332e1438713de6adffc2c63b1521c",
+      "size": 6355,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/6f7e81a1d15332e1438713de6adffc2c63b1521c"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/parameter_roles.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af514d1fb4ab4b7afb3729241f635a23bd047eef",
+      "size": 10687,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/af514d1fb4ab4b7afb3729241f635a23bd047eef"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/parent_lineage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d46d8c833330f4e0ba20ae9fa90d0d5fcf9b6807",
+      "size": 580,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d46d8c833330f4e0ba20ae9fa90d0d5fcf9b6807"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/reference_check_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8800d561fe85ea508d3b8654bfebb87bcc093c2e",
+      "size": 538,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8800d561fe85ea508d3b8654bfebb87bcc093c2e"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/reference_laws.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ef9f8f0f233fe1deb02a3b3b83d7447a3ea80e4",
+      "size": 3385,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8ef9f8f0f233fe1deb02a3b3b83d7447a3ea80e4"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/revision_lineage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bedc5ee3cd7e483cd0d9a528af6cd69d147bfdb",
+      "size": 831,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/5bedc5ee3cd7e483cd0d9a528af6cd69d147bfdb"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/solver_contract.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc319a8ec89dcb4a3bd6e34fc256e58a485cd457",
+      "size": 5618,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/bc319a8ec89dcb4a3bd6e34fc256e58a485cd457"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/sources.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d64e58901b7d0ebd683d44f8de6dcc3740ce08e5",
+      "size": 666,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/d64e58901b7d0ebd683d44f8de6dcc3740ce08e5"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/specification_review_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c28219340b3c96e0a35fc60b9452106ab4f4e2a",
+      "size": 890,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0c28219340b3c96e0a35fc60b9452106ab4f4e2a"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/standing_receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa659030416e248f8af97f06634507ae429fbaf",
+      "size": 1828,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0fa659030416e248f8af97f06634507ae429fbaf"
+    },
+    {
+      "path": "research/bio_holography/solver_numerical_specification_v0_1_candidate/test_reference_specification.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e219a4d9595422ebc40f0374bd99509d94948c",
+      "size": 7636,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/76e219a4d9595422ebc40f0374bd99509d94948c"
+    },
+    {
+      "path": "research/material_sciences",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63ea313a18a749700922cbd2eec8f2aa5a67d738",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/63ea313a18a749700922cbd2eec8f2aa5a67d738"
+    },
+    {
+      "path": "research/material_sciences/DIGISLEUTH_MATERIAL_SCIENCES_LEDGER_REGISTRY_v0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abd6c0992777c99d3beb223f6dc49e497674b8df",
+      "size": 13101,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/abd6c0992777c99d3beb223f6dc49e497674b8df"
+    },
+    {
+      "path": "research/material_sciences/mpe_acoustic_morphogenesis_v0_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33b9c8b0e34bba6f0ca6124ae7955baff5699598",
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/trees/33b9c8b0e34bba6f0ca6124ae7955baff5699598"
+    },
+    {
+      "path": "research/material_sciences/mpe_acoustic_morphogenesis_v0_1/MPE_ACOUSTIC_MORPHOGENESIS_v0.1_candidate.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ab49393d719d66bb468c6757ab0f42ad6491b71",
+      "size": 11329,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/0ab49393d719d66bb468c6757ab0f42ad6491b71"
+    },
+    {
+      "path": "research/material_sciences/mpe_acoustic_morphogenesis_v0_1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9e1d4ee23847b76c2881e7c1946d4a2b9599ebc",
+      "size": 1527,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/c9e1d4ee23847b76c2881e7c1946d4a2b9599ebc"
+    },
+    {
+      "path": "research/material_sciences/mpe_acoustic_morphogenesis_v0_1/SHA256SUMS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8670d0e87002cfb6ca95e57987f426aafb09eb44",
+      "size": 189,
+      "url": "https://api.github.com/repos/Technocrat83/digisleuth-general-bios-program/git/blobs/8670d0e87002cfb6ca95e57987f426aafb09eb44"
+    }
+  ]
+}

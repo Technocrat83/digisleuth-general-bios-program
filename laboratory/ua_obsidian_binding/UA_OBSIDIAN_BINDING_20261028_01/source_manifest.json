@@ -1,0 +1,81 @@
+{
+  "run_id": "UA_OBSIDIAN_BINDING_20261028_01",
+  "repository": "Technocrat83/digisleuth-general-bios-program",
+  "commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+  "source_records": [
+    {
+      "path": ".agents/skills/json-canvas/DIGISLEUTH_BINDING.md",
+      "git_commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+      "git_blob_sha1": "53b31e0ea8397eeb351859ba1dde8001105d222d",
+      "blob_sha256": "044af0501f190aa2f501da4cec080f3a22bd2914792540652a6c36b4ae6206d7",
+      "size_bytes": 3144,
+      "line_start": 1,
+      "line_end": 120,
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/285089fb54ecb908a2c5f457033290f5de19c09a/.agents/skills/json-canvas/DIGISLEUTH_BINDING.md"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/REMOTE_WRITE_POLICY.md",
+      "git_commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+      "git_blob_sha1": "510910336c984212b61dc4dc7d68fbec2c86abf5",
+      "blob_sha256": "505b3653cba565d4708960c4adee491411fd30da6b378ff6c8e50c0a4fc77df3",
+      "size_bytes": 986,
+      "line_start": 1,
+      "line_end": 29,
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/285089fb54ecb908a2c5f457033290f5de19c09a/obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/REMOTE_WRITE_POLICY.md"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/CANVAS_SKILL_BINDING.md",
+      "git_commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+      "git_blob_sha1": "7ce4b6aa1ac9f350d0df74ecf3af186ba32036d9",
+      "blob_sha256": "4951dda8cdf83828e53afd2ef1899415095aff9cd1507dd186807320ec1bcfff",
+      "size_bytes": 1048,
+      "line_start": 1,
+      "line_end": 36,
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/285089fb54ecb908a2c5f457033290f5de19c09a/obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/CANVAS_SKILL_BINDING.md"
+    },
+    {
+      "path": "laboratory/to_market/publication_harness/phc_v0_1_2_candidate/PHC_REPAIR_POST_COMMIT_GIT_BINDING_RECEIPT_v0.1.json",
+      "git_commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+      "git_blob_sha1": "d0fc937a3e4bb1494016691084f6189150e84ed4",
+      "blob_sha256": "9fe573d5ba6f2431eb7d4f3bc4a4eb6993e59a8ad80d42aded53c8c381f3beda",
+      "size_bytes": 12720,
+      "line_start": 1,
+      "line_end": 311,
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/285089fb54ecb908a2c5f457033290f5de19c09a/laboratory/to_market/publication_harness/phc_v0_1_2_candidate/PHC_REPAIR_POST_COMMIT_GIT_BINDING_RECEIPT_v0.1.json"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases/OPERATIONAL_MORPHOLOGY_PROJECTION_RECEIPT_v0.1.md",
+      "git_commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+      "git_blob_sha1": "1aa10a375ee7b40a08ad00b61e7bd5e670a84f1b",
+      "blob_sha256": "5432817e6fe11ee0615d35ec69f437969a445e41a42e0335a10fe3aaefb6bf55",
+      "size_bytes": 1923,
+      "line_start": 1,
+      "line_end": 73,
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/285089fb54ecb908a2c5f457033290f5de19c09a/obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases/OPERATIONAL_MORPHOLOGY_PROJECTION_RECEIPT_v0.1.md"
+    },
+    {
+      "path": "obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases/00_DIGISLEUTH_OPERATIONAL_MORPHOLOGY.canvas",
+      "git_commit": "285089fb54ecb908a2c5f457033290f5de19c09a",
+      "git_blob_sha1": "04109238bca7e63c12aa3b431bc70b8564cb4d32",
+      "blob_sha256": "d6ab4c26c3bd74303300e38e0619a3c3e908b5a3ac290fc9521ac68db57231df",
+      "size_bytes": 7781,
+      "line_start": 1,
+      "line_end": 1,
+      "url": "https://github.com/Technocrat83/digisleuth-general-bios-program/blob/285089fb54ecb908a2c5f457033290f5de19c09a/obsidian/DIGISLEUTH_OBSIDIAN_ORGAN_v0.1/generated_canvases/00_DIGISLEUTH_OPERATIONAL_MORPHOLOGY.canvas"
+    }
+  ],
+  "workflow_contract": {
+    "name": "DOSSIER_UA_OBSIDIAN_JURISDICTION_FUNCTION_ARCHITECTURE_v0.1.md",
+    "standing": "SPECIFIED_NOT_IMPLEMENTED",
+    "library_file_id": "libfile_51a2b4f350e48191bdd3cbcfe08d3f7b",
+    "content_sha256": "17dbd52e37106a06222cdade851a54f6d1674a357e29ae4a0e53fcbde1f6962c",
+    "interpretation": "Candidate design requirement, not execution grant"
+  },
+  "exclusions": [
+    "Full repository content analysis",
+    "UA extraction",
+    "Semantic ratification",
+    "Publication or assessment replay",
+    "Live vault access and synchronization"
+  ]
+}
